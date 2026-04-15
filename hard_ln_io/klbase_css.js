@@ -1836,17 +1836,27 @@ function root_font_size_menu_b(csstr='',font_menu=true,full_screen_menu=true,rem
         ];    
         list_t.push(menu_container_b(csstr,font_list,'font size: '));
     }
+    
+    var group_list=[];
+    
     if (full_screen_menu){
-        list_t.push('<span class="span_menu" onclick="'+csstr+'body_fullscreen_b();">fullscreen</span>');
+        group_list.push(['fullscreen','body_fullscreen_b();',true]);
     }
+    
     if (remote_host_address){
-        list_t.push('<span class="span_menu" onclick="'+csstr+'kl_remote_host_address_b();">set form post address</span>');
+        group_list.push(['set form post address','kl_remote_host_address_b();',true]);
     }
+    
     if (location_href_menu){
-        list_t.push('<span class="span_menu" onclick="'+csstr+'window.open(location.href);copy_2_clipboard_b(location.href);">location.href</span>');   //移动端复制失败 - 保留注释
+        group_list.push(['location.href','copy_2_clipboard_b(location.href); window.open(location.href);',true]);
     }
+    
     if (fn_source_textarea_id!==''){
-        list_t.push('<span class="span_menu" onclick="'+csstr+'fun_soruce_show_b(\''+fn_source_textarea_id+'\');">function source</span>');        
+        group_list.push(['function source','fun_soruce_show_b(\''+fn_source_textarea_id+'\');',true]);
+    }
+    
+    if (group_list.length>0){
+        list_t.push(menu_container_b(csstr,group_list,''));
     }
     return list_t;
 }

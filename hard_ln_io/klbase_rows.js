@@ -1307,7 +1307,7 @@ function important_line_js_array_klr_b(textarea_id){
 
 function buttons_txt_klr_b(textarea_id,clear_copy_tab_title_url=false){
     var buttons='';
-    buttons=buttons+'<span class="aclick" onclick="slice_lines_temp_txt_klr_b(\''+textarea_id+'\');">head</span> ';   
+    buttons=buttons+'<span class="aclick" onclick="slice_lines_temp_txt_klr_b(\''+textarea_id+'\');" title="head">⇡</span> ';   
     buttons=buttons+'<span class="aclick" onclick="important_line_js_array_klr_b(\''+textarea_id+'\');">💎</span> ';
     buttons=buttons+'<span class="aclick" onclick="str2js_klr_b(\''+textarea_id+'\',\'title_href\');">JS</span> ';
     buttons=buttons+'<span class="aclick" onclick="str2js_klr_b(\''+textarea_id+'\',\'[t](h)\');">[t](h)</span> ';
