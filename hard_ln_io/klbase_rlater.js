@@ -561,7 +561,7 @@ function delete_marked_rows_rlater_b(prefix='readlater'){
     }
 }
 
-function delete_batch_rlater_b(prefix='readlater'){
+function delete_batch_rlater_b(prefix='readlater',only_clicked=false){
     function sub_delete_batch_rlater_b_one(){
         var ospan=document.getElementById('span_delete_batch_doing');
         if (!ospan){
@@ -569,6 +569,7 @@ function delete_batch_rlater_b(prefix='readlater'){
             alert('操作中断，删除了'+blxl+'条');
             return;
         }
+        
         if (blxl<oas_len){
             var oa_id=oas[blxl].getAttribute('id');
             if (oa_id){ //形如：a_rlater_link_12116 - 保留注释
@@ -582,6 +583,7 @@ function delete_batch_rlater_b(prefix='readlater'){
                 }
                 delete_one_rlater_b(false,oa_id,true,span_id,prefix);
             }
+            
             blxl=blxl+1;
             document.getElementById('span_batch_delete_process').innerHTML=blxl+'/'+oas_len;
             
@@ -609,13 +611,23 @@ function delete_batch_rlater_b(prefix='readlater'){
         return;
     }
     
-    var rndstr=randstr_b(4,true,false);
-    if ((prompt('输入 '+rndstr+' 确认批量删除') || '').trim()!==rndstr){return;}
-    
-    var old_title=document.title;
     var oas=document.querySelectorAll('div#div_links a.a_rlater_link');
-    var blxl=0;
+    if (only_clicked){
+        var list_t=[];
+        for (let one_a of oas){
+            if (one_a.style.backgroundColor==''){continue;}
+            if (one_a.style.textDecoration=='line-through'){continue;}
+            list_t.push(one_a);
+        }
+        oas=list_t;
+    }
     var oas_len=oas.length;
+
+    var rndstr=randstr_b(4,true,false);
+    if ((prompt('输入 '+rndstr+' 确认批量删除 '+oas_len+' 条记录') || '').trim()!==rndstr){return;}
+
+    var blxl=0;
+    var old_title=document.title;
     document.getElementById('div_links').insertAdjacentHTML('afterbegin','<span id="span_delete_batch_doing"></span>');
     sub_delete_batch_rlater_b_one();
 }

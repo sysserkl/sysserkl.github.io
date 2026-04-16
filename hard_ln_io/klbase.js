@@ -2031,7 +2031,7 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     }
     
     if (csbuttons.includes('复制') || csbuttons.includes('copy')){
-        bljg=bljg+button_left+' onclick="document.getElementById(\''+textarea_id+'\').select();document.execCommand(\'copy\');">Copy'+button_right;
+        bljg=bljg+button_left+' onclick="document.getElementById(\''+textarea_id+'\').select();document.execCommand(\'copy\');">🗐'+button_right;
     }
     
     if (csbuttons.includes('导入 txt 文件')){
@@ -2954,7 +2954,7 @@ function temp_save_table_b(cstype='',local_id,read_textarea_id,div_id,csmax=20,p
         
         var right_buttons='<p>'+line_count+'/'+length_count+'</p>';
         right_buttons=right_buttons+'<p>';
-        right_buttons=right_buttons+'<span class="span_box" onclick=" temp_save_copy_b(this.parentNode.parentNode,\''+paste_textarea_id+'\');">copy</span> ';
+        right_buttons=right_buttons+'<span class="span_box" onclick=" temp_save_copy_b(this.parentNode.parentNode,\''+paste_textarea_id+'\');">🗐</span> ';
         right_buttons=right_buttons+'<span class="span_box" onclick=" temp_save_del_b(this.parentNode.parentNode,\''+local_id+'\','+csmax+');">del</span>';
         right_buttons=right_buttons+'</p>';
         old_list[blxl]='<tr><td width=1 nowrap>'+(blxl+1)+'</td><td><textarea class="textarea_temp_save_content" style="width:100%;">'+old_list[blxl]+'</textarea></td><td nowrap align=right style="color:'+scheme_global['memo']+';">'+right_buttons+'</td></tr>';
@@ -4535,7 +4535,7 @@ function two_list_diff_b(list1=false,list2=false,textarea_id1='textarea_old_diff
     bljg=bljg+'<td valign=top width=50%>';
     bljg=bljg+'<p><b>删除行</b>('+list1.length+') ';
     if (textarea_id1!==false){
-        bljg=bljg+'<button type="button" onclick="document.getElementById(\''+textarea_id1+'\').select();document.execCommand(\'copy\');">Copy</button>';
+        bljg=bljg+'<button type="button" onclick="document.getElementById(\''+textarea_id1+'\').select();document.execCommand(\'copy\');">🗐</button>';
     }
     bljg=bljg+(more_buttons1==''?'':more_buttons1)+'</p>';
     if (textarea_id1!==false){
@@ -4545,7 +4545,7 @@ function two_list_diff_b(list1=false,list2=false,textarea_id1='textarea_old_diff
     bljg=bljg+'<td valign=top width=50%>';
     bljg=bljg+'<p><b>添加行</b>('+list2.length+') ';
     if (textarea_id2!==false){
-        bljg=bljg+'<button type="button" onclick="document.getElementById(\''+textarea_id2+'\').select();document.execCommand(\'copy\');">Copy</button>';
+        bljg=bljg+'<button type="button" onclick="document.getElementById(\''+textarea_id2+'\').select();document.execCommand(\'copy\');">🗐</button>';
     }
     bljg=bljg+(more_buttons2==''?'':more_buttons2)+'</p>';
     if (textarea_id2!==false){    

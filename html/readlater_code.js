@@ -1222,7 +1222,7 @@ function search_array_2_html_rlater(csarr,cstype){
     
     bljg=years_rlater_b(readlater_data_global.length,csarr.length)+bljg;
     if (cstype=='2'){
-        bljg=bljg+'<p><span class="aclick" onclick="delete_batch_rlater_b();">批量删除</span> <span id="span_batch_delete_process"></span></p>';
+        bljg=bljg+'<p><span class="aclick" onclick="delete_batch_rlater_b();">批量删除</span> <span class="aclick" onclick="delete_batch_rlater_b(\'readlater\',true);">批量删除已点击的记录</span> <span id="span_batch_delete_process"></span></p>';
     }
     
     bljg='<div id="div_links">'+bljg+'</div>';
