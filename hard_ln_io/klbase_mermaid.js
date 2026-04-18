@@ -13,12 +13,17 @@ function str_convert_mermaid_b(csstr,wiki_format=true,return_str=true,cshead='gr
         var list_t=one_line.split(/\s*\-\s*/) || [];
         for (let acol of list_t){
             acol=acol.trim().replace(/\|/g,'¦');
-            if (acol.match(/^[\(（].*[）\)]$/)){
+            if (acol.match(/^[\(（].*[）\)]$/)){  //（打的|16.3公里|21分钟） - 保留注释
                 caption=acol.slice(1,-1);
                 continue;
             }
+
+            var end_type=acol.endsWith('$');
+            if (end_type){
+                acol=acol.slice(0,-1);
+            }
             
-            if (!acol.match('^\{.*\}$')){
+            if (!acol.match('^\{.*\}$')){   //{开始} - 保留注释
                 acol='['+acol+']';
             }
             
@@ -34,7 +39,12 @@ function str_convert_mermaid_b(csstr,wiki_format=true,return_str=true,cshead='gr
                     result_t.push(blstr);
                 }
             }
-            prev_node='step'+blat+acol;
+            
+            if (end_type){
+                prev_node='';
+            } else {
+                prev_node='step'+blat+acol;
+            }
         }
     }
     
@@ -55,7 +65,7 @@ function str_convert_mermaid_b(csstr,wiki_format=true,return_str=true,cshead='gr
 
 function str_expand_mermaid_b(str){
     // 辅助函数：从 "{a||b}" 提取 ["a", "b"]，不支持嵌套
-    function str_expand_mermaid_b_first_map(matchedStr){
+    function sub_str_expand_mermaid_b_first(matchedStr){
         const inner = matchedStr.slice(1, -1);        // 去掉首尾的 { 和 }
         var result_t=inner.split('||').map(s => s.trim());
         return result_t;
@@ -68,7 +78,7 @@ function str_expand_mermaid_b(str){
     }
 
     const firstMatch = match_list[0]; // 如 "{子字符串1||子字符串2}"
-    const options = str_expand_mermaid_b_first_map(firstMatch); // ["子字符串1", "子字符串2"]
+    const options = sub_str_expand_mermaid_b_first(firstMatch); // ["子字符串1", "子字符串2"]
 
     const prefix = str.substring(0, str.indexOf(firstMatch));
     const suffix = str.substring(str.indexOf(firstMatch) + firstMatch.length);
@@ -79,8 +89,7 @@ function str_expand_mermaid_b(str){
         // 递归处理剩下的部分（可能还有其他 {...||...}）
         results = results.concat(str_expand_mermaid_b(newStr));
     }
-
-    return results;
+    return results; //多条线路 - 保留注释
 }
 
 function show_mermaid_b(cslist,odiv,show_no=true,add_hr=true){
