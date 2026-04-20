@@ -130,6 +130,11 @@ function init_temp_txt_share_b(is_php=true,menu_more='',do_add=true,is_simple=fa
     }
     document.getElementById('i_client_info').insertAdjacentHTML('beforeend',' userAgent: '+navigator.userAgent);
     temp_save_temp_txt_share_b('read');
+    
+    var op=document.getElementById('p_preparation_tts');
+    op.innerHTML=`
+    <span class="aclick" onclick="textarea_shift_b('textarea_temp_txt_share','textarea_preparation_tts');">对调</span>
+    <span class="aclick" onclick="textarea_diff_txt_share_b('textarea_temp_txt_share','textarea_preparation_tts');">diff</span>`;
 }
 
 function spilt_rows_temp_txt_share_b(separation='\n'){
@@ -231,6 +236,7 @@ function menu_temp_txt_share_b(is_php=true,menu_more=''){
     '<span class="span_menu" onclick="'+str_t+'local_storage_import_b(\'textarea_temp_txt_share\',true);">import data to localStorage</span>',    
     '<span class="span_menu" onclick="'+str_t+'remove_notepad_mark_temp_txt_share_b();">清除notepad标记和日期</span>',    
     '<span class="span_menu" onclick="'+str_t+'remove_notepad_tag_b(\'textarea_temp_txt_share\');">清除tag标记</span>',    
+    '<span class="span_menu" onclick="'+str_t+'popup_show_hide_b(\'div_preparation_tts\');">diff</span>',    
     ];
 
     var group_list=textarea_group_menu_klr_b('textarea_temp_txt_share');
