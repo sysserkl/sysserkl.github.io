@@ -8,392 +8,118 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Mon, 20 Apr 2026 08:20:30 +0800</lastBuildDate>
-<item><title>Earthy Tones and Primary Colors Happily Coexist in This 150-Year-Old London Rowhouse - domino</title><link>https://www.domino.com/design-inspiration/studio-von-b-london-rowhouse-addition/</link></item>
-<item><title>Francesca Gilberti Burke - domino</title><link>https://www.domino.com/authors/francesca-gilberti-burke/</link></item>
-<item><title>Sian Richards - domino</title><link>https://www.domino.com/authors/sian-richards/</link></item>
-<item><title>Kate Daskalakis - domino</title><link>https://www.domino.com/authors/kate-daskalakis/</link></item>
-<item><title>Voyager 1 is Running Out of Power.  NASA Just Switch Part of It Off - Slashdot</title><link>https://science.slashdot.org/story/26/04/19/2346255/voyager-1-is-running-out-of-power-nasa-just-switch-part-of-it-off</link></item>
-<item><title>Nobel Prize-Winning Physicist Predicts Humankind Won&amp;#39;t Survive Another 50 Years - Slashdot</title><link>https://tech.slashdot.org/story/26/04/19/2154219/nobel-prize-winning-physicist-predicts-humankind-wont-survive-another-50-years</link></item>
-<item><title>Is the Iran War Driving a Surge of Interest in Electric Cars? - Slashdot</title><link>https://hardware.slashdot.org/story/26/04/19/1836219/is-the-iran-war-driving-a-surge-of-interest-in-electric-cars</link></item>
-<item><title>Pancreatic Cancer MRNA Vaccine Shows Lasting Results In Early Trial - Slashdot</title><link>https://science.slashdot.org/story/26/04/19/1553211/pancreatic-cancer-mrna-vaccine-shows-lasting-results-in-early-trial</link></item>
-<item><title>Motorola Sues Social Media Platforms and Creators in India - Slashdot</title><link>https://tech.slashdot.org/story/26/04/19/1457207/motorola-sues-social-media-platforms-and-creators-in-india</link></item>
-<item><title>Nevada Police Can Now Track Cellphones Without a Warrant - Slashdot</title><link>https://news.slashdot.org/story/26/04/18/1926216/nevada-police-can-now-track-cellphones-without-a-warrant</link></item>
-<item><title>HP Will Discontinue &amp;#39;HP Anyware&amp;#39; Remote Desktop, Trusted Zero Clients - Slashdot</title><link>https://slashdot.org/story/26/04/19/0028223/hp-will-discontinue-hp-anyware-remote-desktop-trusted-zero-clients</link></item>
-<item><title>Disney Creates Its Own IMAX for &amp;#39;Avengers: Doomsday&amp;#39; After Losing Screens to &amp;#39;Dune: Part 3&amp;#39; - Slashdot</title><link>https://entertainment.slashdot.org/story/26/04/19/0236210/disney-creates-its-own-imax-for-avengers-doomsday-after-losing-screens-to-dune-part-3</link></item>
-<item><title>Can the &amp;#39;Attention Liberation Movement&amp;#39; Foment a Rebellion Against Screens? - Slashdot</title><link>https://mobile.slashdot.org/story/26/04/18/1712214/can-the-attention-liberation-movement-foment-a-rebellion-against-screens</link></item>
-<item><title>Remembering Zip Drives - the Trendy Storage Technology of the 1990s - Slashdot</title><link>https://hardware.slashdot.org/story/26/04/19/0222227/remembering-zip-drives---the-trendy-storage-technology-of-the-1990s</link></item>
-<item><title>Duolingo CEO Says They&amp;#39;ve Stopped Tracking Employees&amp;#39; AI Use for Performance Reviews - Slashdot</title><link>https://slashdot.org/story/26/04/19/0136252/duolingo-ceo-says-theyve-stopped-tracking-employees-ai-use-for-performance-reviews</link></item>
-<item><title>SpaceX, Blue Origin Compete For &amp;#39;Artemis III&amp;#39; Mission - Slashdot</title><link>https://science.slashdot.org/story/26/04/18/2227222/spacex-blue-origin-compete-for-artemis-iii-mission</link></item>
-<item><title>New Movie Trailer Shows First AI-Generated Performance By a Major Star: the Late Val Kilmer - Slashdot</title><link>https://entertainment.slashdot.org/story/26/04/18/2010257/new-movie-trailer-shows-first-ai-generated-performance-by-a-major-star-the-late-val-kilmer</link></item>
-<item><title>Old Cars &amp;#39;Tell Tales&amp;#39; by Storing Data That&amp;#39;s Never Wiped - Slashdot</title><link>https://tech.slashdot.org/story/26/04/18/0621217/old-cars-tell-tales-by-storing-data-thats-never-wiped</link></item>
-<item><title>Fewer US College Students Major in CS. More Choose Data Science, Engineering - Slashdot</title><link>https://developers.slashdot.org/story/26/04/18/0332245/fewer-us-college-students-major-in-cs-more-choose-data-science-engineering</link></item>
-<item><title>Energy secretary sees ‘growing’ opposition to AI as ‘very real’ risk - FedScoop</title><link>https://fedscoop.com/doe-budget-hearing-ai-opposition-risk/</link></item>
-<item><title>AI helping downsized CFTC run smoother than ever, chairman claims - FedScoop</title><link>https://fedscoop.com/cftc-chair-michael-selig-ai-prediction-markets-data-sharing/</link></item>
-<item><title>DHS moves forward on autonomous surveillance towers at the border - FedScoop</title><link>https://fedscoop.com/dhs-budget-border-wall-surveillance-shutdown/</link></item>
-<item><title>OPM is floating hundreds of Tech Force candidates to agencies - FedScoop</title><link>https://fedscoop.com/opm-is-floating-hundreds-of-tech-force-candidates-to-agencies/</link></item>
-<item><title>IRS chief tells receptive Republicans, doubting Democrats that tech spurred ‘most successful filing season’ ever - FedScoop</title><link>https://fedscoop.com/irs-ceo-frank-bisignano-tax-day-report-senate/</link></item>
-<item><title>DOE launches AI testbed to evaluate models for energy operations - FedScoop</title><link>https://fedscoop.com/doe-ai-testbed-cybersecurity-lawrence-livermore-energy/</link></item>
-<item><title>Mission readiness depends on workforce agility and resilience - FedScoop</title><link>https://fedscoop.com/mission-readiness-depends-on-workforce-agility-and-resilience/</link></item>
-<item><title>US DOGE Service is alive and growing, organization official says - FedScoop</title><link>https://fedscoop.com/us-doge-service-alive-growing-organization-official-says/</link></item>
-<item><title>State Department eyes agentic AI for taking on ‘high-volume workflows’ - FedScoop</title><link>https://fedscoop.com/state-department-agentic-ai-plans/</link></item>
-<item><title>Energy needs ‘a lot more’ funding to reach Genesis Mission goals, official says - FedScoop</title><link>https://fedscoop.com/doe-genesis-mission-funding-challenges-aitalks/</link></item>
-<item><title>Blue Origin&amp;#39;s rocket reuse achievement marred by upper stage failure - Ars Technica</title><link>https://arstechnica.com/space/2026/04/errant-upper-stage-spoils-blue-origins-success-in-reusing-new-glenn-booster/</link></item>
-<item><title>I’ve fired one of America’s most powerful lasers—here’s what a shot day looks like - Ars Technica</title><link>https://arstechnica.com/science/2026/04/ive-fired-one-of-americas-most-powerful-lasers-heres-what-a-shot-day-looks-like/</link></item>
-<item><title>Lucasfilm drops The Mandalorian and Grogu final trailer at CinemaCon - Ars Technica</title><link>https://arstechnica.com/culture/2026/04/lucasfilm-drops-mandalorian-and-grogu-final-trailer-at-cinemacon/</link></item>
-<item><title>Most US voters want AI regulated, and many think the risks outweigh the rewards - BetaNews</title><link>https://betanews.com/article/most-us-voters-want-ai-regulated-and-many-think-the-risks-outweigh-the-rewards/</link></item>
-<item><title>Sequoia&amp;#39;s $7 billion fund debut under new leadership doubles down on AI - BetaNews</title><link>https://betanews.com/article/sequoia-raises-7b-biggest-ai-fund/</link></item>
-<item><title>Zoom can now verify that meeting participants are human and not AI - BetaNews</title><link>https://betanews.com/article/zoom-can-now-verify-that-meeting-participants-are-human-and-not-ai/</link></item>
-<item><title>Tech industry sees over 39,000 layoffs due to AI - BetaNews</title><link>https://betanews.com/article/tech-industry-sees-over-39000-layoffs-due-to-ai/</link></item>
-<item><title>Open source malware sees a 21 percent increase - BetaNews</title><link>https://betanews.com/article/open-source-malware-sees-a-21-percent-increase/</link></item>
-<item><title>Why AI is failing to deliver for many organizations [Q&amp;A] - BetaNews</title><link>https://betanews.com/article/why-ai-is-failing-to-deliver-for-many-organizations-qa/</link></item>
-<item><title>Jury finds Live Nation guilty of running an illegal concert monopoly - BetaNews</title><link>https://betanews.com/article/jury-rules-live-nation-illegal-monopoly/</link></item>
-<item><title>Mozilla launches Thunderbolt, an open-source AI client built to run on your own infrastructure - BetaNews</title><link>https://betanews.com/article/mozilla-launches-thunderbolt-an-open-source-ai-client-built-to-run-on-your-own-infrastructure/</link></item>
-<item><title>Opera’s new Browser Connector lets ChatGPT and Claude read your open tabs - BetaNews</title><link>https://betanews.com/article/operas-new-browser-connector-lets-chatgpt-and-claude-read-your-open-tabs/</link></item>
-<item><title>Ashampoo WinOptimizer 2026 usually sells for $30 but you can get it for free - BetaNews</title><link>https://betanews.com/article/ashampoo-winoptimizer-2026-usually-sells-for-30-but-you-can-get-it-for-free/</link></item>
-<item><title>Is human-driven cybersecurity reaching the end of the road? - BetaNews</title><link>https://betanews.com/article/is-human-driven-cybersecurity-reaching-the-end-of-the-road/</link></item>
-<item><title>Google Maps has new protections against fake reviews - BetaNews</title><link>https://betanews.com/article/google-maps-has-new-protections-against-fake-reviews/</link></item>
-<item><title>Smaller businesses turning to cyber insurance for added resilience - BetaNews</title><link>https://betanews.com/article/smaller-businesses-turning-to-cyber-insurance-for-added-resilience/</link></item>
-<item><title>Microsoft kicks off second phase of ESU for Skype for Business and Exchange Servers - BetaNews</title><link>https://betanews.com/article/microsoft-kicks-off-second-phase-of-esu-for-skype-for-business-and-exchange-servers/</link></item>
-<item><title>New platform helps enterprises discover AI workflows - BetaNews</title><link>https://betanews.com/article/new-platform-helps-enterprises-discover-ai-workflows/</link></item>
-<item><title>You can now hide YouTube Shorts - BetaNews</title><link>https://betanews.com/article/you-can-now-hide-youtube-shorts/</link></item>
-<item><title>The EU’s age verification app is now ready - BetaNews</title><link>https://betanews.com/article/the-eus-age-verification-app-is-now-ready/</link></item>
-<item><title>Google launches Gemini app for Mac - BetaNews</title><link>https://betanews.com/article/google-launches-gemini-app-for-mac/</link></item>
-<item><title>IBM launches automated cybersecurity services to counter AI-driven attacks - BetaNews</title><link>https://betanews.com/article/ibm-launches-automated-cybersecurity-services-to-counter-ai-driven-attacks/</link></item>
-<item><title>Deepfake scams have cost victims $2.19B worldwide, with the US the most targeted country - BetaNews</title><link>https://betanews.com/article/deepfake-scams-have-cost-victims-2-19b-worldwide-with-the-us-the-most-targeted-country/</link></item>
-<item><title>GitHub Reports DMCA Takedown Record and Surging Anti-Circumvention Claims - TorrentFreak</title><link>https://torrentfreak.com/github-reports-dmca-takedown-record-and-surging-anti-circumvention-claims/</link></item>
-<item><title>Best Colombian Coffee Beans Top Brands and Buying Guide - CoffeeHow</title><link>https://coffeehow.co/colombian-coffee/</link></item>
-<item><title>Best Light Roast Coffee Beans (Top Picks &amp; Buyer’s Guide) - CoffeeHow</title><link>https://coffeehow.co/light-roast-coffee/</link></item>
-<item><title>Best Sumatra Coffee Beans: Flavor, Reviews, and Buyer’s Guide - CoffeeHow</title><link>https://coffeehow.co/sumatra-coffee/</link></item>
-<item><title>Kicking Horse Coffee Review: Best Blends &amp; Full Buying Guide - CoffeeHow</title><link>https://coffeehow.co/kicking-horse-coffee/</link></item>
-<item><title>Best Jamaican Blue Mountain Coffee Beans Reviews and Buying Guide - CoffeeHow</title><link>https://coffeehow.co/blue-mountain-coffee/</link></item>
-<item><title>Ethiopian Coffee Guide: Taste, Regions, and Best Beans to Buy - CoffeeHow</title><link>https://coffeehow.co/ethiopian-coffee/</link></item>
-<item><title>Best Kona Coffee: How to Choose Real 100% Kona Beans - CoffeeHow</title><link>https://coffeehow.co/kona-coffee/</link></item>
-<item><title>Lifeboost Coffee Review: Best Beans, Flavor &amp; Honest Verdict - CoffeeHow</title><link>https://coffeehow.co/lifeboost-coffee-review/</link></item>
-<item><title>Best Low Acid Coffee Brands. Detailed Buyer’s Guide! - CoffeeHow</title><link>https://coffeehow.co/best-low-acid-coffee/</link></item>
-<item><title>果糖不只是糖，它更像是激素 - Solidot</title><link>https://www.solidot.org/story?sid=84084</link></item>
-<item><title>内存芯片短缺可能持续到 2030 年 - Solidot</title><link>https://www.solidot.org/story?sid=84085</link></item>
-<item><title>卫星无人机图像显示美国四成数据中心可能延期 - Solidot</title><link>https://www.solidot.org/story?sid=84086</link></item>
-<item><title>人形机器人打破人类半马世界纪录 - Solidot</title><link>https://www.solidot.org/story?sid=84087</link></item>
-<item><title>NASA 关闭旅行者 1 号的 LECP 仪器以节省电力维持运行 - Solidot</title><link>https://www.solidot.org/story?sid=84088</link></item>
-<item><title>La Fondation: A 1960s Car Park in Paris Artfully Recast as a Hotel, Wellness and Cultural Hub - Yatzer</title><link>https://www.yatzer.com/la-fondation-hotel-paris</link></item>
-<item><title>JAÇ HiFi Café in Barcelona Offers a Contemporary Take on Japanese Listening Bars - Yatzer</title><link>https://www.yatzer.com/jac-hifi-cafe-isern-serra-studio-barcelona-spain</link></item>
-<item><title>Inez &amp; Vinoodh&amp;#39;s Sweeping Retrospective in The Hague Frames Photography as an Act of Love - Yatzer</title><link>https://www.yatzer.com/inez-and-vinoodh-can-love-be-a-photograph-kunstmuseum-the-hague</link></item>
-<item><title>La Casa del Pirata: A Calibrated Dialogue Between Preservation and Intervention - Yatzer</title><link>https://www.yatzer.com/la-casa-de-pirata-raul-sanchez-architects-mataro-spain</link></item>
-<item><title>Studio Michael Burman Designs a Berlin Bakery as a Sculptural Dialogue in Stone, Wood and Steel - Yatzer</title><link>https://www.yatzer.com/keit-bakery-kreuzberg-berlin-studio-michael-burman</link></item>
-<item><title>Ebenrieder: Stephanie Thatenhorst Reimagines a Bavarian Farmhouse with Expressive Flair - Yatzer</title><link>https://www.yatzer.com/ebenrieder-farmhouse-stephanie-thatenhorst-chiemgau-bavaria</link></item>
-<item><title>AIM Architecture Reimagines a Cosmetics Store in Beijing as an Art Storage Facility - Yatzer</title><link>https://www.yatzer.com/harmay-beijing-hopson-one-mall-aim-architecture</link></item>
-<item><title>Where Are the City Trees? Monitoring Urban Trees across the U.S. Using Generative AI - ACM</title><link>https://cacm.acm.org/research/where-are-the-city-trees-monitoring-urban-trees-across-the-u-s-using-generative-ai/</link></item>
-<item><title>Copiloting the Copilots for Automated Program Repair - ACM</title><link>https://cacm.acm.org/research-highlights/copiloting-the-copilots-for-automated-program-repair/</link></item>
-<item><title>Technical Perspective: Fusing Large Language Models with Completion Engines for Automated Program Repair - ACM</title><link>https://cacm.acm.org/research-highlights/technical-perspective-fusing-large-language-models-with-completion-engines-for-automated-program-repair/</link></item>
-<item><title>My Journey in AI: Inspired by a Nobel Laureate and an Unusual Fish - ACM</title><link>https://cacm.acm.org/careers/my-journey-in-ai-inspired-by-a-nobel-laureate-and-an-unusual-fish/</link></item>
-<item><title>It’s About Time - ACM</title><link>https://cacm.acm.org/opinion/its-about-time/</link></item>
-<item><title>The Coming Commoditization of Computational Thinking - ACM</title><link>https://cacm.acm.org/opinion/the-coming-commoditization-of-computational-thinking/</link></item>
-<item><title>AI Individualism: What Are Social Relationships in the Age of Artificial Intelligence? - ACM</title><link>https://cacm.acm.org/opinion/ai-individualism-what-are-social-relationships-in-the-age-of-artificial-intelligence/</link></item>
-<item><title>From Passive to Participatory: How Liberating Structures Can Revolutionize Our Conferences - ACM</title><link>https://cacm.acm.org/opinion/from-passive-to-participatory-how-liberating-structures-can-revolutionize-our-conferences/</link></item>
-<item><title>TimesSquare - ACM</title><link>https://cacm.acm.org/opinion/timessquare/</link></item>
-<item><title>AI and the Evolving Role of the Scientific Paper - ACM</title><link>https://cacm.acm.org/opinion/ai-and-the-evolving-role-of-the-scientific-paper/</link></item>
-<item><title>Teaching Programmers A Survival Mindset - ACM</title><link>https://cacm.acm.org/careers/teaching-programmers-a-survival-mindset/</link></item>
-<item><title>A Trunk Full of Swords - ACM</title><link>https://cacm.acm.org/kode-vicious/a-trunk-full-of-swords/</link></item>
-<item><title>AI Multiplies for Drug Discovery - ACM</title><link>https://cacm.acm.org/news/ai-multiplies-for-drug-discovery/</link></item>
-<item><title>The Importance of Geopolitics in AI Development - ACM</title><link>https://cacm.acm.org/opinion/the-importance-of-geopolitics-in-ai-development/</link></item>
-<item><title>Communication Bias in Large Language Models: A Regulatory Perspective - ACM</title><link>https://cacm.acm.org/research/communication-bias-in-large-language-models-a-regulatory-perspective/</link></item>
-<item><title>How Avatars Make People Feel - ACM</title><link>https://cacm.acm.org/news/how-avatars-make-people-feel/</link></item>
-<item><title>Learning to Flow (Between Datacenters) - ACM</title><link>https://cacm.acm.org/research/learning-to-flow-between-datacenters/</link></item>
-<item><title>Redefining the Software Engineering Profession for AI - ACM</title><link>https://cacm.acm.org/opinion/redefining-the-software-engineering-profession-for-ai/</link></item>
-<item><title>Evolving the ACM Digital Library - ACM</title><link>https://cacm.acm.org/opinion/evolving-the-acm-digital-library/</link></item>
-<item><title>General Game Playing - ACM</title><link>https://cacm.acm.org/research/general-game-playing/</link></item>
-<item><title>In Memoriam: David J. Farber - ACM</title><link>https://cacm.acm.org/news/in-memoriam-david-j-farber/</link></item>
-<item><title>When Seeing Isn’t Believing - ACM</title><link>https://cacm.acm.org/news/when-seeing-isnt-believing/</link></item>
-<item><title>Air Fryer Asian Chicken with Rice - Bev Cooks</title><link>https://bevcooks.com/2026/04/air-fryer-asian-chicken-with-rice/</link></item>
-<item><title>Monthly Mixtape: Shoegaze and Rain Haze - Bev Cooks</title><link>https://bevcooks.com/2026/04/monthly-mixtape-shoegaze-and-rain-haze/</link></item>
-<item><title>Book Tasting – So Far! - Bev Cooks</title><link>https://bevcooks.com/2026/03/book-tasting-so-far/</link></item>
-<item><title>Homemade Parmesan Bagels - Bev Cooks</title><link>https://bevcooks.com/2026/03/homemade-parmesan-bagels/</link></item>
-<item><title>Use MicroPython to Add a Custom Sensor to a Robot… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/04/19/use-micropython-to-add-a-custom-sensor-to-a-robot-kit/</link></item>
-<item><title>Tech Talkies Made a Voice-Controlled Robot Dog - Adafruit Industries</title><link>https://blog.adafruit.com/2026/04/19/tech-talkies-made-a-voice-controlled-robot-dog/</link></item>
-<item><title>Adafruit Weekly Editorial Round-Up: CircuitPython 10.2.0-rc.0, ESP-NOW Walkie Talkies, One Key QT Py ESP32 demo and more! - Adafruit Industries</title><link>https://blog.adafruit.com/2026/04/19/adafruit-weekly-editorial-round-up-circuitpython-10-2-0-rc-0-esp-now-walkie-talkies-one-key-qt-py-esp32-demo-and-more/</link></item>
-<item><title>Fashionably on Task: a Smart Bracelet for Forgetfulness #Wearable - Adafruit Industries</title><link>https://blog.adafruit.com/2026/04/18/fashionably-on-task-a-smart-bracelet-for-forgetfulness-wearable/</link></item>
-<item><title>MoMA PS1’s 50th Anniversary Block Party is Today! - Adafruit Industries</title><link>https://blog.adafruit.com/2026/04/18/moma-ps1s-50th-anniversary-block-party-is-today/</link></item>
-<item><title>Build a tiny network-wide ad blocker #Raspberrypi - Adafruit Industries</title><link>https://blog.adafruit.com/2026/04/17/build-a-tiny-network-wide-ad-blocker-raspberrypi/</link></item>
-<item><title>No-Code Seedling Frost Alert and New WipperSnapper Components. What’s new with Adafruit IO and the Adafruit Learning System. - Adafruit Industries</title><link>https://blog.adafruit.com/2026/04/17/no-code-seedling-frost-alert-and-new-wippersnapper-components-whats-new-with-adafruit-io-and-the-adafruit-learning-system/</link></item>
-<item><title>Long Live The Cyberdeck #piday #raspberrypi - Adafruit Industries</title><link>https://blog.adafruit.com/2026/04/17/long-live-the-cyberdeck-piday-raspberrypi/</link></item>
-<item><title>John Park’s CircuitPython Parsec: DAC Volume Control - Adafruit Industries</title><link>https://blog.adafruit.com/2026/04/17/john-parks-circuitpython-parsec-dac-volume-control/</link></item>
-<item><title>mini LEGO Puzzle Box II – LEGO Puzzle Box Idea - Adafruit Industries</title><link>https://blog.adafruit.com/2026/04/17/mini-lego-puzzle-box-ii-lego-puzzle-box-idea/</link></item>
-<item><title>Making an ESP32 device which connects to Claude over Bluetooth - Adafruit Industries</title><link>https://blog.adafruit.com/2026/04/17/making-an-esp32-device-which-connects-to-claude-over-bluetooth/</link></item>
-<item><title>Claude Cowork - Adafruit Industries</title><link>https://blog.adafruit.com/tag/claude-cowork/</link></item>
-<item><title>How to Display the Weather - Adafruit Industries</title><link>https://blog.adafruit.com/2026/04/17/how-to-display-the-weather/</link></item>
-<item><title>NEW GUIDE: ESP-NOW Walkie Talkies #AdafruitLearningSystem @Adafruit - Adafruit Industries</title><link>https://blog.adafruit.com/2026/04/17/new-guide-esp-now-walkie-talkies-adafruitlearningsystem-adafruit/</link></item>
-<item><title>esp-now walkie talkies - Adafruit Industries</title><link>https://blog.adafruit.com/tag/esp-now-walkie-talkies/</link></item>
-<item><title>feather esp32-s3 reverse tft - Adafruit Industries</title><link>https://blog.adafruit.com/tag/feather-esp32-s3-reverse-tft/</link></item>
-<item><title>i2s microphone - Adafruit Industries</title><link>https://blog.adafruit.com/tag/i2s-microphone/</link></item>
-<item><title>Plant Germination Pot #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2026/04/16/plant-germination-pot-3dthursday-3dprinting/</link></item>
-<item><title>The Orange Pi 6 Plus – a review and benchmarks - Adafruit Industries</title><link>https://blog.adafruit.com/2026/04/16/the-orange-pi-6-plus-a-review-and-benchmarks/</link></item>
-<item><title>南帆：文化生产：精英与大众 - 爱思想</title><link>https://www.aisixiang.com/data/174831.html</link></item>
-<item><title>李彦昌：从“中西之别”到“新旧之 - 爱思想</title><link>https://www.aisixiang.com/data/174836.html</link></item>
-<item><title>潘炜旻：李贽的“重评”与新文化运 - 爱思想</title><link>https://www.aisixiang.com/data/174835.html</link></item>
-<item><title>徐义华：文明概念与标准辨析 - 爱思想</title><link>https://www.aisixiang.com/data/174910.html</link></item>
-<item><title>黄道炫：抗战时期国民政府的“抓壮 - 爱思想</title><link>https://www.aisixiang.com/data/174886.html</link></item>
-<item><title>葛剑雄：交通与人类文明 - 爱思想</title><link>https://www.aisixiang.com/data/174805.html</link></item>
-<item><title>薛轶群：甲午战前日本的密电破译与 - 爱思想</title><link>https://www.aisixiang.com/data/174897.html</link></item>
-<item><title>董昀：论中国特色金融文化的实践逻 - 爱思想</title><link>https://www.aisixiang.com/data/174810.html</link></item>
-<item><title>王志强 李想：中央苏区时期中国共 - 爱思想</title><link>https://www.aisixiang.com/data/174914.html</link></item>
-<item><title>当前全球出口管制治理困境及相关思 - 爱思想</title><link>https://www.aisixiang.com/data/174875.html</link></item>
-<item><title>徐鹤涛：民国时期田赋预征与地方财 - 爱思想</title><link>https://www.aisixiang.com/data/174911.html</link></item>
-<item><title>马玲：匈牙利“变天”对中国的影响 - 爱思想</title><link>https://www.aisixiang.com/data/174884.html</link></item>
-<item><title>吴士存：提升南海议题国际传播效能 - 爱思想</title><link>https://www.aisixiang.com/data/174807.html</link></item>
-<item><title>黄群慧 盛方富：先进制造业何以成 - 爱思想</title><link>https://www.aisixiang.com/data/174904.html</link></item>
-<item><title>胡鞍钢：中国式现代化历程：从世界 - 爱思想</title><link>https://www.aisixiang.com/data/174840.html</link></item>
-<item><title>张志丹：推动文化建设数智化赋能、 - 爱思想</title><link>https://www.aisixiang.com/data/175032.html</link></item>
-<item><title>邬书林：抓好全民阅读这个基本文化 - 爱思想</title><link>https://www.aisixiang.com/data/174998.html</link></item>
-<item><title>史广峰：以绿色发展引领生态文明建 - 爱思想</title><link>https://www.aisixiang.com/data/174996.html</link></item>
-<item><title>李思聪：中国式现代化史视域下中华 - 爱思想</title><link>https://www.aisixiang.com/data/174961.html</link></item>
-<item><title>李军时：加快推进文化和科技融合的 - 爱思想</title><link>https://www.aisixiang.com/data/174942.html</link></item>
-<item><title>尚永琪：古代中国农业文明语境中的 - 爱思想</title><link>https://www.aisixiang.com/data/174912.html</link></item>
-<item><title>黄振华：超越文化边界：中国经典作 - 爱思想</title><link>https://www.aisixiang.com/data/174909.html</link></item>
-<item><title>刘江平：中医“廉心仁术”的文化价 - 爱思想</title><link>https://www.aisixiang.com/data/174856.html</link></item>
-<item><title>张力：以社会主义核心价值观引领文 - 爱思想</title><link>https://www.aisixiang.com/data/174854.html</link></item>
-<item><title>李昱成：生态环境法典开启美丽中国 - 爱思想</title><link>https://www.aisixiang.com/data/174822.html</link></item>
-<item><title>洪俊杰：完善机制不断提升生态补偿 - 爱思想</title><link>https://www.aisixiang.com/data/174751.html</link></item>
-<item><title>张建珍：文化如何赋能人工智能发展 - 爱思想</title><link>https://www.aisixiang.com/data/174720.html</link></item>
-<item><title>孙小泽：增强文化认同培育可感可及 - 爱思想</title><link>https://www.aisixiang.com/data/174717.html</link></item>
-<item><title>赵运涛：从祭祀礼器到文化符号：玉 - 爱思想</title><link>https://www.aisixiang.com/data/174675.html</link></item>
-<item><title>王昌海：重视非物质文化遗产保护传 - 爱思想</title><link>https://www.aisixiang.com/data/174672.html</link></item>
-<item><title>凌明：推动文化遗产系统性保护和统 - 爱思想</title><link>https://www.aisixiang.com/data/174671.html</link></item>
-<item><title>伍爱群：加快推进科技创新与产业创 - 爱思想</title><link>https://www.aisixiang.com/data/174939.html</link></item>
-<item><title>万劲波：强化国家战略科技力量协同 - 爱思想</title><link>https://www.aisixiang.com/data/174864.html</link></item>
-<item><title>刘晓：立足常规，着眼新奇——物理 - 爱思想</title><link>https://www.aisixiang.com/data/174762.html</link></item>
-<item><title>余晓晖：以有效治理保障人工智能健 - 爱思想</title><link>https://www.aisixiang.com/data/174700.html</link></item>
-<item><title>韩端锋 倪宝玉：迈向深蓝 海洋装 - 爱思想</title><link>https://www.aisixiang.com/data/174664.html</link></item>
-<item><title>李国平：“全球城市”科技创新的格 - 爱思想</title><link>https://www.aisixiang.com/data/174600.html</link></item>
-<item><title>徐康宁：科技创新就像撬动地球的杠 - 爱思想</title><link>https://www.aisixiang.com/data/174579.html</link></item>
-<item><title>胡伯项：以强化原始创新筑基高水平 - 爱思想</title><link>https://www.aisixiang.com/data/174484.html</link></item>
-<item><title>孙来斌：人工智能的发展与劳动价值 - 爱思想</title><link>https://www.aisixiang.com/data/174477.html</link></item>
-<item><title>万劲波：让成果转化“反哺”科研 - 爱思想</title><link>https://www.aisixiang.com/data/174443.html</link></item>
-<item><title>邵六益：为什么要关注恩格斯的“中华民族”论述？ - 爱思想</title><link>https://www.aisixiang.com/data/175041.html</link></item>
-<item><title>陈一新：提升护航高质量发展的国家安全能力 - 爱思想</title><link>https://www.aisixiang.com/data/175034.html</link></item>
-<item><title>朱赫夫 舒国滢：生成式人工智能构成对法律人的真正挑战吗——以疑难案件处理为中心 - 爱思想</title><link>https://www.aisixiang.com/data/175023.html</link></item>
-<item><title>黄宗智：我的学习路径和认识 - 爱思想</title><link>https://www.aisixiang.com/data/175020.html</link></item>
-<item><title>张广生：“天下—国家”的赓续——中华多元一体传统的文明机制 - 爱思想</title><link>https://www.aisixiang.com/data/175019.html</link></item>
-<item><title>于莹：公司违法分配责任的规范型变与适用因应 - 爱思想</title><link>https://www.aisixiang.com/data/175042.html</link></item>
-<item><title>熊樟林：行政执法标准跨区域衔接的制度构造 - 爱思想</title><link>https://www.aisixiang.com/data/175039.html</link></item>
-<item><title>肖俊：限定继承制转型研究——以遗产管理与限定继承的互动为视角 - 爱思想</title><link>https://www.aisixiang.com/data/175037.html</link></item>
-<item><title>林华：法治实施论——学习习近平法治思想关于法治实施论述 - 爱思想</title><link>https://www.aisixiang.com/data/175030.html</link></item>
-<item><title>罗琼：新型能源体系建设中的区域协同性 - 爱思想</title><link>https://www.aisixiang.com/data/175053.html</link></item>
-<item><title>张二震 戴翔：促进贸易投资一体化 - 爱思想</title><link>https://www.aisixiang.com/data/175052.html</link></item>
-<item><title>郑梦：夯实“六大支柱” 建设金融强国 - 爱思想</title><link>https://www.aisixiang.com/data/175051.html</link></item>
-<item><title>杨海：以绿色发展助力乡村全面振兴 - 爱思想</title><link>https://www.aisixiang.com/data/175050.html</link></item>
-<item><title>常青：数智赋能青年就业生态：发展趋势与优化路径 - 爱思想</title><link>https://www.aisixiang.com/data/175049.html</link></item>
-<item><title>卜昭滔：“党的自我革命重在治权”的内在逻辑 - 爱思想</title><link>https://www.aisixiang.com/data/175059.html</link></item>
-<item><title>王刚：让政绩考核指挥棒真正管用 - 爱思想</title><link>https://www.aisixiang.com/data/175033.html</link></item>
-<item><title>思力：在遵规守纪前提下敢于担当善于作为 - 爱思想</title><link>https://www.aisixiang.com/data/175031.html</link></item>
-<item><title>刘伟 王昆：再论发展基于中国治理场景的政治心理学 - 爱思想</title><link>https://www.aisixiang.com/data/175029.html</link></item>
-<item><title>曹江秋：全球治理：谁来治、如何治、为谁治 - 爱思想</title><link>https://www.aisixiang.com/data/175010.html</link></item>
-<item><title>陈文鑫：美以伊冲突背后的美国霸权困境 - 爱思想</title><link>https://www.aisixiang.com/data/175003.html</link></item>
-<item><title>张超：从“去风险”到再接触：欧洲对华政策微妙转向 - 爱思想</title><link>https://www.aisixiang.com/data/174999.html</link></item>
-<item><title>徐菁忆：深入把握中国外交软实力的丰富意蕴 - 爱思想</title><link>https://www.aisixiang.com/data/174995.html</link></item>
-<item><title>颜少君：当前全球制海权博弈新态势 - 爱思想</title><link>https://www.aisixiang.com/data/174990.html</link></item>
-<item><title>冯雪红 安宇：从河西走廊看中华文明的多元互构 - 爱思想</title><link>https://www.aisixiang.com/data/175040.html</link></item>
-<item><title>马学军：严复思想在民国社会学家中的回响——基于陶孟和、潘光旦、林耀华、费孝通的著述 - 爱思想</title><link>https://www.aisixiang.com/data/175017.html</link></item>
-<item><title>周雪光：社会学视野下的财政关系——评周飞舟《以利为利——财政关系与政府行为》 - 爱思想</title><link>https://www.aisixiang.com/data/175015.html</link></item>
-<item><title>胡泳 王治钧：批判性反思时间管理APP对数字福祉的窄化——以番茄ToDo为例 - 爱思想</title><link>https://www.aisixiang.com/data/175036.html</link></item>
-<item><title>徐岚：加强网络乱象治理 - 爱思想</title><link>https://www.aisixiang.com/data/175006.html</link></item>
-<item><title>建设造福人民的法治化网络空间 - 爱思想</title><link>https://www.aisixiang.com/data/175005.html</link></item>
-<item><title>胡泳：“ 氛围编程”之年：从工程理性到交互理性的范式突破与风险 - 爱思想</title><link>https://www.aisixiang.com/data/174885.html</link></item>
-<item><title>黄河：人工智能时代中国国家形象国际传播 - 爱思想</title><link>https://www.aisixiang.com/data/174759.html</link></item>
-<item><title>赵岩：发挥高等教育在推进教育科技人才一体发展中的作用 - 爱思想</title><link>https://www.aisixiang.com/data/174992.html</link></item>
-<item><title>湛中乐 陈劲竹：教育法典中高等教育编的设计 - 爱思想</title><link>https://www.aisixiang.com/data/174984.html</link></item>
-<item><title>湛中乐：《教师法》修订应当重点关注的几个问题 - 爱思想</title><link>https://www.aisixiang.com/data/174973.html</link></item>
-<item><title>虞花荣：理想信念教育的理论溯源、时代内涵和实践路径 - 爱思想</title><link>https://www.aisixiang.com/data/174972.html</link></item>
-<item><title>田可：数智时代高校意识形态工作的范式转型 - 爱思想</title><link>https://www.aisixiang.com/data/174937.html</link></item>
-<item><title>王齐洲：“六经注我”与“我注六经” - 爱思想</title><link>https://www.aisixiang.com/data/175055.html</link></item>
-<item><title>常森：《诗经》中的“颂”名是指“舞容”吗 - 爱思想</title><link>https://www.aisixiang.com/data/175054.html</link></item>
-<item><title>孙惠柱：《推销员之死》中国演出的跨文化解读 - 爱思想</title><link>https://www.aisixiang.com/data/175026.html</link></item>
-<item><title>孙惠柱：音乐剧《狂飙》：史诗级文学原型的中国式呈现 - 爱思想</title><link>https://www.aisixiang.com/data/175025.html</link></item>
-<item><title>余三定：活泼多样的人物出场——《水浒》赏析之十二 - 爱思想</title><link>https://www.aisixiang.com/data/174974.html</link></item>
-<item><title>陈希：山西吕梁新见元碑中的地方社会与民族交流 - 爱思想</title><link>https://www.aisixiang.com/data/175057.html</link></item>
-<item><title>苏俊林：“周秦之变”与秦、汉之制——“二千年秦政大盗论”相关问题辨析 - 爱思想</title><link>https://www.aisixiang.com/data/175056.html</link></item>
-<item><title>周阳：历史过程“阶梯式递进”的科学内涵 - 爱思想</title><link>https://www.aisixiang.com/data/175047.html</link></item>
-<item><title>魏兴涛 丁福林：黄帝时代的早期文明成就 - 爱思想</title><link>https://www.aisixiang.com/data/175046.html</link></item>
-<item><title>陈苏镇：从未央宫到洛阳宫：两汉魏晋的宫禁格局 - 爱思想</title><link>https://www.aisixiang.com/data/175043.html</link></item>
-<item><title>梁丹丹：变古以开新：宋代经学诠释学与儒学复兴 - 爱思想</title><link>https://www.aisixiang.com/data/175058.html</link></item>
-<item><title>侯乃祯：明代大儒李渭的心学思想 - 爱思想</title><link>https://www.aisixiang.com/data/175045.html</link></item>
-<item><title>吴柱：《论语》“季氏富于周公”申义 - 爱思想</title><link>https://www.aisixiang.com/data/175044.html</link></item>
-<item><title>唐文明：谈儒门教化与现代性问题 - 爱思想</title><link>https://www.aisixiang.com/data/175028.html</link></item>
-<item><title>王球：人工智能有道德地位吗？——基于谢利·卡根的广义能动性进路的考察 - 爱思想</title><link>https://www.aisixiang.com/data/175021.html</link></item>
-<item><title>董必荣：努力构建中国审计学自主知识体系 - 爱思想</title><link>https://www.aisixiang.com/data/175048.html</link></item>
-<item><title>梁吉生：创业维艰启后人——忆王玉哲师 - 爱思想</title><link>https://www.aisixiang.com/data/175022.html</link></item>
-<item><title>习近平：推动全民阅读，建设书香社会 - 爱思想</title><link>https://www.aisixiang.com/data/175016.html</link></item>
-<item><title>莫砺锋：周勋初先生二三事 - 爱思想</title><link>https://www.aisixiang.com/data/174975.html</link></item>
-<item><title>胡泳：关心老去，就是关心我们自己 - 爱思想</title><link>https://www.aisixiang.com/data/175024.html</link></item>
-<item><title>孙雅洁：唐代“德才并重”的考课制度 - 爱思想</title><link>https://www.aisixiang.com/data/175014.html</link></item>
-<item><title>莫砺锋：系主任日记之一 - 爱思想</title><link>https://www.aisixiang.com/data/174987.html</link></item>
-<item><title>郑力刚：远山的呼唤：一溜的快乐 - 爱思想</title><link>https://www.aisixiang.com/data/174986.html</link></item>
-<item><title>孟繁华，1963年5月生，北京大学文学博士（1995）。现任沈阳师范大学特聘教授、中国文化与文..... - 爱思想</title><link>https://www.aisixiang.com/thinktank/MengFanhua.html</link></item>
-<item><title>Plaion Replai - Cool3c</title><link>https://www.cool3c.com/tag/168512</link></item>
-<item><title>Apple Watch Series 9 - Cool3c</title><link>https://www.cool3c.com/tag/151593</link></item>
-<item><title>Apple Watch Ultra 2 - Cool3c</title><link>https://www.cool3c.com/tag/153521</link></item>
-<item><title>Aston Martin - Cool3c</title><link>https://www.cool3c.com/tag/14570</link></item>
-<item><title>CarPlay Ultra - Cool3c</title><link>https://www.cool3c.com/tag/163952</link></item>
-<item><title>Galaxy Z Fold7 - Cool3c</title><link>https://www.cool3c.com/tag/164290</link></item>
-<item><title>Galaxy Z Flip7 - Cool3c</title><link>https://www.cool3c.com/tag/164291</link></item>
-<item><title>Galaxy Z Fold8 - Cool3c</title><link>https://www.cool3c.com/tag/165589</link></item>
-<item><title>Galaxy Z TriFold - Cool3c</title><link>https://www.cool3c.com/tag/169638</link></item>
-<item><title>Galaxy Z Flip8 - Cool3c</title><link>https://www.cool3c.com/tag/170311</link></item>
-<item><title>other world computing - Cool3c</title><link>https://www.cool3c.com/tag/23181</link></item>
-<item><title>Thunderbolt 5 - Cool3c</title><link>https://www.cool3c.com/tag/138505</link></item>
-<item><title>Apple Silicon - Cool3c</title><link>https://www.cool3c.com/tag/134516</link></item>
-<item><title>Tools for Humanity - Cool3c</title><link>https://www.cool3c.com/tag/152791</link></item>
-<item><title>amd ryzen 9 9950x3d cpu處理器 - Cool3c</title><link>https://www.cool3c.com/search/amd%20ryzen%209%209950x3d%20cpu%E8%99%95%E7%90%86%E5%99%A8</link></item>
-<item><title>samsung galaxy s26 - Cool3c</title><link>https://www.cool3c.com/search/samsung%20galaxy%20s26</link></item>
-<item><title>佳能powershot系列 - Cool3c</title><link>https://www.cool3c.com/search/%E4%BD%B3%E8%83%BDpowershot%E7%B3%BB%E5%88%97</link></item>
-<item><title>macbook air m5 - Cool3c</title><link>https://www.cool3c.com/search/macbook%20air%20m5</link></item>
-<item><title>Voyager 1 is Running Out of Power. NASA Just Switched Part of It Off - Slashdot</title><link>https://science.slashdot.org/story/26/04/19/2346255/voyager-1-is-running-out-of-power-nasa-just-switched-part-of-it-off</link></item>
-<item><title>Fructose Isn&amp;#39;t Just Sugar. It Acts More Like a Hormone - Slashdot</title><link>https://science.slashdot.org/story/26/04/18/0444250/fructose-isnt-just-sugar-it-acts-more-like-a-hormone?sbsrc=md</link></item>
-<item><title>Why Voyager 1 Matters and Why NASA Just Switched Part of It Off - Slashdot</title><link>https://slashdot.org/submission/17346588/why-voyager-1-matters-and-why-nasa-just-switched-part-of-it-off</link></item>
-<item><title>There Are Signs of a Massive AI Backlash - Slashdot</title><link>https://slashdot.org/submission/17346570/there-are-signs-of-a-massive-ai-backlash</link></item>
-<item><title>Two new studies about how many birds die from wind turbines - Slashdot</title><link>https://slashdot.org/submission/17346558/two-new-studies-about-how-many-birds-die-from-wind-turbines</link></item>
-<item><title>Government Workers Say They&amp;#39;re Getting Inundated With Religion - Slashdot</title><link>https://slashdot.org/submission/17346552/government-workers-say-theyre-getting-inundated-with-religion</link></item>
-<item><title>Microsoft increases the FAT32 limit from 32GB to 4TB - Slashdot</title><link>https://slashdot.org/submission/17346550/microsoft-increases-the-fat32-limit-from-32gb-to-4tb</link></item>
-<item><title>Sources: ‘Fitbit Air’ is a screen-less Whoop competitor debuting with ‘Google Health’ subscription - 9to5Google</title><link>https://9to5google.com/2026/04/19/fitbit-air-google-health/</link></item>
-<item><title>What do you want Google’s ‘Pixel Glow’ lights to do? - 9to5Google</title><link>https://9to5google.com/2026/04/19/what-do-you-want-googles-pixel-glow-lights-to-do/</link></item>
-<item><title>What is happening with the Google Assistant? [Video] - 9to5Google</title><link>https://9to5google.com/2026/04/18/what-is-happening-with-the-google-assistant-video/</link></item>
-<item><title>started teasing - 9to5Google</title><link>https://9to5google.com/2026/03/31/fitbit-screen-less-band/</link></item>
-<item><title>Gemini Live redesign replaces fullscreen interface on Android - 9to5Google</title><link>https://9to5google.com/2026/04/19/gemini-live-app-redesign/</link></item>
-<item><title>Gemini app bug removes features, reverts UI on Android - 9to5Google</title><link>https://9to5google.com/2026/04/18/gemini-app-bug/</link></item>
-<item><title>earlier this month - 9to5Google</title><link>https://9to5google.com/2026/04/08/gemini-app-notebooks/</link></item>
-<item><title>Samsung Galaxy Z TriFold - 9to5Google</title><link>https://9to5google.com/guides/samsung-galaxy-z-trifold/</link></item>
-<item><title>Nothing Headphone (a) - 9to5Google</title><link>https://9to5google.com/guides/nothing-headphone-a/</link></item>
-<item><title>These flagship earbuds hold one major thing over the Pixel Buds Pro 2 - 9to5Google</title><link>https://9to5google.com/status-pro-x-earbuds-hold-one-major-thing-over-the-pixel-buds-pro-2/</link></item>
-<item><title>Android 17 Beta - 9to5Google</title><link>https://9to5google.com/guides/android-17-beta/</link></item>
-<item><title>The Forsytes - Vulture</title><link>https://www.vulture.com/tv/the-forsytes/</link></item>
-<item><title>Project Hail Mary - Vulture</title><link>https://www.vulture.com/tags/project-hail-mary/</link></item>
-<item><title>Completely Typical - Vulture</title><link>https://www.vulture.com/article/the-audacity-recap-episode-3-valley-of-hearts-delight.html</link></item>
-<item><title>Winning Time - Vulture</title><link>https://www.vulture.com/article/rupauls-drag-race-finale-recap-season-18-episode-16-mtv.html</link></item>
-<item><title>The Lady She Was Looking For - Vulture</title><link>https://www.vulture.com/article/outlander-recap-season-8-episode-7-starz.html</link></item>
-<item><title>Automate This - Vulture</title><link>https://www.vulture.com/article/for-all-mankind-recap-season-5-episode-4-open-source.html</link></item>
-<item><title>Spilling at Tea - Vulture</title><link>https://www.vulture.com/article/ladies-of-london-recap-season-4-episode-8-bad-manors-bravo.html</link></item>
-<item><title>How Can You Not Love This Place? - Vulture</title><link>https://www.vulture.com/article/the-pitt-finale-recap-9-pm-season-2-episode-15.html</link></item>
-<item><title>New York or Nowhere - Vulture</title><link>https://www.vulture.com/article/hacks-recap-season-5-episode-2-number-one-fan.html</link></item>
-<item><title>Under the Cover of Darkness - Vulture</title><link>https://www.vulture.com/article/rhobh-finale-recap-dorits-closing-chapters.html</link></item>
-<item><title>Till Death Do Us Part - Vulture</title><link>https://www.vulture.com/article/beef-recap-season-2-episode-8-finale-netflix.html</link></item>
-<item><title>Magnetic muon measurements and gene-therapy advances win US$3 million Breakthrough prizes - Nature</title><link>https://www.nature.com/articles/d41586-026-01014-9</link></item>
-<item><title>Immune cells have a surprising role in exercise endurance - Nature</title><link>https://www.nature.com/articles/d41586-026-01245-w</link></item>
-<item><title>Revealed: how male and female brain cells differ in gene activity - Nature</title><link>https://www.nature.com/articles/d41586-026-01227-y</link></item>
-<item><title>Identifying the topographic signature of early Martian oceans - Nature</title><link>https://www.nature.com/articles/s41586-026-10381-2</link></item>
-<item><title>Daily briefing: Youthifying &amp;#39;mirror&amp;#39; brings back more vivid childhood memories - Nature</title><link>https://www.nature.com/articles/d41586-026-01248-7</link></item>
-<item><title>US lawmakers intensify scrutiny of scientific-publishing practices - Nature</title><link>https://www.nature.com/articles/d41586-026-01251-y</link></item>
-<item><title>The nine-to-five PhD: mere myth or an achievable goal? - Nature</title><link>https://www.nature.com/articles/d41586-026-00509-9</link></item>
-<item><title>‘Science needs defending’: record number of researchers run for office in US mid-terms - Nature</title><link>https://www.nature.com/articles/d41586-026-01134-2</link></item>
-<item><title>Quantum computers take on health care: light-sensitive cancer drugs win US$2-million contest - Nature</title><link>https://www.nature.com/articles/d41586-026-01236-x</link></item>
-<item><title>AI speeds up design of devices that turn waste heat into electricity - Nature</title><link>https://www.nature.com/articles/d41586-026-00907-z</link></item>
-<item><title>Molecular profiling of gene-edited cells reveals shared drug-resistance mechanisms - Nature</title><link>https://www.nature.com/articles/d41586-026-01181-9</link></item>
-<item><title>Brain–machine interface reveals the origin of a widely used neural signal - Nature</title><link>https://www.nature.com/articles/d41586-026-01189-1</link></item>
-<item><title>Therapeutic mitochondria transplants made more efficient with targeting tool - Nature</title><link>https://www.nature.com/articles/d41586-026-00910-4</link></item>
-<item><title>Bad influence: LLMs can transmit malicious traits using hidden signals - Nature</title><link>https://www.nature.com/articles/d41586-026-00906-0</link></item>
-<item><title>A picture of health: gene-expression maps of the human liver from living donors - Nature</title><link>https://www.nature.com/articles/d41586-026-01187-3</link></item>
-<item><title>How effective is the personalized off-label use of targeted cancer treatment? - Nature</title><link>https://www.nature.com/articles/d41586-026-00911-3</link></item>
-<item><title>Tumour promotion through the lens of evolution - Nature</title><link>https://www.nature.com/articles/s41586-026-10386-x</link></item>
-<item><title>A mechanism for adaptive genome regulation in cancer - Nature</title><link>https://www.nature.com/articles/s41586-026-10269-1</link></item>
-<item><title>Cytoplasmic lattices are megadalton storage complexes in mammalian oocytes - Nature</title><link>https://www.nature.com/articles/s41586-026-10513-8</link></item>
-<item><title>Carbonyl swapping converts cyclic ketones to saturated heterocycles - Nature</title><link>https://www.nature.com/articles/s41586-026-10508-5</link></item>
-<item><title>Monolithic 3D integration of tantalum pentoxide nonlinear photonics - Nature</title><link>https://www.nature.com/articles/s41586-026-10379-w</link></item>
-<item><title>Linear RAG scanning mediates editing of Igκ variable region repertoires - Nature</title><link>https://www.nature.com/articles/s41586-026-10362-5</link></item>
-<item><title>Max Planck Dioscuri Postdoc: Structural Biology at XFELs - Nature</title><link>https://www.nature.com/naturecareers/job/12858508/max-planck-dioscuri-postdoc-structural-biology-at-xfels/?TrackID=62&amp;utm_source=widget&amp;utm_medium=referral&amp;utm_campaign=62</link></item>
-<item><title>Multiple PhD Positions - Nature</title><link>https://www.nature.com/naturecareers/job/12858502/multiple-phd-positions/?TrackID=62&amp;utm_source=widget&amp;utm_medium=referral&amp;utm_campaign=62</link></item>
-<item><title>Deputy Editor, Nature Communications - Nature</title><link>https://www.nature.com/naturecareers/job/12858497/deputy-editor-nature-communications/?TrackID=62&amp;utm_source=widget&amp;utm_medium=referral&amp;utm_campaign=62</link></item>
-<item><title>Global Talent Recruitment Announcement of the College of Engineering, HZAU - Nature</title><link>https://www.nature.com/naturecareers/job/12856815/global-talent-recruitment-announcement-of-the-college-of-engineering-hzau/?TrackID=62&amp;utm_source=widget&amp;utm_medium=referral&amp;utm_campaign=62</link></item>
-<item><title>Follow us on Bluesky - Nature</title><link>https://bsky.app/profile/nature.com</link></item>
-<item><title>Journalistic Principles - Nature</title><link>https://www.nature.com/nature/journalistic-principles</link></item>
-<item><title>What the therapy buzzword ‘cycle-breaking’ really involves - Psyche</title><link>https://psyche.co/ideas/what-the-therapy-buzzword-cycle-breaking-really-involves?utm_source=rss-feed</link></item>
-<item><title>When there are no words - Psyche</title><link>https://psyche.co/videos/in-the-absence-of-a-voice-love-finds-new-ways-to-speak?utm_source=rss-feed</link></item>
-<item><title>Mostarska Škola - Psyche</title><link>https://psyche.co/turning-points/we-fled-bosnia-during-the-war-could-it-become-home-again?utm_source=rss-feed</link></item>
-<item><title>Try seeing your personality as dimensional - Psyche</title><link>https://psyche.co/notes-to-self/the-benefits-of-seeing-your-personality-as-dimensional?utm_source=rss-feed</link></item>
-<item><title>The cure for body dissatisfaction that doesn’t involve the body - Psyche</title><link>https://psyche.co/ideas/the-cure-for-body-dissatisfaction-that-doesnt-involve-the-body?utm_source=rss-feed</link></item>
-<item><title>The strange story of Phineas Gage - Psyche</title><link>https://psyche.co/videos/phineas-gages-story-is-one-of-resilience-not-fixed-change?utm_source=rss-feed</link></item>
-<item><title>How to nurture confidence in a child with dyslexia - Psyche</title><link>https://psyche.co/guides/how-to-nurture-confidence-in-a-child-with-dyslexia?utm_source=rss-feed</link></item>
-<item><title>Not all procrastination is created equal - Psyche</title><link>https://psyche.co/notes-to-self/the-idea-that-changed-how-i-think-about-procrastination?utm_source=rss-feed</link></item>
-<item><title>Ragnar Kjartansson: realms of the real - Psyche</title><link>https://psyche.co/videos/doing-things-for-the-hell-of-it-fuels-an-icelandic-artist?utm_source=rss-feed</link></item>
-<item><title>If we avoid sadness in life, why do we seek it in art? - Psyche</title><link>https://psyche.co/ideas/if-we-avoid-sadness-in-life-why-do-we-seek-it-in-art?utm_source=rss-feed</link></item>
-<item><title>How to get to know your neighbourhood - Psyche</title><link>https://psyche.co/guides/how-to-get-to-know-your-neighbourhood?utm_source=rss-feed</link></item>
-<item><title>Tip-of-the-tongue syndrome - Psyche</title><link>https://psyche.co/videos/whats-happening-when-we-struggle-to-retrieve-words-we-know?utm_source=rss-feed</link></item>
-<item><title>Intimacy is risky, but it’s the only way to true acceptance - Psyche</title><link>https://psyche.co/ideas/intimacy-is-risky-but-its-the-only-way-to-true-acceptance?utm_source=rss-feed</link></item>
-<item><title>We should invent new names for feelings - Psyche</title><link>https://psyche.co/notes-to-self/why-its-worth-inventing-your-own-terms-for-how-you-feel?utm_source=rss-feed</link></item>
-<item><title>I tested whether cannabis really can boost the runner’s high - Psyche</title><link>https://psyche.co/ideas/i-tested-whether-cannabis-really-can-boost-the-runners-high?utm_source=rss-feed</link></item>
-<item><title>How to give a compliment - Psyche</title><link>https://psyche.co/guides/how-to-give-a-compliment?utm_source=rss-feed</link></item>
-<item><title>Fox Chase boy - Psyche</title><link>https://psyche.co/videos/a-one-man-show-confronts-a-communitys-shared-trauma?utm_source=rss-feed</link></item>
-<item><title>Why chatbot therapists can’t offer what we need - Psyche</title><link>https://psyche.co/ideas/why-chatbot-therapists-cant-offer-what-we-need?utm_source=rss-feed</link></item>
-<item><title>How to handle a panic attack - Psyche</title><link>https://psyche.co/videos/to-manage-panic-attacks-train-your-intuition?utm_source=rss-feed</link></item>
-<item><title>CSDA Quality Assessment Report Evaluates Satellogic NewSat Data - NASA</title><link>https://science.nasa.gov/uncategorized/csda-quality-assessment-report-evaluates-satellogic-newsat-data/</link></item>
-<item><title>Webinar 4/29: NASA CSDA Program Vendor Focus- MDA Space - NASA</title><link>https://science.nasa.gov/science-research/earth-science/webinar-4-29-nasa-csda-program-vendor-focus-mda-space/</link></item>
-<item><title>NASA Artemis II Human Research Data Methodology Challenge - NASA</title><link>https://www.nasa.gov/directorates/stmd/prizes-challenges-crowdsourcing-program/center-of-excellence-for-collaborative-innovation-coeci/nasa-artemis-ii-human-research-data-methodology-challenge/</link></item>
-<item><title>NASA, OPM Announce New NASA Force Website, Open Job Applications - NASA</title><link>https://www.nasa.gov/news-release/nasa-opm-announce-new-nasa-force-website-open-job-applications/</link></item>
-<item><title>Quality Assessment Report Evaluates Tomorrow.io Precipitation Radar Data - NASA</title><link>https://science.nasa.gov/science-research/earth-science/quality-assessment-report-evaluates-tomorrow-io-precipitation-radar-data/</link></item>
-<item><title>Volunteers Discover Rare Space Weather Events Using Their Ears - NASA</title><link>https://science.nasa.gov/get-involved/citizen-science/volunteers-discover-rare-space-weather-events-using-their-ears/</link></item>
-<item><title>NASA’s SPHEREx Observatory Maps Interstellar Ice in Milky Way - NASA</title><link>https://www.nasa.gov/image-article/nasas-spherex-observatory-maps-interstellar-ice-in-milky-way/</link></item>
-<item><title>Spring Rains Saturate Michigan - NASA</title><link>https://science.nasa.gov/earth/earth-observatory/spring-rains-saturate-michigan/</link></item>
-<item><title>NASA Invites Media to Latvia Artemis Accords Signing Ceremony - NASA</title><link>https://www.nasa.gov/news-release/nasa-invites-media-to-latvia-artemis-accords-signing-ceremony/</link></item>
-<item><title>At the Edge of Light - NASA</title><link>https://www.nasa.gov/image-article/at-the-edge-of-light/</link></item>
-<item><title>Zoom Integrates World ID Deep Face to Verify That Meeting Participants Are Human in Real Time - gHacks</title><link>https://www.ghacks.net/2026/04/19/zoom-integrates-world-id-deep-face-to-verify-that-meeting-participants-are-human-in-real-time/</link></item>
-<item><title>Atlassian Will Collect Jira and Confluence Data by Default to Train AI Models - gHacks</title><link>https://www.ghacks.net/2026/04/19/atlassian-will-collect-jira-and-confluence-data-by-default-to-train-ai-models/</link></item>
-<item><title>Artemis II Astronaut Reports Microsoft Outlook Not Working Aboard Orion Spacecraft - gHacks</title><link>https://www.ghacks.net/2026/04/03/artemis-ii-astronaut-reports-microsoft-outlook-not-working-aboard-orion-spacecraft/</link></item>
-<item><title>Windows 11 Reaches 72.78% Market Share as Windows 10 Declines - gHacks</title><link>https://www.ghacks.net/2026/03/02/windows-11-reaches-72-market-share-as-windows-10-declines/</link></item>
-<item><title>Nextcloud, Ionos, and Proton Launch Euro-Office, an OnlyOffice Fork for European Users - gHacks</title><link>https://www.ghacks.net/2026/04/06/nextcloud-ionos-and-proton-launch-euro-office-an-onlyoffice-fork-for-european-users/</link></item>
-<item><title>Microsoft Resolves Outlook Gmail And Yahoo Sync Errors In Microsoft 365 Service - gHacks</title><link>https://www.ghacks.net/2026/03/25/microsoft-resolves-outlook-gmail-and-yahoo-sync-errors-in-microsoft-365-service/</link></item>
-<item><title>Asia-Pacific PC Shipments To Fall 13.7% In 2026 As AI Data Centers Drive Up DRAM Demand - gHacks</title><link>https://www.ghacks.net/2026/04/01/asia-pacific-pc-shipments-to-fall-13-7-in-2026-as-ai-data-centers-drive-up-dram-demand/</link></item>
-<item><title>Sony Raises PS5 Prices by Up to $150 in the US Starting April 2 - gHacks</title><link>https://www.ghacks.net/2026/03/28/sony-raises-ps5-prices-by-up-to-150-in-the-us-starting-april-2/</link></item>
-<item><title>America’s ‘Laser Dome’ starts here - Fast Company</title><link>https://www.fastcompany.com/91528830/americas-laser-dome-starts-here</link></item>
-<item><title>Is ‘Founder Mode’ sustainable for modern leaders? - Fast Company</title><link>https://www.fastcompany.com/91513684/is-founder-mode-sustainable-for-modern-leaders-founder-mode-technology</link></item>
-<item><title>A leader’s guide to getting AI right - Fast Company</title><link>https://www.fastcompany.com/91526266/a-leaders-guide-to-getting-ai-right</link></item>
-<item><title>Workers who do a ‘Sunday reset’ may make $25,000 more a year - Fast Company</title><link>https://www.fastcompany.com/91528296/workers-who-do-a-sunday-reset-may-make-25000-more-a-year</link></item>
-<item><title>How to navigate uncertainty in an increasingly uncertain world - Fast Company</title><link>https://www.fastcompany.com/91525904/how-to-navigate-uncertainty-coping-uncertainty</link></item>
-<item><title>The hidden risks of vibe coding: 4 steps to protect your organization - Fast Company</title><link>https://www.fastcompany.com/91527397/the-hidden-risks-of-vibe-coding-4-steps-to-protect-your-organization</link></item>
-<item><title>American Eagle is back with Syd and not sorry about it - Fast Company</title><link>https://www.fastcompany.com/91528691/american-eagle-is-back-with-syd-and-not-sorry-about-it</link></item>
-<item><title>Private student loans: A cautionary guide to your options - Fast Company</title><link>https://www.fastcompany.com/91528225/private-student-loans-a-quick-guide-to-your-options</link></item>
-<item><title>Home prices are falling in these 89 housing markets—see what’s behind it - Fast Company</title><link>https://www.fastcompany.com/91528908/housing-market-home-prices-are-falling-in-these-89-markets-see-whats-behind-it</link></item>
-<item><title>How to hide your sensitive info (for real) when using ChatGPT and other AI chatbots - Fast Company</title><link>https://www.fastcompany.com/91527262/how-to-redact-sensitive-info-chatgpt-ai-chatbot-pdf-hide-upload-mac-windows-upload-privacy</link></item>
-<item><title>Shuttered startups are selling old Slack chats and emails to AI companies - Fast Company</title><link>https://www.fastcompany.com/91528808/shuttered-startups-are-selling-old-slack-chats-and-emails-to-ai-companies</link></item>
-<item><title>Indeed CEO says this—not AI—is the biggest threat to the workforce - Fast Company</title><link>https://www.fastcompany.com/91528811/indeed-ceo-says-this-not-ai-is-the-biggest-threat-to-the-workforce</link></item>
-<item><title>This car company just patented a toilet under your seat - Fast Company</title><link>https://www.fastcompany.com/91528853/this-car-company-just-patented-a-toilet-under-your-seat</link></item>
-<item><title>‘Bouncing back’ is a myth. Here’s what real resilience looks like - Fast Company</title><link>https://www.fastcompany.com/91526321/bouncing-back-is-a-myth-heres-what-real-resilience-looks-like</link></item>
-<item><title>AI needs a reality check - Fast Company</title><link>https://www.fastcompany.com/91529003/ai-needs-a-reality-check</link></item>
-<item><title>Oil prices tank and stocks climb after Iran reopens the Strait of Hormuz - Fast Company</title><link>https://www.fastcompany.com/91528952/oil-prices-tank-and-stocks-climb-after-iran-reopens-the-strait-of-hormuz</link></item>
-<item><title>Are 801 Chophouse restaurants closing? What to know as steakhouse owner files for Chapter 11 bankruptcy - Fast Company</title><link>https://www.fastcompany.com/91528784/801-chophouse-restaurants-closing-chapter-11-bankruptcy-filing-steakhouse-what-to-know</link></item>
-<item><title>Norovirus fears prompt FDA warning to restaurants and retailers: Stop selling this recalled shellfish - Fast Company</title><link>https://www.fastcompany.com/91528877/norovirus-outbreak-fears-fda-warns-restaurants-recalled-shellfish</link></item>
-<item><title>Blatantly fake news about college sports spreads like wildfire in the absence of player payday details - Fast Company</title><link>https://www.fastcompany.com/91528300/fake-news-about-college-sports-spreads-like-wildfire-on-social-media</link></item>
-<item><title>‘We don’t want to be left behind’: Reese Witherspoon says using AI is feminist and women need to catch up - Fast Company</title><link>https://www.fastcompany.com/91528699/reese-witherspoon-using-generative-ai-is-feminist-women-need-to-catch-up-hello-sunshine</link></item>
-<item><title>Just like phishing for gullible humans, prompt injecting AIs is here to stay - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/19/just_like_phishing_for_gullible/</link></item>
-<item><title>I meant to do that! AI vendors shrug off responsibility for vulns - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/19/ai_vendors_response_to_security/</link></item>
-<item><title>Ruby Central in &amp;#39;real financial jeopardy&amp;#39; following RubyGems maintainer ruckus - The Register</title><link>https://go.theregister.com/feed/www.theregister.com/2026/04/19/rubygems_nonprofit_in_real_financial/</link></item>
-<item><title>How a Renaissance gambling dispute spawned probability theory - Scientific American</title><link>https://www.scientificamerican.com/article/how-a-renaissance-gambling-dispute-spawned-probability-theory/</link></item>
-<item><title>Why game theory could be critical in a nuclear war - Scientific American</title><link>https://www.scientificamerican.com/article/why-game-theory-could-be-critical-in-a-nuclear-war/</link></item>
-<item><title>Chronic pain is not just in your head, but it is in your brain - Scientific American</title><link>https://www.scientificamerican.com/article/how-your-body-and-brain-construct-chronic-pain/</link></item>
-<item><title>Cover Art Jigsaw: February 1947 - Scientific American</title><link>https://www.scientificamerican.com/game/science-jigsaw/</link></item>
-<item><title>Master of chaos wins $3M math prize for ‘blowing up’ equations - Scientific American</title><link>https://www.scientificamerican.com/article/master-of-chaos-wins-usd3m-math-prize-for-blowing-up-equations/</link></item>
-<item><title>Peptides promise longevity and healing. Does the science back them up? - Scientific American</title><link>https://www.scientificamerican.com/article/the-science-behind-the-peptide-craze/</link></item>
-<item><title>NSF awards record number of coveted PhD fellowships in surprise move - Scientific American</title><link>https://www.scientificamerican.com/article/nsf-awards-record-number-of-coveted-phd-fellowships-in-surprise-move/</link></item>
-<item><title>Did AI just solve the mystery of one of El Greco’s most enigmatic paintings? - Scientific American</title><link>https://www.scientificamerican.com/article/did-ai-just-solve-the-mystery-of-one-of-el-grecos-most-enigmatic-paintings/</link></item>
-<item><title>The hidden cause of heart disease is inflammation - Scientific American</title><link>https://www.scientificamerican.com/article/new-evidence-links-heart-disease-to-inflammation-and-drugs-can-stop-it/</link></item>
-<item><title>How strange new ‘altermagnets’ could rewrite physics - Scientific American</title><link>https://www.scientificamerican.com/article/how-physicists-found-a-new-type-of-magnet-hiding-in-plain-sight/</link></item>
-<item><title>How birds survived the dinosaurs’ doomsday - Scientific American</title><link>https://www.scientificamerican.com/article/an-asteroid-extinguished-all-the-dinosaurs-except-for-birds-heres-why/</link></item>
-<item><title>Space hotels are coming soon - Scientific American</title><link>https://www.scientificamerican.com/article/how-to-build-a-space-hotel/</link></item>
-<item><title>Inside the labs where chemists engineer luxury perfumes - Scientific American</title><link>https://www.scientificamerican.com/article/how-chemists-engineer-the-signature-smells-of-luxury-perfumes/</link></item>
-<item><title>How a lost 1812 wristwatch sparked a 200-year race in precision engineering - Scientific American</title><link>https://www.scientificamerican.com/article/the-engineering-marvels-hidden-inside-six-figure-watches/</link></item>
-<item><title>The fans who went from collecting Pokémon to studying bugs and fossils - Scientific American</title><link>https://www.scientificamerican.com/podcast/episode/30-years-of-pokemon-how-the-japanese-franchise-mirrors-real-world-science/</link></item>
-<item><title>Artemis proves NASA can return to the moon. Now comes the hard question: Why? - Scientific American</title><link>https://www.scientificamerican.com/podcast/episode/the-artemis-ii-mission-worked-but-should-we-really-keep-returning-to-the/</link></item>
-<item><title>Alexis Hall talks space whales, AI and reinventing a classic - Scientific American</title><link>https://www.scientificamerican.com/podcast/episode/this-sci-fi-twist-on-moby-dick-will-blow-your-mind/</link></item>
-<item><title>Experts warn that communities underestimate measles’ danger - Scientific American</title><link>https://www.scientificamerican.com/podcast/episode/health-experts-warn-of-rising-measles-cases-in-undervaccinated-communities/</link></item>
-<item><title>Do you think it&amp;#39;s a good idea to be able to unlock memories from the past? - Scientific American</title><link>https://www.scientificamerican.com/discussions/do-you-think-its-a-good-idea-to-be-able-to-unlock-memories-from-the-past/</link></item>
-<item><title>What is the most scientifically advanced gadget or other possession would you love to have? - Scientific American</title><link>https://www.scientificamerican.com/discussions/what-is-the-most-scientifically-advanced-gadget-or-other-possession-would-you-love-to-have/</link></item>
-<item><title>Vessels report being hit by gunfire as Iran says Strait of Hormuz shut again - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2026/04/18/vessels-report-being-hit-by-gunfire-as-iran-says-strait-of-hormuz-shut-again/</link></item>
-<item><title>Joshua D. Mezrich / MIT Press Reader - Popular Science</title><link>https://www.popsci.com/authors/joshua-d-mezrich-mit-press-reader/</link></item>
-<item><title>The best brownie recipe, according to science - Popular Science</title><link>https://www.popsci.com/science/best-brownie-recipe/</link></item>
-<item><title>Clarissa Brincat - Popular Science</title><link>https://www.popsci.com/authors/clarissa-brincat/</link></item>
-<item><title>REI has more than 50 hiking pags, backpacks, and travel bags on sale for clearance prices right now - Popular Science</title><link>https://www.popsci.com/gear/rei-spring-bag-sale-hiking-backpacks-gregory-north-face/</link></item>
-<item><title>Sarah Horaczek - Popular Science</title><link>https://www.popsci.com/authors/sarah-horaczek/</link></item>
-<item><title>I did a speedrun through Under Armour’s innovation labs to learn how a marathon supershoe crosses the finish line - Popular Science</title><link>https://www.popsci.com/gear/under-armour-lokedi-velociti-elite-3-supershoe-development-baltimore-lighthouse-innovation-lab-tour/</link></item>
-<item><title>The Pinter countertop home brewing machine can now automatically make super popular Lagunitas beer at home - Popular Science</title><link>https://www.popsci.com/gear/pinter-lagunitas-home-brewing-kit-details/</link></item>
-<item><title>De’Longhi’s PrimaDonna Aromatic is a super-automatic espresso machine that learns about you and your beans - Popular Science</title><link>https://www.popsci.com/gear/delonghi-primadonna-aromatic-espresso-coffee-machine-review/</link></item>
-<item><title>Phosphorescent paint inspired Victorian-era Australians to dress up as ghosts and pull pranks - Popular Science</title><link>https://www.popsci.com/science/phosphorescent-paint-pranks-weirdest-thing-podcast/</link></item>
-<item><title>Nala Rogers / Knowable Magazine - Popular Science</title><link>https://www.popsci.com/authors/nala-rogers/</link></item>
-<item><title>Mental Health - Popular Science</title><link>https://www.popsci.com/category/mental-health/</link></item>
+<lastBuildDate>Tue, 21 Apr 2026 08:52:43 +0800</lastBuildDate>
+<item><title>Motorola Moto G (2026) review: Why I&amp;#39;d pick this $200 phone over competing models - ZDNet</title><link>https://www.zdnet.com/article/motorola-moto-g-review/</link></item>
+<item><title>PrivacyBee review: An Incogni alternative that made data removal feel nearly effortless - ZDNet</title><link>https://www.zdnet.com/article/privacybee-data-removal-review/</link></item>
+<item><title>DJI Osmo Pocket 4 live Q&amp;A - ZDNet</title><link>https://www.zdnet.com/video/dji-osmo-pocket-4-live-q-a/</link></item>
+<item><title>Astronaut Victor Glover on Artemis II: &amp;#39;It did not feel like a reality show&amp;quot; - ZDNet</title><link>https://www.zdnet.com/video/astronaut-victor-glover-on-artemis-ii-it-did-not-feel-like-a-reality-show/</link></item>
+<item><title>I speed-tested Surfshark&amp;#39;s new &amp;#39;heavenly&amp;#39; Dausos VPN protocol - how it compares to WireGuard - ZDNet</title><link>https://www.zdnet.com/article/surfshark-dausos-vpn-protocol/</link></item>
+<item><title>How to easily encrypt files on an Android phone - and the free app I use to do it - ZDNet</title><link>https://www.zdnet.com/article/how-to-easily-encrypt-files-on-android-with-openkeychain/</link></item>
+<item><title>Blue Origin&amp;#39;s New Glenn mission successfully launches and lands a reusable rocket - ZDNet</title><link>https://www.zdnet.com/video/blue-origins-new-glenn-mission-successfully-launches-and-lands-a-reusable-rocket/</link></item>
+<item><title>Google Pixel phones have a useful voicemail feature that&amp;#39;s hidden by default - how to enable it - ZDNet</title><link>https://www.zdnet.com/article/google-pixel-take-a-message-feature-how-to-use/</link></item>
+<item><title>The new Roku City screensaver game has me hooked - and it&amp;#39;s free to play - ZDNet</title><link>https://www.zdnet.com/home-and-office/home-entertainment/roku-city-dash-interactive-game/</link></item>
+<item><title>There&amp;#39;s a right way to wear your Apple Watch - and it affects your data - ZDNet</title><link>https://www.zdnet.com/article/why-you-should-wear-your-apple-watch-tighter/</link></item>
+<item><title>Apple&amp;#39;s foldable iPhone hinges on one key feature for me - and it&amp;#39;s not the hardware - ZDNet</title><link>https://www.zdnet.com/article/foldable-iphone-multitasking-features-im-hoping-for/</link></item>
+<item><title>T-Mobile is practically giving away the Apple Watch Series 11 - here&amp;#39;s how to get one - ZDNet</title><link>https://www.zdnet.com/article/apple-watch-series-11-deal-tmobile/</link></item>
+<item><title>I tested DJI&amp;#39;s tiny 4K action camera for weeks - and now I&amp;#39;m ditching my GoPro for it - ZDNet</title><link>https://www.zdnet.com/article/dji-osmo-nano-review/</link></item>
+<item><title>AirPods Pro 3 vs. Samsung Galaxy Buds 4 Pro: I listened to both pairs, and this one wins - ZDNet</title><link>https://www.zdnet.com/article/airpods-pro-3-vs-samsung-galaxy-buds-4-pro/</link></item>
+<item><title>I tried to wipe my digital footprint without paying for a data removal service - 5 free ways - ZDNet</title><link>https://www.zdnet.com/article/free-ways-to-remove-your-data-without-a-service/</link></item>
+<item><title>I&amp;#39;ve tested every major phone release in 2026 so far - and my buying advice is changing this year - ZDNet</title><link>https://www.zdnet.com/article/the-best-phones-you-can-buy-in-2026-are-from-2025/</link></item>
+<item><title>I put the iPhone 17 Pro Max and Galaxy S26 Ultra cameras head-to-head. Here&amp;#39;s what I found - ZDNet</title><link>https://www.zdnet.com/video/i-put-the-iphone-17-pro-max-and-galaxy-s26-ultra-cameras-head-to-head-heres-what-i-found/</link></item>
+<item><title>The best website builders for small businesses in 2026: Expert tested and reviewed - ZDNet</title><link>https://www.zdnet.com/article/best-website-builders-for-small-businesses/</link></item>
+<item><title>I hid 4 Bluetooth trackers (including AirTags) to test their reliability - here&amp;#39;s how Android rivals compared - ZDNet</title><link>https://www.zdnet.com/article/retested-apple-airtags-after-five-years-how-they-compare/</link></item>
+<item><title>I stopped using my iPhone&amp;#39;s hotspot after testing this 5G router - and that won&amp;#39;t change - ZDNet</title><link>https://www.zdnet.com/home-and-office/networking/acer-connect-m6e-mobile-hotspot-review/</link></item>
+<item><title>How I share audio from my Android phone to multiple earbuds (and why it&amp;#39;s a big deal) - ZDNet</title><link>https://www.zdnet.com/article/how-to-share-audio-from-android-phone-to-multiple-earbuds/</link></item>
+<item><title>Antimatter factory celebrates first truckload of world&amp;#39;s most expensive material - ZDNet</title><link>https://www.zdnet.com/video/antimatter-factory-celebrates-first-truckload-of-worlds-most-expensive-material/</link></item>
+<item><title>I saw the renders. We need to talk about the Galaxy Z Fold 8 - ZDNet</title><link>https://www.zdnet.com/video/i-saw-the-renders-we-need-to-talk-about-the-galaxy-z-fold-8/</link></item>
+<item><title>This powerful Gemini setting made my AI results way more personal and accurate - ZDNet</title><link>https://www.zdnet.com/article/gemini-personal-intelligence-hands-on/</link></item>
+<item><title>How I boosted my portable solar panels&amp;#39; power by up to 30% - 11 expert-approved tips - ZDNet</title><link>https://www.zdnet.com/home-and-office/energy/portable-solar-panels-how-to-get-more-power/</link></item>
+<item><title>After testing this HP laptop, I get why its &amp;#39;boring&amp;#39; design is adored by business users - ZDNet</title><link>https://www.zdnet.com/article/hp-zbook-8-g1i-review/</link></item>
+<item><title>Used camera shopping tips and tricks - ZDNet</title><link>https://www.zdnet.com/video/used-camera-shopping-tips-and-tricks/</link></item>
+<item><title>Your old iPad or Android tablet can be your new smart home panel - here&amp;#39;s how - ZDNet</title><link>https://www.zdnet.com/home-and-office/smart-home/how-to-use-an-old-tablet-as-a-smart-home-control-panel/</link></item>
+<item><title>Apple&amp;#39;s original AirTag still tracks effectively, and you can get a 4-pack for its best price ever - ZDNet</title><link>https://www.zdnet.com/article/apple-airtag-gen-1-deal/</link></item>
+<item><title>T-Mobile will give you an iPad for $99 when you sign up for a new line - here&amp;#39;s how - ZDNet</title><link>https://www.zdnet.com/article/t-mobile-ipad-11-deal/</link></item>
+<item><title>How to qualify for Apple&amp;#39;s education discount - and get a $499 MacBook Neo for school - ZDNet</title><link>https://www.zdnet.com/article/macbook-neo-499-educational-price-how-to/</link></item>
+<item><title>T-Mobile will give you a Samsung Galaxy Watch 8 for free - how to get yours - ZDNet</title><link>https://www.zdnet.com/article/samsung-galaxy-watch-8-tmobile-deal/</link></item>
+<item><title>Prolonged AI use can be hazardous to your health and work: 4 ways to stay safe - ZDNet</title><link>https://www.zdnet.com/article/why-prolonged-ai-use-risks-your-health-4-ways-to-stay-safe/</link></item>
+<item><title>Verizon will give you a free iPad or Apple Watch with your next iPhone - how the deal works - ZDNet</title><link>https://www.zdnet.com/article/verizon-ipad-apple-watch-deal/</link></item>
+<item><title>Gov. Evers signs bill expanding tribal mobile sports betting across Wisconsin - ReadWrite</title><link>https://readwrite.com/evers-signs-bill-tribal-mobile-sports-betting-wisconsin/</link></item>
+<item><title>Minnesota lawmakers push felony ban on prediction market betting platforms - ReadWrite</title><link>https://readwrite.com/minnesota-lawmakers-felony-ban-prediction-market-bill/</link></item>
+<item><title>CFTC’s unprecedented lawsuits set up Supreme Court showdown over prediction markets - ReadWrite</title><link>https://readwrite.com/cftc-lawsuits-supreme-court-prediction-markets/</link></item>
+<item><title>Two Pennsylvania amusement firms plead guilty in illegal gambling case, as former kingpin agrees to pay $5M - ReadWrite</title><link>https://readwrite.com/two-pennsylvania-amusement-firms-plead-guilty-illegal-gambling-case/</link></item>
+<item><title>Experts say prediction markets challenge tribal sovereignty in post-IGA 2026 showdown - ReadWrite</title><link>https://readwrite.com/prediction-markets-vs-tribal-gaming-sovereignty/</link></item>
+<item><title>Lumbee Council advances gaming amendment in North Carolina, sending measure to tribal voters soon - ReadWrite</title><link>https://readwrite.com/lumbee-council-gaming-amendment-tribal-voters/</link></item>
+<item><title>DraftKings Alberta entry signals Canada gambling market legal shift ahead - ReadWrite</title><link>https://readwrite.com/draftkings-alberta-entry/</link></item>
+<item><title>Michigan approves bet365 launch as Odawa partner, replacing PokerStars - ReadWrite</title><link>https://readwrite.com/michigan-approves-bet365-launch/</link></item>
+<item><title>UK High Court ends National Lottery license fight with Allwyn victory - ReadWrite</title><link>https://readwrite.com/uk-high-court-ends-national-lottery-license-fight-allwyn/</link></item>
+<item><title>New York lawsuit says Stake and Coinbase targeted child gambler for years - ReadWrite</title><link>https://readwrite.com/new-york-lawsuit-stake-and-coinbase-underage-gambling/</link></item>
+<item><title>Maryland session ends leaving sweepstakes gaming bills stalled once again as SGLA celebrates - ReadWrite</title><link>https://readwrite.com/maryland-session-ends-sweepstakes-bills-stalled-sgla/</link></item>
+<item><title>CFTC’s one-man show gets awkward on the Hill as lawmakers hammer Selig on sports bets, staffing gaps and corruption claims - ReadWrite</title><link>https://readwrite.com/cftc-selig-hearing-prediction-markets/</link></item>
+<item><title>Yocha Dehe slams Vallejo Council over rushed casino deal approval process - ReadWrite</title><link>https://readwrite.com/yocha-dehe-vallejo-council-scotts-valley-temporary-casino-deal/</link></item>
+<item><title>NCAA seeks faster trial over DraftKings disputed March Madness branding case - ReadWrite</title><link>https://readwrite.com/ncaa-faster-trial-draftkings-march-madness-trademark-case/</link></item>
+<item><title>Iowa lawmakers advance bill tightening rules on prediction markets - ReadWrite</title><link>https://readwrite.com/iowa-advance-bill-tightening-rules-prediction-markets/</link></item>
+<item><title>Louisiana lawmakers advance crackdown targeting illegal online sweepstakes - ReadWrite</title><link>https://readwrite.com/louisiana-advance-crackdown-illegal-online-sweepstakes-bill/</link></item>
+<item><title>South Carolina lawsuit says Dave &amp; Buster’s games are illegal gambling - ReadWrite</title><link>https://readwrite.com/south-carolina-lawsuit-dave-busters-illegal-gambling/</link></item>
+<item><title>Kalshi challenges Ohio over proposed $5M regulatory fine - ReadWrite</title><link>https://readwrite.com/kalshi-challenges-ohio-proposed-5m-fine/</link></item>
+<item><title>Arizona ruling enters Wisconsin Ho-Chunk Nation fight against Kalshi - ReadWrite</title><link>https://readwrite.com/arizona-ruling-wisconsin-ho-chunk-nation-lawsuit-kalshi/</link></item>
+<item><title>Minnesota advances controversial felony ban on prediction markets as scrutiny grows - ReadWrite</title><link>https://readwrite.com/minnesota-advances-felony-ban-bill-prediction-markets/</link></item>
+<item><title>Ohio moves to fine Kalshi $5M over illegal sports betting - ReadWrite</title><link>https://readwrite.com/ohio-fine-kalshi-5m-illegal-sports-betting/</link></item>
+<item><title>Oakland police raid suspected illegal gambling site, detaining ten people - ReadWrite</title><link>https://readwrite.com/oakland-police-raid-suspected-illegal-gambling-site/</link></item>
+<item><title>BetMGM starts 2026 profitable but growth slows and outlook narrows slightly - ReadWrite</title><link>https://readwrite.com/betmgm-2026-q1-results-growth-slows/</link></item>
+<item><title>Online sports betting grows rapidly as concerns about risks rise across the US, survey shows - ReadWrite</title><link>https://readwrite.com/online-sports-betting-grows-risks-rise-us-survey/</link></item>
+<item><title>Advisor urges UK to pause gambling risk checks until pilot data is published - ReadWrite</title><link>https://readwrite.com/advisor-james-noyes-uk-pause-gambling-risk-checks-pilot-data/</link></item>
+<item><title>Kalshi lawsuit in Montana sharpens dispute over prediction market rules - ReadWrite</title><link>https://readwrite.com/kalshi-lawsuit-montana/</link></item>
+<item><title>Do credit card gambling bans reduce harm or shift behavior? Experts say there’s always a loophole - ReadWrite</title><link>https://readwrite.com/do-credit-card-gambling-bans-reduce-harm/</link></item>
+<item><title>How do you self-exclude from prediction markets? Kalshi joins SelfExclude network - ReadWrite</title><link>https://readwrite.com/how-to-self-exclude-prediction-markets-kalshi-selfexclude/</link></item>
+<item><title>Spanberger veto blocks Fairfax casino vote amid clash over local control - ReadWrite</title><link>https://readwrite.com/spanberger-veto-fairfax-casino/</link></item>
+<item><title>FanDuel approved for multi-state poker network expansion in Michigan - ReadWrite</title><link>https://readwrite.com/fanduel-approved-multi-state-poker-network-michigan/</link></item>
+<item><title>Killing of Westfield poker player Matt Lushin reveals tensions beyond the table - ReadWrite</title><link>https://readwrite.com/westfield-poker-player-killing-matt-lushin-ronald-brown/</link></item>
+<item><title>#212 – Anne Bovelett on How Web Accessibility Boosts Traffic, SEO, and Revenue - WP Tavern</title><link>https://wptavern.com/podcast/212-anne-bovelett-on-how-web-accessibility-boosts-traffic-seo-and-revenue</link></item>
+<item><title>#211 – Elliott Richmond on WordPress Content Creation, Education, and Pizza Plugins - WP Tavern</title><link>https://wptavern.com/podcast/211-elliott-richmond-on-wordpress-content-creation-education-and-pizza-plugins</link></item>
+<item><title>#210 – Zach Stepek on the Interconnected WordPress Ecosystem, Partnerships and Trust - WP Tavern</title><link>https://wptavern.com/podcast/210-zach-stepek-on-the-interconnected-wordpress-ecosystem-partnerships-and-trust</link></item>
+<item><title>从 2027 年起欧盟销售的智能手机和平板必须能更换电池 - Solidot</title><link>https://www.solidot.org/story?sid=84099</link></item>
+<item><title>诺奖得主对人类再生存 50 年感到悲观 - Solidot</title><link>https://www.solidot.org/story?sid=84098</link></item>
+<item><title>GitHub 上项目的伪造星数 - Solidot</title><link>https://www.solidot.org/story?sid=84097</link></item>
+<item><title>WireGuard For Windows v1.0 释出 - Solidot</title><link>https://www.solidot.org/story?sid=84096</link></item>
+<item><title>Brave 推出付费版 Brave Origin，Linux 版免费 - Solidot</title><link>https://www.solidot.org/story?sid=84095</link></item>
+<item><title>Sruthi Chandran 当选为 DPL - Solidot</title><link>https://www.solidot.org/story?sid=84094</link></item>
+<item><title>亚马逊 Fire 电视棒不再支持侧载 - Solidot</title><link>https://www.solidot.org/story?sid=84093</link></item>
+<item><title>偏头痛发作增加与空气污染相关 - Solidot</title><link>https://www.solidot.org/story?sid=84092</link></item>
+<item><title>Blue Origin 第二次回收 New Glenn 火箭但上面级未能成功入轨 - Solidot</title><link>https://www.solidot.org/story?sid=84091</link></item>
+<item><title>欧盟推动远程办公以缓解能源危机 - Solidot</title><link>https://www.solidot.org/story?sid=84090</link></item>
+<item><title>UN Forum puts spotlight on healthcare for Indigenous Peoples - UN</title><link>https://news.un.org/en/story/2026/04/1167337</link></item>
+<item><title>SECURITY COUNCIL LIVE: Emergency briefing on Ukraine amid escalating Russian attacks - UN</title><link>https://news.un.org/en/story/2026/04/1167338</link></item>
+<item><title>Gaza: Human development set back 77 years as recovery costs rise to $71 billion - UN</title><link>https://news.un.org/en/story/2026/04/1167336</link></item>
+<item><title>ECOSOC Youth Forum programme - UN</title><link>https://www.un.org/en/sdgmediazone/ecosoc-youth-forum/programme</link></item>
+<item><title>Negotiated under the UN framework, the Non-Proliferation Treaty is the only binding disarmament commitment by nuclear-weapon States. - UN</title><link>https://www.un.org/en/global-issues/multilateral-system</link></item>
+<item><title>Hinduismus erklärt: Eine Reise durch die älteste lebende Religion der Welt - MC Winkels weBlog</title><link>https://www.whudat.de/hinduismus-erklaert-eine-reise-durch-die-aelteste-lebende-religion-der-welt/</link></item>
+<item><title>Adrian Younge – YOUNGE: Die orchestrale Architektur des Jazz-Noir - MC Winkels weBlog</title><link>https://www.whudat.de/adrian-younge-younge-die-orchestrale-architektur-des-jazz-noir/</link></item>
+<item><title>Low Maintenance Life: Die japanische Kunst eines einfachen Lebens - MC Winkels weBlog</title><link>https://www.whudat.de/low-maintenance-life-die-japanische-kunst-eines-einfachen-lebens/</link></item>
+<item><title>Yaya Bey – „Fidelity“: Ein Plädoyer für die heilende Kraft der Vergänglichkeit - MC Winkels weBlog</title><link>https://www.whudat.de/yaya-bey-fidelity-ein-plaedoyer-fuer-die-heilende-kraft-der-vergaenglichkeit/</link></item>
+<item><title>Mooji und The Natural State: Die Rückkehr zur formlosen Präsenz - MC Winkels weBlog</title><link>https://www.whudat.de/mooji-und-the-natural-state-die-rueckkehr-zur-formlosen-praesenz/</link></item>
+<item><title>Cleo Sol, 54 Ultra &amp; SAULT: Die Night Off Vol. 3 Playlist für den perfekten Ausklang - MC Winkels weBlog</title><link>https://www.whudat.de/cleo-sol-54-ultra-sault-die-night-off-vol-3-playlist-fuer-den-perfekten-ausklang/</link></item>
+<item><title>Die Autobiographie eines Yogi: Eine Reise zur Quelle des Bewusstseins // Paramahansa Yogananda - MC Winkels weBlog</title><link>https://www.whudat.de/die-autobiographie-eines-yogi-eine-reise-zur-quelle-des-bewusstseins-paramahansa-yogananda/</link></item>
+<item><title>Barney Kessel und das zeitlose „Swinging Easy!“: Ein Juwel aus der Vinyl-Sammlung - MC Winkels weBlog</title><link>https://www.whudat.de/barney-kessel-und-das-zeitlose-swinging-easy-ein-juwel-aus-der-vinyl-sammlung/</link></item>
+<item><title>Das Ende der Trump-Sekte: Wie der MAGA-Blödel-Kult kollabieren wird - MC Winkels weBlog</title><link>https://www.whudat.de/das-ende-der-trump-sekte-wie-der-maga-bloedel-kult-kollabieren-wird/</link></item>
+<item><title>Scottie Royal A Penny For Your Thoughts Vol. 3: Jazzige Boom Bap Exzellenz - MC Winkels weBlog</title><link>https://www.whudat.de/scottie-royal-a-penny-for-your-thoughts-vol-3-jazzige-boom-bap-exzellenz/</link></item>
+<item><title>303 Villa in Selvazzano Extends the Kitchen to a Patio - HomeAdore</title><link>https://homeadore.com/2026/04/20/303-villa-in-selvazzano-extends-the-kitchen-to-a-patio/</link></item>
+<item><title>TN House Opens a Courtyard Between Two Wings - HomeAdore</title><link>https://homeadore.com/2026/04/20/tn-house-opens-a-courtyard-between-two-wings/</link></item>
+<item><title>Day House Opens a Victorian Residence to the Garden - HomeAdore</title><link>https://homeadore.com/2026/04/20/day-house-opens-a-victorian-residence-to-the-garden/</link></item>
+<item><title>Chwihoga Opens Between Pine Forest, Bamboo, and Stone - HomeAdore</title><link>https://homeadore.com/2026/04/19/chwihoga-opens-between-pine-forest-bamboo-and-stone/</link></item>
+<item><title>Vortex 21 Raises Two Monumental Arches Over Betul - HomeAdore</title><link>https://homeadore.com/2026/04/19/vortex-21-raises-two-monumental-arches-over-betul/</link></item>
+<item><title>Rizes Villas Extends Local Stone Across Cottage Living - HomeAdore</title><link>https://homeadore.com/2026/04/19/rizes-villas-extends-local-stone-across-cottage-living/</link></item>
+<item><title>Horno de Pan Opens Toward the City Across the River - HomeAdore</title><link>https://homeadore.com/2026/04/19/horno-de-pan-opens-toward-the-city-across-the-river/</link></item>
+<item><title>Cedar Creek Estate Winery by Arcanum Architecture - HomeAdore</title><link>https://homeadore.com/2026/04/17/cedar-creek-estate-winery-by-arcanum-architecture/</link></item>
+<item><title>Villa Albany by SAOTA - HomeAdore</title><link>https://homeadore.com/2026/04/16/villa-albany-by-saota/</link></item>
+<item><title>Casa Altanera by Taller Alberto Calleja - HomeAdore</title><link>https://homeadore.com/2026/04/15/casa-altanera-by-taller-alberto-calleja/</link></item>
+<item><title>Vertex House by Pascali Semerdjian Architects - HomeAdore</title><link>https://homeadore.com/2026/04/15/vertex-house-by-pascali-semerdjian-architects/</link></item>
+<item><title>Atrium Zürich by NOA - HomeAdore</title><link>https://homeadore.com/2026/04/14/atrium-zurich-by-noa/</link></item>
+<item><title>The Peak Apartment by ShapeUs studio - HomeAdore</title><link>https://homeadore.com/2026/04/16/the-peak-apartment-by-shapeus-studio/</link></item>
+<item><title>La Escondida by Touzet Studio - HomeAdore</title><link>https://homeadore.com/2026/04/15/la-escondida-by-touzet-studio/</link></item>
+<item><title>Miqua 34 by Sciveres Guarini Associati - HomeAdore</title><link>https://homeadore.com/2026/04/16/miqua-34-by-sciveres-guarini-associati/</link></item>
+<item><title>Apartment in Milan by Moitié Studio - HomeAdore</title><link>https://homeadore.com/2026/04/08/apartment-in-milan-by-moitie-studio/</link></item>
+<item><title>Wicker House by Ming Architects - HomeAdore</title><link>https://homeadore.com/2026/04/09/wicker-house-by-ming-architects/</link></item>
+<item><title>Casa Mavra Turns Two Angular Volumes into a Black Concrete House - HomeAdore</title><link>https://homeadore.com/2026/04/09/casa-mavra-turns-two-angular-volumes-into-a-black-concrete-house/</link></item>
+<item><title>Gamezone House by Faulkner Architects - HomeAdore</title><link>https://homeadore.com/2026/04/05/gamezone-house-by-faulkner-architects/</link></item>
+<item><title>Lakehouse by Shean Architects - HomeAdore</title><link>https://homeadore.com/2025/05/23/lakehouse-by-sean-godsell-architects/</link></item>
 </channel></rss>

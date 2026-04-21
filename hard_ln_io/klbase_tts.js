@@ -135,6 +135,11 @@ function init_temp_txt_share_b(is_php=true,menu_more='',do_add=true,is_simple=fa
     op.innerHTML=`
     <span class="aclick" onclick="textarea_shift_b('textarea_temp_txt_share','textarea_preparation_tts');">对调</span>
     <span class="aclick" onclick="textarea_diff_txt_share_b('textarea_temp_txt_share','textarea_preparation_tts');">diff</span>`;
+    
+    var otextarea=document.getElementById('textarea_temp_txt_share');
+    if (otextarea){
+        otextarea.style.height=(ismobile_b()?8:20)+'rem';
+    }
 }
 
 function spilt_rows_temp_txt_share_b(separation='\n'){
