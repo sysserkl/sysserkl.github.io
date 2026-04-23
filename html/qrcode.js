@@ -93,6 +93,7 @@ function background_img_merge_klqr(ocanvas,oimg){
     var bltitle=(oimg.natrualWidth|oimg.width)+','+(oimg.naturalHeight|oimg.height);
     if (!ocanvas){
         document.getElementById('div_qrcode').insertAdjacentHTML('afterbegin','<p><img id="img_backgound_qr" src="'+background_img_data_klqr_global+'" title="'+bltitle+'" /></p>');
+        document.getElementById('span_info').innerHTML=bltitle;
         return;
     }
     
@@ -147,6 +148,7 @@ function background_img_merge_klqr(ocanvas,oimg){
     var bljg='<p><img id="img_backgound_qr" src="'+icanvas.toDataURL('image/'+document.getElementById('select_canvas_save_type').value)+'"'+(img_border?' style="border:0.1px solid '+scheme_global['color']+';"':'')+' title="'+bltitle+'" /></p>';
     
     document.getElementById('div_qrcode').insertAdjacentHTML('afterbegin',bljg);
+    document.getElementById('span_info').innerHTML=bltitle;
 }
 
 function background_img_load_klqr(ocanvas=false){
