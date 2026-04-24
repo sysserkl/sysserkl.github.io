@@ -519,6 +519,7 @@ var digest_list_source_global=[
 ["foundation_and_empire_2028_digest",1,"2026-01-15",183],
 ["the_rise_and_fall_of_td_3060_digest",1,"2026-03-11",73],
 ["archenemies_1124_digest",1,"2026-03-10",103],
+["house_of_psychotic_women_2293_digest",1,"2026-04-22",81],
 ["the_seven_pillars_of_wisdom_2497_digest",1,"2026-04-21",63],
 ["simulacron_3_1149_digest",1,"2026-02-06",90],
 ["guns_germs_and_steel_the_fohs2ae_6933_digest",1,"2026-04-05",474],
