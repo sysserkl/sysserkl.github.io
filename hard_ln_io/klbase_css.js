@@ -709,7 +709,12 @@ function page_eta_b(ospan,default_value='',csmax=5400){
                 remain_time=remain_time-blminute*60;
                 blminute=blminute+'m';
             }
-            ospan.innerText=blminute+remain_time+'s'+blplus;
+            
+            if (blminute==''){
+                ospan.innerText=blminute+remain_time+'s'+blplus;
+            } else {
+                ospan.innerText=blminute+blplus;
+            }
         }
         if (page_eta_global==false || document.scrollingElement.clientHeight+document.scrollingElement.scrollTop>=document.scrollingElement.scrollHeight){
             page_eta_global=false;

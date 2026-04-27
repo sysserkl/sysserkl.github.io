@@ -1906,6 +1906,21 @@ function postpath_b(){
     return local_storage_get_b('kl_remote_host',-1,false)+'/klwebphp/';
 }
 
+function textarea_hash_b(textareaId){
+    if (typeof textareaId == 'string'){
+        var otextarea = document.getElementById(textareaId);
+    } else {
+        var otextarea=textareaId;
+    }
+    var blstr=otextarea.value;
+    if (typeof SHA1 == 'function'){
+        var hash_value=SHA1(blstr);
+        alert(str_insert_delimiter(hash_value,4));
+    } else {
+        alert('未发现 SHA1 函数');
+    }
+}
+
 function textarea_top_bottom_b(textareaId, csposition=0,csstart=0){
     if (typeof textareaId == 'string'){
         var otextarea = document.getElementById(textareaId);
@@ -2042,6 +2057,10 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
         bljg=bljg+button_left+' onclick="textarea_top_bottom_b(\''+textarea_id+'\',0);">⤴'+button_right;
     }
 
+    if (csbuttons.includes('hash')){
+        bljg=bljg+button_left+' onclick="textarea_hash_b(\''+textarea_id+'\');">𖥻'+button_right;
+    }
+    
     if (csbuttons.includes('↓')){
         bljg=bljg+button_left+' onclick="textarea_top_bottom_b(\''+textarea_id+'\',1);">⤵'+button_right;
     }
@@ -5087,3 +5106,20 @@ function group_2_equal_bins_b(arr, numBins,to_int=false){
     
     return result;
 }
+
+function str_insert_delimiter(str, csn, delimiter='-'){
+    //console.log(str_insert_delimiter("abcdefgh", 3, "-")); // 输出: "abc-def-gh"
+    if (csn <= 0){
+        return str;
+    }
+    
+    let result = '';
+    for (let blxl = 0, lent=str.length; blxl<lent; blxl = blxl + csn){
+        if (blxl > 0){
+            result = result+delimiter;
+        }
+        result = result+str.slice(blxl, blxl + csn);
+    }
+    return result;
+}
+
