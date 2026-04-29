@@ -2072,6 +2072,10 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     if (csbuttons.includes(',解密,')){
         bljg=bljg+button_left+' onclick="textarea_en_de_b(\''+textarea_id+'\',true);">🔓'+button_right;
     }
+    
+    if (csbuttons.includes(',行数,')){
+        bljg=bljg+button_left+' onclick="textarea_count_b(\''+textarea_id+'\');">行数'+button_right;
+    }
         
     var fext=csbuttons.match(/save as (.*?) file/);
     if (Array.isArray(fext) && fext.length==2){
@@ -2089,7 +2093,6 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     }
         
     if (csbuttons.includes('发送到临时记事本') || csbuttons.includes('send to remote temp memo')){
-        //bljg=bljg+'<input type="submit" value="📤"'+csstyle+' title="send to remote temp memo" /> ';
         bljg=bljg+button_left+' onclick="textarea_form_submit_b(this);" title="send to remote temp memo">📤'+button_right;
     }
     
@@ -2119,6 +2122,16 @@ function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_clas
     }
     
     return bljg;
+}
+
+function textarea_count_b(csid){
+    var otextarea=document.getElementById(csid);
+    if (!otextarea){return;}
+    var blstr=otextarea.value;
+    var len_count=(blstr==''?0:blstr.split('\n').length);
+    var bltrim=blstr.trim();
+    var len_trim=(bltrim==''?0:bltrim.split('\n').length);
+    alert('字数：'+blstr.length+'；行数：'+len_count+'\n去除首尾空格后：\n字数：'+bltrim.length+'；行数：'+len_trim);
 }
 
 function upload_txt_file_to_textarea_b(ospan,textarea_id){
