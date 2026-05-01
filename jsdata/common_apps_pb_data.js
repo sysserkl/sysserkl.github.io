@@ -102,4 +102,6 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/zj_college_search.htm","ZJ College","💯","5","database|education"],
 ["{{selenium_news}}/html/zj_company.htm","ZJ Company","🏭","5","database"],
 ["{{selenium_news}}/module/pdfjs/web/viewer.html","PDF.js","🔖","5","txtbook"],
+["{{selenium_news}}/html/img2dots.htm","image 2 dots","▓","5","image"],
+
 ];

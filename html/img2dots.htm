@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>图片轮廓点阵生成器</title>
+<meta charset="UTF-8">
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css'],['image_2_dots.js']);
+</script>
+</head>
+<body>
+<h2 style="margin-top:0px;font-size:1.2rem;">▓ 图片轮廓点阵生成器</h2>
+<p><input type="file" id="upload" accept="image/*"></p>
+<p>
+灵敏度: <input type="range" id="input_threshold_img_dot" min="0" max="200" value="80" oninput="processImage();" />
+点大小: <input type="range" id="input_dsize_img_dot" min="1" max="10" value="4" oninput="processImage();" />
+间距: <input type="range" id="input_gap_img_dot" min="0" max="10" value="4" oninput="processImage();" />
+背景色：<input type="text" id="input_bgcolor_img_dot" value="black" />
+尺寸：<input type="number" id="input_isize_img_dot" value=1200 min=1 step=1 />
+</p>
+<div><canvas id="canvas_img_dot" style="border: 1px solid #333"></canvas></div>
+
+<script>
+function init_img_dot(){
+    top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'),true,false,2);
+    var input_list=[
+    ['input_bgcolor_img_dot',5,0.5],
+    ['input_isize_img_dot',5,0.5],
+    ];
+    input_size_b(input_list,'id');
+    character_2_icon_b('▓');
+    
+    document.getElementById('upload').addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        const reader = new FileReader();
+        reader.onload = (event) => {
+            original_img_dot_global.src = event.target.result;
+            original_img_dot_global.onload = () => processImage();
+        };
+        reader.readAsDataURL(file);
+    });
+}
+
+function processImage(){
+    let maxWidth=parseInt(document.getElementById('input_isize_img_dot').value.trim());
+    let bgcolor=document.getElementById('input_bgcolor_img_dot').value.trim();
+    let threshold=parseInt(document.getElementById('input_threshold_img_dot').value);
+    let dotSize = parseInt(document.getElementById('input_dsize_img_dot').value);
+    let gap = parseInt(document.getElementById('input_gap_img_dot').value);    
+    let ocanvas = document.getElementById('canvas_img_dot');
+    let ctx = ocanvas.getContext('2d');
+    image_2_dots_b(original_img_dot_global,threshold,dotSize,gap,ocanvas,ctx,maxWidth,bgcolor);
+}
+
+var original_img_dot_global = new Image();
+init_img_dot();
+</script>
+</body>
+</html>

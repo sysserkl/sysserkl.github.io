@@ -555,12 +555,8 @@ function mobile_style_enwc_b(mobile_more='',pc_more=''){
 }
 
 function showhide_enwc_b(){
-	var odiv=document.getElementById('div_show_hide');
-	if (odiv.style.display=='none'){
-        odiv.style.display='block';
-    } else {
-        odiv.style.display='none';
-    }
+    var odiv=document.getElementById('div_show_hide');
+    odiv.style.display=(odiv.style.display=='none'?'block':'none');
 }
 
 function menu_base_enwc_b(){
