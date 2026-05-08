@@ -1,6 +1,6 @@
 function td_background_sd(csid,cstype='samenum'){
     //恢复原背景色
-    var list_t=current_sd_global.split("");
+    var list_t=current_sd_global.split('');
     for (var blxl=0,lent=list_t.length;blxl<lent;blxl++){
         var otd=document.getElementById('input_'+blxl);
         if (list_t[blxl]=='0'){
@@ -630,8 +630,40 @@ function input_range_sd(){
     document.getElementById('klsudokuno').innerHTML = '<p align=center>'+bljg+'</p>';
 }
 
-function random_sd(){
-    var rndnumber=randint_b(0,sudoku_data_global.length-1);
+function import_sd(){
+    var csstr=prompt('输入81个数字');
+    if (csstr==null){return;}
+    
+    csstr=csstr.replace(/[^0-9]/g,'');
+    csstr=(csstr+'0'.repeat(81)).slice(0,81);
+    
+    sudoku_data_global.push(csstr);
+    document.getElementById('sudoku_range').max=sudoku_data_global.length+1;
+    random_sd(sudoku_data_global.length-1);
+}
+
+function generate_sd(){
+    const generator = new sudoku_generator_b();
+    const puzzle = generator.generateClean();
+    var result_t=[];
+    for (let arow of puzzle){
+        result_t.push(arow.join(''));
+    }
+    
+    console.log(generator.fillBoardCount,generator.timeUsed+ ' milliseconds');
+    
+    sudoku_data_global.push(result_t.join(''));
+    console.log(result_t.join(''));
+    
+    document.getElementById('sudoku_range').max=sudoku_data_global.length+1;
+    random_sd(sudoku_data_global.length-1);
+}
+
+function random_sd(rndnumber=false){
+    if (rndnumber===false){
+        rndnumber=randint_b(0,sudoku_data_global.length-1);
+    }
+    
     document.getElementById('sudoku_range').value=rndnumber+1;
     document.getElementById('span_no_sudoku').innerHTML='第 '+(rndnumber+1)+' 题';
     show_sd(rndnumber);
@@ -794,7 +826,7 @@ function show_sd(csnumber,csreform=false){
     
     //初始化背景色数组 - 保留注释
     
-	for (let blxl in blarray){
+	for (let blxl=0,lent=blarray.length;blxl<lent;blxl++){
 		if (blxl%9 == 0){
             blstr = blstr + '<tr>';
         }
@@ -825,9 +857,12 @@ function show_sd(csnumber,csreform=false){
         }
 	}
     blstr=blstr+'<tr><td colspan=9 align=center style="border:0;font-size:'+(font_size_sd_global-0.5)+'rem;">';
-    blstr=blstr + "<span class=\"span_box\" onclick=\"getvalue_check_sd()\">检查</span> ";
-    blstr=blstr + "<span class=\"span_box\" onclick=\"show_sd("+csnumber+",true)\">题目变形</span> ";
-    blstr=blstr + "<span class=\"span_box\" onclick=\"fill_sd()\">答案</span>";
+    blstr=blstr + '<span class="span_box" onclick="getvalue_check_sd();" title="检查">ℂ</span> ';
+    blstr=blstr + '<span class="span_box" onclick="show_sd('+csnumber+',true);" title="题目变形">𝕋</span> ';
+    blstr=blstr + '<span class="span_box" onclick="fill_sd();" title="答案">𝔸</span> ';
+    blstr=blstr + '<span class="span_box" onclick="generate_sd();" title="随机">ℝ</span> ';
+    blstr=blstr + '<span class="span_box" onclick="copy_sd();" title="复制">🗐</span> ';
+    blstr=blstr + '<span class="span_box" onclick="import_sd();" title="导入">➕</span>';
     blstr=blstr+'</td></tr>';
     
     blstr=blstr+'<tr><td colspan=9 style="border:0;">';
@@ -847,6 +882,11 @@ function show_sd(csnumber,csreform=false){
 	bldiv.innerHTML = blstr;
     document.getElementById('span_state').innerHTML='';
     inputvalue_color_sd();
+}
+
+function copy_sd(){
+    var blstr='原题：'+current_sd_global+'\n当前：'+getvalue_sd().join('');
+    copy_2_clipboard_b(blstr);
 }
 
 function style_sd(){
