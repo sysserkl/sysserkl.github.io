@@ -248,7 +248,7 @@ function checkbox_kl_b(csid,cscaption,cstitle='',selected=false,jsstr=''){
         var blchecked=' checked';
     } else {
         var blc='grey';
-         var blchecked='';
+        var blchecked='';
     }
     var bljg='';
     bljg=bljg+'<span id="'+csid+'" style="cursor:pointer;color:'+blc+'" title="'+cstitle+'" onclick=\'checkbox_kl_color_b("'+csid+'");'+jsstr+'\'>';
@@ -261,25 +261,25 @@ function checkbox_kl_b(csid,cscaption,cstitle='',selected=false,jsstr=''){
 function checkbox_kl_color_b(csid,setvalue=-1){
     //切换或设置值 - 保留注释
     var obj=document.getElementById(csid);
-    if (obj){
-        var ocheck=obj.getElementsByTagName('input')[0];
-        if (ocheck){
-            if (setvalue==-1){
-                if (obj.style.color=='grey'){
-                    obj.style.color='blue';
-                    ocheck.checked=true;
-                } else {
-                    obj.style.color='grey';
-                    ocheck.checked=false;
-                }
-            } else if (setvalue==1 || setvalue==true){
-                obj.style.color='blue';
-                ocheck.checked=true;
-            } else if (setvalue==0 || setvalue==false){
-                obj.style.color='grey';
-                ocheck.checked=false;
-            }
+    if (!obj){return;}
+    
+    var ocheck=obj.getElementsByTagName('input')[0];
+    if (!ocheck){return;}
+    
+    if (setvalue==-1){
+        if (obj.style.color=='grey'){
+            obj.style.color='blue';
+            ocheck.checked=true;
+        } else {
+            obj.style.color='grey';
+            ocheck.checked=false;
         }
+    } else if (setvalue==1 || setvalue==true){
+        obj.style.color='blue';
+        ocheck.checked=true;
+    } else if (setvalue==0 || setvalue==false){
+        obj.style.color='grey';
+        ocheck.checked=false;
     }
 }
 
@@ -394,11 +394,7 @@ function fpara_menu_b(str_t,reload=false){
 
 function klmenu_hide_b(csname='',more_parent=false){
     var blhref=(csname==''?'':"document.location.href = '"+csname+"';");
-    if (more_parent){
-        return "this.parentNode.parentNode.parentNode.style.display='none';"+blhref;    
-    } else {
-        return "this.parentNode.parentNode.style.display='none';"+blhref;
-    }
+    return 'this.parentNode.parentNode'+(more_parent?'.parentNode':'')+".style.display='none';"+blhref;    
 }
 
 function klmenu_select_sort_b(select_id,col_name_list,str_t=false,fn_name=false,add_span=true,no_mode=true,span_more=[],selected_id=0,prefix='',suffix=''){
@@ -933,7 +929,7 @@ function value_in_color_range_b(csvalue,color_list,min_value=false,max_value=fal
         
     for (let item of color_list){
         blcolor=item[0];
-        if (csvalue<=item[1]){break;} //console.log(blcolor,csvalue,item[1]);
+        if (csvalue<=item[1]){break;}
     }
     return blcolor;
 }
@@ -1141,11 +1137,7 @@ function div_title_href_b(item,csfsize='',underline=false,csid='',fnname='',item
             bljg=bljg+'<span class="span_a_article_title_b" style="color:'+scheme_global['a']+'">'+item[1]+'</span> ';
         }
     } else {
-        if (item[1]==''){
-            bljg=bljg+'<a class="span_a_article_title_b" href="'+item[0]+'" target=_blank>'+item[0]+'</a> ';
-        } else {
-            bljg=bljg+'<a class="span_a_article_title_b" href="'+item[0]+'" target=_blank>'+item[1]+'</a> ';
-        }
+        bljg=bljg+'<a class="span_a_article_title_b" href="'+item[0]+'" target=_blank>'+(item[1]==''?item[0]:item[1])+'</a> ';
     }
 
     if (item.length>=3){

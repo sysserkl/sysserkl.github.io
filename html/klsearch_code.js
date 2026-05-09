@@ -309,16 +309,20 @@ function local_or_remote_host_klsearch(ospan){
 }
 
 function href_replace_host_klsearch(cshref,cstype){
-    var remote_address=local_storage_get_b('kl_remote_host',-1,false)+'/';
+    var remote_address=local_storage_get_b('kl_remote_host',-1,false);
 
     if (user_remote_host_klsearch_global===false){
-        if (cshref.substring(0,remote_address.length)==remote_address){
+        if ([remote_address+'/',remote_address+':'].includes(cshref.substring(0,remote_address.length+1))){
             return '../../../../../'+cshref.substring(remote_address.length,);
         } else if (cstype=='Local' && cshref.substring(0,7)=='http://'){
-            cshref=cshref.substring(7,);
-            var blat=cshref.indexOf('/');
-            if (blat>=0){
-                return 'http://127.0.0.1/'+cshref.substring(blat+1,);
+            cshref=cshref.substring(7,);    //http:// - 保留注释
+            
+            var blat1=cshref.indexOf(':');
+            var blat2=cshref.indexOf('/');
+            if (blat1>0){
+                return 'http://127.0.0.1'+cshref.substring(blat1,);
+            } else if (blat2>0){
+                return 'http://127.0.0.1'+cshref.substring(blat2,);
             }
         }        
     }
