@@ -445,7 +445,7 @@ function enwords_debut_highlight_kltxt_b(){
         var ono=one_row.parentNode.querySelector('span.txtsearch_kltxt_lineno');
         if (!ono){continue;}
         no_list.push(parseInt(ono.innerText.replace(/[\(\)]/g,''))-1);
-        wordlist=wordlist.concat(one_row.innerText.match(/\b[a-z\-\']+\b/ig) || []);
+        wordlist=wordlist.concat(one_row.innerText.match(/\b[a-z\-\']{2,}\b/ig) || []); //忽略长度为1的字符 - 保留注释
         wordlist=array_unique_b(wordlist);
     }
     
