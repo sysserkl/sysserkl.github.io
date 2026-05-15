@@ -405,7 +405,7 @@ function calculator_generate_money_b(){
         return;
     }
     var blstr=specialstr_j(local_storage_get_b('simple_calculator'));
-    var bljg='计算器：<input type="text" id="input_calculator" value="'+blstr+'" onkeyup="if (event.key==\'Enter\'){eval_calculator_money_b(this);}"> = <span class="span_calculator" ondblclick="copy_2_clipboard_b(this.innerText);" title="双击复制到剪贴板"></span>';
+    var bljg='计算器：<input type="text" id="input_calculator" value="'+blstr+'" onkeyup="if (event.key==\'Enter\'){eval_calculator_money_b(this);}"> = <span class="span_calculator" style="cursor:pointer;" ondblclick="copy_2_clipboard_b(this.innerText);" title="双击复制到剪贴板"></span>';
     odiv.innerHTML=bljg;
     input_with_x_b('input_calculator',14,'',0.8);
 }
