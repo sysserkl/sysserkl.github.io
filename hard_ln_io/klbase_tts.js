@@ -241,7 +241,8 @@ function menu_temp_txt_share_b(is_php=true,menu_more=''){
     '<span class="span_menu" onclick="'+str_t+'local_storage_import_b(\'textarea_temp_txt_share\',true);">import data to localStorage</span>',    
     '<span class="span_menu" onclick="'+str_t+'remove_notepad_mark_temp_txt_share_b();">清除notepad标记和日期</span>',    
     '<span class="span_menu" onclick="'+str_t+'remove_notepad_tag_b(\'textarea_temp_txt_share\');">清除tag标记</span>',    
-    '<span class="span_menu" onclick="'+str_t+'popup_show_hide_b(\'div_preparation_tts\');">diff</span>',    
+    '<span class="span_menu" onclick="'+str_t+'popup_show_hide_b(\'div_preparation_tts\');">diff</span>',   
+    fpara_menu_b(str_t,true),
     ];
 
     var group_list=textarea_group_menu_klr_b('textarea_temp_txt_share');
@@ -253,7 +254,7 @@ function menu_temp_txt_share_b(is_php=true,menu_more=''){
     '<a href="'+klwebphp+'file_share_list.php" onclick="'+str_t+'" target=_blank>file share list</a>',
     ];
     
-    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu0,(is_php?'📗':'📙'),'16rem','1rem','1rem','60rem')+klmenu_b(klmenu_share,'🫂','19rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+menu_more,'','0rem')+' ';
+    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu0,(is_php?'📗':'📙'),'16rem','1rem','1rem','60rem')+klmenu_b(klmenu_share,'🫂','19rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+menu_more,'','0rem')+' ';
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',bljg);
 }
 
