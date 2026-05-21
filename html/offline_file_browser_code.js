@@ -1158,11 +1158,12 @@ function menu_offline_file_browser(){
     for (let blxl=0,lent=col_name.length;blxl<lent;blxl++){
         col_name[blxl]='<option value='+blxl+'>'+col_name[blxl]+'</option>';
     }
+    var col_str=col_name.join('\n');
     
      var klmenu1=[
-    '<span class="span_menu"><select id="select_raw_sort_id_ofb" style="height:2rem;">'+col_name.join('\n')+'</select> <span class="aclick" onclick="sort_offline_file_browser(document.getElementById(\'select_raw_sort_id_ofb\').value,false);'+blparent+'">排序</span></span>',
+    '<span class="span_menu"><select id="select_raw_sort_id_ofb" style="height:2rem;"><option value=-1>随机</option>'+col_str+'</select> <span class="aclick" onclick="sort_offline_file_browser(document.getElementById(\'select_raw_sort_id_ofb\').value,false);'+blparent+'">排序</span></span>',
     
-    '<span class="span_menu" style="font-size:0.85rem; line-height:2rem;">分组2：<select id="select_raw_sub_group1_id_ofb">'+col_name.join('\n')+'</select><br />分组3：<select id="select_raw_sub_group2_id_ofb">'+col_name.join('\n')+'</select><br />次数：<input type="number" id="input_group_count_min_ofb" min=1 value=2 / > - <input type="number" id="input_group_count_max_ofb" min=1 value=2 / ><br /><span class="oblong_box" onclick="group_count_offline_file_browser();'+blparent+'">当前条件分组统计指定次数列</span></span>',    
+    '<span class="span_menu" style="font-size:0.85rem; line-height:2rem;">分组2：<select id="select_raw_sub_group1_id_ofb">'+col_str+'</select><br />分组3：<select id="select_raw_sub_group2_id_ofb">'+col_str+'</select><br />次数：<input type="number" id="input_group_count_min_ofb" min=1 value=2 / > - <input type="number" id="input_group_count_max_ofb" min=1 value=2 / ><br /><span class="oblong_box" onclick="group_count_offline_file_browser();'+blparent+'">当前条件分组统计指定次数列</span></span>',    
 
     '<span class="span_menu" onclick="'+str_t+'review_plan_list_offline_file_browser();">完整影视温习列表</span>',    
     '<span class="span_menu" onclick="'+str_t+'review_plan_bookmark_offline_file_browser();">设定完整影视温习列表当前书签</span>',        
@@ -1203,15 +1204,15 @@ function menu_offline_file_browser(){
     var multimedia='mkv|rmvb|mp4|rm|avi|flv';
     var jscode='<span class="span_menu" onclick="'+str_t+'sort_offline_file_browser(-1); search_offline_file_browser';
     var klmenu2=[
-    jscode+'(\'.*\',true,200);">随机记录</a>',
-    jscode+'(\'\\.('+multimedia+')$\',true,200);">随机影视</a>',
-    jscode+'(\'+/动画/ +\\.('+multimedia+')$\',true,200);">随机动画</a>',
-    jscode+'(\'+/恐怖/ +\\.('+multimedia+')$\',true,200);">随机恐怖</a>',
-    jscode+'(\'+/幻想/ +\\.('+multimedia+')$\',true,200);">随机幻想</a>',
-    jscode+'(\'+\\.('+multimedia+')$ +\\\\bcmct\\\\b\',true,200);">随机CMCT</a>',
-    jscode+'(\'+\\.('+multimedia+')$ +(帝国|cnxp)\',true,200);">随机影视帝国</a>',
-    jscode+'(\'+待看 +\.('+multimedia+')$\',true,200);">随机待看</a>',
-    jscode+'(\'+save- +\.('+multimedia+')$\',true,200);">随机save</a>',
+    jscode+'(\'.*\',true,200);">随机记录</a></span>',
+    jscode+'(\'\\.('+multimedia+')$\',true,200);">随机影视</a></span>',
+    jscode+'(\'+/动画/ +\\.('+multimedia+')$\',true,200);">随机动画</a></span>',
+    jscode+'(\'+/恐怖/ +\\.('+multimedia+')$\',true,200);">随机恐怖</a></span>',
+    jscode+'(\'+/幻想/ +\\.('+multimedia+')$\',true,200);">随机幻想</a></span>',
+    jscode+'(\'+\\.('+multimedia+')$ +\\\\bcmct\\\\b\',true,200);">随机CMCT</a></span>',
+    jscode+'(\'+\\.('+multimedia+')$ +(帝国|cnxp)\',true,200);">随机影视帝国</a></span>',
+    jscode+'(\'+待看 +\.('+multimedia+')$\',true,200);">随机待看</a></span>',
+    jscode+'(\'+save- +\.('+multimedia+')$\',true,200);">随机save</a></span>',
     jscode+'(\'\\.(doc|xls|docx|xlsx|txt|pdf|htm|html|php|js|md|py|sh|epub|chm|azw|azw3|mobi|htmlz)$\',true,200);">随机文档</span>',
     ];
 

@@ -594,7 +594,9 @@ function load_current_book_b(load_digest_file=false,do_write=true,add_date=true,
         digest_js=blhref+'digest_list_data.js'; //digest_list_source_global - 保留注释
         file_list.push(['js',digest_js,'']);
     }
-    
+
+    console.log(file_list); //此行保留 - 保留注释
+
     if (do_write){
         if (is_render_page_b()){
             csbooklist_source_global=[];    //由于异步操作麻烦，不从 bigfile 载入 - 保留注释
@@ -605,6 +607,5 @@ function load_current_book_b(load_digest_file=false,do_write=true,add_date=true,
             write_js_css_b(file_list);
         }
     }
-    console.log(file_list); //此行保留 - 保留注释
     return [book_list_js+today,(digest_js==''?'':digest_js+today),file_list];
 } 

@@ -8,317 +8,179 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Wed, 20 May 2026 08:51:29 +0800</lastBuildDate>
-<item><title>人体不同器官的衰老不同步 - Solidot</title><link>https://www.solidot.org/story?sid=84335</link></item>
-<item><title>陪审团以诉讼时效为由判马斯克败诉 - Solidot</title><link>https://www.solidot.org/story?sid=84336</link></item>
-<item><title>Meta 重分配七千员工专注于 AI - Solidot</title><link>https://www.solidot.org/story?sid=84337</link></item>
-<item><title>微软发布了首个通用 Linux 发行版 Azure Linux 4.0 - Solidot</title><link>https://www.solidot.org/story?sid=84338</link></item>
-<item><title>少数湖泊拥有三分之二的湖泊淡水储量 - Solidot</title><link>https://www.solidot.org/story?sid=84339</link></item>
-<item><title>索尼取消将 PS 独占单人游戏移植到 PC 的计划 - Solidot</title><link>https://www.solidot.org/story?sid=84342</link></item>
-<item><title>pgBackRest 作者宣布继续维护该项目 - Solidot</title><link>https://www.solidot.org/story?sid=84343</link></item>
-<item><title>Maritime China - Aeon</title><link>https://aeon.co/essays/china-and-the-sea-a-story-of-power-faith-and-appetite</link></item>
-<item><title>How death came to Earth - Aeon</title><link>https://aeon.co/videos/the-celestial-affair-that-made-us-mortal-an-animated-indian-myth</link></item>
-<item><title>Mathematics is out there - Aeon</title><link>https://aeon.co/essays/for-sergiu-klainerman-maths-is-a-fact-to-be-divined</link></item>
-<item><title>Pakistan, Japan vow to further strengthen cooperation in petroleum sector - The Nation</title><link>https://www.nation.com.pk/19-May-2026/pakistan-japan-vow-strengthen-cooperation-petroleum-sector</link></item>
-<item><title>MNAs Nasir Iqbal Bosal and Azhar Qayyum Nahra meet PM Shehbaz Sharif - The Nation</title><link>https://www.nation.com.pk/19-May-2026/mnas-nasir-iqbal-bosal-azhar-qayyum-nahra-meet-pm-shehbaz-sharif</link></item>
-<item><title>Bangladeshi university leaders visit LUMS to strengthen regional academic linkages - The Nation</title><link>https://www.nation.com.pk/19-May-2026/bangladeshi-university-leaders-visit-lums-strengthen-regional-academic-linkages</link></item>
-<item><title>Gold steadies with MidEast conflict in focus after Trump pauses strike - The Nation</title><link>https://www.nation.com.pk/19-May-2026/gold-steadies-mideast-conflict-focus-trump-pauses-strike</link></item>
-<item><title>PM orders enhanced security for mineral corridor amid chairing Balochistan Apex Committee huddle - The Nation</title><link>https://www.nation.com.pk/19-May-2026/pm-orders-enhanced-security-mineral-corridor-amid-chairing-balochistan-apex-committee-huddle</link></item>
-<item><title>Trump postpones strikes on Tehran, Pakistan sends new Iran proposals to US - The Nation</title><link>https://www.nation.com.pk/19-May-2026/trump-postpones-strikes-tehran-pakistan-sends-new-iran-proposals-us</link></item>
-<item><title>Elon Musk loses lawsuit against OpenAI - The Nation</title><link>https://www.nation.com.pk/19-May-2026/elon-musk-loses-lawsuit-openai</link></item>
-<item><title>Pakistan hold firm at stumps but massive target looms in Sylhet Test - The Nation</title><link>https://www.nation.com.pk/19-May-2026/pakistan-hold-firm-stumps-massive-target-looms-sylhet-test</link></item>
-<item><title>Indian army chief’s remarks a madness, warmongering: ISPR - The Nation</title><link>https://www.nation.com.pk/18-May-2026/indian-army-chief-s-remarks-madness-warmongering-ispr</link></item>
-<item><title>James Cameron opens up on budget cuts for ‘Avatar’ movies - The Nation</title><link>https://www.nation.com.pk/18-May-2026/james-cameron-opens-budget-cuts-avatar-movies</link></item>
-<item><title>Bangladesh edge closer to series glory after strong day in Sylhet - The Nation</title><link>https://www.nation.com.pk/18-May-2026/bangladesh-edge-closer-series-glory-strong-day-sylhet</link></item>
-<item><title>Pakistan scrambles to salvage talks as Trump warns Iran of very bad time - The Nation</title><link>https://www.nation.com.pk/17-May-2026/pakistan-scrambles-salvage-talks-trump-warns-iran-bad-time</link></item>
-<item><title>Tens of thousands join rival marches in London - The Nation</title><link>https://www.nation.com.pk/17-May-2026/tens-thousands-join-rival-marches-london</link></item>
-<item><title>Pakistan, Qatar call for sustained international efforts to preserve US-Iran ceasefire - The Nation</title><link>https://www.nation.com.pk/19-May-2026/pakistan-qatar-call-sustained-international-efforts-preserve-us-iran-ceasefire</link></item>
-<item><title>Chinese firm to establish digital economy headquarters in Pakistan - The Nation</title><link>https://www.nation.com.pk/16-May-2026/chinese-firm-establish-digital-economy-headquarters-pakistan</link></item>
-<item><title>Vance sees progress in US-Iran talks as Trump lands in China - The Nation</title><link>https://www.nation.com.pk/14-May-2026/vance-sees-progress-us-iran-talks-trump-lands-china</link></item>
-<item><title>9 martyred, 33 injured as blast rips through market in Lakki Marwat - The Nation</title><link>https://www.nation.com.pk/13-May-2026/9-martyred-33-injured-blast-rips-market-lakki-marwat</link></item>
-<item><title>US will win Iran war, says Trump as he heads to Beijing - The Nation</title><link>https://www.nation.com.pk/13-May-2026/us-will-win-iran-war-says-trump-heads-beijing</link></item>
-<item><title>PM calls for export-led industrial growth for economic prosperity - The Nation</title><link>https://www.nation.com.pk/12-May-2026/pm-calls-export-led-industrial-growth-economic-prosperity</link></item>
-<item><title>President, PM discuss evolving situation - The Nation</title><link>https://www.nation.com.pk/12-May-2026/president-pm-discuss-evolving-situation</link></item>
-<item><title>PITB launches e-Khidmat service for PPSC exam fee payments - The Nation</title><link>https://www.nation.com.pk/19-May-2026/pitb-launches-e-khidmat-service-ppsc-exam-fee-payments</link></item>
-<item><title>PM says counterterror operation continues in Quetta visit - The Nation</title><link>https://www.nation.com.pk/19-May-2026/pm-says-counterterror-operation-continues-quetta-visit</link></item>
-<item><title>Security forces kill 22 militants in North Waziristan operation: ISPR - The Nation</title><link>https://www.nation.com.pk/19-May-2026/security-forces-kill-22-militants-north-waziristan-operation-ispr</link></item>
-<item><title>Pakistan extends airspace ban on Indian aircraft until June 23, 2026 - The Nation</title><link>https://www.nation.com.pk/19-May-2026/pakistan-extends-airspace-ban-indian-aircraft-june-23-2026</link></item>
-<item><title>Israeli army seizes more than 40 vessels from Gaza-bound Global Sumud Flotilla - The Nation</title><link>https://www.nation.com.pk/19-May-2026/israeli-army-seizes-40-vessels-gaza-bound-global-sumud-flotilla</link></item>
-<item><title>Trump says Iran attack on ‘hold’ as deal ‘very close’ - The Nation</title><link>https://www.nation.com.pk/19-May-2026/trump-says-postponed-planned-attacks-iran-regional-nations-said-deal-close</link></item>
-<item><title>New York Times files second lawsuit against Pentagon over press restrictions - The Nation</title><link>https://www.nation.com.pk/19-May-2026/new-york-times-files-second-lawsuit-pentagon-press-restrictions</link></item>
-<item><title>Frustrated with lack of Cuba pressure campaign results, Trump weighing military action more readily - The Nation</title><link>https://www.nation.com.pk/19-May-2026/frustrated-lack-cuba-pressure-campaign-results-trump-weighing-military-action-readily</link></item>
-<item><title>Bangladesh’s acting president hosts lunch for Pakistan’s former Info Secy - The Nation</title><link>https://www.nation.com.pk/19-May-2026/bangladesh-s-acting-president-hosts-lunch-pakistan-s-former-info-secy</link></item>
-<item><title>Iran announces new body to manage Strait of Hormuz - The Nation</title><link>https://www.nation.com.pk/19-May-2026/iran-announces-new-body-manage-strait-hormuz</link></item>
-<item><title>Putin’s China visit expected to further advance ties: Chinese spokesperson - The Nation</title><link>https://www.nation.com.pk/19-May-2026/putin-s-china-visit-expected-advance-ties-chinese-spokesperson</link></item>
-<item><title>Building a Shared Future (Part 2) - The Nation</title><link>https://www.nation.com.pk/19-May-2026/building-shared-future-part-2</link></item>
-<item><title>Tang Mengsheng - The Nation</title><link>https://www.nation.com.pk/columnist/tang-mengsheng</link></item>
-<item><title>Pakistan’s Climate Exodus - The Nation</title><link>https://www.nation.com.pk/19-May-2026/pakistan-s-climate-exodus</link></item>
-<item><title>Attiya Munawer - The Nation</title><link>https://www.nation.com.pk/columnist/attiya-munawer</link></item>
-<item><title>Building a Shared Future (Part 1) - The Nation</title><link>https://www.nation.com.pk/18-May-2026/building-shared-future-part-1</link></item>
-<item><title>Palestine &amp; Us - The Nation</title><link>https://www.nation.com.pk/18-May-2026/palestine-us</link></item>
-<item><title>The Thucydides Trap - The Nation</title><link>https://www.nation.com.pk/18-May-2026/thucydides-trap</link></item>
-<item><title>Aamir Zulfiqar Khan - The Nation</title><link>https://www.nation.com.pk/columnist/aamir-zulfiqar-khan</link></item>
-<item><title>Eminent poetess Maryam Majidi passes away - The Nation</title><link>https://www.nation.com.pk/19-May-2026/eminent-poetess-maryam-majidi-passes-away</link></item>
-<item><title>International Museum Day observed at Taxila Museum - The Nation</title><link>https://www.nation.com.pk/19-May-2026/international-museum-day-observed-taxila-museum</link></item>
-<item><title>WCLA in collaboration with RDF launches Gurmukhi Course at Lahore Fort - The Nation</title><link>https://www.nation.com.pk/19-May-2026/wcla-collaboration-rdf-launches-gurmukhi-course-lahore-fort</link></item>
-<item><title>Multan museum goes operational as Punjab celebrates Intl’ museums day by opening three museums - The Nation</title><link>https://www.nation.com.pk/19-May-2026/multan-museum-goes-operational-punjab-celebrates-intl-museums-day-opening-three-museums</link></item>
-<item><title>Surgeon Dr Shahid Mirani urges healthy lifestyle on World Hypertension Day - The Nation</title><link>https://www.nation.com.pk/19-May-2026/surgeon-dr-shahid-mirani-urges-healthy-lifestyle-world-hypertension-day</link></item>
-<item><title>Uzbekistan’s child protection reform: A new legal response to digital threats - The Nation</title><link>https://www.nation.com.pk/18-May-2026/uzbekistan-s-child-protection-reform-new-legal-response-to-digital-threats</link></item>
-<item><title>New study reveals largest dinosaur discovered in Southeast Asia - The Nation</title><link>https://www.nation.com.pk/16-May-2026/new-study-reveals-largest-dinosaur-discovered-southeast-asia</link></item>
-<item><title>Philippines’ Mayon volcano showing fresh seismic activity, with Alert Level 3 maintained - The Nation</title><link>https://www.nation.com.pk/16-May-2026/philippines-mayon-volcano-showing-fresh-seismic-activity-alert-level-3-maintained</link></item>
-<item><title>Traffic arrangements for cattle markets completed - The Nation</title><link>https://www.nation.com.pk/19-May-2026/traffic-arrangements-cattle-markets-completed</link></item>
-<item><title>Seven-day anti-polio campaign begins in City - The Nation</title><link>https://www.nation.com.pk/19-May-2026/seven-day-anti-polio-campaign-begins-city</link></item>
-<item><title>Thunderstorms likely in most districts of Punjab from tonight - The Nation</title><link>https://www.nation.com.pk/19-May-2026/thunderstorms-likely-districts-punjab-tonight</link></item>
-<item><title>Gang involved in WhatsApp fraud, mobile hacking arrested - The Nation</title><link>https://www.nation.com.pk/19-May-2026/gang-involved-whatsapp-fraud-mobile-hacking-arrested</link></item>
-<item><title>Punjab CNF arrests 55 drug peddlers in weeklong operations - The Nation</title><link>https://www.nation.com.pk/19-May-2026/punjab-cnf-arrests-55-drug-peddlers-weeklong-operations</link></item>
-<item><title>Two held for human smuggling, copyright violations - The Nation</title><link>https://www.nation.com.pk/19-May-2026/two-held-human-smuggling-copyright-violations</link></item>
-<item><title>Govts are judged by transformed lives, not speeches: Punjab CM - The Nation</title><link>https://www.nation.com.pk/19-May-2026/govts-judged-transformed-lives-speeches-punjab-cm</link></item>
-<item><title>LHC expresses anger over police inaction - The Nation</title><link>https://www.nation.com.pk/19-May-2026/lhc-expresses-anger-police-inaction</link></item>
-<item><title>Court allows Anmol Pinky’s production at Judicial Complex - The Nation</title><link>https://www.nation.com.pk/19-May-2026/court-allows-anmol-pinky-s-production-judicial-complex</link></item>
-<item><title>Pakistan facing critical nursing shortage amid population surge: VC ... - The Nation</title><link>https://www.nation.com.pk/19-May-2026/pakistan-facing-critical-nursing-shortage-amid-population-surge-vc-nusrat-shah</link></item>
-<item><title>Surgeon Dr Shahid Mirani urgess healthy lifestyle on World Hypertension Day - The Nation</title><link>https://www.nation.com.pk/19-May-2026/surgeon-dr-shahid-mirani-urgess-healthy-lifestyle-world-hypertension-day</link></item>
-<item><title>Two policemen martyred as dumper rams police mobile on M-9 Motorway - The Nation</title><link>https://www.nation.com.pk/19-May-2026/two-policemen-martyred-dumper-rams-police-mobile-m-9-motorway</link></item>
-<item><title>Sindh govt intensifies efforts to eliminate polio: CM’s aide - The Nation</title><link>https://www.nation.com.pk/19-May-2026/sindh-govt-intensifies-efforts-eliminate-polio-cm-s-aide</link></item>
-<item><title>Govt spokesperson says CM House Complaint Cell a model of public service - The Nation</title><link>https://www.nation.com.pk/19-May-2026/govt-spokesperson-says-cm-house-complaint-cell-model-public-service</link></item>
-<item><title>Hyderabad Police finalise comprehensive security plan for anti-polio campaign - The Nation</title><link>https://www.nation.com.pk/19-May-2026/hyderabad-police-finalise-comprehensive-security-plan-anti-polio-campaign</link></item>
-<item><title>Rangers, CTD arrest wanted terrorist linked to Sindhudesh Republican Army - The Nation</title><link>https://www.nation.com.pk/19-May-2026/rangers-ctd-arrest-wanted-terrorist-linked-sindhudesh-republican-army</link></item>
-<item><title>Shangla youth demand probe into alleged irregularities in uplift ... - The Nation</title><link>https://www.nation.com.pk/19-May-2026/shangla-youth-demand-probe-alleged-irregularities-uplift-schemes</link></item>
-<item><title>Coal mine accidents claim two lives in Shangla - The Nation</title><link>https://www.nation.com.pk/19-May-2026/coal-mine-accidents-claim-two-lives-shangla</link></item>
-<item><title>JI moves FCC against hike in POL prices - The Nation</title><link>https://www.nation.com.pk/19-May-2026/ji-moves-fcc-hike-pol-prices</link></item>
-<item><title>Senate: Opposition highlights human rights violations in country - The Nation</title><link>https://www.nation.com.pk/19-May-2026/senate-opposition-highlights-human-rights-violations-country</link></item>
-<item><title>PTI MNAs boycott NA over Imran meeting denial - The Nation</title><link>https://www.nation.com.pk/19-May-2026/pti-mnas-boycott-na-imran-meeting-denial</link></item>
-<item><title>Severe heatwave grips country amid thunderstorm warnings - The Nation</title><link>https://www.nation.com.pk/19-May-2026/severe-heatwave-grips-country-amid-thunderstorm-warnings</link></item>
-<item><title>NDMA hosts 2nd Pak-China Symposium on early warning for hydrological, Geological disasters - The Nation</title><link>https://www.nation.com.pk/19-May-2026/ndma-hosts-2nd-pak-china-symposium-early-warning-hydrological-geological-disasters</link></item>
-<item><title>Senior civil officers of Bangladesh visit NIPA - The Nation</title><link>https://www.nation.com.pk/19-May-2026/senior-civil-officers-bangladesh-visit-nipa</link></item>
-<item><title>Islamabad Jeep Club elects new executive body for next two-year term - The Nation</title><link>https://www.nation.com.pk/19-May-2026/islamabad-jeep-club-elects-new-executive-body-next-two-year-term</link></item>
-<item><title>Umar Gul confident Pakistan can pull off historic Sylhet run chase ... - The Nation</title><link>https://www.nation.com.pk/19-May-2026/umar-gul-confident-pakistan-can-pull-historic-sylhet-run-chase-bangladesh</link></item>
-<item><title>PFF conducts Student Mental Health Ambassador Workshop in Quetta - The Nation</title><link>https://www.nation.com.pk/19-May-2026/pff-conducts-student-mental-health-ambassador-workshop-quetta</link></item>
-<item><title>SBBA announces wheelchair tournaments and coaching camps - The Nation</title><link>https://www.nation.com.pk/19-May-2026/sbba-announces-wheelchair-tournaments-coaching-camps</link></item>
-<item><title>UOL hosts inauguration of Olympic Solidarity technical courses in fencing - The Nation</title><link>https://www.nation.com.pk/19-May-2026/uol-hosts-inauguration-olympic-solidarity-technical-courses-fencing</link></item>
-<item><title>People of Pakistan are my greatest strength, says Waqar after defending Seychelles title - The Nation</title><link>https://www.nation.com.pk/19-May-2026/people-pakistan-greatest-strength-says-waqar-defending-seychelles-title</link></item>
-<item><title>Decision on Mohsin Naqvi’s India visit likely this week - The Nation</title><link>https://www.nation.com.pk/18-May-2026/decision-mohsin-naqvi-s-india-visit-likely-week</link></item>
-<item><title>Sinner makes history in Rome with sixth straight Masters 1000 title - The Nation</title><link>https://www.nation.com.pk/18-May-2026/sinner-makes-history-rome-sixth-straight-masters-1000-title</link></item>
-<item><title>Government invites investors for privatization of major power ... - The Nation</title><link>https://www.nation.com.pk/19-May-2026/government-invites-investors-privatization-major-power-distribution-companies</link></item>
-<item><title>Finance minister seeks closer collaboration with World Bank on reforms - The Nation</title><link>https://www.nation.com.pk/19-May-2026/finance-minister-seeks-closer-collaboration-world-bank-reforms</link></item>
-<item><title>KP govt to challenge 7th NFC Award costing province trillions - The Nation</title><link>https://www.nation.com.pk/19-May-2026/kp-govt-challenge-7th-nfc-award-costing-province-trillions</link></item>
-<item><title>CCP approves proposed investment by CDC in NCMCL - The Nation</title><link>https://www.nation.com.pk/19-May-2026/ccp-approves-proposed-investment-cdc-ncmcl</link></item>
-<item><title>PSX loses over 3,791 points - The Nation</title><link>https://www.nation.com.pk/19-May-2026/psx-loses-3-791-points</link></item>
-<item><title>Nadra Centre formally inaugurated at DHA City Karachi - The Nation</title><link>https://www.nation.com.pk/19-May-2026/nadra-centre-formally-inaugurated-dha-city-karachi</link></item>
-<item><title>Balochistan govt partners with SLIC to launch mega health insurance initiative - The Nation</title><link>https://www.nation.com.pk/19-May-2026/balochistan-govt-partners-slic-launch-mega-health-insurance-initiative</link></item>
-<item><title>FBR showcases reform initiatives to Bangladesh Civil Services delegation - The Nation</title><link>https://www.nation.com.pk/19-May-2026/fbr-showcases-reform-initiatives-bangladesh-civil-services-delegation</link></item>
-<item><title>When manual cost allocation becomes a ... - The Nation</title><link>https://www.nation.com.pk/08-Apr-2026/manual-cost-allocation-becomes-structural-risk-designing-reclass-engine-scalable-finance-operations</link></item>
-<item><title>The order has broken: what Pakistan must now ... - The Nation</title><link>https://www.nation.com.pk/07-Apr-2026/order-broken-pakistan-must-now-understand</link></item>
-<item><title>Question of Care - The Nation</title><link>https://www.nation.com.pk/19-May-2026/question-care</link></item>
-<item><title>Civilian Courage - The Nation</title><link>https://www.nation.com.pk/19-May-2026/civilian-courage</link></item>
-<item><title>End the Bleeding - The Nation</title><link>https://www.nation.com.pk/19-May-2026/end-bleeding</link></item>
-<item><title>Triumph of Law - The Nation</title><link>https://www.nation.com.pk/18-May-2026/triumph-law</link></item>
-<item><title>Global Memory’s Test - The Nation</title><link>https://www.nation.com.pk/18-May-2026/global-memory-s-test</link></item>
-<item><title>Sugar Power Plants - The Nation</title><link>https://www.nation.com.pk/19-May-2026/sugar-power-plants</link></item>
-<item><title>A Growing Health Threat - The Nation</title><link>https://www.nation.com.pk/18-May-2026/growing-health-threat</link></item>
-<item><title>Gen Z’s Addiction - The Nation</title><link>https://www.nation.com.pk/18-May-2026/gen-z-s-addiction</link></item>
-<item><title>KU Students’ Struggles - The Nation</title><link>https://www.nation.com.pk/18-May-2026/ku-students-struggles</link></item>
-<item><title>From Bunyanun al-Marsous to US-Iran Mediation - The Nation</title><link>https://www.nation.com.pk/18-May-2026/bunyanun-al-marsous-us-iran-mediation</link></item>
-<item><title>FiveThirtyEight scrubbed from the internet - FlowingData</title><link>https://flowingdata.com/2026/05/19/fivethirtyeight-scrubbed-from-the-internet/</link></item>
-<item><title>Book about future of truth contains generated quotes - FlowingData</title><link>https://flowingdata.com/2026/05/19/book-about-future-of-truth-contains-generated-quotes/</link></item>
-<item><title>Analysis of similes in literature - FlowingData</title><link>https://flowingdata.com/2026/05/19/analysis-of-similes-in-literature/</link></item>
-<item><title>Atlas of Global Development - FlowingData</title><link>https://flowingdata.com/2026/05/18/atlas-of-global-development/</link></item>
-<item><title>Plex Triples Lifetime Subscription Cost To $750 - Slashdot</title><link>https://news.slashdot.org/story/26/05/19/1957248/plex-triples-lifetime-subscription-cost-to-750</link></item>
-<item><title>Google Changes Its Search Box for the First Time in 25 Years - Slashdot</title><link>https://search.slashdot.org/story/26/05/19/1947215/google-changes-its-search-box-for-the-first-time-in-25-years</link></item>
-<item><title>NextEra and Dominion&amp;#39;s $67 Billion Mega-Merger Is All About the Data Centers - Slashdot</title><link>https://hardware.slashdot.org/story/26/05/19/1733219/nextera-and-dominions-67-billion-mega-merger-is-all-about-the-data-centers</link></item>
-<item><title>OpenAI Co-Founder Andrej Karpathy Joins Anthropic - Slashdot</title><link>https://slashdot.org/story/26/05/19/1743231/openai-co-founder-andrej-karpathy-joins-anthropic</link></item>
-<item><title>StanChart To Cut Over 7,000 Jobs, Boost AI To Replace &amp;#39;Lower-Value Human Capital&amp;#39; - Slashdot</title><link>https://slashdot.org/story/26/05/19/1640224/stanchart-to-cut-over-7000-jobs-boost-ai-to-replace-lower-value-human-capital</link></item>
-<item><title>CISA Admin Leaked AWS GovCloud Keys On Github - Slashdot</title><link>https://yro.slashdot.org/story/26/05/19/1650229/cisa-admin-leaked-aws-govcloud-keys-on-github</link></item>
-<item><title>Microsoft Launches Surface Pro 12, Surface Laptop 8 With Intel Chips - Slashdot</title><link>https://hardware.slashdot.org/story/26/05/19/1625223/microsoft-launches-surface-pro-12-surface-laptop-8-with-intel-chips</link></item>
-<item><title>Microsoft Surprises With Its First Server Linux Distribution: Azure Linux 4.0 - Slashdot</title><link>https://linux.slashdot.org/story/26/05/19/0056247/microsoft-surprises-with-its-first-server-linux-distribution-azure-linux-40</link></item>
-<item><title>Before Mass Layoffs, Meta Reassigns 7,000 Workers To Focus On AI - Slashdot</title><link>https://meta.slashdot.org/story/26/05/19/0027253/before-mass-layoffs-meta-reassigns-7000-workers-to-focus-on-ai</link></item>
-<item><title>Amazon&amp;#39;s Alexa+ Now Produces AI-Generated Podcasts - Slashdot</title><link>https://entertainment.slashdot.org/story/26/05/19/0043247/amazons-alexa-now-produces-ai-generated-podcasts</link></item>
-<item><title>Europe Tests Laser Links As Satellite Comms Outgrow Radio - Slashdot</title><link>https://tech.slashdot.org/story/26/05/19/0035259/europe-tests-laser-links-as-satellite-comms-outgrow-radio</link></item>
-<item><title>PlayStation Exclusives Aren&amp;#39;t Coming To PC Anymore - Slashdot</title><link>https://games.slashdot.org/story/26/05/19/0021214/playstation-exclusives-arent-coming-to-pc-anymore</link></item>
-<item><title>FBI Wants to Buy Nationwide Access to License Plate Readers - Slashdot</title><link>https://news.slashdot.org/story/26/05/18/1952255/fbi-wants-to-buy-nationwide-access-to-license-plate-readers</link></item>
-<item><title>New Windows &amp;#39;MiniPlasma&amp;#39; Zero-Day Exploit Gives SYSTEM Access, PoC Released - Slashdot</title><link>https://it.slashdot.org/story/26/05/18/1946245/new-windows-miniplasma-zero-day-exploit-gives-system-access-poc-released</link></item>
-<item><title>Nintendo Tries To Obtain Touchscreen-Specific Patent On Monster Capturing - Slashdot</title><link>https://yro.slashdot.org/story/26/05/18/196230/nintendo-tries-to-obtain-touchscreen-specific-patent-on-monster-capturing</link></item>
-<item><title>1/4蒂法手办雕像，红酒摇曳，快坠入这氤氲的气氛 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/al32o0r8/</link></item>
-<item><title>韩国史诗科幻《希望》首曝预告，黄政民赵寅成联手对抗外星威胁 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/a034oge9/</link></item>
-<item><title>重塑主流 PC，英特尔第三代酷睿让 AI 轻薄本走向大众 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/a3m3wg0r/</link></item>
-<item><title>全系列存储解决方案赋能摄影创作，闪迪精彩亮相 China P&amp;E 展 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/ad73lmzn/</link></item>
-<item><title>杨紫《家业》央8首播收视1.57%，非遗文化剧夹缝中逆袭突围 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/a82vdn80/</link></item>
-<item><title>《大白鲨》首日票房破百万，半世纪惊悚经典首登内地银幕 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/az8qr855/</link></item>
-<item><title>管虎《一个男人和一个女人》上映，黄渤倪妮无关爱情的邂逅，彼此治愈 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/a263k6w2/</link></item>
-<item><title>《错过了，遗憾吗？》定档520，庄达菲王安宇演绎爱情中的错过与成长 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/az8qrz4n/</link></item>
-<item><title>唐山地震废墟中的人性抉择，《出入平安》今日上映 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/ak8ez3oe/</link></item>
-<item><title>短剧《一家三口在同班》电影版已备案，原班人马续写重生亲情故事 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/agg0v55m/</link></item>
-<item><title>逼真！超杀起手式！1/4《街霸6》春丽雕像开启预定 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/aww7w76m/</link></item>
-<item><title>豆瓣开分8.0！《低智商犯罪》紫金陈反套路神作笑翻全网 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/aww7wg5p/</link></item>
-<item><title>第33届中国电视金鹰奖网络投票5月16日开启！参与一下呗 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/anvpvezv/</link></item>
-<item><title>央视压哨拿下两届世界杯转播权，打包四大赛事，中国球迷免费看376场球赛！ - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/anvpvw42/</link></item>
-<item><title>小马们快来！华莱士 × 小马宝莉梦幻联名今日上线！ - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/a82v6qe6/</link></item>
-<item><title>云集5大世界高手，谢苗《火遮眼》6月12日香港上映（速看预告片） - 什么值得买（资讯）</title><link>https://news.smzdm.com/p/120720183/</link></item>
-<item><title>史诗战舰“寒鸦号”！《刺客信条：黑旗 记忆重置》积木周边公开 - 什么值得买（资讯）</title><link>https://news.smzdm.com/p/120686531/</link></item>
-<item><title>河南30岁女孩穷装新房“火”了，仅花1W，却无一丝穷酸气，太高级 - 什么值得买（资讯）</title><link>https://news.smzdm.com/p/120582170/p6/#li_comment_372868260</link></item>
-<item><title>真有人让豆包预约餐厅！店员回怼：有问题找豆包去 - 什么值得买（资讯）</title><link>https://news.smzdm.com/p/120734548/p2/#li_comment_372898753</link></item>
-<item><title>赚麻了！苹果芯片残次品变废为宝：高通联发科看了都眼红 - 什么值得买（资讯）</title><link>https://news.smzdm.com/p/120735901/#li_comment_372906784</link></item>
-<item><title>zhaoshouzhu - 什么值得买（资讯）</title><link>https://zhiyou.smzdm.com/member/1302181251/</link></item>
-<item><title>德比斯夺冠后采访太狂了，直接替张雪机车现场挖人！打不过就加入我们！我还没使出全力呢，其实还能开更快😎 - 什么值得买（资讯）</title><link>https://news.smzdm.com/p/120686304/p2/#li_comment_372881973</link></item>
-<item><title>广州电鸡（电动车）收费试点引热议：2元天，车主愿买单吗？对此你怎么看 - 什么值得买（资讯）</title><link>https://news.smzdm.com/p/120726301/p3/#li_comment_372887313</link></item>
-<item><title>超柔净透慕斯洗、低温烘干不伤衣，由石头洗烘一体机HOPE Pro实现 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/al35zkz8/</link></item>
-<item><title>石头HOPE Pro洗烘一体机：以平民价格享受到万元级的精细洗烘体验 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/axk583q4/</link></item>
-<item><title>适配大疆Pocket 4的全能搭档｜闪迪创作者TF高速闪存卡 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/a70wdzo5/</link></item>
-<item><title>MAMMUT Ultimate VIII 男士户外软壳夹克连帽外套 - 什么值得买（资讯）</title><link>https://www.smzdm.com/p/174618545/</link></item>
-<item><title>YOUKESHU 男士纯棉内裤 3条 - 什么值得买（资讯）</title><link>https://www.smzdm.com/p/174617661/</link></item>
-<item><title>mikibobo 儿童彩色马卡龙太阳镜 防UV400 折叠款 C4042-LW002绿橙框灰片 - 什么值得买（资讯）</title><link>https://www.smzdm.com/p/174617424/</link></item>
-<item><title>Columbia美国官网 纪念日特惠 低至6折 - 什么值得买（资讯）</title><link>https://www.smzdm.com/p/174597003/</link></item>
-<item><title>LG 39GX90SA-W OLED白色曲面显示器 39英寸 - 什么值得买（资讯）</title><link>https://www.smzdm.com/p/173588870/</link></item>
-<item><title>酷开 K6+ 2026系列 98P5H Pro 液晶电视 98英寸 4K - 什么值得买（资讯）</title><link>https://www.smzdm.com/p/173289791/</link></item>
-<item><title>New words – 18 May 2026 - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2026/05/18/new-words-18-may-2026/</link></item>
-<item><title>US plans to shrink forces available to NATO during crises, sources say - Defense News</title><link>https://www.defensenews.com/global/europe/2026/05/19/us-plans-to-shrink-forces-available-to-nato-during-crises-sources-say/</link></item>
-<item><title>More US troop withdrawals from Europe expected, NATO commander says - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/05/19/more-us-troop-withdrawals-from-europe-expected-nato-commander-says/</link></item>
-<item><title>NATO jet shoots down Ukrainian drone over Estonia in escalation of airspace violations - Defense News</title><link>https://www.defensenews.com/global/europe/2026/05/19/nato-jet-shoots-down-ukrainian-drone-over-estonia-in-escalation-of-airspace-violations/</link></item>
-<item><title>Sweden picks France’s FDI frigates in potential $4.2 billion deal - Defense News</title><link>https://www.defensenews.com/global/europe/2026/05/19/sweden-picks-frances-fdi-frigates-in-potential-42-billion-deal/</link></item>
-<item><title>Germany to deploy Patriot battery to Turkey, relieving US forces on NATO’s southeastern flank - Defense News</title><link>https://www.defensenews.com/global/europe/2026/05/19/germany-to-deploy-patriot-battery-to-turkey-relieving-us-forces-on-natos-southeastern-flank/</link></item>
-<item><title>Money Moves for Life After College — Money Minute - Defense News</title><link>https://www.defensenews.com/video/2026/05/18/money-moves-for-life-after-college-money-minute/</link></item>
-<item><title>War in pieces: Air Force wants special ops plane that can be built on the fly - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/05/19/war-in-pieces-air-force-wants-special-ops-plane-that-can-be-built-on-the-fly/</link></item>
-<item><title>Polish officials vent worries over scrapped US troop deployment - Defense News</title><link>https://www.defensenews.com/global/europe/2026/05/19/polish-officials-vent-worries-over-scrapped-us-troop-deployment/</link></item>
-<item><title>ISIS leader killed in Africa as US commander raises force reduction concerns - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2026/05/18/isis-leader-killed-in-africa-as-us-commander-raises-force-reduction-concerns/</link></item>
-<item><title>US Air Force looks to convert offshore oil rigs into rocket recovery platforms - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/05/18/us-air-force-looks-to-convert-offshore-oil-rigs-into-rocket-recovery-platforms/</link></item>
-<item><title>DARPA eyes breakthrough with synthetic human blood | Defense News Weekly Full Episode 5.19.26 - Defense News</title><link>https://www.defensenews.com/video/2026/05/18/darpa-eyes-breakthrough-with-synthetic-human-blood-defense-news-weekly-full-episode-51926/</link></item>
-<item><title>Final steps for human blood substitute? - Defense News</title><link>https://www.defensenews.com/video/2026/05/18/final-steps-for-human-blood-substitute/</link></item>
-<item><title>See the prototype of DARPA’s new shelf-stable human blood substitute - Defense News</title><link>https://www.defensenews.com/video/2026/05/18/see-the-prototype-of-darpas-new-shelf-stable-human-blood-substitute/</link></item>
-<item><title>Classic 7 – 把 Windows 10 改造成 Windows 7，几乎 1:1 还原 - 小众软件</title><link>https://www.appinn.com/classic-7-windows-10/</link></item>
-<item><title>Pica – 免费 macOS 字体管理工具 - 小众软件</title><link>https://www.appinn.com/pica-macos-fonts/</link></item>
-<item><title>索尼：PlayStation 独占游戏将不再登陆 PC - 小众软件</title><link>https://www.appinn.com/playstation-exclusive-games-pc/</link></item>
-<item><title>老牌开源桌面启动器 Wox v2.1.0 发布，不只是快速启动，还能截图、翻译、调用AI… - 小众软件</title><link>https://www.appinn.com/wox-v2-1-0/</link></item>
-<item><title>开源短链接 Kutt 官方警告：域名意外丢失，不要再访问 kutt[.]it 了 - 小众软件</title><link>https://www.appinn.com/kutt-to-new-domain-warning/</link></item>
-<item><title>发现频道：最近10日的热门排行榜[2026年第20期] - 小众软件</title><link>https://www.appinn.com/faxian-top10-2620/</link></item>
-<item><title>Lumara – 在手机上实时观看 NASA 的太阳、月亮直播 - 小众软件</title><link>https://www.appinn.com/lumara-space/</link></item>
-<item><title>微信读书发布官方 Skill：可查阅书架、阅读统计、笔记划线，搜索书籍 - 小众软件</title><link>https://www.appinn.com/weread-skills/</link></item>
-<item><title>本周赛博领鸡蛋：5.15~5.21 - 小众软件</title><link>https://www.appinn.com/eggs-26515/</link></item>
-<item><title>等了 5 年，Everything 1.5 Beta 正式发布｜附升级指南 - 小众软件</title><link>https://www.appinn.com/everything-1-5-beta/</link></item>
-<item><title>ChatGPT 手机版新增远程操作 Codex：电脑干活，手机盯进度｜牛马程序员，永不停歇 - 小众软件</title><link>https://www.appinn.com/work-with-codex-from-anywhere/</link></item>
-<item><title>Nginx rewrite 模块爆高危漏洞：可能已经存在十几年｜CVE-2026-42945 - 小众软件</title><link>https://www.appinn.com/nginx-rewrite-rce-cve-2026-42945/</link></item>
-<item><title>14天内三爆 Linux 提权漏洞 Fragnesia，一行代码，获得 root 权限｜CVE-2026-46300 - 小众软件</title><link>https://www.appinn.com/linux-fragnesia-cve-2026-46300/</link></item>
-<item><title>Everything 1.5a 官方中文语言包终于来了 - 小众软件</title><link>https://www.appinn.com/everything-1-5-0-1409a/</link></item>
-<item><title>Scrcpy 4.0 发布：远程控制安卓手机，让 Android 应用开始有“桌面化”体验 - 小众软件</title><link>https://www.appinn.com/scrcpy-4/</link></item>
-<item><title>npm 历史上首个蠕虫式供应链攻击：会自我传播 - 小众软件</title><link>https://www.appinn.com/tanstack-npm-compromise/</link></item>
-<item><title>坦白了：一个普通网页，到底能知道你多少信息？ - 小众软件</title><link>https://www.appinn.com/baolu-browser/</link></item>
-<item><title>豆包输入法 Mac 版正式上线｜语音输入法、拼音、双拼 - 小众软件</title><link>https://www.appinn.com/doubao-shurufa-macos/</link></item>
-<item><title>两个隐藏代码，真让 Windows 11 变流畅了：60716524、61391826 - 小众软件</title><link>https://www.appinn.com/windows-11-low-latency-profile-cpu-boost/</link></item>
-<item><title>Win11 迎来史诗级更新：在资源管理器中显示 KB、MB、GB｜附教程 61014711 - 小众软件</title><link>https://www.appinn.com/win11-file-explorer-kb-mb-gb/</link></item>
-<item><title>79年这个年龄尴尬，伙伴少。 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11880212</link></item>
-<item><title>北疆大环线自驾游找搭子 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11878444</link></item>
-<item><title>北疆徒步线路六：徒步贾登峪—禾木（经典线路） - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=5230328</link></item>
-<item><title>五一绍兴有哪些地方人少还可以玩玩，象云松村一样的 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11878201</link></item>
-<item><title>led the computer vision team - Slashdot</title><link>https://hardware.slashdot.org/story/17/12/08/2049204/elon-musk-says-tesla-is-building-dedicated-chips-for-autopilot</link></item>
-<item><title>term &amp;quot;vibe coding - Slashdot</title><link>https://slashdot.org/story/25/11/08/0155228/vibe-coding-named-word-of-the-year-by-collins-dictionary</link></item>
-<item><title>roughly 8,000 workers - Slashdot</title><link>https://tech.slashdot.org/story/26/05/18/179232/meta-layoffs-stress-harsh-ai-reality-inside-zuckerbergs-company</link></item>
-<item><title>Iran Now Threatens Fees for Subsea Internet Cables in the Strait of Hormuz - Slashdot</title><link>https://tech.slashdot.org/story/26/05/18/0613223/iran-now-threatens-fees-for-subsea-internet-cables-in-the-strait-of-hormuz?sbsrc=md</link></item>
-<item><title>WHO Declares Ebola Outbreak a Global Health Emergency - Slashdot</title><link>https://science.slashdot.org/story/26/05/18/0336208/who-declares-ebola-outbreak-a-global-health-emergency?sbsrc=md</link></item>
-<item><title>Elon Musk Loses Lawsuit Against OpenAI - Slashdot</title><link>https://yro.slashdot.org/story/26/05/18/1845222/elon-musk-loses-lawsuit-against-openai?sbsrc=md</link></item>
-<item><title>访谈｜陈晓露：“楼兰古城”并非汉代楼兰国的都城，也不是一夜之间神秘消失的 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_33187002</link></item>
-<item><title>Weekly Horoscope May 18-24: A Major Solar System Shake-Up - Teen Vogue</title><link>https://www.teenvogue.com/story/weekly-horoscope-may-18-24-a-major-solar-system-shake-up</link></item>
-<item><title>Is Jacob Elordi Dating Kendall Jenner? A Complete Timeline of Their Rumored Relationship - Teen Vogue</title><link>https://www.teenvogue.com/story/kendall-jenner-jacob-elordi-relationship-timeline</link></item>
-<item><title>PCOS Is Now PMOS: Here’s What That Means - Teen Vogue</title><link>https://www.teenvogue.com/story/pcos-pmos-new-name-meaning</link></item>
-<item><title>How &amp;#39;Off Campus&amp;#39; Found Its Leading Couple: &amp;#39;They Did Not Kiss in Chemistry Reads&amp;#39; - Teen Vogue</title><link>https://www.teenvogue.com/story/off-campus-first-look-exclusive-interviews#intcid=_teen-vogue-verso-hp-trending_257c49c6-9e20-4ac2-a1c4-2094e2dc25af_popular4-2</link></item>
-<item><title>Bye, Prelude: SAINT SATINE Is HYBE x Geffen&amp;#39;s New Global Girl Group - Teen Vogue</title><link>https://www.teenvogue.com/story/hybe-geffen-global-girl-group-saint-satine-everything-you-need-to-know#intcid=_teen-vogue-verso-hp-trending_257c49c6-9e20-4ac2-a1c4-2094e2dc25af_popular4-2</link></item>
-<item><title>&amp;#39;Soul Mate&amp;#39; Stars Ok Taec-yeon and Hayato Isomura Take Full Responsibility for Making You Cry - Teen Vogue</title><link>https://www.teenvogue.com/story/soul-mate-stars-ok-taecyeon-hayato-isomura-interview#intcid=_teen-vogue-verso-hp-trending_257c49c6-9e20-4ac2-a1c4-2094e2dc25af_popular4-2</link></item>
-<item><title>Did &amp;#39;Off Campus&amp;#39; Pull Off Hockey Hair? We Texted Pro Athlete Luke Evangelista to Find Out - Teen Vogue</title><link>https://www.teenvogue.com/story/off-campus-season-one-hockey-hair-graded-by-pro-hockey-player-luke-evangelista</link></item>
-<item><title>Blue Ivy Carter and North West&amp;#39;s Go-To Bag Is Trending - Teen Vogue</title><link>https://www.teenvogue.com/story/blue-ivy-carter-north-west-balenciaga-bag-trending-on-ebay</link></item>
-<item><title>Here&amp;#39;s What to Wear to All the Grad Parties You&amp;#39;re Invited to This Summer - Teen Vogue</title><link>https://www.teenvogue.com/story/what-to-wear-to-a-graduation-party-as-a-guest</link></item>
-<item><title>&amp;#39;Boys of Tommen&amp;#39; Is Prime Video&amp;#39;s Latest YA Romance. Here&amp;#39;s Everything to Know - Teen Vogue</title><link>https://www.teenvogue.com/story/boys-of-tommen-prime-video-everything-you-need-to-know</link></item>
-<item><title>Sasha and Malia Obama Just Gave Us a Master Class on Styling Workwear - Teen Vogue</title><link>https://www.teenvogue.com/story/sasha-malia-obama-masterclass-on-styling-workwear-for-nighttime</link></item>
-<item><title>Gen Z Was Told We Could Save the World. Is It Silly to Think We Still Can? - Teen Vogue</title><link>https://www.teenvogue.com/story/gen-z-was-told-we-could-save-the-world-is-it-silly-to-think-we-still-can</link></item>
-<item><title>&amp;#39;The Testaments&amp;#39; Costuming Isn&amp;#39;t Just About Oppression. It&amp;#39;s About the Power of Personal Choice - Teen Vogue</title><link>https://www.teenvogue.com/story/the-testaments-costuming-isnt-just-about-oppression-its-about-the-power-of-personal-choice</link></item>
-<item><title>Julia Wolf Went TikTok-Viral With &amp;#39;In My Room,&amp;#39; But Her Wardrobe Is Anti-Trend - Teen Vogue</title><link>https://www.teenvogue.com/story/julia-wolf-secondhand-shopping-interview</link></item>
-<item><title>Olivia Jade Didn&amp;#39;t Want to Just &amp;#39;Slap Her Name&amp;#39; on Her Beauty Brand - Teen Vogue</title><link>https://www.teenvogue.com/story/olivia-jade-didnt-want-to-just-slap-her-name-on-her-beauty-brand-opiccola</link></item>
-<item><title>The Met Gala&amp;#39;s Inclusion of Disabled People Proves Fashion Can&amp;#39;t Exist Without Body Diversity - Teen Vogue</title><link>https://www.teenvogue.com/story/the-met-gala-inclusion-of-disabled-people-proves-fashion-cant-exist-without-body-diversity</link></item>
-<item><title>Weekly Horoscope May 11-17: Mercury in Gemini Makes Gossip Interesting - Teen Vogue</title><link>https://www.teenvogue.com/story/weekly-horoscope-may-11-17-2026-a-wild-super-new-moon-in-taurus</link></item>
-<item><title>45 Best Prom Makeup Ideas &amp; Tips From the Pros to Try at Home - Teen Vogue</title><link>https://www.teenvogue.com/story/how-to-do-your-own-prom-makeup-tips</link></item>
-<item><title>Here&amp;#39;s How Sunscreen Can Help Heal Acne - Teen Vogue</title><link>https://www.teenvogue.com/gallery/best-sunscreen-for-acne-prone-skin-types</link></item>
-<item><title>15 Sneaker Trends to Kick Start Spring 2026 - Teen Vogue</title><link>https://www.teenvogue.com/story/sneaker-trends</link></item>
-<item><title>Milan Design Week 2026 - ArchDaily</title><link>https://www.archdaily.com/tag/milan-design-week-2026?ad_source=jv-header&amp;ad_name=hamburger_menu&amp;ad_campaign=special</link></item>
-<item><title>Grandparents&amp;#39; House / Stanaćev Granados - ArchDaily</title><link>https://www.archdaily.com/1040681/casa-abuelos-stanacev-granados?ad_content=1040681&amp;ad_medium=widget&amp;ad_name=featured_loop_main</link></item>
-<item><title>Laiva Plaza Hotel / RA! - ArchDaily</title><link>https://www.archdaily.com/1040729/laiva-plaza-hotel-ra?ad_content=1040729&amp;ad_medium=widget&amp;ad_name=featured_loop_main</link></item>
-<item><title>Euthea Residence / Ateno Architecture Studio - ArchDaily</title><link>https://www.archdaily.com/1041526/euthea-residence-ateno-architecture-studio?ad_content=1041526&amp;ad_medium=widget&amp;ad_name=featured_loop_main</link></item>
-<item><title>Furniture as Architecture: Micro-Modernisms Inside the Home - ArchDaily</title><link>https://www.archdaily.com/1041170/furniture-as-architecture-micro-modernisms-inside-the-home?ad_content=1041170&amp;ad_medium=widget&amp;ad_name=editors-choice</link></item>
-<item><title>The Gable Villa / Next Office–Alireza Taghaboni - ArchDaily</title><link>https://www.archdaily.com/1041652/the-gable-villa-next-office-alireza-taghaboni</link></item>
-<item><title>NextOffice–Alireza Taghaboni - ArchDaily</title><link>https://www.archdaily.com/office/nextoffice-alireza-taghaboni?ad_name=project-specs&amp;ad_medium=homepage</link></item>
-<item><title>Sofia Pavilion / Estúdio Leonardo Zanatta - ArchDaily</title><link>https://www.archdaily.com/1041367/sofia-pavilion-estudio-leonardo-zanatta</link></item>
-<item><title>Estúdio Leonardo Zanatta - ArchDaily</title><link>https://www.archdaily.com/office/estudio-leonardo-zanatta?ad_name=project-specs&amp;ad_medium=</link></item>
-<item><title>In Limine Gatehouse / Caret Studio - ArchDaily</title><link>https://www.archdaily.com/1041543/in-limine-gatehouse-caret-studio?ad_campaign=normal-tag</link></item>
-<item><title>Caret Studio - ArchDaily</title><link>https://www.archdaily.com/office/caret-studio?ad_name=project-specs&amp;ad_medium=professional-landing</link></item>
-<item><title>Eredi Sabatini Renzo - ArchDaily</title><link>https://www.archdaily.com/professional/eredi-sabatini-renzo?ad_source=home-stream&amp;ad_medium=main-spec&amp;ad_campaign=prof_spec</link></item>
-<item><title>Faraone Industrie - ArchDaily</title><link>https://www.archdaily.com/professional/faraone-industrie?ad_source=home-stream&amp;ad_medium=main-spec&amp;ad_campaign=prof_spec</link></item>
-<item><title>Delta Elettroclima - ArchDaily</title><link>https://www.archdaily.com/professional/delta-elettroclima?ad_source=home-stream&amp;ad_medium=main-spec&amp;ad_campaign=prof_spec</link></item>
-<item><title>Unit 2F / Mutter - ArchDaily</title><link>https://www.archdaily.com/1041544/unit-2f-mutter</link></item>
-<item><title>Case Study Houses and the Myth of a Universal Domestic Ideal - ArchDaily</title><link>https://www.archdaily.com/1041599/case-study-houses-and-the-myth-of-a-universal-domestic-ideal</link></item>
-<item><title>Case Study Houses - ArchDaily</title><link>https://www.archdaily.com/tag/case-study-houses</link></item>
-<item><title>Samuel H. Scripps Theater Center / Studio Gang - ArchDaily</title><link>https://www.archdaily.com/1041582/samuel-h-scripps-theater-center-studio-gang</link></item>
-<item><title>Thornton Tomasetti - ArchDaily</title><link>https://www.archdaily.com/professional/thornton-tomasetti?ad_source=home-stream&amp;ad_medium=main-spec&amp;ad_campaign=prof_spec</link></item>
-<item><title>Fisher Dachs Associates - ArchDaily</title><link>https://www.archdaily.com/professional/fisher-dachs-associates-ab3780a6-b378-4453-962b-5e7d8dc4a394?ad_source=home-stream&amp;ad_medium=main-spec&amp;ad_campaign=prof_spec</link></item>
-<item><title>Tillotson Design Associates - ArchDaily</title><link>https://www.archdaily.com/professional/tillotson-design-associates-8f7e7999-1ad0-4db3-a37e-df8e82566bee?ad_source=home-stream&amp;ad_medium=main-spec&amp;ad_campaign=prof_spec</link></item>
-<item><title>Flyleaf Creative Inc. - ArchDaily</title><link>https://www.archdaily.com/professional/flyleaf-creative-inc?ad_source=home-stream&amp;ad_medium=main-spec&amp;ad_campaign=prof_spec</link></item>
-<item><title>&amp;quot;Do Architecture&amp;quot;: Wang Shu and Lu Wenyu Announce Theme and Title for 2027 Venice Architecture Biennale - ArchDaily</title><link>https://www.archdaily.com/1041646/do-architecture-wang-shu-and-lu-wenyu-announce-theme-and-title-for-2027-venice-architecture-biennale?ad_campaign=normal-tag</link></item>
-<item><title>the 20th International Architecture Exhibition of La Biennale di Venezia - ArchDaily</title><link>https://www.archdaily.com/tag/venice-architecture-biennale-2027</link></item>
-<item><title>Amateur Architecture Studio - ArchDaily</title><link>https://www.archdaily.com/tag/amateur-architecture-studio</link></item>
-<item><title>Gagy Self-Sufficient House / Kareem Aldomiaty + Ehab Aldomiaty - ArchDaily</title><link>https://www.archdaily.com/1041522/gagy-self-sufficient-house-kareem-aldomiaty-plus-ehab-aldomiaty?ad_campaign=normal-tag</link></item>
-<item><title>Ehab Aldomiaty - ArchDaily</title><link>https://www.archdaily.com/office/ehab-aldomiaty?ad_name=project-specs&amp;ad_medium=</link></item>
-<item><title>Kareem Aldomiaty - ArchDaily</title><link>https://www.archdaily.com/office/kareem-aldomiaty?ad_name=project-specs&amp;ad_medium=</link></item>
-<item><title>Selldorf Architects, STUDIOS Architecture, and BASE Paysagiste Selected to Renovate the Louvre Museum - ArchDaily</title><link>https://www.archdaily.com/1041630/selldorf-architects-studios-architecture-and-base-paysagiste-selected-to-renovate-the-louvre-museum?ad_campaign=normal-tag</link></item>
-<item><title>the world-renowned Musée du Louvre - ArchDaily</title><link>https://www.archdaily.com/88705/ad-classics-le-grande-louvre-i-m-pei</link></item>
-<item><title>STUDIOS Architecture - ArchDaily</title><link>https://www.archdaily.com/office/studios-architecture</link></item>
-<item><title>BASE Paysagiste - ArchDaily</title><link>https://www.archdaily.com/professional/base-paysagistes</link></item>
-<item><title>announced in January 2025 as a major intervention for the historic complex - ArchDaily</title><link>https://www.archdaily.com/1026320/louvre-to-undergo-major-renovation-including-new-entrance-and-mona-lisa-relocation</link></item>
-<item><title>According to French authorities - ArchDaily</title><link>https://www.culture.gouv.fr/presse/communiques-de-presse/catherine-pegard-ministre-de-la-culture-annonce-l-equipe-laureate-du-concours-international-d-architecture-de-louvre-nouvelle-renaissance-studio?utm_medium=website&amp;utm_source=archdaily.com</link></item>
-<item><title>Architecture and Ideology: How Political Systems Shaped 20th-Century Design - ArchDaily</title><link>https://www.archdaily.com/1040931/architecture-and-ideology-how-political-systems-shaped-20th-century-design</link></item>
-<item><title>standardization - ArchDaily</title><link>https://www.archdaily.com/tag/standardization</link></item>
-<item><title>Delta Business Center / Picharchitects/Pich-Aguilera - ArchDaily</title><link>https://www.archdaily.com/1040919/delta-business-center-picharchitects-pich-aguilera</link></item>
-<item><title>Picharchitects/Pich-Aguilera - ArchDaily</title><link>https://www.archdaily.com/office/picharchitects-pich-aguilera?ad_name=project-specs&amp;ad_medium=</link></item>
-<item><title>Hide House / MRTN Architects - ArchDaily</title><link>https://www.archdaily.com/1041622/hide-house-mrtn-architects</link></item>
-<item><title>MRTN Architects - ArchDaily</title><link>https://www.archdaily.com/office/mrtn-architects?ad_name=project-specs&amp;ad_medium=</link></item>
-<item><title>Apelron Contemporary / Aether Architects  + Archigress - ArchDaily</title><link>https://www.archdaily.com/1041614/apelron-contemporary-aether-architects-plus-archigress</link></item>
-<item><title>Aether Architects - ArchDaily</title><link>https://www.archdaily.com/office/aether-architects?ad_name=project-specs&amp;ad_medium=</link></item>
-<item><title>Svatman Farmhouse / HabitArt Architecture Studio - ArchDaily</title><link>https://www.archdaily.com/1041628/svatman-farmhouse-habitart-architecture-studio</link></item>
-<item><title>HabitArt Architecture Studio - ArchDaily</title><link>https://www.archdaily.com/office/habitart-architecture-studio?ad_name=project-specs&amp;ad_medium=</link></item>
-<item><title>Office above the Pool / Modulito Estudio + atelier industrial - ArchDaily</title><link>https://www.archdaily.com/1041476/office-above-the-pool-modulito-estudio-plus-atelier-industrial</link></item>
-<item><title>Modulito Estudio - ArchDaily</title><link>https://www.archdaily.com/office/modulito-estudio?ad_name=project-specs&amp;ad_medium=</link></item>
-<item><title>atelier industrial - ArchDaily</title><link>https://www.archdaily.com/office/atelier-industrial?ad_name=project-specs&amp;ad_medium=</link></item>
-<item><title>Modular Pavilion / Dietsch Vilaça + Hauptstadt-Studio.Berlin - ArchDaily</title><link>https://www.archdaily.com/1041498/modular-pavilion-dietsch-vilaca-plus-lukas-beer</link></item>
-<item><title>Dietsch Vilaça - ArchDaily</title><link>https://www.archdaily.com/office/dietsch-vilaca?ad_name=project-specs&amp;ad_medium=professional-landing</link></item>
-<item><title>Hauptstadt-Studio.Berlin - ArchDaily</title><link>https://www.archdaily.com/office/hauptstadt-studio-berlin?ad_name=project-specs&amp;ad_medium=professional-landing</link></item>
-<item><title>Between the Rock and the River / Mimosa architects - ArchDaily</title><link>https://www.archdaily.com/1041499/between-the-rock-and-the-river-mimosa-architects?ad_campaign=normal-tag</link></item>
-<item><title>Mimosa architects - ArchDaily</title><link>https://www.archdaily.com/office/mimosa-architects?ad_name=project-specs&amp;ad_medium=</link></item>
-<item><title>The Soft Control of Space: Design for Decision-Making - ArchDaily</title><link>https://www.archdaily.com/1040960/the-soft-control-of-space-design-for-decision-making?ad_campaign=normal-tag</link></item>
-<item><title>no architecture without action - ArchDaily</title><link>https://www.archdaily.com/548021/bernard-tschumi-on-his-education-work-and-writings</link></item>
-<item><title>Sky Sends Cease-and-Desist Letters to 200 Irish IPTV Subscribers Exposed via Revolut - TorrentFreak</title><link>https://torrentfreak.com/sky-sends-cease-and-desist-letters-to-200-irish-iptv-subscribers-exposed-via-revolut/</link></item>
-<item><title>ACE Subpoena Targets French Private Tracker, Chinese Pirate Forum, and Vietnamese APIs - TorrentFreak</title><link>https://torrentfreak.com/ace-subpoena-targets-french-private-tracker-chinese-pirate-forum-and-vietnamese-apis/</link></item>
-<item><title>Steven Rosenbaum - FlowingData</title><link>https://flowingdata.com/tag/steven-rosenbaum/</link></item>
-<item><title>Google’s I/O conference showed how the company is being completely rebuilt for AI—for better or for worse - Fortune</title><link>https://fortune.com/2026/05/19/google-i-o-conference-ai-search-smart-glasses/</link></item>
-<item><title>Mamdani’s New York is coming to tax your private jet. Here’s how to prepare - Fortune</title><link>https://fortune.com/2026/05/16/new-york-private-jet-tax-mamdani-teterboro-port-authority-elevate-aviation/</link></item>
-<item><title>The 30-year yield hasn’t been this high since the Great Recession. Do the bond vigilantes ride again? - Fortune</title><link>https://fortune.com/2026/05/19/bond-yields-30-year-vigilantes-inflation-kevin-warsh/</link></item>
-<item><title>Bolt CEO says he let go of his entire HR team for creating problems that didn’t exist: ‘Those problems disappeared when I let them go’: - Fortune</title><link>https://fortune.com/2026/05/19/bolt-ceo-ryan-breslow-cut-hr-department-causing-problems-fintech-startup-turn-around/</link></item>
-<item><title>While Trump insisted the Iran war would end ‘soon,’ an account in his name was buying millions in oil, defense, and gold - Fortune</title><link>https://fortune.com/2026/05/18/trump-stock-trading-iran-war-conflict-of-interest-ethics/</link></item>
-<item><title>Americans’ AI hate wave might just be gathering steam: Data centers could hike power costs in some states over 50% by 2030 - Fortune</title><link>https://fortune.com/2026/05/19/data-centers-electricity-costs-us-public-opinion/</link></item>
-<item><title>Why the 137-year-old developer Hongkong Land is reinventing itself—and trying to loosen its ties to its home city - Fortune</title><link>https://fortune.com/2026/05/19/hongkong-land-michael-smith-asia-real-estate-shift/</link></item>
-<item><title>Indeed chief economist says the sectors most exposed to AI are seeing a big growth in job demand - Fortune</title><link>https://fortune.com/2026/05/19/indeed-chief-economist-svenja-gudell-sectors-most-exposed-ai-big-job-growth/</link></item>
-<item><title>CNN analyst and ‘The Morning Show’ producer says Stephen Colbert is a role model for his ‘positive’ outlook on his show ending - Fortune</title><link>https://fortune.com/2026/05/19/stephen-colbert-role-model-show-ending-brian-stelter/</link></item>
-<item><title>DEI experts say the acronym may be radioactive, but the underlying business case is stronger than ever - Fortune</title><link>https://fortune.com/2026/05/19/dei-experts-diversity-equity-inclusion-fortune-workplace-innovation-summit/</link></item>
-<item><title>We Finally Have the Answer for T. Rex’s Tiny Arms - Nautilus</title><link>https://nautil.us/we-finally-have-the-answer-for-t-rexs-tiny-arms-1280997/</link></item>
-<item><title>Commencement Boos for AI Platitudes - Nautilus</title><link>https://nautil.us/commencement-boos-for-ai-platitudes-1280992/</link></item>
-<item><title>NASA Astronaut Films Spectacular Fireball Over Earth - Nautilus</title><link>https://nautil.us/nasa-astronaut-films-spectacular-fireball-over-earth-1280984/</link></item>
-<item><title>These Three Newly Discovered Mammals Survived the Extinction Event That Wiped Out the Dinosaurs - Nautilus</title><link>https://nautil.us/these-three-newly-discovered-mammals-survived-the-extinction-event-that-wiped-out-the-dinosaurs-1280980/</link></item>
-<item><title>How to Predict an Earthquake - Nautilus</title><link>https://nautil.us/how-to-predict-an-earthquake-1280891/</link></item>
-<item><title>The Earthquake Illusion - Nautilus</title><link>https://nautil.us/the-earthquake-illusion-1280874/</link></item>
-<item><title>The Science of Cities. 10 Books You Must Read - Nautilus</title><link>https://nautil.us/the-science-of-cities-10-books-you-must-read-1280919/</link></item>
-<item><title>Why Did Humans Evolve to Favor One Hand Over the Other? - Nautilus</title><link>https://nautil.us/why-did-humans-evolve-to-favor-one-hand-over-the-other-1280952/</link></item>
-<item><title>How Did We Miss the Asteroid That Will Narrowly Miss Us? - Nautilus</title><link>https://nautil.us/how-did-we-miss-the-asteroid-that-will-narrowly-miss-us-1280943/</link></item>
-<item><title>Mummified Peruvian Hairless Dogs Shed Light on Ancient Companionship - Nautilus</title><link>https://nautil.us/mummified-peruvian-hairless-dogs-shed-light-on-ancient-companionship-1280910/</link></item>
-<item><title>The Future of Dynamism - Law &amp; Liberty</title><link>https://lawliberty.org/podcast/the-future-of-dynamism/</link></item>
-<item><title>Christianity and the Founders’ Liberalism - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/christianity-and-the-founders-liberalism/</link></item>
-<item><title>Fannie, Freddie, and the National Debt - Law &amp; Liberty</title><link>https://lawliberty.org/fannie-freddie-and-the-national-debt/</link></item>
-<item><title>Boomers vs. Doomers - Law &amp; Liberty</title><link>https://lawliberty.org/boomers-vs-doomers/</link></item>
-<item><title>MQ-25A Stingray cleared for deployment, says Cao - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/05/19/mq-25a-stingray-cleared-for-deployment-says-cao/</link></item>
-<item><title>Pentagon inks $500 million deal with Perennial Autonomy for counter-drone tech - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/05/19/pentagon-inks-500-million-deal-with-perennial-autonomy-for-counter-drone-tech/</link></item>
-<item><title>Ukraine declares its first homegrown guided aerial bomb combat-ready - Defense News</title><link>https://www.defensenews.com/global/europe/2026/05/18/ukraine-declares-its-first-homegrown-guided-aerial-bomb-combat-ready/</link></item>
-<item><title>Former University of Michigan researcher accused of hiding Chinese military drone ties - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/05/18/former-university-of-michigan-researcher-accused-of-hiding-chinese-military-drone-ties/</link></item>
-<item><title>Behind the Scenes Hardening Firefox with Claude Mythos Preview → - Mozilla Hacks</title><link>https://hacks.mozilla.org/2026/05/behind-the-scenes-hardening-firefox/</link></item>
-<item><title>Trustworthy JavaScript for the Open Web - Mozilla Hacks</title><link>https://hacks.mozilla.org/2026/05/trustworthy-javascript-for-the-open-web/</link></item>
+<lastBuildDate>Thu, 21 May 2026 08:29:01 +0800</lastBuildDate>
+<item><title>Daily Pictures. Part 1 (81 pics) - AcidCow.com</title><link>https://acidcow.com/picdump/173686-daily-pictures-part-1-81-pics.html</link></item>
+<item><title>Daily Pictures. Part 2 (80 pics) - AcidCow.com</title><link>https://acidcow.com/picdump/173687-daily-pictures-part-2-80-pics.html</link></item>
+<item><title>Acid GIFs, May 21 (25 gifs) - AcidCow.com</title><link>https://acidcow.com/gif/173688-acid-gifs-may-21-25-gifs.html</link></item>
+<item><title>Bad Days Happen (33 pics) - AcidCow.com</title><link>https://acidcow.com/pics/173681-bad-days-happen-33-pics.html</link></item>
+<item><title>Work Memes (20 pics) - AcidCow.com</title><link>https://acidcow.com/pics/173671-work-memes-20-pics.html</link></item>
+<item><title>Cute Girls (21 pics) - AcidCow.com</title><link>https://acidcow.com/girls/173684-cute-girls-21-pics.html</link></item>
+<item><title>Random Memes (23 pics) - AcidCow.com</title><link>https://acidcow.com/pics/173670-random-memes-23-pics.html</link></item>
+<item><title>Failed Food Serving (17 pics) - AcidCow.com</title><link>https://acidcow.com/pics/173679-failed-food-serving-17-pics.html</link></item>
+<item><title>Weird Designs And Finds (21 pics) - AcidCow.com</title><link>https://acidcow.com/pics/173677-weird-designs-and-finds-21-pics.html</link></item>
+<item><title>Giant Things (15 pics) - AcidCow.com</title><link>https://acidcow.com/pics/173673-giant-things-15-pics.html</link></item>
+<item><title>Unexpected Coincidences (20 pics) - AcidCow.com</title><link>https://acidcow.com/pics/173669-unexpected-coincidences-20-pics.html</link></item>
+<item><title>Hell For Perfectionists (16 pics) - AcidCow.com</title><link>https://acidcow.com/pics/173676-hell-for-perfectionists-16-pics.html</link></item>
+<item><title>Crazy Architecture (18 pics) - AcidCow.com</title><link>https://acidcow.com/pics/173674-crazy-architecture-18-pics.html</link></item>
+<item><title>This Is Pareidolia (25 pics) - AcidCow.com</title><link>https://acidcow.com/pics/173672-this-is-pareidolia-25-pics.html</link></item>
+<item><title>Awful Haircuts (25 pics) - AcidCow.com</title><link>https://acidcow.com/pics/173678-awful-haircuts-25-pics.html</link></item>
+<item><title>小牛新国标 NXT二代 双电池Ultra版 开箱 - Chiphell</title><link>https://www.chiphell.com/article-34956-1.html</link></item>
+<item><title>39吋5K2K 165Hz曲面屏！ LG Tandem WOLED叠 - Chiphell</title><link>https://www.chiphell.com/article-34961-1.html</link></item>
+<item><title>辽宁博物馆，新中国第一座博物馆的含金量。 - Chiphell</title><link>https://www.chiphell.com/article-34953-1.html</link></item>
+<item><title>风道主机——机械大师D36+ROG CROSSHAIR X8 - Chiphell</title><link>https://www.chiphell.com/article-34958-1.html</link></item>
+<item><title>基础咖啡角的非基础小众咖啡机----bre:zi全 - Chiphell</title><link>https://www.chiphell.com/article-34954-1.html</link></item>
+<item><title>Mozilla发布Firefox 151 全新起始页，添加**（V P N）位置选择， - Chiphell</title><link>https://www.chiphell.com/thread-2810407-1-1.html</link></item>
+<item><title>谷歌推出Gemini 3.5 Flash， 智能和输出速度都有大提升 - Chiphell</title><link>https://www.chiphell.com/thread-2810392-1-1.html</link></item>
+<item><title>索尼发布1000X THE COLLEXION 旗舰头戴式降噪耳机，系列十周年纪 - Chiphell</title><link>https://www.chiphell.com/thread-2810360-1-1.html</link></item>
+<item><title>战锤颅骨节将迎来十周年， 《战锤40K : 机械教2》将于5月22日发 - Chiphell</title><link>https://www.chiphell.com/thread-2810309-1-1.html</link></item>
+<item><title>2026年4月中国大陆主板出货量 整体延续下滑趋势，技嘉和七彩虹逆 - Chiphell</title><link>https://www.chiphell.com/thread-2810273-1-1.html</link></item>
+<item><title>AMD AI开发者大会首次在中国举行 开放生态，智启未来 - Chiphell</title><link>https://www.chiphell.com/thread-2810229-1-1.html</link></item>
+<item><title>MONTECH推出十周年纪念机箱“TEN”， 提供三种多元内构模式 - Chiphell</title><link>https://www.chiphell.com/thread-2810209-1-1.html</link></item>
+<item><title>2026Q1全球OLED显示器出货量同比增长78%， 华硕市场份额位列第一 - Chiphell</title><link>https://www.chiphell.com/thread-2810202-1-1.html</link></item>
+<item><title>2026Q1中国平板电脑市场进入结构性调整期 出货量同比下降4.8% - Chiphell</title><link>https://www.chiphell.com/thread-2810166-1-1.html</link></item>
+<item><title>Take-Two承认《GTA6》比原计划晚了18个月 即便承受“痛苦”也要 - Chiphell</title><link>https://www.chiphell.com/thread-2809954-1-1.html</link></item>
+<item><title>微星PRO MAX 271UPX12G系列开售 4K高刷商用显示器，售价4799元起 - Chiphell</title><link>https://www.chiphell.com/thread-2809916-1-1.html</link></item>
+<item><title>iPhone Fold试产效果不佳 铰链可靠性始终达不到苹果品控要求 - Chiphell</title><link>https://www.chiphell.com/thread-2809903-1-1.html</link></item>
+<item><title>Colorful BATTLE-AX B860M-PLUS S WIFI7 V2 - Chiphell</title><link>https://www.chiphell.com/article-34976-1.html</link></item>
+<item><title>ASRock 9060 XT Challenger 评测 - Chiphell</title><link>https://www.chiphell.com/article-34957-1.html</link></item>
+<item><title>AMD Ryzen 9 9950X3D2 Dual Edition 评测 - Chiphell</title><link>https://www.chiphell.com/article-34951-1.html</link></item>
+<item><title>Fractal North XL Momentum Edition - Chiphell</title><link>https://www.chiphell.com/article-34948-1.html</link></item>
+<item><title>bequiet! Dark Rock Pro 6 评测 - Chiphell</title><link>https://www.chiphell.com/article-34936-1.html</link></item>
+<item><title>80后“中登”送给自己的性价比桌搭 - Chiphell</title><link>https://www.chiphell.com/article-34979-1.html</link></item>
+<item><title>埃及大博物馆之图坦卡蒙的宝藏 - Chiphell</title><link>https://www.chiphell.com/article-34978-1.html</link></item>
+<item><title>矿蕴金陵，晶彩纷橙——2026年南京矿博会随拍 - Chiphell</title><link>https://www.chiphell.com/article-34977-1.html</link></item>
+<item><title>[CHH首发]徕图BACKUP揽御系列35L双肩摄影包体验 - Chiphell</title><link>https://www.chiphell.com/article-34975-1.html</link></item>
+<item><title>黑金实木风，U7 270K + ROG Z890-E + RTX5070Ti + 联力 217 机箱装机分享 ... - Chiphell</title><link>https://www.chiphell.com/article-34974-1.html</link></item>
+<item><title>墨椟藏玉，黑白成界 —— 酷冷至尊 COSMOS Alpha + 影驰 5080 名人堂装机分享 ... - Chiphell</title><link>https://www.chiphell.com/article-34973-1.html</link></item>
+<item><title>神牛X3 Pro引闪器开箱 - Chiphell</title><link>https://www.chiphell.com/article-34971-1.html</link></item>
+<item><title>成都考古中心，成都最难约博物馆。 - Chiphell</title><link>https://www.chiphell.com/article-34969-1.html</link></item>
+<item><title>东京漫步（1）——新宿篇 - Chiphell</title><link>https://www.chiphell.com/article-34968-1.html</link></item>
+<item><title>computer1bliss - Chiphell</title><link>https://www.chiphell.com/space-username-computer1bliss.html</link></item>
+<item><title>[胶片][xpan]春节新西兰南岛 - Chiphell</title><link>https://www.chiphell.com/article-34964-1.html</link></item>
+<item><title>SSUPD Meshroom D+七彩虹 CVN B850I+华硕 巨齿鲨 RTX 5070 装机分享！ - Chiphell</title><link>https://www.chiphell.com/article-34963-1.html</link></item>
+<item><title>Want to learn more? Download the Wikipedia app - Wikimedia Foundation</title><link>https://wikimediafoundation.org/news/2026/05/19/want-to-read-more-download-the-wikipedia-app/</link></item>
+<item><title>Wikimedia Foundation joins Digital Public Goods Alliance to champion open knowledge infrastructure - Wikimedia Foundation</title><link>https://wikimediafoundation.org/news/2026/05/13/wikimedia-foundation-joins-the-digital-public-goods-alliance/</link></item>
+<item><title>Firefox 将移除 asm.js 相关代码 - Solidot</title><link>https://www.solidot.org/story?sid=84356</link></item>
+<item><title>Google 云服务 GCP 不小心将其大客户 Railway 的账号封禁 - Solidot</title><link>https://www.solidot.org/story?sid=84355</link></item>
+<item><title>为何日本的花粉过敏如此严重 - Solidot</title><link>https://www.solidot.org/story?sid=84354</link></item>
+<item><title>Fedora 移除深度桌面环境包 - Solidot</title><link>https://www.solidot.org/story?sid=84353</link></item>
+<item><title>OpenAI 和英伟达等在模型中加入了对 SynthID 水印的支持 - Solidot</title><link>https://www.solidot.org/story?sid=84352</link></item>
+<item><title>GitHub 证实黑客窃取了其内部代码库 - Solidot</title><link>https://www.solidot.org/story?sid=84349</link></item>
+<item><title>Kickstarter 撤销对成人内容的全面封禁 - Solidot</title><link>https://www.solidot.org/story?sid=84348</link></item>
+<item><title>Google 宣布改变搜索框 - Solidot</title><link>https://www.solidot.org/story?sid=84347</link></item>
+<item><title>三星电子劳资谈判破裂，从 21 日起开始 18 天大罢工 - Solidot</title><link>https://www.solidot.org/story?sid=84346</link></item>
+<item><title>Bug 悬赏项目被 AI 报告淹没 - Solidot</title><link>https://www.solidot.org/story?sid=84344</link></item>
+<item><title>DA, IFP clash over MEC’s face on KZN state water tankers - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2026-05-20-da-ifp-clash-over-mecs-face-on-kzn-state-water-tankers/</link></item>
+<item><title>Penny Penny joins Mayibuye as party gears up for local polls - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2026-05-20-penny-penny-joins-mayibuye-as-party-gears-up-for-local-polls/</link></item>
+<item><title>The HIV prevention jab scientists hoped for is finally here. Now comes the hard part - The Mail &amp; Guardian</title><link>https://mg.co.za/health/2026-05-20-the-hiv-prevention-jab-scientists-hoped-for-is-finally-here-now-comes-the-hard-part/</link></item>
+<item><title>Foreigners seek UN intervention after Durban police station standoff - The Mail &amp; Guardian</title><link>https://mg.co.za/news/2026-05-20-foreigners-seek-un-intervention-after-durban-police-station-standoff/</link></item>
+<item><title>Consumers face double blow as inflation rises and rate fears return - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2026-05-20-consumers-face-double-blow-as-inflation-rises-and-rate-fears-return/</link></item>
+<item><title>Africa Forward Summit and President Macron screamed - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2026-05-20-africa-forward-summit-and-president-macron-screamed/</link></item>
+<item><title>Exams, elections and the youth vote: Expert warns of pressure on first-time voters - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2026-05-20-exams-elections-and-the-youth-vote-expert-warns-of-pressure-on-first-time-voters/</link></item>
+<item><title>It’s never too early or too late to start investing - The Mail &amp; Guardian</title><link>https://mg.co.za/partner-content/2026-05-20-its-never-too-early-or-too-late-to-start-investing/</link></item>
+<item><title>Mbalula: ‘I don’t care about your support. I won’t be blackmailed for 2027’ - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2026-05-19-mbalula-i-dont-care-about-your-support-i-wont-be-blackmailed-for-2027/</link></item>
+<item><title>Tata Tiago review: Why the budget hatchback is Tata’s true SA comeback hero - The Mail &amp; Guardian</title><link>https://mg.co.za/motoring/2026-05-19-tata-tiago-review-why-the-budget-hatchback-is-tatas-true-sa-comeback-hero/</link></item>
+<item><title>Hi-tech female artillery unit soldiers aiding in defense against Iran, Hezbollah talk to &amp;#39;Post&amp;#39; - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/defense-news/article-896909</link></item>
+<item><title>&amp;#39;Bibi&amp;#39;s hair was on fire:&amp;#39; Inside the call between Trump, Netanyahu on Iran ceasefire talks - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/iran-news/article-896906</link></item>
+<item><title>Exposing Hezbollah’s tunnels triggers debate in the Arab world - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/article-896821</link></item>
+<item><title>When humanity meets the sea: Surfing as a source of solace from trauma - The Jerusalem Post</title><link>https://www.jpost.com/health-and-wellness/mind-and-spirit/article-896570</link></item>
+<item><title>Adalah claims flotilla activists abused by authorities - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-896916</link></item>
+<item><title>UK terror survivors warn charities are platforming extremism - The Jerusalem Post</title><link>https://www.jpost.com/international/islamic-terrorism/article-896672</link></item>
+<item><title>Soccer star Bibars Natcho retires after historic career - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/sports/article-896915</link></item>
+<item><title>Two killed, several injured in Highway 7 collision - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-896914</link></item>
+<item><title>Israeli basketball player Raz Adam, 26, dies in car crash - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-896911</link></item>
+<item><title>US removes UN Palestinian rights expert from sanctions list - The Jerusalem Post</title><link>https://www.jpost.com/international/article-896912</link></item>
+<item><title>Sinkhole shuts down runway at New York LaGuardia airport - The Jerusalem Post</title><link>https://www.jpost.com/international/article-896910</link></item>
+<item><title>Nova Tribe launches padel program for survivors - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/sports/article-896907</link></item>
+<item><title>Hapoel Beersheba captures Israeli soccer championsh - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/sports/article-896902</link></item>
+<item><title>Czech FM vows to stand with Israel against EU sanctions - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-896860</link></item>
+<item><title>Election period raises scrutiny of Israeli diplomatic posts - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-896894</link></item>
+<item><title>High Court gives Gaza NGOs 30 days to register employees - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-896889</link></item>
+<item><title>US, Iran making progress in talks - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/article-896886</link></item>
+<item><title>Iranians suffering from isolation under regime internet ban - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/iran-news/article-896882</link></item>
+<item><title>Justices faulted for Shabbat wartime protest decisions - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-896881</link></item>
+<item><title>Chia seeds – the truth behind the nutritional bomb - The Jerusalem Post</title><link>https://www.jpost.com/health-and-wellness/nutrition/article-896323</link></item>
+<item><title>Bennett slams Netanyahu over IDF manpower crisis - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-896879</link></item>
+<item><title>Court sets new precedent on Israeli journalistic privilege - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-896877</link></item>
+<item><title>Several soldiers wounded by explosive drones during operations in southern Lebanon - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/defense-news/article-896855</link></item>
+<item><title>&amp;#39;He stabbed me and shouted Allahu akbar&amp;#39;: Rabbi stabbed in Ramat Gan attack recounts ordeal - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/crime-in-israel/article-896840</link></item>
+<item><title>Sid Rosenberg speaks to &amp;#39;Post&amp;#39; on Trump, New York, and the threat of antisemitism - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/antisemitism/article-896817</link></item>
+<item><title>US Department of Justice announces Antisemitism Advisory Committee - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/antisemitism/article-896874</link></item>
+<item><title>&amp;#39;It&amp;#39;s like the Holocaust&amp;#39;: Golders Green gang-beating victim tells &amp;#39;Post&amp;#39; - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/antisemitism/article-896739</link></item>
+<item><title>US, Iran exchanged &amp;#39;formulas&amp;#39; for Iran&amp;#39;s nuclear program for first time since start of negotiations - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/iran-news/article-896808</link></item>
+<item><title>Barney Frank’s final warning on Israel: cut aid to Netanyahu if he ignores Palestinian suffering - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/article-896900</link></item>
+<item><title>Syria’s Kurds confront defeat after decades of resistance - The Jerusalem Post</title><link>https://www.jpost.com/opinion/article-896698</link></item>
+<item><title>Syria building US relations while serving pivotal regional role - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/article-896828</link></item>
+<item><title>IDF Home Front Command updates application&amp;#39;s alert system for clarity in emergency situations - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/defense-news/article-896715</link></item>
+<item><title>Turning Iran’s conflict data into defensive AI - The Jerusalem Post</title><link>https://www.jpost.com/defense-and-tech/article-896632</link></item>
+<item><title>PM: IDF combating drones for six years, unlimited budget team formed for Hezbollah&amp;#39;s FPV threat - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-896472</link></item>
+<item><title>Trump approval falls to 35% as Iran war, gas prices cause Republican support to slip further - The Jerusalem Post</title><link>https://www.jpost.com/international/article-896781</link></item>
+<item><title>Black Cube doubles office space in Tel Aviv - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/article-896834</link></item>
+<item><title>Project Spire: US said weighing secure AI base in Israel’s Negev to counter China - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-896545</link></item>
+<item><title>Elon Musk vows to appeal after losing bid to hold OpenAI liable for straying from founding mission - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/article-896637</link></item>
+<item><title>Firefighters battle blaze near Beit She’an, northern Israel, as aircraft work to contain flames - The Jerusalem Post</title><link>https://www.jpost.com/environment-and-climate-change/article-896673</link></item>
+<item><title>The saline blueprint: Can saving the Dead Sea reshape Middle East diplomacy? - The Jerusalem Post</title><link>https://www.jpost.com/environment-and-climate-change/article-893817</link></item>
+<item><title>Suspected oil spill seen on satellite images near Iran&amp;#39;s Kharg Island export hub, Iran denies - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/iran-news/article-895580</link></item>
+<item><title>Promising hantavirus vaccine research stalled by funding gap before outbreak - The Jerusalem Post</title><link>https://www.jpost.com/science/article-896749</link></item>
+<item><title>Israel to ban cell phones in middle schools, Education Ministry confirms - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-896474</link></item>
+<item><title>Hantavirus-hit cruise ship due to arrive at Rotterdam port as final destination - The Jerusalem Post</title><link>https://www.jpost.com/international/article-896505</link></item>
+<item><title>War’s hidden toll: Mental health treatment in Israel surges 240% - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-896559</link></item>
+<item><title>Writing to heal: How putting trauma on paper can restore clarity - The Jerusalem Post</title><link>https://www.jpost.com/jerusalem-report/article-895860</link></item>
+<item><title>Government approves dedicated unit to assist new immigrants serving in IDF - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/article-896479</link></item>
+<item><title>Daniela Lachster: Moving from uncertainty in Argentina to a Jewish state of uncertainty - The Jerusalem Post</title><link>https://www.jpost.com/aliyah/article-896038</link></item>
+<item><title>It’s all about timing! 2026 is a rare opportunity window for Tel Aviv real estate - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/real-estate/article-894557</link></item>
+<item><title>Four buildings, one home: A new way to live in north Tel Aviv - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/real-estate/article-885978</link></item>
+<item><title>Luria: A Jerusalem-inspired project with modern boutique design - The Jerusalem Post</title><link>https://www.jpost.com/business-and-innovation/real-estate/article-892859</link></item>
+<item><title>From battlefield to backyard: Inside Israel&amp;#39;s Cando drone revolution - The Jerusalem Post</title><link>https://www.jpost.com/podcast/article-896662</link></item>
+<item><title>Trump pauses Iran strike as Tehran vows talks don’t mean surrender - The Jerusalem Post</title><link>https://www.jpost.com/podcast/jpost-headlines/article-896686</link></item>
+<item><title>Federal funding for Trump&amp;#39;s ballroom in jeopardy after Senate ruling - The Jerusalem Post</title><link>https://www.jpost.com/american-politics/article-896391</link></item>
+<item><title>Trump seeks to establish &amp;#39;Truth and Justice Commission&amp;#39; for victims of government &amp;#39;weaponization&amp;#39; - The Jerusalem Post</title><link>https://www.jpost.com/american-politics/article-896369</link></item>
+<item><title>Betsy Berns Korn reelected Conference of Presidents chair, Matthew Bronfman named chair-elect - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/article-896723</link></item>
+<item><title>Leiter says J Street is &amp;#39;cancer of the Jewish community&amp;#39; over org&amp;#39;s Israel arms stance - The Jerusalem Post</title><link>https://www.jpost.com/diaspora/article-896648</link></item>
+<item><title>Parashat Bamidbar: ‘Machar Chodesh’ - The Jerusalem Post</title><link>https://www.jpost.com/judaism/torah-portion/article-896196</link></item>
+<item><title>Armenian Quarter residents descend from genocide survivors, bishop says ahead of exclusive tours - The Jerusalem Post</title><link>https://www.jpost.com/christianworld/article-895317</link></item>
+<item><title>Reim Bistro: Friends for a Kosher dinner - The Jerusalem Post</title><link>https://www.jpost.com/food-recipes/article-896149</link></item>
+<item><title>In the kitchen with Henny: Cheesy does it - The Jerusalem Post</title><link>https://www.jpost.com/food-recipes/article-896145</link></item>
+<item><title>Pompeii victim revealed to be a doctor fleeing Vesuvius’ eruption over 60 years after discovery - The Jerusalem Post</title><link>https://www.jpost.com/archaeology/article-896694</link></item>
+<item><title>Over 30 mummified cats, ancient Egyptian tombs, coffins discovered at Luxor necropolis site - The Jerusalem Post</title><link>https://www.jpost.com/archaeology/article-896697</link></item>
+<item><title>Asteroid to fly within 176 Bulgarias of Earth on Monday, May 18 - NASA - The Jerusalem Post</title><link>https://www.jpost.com/science/space/article-896440</link></item>
+<item><title>Study warns elevator safety standards in the UK, EU lag behind rising body weight - The Jerusalem Post</title><link>https://www.jpost.com/science/article-896447</link></item>
+<item><title>Israel&amp;#39;s Noam Bettan wins spot in Eurovision final at first semifinal - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/culture/article-895951</link></item>
+<item><title>Cultural boycott surge: Israeli artists cut off from global stage after October 7 - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/culture/article-895318</link></item>
+<item><title>Switzerland to release sealed files on Nazi doctor Josef Mengele - The Jerusalem Post</title><link>https://www.jpost.com/history/article-896384</link></item>
+<item><title>How well do you know Israel’s capital? Take the Jerusalem Quiz - The Jerusalem Post</title><link>https://www.jpost.com/history/article-896199</link></item>
+<item><title>Moldova broadcaster chief resigns after Eurovision jury vote sparks public backlash - The Jerusalem Post</title><link>https://www.jpost.com/omg/article-896635</link></item>
+<item><title>“Too precise to be accidental&amp;quot;: Tehran researcher claims Great Pyramid was a &amp;#39;cosmic beacon&amp;#39; - The Jerusalem Post</title><link>https://www.jpost.com/omg/article-896538</link></item>
+<item><title>Apple&amp;#39;s new Siri will allow automatic deletion of conversations - The Jerusalem Post</title><link>https://www.jpost.com/consumerism/article-896539</link></item>
+<item><title>After years in Dizengoff Center: The legendary branch changes direction - The Jerusalem Post</title><link>https://www.jpost.com/consumerism/article-896566</link></item>
+<item><title>Israel can no longer afford the privileges of adolescent behavior - The Jerusalem Post</title><link>https://www.jpost.com/israel-news/culture/article-893586</link></item>
+<item><title>Confronting the Iranian regime’s ideological warfare strategy against Israel and the West - The Jerusalem Post</title><link>https://www.jpost.com/middle-east/article-895793</link></item>
+<item><title>Do You Need a Thymectomy? How I Made the Decision - WebMD</title><link>https://blogs.webmd.com/myasthenia-gravis/20260518/do-you-need-a-thymectomy-how-i-made-the-decision</link></item>
+<item><title>Brianna Osofisan - WebMD</title><link>https://blogs.webmd.com/breast-cancer/brianna-osofisan</link></item>
+<item><title>Color-Coding My Cancer: A Libra’s Guide to Navigating Breast Cancer - WebMD</title><link>https://blogs.webmd.com/breast-cancer/20260518/color-coding-my-cancer-a-libras-guide-to-navigating-breast-cancer</link></item>
+<item><title>Getting Buy-In for Your Next Big Idea - Harvard Business Review</title><link>https://hbr.org/podcast/2026/05/getting-buy-in-for-your-next-big-idea</link></item>
+<item><title>Surprising Ways to Reduce Turnover in High-Pressure, High-Skill Jobs - Harvard Business Review</title><link>https://hbr.org/2026/05/surprising-ways-to-reduce-turnover-in-high-pressure-high-skill-jobs</link></item>
+<item><title>“Listen for the Silence”: Insights from a Long-Serving CEO - Harvard Business Review</title><link>https://hbr.org/2026/05/listen-for-the-silence-insights-from-a-long-serving-ceo</link></item>
+<item><title>Supporting Your Employees’ Career Growth When Everyone Is Overwhelmed - Harvard Business Review</title><link>https://hbr.org/2026/05/supporting-your-employees-career-growth-when-everyone-is-overwhelmed</link></item>
+<item><title>What Really Gets in the Way of Change - Harvard Business Review</title><link>https://hbr.org/2026/05/what-really-gets-in-the-way-of-change</link></item>
+<item><title>How Stronger Privacy Laws Convinced Consumers to Share More Data - Harvard Business Review</title><link>https://hbr.org/2026/05/how-stronger-privacy-laws-convinced-consumers-to-share-more-data</link></item>
+<item><title>How to Break Free of Negative Thought Spirals - Harvard Business Review</title><link>https://hbr.org/podcast/2026/05/how-to-break-free-of-negative-thought-spirals</link></item>
+<item><title>A Breakthrough Board Presentation Can Win You the CEO Job - Harvard Business Review</title><link>https://hbr.org/2026/05/a-breakthrough-board-presentation-can-win-you-the-ceo-job</link></item>
+<item><title>The Keys to Succeeding Under a New Manager - Harvard Business Review</title><link>https://hbr.org/2026/05/the-keys-to-succeeding-under-a-new-manager</link></item>
+<item><title>Do You Recognize Burnout in Your Organization? - Harvard Business Review</title><link>https://hbr.org/2026/05/do-you-recognize-burnout-in-your-organization</link></item>
+<item><title>Should Your Subscription Business Use Auto-Renew? - Harvard Business Review</title><link>https://hbr.org/2026/05/should-your-subscription-business-use-auto-renew</link></item>
+<item><title>Gen AI Could Fix Performance Reviews—or Make Them Even Worse - Harvard Business Review</title><link>https://hbr.org/2026/05/gen-ai-could-fix-performance-reviews-or-make-them-even-worse</link></item>
+<item><title>What Operating Rooms Can Teach Leaders About Team Design - Harvard Business Review</title><link>https://hbr.org/2026/05/what-operating-rooms-can-teach-leaders-about-team-design</link></item>
+<item><title>What Global Companies Lose When Decision-Making Revolves Around Headquarters - Harvard Business Review</title><link>https://hbr.org/2026/05/what-global-companies-lose-when-decision-making-revolves-around-headquarters</link></item>
+<item><title>Redefining What Efficiency Means in the Age of AI - Harvard Business Review</title><link>https://hbr.org/podcast/2026/05/redefining-what-efficiency-means-in-the-age-of-ai</link></item>
+<item><title>It’s Hard to Use AI as a Team. These 3 Practices Can Help. - Harvard Business Review</title><link>https://hbr.org/2026/05/its-hard-to-use-ai-as-a-team-these-3-practices-can-help</link></item>
+<item><title>Are You Meeting the Needs of the People You Lead? - Harvard Business Review</title><link>https://hbr.org/2026/05/are-you-meeting-the-needs-of-the-people-you-lead</link></item>
+<item><title>Beware the Agentic Convergence Trap - Harvard Business Review</title><link>https://hbr.org/2026/05/beware-the-agentic-convergence-trap</link></item>
+<item><title>The Leadership Skills That Make Transformation Stick - Harvard Business Review</title><link>https://hbr.org/podcast/2026/05/the-leadership-skills-that-make-transformation-stick</link></item>
+<item><title>Should You Treat AI Like a Teammate? - Harvard Business Review</title><link>https://hbr.org/2026/05/should-you-treat-ai-like-a-teammate</link></item>
+<item><title>Microsoft’s Path to Adopting and Scaling AI Across its Sales Organization - Harvard Business Review</title><link>https://hbr.org/podcast/2026/05/microsofts-path-to-adopting-and-scaling-ai-across-its-sales-organization</link></item>
+<item><title>Research: Traditional Marketing Doesn’t Work on AI Shopping Agents - Harvard Business Review</title><link>https://hbr.org/2026/05/research-traditional-marketing-doesnt-work-on-ai-shopping-agents</link></item>
+<item><title>Why Leaders Should Let Minor Mistakes Slide - Harvard Business Review</title><link>https://hbr.org/2026/05/why-leaders-should-let-minor-mistakes-slide</link></item>
+<item><title>What Are Your Company’s AI Nightmares? - Harvard Business Review</title><link>https://hbr.org/2026/05/what-are-your-companys-ai-nightmares</link></item>
+<item><title>“Cyber Defense Has to Move at the Speed of AI” - Harvard Business Review</title><link>https://hbr.org/2026/05/cyber-defense-has-to-move-at-the-speed-of-ai</link></item>
 </channel></rss>
