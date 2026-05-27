@@ -8,281 +8,203 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Tue, 26 May 2026 10:12:01 +0800</lastBuildDate>
-<item><title>“There is none else beside him” - Larry Sanger Blog</title><link>https://larrysanger.org/2026/05/there-is-none-else-beside-him/</link></item>
-<item><title>A Designer Turned This Cape Cod Family Home Into a Pattern-Filled Dream - domino</title><link>https://www.domino.com/design-inspiration/cape-cod-house-and-cottage-genevieve-lavelle/</link></item>
-<item><title>Jessica Burke - domino</title><link>https://www.domino.com/authors/jessica-burke/</link></item>
-<item><title>Storage Ideas - domino</title><link>https://www.domino.com/category/storage-ideas/</link></item>
-<item><title>Michael P.H. Clifford - domino</title><link>https://www.domino.com/authors/michael-p-h-clifford-2/</link></item>
-<item><title>Declining birth rates globally - FlowingData</title><link>https://flowingdata.com/2026/05/25/declining-birth-rates-globally/</link></item>
-<item><title>This is my island - Aeon</title><link>https://aeon.co/videos/tour-an-island-community-built-from-scratch-in-this-film-from-1972</link></item>
-<item><title>Can ecosystems malfunction? - Aeon</title><link>https://aeon.co/essays/why-we-need-to-think-again-about-ecosystem-failure</link></item>
-<item><title>Hautlence Retrovision 64 Watch - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/hautlence-retrovision-64-watch/</link></item>
-<item><title>Rethinking Vinyl, CD, and Cassette Players - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/industrial-design/rethinking-vinyl-cd-and-cassette-players/</link></item>
-<item><title>SenseRobot Chess Mini Robot - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/industrial-design/senserobot-chess-mini-robot/</link></item>
-<item><title>Longines Legend Diver 59 Watch - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/longines-legend-diver-59-watch/</link></item>
-<item><title>From Apollo 8 to Artemis II – 58 Years in Plastic Brick - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/industrial-design/from-apollo-8-to-artemis-ii-58-years-in-plastic-brick/</link></item>
-<item><title>The Wulf 3000 Is Chelsea Truck Company’s Most Unexpected Build Yet - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/the-wulf-3000-is-chelsea-truck-companys-most-unexpected-build-yet/</link></item>
-<item><title>Portugal’s First Supercar Is Real, and It’s Running - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/portugals-first-supercar-is-real-and-its-running/</link></item>
-<item><title>Patek Philippe Celestial 6105G: Five Years, Six Patents, One Radical Watch - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/patek-philippe-celestial-6105g-five-years-six-patents-one-radical-watch/</link></item>
-<item><title>Morgan’s Fastest Roadster Yet Keeps its Vintage Soul Intact - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/morgans-fastest-roadster-yet-keeps-its-vintage-soul-intact/</link></item>
-<item><title>Volocopter VoloXPro - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/volocopter-voloxpro/</link></item>
-<item><title>Rolls-Royce Cullinan Yachting - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/rolls-royce-cullinan-yachting/</link></item>
-<item><title>How to Make a Scatter Plot in Python With plt.scatter() - Real Python</title><link>https://realpython.com/visualizing-python-plt-scatter/</link></item>
-<item><title>Quiz: How to Make a Scatter Plot in Python With plt.scatter() - Real Python</title><link>https://realpython.com/quizzes/visualizing-python-plt-scatter/</link></item>
-<item><title>The Real Python Podcast – Episode #296: Managing Polars Schema Issues &amp; Profiling GitHub Users - Real Python</title><link>https://realpython.com/podcasts/rpp/296/</link></item>
-<item><title>Quiz: Build a Tic-Tac-Toe Game With Python and Tkinter - Real Python</title><link>https://realpython.com/quizzes/tic-tac-toe-python/</link></item>
-<item><title>Quiz: Context Managers and Using Python&amp;#39;s with Statement - Real Python</title><link>https://realpython.com/quizzes/with-statement-python/</link></item>
-<item><title>How to Use the Claude API in Python - Real Python</title><link>https://realpython.com/claude-api-python/</link></item>
-<item><title>Quiz: How to Use the Claude API in Python - Real Python</title><link>https://realpython.com/quizzes/claude-api-python/</link></item>
-<item><title>Tapping Into the Zen of Python - Real Python</title><link>https://realpython.com/courses/tapping-into-the-zen-of-python/</link></item>
-<item><title>Quiz: Tapping Into the Zen of Python - Real Python</title><link>https://realpython.com/quizzes/tapping-into-the-zen-of-python/</link></item>
-<item><title>Quiz: Absolute vs Relative Imports in Python - Real Python</title><link>https://realpython.com/quizzes/absolute-vs-relative-python-imports/</link></item>
-<item><title>Python Built-in Functions: A Complete Guide - Real Python</title><link>https://realpython.com/python-built-in-functions/</link></item>
-<item><title>The Real Python Podcast – Episode #295: Agentic Architecture: Why Files Aren&amp;#39;t Always Enough - Real Python</title><link>https://realpython.com/podcasts/rpp/295/</link></item>
-<item><title>Quiz: Python&amp;#39;s Array: Working With Numeric Data Efficiently - Real Python</title><link>https://realpython.com/quizzes/python-array/</link></item>
-<item><title>Quiz: Cursor vs Windsurf: Which AI Code Editor Is Best for Python? - Real Python</title><link>https://realpython.com/quizzes/cursor-vs-windsurf-python/</link></item>
-<item><title>Quiz: Python Metaclasses - Real Python</title><link>https://realpython.com/quizzes/python-metaclasses/</link></item>
-<item><title>How to Use OpenCode for AI-Assisted Python Coding - Real Python</title><link>https://realpython.com/opencode-guide/</link></item>
-<item><title>Building Type-Safe LLM Agents With Pydantic AI - Real Python</title><link>https://realpython.com/courses/building-type-safe-llm-agents-with-pydantic-ai/</link></item>
-<item><title>Quiz: Building Type-Safe LLM Agents With Pydantic AI - Real Python</title><link>https://realpython.com/quizzes/pydantic-ai-video/</link></item>
-<item><title>Living Memories Engrained in Bronze - Law &amp; Liberty</title><link>https://lawliberty.org/living-memories-engrained-in-bronze/</link></item>
-<item><title>The Invincible Spirit of Edmonia Lewis - Hyperallergic</title><link>https://hyperallergic.com/the-invincible-spirit-of-edmonia-lewis/</link></item>
-<item><title>For Ceija Stojka, Memory Is Survival - Hyperallergic</title><link>https://hyperallergic.com/for-ceija-stojka-memory-is-survival/</link></item>
-<item><title>How Betye Saar Set Black Dolls Free - Hyperallergic</title><link>https://hyperallergic.com/how-betye-saar-set-black-dolls-free/</link></item>
-<item><title>Brent Sikkema’s Husband Convicted - Hyperallergic</title><link>https://hyperallergic.com/daily-newsletter-5-25-25/</link></item>
-<item><title>Performance Cuts Through the Noise at the Venice Biennale - Hyperallergic</title><link>https://hyperallergic.com/performance-cuts-through-the-noise-at-the-venice-biennale/</link></item>
-<item><title>Gabrielle Goliath, Richard Avedon, “Chicken Linda” - Hyperallergic</title><link>https://hyperallergic.com/gabrielle-goliath-richard-avedon-chicken-linda/</link></item>
-<item><title>Husband Found Guilty of Scheming Murder of Art Dealer Brent Sikkema - Hyperallergic</title><link>https://hyperallergic.com/husband-found-guilty-of-scheming-murder-of-art-dealer-brent-sikkema/</link></item>
-<item><title>An Artist’s MFA Show Confronts Columbia University Over Gaza - Hyperallergic</title><link>https://hyperallergic.com/an-artists-mfa-show-confronts-columbia-university-over-gaza/</link></item>
-<item><title>Human Connection Cuts Through Technology at Focus Art Fair - Hyperallergic</title><link>https://hyperallergic.com/human-connection-cuts-through-technology-at-focus-art-fair/</link></item>
-<item><title>Workers Push to Rename Wexner Center for the Arts Over Epstein Ties - Hyperallergic</title><link>https://hyperallergic.com/workers-push-to-rename-wexner-center-for-the-arts-over-epstein-ties/</link></item>
-<item><title>Karla Knight’s Cosmic Conspiracies - Hyperallergic</title><link>https://hyperallergic.com/karla-knights-cosmic-conspiracies/</link></item>
-<item><title>Anni Albers Wasn’t Afraid to Start From Zero - Hyperallergic</title><link>https://hyperallergic.com/anni-albers-wasnt-afraid-to-start-from-zero/</link></item>
-<item><title>Why I Removed Cesar Chavez From My Show - Hyperallergic</title><link>https://hyperallergic.com/why-i-removed-cesar-chavez-from-my-show/</link></item>
-<item><title>Art Movements: Larry Gagosian Heads to the Big Screen - Hyperallergic</title><link>https://hyperallergic.com/art-movements-larry-gagosian-heads-to-the-big-screen/</link></item>
-<item><title>气候变化威胁全球植物物种 - Solidot</title><link>https://www.solidot.org/story?sid=84388</link></item>
-<item><title>日本声优起诉要求 TikTok 删除 AI 模仿其声音的视频 - Solidot</title><link>https://www.solidot.org/story?sid=84389</link></item>
-<item><title>科学家破解烟草合成尼古丁之谜 - Solidot</title><link>https://www.solidot.org/story?sid=84390</link></item>
-<item><title>政治情绪和普通情绪不同 - Solidot</title><link>https://www.solidot.org/story?sid=84391</link></item>
-<item><title>科学家推翻空气动力学的基础原则 - Solidot</title><link>https://www.solidot.org/story?sid=84392</link></item>
-<item><title>俄罗斯推迟对移动 VPN 用户收费的计划 - Solidot</title><link>https://www.solidot.org/story?sid=84394</link></item>
-<item><title>惠普调查 BIOS 更新导致笔记本故障问题 - Solidot</title><link>https://www.solidot.org/story?sid=84395</link></item>
-<item><title>HBM 成本占到了 AI 芯片组件成本的三分之二 - Solidot</title><link>https://www.solidot.org/story?sid=84396</link></item>
-<item><title>欧洲执法部门黑进 VPN 服务识别勒索组织用户 - Solidot</title><link>https://www.solidot.org/story?sid=84397</link></item>
-<item><title>Firefox 加入对 Web Serial API 的支持，与 Adafruit 合作 - Solidot</title><link>https://www.solidot.org/story?sid=84387</link></item>
-<item><title>四月全球风能太阳能发电量超过天然气发电量 - Solidot</title><link>https://www.solidot.org/story?sid=84386</link></item>
-<item><title>《星际公民(Star Citizen)》筹款突破十亿美元 - Solidot</title><link>https://www.solidot.org/story?sid=84385</link></item>
-<item><title>研究建议为保护心血管健康每周运动 10 小时 - Solidot</title><link>https://www.solidot.org/story?sid=84383</link></item>
-<item><title>Italian Police Target “Previously Unseen” Streaming Piracy Tech That Looks Familiar - TorrentFreak</title><link>https://torrentfreak.com/italian-police-target-previously-unseen-streaming-piracy-tech-that-looks-familiar/</link></item>
-<item><title>Linus Torvalds is Unhappy About the Continued AI Influence in Linux Kernel Development - OSTechNix</title><link>https://ostechnix.com/linus-torvalds-ai-influence-linux-kernel-development/</link></item>
-<item><title>Linux Kernel 7.1 RC5 Released: AI Code Reviews Bloat Patch Size - OSTechNix</title><link>https://ostechnix.com/linux-kernel-7-1-rc5-released/</link></item>
-<item><title>Google is Replacing Gemini CLI with Its New Antigravity Platform - OSTechNix</title><link>https://ostechnix.com/google-is-replacing-gemini-cli-with-google-antigravity/</link></item>
-<item><title>Rocky Linux Launched an Emergency, Opt-in Security Repository to Fix Critical Vulnerabilities - OSTechNix</title><link>https://ostechnix.com/rocky-linux-security-repository-emergency-fixes/</link></item>
-<item><title>Linus Torvalds Just Patched a 6-Year Old Major Linux “File Descriptor Theft” Vulnerability - OSTechNix</title><link>https://ostechnix.com/linux-kernel-ptrace-fd-theft-vulnerability-fix/</link></item>
-<item><title>Mashaba: ActionSA “would celebrate” Jacinta Ngobese-Zuma as eThekwini mayoral candidate - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2026-05-25-mashaba-actionsa-would-celebrate-jacinta-ngobese-zuma-as-ethekwini-mayoral-candidate/</link></item>
-<item><title>Malawi first lady’s charity faces transparency questions after multimillion-rand donations - The Mail &amp; Guardian</title><link>https://mg.co.za/africa/2026-05-25-malawi-first-ladys-charity-faces-transparency-questions-after-multimillion-rand-donations/</link></item>
-<item><title>Africa must rise, for good - The Mail &amp; Guardian</title><link>https://mg.co.za/editorial/2026-05-22-africa-must-rise-for-good/</link></item>
-<item><title>Misinformation is coming for the anti-HIV jab. Let’s get ahead of it - The Mail &amp; Guardian</title><link>https://mg.co.za/health/2026-05-25-misinformation-is-coming-for-the-anti-hiv-jab-lets-get-ahead-of-it/</link></item>
-<item><title>Brendan Maughan-Brown - The Mail &amp; Guardian</title><link>https://mg.co.za/author/brendan-maughan-brown/</link></item>
-<item><title>Africa Day, and the Measure of a Continent - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2026-05-25-africa-day-and-the-measure-of-a-continent/</link></item>
-<item><title>Anthony Ohemeng-Boamah - The Mail &amp; Guardian</title><link>https://mg.co.za/author/anthony-ohemeng-boamah/</link></item>
-<item><title>Africa at the forefront: The urgent need to diversify energy supply - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2026-05-25-africa-at-the-forefront-the-urgent-need-to-diversify-energy-supply/</link></item>
-<item><title>The architecture of protection: Moving from technical fixes to systemic whistleblower reform - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2026-05-25-the-architecture-of-protection-moving-from-technical-fixes-to-systemic-whistleblower-reform/</link></item>
-<item><title>UAE ramps up African infrastructure investment as Gulf states compete for trade influence - The Mail &amp; Guardian</title><link>https://mg.co.za/thought-leader/opinion/2026-05-25-uae-ramps-up-african-infrastructure-investment-as-gulf-states-compete-for-trade-influence/</link></item>
-<item><title>Grey is winning winter again and New Balance knows it - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2026-05-22-grey-is-winning-winter-again-and-new-balance-knows-it/</link></item>
-<item><title>There will not be another Maria McCloy - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2026-05-22-there-will-not-be-another-maria-mccloy/</link></item>
-<item><title>Maria McCloy made Johannesburg feel possible - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2026-05-22-maria-mccloy-made-johannesburg-feel-possible/</link></item>
-<item><title>Kingsmead Book Fair returns with conversations SA needs right now - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2026-05-22-kingsmead-book-fair-returns-with-conversations-sa-needs-right-now/</link></item>
-<item><title>Bongeziwe Mabandla is ready to be fully present - The Mail &amp; Guardian</title><link>https://mg.co.za/friday/2026-05-22-bongeziwe-mabandla-is-ready-to-be-fully-present/</link></item>
-<item><title>Whale strike risk rises as shipping surges off SA coast - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2026-05-23-whale-strike-risk-rises-as-shipping-surges-off-sa-coast/</link></item>
-<item><title>A century of Kruger - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2026-05-22-a-century-of-kruger/</link></item>
-<item><title>Marion Island team to be evacuated after polar diesel shortage delays SA Agulhas II voyage - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2026-05-15-marion-island-team-to-be-evacuated-after-polar-diesel-shortage-delays-sa-agulhas-ii-voyage/</link></item>
-<item><title>Agriculture minister bans toxic pesticide tied to Soweto child deaths - The Mail &amp; Guardian</title><link>https://mg.co.za/the-green-guardian/2026-05-15-agriculture-minister-bans-toxic-pesticide-tied-to-soweto-child-deaths/</link></item>
-<item><title>Why we need to re-evaluate STEM education - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2026-05-25-why-we-need-to-re-evaluate-stem-education/</link></item>
-<item><title>Congratulations Dr Rassie on receiving the Order of Ikhamanga in Gold - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2026-05-19-congratulations-dr-rassie-on-receiving-the-order-of-ikhamanga-in-gold/</link></item>
-<item><title>Floods expose shortcomings in North West disaster response systems - The Mail &amp; Guardian</title><link>https://mg.co.za/press-releases/2026-05-14-floods-expose-shortcomings-in-north-west-disaster-response-systems/</link></item>
-<item><title>Setsoto Municipality - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/senior-accountant/</link></item>
-<item><title>Call for Supplier Database Registration - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/call-for-supplier-database-registration/</link></item>
-<item><title>Associate Professor/Professor - The Mail &amp; Guardian</title><link>https://careers.mg.co.za/listing/associate-professor-professor-2/</link></item>
-<item><title>Malawi’s industrial dream built backwards - The Mail &amp; Guardian</title><link>https://mg.co.za/africa/2026-05-25-malawis-industrial-dream-built-backwards/</link></item>
-<item><title>Defunct Malawian Bank seeks $552m compensation - The Mail &amp; Guardian</title><link>https://mg.co.za/africa/2026-05-19-defunct-malawian-bank-seeks-552m-compensation/</link></item>
-<item><title>Inside the R1.1bn SA Steel Mills deal now under scrutiny - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2026-05-08-inside-the-r1-1bn-sa-steel-mills-deal-now-under-scrutiny/</link></item>
-<item><title>Public Protector vs IDC Human Capital - The Mail &amp; Guardian</title><link>https://mg.co.za/business/2026-05-08-public-protector-vs-idc-human-capital/</link></item>
-<item><title>eThekwini corruption scrutiny could hurt ANC in November elections, analysts warn - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2026-05-25-ethekwini-corruption-scrutiny-could-hurt-anc-in-november-elections-analysts-warn/</link></item>
-<item><title>DA asks Public Protector to probe eThekwini ‘R2 500 bag of samp’ scandal - The Mail &amp; Guardian</title><link>https://mg.co.za/politics/2026-05-22-da-asks-public-protector-to-probe-ethekwini-r2-500-bag-of-samp-scandal/</link></item>
-<item><title>Manamela’s digital bet: Can SA’s higher education system survive the revolution under way? - The Mail &amp; Guardian</title><link>https://mg.co.za/education/2026-05-25-manamelas-digital-bet-can-sas-higher-education-system-survive-the-revolution-under-way/</link></item>
-<item><title>Universities South Africa sounds alarm on rising campus governance risks - The Mail &amp; Guardian</title><link>https://mg.co.za/education/2026-05-11-universities-south-africa-sounds-alarm-on-rising-campus-governance-risks/</link></item>
-<item><title>NSFAS placed under administration amid governance and audit collapse - The Mail &amp; Guardian</title><link>https://mg.co.za/education/2026-05-04-nsfas-placed-under-administration-amid-governance-and-audit-collapse/</link></item>
-<item><title>High-goal drama and vibrant fashion collide at the 2026 Nedbank International Polo - The Mail &amp; Guardian</title><link>https://mg.co.za/sport/2026-05-19-high-goal-drama-and-vibrant-fashion-collide-at-the-2026-nedbank-international-polo/</link></item>
-<item><title>SA padel gets a global upgrade: Premier Padel P2 launched - The Mail &amp; Guardian</title><link>https://mg.co.za/sport/2026-05-05-sa-padel-gets-a-global-upgrade-premier-padel-p2-launched/</link></item>
-<item><title>UAE fast-tracks oil pipeline to bypass Strait of Hormuz - The Mail &amp; Guardian</title><link>https://mg.co.za/world/2026-05-18-uae-fast-tracks-oil-pipeline-to-bypass-strait-of-hormuz/</link></item>
-<item><title>Iran is winning the social media war - The Mail &amp; Guardian</title><link>https://mg.co.za/world/2026-04-10-iran-is-winning-the-social-media-war/</link></item>
-<item><title>Immediate ceasefire declared as US and Iran head to Islamabad talks - The Mail &amp; Guardian</title><link>https://mg.co.za/news/2026-04-08-immediate-ceasefire-declared-as-us-and-iran-head-to-islamabad-talks/</link></item>
-<item><title>Google Health - Google Blog</title><link>https://blog.google/products-and-platforms/products/google-health/</link></item>
-<item><title>SpaceX Launches 29 Starlink Satellites on Memorial Day - Slashdot</title><link>https://science.slashdot.org/story/26/05/25/177229/spacex-launches-29-starlink-satellites-on-memorial-day</link></item>
-<item><title>Will Big Tech Layoffs Bring a Culture Shift to Anxiety and Job Insecurity? - Slashdot</title><link>https://it.slashdot.org/story/26/05/25/0042201/will-big-tech-layoffs-bring-a-culture-shift-to-anxiety-and-job-insecurity</link></item>
-<item><title>It&amp;#39;s Like the Olympics - But Steroids Are Allowed - Slashdot</title><link>https://science.slashdot.org/story/26/05/25/023251/its-like-the-olympics---but-steroids-are-allowed</link></item>
-<item><title>California Executive Order Directs Businesses and State Agencies to Prepare for AI-Driven Workforce Disruption - Slashdot</title><link>https://yro.slashdot.org/story/26/05/25/0128243/california-executive-order-directs-businesses-and-state-agencies-to-prepare-for-ai-driven-workforce-disruption</link></item>
-<item><title>AI &amp;#39;Crashes the Party&amp;#39; at This Year&amp;#39;s Cannes Film Festival - Including Multi-Year Meta Partnership - Slashdot</title><link>https://entertainment.slashdot.org/story/26/05/24/173224/ai-crashes-the-party-at-this-years-cannes-film-festival---including-multi-year-meta-partnership</link></item>
-<item><title>SPACEXAI HUGE Build Speed Advantage - Slashdot</title><link>https://slashdot.org/submission/17347558/spacexai-huge-build-speed-advantage</link></item>
-<item><title>Amazon Rufus AI bot replaced with Alexa for Shopping - Slashdot</title><link>https://slashdot.org/submission/17347554/amazon-rufus-ai-bot-replaced-with-alexa-for-shopping</link></item>
-<item><title>Big Tech could make nearly $1 million from your data and you get nothing - Slashdot</title><link>https://slashdot.org/submission/17347544/big-tech-could-make-nearly-1-million-from-your-data-and-you-get-nothing</link></item>
-<item><title>NASA practically eliminates any Starliner flights before ISS retires - Slashdot</title><link>https://slashdot.org/submission/17347542/nasa-practically-eliminates-any-starliner-flights-before-iss-retires</link></item>
-<item><title>The Virtual OS Museum - Slashdot</title><link>https://slashdot.org/submission/17347526/the-virtual-os-museum</link></item>
-<item><title>Citing Gandalf, Pope Leo says we must &amp;quot;disarm&amp;quot; AI - Ars Technica</title><link>https://arstechnica.com/tech-policy/2026/05/citing-gandalf-pope-leo-says-we-must-disarm-ai/</link></item>
-<item><title>US&amp;#39;s big bet on quantum computing may not be entirely legal - Ars Technica</title><link>https://arstechnica.com/tech-policy/2026/05/uss-big-bet-on-quantum-computing-may-not-be-entirely-legal/</link></item>
-<item><title>I spent years forcing myself to finish The Witcher 3—don&amp;#39;t repeat my mistake - Ars Technica</title><link>https://arstechnica.com/gaming/2026/05/the-witcher-3-is-a-good-game-but-that-doesnt-mean-you-have-to-like-it/</link></item>
-<item><title>Trump FCC asks public to comment on whether ABC&amp;#39;s The View is a news show - Ars Technica</title><link>https://arstechnica.com/tech-policy/2026/05/trump-fcc-asks-public-to-comment-on-whether-abcs-the-view-is-a-news-show/</link></item>
-<item><title>The Boys is dead. Long live Vought Rising. - Ars Technica</title><link>https://arstechnica.com/culture/2026/05/the-boys-is-dead-long-live-vought-rising/</link></item>
-<item><title>Review: The Mandalorian and Grogu is ... fine - Ars Technica</title><link>https://arstechnica.com/culture/2026/05/review-the-mandalorian-and-grogu-is-average-star-wars-no-more-no-less/</link></item>
-<item><title>In 2023 a single corrupted bit of code sent Voyager 1 into months of unintelligible static, and a team of engineers — many of them retired, called back specifically because no one else understood the system — managed to locate the fault and revive a spacecraft 24 billion kilometres away - Make Tech Easier</title><link>https://maketecheasier.com/in-2023-a-single-corrupted-bit-of-code-sent-voyager-1-into-months-of-unintelligible-static-and-a-team-of-engineers-many-of-them-retired-called-back-specifically-because-no-one-else-underst/</link></item>
-<item><title>The first computer bug was a literal moth, pulled out of a relay in a Harvard computer in 1947 and taped into the logbook with the note “first actual case of bug being found” — and the logbook is still preserved at the Smithsonian - Make Tech Easier</title><link>https://maketecheasier.com/the-first-computer-bug-was-a-literal-moth-pulled-out-of-a-relay-in-a-harvard-computer-in-1947-and-taped-into-the-logbook-with-the-note-first-actual-case-of-bug-being-found-and-the-logbo/</link></item>
-<item><title>Apple has quietly become the largest watchmaker in the world by unit sales, shipping more than twice as many watches as the entire Swiss industry combined — but the Swiss industry, which dismissed the Apple Watch in 2015, has discovered something more interesting: they’ve held onto the high end, and Rolex alone is now closing in on Apple Watch by revenue - Make Tech Easier</title><link>https://maketecheasier.com/apple-has-quietly-become-the-largest-watchmaker-in-the-world-by-unit-sales-shipping-more-than-twice-as-many-watches-as-the-entire-swiss-industry-combined-but-the-swiss-industry-which-dismi/</link></item>
-<item><title>Every ‘free’ app on your phone is, on average, sending data about you to between 5 and 10 different companies you have never heard of, and the legal disclosures that authorize this are buried in privacy policies that, for the worst offenders, run longer than entire novellas — Meta’s runs over 19,000 words, and some telecom policies exceed 100,000 - Make Tech Easier</title><link>https://maketecheasier.com/every-free-app-on-your-phone-is-on-average-sending-data-about-you-to-between-5-and-10-different-companies-you-have-never-heard-of-and-the-legal-disclosures-that-authorize-this-are-buried-in-pri/</link></item>
-<item><title>Make Tech Easier Editorial Team - Make Tech Easier</title><link>https://maketecheasier.com/author/mte_editorial_team/</link></item>
-<item><title>程美东：红军长征前的一场生死决战 - 爱思想</title><link>https://www.aisixiang.com/data/176164.html</link></item>
-<item><title>何羽茜 李包庚：毛泽东与长征革命 - 爱思想</title><link>https://www.aisixiang.com/data/176262.html</link></item>
-<item><title>王笛：人人都是历史学家——我的学 - 爱思想</title><link>https://www.aisixiang.com/data/176210.html</link></item>
-<item><title>陈云良：民营企业账款支付保障的行 - 爱思想</title><link>https://www.aisixiang.com/data/176266.html</link></item>
-<item><title>张文显：中国法学自主知识体系的建 - 爱思想</title><link>https://www.aisixiang.com/data/176226.html</link></item>
-<item><title>李振宏：历史学家也是历史的创造者 - 爱思想</title><link>https://www.aisixiang.com/data/176373.html</link></item>
-<item><title>王博：作为秩序哲学的中国哲学 - 爱思想</title><link>https://www.aisixiang.com/data/176202.html</link></item>
-<item><title>龚鹏程：傅一清二十四象 - 爱思想</title><link>https://www.aisixiang.com/data/176220.html</link></item>
-<item><title>王颂：一本二分三元：中国佛教哲学 - 爱思想</title><link>https://www.aisixiang.com/data/176165.html</link></item>
-<item><title>欧阳康：哲学自主知识体系视域中的 - 爱思想</title><link>https://www.aisixiang.com/data/176209.html</link></item>
-<item><title>姚洋：中国房地产止跌回稳，居民信 - 爱思想</title><link>https://www.aisixiang.com/data/176310.html</link></item>
-<item><title>杨银付：建设教育强国的科学指引 - 爱思想</title><link>https://www.aisixiang.com/data/176172.html</link></item>
-<item><title>焦艳鹏：《生态环境法典》适用中如 - 爱思想</title><link>https://www.aisixiang.com/data/176313.html</link></item>
-<item><title>孙新 孙超：延安时期中国共产党对 - 爱思想</title><link>https://www.aisixiang.com/data/176219.html</link></item>
-<item><title>韩庆祥：构建中国哲学社会科学自主 - 爱思想</title><link>https://www.aisixiang.com/data/176198.html</link></item>
-<item><title>龚艳：解码美国最高法院孔子像的文 - 爱思想</title><link>https://www.aisixiang.com/data/176411.html</link></item>
-<item><title>黄润秋：绘就美丽中国新画卷 共建 - 爱思想</title><link>https://www.aisixiang.com/data/176345.html</link></item>
-<item><title>韩骁：坚守中华文化主体性 - 爱思想</title><link>https://www.aisixiang.com/data/176344.html</link></item>
-<item><title>共建万物和谐的美丽家园——全球生 - 爱思想</title><link>https://www.aisixiang.com/data/176299.html</link></item>
-<item><title>周建新：推动中华优秀传统文化更好 - 爱思想</title><link>https://www.aisixiang.com/data/176189.html</link></item>
-<item><title>张力：构建高效协同智慧的生态环境 - 爱思想</title><link>https://www.aisixiang.com/data/176122.html</link></item>
-<item><title>朱康有：论文化自信与文化软实力 - 爱思想</title><link>https://www.aisixiang.com/data/176085.html</link></item>
-<item><title>张其成：中医“三易”思维的健康治 - 爱思想</title><link>https://www.aisixiang.com/data/176023.html</link></item>
-<item><title>张云飞：“十五五”时期生态文明建 - 爱思想</title><link>https://www.aisixiang.com/data/175930.html</link></item>
-<item><title>胡大平：构建体现文化主体性的自主 - 爱思想</title><link>https://www.aisixiang.com/data/175824.html</link></item>
-<item><title>中华优秀传统文化是来华在华外国人 - 爱思想</title><link>https://www.aisixiang.com/data/175706.html</link></item>
-<item><title>徐元森：两次转变科研方向，只为国 - 爱思想</title><link>https://www.aisixiang.com/data/176288.html</link></item>
-<item><title>万劲波：科技发展“要有所为有所不 - 爱思想</title><link>https://www.aisixiang.com/data/176257.html</link></item>
-<item><title>钱学森：关于观念和方法问题 - 爱思想</title><link>https://www.aisixiang.com/data/176182.html</link></item>
-<item><title>钱学森：关于科学决策问题 - 爱思想</title><link>https://www.aisixiang.com/data/176181.html</link></item>
-<item><title>钱学森：从实际的巨系统研究中找线 - 爱思想</title><link>https://www.aisixiang.com/data/176180.html</link></item>
-<item><title>汪景琇院士：中国空间探日的新征程 - 爱思想</title><link>https://www.aisixiang.com/data/176147.html</link></item>
-<item><title>刘冬梅：为什么说中国式现代化关键 - 爱思想</title><link>https://www.aisixiang.com/data/176118.html</link></item>
-<item><title>余晓晖：准确把握人工智能发展前沿 - 爱思想</title><link>https://www.aisixiang.com/data/176046.html</link></item>
-<item><title>以更大力度更实举措加强基础研究 - 爱思想</title><link>https://www.aisixiang.com/data/176044.html</link></item>
-<item><title>王元丰：基础研究：中国走向现代化 - 爱思想</title><link>https://www.aisixiang.com/data/175875.html</link></item>
-<item><title>陈耀松：北大力学专业诞生记 - 爱思想</title><link>https://www.aisixiang.com/data/175874.html</link></item>
-<item><title>杨忠：以超常规措施加强关键核心技 - 爱思想</title><link>https://www.aisixiang.com/data/175860.html</link></item>
-<item><title>钱学森：发展地理科学的建议 - 爱思想</title><link>https://www.aisixiang.com/data/175843.html</link></item>
-<item><title>钱学森：我对系统学认识的历程 - 爱思想</title><link>https://www.aisixiang.com/data/175842.html</link></item>
-<item><title>李永杰 付锦林：词元重构AI产业 - 爱思想</title><link>https://www.aisixiang.com/data/175744.html</link></item>
-<item><title>门洪华：国家安全战略议程：一项比较研究 - 爱思想</title><link>https://www.aisixiang.com/data/176444.html</link></item>
-<item><title>杨雪冬：在基层认识国家治理的逻辑 - 爱思想</title><link>https://www.aisixiang.com/data/176424.html</link></item>
-<item><title>周力：中国外交再迎高光时刻——从普京访华看中俄关系大发展 - 爱思想</title><link>https://www.aisixiang.com/data/176414.html</link></item>
-<item><title>刘守英：中国土地制度：一个标识性概念 - 爱思想</title><link>https://www.aisixiang.com/data/176409.html</link></item>
-<item><title>龙登高：人力资本跨国流动及其融资网络 - 爱思想</title><link>https://www.aisixiang.com/data/176404.html</link></item>
-<item><title>王轶：权力逻辑与权利逻辑的原创生成与交融互构——以民法典对生活利益的分配为核心 - 爱思想</title><link>https://www.aisixiang.com/data/176448.html</link></item>
-<item><title>刘长兴：生态环境法典中多元责任的分工与统合 - 爱思想</title><link>https://www.aisixiang.com/data/176418.html</link></item>
-<item><title>石超：“内卷式”竞争的行为逻辑与监管应对 - 爱思想</title><link>https://www.aisixiang.com/data/176412.html</link></item>
-<item><title>刘俊海：论民营公司产权清晰化的挑战与对策 - 爱思想</title><link>https://www.aisixiang.com/data/176408.html</link></item>
-<item><title>钱宁：企业破产中债转股程序构造论 - 爱思想</title><link>https://www.aisixiang.com/data/176406.html</link></item>
-<item><title>叶初升：建设现代化产业体系的发展经济学意义 - 爱思想</title><link>https://www.aisixiang.com/data/176443.html</link></item>
-<item><title>徐鹏杰 李克乐：深刻把握因地制宜发展新质生产力的实践要求 - 爱思想</title><link>https://www.aisixiang.com/data/176442.html</link></item>
-<item><title>张琦：探索县域富民特色产业发展新路 - 爱思想</title><link>https://www.aisixiang.com/data/176422.html</link></item>
-<item><title>于镭：美国开发深海矿产资源的新动向、动因及影响 - 爱思想</title><link>https://www.aisixiang.com/data/176421.html</link></item>
-<item><title>武星 张加华：加强新就业群体党的建设 - 爱思想</title><link>https://www.aisixiang.com/data/176439.html</link></item>
-<item><title>褚国建 金龙君：把数字技术广泛应用于政府管理服务 - 爱思想</title><link>https://www.aisixiang.com/data/176434.html</link></item>
-<item><title>严骏夫：基层政社协同的策略选择与制度后果 - 爱思想</title><link>https://www.aisixiang.com/data/176417.html</link></item>
-<item><title>李梅花 张敏：从边缘到枢纽：新时代东北地区构建周边命运共同体的动力学 - 爱思想</title><link>https://www.aisixiang.com/data/176447.html</link></item>
-<item><title>王庆平：上海合作组织建构研究：路径、挑战与命运共同体建设 - 爱思想</title><link>https://www.aisixiang.com/data/176446.html</link></item>
-<item><title>彭智丰 李志永：安全化与旋转门：美国对华战略竞争共识的形成 - 爱思想</title><link>https://www.aisixiang.com/data/176445.html</link></item>
-<item><title>郭树勇 王韶华：试论人类命运共同体理念的学理化研究起点 - 爱思想</title><link>https://www.aisixiang.com/data/176416.html</link></item>
-<item><title>杨团：以伦理为基，探寻中国公益高质量发展之路 - 爱思想</title><link>https://www.aisixiang.com/data/176420.html</link></item>
-<item><title>杨文炯 桑凡：国家话语与民间选择：“土人”到土族的历史人类学考察 - 爱思想</title><link>https://www.aisixiang.com/data/176393.html</link></item>
-<item><title>石威：近代中国“民族自信”概念的诞生与演化 - 爱思想</title><link>https://www.aisixiang.com/data/176388.html</link></item>
-<item><title>何祎金：早期中国社会学“社区”概念形成的再思考 - 爱思想</title><link>https://www.aisixiang.com/data/176382.html</link></item>
-<item><title>王炳权 张翔：现代化人民城市：新时代城市发展的新理路 - 爱思想</title><link>https://www.aisixiang.com/data/176367.html</link></item>
-<item><title>王斌：构建当代中国新闻学理论范式的基本路径 - 爱思想</title><link>https://www.aisixiang.com/data/176350.html</link></item>
-<item><title>国俊明：涉藏国际传播效能的协同机制研究——基于“六位一体”框架的分析与构建 - 爱思想</title><link>https://www.aisixiang.com/data/176281.html</link></item>
-<item><title>张晓玮：构建文化遗产价值阐释与传播自主知识体系——以故宫考古成果的博物馆转化为例 - 爱思想</title><link>https://www.aisixiang.com/data/176121.html</link></item>
-<item><title>陈刚 王水宁：新闻传播学自主知识体系构建的两个维度 - 爱思想</title><link>https://www.aisixiang.com/data/176072.html</link></item>
-<item><title>唐珍名 陈晶晶：经世致用与实事求是——岳麓书院学风考 - 爱思想</title><link>https://www.aisixiang.com/data/176435.html</link></item>
-<item><title>舒跃育 李嘉明：从自主知识体系构建看心理学的工科属性 - 爱思想</title><link>https://www.aisixiang.com/data/176413.html</link></item>
-<item><title>温儒敏：北大为何没有校训？ - 爱思想</title><link>https://www.aisixiang.com/data/176395.html</link></item>
-<item><title>任晓霏：蒙学与诗教——中国古代启蒙教育的文学化路径 - 爱思想</title><link>https://www.aisixiang.com/data/176303.html</link></item>
-<item><title>曾天山：找准哲学社会科学教材建设“大逻辑” - 爱思想</title><link>https://www.aisixiang.com/data/176292.html</link></item>
-<item><title>陈振旺 李思元：敦煌文书与石窟图像的互文 - 爱思想</title><link>https://www.aisixiang.com/data/176436.html</link></item>
-<item><title>晋海学：重返历史现场，发掘中国叙事传统——笔记体小说的叙事原则及其违拗 - 爱思想</title><link>https://www.aisixiang.com/data/176431.html</link></item>
-<item><title>纪德君：道不远人——明清小说对传统文教的创新与拓展 - 爱思想</title><link>https://www.aisixiang.com/data/176430.html</link></item>
-<item><title>高培华：柳宗元笔下的“蝜蝂”是什么虫 - 爱思想</title><link>https://www.aisixiang.com/data/176429.html</link></item>
-<item><title>曹周天：舌尖上的文化传承——话剧《燕食记》观后 - 爱思想</title><link>https://www.aisixiang.com/data/176369.html</link></item>
-<item><title>邱明：井冈山时期党的新闻舆论工作 - 爱思想</title><link>https://www.aisixiang.com/data/176441.html</link></item>
-<item><title>牛昱尧：天下之变与中华文明之续 - 爱思想</title><link>https://www.aisixiang.com/data/176437.html</link></item>
-<item><title>罗康隆：里耶秦简所载秦代基层行政与社会治理 - 爱思想</title><link>https://www.aisixiang.com/data/176428.html</link></item>
-<item><title>姚晔：徽州家法族规的近代调适与转型 - 爱思想</title><link>https://www.aisixiang.com/data/176427.html</link></item>
-<item><title>贾小叶：构建中国历史学自主知识体系的若干进展 - 爱思想</title><link>https://www.aisixiang.com/data/176419.html</link></item>
-<item><title>孔德立：信义精神的历史源流与当代价值 - 爱思想</title><link>https://www.aisixiang.com/data/176438.html</link></item>
-<item><title>胡波：实践作为马克思哲学基石的三重核心要义 - 爱思想</title><link>https://www.aisixiang.com/data/176426.html</link></item>
-<item><title>江怡：分析与构建：中国哲学走向现代的两个基本维度 - 爱思想</title><link>https://www.aisixiang.com/data/176425.html</link></item>
-<item><title>唐代兴：礼·仁·德·道：孔子文化的伦理本体图景 - 爱思想</title><link>https://www.aisixiang.com/data/176423.html</link></item>
-<item><title>喻中：亦师亦友：《孔子和他的老师们》一书后记 - 爱思想</title><link>https://www.aisixiang.com/data/176394.html</link></item>
-<item><title>王峰：以国际视野加快构建中共党史党建学自主知识体系 - 爱思想</title><link>https://www.aisixiang.com/data/176440.html</link></item>
-<item><title>李申：深挚的热爱 不懈的追求——任继愈先生的思想道路与文化情怀 - 爱思想</title><link>https://www.aisixiang.com/data/176433.html</link></item>
-<item><title>张新鹰：他的遗愿完成了——任继愈先生与《中华大藏经》 - 爱思想</title><link>https://www.aisixiang.com/data/176432.html</link></item>
-<item><title>孙卫国：回忆先师杨翼骧先生 - 爱思想</title><link>https://www.aisixiang.com/data/176401.html</link></item>
-<item><title>鲁志强：怀念马洪，继承马洪 - 爱思想</title><link>https://www.aisixiang.com/data/176399.html</link></item>
-<item><title>杨福泉：“阿诗玛”不仅是遗产 - 爱思想</title><link>https://www.aisixiang.com/data/176354.html</link></item>
-<item><title>陈映芳：求学忆：地方研究与大历史 - 爱思想</title><link>https://www.aisixiang.com/data/176314.html</link></item>
-<item><title>张永军：志以大道，乐以小满 - 爱思想</title><link>https://www.aisixiang.com/data/176294.html</link></item>
-<item><title>信春鹰，法学教授，博士生导师，现任第十四届全国人大常委会委员、宪法和法律委员会主任委员。195..... - 爱思想</title><link>https://www.aisixiang.com/thinktank/XinChunying.html</link></item>
-<item><title>ADNOC uses &amp;#39;shadow transit&amp;#39; to ship oil through Strait of Hormuz — Bloomberg - TASS</title><link>https://tass.com/economy/2135927</link></item>
-<item><title>Strait of Hormuz developments - TASS</title><link>https://tass.com/situation-around-the-strait-of-hormuz</link></item>
-<item><title>Trinket-Powered Conference Room Occupancy Display… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/25/trinket-powered-conference-room-occupancy-display-adafruitlearnsystem/</link></item>
-<item><title>Nicole Hoang Received the FAPAC Distinguished… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/25/nicole-hoang-received-the-fapac-distinguished-public-service-scholarship/</link></item>
-<item><title>Adafruit Weekly Editorial Round-Up:  Mozilla and… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/24/adafruit-weekly-editorial-round-up-mozilla-and-adafruit-bring-web-serial-workflows-to-firefox-shipping-alerts-more/</link></item>
-<item><title>Mozilla and Adafruit bring Web Serial workflows to… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/21/mozilla-and-adafruit-bring-web-serial-workflows-to-firefox/</link></item>
-<item><title>Shipping Notice: Memorial Day Monday, May 25 - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/20/shipping-notice-memorial-day-monday-may-25/</link></item>
-<item><title>Project Hail Mary’s “Science Mistakes” #SciFiSunday - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/24/project-hail-marys-science-mistakes-scifisunday/</link></item>
-<item><title>NeoPixel Tiara #AdafruitLearnSystem - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/24/neopixel-tiara-adafruitlearnsystem/</link></item>
-<item><title>Film Revival NYC - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/24/film-revival-nyc/</link></item>
-<item><title>Turn your Android phone into a modern ham radio transceiver - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/24/urn-your-android-phone-into-a-modern-ham-radio-transceiver/</link></item>
-<item><title>New nEw NEW Products at Adafruit 5/20/2026 - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/23/new-new-new-products-at-adafruit-5-20-2026/</link></item>
-<item><title>Stormlight Spheres From Brandon Sanderson’s Stormlight Archive - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/23/stormlight-spheres-from-brandon-sandersons-stormlight-archive/</link></item>
-<item><title>wireless LEDs - Adafruit Industries</title><link>https://blog.adafruit.com/tag/wireless-leds/</link></item>
-<item><title>Superhero Power Plant #AdafruitLearnSystem - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/23/superhero-power-plant-adafruitlearnsystem/</link></item>
-<item><title>World Cup, World Cultures at the American Museum of Natural History - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/23/world-cup-world-cultures-at-the-american-museum-of-natural-history/</link></item>
-<item><title>From the Adafruit Learning System: eInk Slow Movie Player - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/22/from-the-adafruit-learning-system-eink-slow-movie-player/</link></item>
-<item><title>Rugged Modular Cyberdeck #piday #raspberrypi - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/22/rugged-modular-cyberdeck-piday-raspberrypi/</link></item>
-<item><title>NEW PRODUCT – Snap-on Enclosure for Adafruit Terminal Block BFF Add-On - Adafruit Industries</title><link>https://blog.adafruit.com/2026/05/22/new-product-snap-on-enclosure-for-adafruit-terminal-block-bff-add-on/</link></item>
-<item><title>kits &amp; projects - Adafruit Industries</title><link>https://blog.adafruit.com/tag/kits-projects/</link></item>
-<item><title>Fantastic Beasts and How to Ride Them [Minifig Monday] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/25/fantastic-beasts-and-how-to-ride-them-minifig-monday/</link></item>
-<item><title>See more fantastic mounts, chariots, and beasts of burden in our Minifig Monday roundup - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/25/fantastic-beasts-and-how-to-ride-them-minifig-monday/#more-504727</link></item>
-<item><title>LEGO Lord of the Rings 40893 Grond (Grond! Grond!) Gift With Purchase [Review] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/25/lego-lord-of-the-rings-40893-grond-grond-grond-gift-with-purchase-review/</link></item>
-<item><title>Bring up the wolf’s head! Click to see our thoughts on the latest Lord of the Rings GWP… - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/25/lego-lord-of-the-rings-40893-grond-grond-grond-gift-with-purchase-review/#more-502450</link></item>
-<item><title>Another racing seaplane enters the LEGO Schneider Trophy contest! - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/24/another-racing-seaplane-enters-the-lego-schneider-trophy-contest/</link></item>
-<item><title>Ooh-ooh-ooh, I wanna be like the builder of this LEGO orangutan - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/23/ooh-ooh-ooh-i-wanna-be-like-the-builder-of-this-lego-orangutan/</link></item>
-<item><title>LEGO Lord of the Rings 11377 Minas Tirith (Part 2: The minifigures and final thoughts) [Review] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/23/lego-lord-of-the-rings-11377-minas-tirith-part-2-the-minifigures-and-final-thoughts-review/</link></item>
-<item><title>first review article - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/22/lego-lord-of-the-rings-11377-minas-tirith-part-1-the-build-review/#more-502446</link></item>
-<item><title>The denizens of the Minas Tirith await! Click here to see if the White City shines for us… - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/23/lego-lord-of-the-rings-11377-minas-tirith-part-2-the-minifigures-and-final-thoughts-review/#more-502448</link></item>
-<item><title>Anti-porg? This beautiful LEGO Star Wars mosaic may well change your mind - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/22/anti-porg-this-beautiful-lego-star-wars-mosaic-may-well-change-your-mind/</link></item>
-<item><title>In the days of the youth of Denethor, LEGO Rivendell was rebuilt... - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/22/in-the-days-of-the-youth-of-denethor-lego-rivendell-was-rebuilt/</link></item>
-<item><title>Luka Grković - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/luka-grkovic/</link></item>
-<item><title>The Two Towers - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/the-two-towers/</link></item>
-<item><title>LEGO Lord of the Rings 11377 Minas Tirith (Part 1: The build) [Review] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/22/lego-lord-of-the-rings-11377-minas-tirith-part-1-the-build-review/</link></item>
-<item><title>It pains us to share that the Leader of the Plaque has moved to Belville - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/21/it-pains-us-to-share-that-the-leader-of-the-plaque-has-moved-to-belville/</link></item>
-<item><title>Little Shop of Horrors - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/little-shop-of-horrors/</link></item>
-<item><title>Victoria Worsley - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/victoria-worsley/</link></item>
-<item><title>Snoopy’s Doghouse Review &amp; Seed Part Challenge with Iron Forge Champion Xiheng Xu - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/20/snoopys-doghouse-review-seed-part-challenge-with-iron-forge-champion-xiheng-xu/</link></item>
-<item><title>he winner of this year’s Iron Forge competition - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/02/01/iron-forge-2026-builder-spotlight-xiheng-xu/</link></item>
-<item><title>See Xiheng’s review of Snoopy and mocs created with the new elements below. - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/20/snoopys-doghouse-review-seed-part-challenge-with-iron-forge-champion-xiheng-xu/#more-504120</link></item>
-<item><title>Remnants of the Maya in LEGO - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/20/remnants-of-the-maya-in-lego/</link></item>
-<item><title>Age of Piracy - The Brothers Brick</title><link>https://www.brothers-brick.com/2024/08/04/swashbuckling-and-derring-do-aplenty-in-this-lego-adventure/</link></item>
-<item><title>Nicholas Goodman - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/nicholas-goodman/</link></item>
-<item><title>“No, Mr. Bond, I expect you to build!” - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/05/19/no-mr-bond-i-expect-you-to-build/</link></item>
+<lastBuildDate>Wed, 27 May 2026 10:12:05 +0800</lastBuildDate>
+<item><title>The Sound Factor: Why Certain Casino Games Feel More Intense than Others - Strange Sounds</title><link>https://strangesounds.org/2026/05/casino-game-sound-design-intensity.html</link></item>
+<item><title>Online Casino Themes That Borrow From Ancient Myths, Lost Civilizations, and End Times Imagery - Strange Sounds</title><link>https://strangesounds.org/2026/04/online-casino-themes-ancient-myths-lost-civilizations-end-times.html</link></item>
+<item><title>First Look: The Macallan Celebrates Famed Scotch Vintage With Limited-Edition Collection - Maxim</title><link>https://www.maxim.com/food-drink/first-look-the-macallan-celebrates-famed-single-malt-scotch-vintage-with-limited-edition-collection/</link></item>
+<item><title>Jennifer Lopez, Sofia Vergara Flaunt Age-Defying Figures With Summer-Ready Photo Drops - Maxim</title><link>https://www.maxim.com/entertainment/jennifer-lopez-sofia-vergara-flaunt-age-defying-figures-with-summer-ready-photo-drops/</link></item>
+<item><title>Inside Deer Valley East Village, Utah’s Ultimate Alpine Escape - Maxim</title><link>https://www.maxim.com/travel/inside-deer-valley-east-village-utahs-ultimate-alpine-escape/</link></item>
+<item><title>This Special-Edition Ford Mustang GTD Celebrates America’s 250th - Maxim</title><link>https://www.maxim.com/rides/this-special-edition-ford-mustang-gtd-celebrates-americas-250th/</link></item>
+<item><title>WWE Legend Nikki Bella Joins Madam Paleta Tequila As ‘Chief Margarita Officer’ - Maxim</title><link>https://www.maxim.com/food-drink/wwe-star-nikki-bella-just-joined-madam-paleta-tequila-as-chief-margarita-officer/</link></item>
+<item><title>Supreme x Mitchell &amp; Ness Just Teamed Up On A Vintage-Inspired NBA &amp; MLB Collection - Maxim</title><link>https://www.maxim.com/style/supreme-x-mitchell-ness-just-teamed-up-on-a-vintage-inspired-nba-mlb-collection/</link></item>
+<item><title>‘The Westies’ Trailer: MGM+ Irish Mobster Drama Teases 1980s Hell’s Kitchen Turf War - Maxim</title><link>https://www.maxim.com/entertainment/the-westies-trailer-mgm-irish-crime-drama-teases-1980s-hells-kitchen-turf-war/</link></item>
+<item><title>Brooks Nader Says She’s Elevating Her Signature Look And Is Getting ‘More Stylish’ - Maxim</title><link>https://www.maxim.com/style/brooks-nader-says-shes-elevating-her-signature-look-and-is-getting-more-stylish/</link></item>
+<item><title>The Brabus Bodo Is A $1.2 Million Grand Tourer With A 986-HP Twin Turbo V12 - Maxim</title><link>https://www.maxim.com/rides/the-brabus-bodo-is-a-1-2-million-grand-tourer-with-a-986-hp-twin-turbo-v12/</link></item>
+<item><title>Arizona’s REMI. Scottsdale Is Home To Old Town’s Hottest New Hotel Restaurant - Maxim</title><link>https://www.maxim.com/travel/arizonas-remi-scottsdale-is-home-to-old-towns-hottest-new-hotel-restaurant/</link></item>
+<item><title>Spirit Of The Week: Angel’s Envy 2026 10-Year Cask Strength Rye Whiskey - Maxim</title><link>https://www.maxim.com/food-drink/spirit-of-the-week-angels-envy-2026-10-year-cask-strength-rye-whiskey/</link></item>
+<item><title>Exclusive First Look At Trae Young’s Custom Ram TRX Pickup Truck - Maxim</title><link>https://www.maxim.com/rides/exclusive-first-look-at-trae-youngs-custom-ram-trx-pickup-truck/</link></item>
+<item><title>How MyIQ Helps Supercharge Personal Development - Maxim</title><link>https://www.maxim.com/partner/how-myiq-helps-supercharge-personal-development/</link></item>
+<item><title>Maxim Cover Girl Competition Spotlight: Jade Amber, Jessica Lynn Golden, Tiffany Smith, Adri Cameron &amp; Lilybell Williams - Maxim</title><link>https://www.maxim.com/news/maxim-cover-girl-competition-spotlight-jade-amber-jessica-lynn-golden-tiffany-smith-adri-cameron-lilybell-williams/</link></item>
+<item><title>Brad Pitt, Jacob Elordi, &amp; More Celebs Saw Mercedes-AMG Unveil Revolutionary GT EV Coupe At LA Launch - Maxim</title><link>https://www.maxim.com/rides/brad-pitt-jacob-elordi-more-celebs-saw-mercedes-amg-unveil-the-monster-gt-4-door-coupe-ev-in-los-angeles/</link></item>
+<item><title>The Owners Of The Scotch Malt Whisky Society Are Releasing 10 Ultra Rare Single Casks - Maxim</title><link>https://www.maxim.com/food-drink/the-owners-of-the-scotch-malt-whisky-society-are-releasing-10-ultra-rare-single-casks/</link></item>
+<item><title>Longines Pays Homage To A Classic Watch With Retooled Legend Diver 59 - Maxim</title><link>https://www.maxim.com/style/longines-pays-homage-to-a-classic-watch-with-retooled-legend-diver-59/</link></item>
+<item><title>Wine of the Week: Robert Mondavi 60th Anniversary Cabernet Sauvignon - Maxim</title><link>https://www.maxim.com/food-drink/wine-of-the-week-robert-mondavi-winery-60th-anniversary-cabernet-sauvignon/</link></item>
+<item><title>What to Expect From Sony’s ‘State Of Play’ May 2026 Showcase - Maxim</title><link>https://www.maxim.com/entertainment/what-to-expect-from-sonys-may-2026-state-of-play-showcase/</link></item>
+<item><title>Wild Turkey Launches Austin Nichols Archives Gold Foil Edition Bourbon - Maxim</title><link>https://www.maxim.com/food-drink/wild-turkey-launches-austin-nichols-archives-gold-foil-edition-bourbon/</link></item>
+<item><title>Dua Lipa Flaunts Bikini Body In Metallic Swimsuit Pics From South Of France - Maxim</title><link>https://www.maxim.com/entertainment/dua-lipa-flaunts-bikini-body-in-metallic-swimsuit-pics-from-south-of-france/</link></item>
+<item><title>Breitling Just Relaunched Its Famed Chronomat Watch Series - Maxim</title><link>https://www.maxim.com/style/breitling-just-relaunched-its-famed-chronomat-watch-series/</link></item>
+<item><title>Bell &amp; Ross Takes Flight With BR-X3 Patrouille de France Limited-Edition Watch - Maxim</title><link>https://www.maxim.com/style/bell-ross-takes-flight-with-br-x3-patrouille-de-france-limited-edition-watch/</link></item>
+<item><title>Dallas Cowboys Cheerleaders Stun In Swimwear Photos From Greek Getaway - Maxim</title><link>https://www.maxim.com/sports/dallas-cowboys-cheerleaders-stun-in-swimwear-photos-from-greek-getaway/</link></item>
+<item><title>Ella Langley 2026 Tour: How To Score Tickets For Country Star’s Sold-Out ‘Dandelion’ Shows - Maxim</title><link>https://www.maxim.com/entertainment/ella-langley-2026-tour-how-to-score-tickets-for-country-stars-sold-out-dandelion-shows/</link></item>
+<item><title>This Landmark Ferrari Book Reveals Secrets Of The World’s Greatest Supercar Maker - Maxim</title><link>https://www.maxim.com/rides/this-landmark-ferrari-book-reveals-secrets-of-the-worlds-greatest-supercar-maker/</link></item>
+<item><title>‘The Rivals Of Amziah King’ Trailer: Matthew McConaughey Faces Off With Kurt Russell In Small-Town Thriller - Maxim</title><link>https://www.maxim.com/entertainment/the-rivals-of-amziah-king-trailer-matthew-mcconaughey-faces-off-with-kurt-russell-in-small-town-thriller/</link></item>
+<item><title>These Rare Patek Philippe Watches Owned By Eric Clapton Are Heading To Auction - Maxim</title><link>https://www.maxim.com/style/these-rare-patek-philippe-watches-owned-by-eric-clapton-are-heading-to-auction/</link></item>
+<item><title>BTS Announces ‘Behind-the-Scenes’ of Their Visit to Mexico’s National Palace - Billboard</title><link>https://www.billboard.com/music/music-news/bts-behind-the-scenes-mexico-national-palace-announced-1236257647/</link></item>
+<item><title>Natalia Cano - Billboard</title><link>https://www.billboard.com/author/natalia-cano/</link></item>
+<item><title>BTS Is Teaming Up With This Classic Cookie for a Limited Edition Flavor: ‘We Ate Them As Kids, We Eat Them In the Studio’ - Billboard</title><link>https://www.billboard.com/music/music-news/bts-oreo-limited-edition-flavor-1236257296/</link></item>
+<item><title>The Warehouse Project Outlines 20-Year Anniversary Celebrations With Film, Art, Music &amp; More: ‘So Proud’ - Billboard</title><link>https://www.billboard.com/music/music-news/the-warehouse-project-manchester-20-year-anniversary-events-1236257176/</link></item>
+<item><title>Ariana Grande Says She ‘Barely Tried’ in New Song ‘Hate That I Made You Love Me’ Tease - Billboard</title><link>https://www.billboard.com/music/music-news/ariana-grande-barely-tried-lyric-new-song-1236257046/</link></item>
+<item><title>Olivia Rodrigo Drops ‘You Seem Pretty Sad’ Tracklist With Intriguing Titles Such as ‘Maggots for Brains’ &amp; ‘Purple’ - Billboard</title><link>https://www.billboard.com/music/music-news/olivia-rodrigo-you-seem-pretty-sad-for-girl-in-love-tracklist-1236256875/</link></item>
+<item><title>Dom Dolla to Headline Marvel Stadium in Melbourne for AFL Grand Final Eve Show - Billboard</title><link>https://www.billboard.com/music/music-news/dom-dolla-marvel-stadium-afl-grand-final-eve-show-1236256644/</link></item>
+<item><title>Sonny Rollins, One of Jazz’s Greatest Saxophonists, Dies at 95 - Billboard</title><link>https://www.billboard.com/music/music-news/sonny-rollins-dies-at-95-1236256529/</link></item>
+<item><title>Demi Lovato Celebrates First Wedding Anniversary With Jordan Lutes - Billboard</title><link>https://www.billboard.com/music/music-news/demi-lovato-one-year-wedding-anniversary-jordan-jutes-lutes-1236256205/</link></item>
+<item><title>Kurt Cobain’s ‘Foxes’ T-Shirt Being Auctioned by Hole’s Patty Schemel - Billboard</title><link>https://www.billboard.com/music/music-news/kurt-cobain-foxes-shirt-auction-patty-schemel-hole-1236256153/</link></item>
+<item><title>Diplo Says DJ Set at Son’s Kindergarten Graduation Was One of His ‘Most Important Sets’ of Career - Billboard</title><link>https://www.billboard.com/music/music-news/diplo-dj-set-son-kindergarten-graduation-1236256096/</link></item>
+<item><title>Comparison of Trump and Putin visits to China - FlowingData</title><link>https://flowingdata.com/2026/05/26/comparison-of-trump-and-putin-visits-to-china/</link></item>
+<item><title>Magnifica Humanitas from Pope Leo - FlowingData</title><link>https://flowingdata.com/2026/05/25/magnifica-humanitas-from-pope-leo/</link></item>
+<item><title>How to Install a Gaming Kernel on Ubuntu &amp; Arch (2026) - FOSS Linux</title><link>https://www.fosslinux.com/157162/install-gaming-kernel-ubuntu-arch.htm</link></item>
+<item><title>iptables vs nftables on Arch: Check, Migrate, Fix Breakage (2026) - FOSS Linux</title><link>https://www.fosslinux.com/157230/iptables-vs-nftables-arch-linux.htm</link></item>
+<item><title>Mesa 26.1.1 Is Here: How to Check and Upgrade Mesa on Linux for Better Gaming Performance - FOSS Linux</title><link>https://www.fosslinux.com/157221/how-to-check-and-upgrade-mesa-on-linux-for-better-gaming-performance.htm</link></item>
+<item><title>KDE Plasma Bugfix Releases Explained - FOSS Linux</title><link>https://www.fosslinux.com/157206/kde-plasma-bugfix-releases-explained.htm</link></item>
+<item><title>Flatpak 1.17 Series: OCI Sideloading, Performance &amp; Security - FOSS Linux</title><link>https://www.fosslinux.com/157201/flatpak-1-17-series-oci-sideloading-performance-security.htm</link></item>
+<item><title>Ubuntu 26.10 Stonking Stingray: What Is Already Changing After 26.04 LTS - FOSS Linux</title><link>https://www.fosslinux.com/157197/ubuntu-26-10-stonking-stingray-timeline.htm</link></item>
+<item><title>Tails 7.8 Removes Thunderbird: What Changed and What Users Should Do - FOSS Linux</title><link>https://www.fosslinux.com/157192/tails-7-8-removes-thunderbird.htm</link></item>
+<item><title>Ubuntu Core 26: Why Immutable Linux Is Moving From IoT to Edge AI - FOSS Linux</title><link>https://www.fosslinux.com/157135/ubuntu-core-26-why-immutable-linux-is-moving-from-iot-to-edge-ai.htm</link></item>
+<item><title>How to Install OpenBSD 7.9: A Step-by-Step Guide - FOSS Linux</title><link>https://www.fosslinux.com/157075/how-to-install-openbsd-a-step-by-step-guide.htm</link></item>
+<item><title>Kernel 7.0.9 Rolling Out: The Emergency Security Clean-up - FOSS Linux</title><link>https://www.fosslinux.com/157068/kernel-7-0-9-rolling-out-the-emergency-security-clean-up.htm</link></item>
+<item><title>DARPA launches search for robot medics to treat battlefield casualties - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/05/26/darpa-launches-search-for-robot-medics-to-treat-battlefield-casualties/</link></item>
+<item><title>US lawmakers weigh aviation fuel cost increase from Iran war in fiscal 2027 defense hearing - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2026/05/26/us-lawmakers-weigh-aviation-fuel-cost-increase-from-iran-war-in-fiscal-2027-defense-hearing/</link></item>
+<item><title>Pentagon spars with SpaceX over Starlink price hike during Iran war - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2026/05/26/pentagon-spars-with-spacex-over-starlink-price-hike-during-iran-war/</link></item>
+<item><title>US launches ‘self-defense’ strikes against Iran amid ongoing ceasefire - Defense News</title><link>https://www.defensenews.com/news/your-navy/2026/05/26/us-launches-self-defense-strikes-against-iran-amid-ongoing-ceasefire/</link></item>
+<item><title>Report: US to cut strategic bombers and warships available to NATO in a crisis - Defense News</title><link>https://www.defensenews.com/global/europe/2026/05/26/report-us-to-cut-strategic-bombers-and-warships-available-to-nato-in-a-crisis/</link></item>
+<item><title>Australia starts ‘high-risk’ life extension of its submarine fleet - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/05/26/australia-starts-high-risk-life-extension-of-its-submarine-fleet/</link></item>
+<item><title>India boosts drone warfare capability with compact missile - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/05/26/india-boosts-drone-warfare-capability-with-compact-missile/</link></item>
+<item><title>Windows&amp;#39; Classic 3D Space Cadet Pinball Is Getting a Physical Re-Creation - Slashdot</title><link>https://games.slashdot.org/story/26/05/26/2053218/windows-classic-3d-space-cadet-pinball-is-getting-a-physical-re-creation</link></item>
+<item><title>Internet Starts Coming Back In Iran After Months-Long Blackout - Slashdot</title><link>https://tech.slashdot.org/story/26/05/26/2041247/internet-starts-coming-back-in-iran-after-months-long-blackout</link></item>
+<item><title>similar blackout was imposed - Slashdot</title><link>https://tech.slashdot.org/story/26/01/15/2228257/irans-internet-shutdown-is-now-one-of-the-longest-ever</link></item>
+<item><title>Mythos Detected 23,000 Vulnerabilities Across 1,000 OSS Projects - Slashdot</title><link>https://news.slashdot.org/story/26/05/26/2026259/mythos-detected-23000-vulnerabilities-across-1000-oss-projects</link></item>
+<item><title>Spain Blocks Polymarket and Kalshi - Slashdot</title><link>https://news.slashdot.org/story/26/05/26/1828238/spain-blocks-polymarket-and-kalshi</link></item>
+<item><title>Uber, Lyft Drivers In Massachusetts Form First US Ride-Share Union - Slashdot</title><link>https://tech.slashdot.org/story/26/05/26/1825246/uber-lyft-drivers-in-massachusetts-form-first-us-ride-share-union</link></item>
+<item><title>Netherlands Blocks US Takeover of Vital Digital Supplier - Slashdot</title><link>https://yro.slashdot.org/story/26/05/26/1739255/netherlands-blocks-us-takeover-of-vital-digital-supplier</link></item>
+<item><title>Challenges Face European Governments Pursuing &amp;#39;Digital Sovereignty&amp;#39; - Slashdot</title><link>https://yro.slashdot.org/story/25/12/28/0642206/challenges-face-european-governments-pursuing-digital-sovereignty</link></item>
+<item><title>Nvidia Retires Its GeForce Control Panel App After 20 Years - Slashdot</title><link>https://tech.slashdot.org/story/26/05/26/1635257/nvidia-retires-its-geforce-control-panel-app-after-20-years</link></item>
+<item><title>California Moves To Exempt Linux From Upcoming Age-Verification Law - Slashdot</title><link>https://linux.slashdot.org/story/26/05/26/0450245/california-moves-to-exempt-linux-from-upcoming-age-verification-law</link></item>
+<item><title>Pope Leo Warns of Risks From AI In 42,300-Word Encyclical - Slashdot</title><link>https://slashdot.org/story/26/05/26/0441241/pope-leo-warns-of-risks-from-ai-in-42300-word-encyclical</link></item>
+<item><title>The Great Illusion - Standard Ebooks</title><link>https://standardebooks.org/ebooks/norman-angell/the-great-illusion</link></item>
+<item><title>The Sword of Damocles - Standard Ebooks</title><link>https://standardebooks.org/ebooks/anna-katharine-green/the-sword-of-damocles</link></item>
+<item><title>Moving the Mountain - Standard Ebooks</title><link>https://standardebooks.org/ebooks/charlotte-perkins-gilman/moving-the-mountain</link></item>
+<item><title>Saïd the Fisherman - Standard Ebooks</title><link>https://standardebooks.org/ebooks/marmaduke-pickthall/said-the-fisherman</link></item>
+<item><title>Perishable Goods - Standard Ebooks</title><link>https://standardebooks.org/ebooks/dornford-yates/perishable-goods</link></item>
+<item><title>Sailing Alone Around the World - Standard Ebooks</title><link>https://standardebooks.org/ebooks/joshua-slocum/sailing-alone-around-the-world</link></item>
+<item><title>The Fifth Queen Crowned - Standard Ebooks</title><link>https://standardebooks.org/ebooks/ford-madox-ford/the-fifth-queen-crowned</link></item>
+<item><title>Dr. Wortle’s School - Standard Ebooks</title><link>https://standardebooks.org/ebooks/anthony-trollope/dr-wortles-school</link></item>
+<item><title>The Nature of a Crime - Standard Ebooks</title><link>https://standardebooks.org/ebooks/joseph-conrad_ford-madox-ford/the-nature-of-a-crime</link></item>
+<item><title>The Walls of Jericho - Standard Ebooks</title><link>https://standardebooks.org/ebooks/rudolph-fisher/the-walls-of-jericho</link></item>
+<item><title>The Wolf-Leader - Standard Ebooks</title><link>https://standardebooks.org/ebooks/alexandre-dumas/the-wolf-leader/alfred-allinson</link></item>
+<item><title>Gullible’s Travels - Standard Ebooks</title><link>https://standardebooks.org/ebooks/ring-lardner/gullibles-travels</link></item>
+<item><title>Physicists Have Measured “Negative Time” in Bizarre Quantum Experiment - SciTechDaily</title><link>https://scitechdaily.com/physicists-have-measured-negative-time-in-bizarre-quantum-experiment/</link></item>
+<item><title>Researchers Compare MS Models to Human Tissue in Search for Better Therapies - SciTechDaily</title><link>https://scitechdaily.com/researchers-compare-ms-models-to-human-tissue-in-search-for-better-therapies/</link></item>
+<item><title>Scientists Discover Genetic “Off Switch” That Supercharges CAR T Cells Against Cancer - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-genetic-off-switch-that-supercharges-car-t-cells-against-cancer/</link></item>
+<item><title>The Deadly Tapeworm Spreading Across America Has Reached the Pacific Northwest - SciTechDaily</title><link>https://scitechdaily.com/the-deadly-tapeworm-spreading-across-america-has-reached-the-pacific-northwest/</link></item>
+<item><title>Could Low Vitamin D Be Making Your Pain Worse? - SciTechDaily</title><link>https://scitechdaily.com/could-low-vitamin-d-be-making-your-pain-worse/</link></item>
+<item><title>Scientists Say ‘Yo-Yo Dieting’ May Not Be Ruining Your Metabolism After All - SciTechDaily</title><link>https://scitechdaily.com/scientists-say-yo-yo-dieting-may-not-be-ruining-your-metabolism-after-all/</link></item>
+<item><title>Scientists Discover Once-Weekly Workout That Melts Belly Fat Surprisingly Effectively - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-once-weekly-workout-that-melts-belly-fat-surprisingly-effectively/</link></item>
+<item><title>Are Your Choices Really Yours? New Brain Study Raises Big Questions - SciTechDaily</title><link>https://scitechdaily.com/are-your-choices-really-yours-new-brain-study-raises-big-questions/</link></item>
+<item><title>Super Jupiters Expose a Long Standing Space Mystery - SciTechDaily</title><link>https://scitechdaily.com/super-jupiters-expose-a-long-standing-space-mystery/</link></item>
+<item><title>The Universe’s Most Powerful Particles May Be Even Stranger Than Scientists Thought - SciTechDaily</title><link>https://scitechdaily.com/the-universes-most-powerful-particles-may-be-even-stranger-than-scientists-thought/</link></item>
+<item><title>Scientists Just Tested a Thruster Powerful Enough for Human Missions to Mars - SciTechDaily</title><link>https://scitechdaily.com/scientists-just-tested-a-thruster-powerful-enough-for-human-missions-to-mars/</link></item>
+<item><title>A Deadly Bird Disease Has Taken Over Hawaiʻi’s Forests - SciTechDaily</title><link>https://scitechdaily.com/a-deadly-bird-disease-has-taken-over-hawai%ca%bbis-forests/</link></item>
+<item><title>The Quit-Smoking Tool That’s Beating Patches and Gum - SciTechDaily</title><link>https://scitechdaily.com/the-quit-smoking-tool-thats-beating-patches-and-gum/</link></item>
+<item><title>Scientists Say Most Adults Need 4 Times More Exercise Than Recommended for Major Heart Benefits - SciTechDaily</title><link>https://scitechdaily.com/scientists-say-most-adults-need-4-times-more-exercise-than-recommended-for-major-heart-benefits/</link></item>
+<item><title>Doctors Say Your Ice Pack Might Be Making Injuries Worse - SciTechDaily</title><link>https://scitechdaily.com/doctors-say-your-ice-pack-might-be-making-injuries-worse/</link></item>
+<item><title>Scientists Discover 43-Foot Sea Reptile Twice the Size of a Great White Shark - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-43-foot-sea-reptile-twice-the-size-of-a-great-white-shark/</link></item>
+<item><title>Scientists Discover New Way To Freeze and Revive Living Brain Tissue - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-new-way-to-freeze-and-revive-living-brain-tissue/</link></item>
+<item><title>Bees and Birds Are Drinking Alcohol From Flowers - SciTechDaily</title><link>https://scitechdaily.com/bees-and-birds-are-drinking-alcohol-from-flowers/</link></item>
+<item><title>Scientists Discover How Obesity May Trigger Alzheimer’s Disease - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-how-obesity-may-trigger-alzheimers-disease/</link></item>
+<item><title>Scientists Confirm Alcohol Causes Widespread Health Damage - SciTechDaily</title><link>https://scitechdaily.com/scientists-confirm-alcohol-causes-widespread-health-damage/</link></item>
+<item><title>Researchers Discover Cannabis Compounds That May Fight Obesity Without the High - SciTechDaily</title><link>https://scitechdaily.com/researchers-discover-cannabis-compounds-that-may-fight-obesity-without-the-high/</link></item>
+<item><title>It Took 40 Years for Technology To Catch Up to This Revolutionary Zipper Design - SciTechDaily</title><link>https://scitechdaily.com/it-took-40-years-for-technology-to-catch-up-to-this-revolutionary-zipper-design/</link></item>
+<item><title>NASA’s Psyche Spacecraft Just Used Mars as a Giant Slingshot - SciTechDaily</title><link>https://scitechdaily.com/nasas-psyche-spacecraft-just-used-mars-as-a-giant-slingshot/</link></item>
+<item><title>Scientists Just Found Evidence That Asteroids May Have Helped Create Life on Earth - SciTechDaily</title><link>https://scitechdaily.com/scientists-just-found-evidence-that-asteroids-may-have-helped-create-life-on-earth/</link></item>
+<item><title>美国 14 州实施堕胎禁令后妊娠相关死亡增加 9.2% - Solidot</title><link>https://www.solidot.org/story?sid=84408</link></item>
+<item><title>在内存天价时代 Meta 更新了 CacheLib 项目 - Solidot</title><link>https://www.solidot.org/story?sid=84407</link></item>
+<item><title>座头鲸迁徙距离超过 1.5 万公里 - Solidot</title><link>https://www.solidot.org/story?sid=84406</link></item>
+<item><title>英国皇家医学院学会认为社媒和香烟一样不利于青少年健康 - Solidot</title><link>https://www.solidot.org/story?sid=84405</link></item>
+<item><title>Uber COO 称愈来愈难以证明最大化词元花的钱是合理的 - Solidot</title><link>https://www.solidot.org/story?sid=84404</link></item>
+<item><title>JAXA 等成功测试五马赫冲压发动机 - Solidot</title><link>https://www.solidot.org/story?sid=84403</link></item>
+<item><title>BepiColombo 计划于 11 月 21 日进入水星轨道 - Solidot</title><link>https://www.solidot.org/story?sid=84402</link></item>
+<item><title>加州年龄验证法律将豁免大部分 Linux 发行版 - Solidot</title><link>https://www.solidot.org/story?sid=84401</link></item>
+<item><title>2025 年中亚经历了创纪录的冰川损失 - Solidot</title><link>https://www.solidot.org/story?sid=84400</link></item>
+<item><title>摩托罗拉手机劫持亚马逊应用植入联盟营销推广码 - Solidot</title><link>https://www.solidot.org/story?sid=84399</link></item>
+<item><title>教宗呼吁不可用 AI 作恶 - Solidot</title><link>https://www.solidot.org/story?sid=84398</link></item>
+<item><title>Python 3.14.5 is out! - Python</title><link>https://blog.python.org/2026/05/python-3145-is-out/</link></item>
+<item><title>Python 3.15.0 beta 1 is here! - Python</title><link>https://blog.python.org/2026/05/python-3150-beta-1/</link></item>
+<item><title>Python 3.14.5 release candidate - Python</title><link>https://blog.python.org/2026/05/python-3145rc1/</link></item>
+<item><title>Cultural Conservatives, Labour, and a New Realignment - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/cultural-conservatives-labour-and-a-new-realignment/</link></item>
+<item><title>A Century of Progressive Apartheid - Law &amp; Liberty</title><link>https://lawliberty.org/a-century-of-progressive-apartheid/</link></item>
+<item><title>VA Loan Basics Explained — Money Minute - Defense News</title><link>https://www.defensenews.com/video/2026/05/26/va-loan-basics-explained-money-minute/</link></item>
+<item><title>Senior enlisted leaders talk improvements for troops, families | MOAA - Defense News</title><link>https://www.defensenews.com/video/2026/05/26/senior-enlisted-leaders-talk-improvements-for-troops-families-moaa/</link></item>
+<item><title>Check out a mechanical rig to see and shoot around corners - Defense News</title><link>https://www.defensenews.com/video/2026/05/26/check-out-a-mechanical-rig-to-see-and-shoot-around-corners/</link></item>
+<item><title>200 miles on a fan-powered wing? - Defense News</title><link>https://www.defensenews.com/video/2026/05/26/200-miles-on-a-fan-powered-wing/</link></item>
+<item><title>New tech at Modern Day Marine 2026 | Defense News Weekly Full Episode 5.26.26 - Defense News</title><link>https://www.defensenews.com/video/2026/05/26/new-tech-at-modern-day-marine-2026-defense-news-weekly-full-episode-52626/</link></item>
+<item><title>Howard Storm, Stand-Up Comic and ‘Mork &amp; Mindy’ Director, Dies at 94 - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/howard-storm-dead-mork-mindy-director-comic-1236606364/</link></item>
+<item><title>Mind Games: Will a Viral Podcast Unravel America’s Most Famous Mentalist? - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/oz-pearlman-deception-exposed-steve-baskin-video-pablo-torre-1236606232/</link></item>
+<item><title>‘Summer House’ Reunion: Amanda and West Lay Out Their Timeline as Ciara Calls Amanda the “Weak Figure” He Needs - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/summer-house-reunion-part-1-recap-ciara-amanda-west-timeline-1236606290/</link></item>
+<item><title>Kevin Hart Addresses Backlash to Tony Hinchcliffe’s Roast Jokes: “Stop Talking as If I Said It” - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/kevin-hart-addresses-backlash-tony-hinchcliffe-roast-jokes-1236606088/</link></item>
+<item><title>‘Pressure’ Review: A Superb Andrew Scott Faces Off Against Brendan Fraser in a Tense D-Day Drama - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-reviews/pressure-review-andrew-scott-brendan-fraser-kerry-condon-1236605550/</link></item>
+<item><title>BTS Fanfare, Quick Stage Setups and More Moments From Inside the 2026 American Music Awards - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/music/music-news/inside-2026-american-music-awards-moments-camera-missed-1236606223/</link></item>
+<item><title>‘Star Wars: The Mandalorian and Grogu’ Opens to Series-Low $98M in North America. Does It Even Matter? - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-news/star-wars-the-mandalorian-and-grogu-opens-to-series-low-98m-1236605886/</link></item>
+<item><title>‘Chess’ Sets Broadway Closing Date in June - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/lifestyle/arts/chess-sets-broadway-closing-date-june-1236606099/</link></item>
+<item><title>Stan Lee Documentary ‘The Final Chapter’ Lands Distribution (Exclusive) - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-news/stan-lee-documentary-the-final-chapter-lands-distribution-1236605950/</link></item>
+<item><title>Janel Parrish, Leslie David Baker, Erinn Hayes to Star in Dark Comedy ‘Stockholm Squad’ (Exclusive) - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-news/stockholm-squad-janel-parrish-leslie-david-baker-bewkes-1236606194/</link></item>
+<item><title>Warum das Leben niemals aufhört wehzutun: Die düstere Philosophie von Peter Wessel Zapffe - MC Winkels weBlog</title><link>https://www.whudat.de/warum-das-leben-niemals-aufhoert-wehzutun-die-duestere-philosophie-von-peter-wessel-zapffe/</link></item>
+<item><title>Aja Monet entfacht mit „The Color Of Rain“ ein politisches Jazz-Feuerwerk - MC Winkels weBlog</title><link>https://www.whudat.de/aja-monet-entfacht-mit-the-color-of-rain-ein-politisches-jazz-feuerwerk/</link></item>
+<item><title>Die Schlaf-Revolution: Warum dein Chronotyp alles bestimmt und TikTok-Hacks gefährlich sind - MC Winkels weBlog</title><link>https://www.whudat.de/die-schlaf-revolution-warum-dein-chronotyp-alles-bestimmt-und-tiktok-hacks-gefaehrlich-sind/</link></item>
+<item><title>6lack – „Love Is The New Gangsta“: Die emotionale Neuerfindung des Raps - MC Winkels weBlog</title><link>https://www.whudat.de/6lack-love-is-the-new-gangsta-die-emotionale-neuerfindung-des-raps/</link></item>
+<item><title>Die biologische Blaupause der Seele: Warum wir für das Höhere verdrahtet sind // Dr. Lisa Miller bei Jay Shetty - MC Winkels weBlog</title><link>https://www.whudat.de/die-biologische-blaupause-der-seele-warum-wir-fuer-das-hoehere-verdrahtet-sind-dr-lisa-miller-bei-jay-shetty/</link></item>
+<item><title>Thee Marloes – „Di Hotel Malibu“ // Ein zeitloses Meisterwerk des indonesischen Retro-Soul - MC Winkels weBlog</title><link>https://www.whudat.de/thee-marloes-di-hotel-malibu-ein-zeitloses-meisterwerk-des-indonesischen-retro-soul/</link></item>
+<item><title>Die Heilkraft der Klänge: Warum Musik als Medizin die Zukunft der klinischen Therapie ist - MC Winkels weBlog</title><link>https://www.whudat.de/die-heilkraft-der-klaenge-warum-musik-als-medizin-die-zukunft-der-klinischen-therapie-ist/</link></item>
+<item><title>Ankhlejohn &amp; V Don – Everything Beautiful Died Early // Review - MC Winkels weBlog</title><link>https://www.whudat.de/ankhlejohn-v-don-everything-beautiful-died-early-review/</link></item>
+<item><title>Spanien gegen Donald Trump: Warum Madrids neuer China-Plan Washingtons Macht bricht - MC Winkels weBlog</title><link>https://www.whudat.de/spanien-gegen-donald-trump-warum-madrids-neuer-china-plan-washingtons-macht-bricht/</link></item>
+<item><title>Homer – „The Love And The Laughter“: Staubige Soul-Vibes auf Big Crown Records - MC Winkels weBlog</title><link>https://www.whudat.de/homer-the-love-and-the-laughter-staubige-soul-vibes-auf-big-crown-records/</link></item>
+<item><title>Modine’s $4B Deal Turns Cooling Capacity into Reserved Infrastructure - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/modine-s-4b-deal-turns-cooling-capacity-into-reserved-infrastructure</link></item>
+<item><title>Who Pays for AI’s Power Boom? North Carolina’s SB 730 Moves Forward - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/build-design/north-carolina-tests-who-pays-for-the-ai-power-boom</link></item>
+<item><title>Utilities May Get an AI Boom the Grid Wasn’t Built For - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/build-design/utilities-may-get-an-ai-boom-the-grid-wasn-t-built-for</link></item>
+<item><title>How Power Electronics Cut Generator Run Hours in AI-Scale Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/uptime/how-power-electronics-cut-generator-run-hours-in-ai-scale-data-centers</link></item>
+<item><title>Why Material Specifications Matter in Hyperscale Projects - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/build-design/why-material-specifications-matter-in-hyperscale-projects</link></item>
+<item><title>Texas Powers Past Virginia in Global Data Center Rankings - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/build-design/texas-powers-past-virginia-in-global-data-center-rankings</link></item>
+<item><title>AI Inference Pulls Infrastructure Back into Metro Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/build-design/ai-inference-pulls-infrastructure-back-into-metro-data-centers</link></item>
+<item><title>Do Data Centers Really Boost Property Values? A Closer Look - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/do-data-centers-really-boost-property-values-a-closer-look</link></item>
+<item><title>Nvidia Earnings Show AI Spending Moving Beyond GPUs - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/nvidia-earnings-show-ai-spending-moving-beyond-gpus</link></item>
+<item><title>US-Backed IBM, D-Wave CHIPS Deals Expand Quantum Push - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/next-gen-data-centers/us-backed-ibm-d-wave-chips-deals-expand-quantum-push</link></item>
+<item><title>SpaceX IPO Filing Recasts Company as AI Infrastructure Giant - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/build-design/spacex-ipo-filing-recasts-company-as-ai-infrastructure-giant</link></item>
+<item><title>Scaling the Memory Wall: HBM, CXL, and the New GPU Playbook - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-hardware/scaling-the-memory-wall-hbm-cxl-and-the-new-gpu-playbook</link></item>
+<item><title>Does Google’s $5B TPU Deal Signal a New Neocloud Era? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/blackstone-google-launch-5b-tpu-infrastructure-venture</link></item>
+<item><title>The Nuclear Option: Data Centers and the Responsible Provision of Power - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/the-nuclear-option-data-centers-and-the-responsible-provision-of-power</link></item>
+<item><title>GITEX AI EUROPE - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/events/gitex-ai-europe</link></item>
+<item><title>Why FAST-41 Now Covers AI Data Centers and Copper - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/build-design/fast-41-expands-into-ai-infrastructure-supply-chain</link></item>
+<item><title>EU: AI to Transform Data Center Operations – But Not Overnight - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/eu-ai-to-transform-data-center-operations-but-not-overnight</link></item>
+<item><title>Virginia Tightens Data Center Generator Permitting as Community Scrutiny Grows - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/build-design/virginia-deq-revises-data-center-generator-rules-as-community-pushback-builds</link></item>
+<item><title>Oklahoma Law Opens New Front in AI Data Center Power Debate - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/regulations/oklahoma-law-opens-new-front-in-ai-data-center-power-fight</link></item>
+<item><title>IDCA: Data Centers Hit 67.7 GW as Policy Pushback Mounts - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/idca-data-centers-hit-67-7-gw-as-policy-pushback-mounts</link></item>
+<item><title>Big Fiber’s $250M Signals an AI Dark-Fiber Land Rush - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/big-fiber-financing-signals-ai-s-next-infrastructure-land-rush</link></item>
+<item><title>NextEra-Dominion Merger: A $67B Bet on AI Power Demand - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/deals/nextera-dominion-merger-a-bet-on-ai-power-demand</link></item>
+<item><title>AI Demands Stretch the Limits of Data Center Retrofits - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/ai-demands-stretch-the-limits-of-data-center-retrofits</link></item>
+<item><title>Hollow-Core Fiber: Faster, Greener, but Is It Worth the Cost? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/networking/hollow-core-fiber-faster-greener-but-is-it-worth-the-cost-</link></item>
+<item><title>Battery Storage Gains Ground as Data Centers Seek Diesel Alternatives - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/battery-storage-gains-ground-as-data-centers-seek-diesel-alternatives</link></item>
+<item><title>AWS Pushes Graviton into Redshift Analytics Stack - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/aws-pushes-graviton-into-redshift-analytics-stack</link></item>
+<item><title>NC Tech Talk: AI Infrastructure Concerns Shift From GPU Growth to Efficiency - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/nc-tech-talk-ai-infrastructure-concerns-shift-from-gpu-scale-to-efficiency</link></item>
+<item><title>AI Hardware Supply Chains Tested as Iran Tensions Rise - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/supply-chain/iran-conflict-threatens-pcb-supply-chain-as-ai-server-demand-surges</link></item>
+<item><title>Blaize Bets on Rugged Edge AI Beyond the Data Center - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/blaize-bets-on-rugged-edge-ai-beyond-the-data-center</link></item>
+<item><title>Earnings Roundup: Neoclouds Shift From GPU Race to Power Wars - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/earnings-roundup-neoclouds-shift-from-gpu-race-to-power-wars</link></item>
+<item><title>Federation Architecture: A Safer Path to IT-OT Convergence in the AI Era - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-infrastructure-management/federation-architecture-a-safer-path-to-it-ot-convergence-in-the-ai-era</link></item>
+<item><title>Outage Report: AI Boom Threatens Years of Data Center Resiliency Gains - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/outages/outage-report-ai-boom-threatens-years-of-data-center-resiliency-gains</link></item>
+<item><title>Equinix Expands Fabric Geo Zones to Tackle Data Sovereignty - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/equinix-expands-fabric-geo-zones-to-tackle-data-sovereignty</link></item>
+<item><title>AI Transforms Data Centers into Power and Cooling Plants - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/build-design/ai-transforms-data-centers-into-power-and-cooling-plants</link></item>
+<item><title>Gridlock or Growth? ERCOT Warns Texas AI Power Boom May Not Materialize - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/gridlock-or-growth-ercot-warns-texas-ai-power-boom-may-not-materialize</link></item>
+<item><title>Live GPU Rental Listings Point to Early Price Compression - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/gpu-rental-markets-show-signs-of-pricing-compression</link></item>
+<item><title>Community Resistance Meets AI Data Center Expansion Head-On - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/build-design/organized-opposition-collides-with-ai-data-center-growth</link></item>
+<item><title>AI Server Market Update: Vendors Shift from Silicon to Services - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/servers/ai-server-market-update-vendors-shift-from-silicon-to-services</link></item>
+<item><title>Why AI Data Center Projects Face Years of Delays After Approval - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/why-ai-data-center-projects-face-years-of-delays-after-approval</link></item>
+<item><title>Nscale’s $790M Financing Marks a Shift to Utility-Style Deals - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/nordic-banks-back-massive-ai-power-buildout-in-norway</link></item>
+<item><title>From Outage to Action: A Guide to Cloud Region Migration - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/from-outage-to-action-a-guide-to-cloud-region-migration</link></item>
+<item><title>HVO: The Case for Rethinking Data Center Generator Fuel - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/hvo-the-case-for-rethinking-data-center-generator-fuel</link></item>
+<item><title>Interview: Aria Networks CEO on Why Inference Is Reshaping the Network - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/aria-networks-ceo-inference-is-reshaping-data-center-networking</link></item>
+<item><title>After the Power Crunch, AI Infrastructure Hits a Silicon Wall - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/after-the-power-crunch-ai-infrastructure-hits-a-gpu-wall</link></item>
+<item><title>Wholesale vs. Retail Colocation: How to Choose a Data Center Lease - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/colocation/wholesale-vs-retail-colocation-how-to-choose-a-data-center-lease</link></item>
+<item><title>Interview: Unison Energy CEO on Data Centers Turning to On-Site Power - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/build-design/unison-energy-ceo-on-data-centers-turning-to-on-site-power</link></item>
+<item><title>Are AI Neoclouds Rewiring Data Center Traffic Patterns? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/are-ai-neoclouds-rewiring-data-center-traffic-patterns-</link></item>
+<item><title>Interconnection Delays Push Texas Data Center Behind the Meter - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/build-design/unconventional-texas-data-center-explores-off-grid-power</link></item>
+<item><title>Will Fiber and Photonics Define Nvidia’s Next AI Data Center Push? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/will-fiber-and-photonics-define-nvidia-s-next-ai-data-center-push-</link></item>
+<item><title>From Capacity to Chaos: How AI Data Centers Challenge the Grid - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/uptime/from-capacity-to-chaos-how-ai-data-centers-challenge-the-grid</link></item>
 </channel></rss>
