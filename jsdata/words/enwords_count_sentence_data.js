@@ -1509,6 +1509,7 @@ var en_sentence_count_global=[
 "ladybird",
 "ladylove",
 "lakelet",
+"lambkin",
 "laogai",
 "laparoscope",
 "laparoscopy",
