@@ -848,10 +848,14 @@ function duplicate_words_kle(){
     '...':[],    //三个点
     
     };
-    var end_list=[];
-    var semicolon_without_space_list=[];
-    var quote_character_list=[];
     
+    var reg_list=[
+    [/[a-z]’[a-z]/i,[]],    //结尾字符判断 - 保留注释
+    [/\)[a-z]/i,[]],
+    [/;[^\s]/,[]],
+    [/[,;\s]$/,[]],
+    ];
+
     var type_str=enword_type_b(true);
 	for (let blxl=1,lent=enwords.length;blxl<lent;blxl++){
         var item=enwords[blxl];
@@ -877,14 +881,11 @@ function duplicate_words_kle(){
                 format_list2[key].push(item[0]);
             }
         }
-        if (item[2].match(/[,;\s]$/)!==null){   //结尾字符判断 - 保留注释
-            end_list.push(item[0]);
-        }
-        if (item[2].match(/;[^\s]/)!==null){
-            semicolon_without_space_list.push(item[0]);
-        }    
-        if (item[2].match(/\)[a-z]/i)!==null){
-            quote_character_list.push(item[0]);
+        
+        for (let one_reg of reg_list){
+            if (item[2].match(one_reg[0])!==null){
+                one_reg[1].push(item[0]);
+            }        
         }
     }
     
@@ -902,14 +903,11 @@ function duplicate_words_kle(){
         if (format_list2[key].length==0){continue;}
         bljg=bljg+'<p><b>【'+key+'】('+format_list2[key].length+')：</b> "'+list_join_2_reg_style_b(format_list2[key])+'"</p>\n';
     }
-    if (end_list.length>0){
-        bljg=bljg+'<p><b>【[,;\\s]"\\],】('+end_list.length+')：</b> "'+list_join_2_reg_style_b(end_list)+'"</p>\n';        
-    }
-    if (semicolon_without_space_list.length>0){
-        bljg=bljg+'<p><b>【;[^\\s]】('+semicolon_without_space_list.length+')：</b> "'+list_join_2_reg_style_b(semicolon_without_space_list)+'"</p>\n';        
-    }
-    if (quote_character_list.length>0){
-        bljg=bljg+'<p><b>【\\)[a-z]】('+quote_character_list.length+')：</b> "'+list_join_2_reg_style_b(quote_character_list)+'"</p>\n';        
+    
+    for (let one_reg of reg_list){
+        if (one_reg[1].length>0){
+            bljg=bljg+'<p><b>【'+one_reg[0].toString()+'】('+one_reg[1].length+')：</b> "'+list_join_2_reg_style_b(one_reg[1])+'"</p>\n';        
+        }    
     }
     
     bljg=bljg+'<p><b>重复释义单词('+definition_redundant.size+')：</b>"'+list_join_2_reg_style_b(Array.from(definition_redundant))+'"</p>\n';  
