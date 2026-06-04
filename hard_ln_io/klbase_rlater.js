@@ -621,8 +621,10 @@ function delete_batch_rlater_b(prefix='readlater',only_clicked=false){
         }
         oas=list_t;
     }
+    
     var oas_len=oas.length;
-
+    if (oas_len==0){return;}
+    
     var rndstr=randstr_b(4,true,false);
     if ((prompt('输入 '+rndstr+' 确认批量删除 '+oas_len+' 条记录') || '').trim()!==rndstr){return;}
 

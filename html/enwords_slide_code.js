@@ -53,7 +53,7 @@ function menu_enslide(){
 
     var klmenu_config=root_font_size_menu_b(str_t);
 
-    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu4,'💡','17rem','1rem','1rem')+klmenu_b(klmenu_config,'⚙','17rem','1rem','1rem'),'','0rem')+' ';
+    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu4,'💡','17rem','1rem','1rem')+klmenu_b(klmenu_config,'⚙','17rem','1rem','1rem'),'','0rem')+' ';
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',bljg);
 }

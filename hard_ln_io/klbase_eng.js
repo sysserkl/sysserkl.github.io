@@ -1015,14 +1015,10 @@ function en_word_temp_change_b(ospan,csword,cstype=''){
 
 function en_day_old_words_b(daynumber,cstype,array_num_t){
     function sub_en_day_old_words_b_oneword(oneword,daynumber,csinterval,asc_t){
-        if (daynumber % csinterval !== 0 && (1+asc_t%365)==daynumber){
-            return true;
-        }
+        if (daynumber % csinterval !== 0 && (1+asc_t%365)==daynumber){return true;}
         
         //对于所有asc值对应的一年内的天数能被 如10 整除（即第10天、第20天...）的单词 - 保留注释
-        if ((1+asc_t%365) % csinterval == 0 && 1+(asc_t+oneword[4][3]) % 365 == daynumber){
-            return true;
-        }
+        if ((1+asc_t%365) % csinterval == 0 && 1+(asc_t+oneword[4][3]) % 365 == daynumber){return true;}
         return false;
     }
     //-----------------------
@@ -1528,7 +1524,7 @@ function en_word_temp_get_b(cstype=''){
             en_words_temp_important_global.push(en_words_temp_global[blxl]);
         }
     }
-    performance_b('en_word_temp_get_b()',t0);
+    performance_b('en_word_temp_get_b()',t0,0);
 }
 
 function enwords_temp_2_local_storage_b(csarray){
@@ -1603,7 +1599,6 @@ function enwords_array_to_html_b(csarray,showstatus=true,isrecent=false,csword='
         var cshidelineno=true;
     }
 
-	var bljg='';
 	var length_t=csarray.length;
     var jumpstr='';
     
@@ -1617,7 +1612,8 @@ function enwords_array_to_html_b(csarray,showstatus=true,isrecent=false,csword='
         }
     }
     var line_pref=new Date().getMilliseconds()+'_'+parseInt(Math.random()*9999);
-    
+
+	var bljg='';
 	for (let blxl=0;blxl<length_t;blxl++){
         var blitem_t=csarray[blxl];
         if (blitem_t==null || blitem_t==[]){continue;}
@@ -3115,7 +3111,7 @@ function en_words_show_check_b(){
     }
 }
 
-function max_result_enwords_b(csmax=500){
+function max_result_enwords_b(csmax=5000){
     var oinput=document.getElementById('input_max_result');
     if (oinput){
         csmax=parseInt(oinput.value);

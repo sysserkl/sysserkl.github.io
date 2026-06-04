@@ -1,4 +1,20 @@
 function olds_words_batch_today_words(rnd_words_num=0,cn_def_words_num=0){
+    function sub_olds_words_batch_today_words_easy(){
+        let result_t=[];
+        for (let item of words_searched_arr_global){
+            if (enwords_easy_global.includes(item[0]) && !en_words_temp_global.includes(item[0])){
+                console.log('忽略',item[0]);
+                continue;
+            }
+            result_t.push(item);
+        }
+        words_searched_arr_global=result_t;
+    }
+    
+    var t0 = performance.now();
+
+    en_word_temp_get_b();
+    
     var day1 = document.getElementById('select_day_start').value;
     var month1=document.getElementById('select_month_start').value;
     var day2 = document.getElementById('select_day_end').value;
@@ -15,23 +31,26 @@ function olds_words_batch_today_words(rnd_words_num=0,cn_def_words_num=0){
         var list_t=[];
         
         get_day_words_enwc_b(theday.getDate(),theday.getMonth()+1,'old',false,false);
-        list_t=list_t.concat(words_searched_arr_global);
+        sub_olds_words_batch_today_words_easy();
         
         if (words_searched_arr_global.length>0){
+            list_t=list_t.concat(words_searched_arr_global);        
             bljg=bljg+enwords_array_to_html_b(words_searched_arr_global,false)+'<hr />';
         }
         
         getlines_rnd_enwc_b(rnd_words_num,false);
-        list_t=list_t.concat(words_searched_arr_global);
+        sub_olds_words_batch_today_words_easy();
 
         if (words_searched_arr_global.length>0){
+            list_t=list_t.concat(words_searched_arr_global);        
             bljg=bljg+enwords_array_to_html_b(words_searched_arr_global,false)+'<hr />';
         }
         
         rnd_cn_search_enwc_b(cn_def_words_num,false);
-        list_t=list_t.concat(words_searched_arr_global);
+        sub_olds_words_batch_today_words_easy();
 
         if (words_searched_arr_global.length>0){
+            list_t=list_t.concat(words_searched_arr_global);        
             bljg=bljg+enwords_array_to_html_b(words_searched_arr_global,false)+'<hr />';
         }        
         
@@ -55,6 +74,7 @@ function olds_words_batch_today_words(rnd_words_num=0,cn_def_words_num=0){
     top_bottom_arrow_b('div_top_bottom',words_searched_arr_global.length+' ');    
     
     title_change_enwords_b('旧单词+rnd'+rnd_words_num+'+cn'+cn_def_words_num);
+    console.log('olds_words_batch_today_words() 费时：'+(performance.now() - t0) + ' milliseconds');    
 }
 
 function rnd_batch_today_words(cstype=''){
@@ -92,11 +112,21 @@ function rnd_batch_today_words(cstype=''){
     top_bottom_arrow_b('div_top_bottom',words_searched_arr_global.length+' ');
 }
 
-function set_today_words(){
-    var today = new Date();
-    months_days_today_words(today.getMonth()+1,today.getDate());
-    option_days_today_words('select_day_start',today.getMonth()+1,today.getDate());
-    option_days_today_words('select_day_end',today.getMonth()+1,today.getDate());
+function set_today_words(cstype=''){
+    if (cstype==''){
+        var csdate = new Date();
+    } else {
+        var blstr=new Date().getFullYear()+'-'+document.getElementById('select_month_start').value+'-'+document.getElementById('select_day_start').value;
+        if (cstype=='prev'){
+            var csdate =previous_day_b(blstr,1,false);
+        } else {//next
+            var csdate =next_day_b(blstr,1,false);
+        }
+    }
+    
+    months_days_today_words(csdate.getMonth()+1,csdate.getDate());
+    option_days_today_words('select_day_start',csdate.getMonth()+1,csdate.getDate());
+    option_days_today_words('select_day_end',csdate.getMonth()+1,csdate.getDate());
 }
 
 function months_days_today_words(csm,csd){

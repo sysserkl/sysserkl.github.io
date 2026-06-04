@@ -5,7 +5,7 @@
 <meta charset="UTF-8" />
 <script src="../hard_ln_io/klbase.js"></script>
 <script>
-klbase_addons_import_js_b(['css','date','eng','enbook','enwc','wiki','idb'],[],[],['enwords_today_code.js']);
+klbase_addons_import_js_b(['css','date','eng','enbook','enwc','wiki','idb'],[],['words/enwords_easy_data.js',],['enwords_today_code.js']);
 </script>
 <script>
 //在 klbase_books.js 前
@@ -39,7 +39,9 @@ mobile_style_enwc_b();
 <select id="select_day_start"></select>日 — 
 <select id="select_month_end" onchange="option_days_today_words('select_day_end',this.value);"></select>月
 <select id="select_day_end"></select>日
+<span class="aclick" onclick="set_today_words('prev');">上一日</span>
 <span class="aclick" onclick="set_today_words();">今日</span>
+<span class="aclick" onclick="set_today_words('next');">下一日</span>
 <span class="aclick" onclick="olds_words_batch_today_words();">已背单词</span>
 <label><input type="checkbox" id="check_js_wiki" />js_wiki</label>
 <input type="hidden" id="input_search">

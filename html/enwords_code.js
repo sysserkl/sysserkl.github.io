@@ -678,7 +678,7 @@ function menu_kle(){
     klmenu_old.push('<span class="span_menu" onclick="'+str_t+'old_words_without_phrase_kle();">无词组的旧单词</span>');
     klmenu_old.push('<span class="span_menu" onclick="'+str_t+'old_words_and_phrase_with_space_kle();">空格词组和对应单词</span>');
     
-    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu_new,'🆕','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','14rem','1rem','1rem')+klmenu_b(klmenu_search,'🔽','18rem','1rem','1rem','30rem'),'','0rem')+' ';
+    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu_new,'🆕','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','14rem','1rem','1rem')+klmenu_b(klmenu_search,'🔽','18rem','1rem','1rem','30rem'),'','0rem')+' ';
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',bljg);
     

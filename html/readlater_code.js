@@ -1061,7 +1061,7 @@ function tags_websites_rlater(taglist=[],showrecent=true,csmax=10,showhtml=true,
         if (only_li){
             result_t.push(blstr);        
         } else {
-            var blbutton=((tagname=='TOP' && readlater_data_global.length>recentlength_global)?'<span class="aclick" onclick="top_pages_rlater('+(recentlength_global+1)+');">more</span>':'');
+            var blbutton=((tagname=='TOP' && readlater_data_global.length>recentlength_global)?'<span class="aclick" onclick="top_pages_rlater('+(recentlength_global+1)+');">more</span> '+delete_clicked_button_rlater():'');
             result_t.push(top_div_rlater(blstr,tagname,cstype,is_mobile,blbutton));
         }
     }
@@ -1222,12 +1222,16 @@ function search_array_2_html_rlater(csarr,cstype){
     
     bljg=years_rlater_b(readlater_data_global.length,csarr.length)+bljg;
     if (cstype=='2'){
-        bljg=bljg+'<p><span class="aclick" onclick="delete_batch_rlater_b();">批量删除</span> <span class="aclick" onclick="delete_batch_rlater_b(\'readlater\',true);">批量删除已点击的记录</span> <span id="span_batch_delete_process"></span></p>';
+        bljg=bljg+'<p><span class="aclick" onclick="delete_batch_rlater_b();">批量删除</span> '+delete_clicked_button_rlater()+'</p>';
     }
     
     bljg='<div id="div_links">'+bljg+'</div>';
     
     div_column_count_rlater(bljg,cstype!=='2');
+}
+
+function delete_clicked_button_rlater(){
+    return '<span class="aclick" onclick="delete_batch_rlater_b(\'readlater\',true);">批量删除已点击的记录</span> <span id="span_batch_delete_process"></span>';
 }
 
 function div_column_count_rlater(cscontent,is_one=true){
