@@ -2093,6 +2093,9 @@ function enword_search_type_b(cs_w_p_d){
 }
 
 function enwords_search_one_b(csitem,cswordlist,csreg,csword_filter,csword_filter_set,cs_w_p_d,cscount,csmax=500){
+    //csitem,cswordlist,csreg,csword_filter,csword_filter_set,cs_w_p_d,cscount,csmax 形如：
+    //Array(5) [ "workshop", "UK ['wɜːkʃɒp] US ['wɜːrkʃɑːp]", "<b>n. </b>工场；车间；研讨会；讲习班", 20237, (4) […] ]   Array [ "sunbathe" ]   true sunbathe  Set [ "sunbathe" ]   Array(3) [ true, false, true ]   2 500
+    
     var bltmp1 = (cs_w_p_d[0]?csitem[0]:'');
     var bltmp2 = (cs_w_p_d[1]?csitem[1]:'');
     var bltmp3 = (cs_w_p_d[2]?csitem[2]:'');
@@ -2207,7 +2210,7 @@ function enwords_mini_search_do_b(csword=''){
     en_word_temp_get_b();
     
     var cs_w_p_d=enword_search_type_b([]);
-    var csword_filter=enword_filter_reg_b(csword)
+    var csword_filter=enword_filter_reg_b(csword);
     var words_temp_equal_arr=enwords_search_old_b(cs_w_p_d,csword,csreg);   
     var words_temp_arr=enwords_merge_b(words_temp_equal_arr,500);
     

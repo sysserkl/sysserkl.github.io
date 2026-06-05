@@ -570,6 +570,8 @@ function menu_base_enwc_b(){
     ['随机旧单词','getlines_rnd_enwc_b(\'\',true,false);',true],
     ['easy','getlines_rnd_enwc_b(\'\',true,false,\'easy\');',true],
     ['not easy','getlines_rnd_enwc_b(\'\',true,false,\'not easy\');',true],
+    ['<select id="select_random_old_words_enwc"><option>全部</option><option>当前</option></select>','',false],
+
     ];    
     menu1.push(menu_container_b(str_t,group_list,''));
     
@@ -663,17 +665,31 @@ function sls_search_link_generate_enwc_b(cslist){
 
 function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true,cstype=''){
 	if (cslines===''){
-        var cslines= document.getElementById('input_lines').value.trim();
+        cslines= document.getElementById('input_lines').value.trim();
     }
-    cslines= Math.min(enwords.length,max_result_enwords_b(),Math.max(0,parseInt(cslines)));
+    
+    var oselect=document.getElementById('select_random_old_words_enwc');
+    if (oselect){
+        var all_or_current=oselect.value;
+    } else {
+        var all_or_current='全部';
+    }
+    
+    if (all_or_current=='全部'){
+        var ensource=enwords;
+    } else {
+        var ensource=[].concat(words_searched_arr_global);
+    }
+    
+    cslines= Math.min(ensource.length,max_result_enwords_b(),Math.max(0,parseInt(cslines)));
 	document.getElementById('input_lines').value=cslines;
     if (cstype!=='easy'){   //easy 不随机排序 - 保留注释
-	    enwords_sort_b('r');
+	    ensource.sort(randomsort_b);
     } else {
         var old_set=simple_words_b();
         var diff=array_difference_b(new Set(enwords_easy_global),old_set,true);
         if (diff.size>0){
-            alert('错误的 easy 单词：'+Array.from(diff));
+            alert('错误的 easy 单词：'+Array.from(diff).slice(0,10));
         }
     }
     
@@ -681,7 +697,7 @@ function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true,csty
     var blcount=0;
     switch (cstype){
         case 'easy':
-            for (let item of enwords){
+            for (let item of ensource){
                 if (blcount>=cslines){break;}
                 if (!enwords_easy_global.includes(item[0])){continue;}
                 
@@ -690,7 +706,7 @@ function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true,csty
             }        
             break;
         case 'not easy':
-            for (let item of enwords){
+            for (let item of ensource){
                 if (blcount>=cslines){break;}
                 if (enwords_easy_global.includes(item[0])){continue;}
             
@@ -699,7 +715,7 @@ function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true,csty
             }        
             break;
         default:    //all
-            for (let item of enwords){
+            for (let item of ensource){
                 if (blcount>=cslines){break;}            
                 words_searched_arr_global.push(item);
                 blcount=blcount+1;
