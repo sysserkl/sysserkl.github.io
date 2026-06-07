@@ -1,5 +1,4 @@
 var enwords_easy_global=`
-
 Abbie
 above-mentioned
 abovementioned
@@ -97,19 +96,30 @@ bikeway
 biochemically
 biochemist
 biochemistry
+biocide
+biocompatibility
+biocompatible
 biodegradable
 biodegrade
+biodiesel
 biodiversity
+bioelectric
+bioelectrical
+biofeedback
 biofuel
 biogeochemical
 biogeochemistry
 biologically
 biomedical
 biomolecular
+birthmark
 birth mother
+birthweight
 bitcoin
+blackboard
 black-hearted
 black tea
+Blackwell
 bladelike
 blamable
 blameable
@@ -400,6 +410,8 @@ he'll
 helmsmen
 Helsinki
 Hendricks
+herbal tea
+herb tea
 herdsmen
 hertz
 hesitatingly
@@ -773,6 +785,7 @@ salespeople
 Samoa
 satisfyingly
 sceptical
+Schumpeter
 Scofield
 Scotsmen
 Scott
@@ -1081,9 +1094,11 @@ unskillful
 unsteadily
 unsurprisingly
 untie
+untimely
 unwisely
 usefulness
 utilisation
+utility pole
 valueless
 vertically
 victimless
@@ -1099,6 +1114,7 @@ watchmaker
 waterless
 water-logged
 waterskin
+water-soluble
 watt-hour
 weaponize
 weaponless
