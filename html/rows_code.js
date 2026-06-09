@@ -265,12 +265,21 @@ function menu_klr2(){
     '<a href="readlater.htm" onclick="'+str_t+'" target=_blank>readlater</a>',
     ];    
     
+    if (is_local_b()){
+        klmenu_links.push('<span class="span_menu" onclick="'+str_t+'mermaid_done_import_klr2();">导入 mermaid done</span>');
+    }    
+    
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
     '<span class="span_menu" onclick="'+str_t+'title_change_klr2();">修改页面标题</span>',    
     ]);
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_ende,'🛡️','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','28rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','20rem','1rem','1rem','60rem'),'','0rem','','menus_klr2')+' ');
+}
+
+function mermaid_done_import_klr2(){
+    if (typeof mermaid_done_global == 'undefined'){return;}
+    document.getElementById('textarea_rows_content').value=mermaid_done_global.join('\n');
 }
 
 function random_txt_files_klr2(cssize=100){

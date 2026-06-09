@@ -1144,6 +1144,20 @@ Yemen
 Zelenskyy
 zero gravity
 Zuma
+Kaaba
+Linus
+seventy-five
+skywards
+arm-wrestling
+e-bike
+reconnection
+McDonald's
+econometrics
+Jeannette
+Jeanette
+microservice
+unprofitable
+slow-witted
 
 
 
