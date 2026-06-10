@@ -1691,6 +1691,7 @@ function page_p_style_b(){
 }
 
 function page_combination_b(cslen,rows_per_page,csno,page_fn,locate_fn,p_style=false,show_number=4,interval_number=10,p_class='',button_class='oblong_box',first_page_no=1,has_right_part=true,rand_page_no_list=[]){
+    //cslen,rows_per_page,csno 形如：20478 40 1，20478 40 41 - 保留注释
     if (cslen<=rows_per_page){return '';}
     var pages=Math.ceil(cslen/rows_per_page);
     var bljg='';

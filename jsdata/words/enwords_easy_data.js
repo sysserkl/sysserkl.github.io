@@ -2,6 +2,7 @@ var enwords_easy_global=`
 Abbie
 above-mentioned
 abovementioned
+abovenamed
 absorbable
 abundantly clear
 accusingly
@@ -25,6 +26,7 @@ Alaska
 Alita
 Allah
 anglicise
+anglicize
 Anglophobe
 annoyingly
 Anthony
@@ -54,11 +56,14 @@ antismoking
 antitumor
 anti-union
 antiunion
+archeology
 Arlington
 Armenia
 Armstrong
+arm-wrestling
 Arnim
 arrestee
+Aruba
 as if
 as usual
 Austria
@@ -67,10 +72,12 @@ autocomplete
 autocorrect
 autofill
 autofocus
+baby-doll
 babysat
 baby tooth
 back-breaking
 backstabber
+bacteriology
 bad-tempered
 bagless
 balloon-like
@@ -112,6 +119,7 @@ biogeochemistry
 biologically
 biomedical
 biomolecular
+biplane
 birthmark
 birth mother
 birthweight
@@ -128,6 +136,7 @@ Bloomfield
 boatmen
 Bolivia
 Bollywood
+bondman
 bondmen
 bondsmen
 bondwomen
@@ -153,6 +162,7 @@ bushlike
 businessmen
 businessperson
 busload
+calibre
 Cambodia
 cameramen
 Cameroon
@@ -189,6 +199,7 @@ Claudia
 clergymen
 cleverness
 clickable
+climatology
 cloud-based
 Coachella
 coenzyme
@@ -197,8 +208,13 @@ cold-hearted
 coldhearted
 collarless
 colourway
+co-manage
+comanage
+co-management
+comanager
 committeemen
 common sense
+common share
 computerization
 configurable
 confusingly
@@ -223,6 +239,7 @@ crime rate
 criminology
 Crockett
 crossbowmen
+cross hairs
 cultureless
 currently
 customisable
@@ -252,6 +269,7 @@ desalt
 destabilize
 deworm
 didn't
+diminishing returns
 director's cut
 disbelieve
 disbelievingly
@@ -279,7 +297,9 @@ earthman
 Earthpeople
 Earthperson
 easternmost
+e-bike
 ecologist
+econometrics
 Edmond
 educate
 eggless
@@ -289,6 +309,7 @@ eightpence
 eighty-five
 eighty-one
 elementary school
+e-mail
 embarrassingly
 enduringly
 enforceable
@@ -312,6 +333,7 @@ explosive device
 eyewall
 falsifiability
 fatalist
+fat-free
 fatherless
 fatherly
 faultless
@@ -330,6 +352,7 @@ fish oil
 fishpond
 fittingly
 flameproof
+flavourless
 flawlessly
 fleetwide
 flowerbed
@@ -373,6 +396,7 @@ girlhood
 goatskin
 good-humoredly
 goodhumoredly
+good-humouredly
 goodnight
 good-tempered
 grammatical
@@ -391,6 +415,7 @@ half-empty
 half-naked
 half-remembered
 half-yearly
+Hampton
 Hancock
 Harrington
 Harris
@@ -488,6 +513,8 @@ Jacksonville
 Jaime
 Jamie
 jaywalker
+Jeanette
+Jeannette
 Joab
 Joanna
 Jodi
@@ -502,6 +529,7 @@ judo
 Julia
 Jung
 jurymen
+Kaaba
 Kathy
 Keats
 kennelmen
@@ -519,6 +547,7 @@ ladylike
 lamplike
 lamplit
 lawfully
+law of averages
 leaderless
 leafless
 leaflike
@@ -530,6 +559,7 @@ light industry
 lightless
 lighttight
 Lindsay
+Linus
 lionlike
 listicle
 livestreamer
@@ -558,6 +588,7 @@ market share
 Marvin
 massless
 matrilinear
+McDonald's
 mealtime
 memory card
 Micawber
@@ -574,10 +605,12 @@ microenvironment
 microkernel
 micromanagement
 micromanager
+microservice
 middlemen
 middleware
 milliampere
 mindshare
+minimisation
 misconfiguration
 misquote
 misspell
@@ -602,6 +635,7 @@ multiuser
 Munich
 mysteriousness
 mystically
+name tag
 nanogram
 national debt
 natural gas
@@ -614,6 +648,11 @@ neo-Marxism
 neo-Marxist
 netbook
 network card
+neurobiology
+neuropathology
+neurophysiology
+neuropsychology
+neuroradiology
 neutron star
 New Hampshire
 newshound
@@ -662,6 +701,8 @@ odorless
 ohm
 oncologist
 one-parent family
+open-handed
+ordinary share
 Oreo
 outpatient
 outspokenly
@@ -707,16 +748,21 @@ phish
 piecework
 Pierre
 pink-collar
+placename
+planetologist
 pleasureless
 plowmen
 policemen
 political correctness
 post-industrial
+postindustrial
 postmodern
 postmodernism
 poverty line
 powerlessness
 power station
+preference share
+preferred share
 pre-Islamic
 pre-Muslim
 pre-pandemic
@@ -725,6 +771,7 @@ pre-revolutionary
 preventable
 prewarn
 prime rate
+productively
 professionalisation
 professionalise
 professionalization
@@ -742,6 +789,7 @@ punishable
 purple state
 pyriform
 Quebec
+Quran
 rainwater
 randomize
 ransomware
@@ -757,12 +805,14 @@ rechargeable
 recognisable
 recognizable
 recognizably
+reconnection
 redden
 red-haired
 redness
 reformer
 reinsert
 relearn
+rename
 replaceable
 reportable
 reusability
@@ -789,6 +839,7 @@ Schumpeter
 Scofield
 Scotsmen
 Scott
+sealskin
 seamen
 searchable
 search engine
@@ -799,6 +850,7 @@ seaworthy
 seedless
 see you around
 see you later
+selectively
 selectmen
 self-improvement
 self-test
@@ -807,23 +859,29 @@ seminude
 semisolid
 sense of humor
 serval
+seventy-five
 seventy-nine
 seventy-one
 seventy-seven
 seventy-six
 seventy-two
 sexology
+Shakti
 shallowly
 shareable
 Shawn
+shellshock
+shellshocked
 Shiba Inu
 shieldless
+shoemaking
 shootable
 short-sighted
 short-sightedness
 shyly
 shyness
 Silk Road
+simplehearted
 singable
 single-parent family
 sinless
@@ -841,9 +899,11 @@ sixty-two
 skeptical
 skeptically
 skippable
+skywards
 slaughtermen
 sleeping bag
 sleeveless
+slow-witted
 smallish
 smallpox
 smartwatch
@@ -885,6 +945,7 @@ stepmom
 stepsister
 stepson
 stone-ground
+stoneground
 stormless
 stormproof
 strategically
@@ -901,6 +962,7 @@ subdirectory
 subfolder
 subgoal
 submenu
+sub-prime
 subsea
 subtask
 subzero
@@ -944,6 +1006,8 @@ Taiwanese
 Tajikistan
 taskbar
 Tate
+tax-exempt
+tax-free
 tax haven
 taxiway
 tea break
@@ -1013,10 +1077,12 @@ transphobia
 travel sickness
 treeless
 treelike
+treetop
 tribesmen
 trioxide
 Trotwood
 trust-buster
+trust-busting
 tsar
 Tunguska
 Tupperware
@@ -1072,6 +1138,7 @@ uniquely
 uniqueness
 universalisation
 unjustly
+unkillable
 unkind
 unknowingly
 unladylike
@@ -1083,6 +1150,8 @@ unmistakably
 unmistakeable
 unopened
 unpardonable
+unpractised
+unprofitable
 unprofitableness
 unreliability
 unrighteousness
@@ -1104,6 +1173,7 @@ vertically
 victimless
 video card
 vodka
+volcanology
 Volga
 voltmeter
 V-shaped
@@ -1111,6 +1181,7 @@ waiting room
 Walter
 Warsaw Pact
 watchmaker
+watercooler
 waterless
 water-logged
 waterskin
@@ -1121,7 +1192,9 @@ weaponless
 Welchman
 we're
 white-collar
+whole-wheat
 who've
+wide-bodied
 wifelike
 wildland
 Wilkins
@@ -1144,22 +1217,20 @@ Yemen
 Zelenskyy
 zero gravity
 Zuma
-Kaaba
-Linus
-seventy-five
-skywards
-arm-wrestling
-e-bike
-reconnection
-McDonald's
-econometrics
-Jeannette
-Jeanette
-microservice
-unprofitable
-slow-witted
-
-
-
+repaint
+anciently
+Kent
+deceptive
+grandniece
+feces
+causelessly
+Vancouver
+Clayton
+cookware
+cartoony
+Eritrea
+Castro
+carpet-knight
+Second Coming
 
 `.trim().split('\n');

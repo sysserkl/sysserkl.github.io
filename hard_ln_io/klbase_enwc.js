@@ -567,10 +567,11 @@ function menu_base_enwc_b(){
     ];
 
     var group_list=[
-    ['随机旧单词','getlines_rnd_enwc_b(\'\',true,false);',true],
+    ['旧单词','getlines_rnd_enwc_b(\'\',true,false);',true],
     ['easy','getlines_rnd_enwc_b(\'\',true,false,\'easy\');',true],
     ['not easy','getlines_rnd_enwc_b(\'\',true,false,\'not easy\');',true],
     ['<select id="select_random_old_words_enwc"><option>全部</option><option>当前</option></select>','',false],
+    ['<label><input type="checkbox" id="checkbox_random_old_words_enwc_b" checked>随机</label>','',false],
 
     ];    
     menu1.push(menu_container_b(str_t,group_list,''));
@@ -683,9 +684,13 @@ function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true,csty
     
     cslines= Math.min(ensource.length,max_result_enwords_b(),Math.max(0,parseInt(cslines)));
 	document.getElementById('input_lines').value=cslines;
-    if (cstype!=='easy'){   //easy 不随机排序 - 保留注释
+    
+    var orandom=document.getElementById('checkbox_random_old_words_enwc_b');
+    if (orandom && orandom.checked){
 	    ensource.sort(randomsort_b);
-    } else {
+    }
+    
+    if (cstype=='easy'){
         var old_set=simple_words_b();
         var diff=array_difference_b(new Set(enwords_easy_global),old_set,true);
         if (diff.size>0){

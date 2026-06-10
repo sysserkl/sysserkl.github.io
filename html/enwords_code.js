@@ -678,7 +678,7 @@ function menu_kle(){
     klmenu_old.push('<span class="span_menu" onclick="'+str_t+'old_words_without_phrase_kle();">无词组的旧单词</span>');
     klmenu_old.push('<span class="span_menu" onclick="'+str_t+'old_words_and_phrase_with_space_kle();">空格词组和对应单词</span>');
     
-    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu_new,'🆕','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','14rem','1rem','1rem')+klmenu_b(klmenu_search,'🔽','18rem','1rem','1rem','30rem'),'','0rem')+' ';
+    var bljg=klmenu_multi_button_div_b(klmenu_b(klmenu1,'','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_old,'旧','19rem','1rem','1rem','60rem')+klmenu_b(klmenu_brain,'🧠','17rem','1rem','1rem')+klmenu_b(klmenu_new,'🆕','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_statistics,'🧮','14rem','1rem','1rem')+klmenu_b(klmenu_search,'🔽','18rem','1rem','1rem','30rem'),'','0rem')+' ';
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',bljg);
     
@@ -963,31 +963,44 @@ function day_old_word_all_kle(cstype='',array_num_t=[0]){
     }
 }
 
-function similar_words_batch_kle(csno){
-	var csnum=arguments.length;
-	if (csnum==0){
-        var csno= parseInt(document.getElementById('input_lineno').value.trim())-1;
+function similar_words_batch_kle(csno=false,pageitems=false){
+	if (csno===false){
+        csno= parseInt(document.getElementById('input_lineno').value.trim());
     }
 	csno=Math.max(0,csno);
+    
+    if (pageitems===false){
+        pageitems=parseInt(document.getElementById('input_max_result').value);
+    }
+
 	var cshideno=document.getElementById('check_hide_no').checked;
 	var cshidelineno=document.getElementById('check_hide_lineno').checked;
 	var cshidesimilarno=document.getElementById('check_hide_similarno').checked;
 	var bljg='';
-	var pageitems=50;
+
+    var similar_list=[];
+    var similar_set=new Set();
 	for (let blxl=csno,lent=enwords.length;blxl<lent;blxl++){
-		var tmpstr=similar_enwords_b(enwords[blxl][0],cshideno,cshidelineno,cshidesimilarno,false);
-		if (tmpstr!=''){
+		var tmpstr=similar_enwords_b(enwords[blxl][0],cshideno,cshidelineno,cshidesimilarno,false,similar_list,similar_set);
+		if (tmpstr!==''){
             bljg=bljg+'<h3>'+enwords[blxl][0]+'</h3>\n'+tmpstr;
         }
 		if (blxl-csno+1>=pageitems){break;}
 	}
-	if (csno-pageitems>=0){
-		bljg=bljg+'<span class="aclick" onclick="similar_words_batch_kle('+(csno-pageitems)+');">上一页</span> ';
-    }	
-	if (csno+pageitems<enwords.length){
-		bljg=bljg+'<span class="aclick" onclick="similar_words_batch_kle('+(csno+pageitems)+');">下一页</span> ';
+    
+    var pages=page_combination_b(enwords.length,pageitems,csno,'similar_words_batch_kle','locate_swords_batch_kle',false,1,100);
+    
+	var odiv=document.getElementById('divhtml');
+    odiv.innerHTML=bljg+pages;
+    mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));
+    words_searched_arr_global=similar_list;
+}
+
+function locate_swords_batch_kle(pages,pageitems){
+    var blno=page_location_b(pages);
+    if (blno!==false){
+        similar_words_batch_kle((blno-1)*pageitems+1);
     }
-	document.getElementById('divhtml').innerHTML=bljg;
 }
 
 function recent_bookmark_position(){
