@@ -645,10 +645,15 @@ function menu_kle(){
     '<span class="span_menu" onclick="'+str_t+'other_characters_kle();">除字母外的其他字符</span>',
     '<span class="span_menu" onclick="'+str_t+'week_plan_show_kle();">每周记忆计划</span>',    
     '<span class="span_menu" onclick="'+str_t+'search_similar_new_sentence_kle(\'例句\',\'’\');">含有中文标点的例句</span>',    
-    '<span class="span_menu" onclick="'+str_t+'similar_words_batch_kle();">全部相似单词</span>',    
     fpara_menu_b(str_t),
     ]);
 
+    var group_list=[
+    ['全部','similar_words_batch_kle();',true],
+    ['当前','similar_words_batch_kle(false,false,true);',true],
+    ];    
+    klmenu_statistics.push(menu_container_b(str_t,group_list,'相似单词：'));
+    
     var list_t=[
     "-([a-zA-Z]{3,}.*){3,}(:r)",
     "UK\\s\\[(.*?)\\]\\sUS\\s\\[\\1\\]$(:r)",
@@ -963,7 +968,7 @@ function day_old_word_all_kle(cstype='',array_num_t=[0]){
     }
 }
 
-function similar_words_batch_kle(csno=false,pageitems=false){
+function similar_words_batch_kle(csno=false,pageitems=false,is_current=false){
 	if (csno===false){
         csno= parseInt(document.getElementById('input_lineno').value.trim());
     }
@@ -980,16 +985,25 @@ function similar_words_batch_kle(csno=false,pageitems=false){
 
     var similar_list=[];
     var similar_set=new Set();
-	for (let blxl=csno,lent=enwords.length;blxl<lent;blxl++){
-		var tmpstr=similar_enwords_b(enwords[blxl][0],cshideno,cshidelineno,cshidesimilarno,false,similar_list,similar_set);
+    
+    if (is_current){
+        var csarr=[];
+        for (let item of words_searched_arr_global){
+            csarr.push([].concat(item));
+        }
+        var pages='';
+    } else {
+        var csarr=enwords;
+        var pages=page_combination_b(csarr.length,pageitems,csno,'similar_words_batch_kle','locate_swords_batch_kle',false,1,100);
+    }
+	for (let blxl=csno,lent=csarr.length;blxl<lent;blxl++){
+		var tmpstr=similar_enwords_b(csarr[blxl][0],cshideno,cshidelineno,cshidesimilarno,false,similar_list,similar_set);
 		if (tmpstr!==''){
-            bljg=bljg+'<h3>'+enwords[blxl][0]+'</h3>\n'+tmpstr;
+            bljg=bljg+'<h3>'+csarr[blxl][0]+'</h3>\n'+tmpstr;
         }
 		if (blxl-csno+1>=pageitems){break;}
 	}
-    
-    var pages=page_combination_b(enwords.length,pageitems,csno,'similar_words_batch_kle','locate_swords_batch_kle',false,1,100);
-    
+
 	var odiv=document.getElementById('divhtml');
     odiv.innerHTML=bljg+pages;
     mouseover_mouseout_oblong_span_b(odiv.querySelectorAll('span.oblong_box'));

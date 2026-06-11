@@ -25,9 +25,12 @@ Aladdin
 Alaska
 Alita
 Allah
+anciently
+Andrea
 anglicise
 anglicize
 Anglophobe
+Angola
 annoyingly
 Anthony
 anti-abortion
@@ -64,6 +67,7 @@ arm-wrestling
 Arnim
 arrestee
 Aruba
+Asia
 as if
 as usual
 Austria
@@ -72,6 +76,8 @@ autocomplete
 autocorrect
 autofill
 autofocus
+autosave
+axeman
 baby-doll
 babysat
 baby tooth
@@ -93,6 +99,7 @@ beekeeper
 believability
 beltlike
 Benjamin
+best-selling
 Biden
 bidirectionally
 big data
@@ -173,10 +180,14 @@ capital-intensive
 carefulness
 carelessness
 carmaker
+carpet-knight
 carsick
 carsickness
 Carson
+cartoony
 cashless
+Castro
+causelessly
 cavalrymen
 ceaseless
 ceaselessly
@@ -196,6 +207,7 @@ churro
 clansmen
 Claude
 Claudia
+Clayton
 clergymen
 cleverness
 clickable
@@ -219,6 +231,7 @@ computerization
 configurable
 confusingly
 congressmen
+cookware
 Cornwall
 correctness
 cosplayer
@@ -248,12 +261,14 @@ Damascus
 Danny
 dark-eyed
 data type
+Davis
 Dead Sea
 dealt
 deathlike
 debater
 debone
 decade-long
+deceptive
 declassify
 decode
 decolonization
@@ -280,6 +295,7 @@ disrespectful
 Dnieper
 dogskin
 dog-tired
+Donald
 doormen
 Douglas
 Douglass
@@ -318,6 +334,8 @@ Englishmen
 Englishwoman
 epicentre
 erasable
+Eritrea
+Eton
 even-handed
 evening school
 evildoer
@@ -338,6 +356,7 @@ fatherless
 fatherly
 faultless
 featherless
+feces
 feelingless
 ferrymen
 f-hole
@@ -379,6 +398,7 @@ fruitfulness
 frustratingly
 Fukuyama
 fundraise
+Gambia
 gamification
 gamify
 Garfield
@@ -401,6 +421,7 @@ goodnight
 good-tempered
 grammatical
 grammatically
+grandniece
 grasslike
 grayish
 green tea
@@ -408,6 +429,7 @@ Greig
 greyish
 grown
 guardsmen
+guilt
 gunmen
 hair dryer
 half-dozen
@@ -417,6 +439,7 @@ half-remembered
 half-yearly
 Hampton
 Hancock
+handloom
 Harrington
 Harris
 harvestable
@@ -533,7 +556,9 @@ Kaaba
 Kathy
 Keats
 kennelmen
+Kent
 Kentucky
+keylogger
 Kidman
 kidnapper
 kind-hearted
@@ -546,8 +571,10 @@ ladybug
 ladylike
 lamplike
 lamplit
+landmine
 lawfully
 law of averages
+law of large numbers
 leaderless
 leafless
 leaflike
@@ -555,6 +582,7 @@ leaf-shaped
 learned helplessness
 learnt
 Leninism
+Leto
 light industry
 lightless
 lighttight
@@ -584,13 +612,16 @@ mailmen
 malnutrition
 Maoism
 Mariana Islands
+Marianna
 market share
 Marvin
 massless
 matrilinear
 McDonald's
 mealtime
+meant
 memory card
+men-at-arms
 Micawber
 microaggression
 microbiologist
@@ -626,12 +657,14 @@ motherboard
 motherless
 motherly
 motion sickness
+mountaintop
 mournfulness
 Mozart
 multicourse
 multihour
 multi-step
 multiuser
+multiyear
 Munich
 mysteriousness
 mystically
@@ -649,6 +682,7 @@ neo-Marxist
 netbook
 network card
 neurobiology
+neuronic
 neuropathology
 neurophysiology
 neuropsychology
@@ -693,18 +727,22 @@ note-taking
 notetaking
 not to mention
 nuclear explosion
+nudism
+nudist
 numbness
 nunship
 oarsmen
 observability
 odorless
 ohm
+Oman
 oncologist
 one-parent family
 open-handed
 ordinary share
 Oreo
 outpatient
+outsole
 outspokenly
 overcaution
 overconsume
@@ -750,6 +788,7 @@ Pierre
 pink-collar
 placename
 planetologist
+planner
 pleasureless
 plowmen
 policemen
@@ -787,10 +826,13 @@ psychology
 Pulitzer
 punishable
 purple state
+Putin
 pyriform
 Quebec
 Quran
+rainband
 rainwater
+ramen
 randomize
 ransomware
 rapist
@@ -813,6 +855,7 @@ reformer
 reinsert
 relearn
 rename
+repaint
 replaceable
 reportable
 reusability
@@ -847,6 +890,7 @@ seascape
 seasickness
 seaworthiness
 seaworthy
+Second Coming
 seedless
 see you around
 see you later
@@ -975,6 +1019,7 @@ summerlong
 Summer Palace
 sunbath
 sunbathe
+sundae
 sundrenched
 sunlit
 sunward
@@ -1004,6 +1049,7 @@ tactful
 Taiwan
 Taiwanese
 Tajikistan
+tango
 taskbar
 Tate
 tax-exempt
@@ -1090,6 +1136,7 @@ twenty-eight
 twenty-fifth
 twenty-six
 twenty-sixth
+Uganda
 ugliness
 unacceptably
 unafraid
@@ -1105,6 +1152,7 @@ unchangeable
 unchanged
 Uncle Sam
 unclothed
+uncoil
 uncomfortably
 uncompleted
 unconvincingly
@@ -1126,12 +1174,14 @@ unenforceability
 unforgettably
 ungovernableness
 unguessable
+unharmed
 unheedful
 unhesitatingly
 unhurriedly
 unhurt
 unilaterally
 unimaginable
+unimaginably
 uninfected
 uninteresting
 uniquely
@@ -1140,35 +1190,55 @@ universalisation
 unjustly
 unkillable
 unkind
+unknowable
 unknowingly
 unladylike
 unlikeable
+unliveable
 unlovable
 unloveable
 unmistakable
 unmistakably
 unmistakeable
+unmoveable
+unneeded
+unobjectionably
 unopened
 unpardonable
 unpractised
+unpredictably
 unprofitable
 unprofitableness
+unprofitably
+unrecognisable
 unreliability
+unreproveable
 unrighteousness
+unsaid
+unsaleable
+unsearchable
 unseasonable
 unselfishly
 unsent
+unshakeable
 unsinkable
 unskillful
+unsold
 unsteadily
+unsuitably
 unsurprisingly
+unsustainable
 untie
 untimely
+untrained
+unusable
 unwisely
+upgradeable
 usefulness
 utilisation
 utility pole
 valueless
+Vancouver
 vertically
 victimless
 video card
@@ -1187,6 +1257,7 @@ water-logged
 waterskin
 water-soluble
 watt-hour
+waveform
 weaponize
 weaponless
 Welchman
@@ -1217,20 +1288,11 @@ Yemen
 Zelenskyy
 zero gravity
 Zuma
-repaint
-anciently
-Kent
-deceptive
-grandniece
-feces
-causelessly
-Vancouver
-Clayton
-cookware
-cartoony
-Eritrea
-Castro
-carpet-knight
-Second Coming
+little-known
+radiotherapist
+telemedicine
+virology
+
+
 
 `.trim().split('\n');

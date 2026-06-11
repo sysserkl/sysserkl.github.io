@@ -829,8 +829,13 @@ function en_sentence_one_line_b(aline,wordname='',attachment_path='',wikisite=''
 
 function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',wikisite='',txtlistsearch_site='',button_str='',no_start=0){
     function sub_en_sentence_result_b_statistics(){
-        console.log(re_combine);
-        console.log('扫描例句条数：',split_no_set.size,'；例句总条数：',en_sentence_global.length,'；占比：',(split_no_set.size*100/en_sentence_global.length).toFixed(2)+'%');    
+        if (re_combine_str!==Object.values(re_combine).toString()){
+            console.log(re_combine);
+        }
+        if (split_no_set.size==en_sentence_global.length){
+            console.log(wordname,'扫描例句条数：',split_no_set.size,'；例句总条数：',en_sentence_global.length,'；占比：',(split_no_set.size*100/en_sentence_global.length).toFixed(2)+'%');    
+            //例句条数不足的，均会全部扫描 - 保留注释
+        }
     }
     //-----------------------
     if (typeof en_sentence_global == 'undefined'){return ['',0,0];}
@@ -851,6 +856,7 @@ function en_sentence_result_b(wordname,csmax=-1,fontsize='',attachment_path='',w
     var p_style=en_sentence_p_style_b(fontsize);
     
     var re_combine=sentence_split_status_generate_b();
+    var re_combine_str=Object.values(re_combine).toString();
     var split_no_set=new Set();
     if (Array.isArray(wordname)){
         var sentence_list={};

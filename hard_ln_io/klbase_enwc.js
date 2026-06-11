@@ -664,7 +664,7 @@ function sls_search_link_generate_enwc_b(cslist){
     window.open('enwords.htm?sls');
 }
 
-function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true,cstype=''){
+function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true,cstype='',is_random=true){
 	if (cslines===''){
         cslines= document.getElementById('input_lines').value.trim();
     }
@@ -686,7 +686,10 @@ function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true,csty
 	document.getElementById('input_lines').value=cslines;
     
     var orandom=document.getElementById('checkbox_random_old_words_enwc_b');
-    if (orandom && orandom.checked){
+    if (orandom){
+        is_random=orandom.checked
+    }
+    if (is_random){
 	    ensource.sort(randomsort_b);
     }
     
