@@ -929,27 +929,44 @@ function day_old_word_all_kle(cstype='',array_num_t=[0]){
     var allwords=[];
     var maxlength=0;
     var flot_list=['一年度每日旧单词数'];
+    var flot_easy_list=['easy'];
+    var flot_difficult_list=['difficult'];
+
     var blyear_list=year365_b(0,true);
     var todaylen=day_of_year_b(preweekday_b('',0));
     var flot_rencent_list=['最近两周每日旧单词数'];
-    
+    var flot_rencent_easy_list=['easy'];
+    var flot_rencent_difficult_list=['difficult'];
+        
     for (let blxl=1;blxl<=365;blxl++){
         var word_t=[];
+        var ignore_count=0;
         var list_t=en_day_old_words_b(blxl,cstype,array_num_t);
         for (let item of list_t){
-            word_t.push(item[0]);
-            allwords.push(item[0]);
+            if (enwords_easy_global.includes(item[0])){
+                var word_name='<span class="span_enwords_easy" style="color:'+scheme_global['green']+';">'+item[0]+'</span>';
+                ignore_count=ignore_count+1;
+            } else {
+                var word_name=item[0];
+            }
+            word_t.push(word_name);
+            allwords.push(word_name);
         }
         blcount=blcount+word_t.length;
         maxlength=Math.max(maxlength,word_t.length);
         var blstr=date2str_b('-',blyear_list[blxl-1]);
-        result_list.push('<span style="font-weight:bold;">'+blstr+'/'+day_2_week_b(blyear_list[blxl-1],'cnbrief')+'</span> '+word_t.join(', ')+' ('+word_t.length+')');
+        result_list.push('<span style="font-weight:bold;">'+blstr+'/'+day_2_week_b(blyear_list[blxl-1],'cnbrief')+'</span> '+word_t.join(', ')+' ('+(word_t.length-ignore_count)+'/'+word_t.length+')');
         
         flot_list.push([blyear_list[blxl-1],word_t.length]);
+        flot_easy_list.push([blyear_list[blxl-1],ignore_count]);
+        flot_difficult_list.push([blyear_list[blxl-1],word_t.length-ignore_count]);
         if (blxl-todaylen>=0 && blxl-todaylen<=14){
             flot_rencent_list.push([blyear_list[blxl-1],word_t.length]);
+            flot_rencent_easy_list.push([blyear_list[blxl-1],ignore_count]);
+            flot_rencent_difficult_list.push([blyear_list[blxl-1],word_t.length-ignore_count]);            
         }
     }
+    
     allwords=array_unique_b(allwords);
     var bljg='<h3>统计类型：'+cstype+' 指定序号：'+array_num_t.join(',')+'</h3>\n';
     bljg=bljg+'<h4>单词总数：'+blcount+' 无重复单词总数：'+allwords.length+' 比值：'+(blcount/allwords.length).toFixed(4)+' 最大单日单词数：'+maxlength+' 平均每日：'+(blcount/365).toFixed(1)+'</h4>\n';
@@ -958,8 +975,8 @@ function day_old_word_all_kle(cstype='',array_num_t=[0]){
     bljg=bljg+'<div id="div_oldwords_recent_flot" style="width:100%;height:400px;"></div>';
     document.getElementById('divhtml').innerHTML=bljg;
     
-    flot_lines_b([flot_list],'div_oldwords_flot','ne',true,'','d','',0);
-    flot_lines_b([flot_rencent_list],'div_oldwords_recent_flot','ne',true,'','d','',0,[1, 'day']);
+    flot_lines_b([flot_list,flot_easy_list,flot_difficult_list],'div_oldwords_flot','ne',true,'','d','',0);
+    flot_lines_b([flot_rencent_list,flot_rencent_easy_list,flot_rencent_difficult_list],'div_oldwords_recent_flot','ne',true,'','d','',0,[1, 'day']);
     
     var olis=document.querySelectorAll('ol#ol_day_old_words li');
     var blno=day_of_year_b()-1;
@@ -972,7 +989,7 @@ function similar_words_batch_kle(csno=false,pageitems=false,is_current=false){
 	if (csno===false){
         csno= parseInt(document.getElementById('input_lineno').value.trim());
     }
-	csno=Math.max(0,csno);
+    csno=Math.max(1,csno);
     
     if (pageitems===false){
         pageitems=parseInt(document.getElementById('input_max_result').value);

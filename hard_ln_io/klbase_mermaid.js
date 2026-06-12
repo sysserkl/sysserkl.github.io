@@ -92,6 +92,14 @@ function str_expand_mermaid_b(str){
     return results; //多条线路 - 保留注释
 }
 
+function textarea_2_html_mermaid_b(textaread_id,div_id){
+    var list_t=document.getElementById(textaread_id).value.trim().split('\n');
+    var odiv=document.getElementById(div_id);
+    odiv.innerHTML='';
+
+    show_mermaid_b(list_t,odiv);
+}
+
 function show_mermaid_b(cslist,odiv,show_no=true,add_hr=true){
     async function sub_show_mermaid_b_one(){
         if (blxl>=bllen){return;}

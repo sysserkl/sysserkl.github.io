@@ -698,14 +698,6 @@ function crpytology_klr2(rows=99,cols=26,start_l='L',do_test=true){
     }
 }
 
-function mermaid_show_klr2(){
-    var list_t=document.getElementById('textarea_rows_content').value.trim().split('\n');
-    var odiv=document.getElementById('div_status');
-    odiv.innerHTML='';
-
-    show_mermaid_b(list_t,odiv);
-}
-
 function showhide_klr2(){
     for (let item of ['div_form_klr2','div_temp_save']){
         var odiv=document.getElementById(item);

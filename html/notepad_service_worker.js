@@ -13,6 +13,8 @@ self.addEventListener('install', function(e){
             '../hard_ln_io/klbase_wiki.js',
             '../hard_ln_io/klbase_eng.js',
             '../hard_ln_io/klbase_websites.js',
+            '../hard_ln_io/klbase_mermaid.js',
+            '../module/mermaid.min.js',
             ]);
         })
     );

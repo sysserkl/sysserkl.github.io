@@ -11,6 +11,7 @@ self.addEventListener('install', function(e) {
             '../hard_ln_io/klbase_eng.js',
             '../hard_ln_io/klbase.js',
             '../hard_ln_io/klbase_rows.js',
+            '../hard_ln_io/klbase_mermaid.js',
             '../hard_ln_io/sha.js',            
             '../jsdata/jieba_pb_dict_data.js',
             '../module/d3/d3.layout.cloud.min.js',
@@ -18,6 +19,7 @@ self.addEventListener('install', function(e) {
             '../module/html2canvas.js',
             '../module/marked.umd.js',
             '../module/turndown.js',
+            '../module/mermaid.min.js',
 
             ]);
         })
