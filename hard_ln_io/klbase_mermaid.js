@@ -100,11 +100,15 @@ function textarea_2_html_mermaid_b(textaread_id,div_id){
     show_mermaid_b(list_t,odiv);
 }
 
-function show_mermaid_b(cslist,odiv,show_no=true,add_hr=true){
+function show_mermaid_b(cslist,odiv,show_no=true,add_hr=true,remove_hashtag=true){
     async function sub_show_mermaid_b_one(){
         if (blxl>=bllen){return;}
         
         var item=cslist[blxl];
+        if (remove_hashtag && (item.startsWith('# ') || item.startsWith('* '))){
+            item=item.slice(2,).trimLeft();
+        }
+        
         item=str_convert_mermaid_b(item);
         if (item!==''){
             line_no=line_no+1;

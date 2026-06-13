@@ -279,7 +279,7 @@ function menu_klr2(){
 
 function mermaid_done_import_klr2(){
     if (typeof mermaid_done_global == 'undefined'){return;}
-    document.getElementById('textarea_rows_content').value=mermaid_done_global.join('\n');
+    document.getElementById('textarea_rows_content').value='== 已完成出行路线==\n'+mermaid_done_global.join('\n');
 }
 
 function random_txt_files_klr2(cssize=100){

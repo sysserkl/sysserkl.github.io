@@ -699,6 +699,7 @@ function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true,csty
         if (diff.size>0){
             alert('错误的 easy 单词：'+Array.from(diff).slice(0,10));
         }
+        local_storage_today_b('enwords_easy_global_count',40,enwords_easy_global.length,'/');
     }
     
 	words_searched_arr_global=[];

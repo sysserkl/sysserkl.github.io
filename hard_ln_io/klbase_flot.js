@@ -479,6 +479,7 @@ function statistics_data_type_b(data_type,selected_items_filter=''){
             ['enwords_articles_without_eword','无eword的KLWiki文章数',0,'/'],            
             ['enwords_articles_avg_new_words','KLWiki文章平均生词数',0,'/'],            
             ['enwords_has_phrase','有词组的旧单词',0,'/'],
+            ['enwords_easy_global_count','enwords_easy_global单词数',0,'/'],
             ];
             break;
         case 'miscellaneous':

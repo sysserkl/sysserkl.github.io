@@ -10,6 +10,7 @@ Achilles
 activewear
 actress
 Adele
+adjustability
 aeroplane
 affordably
 Africa
@@ -59,6 +60,7 @@ antismoking
 antitumor
 anti-union
 antiunion
+aquaphobia
 archeology
 Arlington
 Armenia
@@ -164,13 +166,18 @@ Bruno
 Bryant
 buglike
 buildable
+Bulgaria
 burdenless
 bushlike
 businessmen
 businessperson
 busload
+busyness
+by dint of
+bye-election
 calibre
 Cambodia
+Cambodian
 cameramen
 Cameroon
 Canberra
@@ -227,6 +234,7 @@ comanager
 committeemen
 common sense
 common share
+Compton
 computerization
 configurable
 confusingly
@@ -253,6 +261,7 @@ criminology
 Crockett
 crossbowmen
 cross hairs
+cubic centimeter
 cultureless
 currently
 customisable
@@ -268,6 +277,7 @@ deathlike
 debater
 debone
 decade-long
+Deccan
 deceptive
 declassify
 decode
@@ -296,6 +306,8 @@ Dnieper
 dogskin
 dog-tired
 Donald
+door-knocker
+doorknocker
 doormen
 Douglas
 Douglass
@@ -327,6 +339,7 @@ eighty-one
 elementary school
 e-mail
 embarrassingly
+encamp
 enduringly
 enforceable
 Englishman
@@ -419,6 +432,8 @@ goodhumoredly
 good-humouredly
 goodnight
 good-tempered
+gracefully
+gracefulness
 grammatical
 grammatically
 grandniece
@@ -439,6 +454,7 @@ half-remembered
 half-yearly
 Hampton
 Hancock
+Handel
 handloom
 Harrington
 Harris
@@ -464,6 +480,7 @@ herdsmen
 hertz
 hesitatingly
 Heywood
+high jump
 hikeable
 Hindenburg
 hisself
@@ -490,6 +507,7 @@ humorless
 Humphrey
 hungrily
 Huntington
+huntress
 hurriedly
 hurtless
 husbandmen
@@ -530,6 +548,7 @@ intergovernmental
 interplay
 interviewee
 interwar
+investment company
 invisibility
 Islamophobia
 Jacksonville
@@ -555,6 +574,7 @@ jurymen
 Kaaba
 Kathy
 Keats
+keel-boat
 kennelmen
 Kent
 Kentucky
@@ -590,6 +610,7 @@ Lindsay
 Linus
 lionlike
 listicle
+little-known
 livestreamer
 lobsterman
 logically
@@ -609,10 +630,12 @@ lunchtime
 Lyndsay
 machine-readable
 mailmen
+mainboard
 malnutrition
 Maoism
 Mariana Islands
 Marianna
+Mario
 market share
 Marvin
 massless
@@ -682,11 +705,13 @@ neo-Marxist
 netbook
 network card
 neurobiology
+neurofeedback
 neuronic
 neuropathology
 neurophysiology
 neuropsychology
 neuroradiology
+neuroscientist
 neutron star
 New Hampshire
 newshound
@@ -697,6 +722,7 @@ ninety-three
 ninny
 ninnyhammer
 noblemen
+noncereal
 nonchurchgoer
 non-democratic
 nondemocratic
@@ -767,6 +793,8 @@ overreliance
 oversimplification
 oversimplify
 oversupply
+packability
+packable
 paleness
 paperless
 paper tiger
@@ -779,10 +807,12 @@ Patrick
 patrilinear
 peahen
 Penrose
+periodic law
 periodic table
 permanent tooth
 Persian
 phish
+phonecard
 piecework
 Pierre
 pink-collar
@@ -800,6 +830,7 @@ postmodernism
 poverty line
 powerlessness
 power station
+prebuild
 preference share
 preferred share
 pre-Islamic
@@ -822,6 +853,7 @@ protectively
 protégée
 provable
 Prussia
+psychologically
 psychology
 Pulitzer
 punishable
@@ -830,6 +862,7 @@ Putin
 pyriform
 Quebec
 Quran
+radiotherapist
 rainband
 rainwater
 ramen
@@ -873,6 +906,7 @@ sailmaker
 salable
 saleable
 Salem
+salesclerk
 salesmen
 salespeople
 Samoa
@@ -952,7 +986,11 @@ smallish
 smallpox
 smartwatch
 smilingly
+snowbound
+snow-clad
 snowmen
+snowscape
+snowshoe
 snowslide
 so-called
 soft power
@@ -963,6 +1001,7 @@ Somaliland
 sonless
 souplike
 southwestward
+spacelab
 spaceport
 spokesmen
 spoonful
@@ -971,6 +1010,7 @@ square meter
 stained glass
 Stalin
 Stalinism
+Stalinist
 starlit
 star-shaped
 starshaped
@@ -985,17 +1025,22 @@ stedfast
 stedfastly
 steersmen
 stepdaughter
+stepfamily
 stepmom
+stepparent
 stepsister
 stepson
+stone-faced
 stone-ground
 stoneground
+stony-faced
 stormless
 stormproof
 strategically
 Straus
 Strauss
 strawberry
+streambed
 streamlet
 streetlamp
 streetscape
@@ -1046,6 +1091,7 @@ symptomless
 Syria
 taco
 tactful
+tag line
 Taiwan
 Taiwanese
 Tajikistan
@@ -1064,6 +1110,7 @@ tebibyte
 technophobe
 technophobia
 telegraph pole
+telemedicine
 telephone book
 telephone box
 telephone directory
@@ -1093,6 +1140,7 @@ thirty-seven
 thirty-seventh
 thirty-six
 thirtysomething
+thirty-three
 Thor
 threepence
 throve
@@ -1170,6 +1218,7 @@ undetectable
 undoglike
 uneatable
 uneducated
+unemployable
 unenforceability
 unforgettably
 ungovernableness
@@ -1193,6 +1242,7 @@ unkind
 unknowable
 unknowingly
 unladylike
+unlikable
 unlikeable
 unliveable
 unlovable
@@ -1211,7 +1261,9 @@ unprofitable
 unprofitableness
 unprofitably
 unrecognisable
+unrecognizable
 unreliability
+unremarkable
 unreproveable
 unrighteousness
 unsaid
@@ -1242,11 +1294,13 @@ Vancouver
 vertically
 victimless
 video card
+virology
 vodka
 volcanology
 Volga
 voltmeter
 V-shaped
+Wagner
 waiting room
 Walter
 Warsaw Pact
@@ -1262,6 +1316,11 @@ weaponize
 weaponless
 Welchman
 we're
+western hemisphere
+westernmost
+Westphalia
+West Virginia
+wheatfield
 white-collar
 whole-wheat
 who've
@@ -1288,30 +1347,7 @@ Yemen
 Zelenskyy
 zero gravity
 Zuma
-little-known
-radiotherapist
-telemedicine
-virology
-salesclerk
-gracefulness
-gracefully
-phonecard
-spacelab
-packable
-packability
-noncereal
-Handel
-Deccan
-encamp
-Cambodian
-mainboard
-Mario
-bye-election
-Bulgaria
-prebuild
-neuroscientist
-busyness
-
+Stevenson
 
 
 `.trim().split('\n');
