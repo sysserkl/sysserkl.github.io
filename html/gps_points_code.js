@@ -1806,11 +1806,24 @@ function menu_gps_points(){
     ['<font color="blue">blue</font>','colors_settings_gps_points(\'blue\');',true],
     ['默认','colors_settings_gps_points(\'默认\');',true],
     ];    
-    klmenu_config.push(menu_container_b(str_t,group_list,'颜色：'));        
+    klmenu_config.push(menu_container_b(str_t,group_list,'轨迹颜色：'));
+
+    var map_style_list=Object.keys(img_filter_preset_b());
+    map_style_list.sort(zh_sort_b);
+    
+    group_list=[
+    ['地图颜色：<select onchange="map_style_filter_gps_points(this.value);"><option></option>'+list_2_option_b(map_style_list).join('')+'<option>手动输入</option></select>','',false],
+    ['按钮：<select onchange="quick_buttons_select_gps_points(this.value);"><option></option><option>lat,lon处理</option></select>','',false],
+    ];    
+    klmenu_config.push(menu_container_b(str_t,group_list,''));
     
     klmenu_config=klmenu_config.concat([
-    '<span class="span_menu"><select onchange="quick_buttons_select_gps_points(this.value);"><option></option><option>lat,lon处理</option></select></span>',
-    '<span class="span_menu">fill opacity: <input type="number" id="input_fill_opacity_gps_points" value="0" min="0" max="1" step="0.1" /> <label><input type="checkbox" id="checkbox_stroke_line_border_gps_points" checked />stroke</label> 线路分段(m): <input type="number" id="input_sub_line_length_gps_points" value="0" min="100" step="100" style="width:5rem;" /> 线宽: <input type="number" id="input_line_weight_gps_points" min="3" max="10" step="1" style="width:2rem;" onchange="gpx_line_weight_global=parseInt(this.value);" /></span>',
+    `<span class="span_menu">
+    fill opacity: <input type="number" id="input_fill_opacity_gps_points" value="0" min="0" max="1" step="0.1" />
+    <label><input type="checkbox" id="checkbox_stroke_line_border_gps_points" checked />stroke</label>
+    线路分段(m): <input type="number" id="input_sub_line_length_gps_points" value="0" min="100" step="100" style="width:5rem;" />
+    线宽: <input type="number" id="input_line_weight_gps_points" min="3" max="10" step="1" style="width:2rem;" onchange="gpx_line_weight_global=parseInt(this.value);" />
+    </span>`,
     ]);
 
     group_list=[
@@ -1854,6 +1867,33 @@ function menu_gps_points(){
 function lte_show_gps_points(){
     if (typeof lte_list_leaflet_global == 'undefined'){return;}
     document.getElementById('textarea_gps_points').value=lte_list_leaflet_global.join('\n');
+}
+
+function map_style_filter_gps_points(cstype=''){
+    if (typeof map_style_filter_str_gps_points_global == 'undefined'){
+        map_style_filter_str_gps_points_global='';
+    }
+    
+    var css_str='';
+    var style_dict=img_filter_preset_b();
+    if (style_dict[cstype]==undefined){
+        switch (cstype){
+            case '手动输入':
+                css_str=prompt('输入filter内容',map_style_filter_str_gps_points_global);
+                if (css_str==null){return;}
+                break;
+            default:
+                css_str='none';
+                break;
+        }
+    } else {
+        css_str=style_dict[cstype];
+    }
+    
+    if (css_str!=='none'){
+        map_style_filter_str_gps_points_global=css_str;
+    }
+    style_generate_b('img.leaflet-tile {filter: '+css_str+'}',true);
 }
 
 function lat_lon_year_get_gps_points(add_raw=false){

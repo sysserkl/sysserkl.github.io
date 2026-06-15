@@ -2992,3 +2992,16 @@ function show_temporary_message_b(message,bgcolor='#00a000', fcolor='white', cst
     
     setTimeout(() => {document.body.removeChild(messageEl);}, cstimeout);
 }
+
+function img_filter_preset_b(){
+    return {
+    '暗红':'hue-rotate(180deg) contrast(120%) saturate(150%)',
+    '灰度半透明':'opacity(50%) grayscale(100%)',
+    '灰度高对比度': 'grayscale(100%) contrast(120%)',
+    '老照片': 'sepia(80%) contrast(110%) saturate(60%)',
+    'GRID': 'drop-shadow(0 0 1px rgba(255,200,0,.8))',
+    '夜间': 'brightness(0.7) invert(10%) hue-rotate(180deg)',
+    '雪天': 'grayscale(80%) invert(100%)',
+    };
+}
+
