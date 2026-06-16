@@ -175,6 +175,8 @@ busload
 busyness
 by dint of
 bye-election
+cable television
+calendar year
 calibre
 Cambodia
 Cambodian
@@ -205,6 +207,8 @@ changeless
 charmless
 charwomen
 chatbot
+child rearing
+child-rearing
 Chinese copy
 Chinese New Year
 chipmaker
@@ -277,6 +281,7 @@ deathlike
 debater
 debone
 decade-long
+decarbonize
 Deccan
 deceptive
 declassify
@@ -287,7 +292,9 @@ deepfake
 deep-voiced
 defenceless
 dehumidify
+de-list
 demand curve
+dendrologic
 Denny
 Derek
 desalt
@@ -357,6 +364,7 @@ excellently
 exchange student
 excitable
 excitedly
+existentialism
 expensively
 expensiveness
 experimentally
@@ -631,6 +639,7 @@ Lyndsay
 machine-readable
 mailmen
 mainboard
+Malaysia
 malnutrition
 Maoism
 Mariana Islands
@@ -964,6 +973,7 @@ singable
 single-parent family
 sinless
 sisterless
+sisterly
 sisters-in-law
 sixpence
 sixteenth
@@ -1030,6 +1040,7 @@ stepmom
 stepparent
 stepsister
 stepson
+Stevenson
 stone-faced
 stone-ground
 stoneground
@@ -1141,6 +1152,7 @@ thirty-seventh
 thirty-six
 thirtysomething
 thirty-three
+thobe
 Thor
 threepence
 throve
@@ -1315,6 +1327,7 @@ waveform
 weaponize
 weaponless
 Welchman
+well paid
 we're
 western hemisphere
 westernmost
@@ -1347,13 +1360,45 @@ Yemen
 Zelenskyy
 zero gravity
 Zuma
-Stevenson
-de-list
-dendrologic
-decarbonize
-existentialism
-Malaysia
-
+fireclay
+nonfeeding
+hydrotherapy
+Nipponese
+academic freedom
+Nottingham
+extended family
+Lebanese
+disinherit
+Beverly Hills
+nutcracker
+flash drive
+Beverly
+nightwear
+laughingly
+noninterventionist
+better-known
+Eurocentric
+Nixon
+Bernie
+MacMillan
+nutmeat
+Hazlitt
+nun
+industrywide
+inescapability
+inexpensively
+Dorothy
+Nimitz
+Rufus
+Eliot
+Hepburn
+Pauli
+Siberian
+convertibility
+hiker
+karat
+ring-mail
+river-bed
 
 
 `.trim().split('\n');

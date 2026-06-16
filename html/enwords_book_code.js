@@ -200,6 +200,7 @@ function menu_enwords_book(){
     format_list=[
     ['高中单词','import_enwords_book(\'senior_high_school\');',true],
     ['CET6单词','import_enwords_book(\'cet6\');',true],
+    ['lexico单词','import_enwords_book(\'lexico\');',true],
     ['分组比较高中单词','compare_enwords_book(\'senior_high_school\');',true],
     ['CET6单词','compare_enwords_book(\'cet6\');',true],
     ];    
@@ -243,13 +244,13 @@ function menu_enwords_book(){
     ];
     
     format_list=[
-    ['全部新单词','load_all_new_enwords_book();',true],
-    ['kaikki 中未收录的 phrase','check_kaikki_phrase_b(true,true);',true],
-    ['new_words_count','load_new_words_count_enwords_book();',true],
+    ['①全部新单词','load_all_new_enwords_book();',true],
+    ['②kaikki 中未收录的 phrase','check_kaikki_phrase_b(true,true);',true],
+    ['③new_words_count','load_new_words_count_enwords_book();',true],
     ];
     klmenu_config.push(menu_container_b(str_t,format_list,'文件载入：'));    
     
-    var menus=klmenu_b(klmenu1,'🝛','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','30rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','34rem','1rem','1rem','60rem');
+    var menus=klmenu_b(klmenu1,'🝛','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_new,'🔤','32rem','1rem','1rem','60rem')+klmenu_b(klmenu2,'🧮','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','18rem','1rem','1rem','60rem');
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(menus,'','0rem')+' ');
     
     var input_list=[['input_frequency_count_enwords',5,0.5],];
@@ -663,6 +664,11 @@ function import_enwords_book(cstype,csmax=-1){
             }
             result_t=array_unique_b(result_t.join(' ').replace(/<\/?b>/g,' ').split(' '));
             otextarea.value=(cstype=='old_def' && csmax<0 ? '全部释义\n':'')+result_t.join(' ');
+            break;
+        case 'lexico':
+            if (typeof lexico_words_global !== 'undefined'){
+                otextarea.value='lexico单词列表\n'+lexico_words_global.join(' ');
+            }
             break;
         case 'phrase':
             var result_t=[];
