@@ -303,7 +303,7 @@ function enwords_batch_select_b(csname,csvalue=0,batch_open_num=10){
 
 function enwords_batch_div_b(wordslist_t,checkboxno='',showno=true,startno=0){
     if (wordslist_t==null || wordslist_t.length==0){return '';}
-    var bljg='<div style="border:0.2rem dashed '+scheme_global['shadow']+';padding:0.5rem;margin-top:0.5rem;">';
+    var bljg='<div class="div_enword_batch" style="border:0.2rem dashed '+scheme_global['shadow']+';padding:0.5rem;margin-top:0.5rem;">';
     var blxl=startno;
     for (let item of wordslist_t){
         var id_name=checkboxno+'_'+parseInt(Math.random()*999)+'_'+parseInt(Math.random()*999)+'_'+parseInt(Math.random()*999);
@@ -1668,7 +1668,7 @@ function enwords_array_to_html_b(csarray,showstatus=true,isrecent=false,csword='
         top_bottom_arrow_b('div_top_bottom',csarray.length+' ');
     }
     if (jumpstr!==''){
-        jumpstr='<p>'+jumpstr+'</p>';
+        jumpstr='<p class="p_jump_en_b">'+jumpstr+'</p>';
     }
 	return jumpstr+bljg;
 }
@@ -3465,6 +3465,37 @@ function quote_ignore_ensentence_b(cstype,ops,show_console=false){
                 console.log(cstype,':',blstr);
             }
             one_p.parentNode.removeChild(one_p);
+        }
+    }
+}
+
+function pure_words_sentences_b(remove_words_without_sentence='ASK'){
+    var odoms=document.querySelectorAll('span.span_pronounce, span.span_explanation, span.span_from_url, span.span_from_wiki, span.span_sentence_button_init, span.span_sentence_button_clicked, p.p_sentence_count, div.div_enword_batch, p.p_temp_batch_add_enwc_b, p.p_jump_en_b, h3.h3_enwords_today');
+    for (let one_dom of odoms){
+        if (one_dom){
+            one_dom.parentNode.removeChild(one_dom);
+        }
+    }
+
+    var owords=document.querySelectorAll('span.a_word');
+    if (!document.querySelector('span.span_word_2_character')){
+        for (let one_word of owords){
+            one_word.insertAdjacentHTML('afterend','<span class="span_word_2_character">. '+one_word.innerText.replace(/[\s\-]/g,'').split('').join('-')+'. <b>'+one_word.innerText+'</b>.</span>');
+        }
+    }
+    
+    if (remove_words_without_sentence=='ASK'){
+        remove_words_without_sentence=confirm('是否移除无例句的单词？');
+    }
+    
+    if (remove_words_without_sentence){
+        for (let one_word of owords){
+            if (!one_word){continue;}
+            var op=one_word.parentNode;
+            var onext=op.nextElementSibling;
+            if (!onext || !onext.classList.contains('div_sentence')){
+                op.parentNode.removeChild(op);
+            }
         }
     }
 }

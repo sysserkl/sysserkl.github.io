@@ -36,7 +36,7 @@ function get_day_words_enwc_b(csday='',csmonth='',cstype='new',cs_write_html=tru
     if (cs_write_html){
 	    var bljg=enwords_array_to_html_b(words_searched_arr_global);
         bljg=bljg+'<p>'+pages_day_enwc_b('get_day_words_enwc_b',cstype,blyear,csmonth,csday)+'</p>';    
-        bljg=bljg+'<p><span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>';
+        bljg=bljg+button_temp_batch_add_enwc_b();
     	bljg=bljg+enwords_batch_div_b(words_searched_arr_global,'');
         bljg=bljg+enwords_js_wiki_textarea_b(words_searched_arr_global);
         document.getElementById('divhtml').innerHTML=bljg;
@@ -273,7 +273,7 @@ function show_sentence_enwc_b(maxlines=0,showcount=true,is_random=false,show_but
         
         if (bljg!==''){
             if (showcount){
-                bljg=bljg+'<p align=right style="color:'+scheme_global['shadow']+';">('+blcount+')</p>';
+                bljg=bljg+'<p class="p_sentence_count" align=right style="color:'+scheme_global['shadow']+';">('+blcount+')</p>';
             }
             oword.parentNode.insertAdjacentHTML('afterend','<div class="div_sentence">'+bljg+'</div>');
         }
@@ -737,7 +737,7 @@ function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true,csty
     
         var bltextarea=(without_textarea?'':enwords_js_wiki_textarea_b(words_searched_arr_global));
 
-	    blhtml.innerHTML=bljg+'<p><span class="aclick" onclick="sls_search_link_generate_enwc_b(word_doms_txt_get_enwc_b());">link</span> <span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>'+enwords_batch_div_b(words_searched_arr_global,'')+bltextarea;
+	    blhtml.innerHTML=bljg+'<p><span class="aclick" onclick="sls_search_link_generate_enwc_b(word_doms_txt_get_enwc_b());">link</span> '+button_temp_batch_add_enwc_b(false)+'</p>'+enwords_batch_div_b(words_searched_arr_global,'')+bltextarea;
         title_change_enwords_b('随机单词');
         en_words_show_check_b();
     }
@@ -772,12 +772,20 @@ function rnd_cn_search_enwc_b(cslines='',showhtml=true){
     if (showhtml){
         var blhtml = document.getElementById('divhtml');
         var bljg=enwords_array_to_html_b(words_searched_arr_global);
-        bljg=bljg+'<p><span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>';
+        bljg=bljg+button_temp_batch_add_enwc_b();
         bljg=bljg+enwords_batch_div_b(words_searched_arr_global,'')+enwords_js_wiki_textarea_b(words_searched_arr_global);
         blhtml.innerHTML=bljg;
         title_change_enwords_b('随机中文词汇');
     }
     enwords_sort_b();
+}
+
+function button_temp_batch_add_enwc_b(add_p=true){
+    var blstr='<span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span>';
+    if (add_p){
+        blstr='<p class="p_temp_batch_add_enwc_b">'+blstr+'</p>';
+    }
+    return blstr;
 }
 
 function math_ceil10_enwc_b(csnum){

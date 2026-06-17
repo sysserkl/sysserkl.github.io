@@ -5,6 +5,7 @@ abovementioned
 abovenamed
 absorbable
 abundantly clear
+academic freedom
 accusingly
 Achilles
 activewear
@@ -52,6 +53,7 @@ anti-imperialist
 anti-modern
 anti-nationalist
 antinationalist
+anti-racist
 anti-religious
 antireligious
 antislavery
@@ -90,6 +92,7 @@ bad-tempered
 bagless
 balloon-like
 balloonlike
+barroom
 batlike
 battery-powered
 bearlike
@@ -101,7 +104,11 @@ beekeeper
 believability
 beltlike
 Benjamin
+Bernie
 best-selling
+better-known
+Beverly
+Beverly Hills
 Biden
 bidirectionally
 big data
@@ -207,6 +214,7 @@ changeless
 charmless
 charwomen
 chatbot
+chickenfeed
 child rearing
 child-rearing
 Chinese copy
@@ -243,6 +251,7 @@ computerization
 configurable
 confusingly
 congressmen
+convertibility
 cookware
 Cornwall
 correctness
@@ -305,6 +314,7 @@ diminishing returns
 director's cut
 disbelieve
 disbelievingly
+disinherit
 disk-shaped
 disremember
 disrespect
@@ -316,6 +326,7 @@ Donald
 door-knocker
 doorknocker
 doormen
+Dorothy
 Douglas
 Douglass
 draggable
@@ -336,6 +347,7 @@ e-bike
 ecologist
 econometrics
 Edmond
+Edom
 educate
 eggless
 Egyptology
@@ -344,6 +356,7 @@ eightpence
 eighty-five
 eighty-one
 elementary school
+Eliot
 e-mail
 embarrassingly
 encamp
@@ -356,6 +369,7 @@ epicentre
 erasable
 Eritrea
 Eton
+Eurocentric
 even-handed
 evening school
 evildoer
@@ -369,6 +383,7 @@ expensively
 expensiveness
 experimentally
 explosive device
+extended family
 eyewall
 falsifiability
 fatalist
@@ -381,9 +396,12 @@ feces
 feelingless
 ferrymen
 f-hole
+fifty-five
+fifty-nine
 filename
 fingerless
 fingerlike
+fireclay
 firelit
 firepit
 fishermen
@@ -392,6 +410,7 @@ fish oil
 fishpond
 fittingly
 flameproof
+flash drive
 flavourless
 flawlessly
 fleetwide
@@ -468,6 +487,7 @@ Harrington
 Harris
 harvestable
 hawklike
+Hazlitt
 headquarter
 headquarters
 heart-shaped
@@ -482,6 +502,7 @@ he'll
 helmsmen
 Helsinki
 Hendricks
+Hepburn
 herbal tea
 herb tea
 herdsmen
@@ -490,6 +511,7 @@ hesitatingly
 Heywood
 high jump
 hikeable
+hiker
 Hindenburg
 hisself
 Hobson
@@ -520,6 +542,7 @@ hurriedly
 hurtless
 husbandmen
 hydrophobia
+hydrotherapy
 hypertext
 icebound
 ill-tempered
@@ -536,6 +559,9 @@ indoor
 indoors
 Indo-Pacific
 industrialization
+industrywide
+inescapability
+inexpensively
 infantryman
 infantrymen
 info
@@ -580,6 +606,8 @@ Julia
 Jung
 jurymen
 Kaaba
+Kansas
+karat
 Kathy
 Keats
 keel-boat
@@ -589,6 +617,7 @@ Kentucky
 keylogger
 Kidman
 kidnapper
+kilojoule
 kind-hearted
 kindhearted
 knives
@@ -600,6 +629,8 @@ ladylike
 lamplike
 lamplit
 landmine
+Latvia
+laughingly
 lawfully
 law of averages
 law of large numbers
@@ -609,6 +640,7 @@ leaflike
 leaf-shaped
 learned helplessness
 learnt
+Lebanese
 Leninism
 Leto
 light industry
@@ -621,6 +653,7 @@ listicle
 little-known
 livestreamer
 lobsterman
+locksmith
 logically
 Loki
 lone-parent family
@@ -637,6 +670,7 @@ luncheon
 lunchtime
 Lyndsay
 machine-readable
+MacMillan
 mailmen
 mainboard
 Malaysia
@@ -726,10 +760,14 @@ New Hampshire
 newshound
 Niger
 Nigeria
+nightwear
+Nimitz
 ninety-seven
 ninety-three
 ninny
 ninnyhammer
+Nipponese
+Nixon
 noblemen
 noncereal
 nonchurchgoer
@@ -739,6 +777,7 @@ non-detachable
 nondetachable
 non-empty
 nonexistence
+nonfeeding
 nonflammable
 nongovernmental
 nonhuman
@@ -746,6 +785,7 @@ noninfected
 noninteractive
 noninterference
 nonintervention
+noninterventionist
 nonmetal
 non-Muslim
 nonrandom
@@ -758,14 +798,19 @@ northerner
 northwardly
 north-westerly
 northwestward
+notepaper
 note-taking
 notetaking
+Nottingham
 not to mention
 nuclear explosion
 nudism
 nudist
 numbness
+nun
 nunship
+nutcracker
+nutmeat
 oarsmen
 observability
 odorless
@@ -814,6 +859,8 @@ parklike
 passphrase
 Patrick
 patrilinear
+Pauli
+payphone
 peahen
 Penrose
 periodic law
@@ -903,13 +950,17 @@ reportable
 reusability
 rewatch
 riflemen
+ring-mail
 risk-free
+river-bed
+Robb
 rollable
 ropelike
 ropemaker
 rowhouse
 rubber bullet
 Rubio
+Rufus
 rulebook
 sailmaker
 salable
@@ -925,6 +976,8 @@ Schumpeter
 Scofield
 Scotsmen
 Scott
+sea-fowl
+seafowl
 sealskin
 seamen
 searchable
@@ -967,6 +1020,7 @@ short-sighted
 short-sightedness
 shyly
 shyness
+Siberian
 Silk Road
 simplehearted
 singable
@@ -1298,6 +1352,7 @@ untrained
 unusable
 unwisely
 upgradeable
+Uruguay
 usefulness
 utilisation
 utility pole
@@ -1335,6 +1390,7 @@ Westphalia
 West Virginia
 wheatfield
 white-collar
+white-robed
 whole-wheat
 who've
 wide-bodied
@@ -1348,10 +1404,12 @@ wineskin
 wirelessly
 withheld
 wolfskin
+woodbin
 wood louse
 wore
 workingmen
 workmen
+work-related
 worthlessness
 wrongness
 yearslong
@@ -1360,45 +1418,11 @@ Yemen
 Zelenskyy
 zero gravity
 Zuma
-fireclay
-nonfeeding
-hydrotherapy
-Nipponese
-academic freedom
-Nottingham
-extended family
-Lebanese
-disinherit
-Beverly Hills
-nutcracker
-flash drive
-Beverly
-nightwear
-laughingly
-noninterventionist
-better-known
-Eurocentric
-Nixon
-Bernie
-MacMillan
-nutmeat
-Hazlitt
-nun
-industrywide
-inescapability
-inexpensively
-Dorothy
-Nimitz
-Rufus
-Eliot
-Hepburn
-Pauli
-Siberian
-convertibility
-hiker
-karat
-ring-mail
-river-bed
+investment trust
+fruitlessly
+noisemaker
+fifty-eight
+
 
 
 `.trim().split('\n');

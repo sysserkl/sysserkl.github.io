@@ -333,7 +333,7 @@ function input_klexam(cstestno='',cstype='all'){
         bljg=bljg+'<span class="aclick" onclick="search_link_klexam();">link</span> ';
     }
     bljg=bljg+checkbox_kl_b('o_ignore_empty','忽略未输入项','',true);
-    bljg=bljg+'<p><span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>';
+    bljg=bljg+button_temp_batch_add_enwc_b();
     bljg=bljg+'</p>';
 	odiv.innerHTML='<p style="background-color:'+scheme_global['skyblue']+';">Type: '+cstype+'</p><ol>'+words_list_t.join('\n')+'</ol>'+bljg;
     

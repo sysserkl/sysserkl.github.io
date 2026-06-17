@@ -1293,6 +1293,12 @@ function array_squash_b(csarray,csmax=0.5){
     return bljg;
 }
 
+function month_2_slim_emoji_b(csno=-1){
+    if (csno==-1){
+        csno=parseInt(today_str_b('d').split('-')[1])-1;
+    }
+    return ['㋀','㋁','㋂','㋃','㋄','㋅','㋆','㋇','㋈','㋉','㋊','㋋'][csno];
+}
 function today_str_b(cstype='d',delimiter1='-',delimiter2=':',delimiter3=' ',rnd_len=0){
     var theday=new Date();
     var today='';
@@ -2022,16 +2028,16 @@ function textarea_form_submit_b(obutton,do_encrypt=false,do_ask=true){
     console.log('textarea_form_submit_b()','查找 form 次数：',blxl);
 }
 
-function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_class='aclick'){
+function textarea_buttons_b(textarea_id,csbuttons,cstype='',csstyle='',span_class='aclick',csspace=' '){
     //csstyle: ' style="font-size:1rem;"' - 保留注释
     var isfile=is_file_type_b();
 
     if (span_class=='button'){
         var button_left='<button type="button"'+csstyle;
-        var button_right='</button> ';    
+        var button_right='</button>'+csspace;    
     } else {
         var button_left='<span class="'+span_class+'"'+csstyle;
-        var button_right='</span> ';
+        var button_right='</span>'+csspace;
     }
     
     var bljg='';

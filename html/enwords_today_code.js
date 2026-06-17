@@ -1,3 +1,11 @@
+function month_day_get_today_words(){
+    var month1=document.getElementById('select_month_start').value;
+    var day1 = document.getElementById('select_day_start').value;
+    var month2=document.getElementById('select_month_end').value;
+    var day2 = document.getElementById('select_day_end').value;
+    return [month1,day1,month2,day2];
+}
+
 function olds_words_batch_today_words(rnd_words_num=0,cn_def_words_num=0){
     function sub_olds_words_batch_today_words_easy(){
         let result_t=[];
@@ -15,10 +23,8 @@ function olds_words_batch_today_words(rnd_words_num=0,cn_def_words_num=0){
 
     en_word_temp_get_b();
     
-    var day1 = document.getElementById('select_day_start').value;
-    var month1=document.getElementById('select_month_start').value;
-    var day2 = document.getElementById('select_day_end').value;
-    var month2=document.getElementById('select_month_end').value;
+    var month1,day1,month2,day2;
+    [month1,day1,month2,day2]=month_day_get_today_words();
     
     var result_t=[];
     var bljg='';
@@ -28,7 +34,7 @@ function olds_words_batch_today_words(rnd_words_num=0,cn_def_words_num=0){
     var islast=false;
     var ignore_words=[];
     while (true){
-        bljg=bljg+'<h3>'+blxl+'. '+date2str_b('-',theday)+'</h3>';
+        bljg=bljg+'<h3 class="h3_enwords_today">'+blxl+'. '+date2str_b('-',theday)+'</h3>';
         var list_t=[];
         
         get_day_words_enwc_b(theday.getDate(),theday.getMonth()+1,'old',false,false);
@@ -71,7 +77,7 @@ function olds_words_batch_today_words(rnd_words_num=0,cn_def_words_num=0){
     words_searched_arr_global=[].concat(result_t);
     
     var blhtml = document.getElementById('divhtml');
-    blhtml.innerHTML=bljg+'<p><span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>'+enwords_batch_div_b(words_searched_arr_global)+enwords_js_wiki_textarea_b(words_searched_arr_global);
+    blhtml.innerHTML=bljg+button_temp_batch_add_enwc_b()+enwords_batch_div_b(words_searched_arr_global)+enwords_js_wiki_textarea_b(words_searched_arr_global);
     top_bottom_arrow_b('div_top_bottom',words_searched_arr_global.length+' ');    
     
     title_change_enwords_b('旧单词+rnd'+rnd_words_num+'+cn'+cn_def_words_num);
@@ -106,12 +112,12 @@ function rnd_batch_today_words(cstype=''){
         }
         list_t=list_t.concat(words_searched_arr_global);
 
-        bljg=bljg+'<h3>'+blxl+'</h3>'+enwords_array_to_html_b(words_searched_arr_global,false)+'<hr />';
+        bljg=bljg+'<h3 class="h3_enwords_today">'+blxl+'</h3>'+enwords_array_to_html_b(words_searched_arr_global,false)+'<hr />';
     }
     
     words_searched_arr_global=[].concat(list_t);
     var blhtml = document.getElementById('divhtml');
-    blhtml.innerHTML=bljg+'<p><span class="aclick" onclick="en_word_temp_batch_add_b();">批量添加当前条件下的单词为最近记忆单词</span></p>'+enwords_batch_div_b(words_searched_arr_global)+enwords_js_wiki_textarea_b(words_searched_arr_global);
+    blhtml.innerHTML=bljg+button_temp_batch_add_enwc_b()+enwords_batch_div_b(words_searched_arr_global)+enwords_js_wiki_textarea_b(words_searched_arr_global);
     top_bottom_arrow_b('div_top_bottom',words_searched_arr_global.length+' ');
 }
 
@@ -169,12 +175,21 @@ function menu_today_words(){
     '<span class="span_menu" onclick="'+str_t+'show_sentence_enwc_b();">显示例句</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\');">显示例句中的生词</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_explanation\');">显示释义中的生词</span>',
+    '<span class="span_menu" onclick="'+str_t+'pure_words_sentences_b();">纯单词+例句</span>',
+    '<span class="span_menu" onclick="'+str_t+'save_today_words();">导出正文为txt文件</span>',
+
     ];
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗓','12rem','1rem','1rem','60rem'),'','0rem')+' ');
     if (!ismobile_b()){
         klmenu_check_b('span_source_en_b',true);
     }    
+}
+
+function save_today_words(){
+    var blstr=document.getElementById('divhtml').innerText;
+    var list_t=month_day_get_today_words();
+    string_2_txt_file_b(blstr,'today_words_'+list_t.join('_')+'.txt','txt');
 }
 
 function init_today_words(){

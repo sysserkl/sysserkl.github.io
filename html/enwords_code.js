@@ -608,6 +608,7 @@ function menu_kle(){
     klmenu1.push(menu_container_b(str_t,group_list,'例句：'));
     
     klmenu1=klmenu1.concat([
+    '<span class="span_menu" onclick="'+str_t+'pure_words_sentences_b();">纯单词+例句</span>',
     '<span class="span_menu" onclick="'+str_t+'duplicate_words_kle();">重复单词和格式检查</span>',
     '<span class="span_menu" onclick="'+str_t+'enwords_search_result_load_b(false,\'input\',\'input_search\',\'^$\');">暂存搜索单词查询</span>',
     '<a href="ensentence.htm" onclick="'+str_t+'" target=_blank>ensentence</a>',  
@@ -970,10 +971,14 @@ function day_old_word_all_kle(cstype='',array_num_t=[0]){
     allwords=array_unique_b(allwords);
     var bljg='<h3>统计类型：'+cstype+' 指定序号：'+array_num_t.join(',')+'</h3>\n';
     bljg=bljg+'<h4>单词总数：'+blcount+' 无重复单词总数：'+allwords.length+' 比值：'+(blcount/allwords.length).toFixed(4)+' 最大单日单词数：'+maxlength+' 平均每日：'+(blcount/365).toFixed(1)+'</h4>\n';
+    
+    bljg=bljg+'<p><input type="text" id="input_day_old_word_filter_kle" onkeyup="if (event.key==\'Enter\'){day_old_word_filter_kle(this.value);}"></p>';
+    
     bljg=bljg+array_2_li_b(result_list,'li','ol','ol_day_old_words');
     bljg=bljg+'<div id="div_oldwords_flot" style="width:100%;height:400px;"></div>';
     bljg=bljg+'<div id="div_oldwords_recent_flot" style="width:100%;height:400px;"></div>';
     document.getElementById('divhtml').innerHTML=bljg;
+    input_with_x_b('input_day_old_word_filter_kle',15);
     
     flot_lines_b([flot_list,flot_easy_list,flot_difficult_list],'div_oldwords_flot','ne',true,'','d','',0);
     flot_lines_b([flot_rencent_list,flot_rencent_easy_list,flot_rencent_difficult_list],'div_oldwords_recent_flot','ne',true,'','d','',0,[1, 'day']);
@@ -983,6 +988,11 @@ function day_old_word_all_kle(cstype='',array_num_t=[0]){
     if (blno>=0 && blno<olis.length){
         olis[blno].scrollIntoView();
     }
+}
+
+function day_old_word_filter_kle(csstr){
+    var olis=document.querySelectorAll('ol#ol_day_old_words li');
+    obj_search_show_hide_b(olis,'',csstr,false,true);
 }
 
 function similar_words_batch_kle(csno=false,pageitems=false,is_current=false){
