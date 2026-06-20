@@ -3469,8 +3469,47 @@ function quote_ignore_ensentence_b(cstype,ops,show_console=false){
     }
 }
 
+function pure_words_menu_b(str_t){    
+    var group_list=[
+    ['纯单词+例句','pure_words_sentences_b();',true],
+    ['导出正文为txt文件','save_today_words_b();',true],
+    ];
+    return menu_container_b(str_t,group_list,'');
+}
+
+function save_today_words_b(){
+    var blstr=document.getElementById('divhtml').innerText;
+    var list_t=month_day_get_today_words_b();
+    string_2_txt_file_b(blstr,'today_words_'+list_t.join('_')+'.txt','txt');
+}
+
+function month_day_get_today_words_b(){
+    var month1=document.getElementById('select_month_start')?.value;
+    var day1 = document.getElementById('select_day_start')?.value;
+    var month2=document.getElementById('select_month_end')?.value;
+    var day2 = document.getElementById('select_day_end')?.value;
+    return [month1,day1,month2,day2];
+}
+
 function pure_words_sentences_b(remove_words_without_sentence='ASK'){
-    var odoms=document.querySelectorAll('span.span_pronounce, span.span_explanation, span.span_from_url, span.span_from_wiki, span.span_sentence_button_init, span.span_sentence_button_clicked, p.p_sentence_count, div.div_enword_batch, p.p_temp_batch_add_enwc_b, p.p_jump_en_b, h3.h3_enwords_today');
+    var odoms=document.querySelectorAll(`
+div.div_enword_batch, 
+h3.h3_article_ensentence,
+h3.h3_enwords_today, 
+p.p_count_get_day_sentences,
+p.p_getlines_enwc,
+p.p_jump_en_b, 
+p.p_md_ensentence,
+p.p_sentence_count, 
+p.p_temp_batch_add_enwc_b, 
+span.span_explanation, 
+span.span_from_url, 
+span.span_from_wiki, 
+span.span_pronounce, 
+span.span_sentence_button_clicked, 
+span.span_sentence_button_init
+
+`.trim());
     for (let one_dom of odoms){
         if (one_dom){
             one_dom.parentNode.removeChild(one_dom);

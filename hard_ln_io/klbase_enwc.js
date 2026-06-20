@@ -202,7 +202,7 @@ function getlines_enwc_b(csno,cslines){
 		document.getElementById('input_lines').value=cslines;
 	}
 
-    var page_html=page_combination_b(bllength,cslines,csno,'getlines_enwc_b','getlines_location_enwc_b','',2,0,'','aclick');
+    var page_html=page_combination_b(bllength,cslines,csno,'getlines_enwc_b','getlines_location_enwc_b','',2,0,'p_getlines_enwc','aclick');
 
 	words_searched_arr_global=[];
 	

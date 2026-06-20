@@ -52,7 +52,6 @@ function menu_ensentence(){
     '<span class="span_menu" onclick="'+str_t+'rare_old_words_ensentence(\'例句出处唯一的单词\',false,true,2,10,5000,true);">例句出处唯一的单词5000</span>',
     '<span class="span_menu" onclick="'+str_t+'show_sentence_enwc_b();">显示例句</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\',false);">显示例句中的生词</span>',  //get_new_words_arr_enbook_b - 保留注释
-    '<span class="span_menu" onclick="'+str_t+'pure_words_sentences_b();">纯单词+例句</span>',
     '<span class="span_menu" onclick="'+str_t+'klwiki_txtbook_oldwords_diff_ensentence();">klwiki 和 txtbook 中的稀有单词</span>',
     ]);
 
@@ -62,6 +61,8 @@ function menu_ensentence(){
     ['临时例句','temp_form_ensentence();',true],
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
+    
+    klmenu1.push(pure_words_menu_b(str_t));
 
     var group_list=[
     ['无例句的单词','rare_old_words_ensentence(\'无例句的单词\',false,false,1,0,3000);',true],
@@ -1257,21 +1258,21 @@ function get_day_sentences(csday='',csmonth='',use_asc=true){
     console.log(re_combine);
     var show_button=klmenu_check_b('span_button_show_ensentence',false);
     var bljg=sentence_list_2_html_b(list_t,[''],500,show_button,false,!use_asc,!use_asc);    
-    var pages='<p>'+sub_get_day_sentences_pages(blyear,csmonth,csday,use_asc)+'</p>';
+    var pages='<p class="p_md_ensentence">'+sub_get_day_sentences_pages(blyear,csmonth,csday,use_asc)+'</p>';
     if (use_asc){
-        bljg='<div class="div_sentence">'+bljg.join('\n')+pages+'</div><p><i>('+bljg.length+')</i></p>';
+        bljg='<div class="div_sentence">'+bljg.join('\n')+pages+'</div><p class="p_count_get_day_sentences"><i>('+bljg.length+')</i></p>';
     } else {
         var result_t=[];
         var source='';
         var p_style=en_sentence_p_style_b();
         for (let item of bljg){
             if (item[1]+item[2]!==source){
-                result_t.push('<hr />\n<h3>'+item[1]+item[2]+'</h3>');
+                result_t.push('<hr />\n<h3 class="h3_article_ensentence">'+item[1]+item[2]+'</h3>');
                 source=item[1]+item[2];
             }
             result_t.push(p_style+item[0]+' <sub class="sub_clicked_line_word_count" style="cursor:pointer;" onclick="lines_enword_total_b(this);"></sub></p>');
         }
-        bljg='<div class="div_sentence">'+result_t.join('\n')+pages+'</div><p><i>('+bljg.length+'/<span id="span_clicked_line_word_total">0</span>)</i></p>';
+        bljg='<div class="div_sentence">'+result_t.join('\n')+pages+'</div><p class="p_count_get_day_sentences"><i>('+bljg.length+'/<span id="span_clicked_line_word_total">0</span>)</i></p>';
     }
 	document.getElementById('divhtml').innerHTML=bljg;
     line_count_enwc_b();

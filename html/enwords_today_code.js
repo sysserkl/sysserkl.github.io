@@ -1,11 +1,3 @@
-function month_day_get_today_words(){
-    var month1=document.getElementById('select_month_start').value;
-    var day1 = document.getElementById('select_day_start').value;
-    var month2=document.getElementById('select_month_end').value;
-    var day2 = document.getElementById('select_day_end').value;
-    return [month1,day1,month2,day2];
-}
-
 function olds_words_batch_today_words(rnd_words_num=0,cn_def_words_num=0){
     function sub_olds_words_batch_today_words_easy(){
         let result_t=[];
@@ -24,7 +16,7 @@ function olds_words_batch_today_words(rnd_words_num=0,cn_def_words_num=0){
     en_word_temp_get_b();
     
     var month1,day1,month2,day2;
-    [month1,day1,month2,day2]=month_day_get_today_words();
+    [month1,day1,month2,day2]=month_day_get_today_words_b();
     
     var result_t=[];
     var bljg='';
@@ -175,21 +167,14 @@ function menu_today_words(){
     '<span class="span_menu" onclick="'+str_t+'show_sentence_enwc_b();">显示例句</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\');">显示例句中的生词</span>',
     '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_explanation\');">显示释义中的生词</span>',
-    '<span class="span_menu" onclick="'+str_t+'pure_words_sentences_b();">纯单词+例句</span>',
-    '<span class="span_menu" onclick="'+str_t+'save_today_words();">导出正文为txt文件</span>',
-
     ];
+    
+    klmenu1.push(pure_words_menu_b(str_t));
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗓','12rem','1rem','1rem','60rem'),'','0rem')+' ');
     if (!ismobile_b()){
         klmenu_check_b('span_source_en_b',true);
     }    
-}
-
-function save_today_words(){
-    var blstr=document.getElementById('divhtml').innerText;
-    var list_t=month_day_get_today_words();
-    string_2_txt_file_b(blstr,'today_words_'+list_t.join('_')+'.txt','txt');
 }
 
 function init_today_words(){

@@ -1473,6 +1473,12 @@ anion
 combination lock
 dehumidifier
 experimentation
-
+H-bomb
+hyena
+immunosuppression
+physiologically
+unconditionally
+unreachable
+Tetragrammaton
 
 `.trim().split('\n');

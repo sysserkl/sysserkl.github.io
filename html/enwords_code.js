@@ -608,12 +608,13 @@ function menu_kle(){
     klmenu1.push(menu_container_b(str_t,group_list,'例句：'));
     
     klmenu1=klmenu1.concat([
-    '<span class="span_menu" onclick="'+str_t+'pure_words_sentences_b();">纯单词+例句</span>',
     '<span class="span_menu" onclick="'+str_t+'duplicate_words_kle();">重复单词和格式检查</span>',
     '<span class="span_menu" onclick="'+str_t+'enwords_search_result_load_b(false,\'input\',\'input_search\',\'^$\');">暂存搜索单词查询</span>',
     '<a href="ensentence.htm" onclick="'+str_t+'" target=_blank>ensentence</a>',  
     '<a href="selenium_enwords.htm" onclick="'+str_t+'" target=_blank>selenium enwords</a>',  
     ]);
+
+    klmenu1.push(pure_words_menu_b(str_t));
     
     if (is_local_b()){
         klmenu1=klmenu1.concat(['<a href="txtlistsearch.htm?klwiki_en2" onclick="'+str_t+'" target=_blank>今日段落阅读</a>',
