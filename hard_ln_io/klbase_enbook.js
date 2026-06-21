@@ -1093,3 +1093,23 @@ function check_kaikki_phrase_b(do_load=false,remove_old_after_load=false,run_fn=
     sub_check_kaikki_phrase_b_run(true);
     return true;
 }
+
+function offwords_phrase_get_enbook_b(is_ok=true){
+    if (!is_ok){return;}
+
+    var t0 = performance.now();
+    offwords_phrase_current_global={};  //全局变量
+    var old_phrase=phrase_in_old_words_b()[0];
+    
+    for (let key in offwords_phrase_raw_global){
+        if (offwords_phrase_raw_global[key][2].length==0){continue;}
+        offwords_phrase_current_global[key]=[];
+        for (let one_phrase of offwords_phrase_raw_global[key][2]){
+            if (old_phrase.has(one_phrase)){continue;}
+            offwords_phrase_current_global[key].push(one_phrase);
+        }
+    }
+    console.log('offwords_phrase_raw_global 记录数',Object.keys(offwords_phrase_raw_global).length,'提取了',Object.keys(offwords_phrase_current_global).length);
+    console.log('offwords_phrase_get_enbook_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+    offwords_phrase_raw_global=null;    //不影响判断 offwords_phrase_raw_global 是否存在（已存在） - 保留注释
+}
