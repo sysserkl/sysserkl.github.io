@@ -3498,6 +3498,7 @@ h3.h3_article_ensentence,
 h3.h3_enwords_today, 
 p.p_count_get_day_sentences,
 p.p_getlines_enwc,
+p.p_ignore_words,
 p.p_jump_en_b, 
 p.p_md_ensentence,
 p.p_sentence_count, 
@@ -3508,7 +3509,6 @@ span.span_from_wiki,
 span.span_pronounce, 
 span.span_sentence_button_clicked, 
 span.span_sentence_button_init
-
 `.trim());
     for (let one_dom of odoms){
         if (one_dom){

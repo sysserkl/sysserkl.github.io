@@ -69,7 +69,7 @@ function olds_words_batch_today_words(rnd_words_num=0,cn_def_words_num=0){
     words_searched_arr_global=[].concat(result_t);
     
     var blhtml = document.getElementById('divhtml');
-    blhtml.innerHTML=bljg+button_temp_batch_add_enwc_b()+enwords_batch_div_b(words_searched_arr_global)+enwords_js_wiki_textarea_b(words_searched_arr_global);
+    blhtml.innerHTML=bljg+button_temp_batch_add_enwc_b()+enwords_batch_div_b(words_searched_arr_global)+enwords_js_wiki_textarea_b(words_searched_arr_global)+'<p class="p_ignore_words">忽略('+ignore_words.length+')：'+ignore_words.join(', ')+'</p>';
     top_bottom_arrow_b('div_top_bottom',words_searched_arr_global.length+' ');    
     
     title_change_enwords_b('旧单词+rnd'+rnd_words_num+'+cn'+cn_def_words_num);
