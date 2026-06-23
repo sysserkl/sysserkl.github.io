@@ -2479,7 +2479,7 @@ function edit_buttons_b(js_fn='',cstype=[],dom_type='button'){
     '<br />',
     '<code>+</code>', 
     '<div class="div_kl_wrap" style="max-height:;">+</div>', 
-    '<div class="div_mermaid">+</div>', 
+    '<div class="div_mermaid" travel>+</div>', 
     '<ed2k name="ed2k">+</ed2k>', 
     '<kltab sep=comma>+</kltab>', 
     '<magnet>+</magnet>', 

@@ -1,6 +1,7 @@
 var enwords_easy_global=`
 Aaronson
 Abbie
+abductee
 above-mentioned
 abovementioned
 abovenamed
@@ -38,14 +39,18 @@ Anglophobe
 Angola
 anion
 annoyingly
+Anson
 Anthony
 anti-abortion
 antibacterial
 anticancer
+anti-capitalism
+anticapitalist
 anticlockwise
 anti-colonial
 anti-colonialist
 anticommunist
+anti-Communist
 anticompetitive
 anti-democratic
 antidemocratic
@@ -78,6 +83,7 @@ Aruba
 Asia
 as if
 as usual
+audiobook
 Austria
 authoress
 autocomplete
@@ -193,6 +199,7 @@ Cambodia
 Cambodian
 cameramen
 Cameroon
+Campbell
 Canberra
 cancerphobia
 candlelit
@@ -257,16 +264,20 @@ computerization
 configurable
 confusingly
 congressmen
+consumer goods
+control freak
 convertibility
 cookware
 Cornwall
 correctness
 cosplayer
 Costa Rica
+cough
 couldn't
 could've
 councilmen
 counterclockwise
+counterrevolutionist
 cowhouse
 cowpox
 coyly
@@ -308,13 +319,16 @@ deep-voiced
 defenceless
 dehumidifier
 dehumidify
+deindustrialization
 de-list
 demand curve
 dendrologic
 Denny
+denuclearization
 Derek
 desalt
 destabilize
+dewax
 deworm
 didn't
 diminishing returns
@@ -342,6 +356,7 @@ draggable
 dreamless
 dreamscape
 driving school
+dunderhead
 dune
 dustless
 dustmen
@@ -382,6 +397,8 @@ Englishwoman
 epicentre
 erasable
 Eritrea
+Estonia
+Estonian
 Eton
 Eurocentric
 even-handed
@@ -473,6 +490,7 @@ gamify
 Garfield
 gaslit
 gatepost
+Gateshead
 Gaza
 gecko
 geese
@@ -1041,6 +1059,7 @@ self-test
 semidarkness
 seminude
 semisolid
+semitransparent
 sense of humor
 serval
 seventy-five
@@ -1480,9 +1499,11 @@ Yemen
 Zelenskyy
 zero gravity
 Zuma
-dewax
-Estonian
-Gateshead
+lightsaber
+botanically
+cheeseburger
+eternal triangle
+MacArthur
 
 
 `.trim().split('\n');

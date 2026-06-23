@@ -1,4 +1,4 @@
-function str_convert_mermaid_b(csstr,wiki_format=true,return_str=true,cshead='graph TD',show_console=true){
+function str_convert_mermaid_b(csstr,cshead='graph TD',wiki_format=true,return_str=true,show_console=true){
     if (wiki_format){
         csstr=wiki_all_format_b(csstr); //依赖klbase_wiki.js
     }
@@ -100,16 +100,22 @@ function textarea_2_html_mermaid_b(textaread_id,div_id){
     show_mermaid_b(list_t,odiv);
 }
 
-function show_mermaid_b(cslist,odiv,show_no=true,add_hr=true,remove_hashtag=true){
+function show_mermaid_b(cslist,odiv,show_no=true,add_hr=true,remove_hashtag=true,cshead='graph TD'){
     async function sub_show_mermaid_b_one(){
         if (blxl>=bllen){return;}
         
         var item=cslist[blxl];
+        
         if (remove_hashtag && (item.startsWith('# ') || item.startsWith('* '))){
             item=item.slice(2,).trimLeft();
         }
         
-        item=str_convert_mermaid_b(item);
+        if (item.startsWith('LR$-')){
+            cshead='graph LR';
+            item=item.slice(4,);
+        }
+        
+        item=str_convert_mermaid_b(item,cshead);
         if (item!==''){
             line_no=line_no+1;
             
