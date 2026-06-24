@@ -99,6 +99,12 @@ function menu_bigfile(){
     '<span class="span_menu" onclick="'+str_t+'htm_files_prerequisite_bigfile();">当前条件htm文件列表包含文件列表</span>',
     '<span class="span_menu" onclick="'+str_t+'statistics_ext_bigfile();">当前条件文件列表和扩展名统计</span>',
     ];
+
+    var group_list=[
+    ['当前条件相似文件名列表','similar_file_name_bigfile();',true],
+    ['<input type="number" id="input_similar_bigfile" value=0.85 min=0 max=1 step=0.1 style="width:3rem;" />','',false],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,''));
     
     var group_list=[
     ['⚪ 导出时加密','klmenu_check_b(this.id,true);',true,'span_encode_bigfile'],
@@ -133,6 +139,40 @@ function menu_bigfile(){
     klmenu_check_b('span_reg_bigfile',true);
     klmenu_check_b('span_decode_bigfile',true);
     first_source_set_bigfile(false);
+}
+
+function similar_file_name_bigfile(cspercent=false){
+    if (cspercent===false){
+        cspercent=parseFloat(document.getElementById('input_similar_bigfile').value.trim());
+    }
+    
+    var name_list=[];
+    for (let item of current_data_bigfile_global){
+        name_list.push([item[0][1],new Set(item[0][1].split(''))]);
+    }
+    
+    var result_t=new Set();
+    var lent=name_list.length;
+    for (let blx=0;blx<lent;blx++){
+        for (let bly=blx+1;bly<lent;bly++){
+            if (blx==bly){continue;}
+            let list_t=array_intersection_b(name_list[blx][1],name_list[bly][1],true);
+            if (list_t.size>=name_list[blx][1].size*cspercent && list_t.size>=name_list[bly][1].size*cspercent){
+                result_t.add(name_list[blx][0]);
+                result_t.add(name_list[bly][0]);
+            }
+        }
+    }
+    
+    var bljg=[];
+    for (let item of current_data_bigfile_global){
+        if (result_t.has(item[0][1])){
+            bljg.push(item);
+        }
+    }
+    current_data_bigfile_global=bljg;
+    result_percent_b('span_count',current_data_bigfile_global.length,raw_data_bigfile_global.length,1);
+    page_bigfile(1);
 }
 
 function batch_open_bigfile(cstype){

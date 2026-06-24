@@ -2453,6 +2453,8 @@ var en_sentence_count_global=[
 "sexology",
 "sextuple",
 "shadowless",
+"shaggy-mane",
+"shaggymane",
 "shamba",
 "shan\'t",
 "shapewear",

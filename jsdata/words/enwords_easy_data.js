@@ -1504,6 +1504,20 @@ botanically
 cheeseburger
 eternal triangle
 MacArthur
+national anthem
+record-breaking
+shaggy-mane
+unearthly time
+exit exam
+cheesemonger
+competitiveness
+rent-free
+Southampton
+Sri Lanka
+ungovernability
+unvaccinated
+XV
+gallstone
 
 
 `.trim().split('\n');
