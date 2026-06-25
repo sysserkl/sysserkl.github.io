@@ -170,6 +170,7 @@ bookshop
 bootable
 bootmaker
 Boris
+botanically
 bowmen
 boxlike
 braless
@@ -226,6 +227,8 @@ changeless
 charmless
 charwomen
 chatbot
+cheeseburger
+cheesemonger
 chickenfeed
 child rearing
 child-rearing
@@ -259,6 +262,7 @@ combination lock
 committeemen
 common sense
 common share
+competitiveness
 Compton
 computerization
 configurable
@@ -399,6 +403,7 @@ erasable
 Eritrea
 Estonia
 Estonian
+eternal triangle
 Eton
 Eurocentric
 even-handed
@@ -410,6 +415,7 @@ exchange student
 excitable
 excitedly
 existentialism
+exit exam
 expensively
 expensiveness
 experimentally
@@ -484,6 +490,7 @@ fruitlessly
 frustratingly
 Fukuyama
 fundraise
+gallstone
 Gambia
 gamification
 gamify
@@ -697,6 +704,7 @@ Leninism
 Leto
 light industry
 lightless
+lightsaber
 lighttight
 Lindsay
 Linus
@@ -721,6 +729,7 @@ luckless
 luncheon
 lunchtime
 Lyndsay
+MacArthur
 machine-readable
 MacMillan
 mailmen
@@ -788,6 +797,7 @@ mysteriousness
 mystically
 name tag
 nanogram
+national anthem
 national debt
 natural gas
 needless to say
@@ -999,6 +1009,7 @@ recognisable
 recognizable
 recognizably
 reconnection
+record-breaking
 redden
 red-haired
 redness
@@ -1006,6 +1017,7 @@ reformer
 reinsert
 relearn
 rename
+rent-free
 repaint
 replaceable
 reportable
@@ -1071,6 +1083,7 @@ seventy-six
 seventy-three
 seventy-two
 sexology
+shaggy-mane
 Shakti
 shallowly
 shareable
@@ -1131,6 +1144,7 @@ solar wind
 Somaliland
 sonless
 souplike
+Southampton
 southwestward
 spacelab
 spaceport
@@ -1138,6 +1152,7 @@ spokesmen
 spoonful
 sportswear
 square meter
+Sri Lanka
 stained glass
 Stalin
 Stalinism
@@ -1362,11 +1377,13 @@ undeniably
 underinvestment
 undetectable
 undoglike
+unearthly time
 uneatable
 uneducated
 unemployable
 unenforceability
 unforgettably
+ungovernability
 ungovernableness
 unguessable
 unharmed
@@ -1431,6 +1448,7 @@ untie
 untimely
 untrained
 unusable
+unvaccinated
 unwisely
 upgradeable
 Uruguay
@@ -1493,31 +1511,13 @@ workmen
 work-related
 worthlessness
 wrongness
+XV
 yearslong
 Yeats
 Yemen
 Zelenskyy
 zero gravity
 Zuma
-lightsaber
-botanically
-cheeseburger
-eternal triangle
-MacArthur
-national anthem
-record-breaking
-shaggy-mane
-unearthly time
-exit exam
-cheesemonger
-competitiveness
-rent-free
-Southampton
-Sri Lanka
-ungovernability
-unvaccinated
-XV
-gallstone
 
 
 `.trim().split('\n');

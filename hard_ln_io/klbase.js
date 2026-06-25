@@ -118,6 +118,10 @@ function klwebphp_path_b(subdir_or_file=''){
     }
 }
 
+function album_path_b(csstr=''){
+    return location.origin+':8000/album/'+csstr; //'location.origin+'/wikiuploads/album/'+csstr;
+}
+
 function location_host_b(use_remote_host=false){
     if (use_remote_host){
         return local_storage_get_b('kl_remote_host');
