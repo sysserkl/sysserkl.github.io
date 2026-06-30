@@ -760,6 +760,10 @@ function import_statistics_money_b(do_alert=true,textarea_id='textarea_idb_conte
     return [otextarea,amount,total_price];
 }
 
+function col_name_get_money_b(){
+    return ['记录号','编号','分类','子类','名称','出处','购置日期','用户名','登记日期','登记时间','单位','数量','单价','总价','备注'];
+}
+
 function import_data_get_money_b(textarea_id='textarea_idb_content'){
     var otextarea=document.getElementById(textarea_id);
     var blcontent=otextarea.value.trim();
