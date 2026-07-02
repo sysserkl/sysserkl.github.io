@@ -1524,5 +1524,18 @@ Tyson
 deerstalker
 stalker
 untraceable
+Kingsley
+Darlington
+unsolved
+Minsk
+fire apparatus
+Chihuahua
+cottonseed
+imaginary number
+Lunar New Year
+Schumann
+traceability
+unceasing
+asphalt paper
 
 `.trim().split('\n');
