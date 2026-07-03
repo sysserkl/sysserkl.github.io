@@ -171,12 +171,40 @@ function export_form_klphotos_b(other_buttons=''){
     var left_str='<p>'+close_button_b('div_array_album_b','');
     
     var right_str=other_buttons;
-    right_str=right_str+'<span class="aclick" onclick="import_marked_rows_klphotos_b();">显示已标记图片名</span>';
-    right_str=right_str+'<span class="aclick" onclick="delete_marked_rows_klphotos_b();">清空已标记图片名</span>';
+    right_str=right_str+' 已标记图片名：<span class="aclick" onclick="import_marked_rows_klphotos_b();">显示</span>';
+    right_str=right_str+'<span class="aclick" onclick="update_marked_rows_klphotos_b(true);">更新</span>';
+    right_str=right_str+'<span class="aclick" onclick="delete_marked_rows_klphotos_b();">清空</span>';
     right_str=right_str+'</p>';
 
     var blstr=textarea_with_form_generate_b('textarea_export_klphotos','width:90%;height:25rem;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str);
     document.getElementById('div_array_album_b').innerHTML=blstr;
+}
+
+function update_marked_rows_klphotos_b(from_textarea=false){
+    if (from_textarea){
+        var otextarea=document.getElementById('textarea_export_klphotos');
+        if (!otextarea){return;}
+        var blstr=otextarea.value.trim();
+        var list_t=blstr.split('\n');
+        if (!confirm('是否替换已标记图片为当前的'+list_t.length+'条记录？')){return;}
+        album_marked_rows_global=list_t;
+        localStorage.setItem('album_marked_rows',blstr);
+        return;
+    }
+    
+    if (album_marked_rows_global.length>=5000){
+        alert('已标记达5000条，操作取消');
+    } else {
+        var blat=album_marked_rows_global.indexOf(imgpath_global+photodata_global[imgnum_global][0]);
+        if (blat>=0){
+            album_marked_rows_global.splice(blat,1);
+        } else {
+            album_marked_rows_global.push(imgpath_global+photodata_global[imgnum_global][0]);
+        }
+        localStorage.setItem('album_marked_rows',album_marked_rows_global.join('\n'));
+        return true;
+    }
+    return false;
 }
 
 function delete_marked_rows_klphotos_b(){
@@ -385,16 +413,7 @@ function change_klphotos_b(realkey){
             hide_div_big_klphoto_b();
             break;
         case 'tag':            
-            if (album_marked_rows_global.length>=5000){
-                alert('已标记达5000条，操作取消');
-            } else {
-                var blat=album_marked_rows_global.indexOf(imgpath_global+photodata_global[imgnum_global][0]);
-                if (blat>=0){
-                    album_marked_rows_global.splice(blat,1);
-                } else {
-                    album_marked_rows_global.push(imgpath_global+photodata_global[imgnum_global][0]);
-                }
-                localStorage.setItem('album_marked_rows',album_marked_rows_global.join('\n'));
+            if (update_marked_rows_klphotos_b()){
                 showbigphoto_klphotos_b(imgnum_global);
             }
             break;
