@@ -305,7 +305,7 @@ function form_list_klplan_b(csarray,cstype,plan_id,update_fn_name){
     left_strings=left_strings+'<span class="aclick" onclick="'+update_fn_name+'(\'textarea_list_'+cstype+'\',\''+plan_id+'\');">Update</span> ';
     var right_strings=' rows: <span id="span_rows_klplan">'+list_plans.length+'</span></p>';
 
-    var bljg=textarea_with_form_generate_b('textarea_list_'+cstype,'width:90%;height:24rem;',left_strings,'清空,复制,发送到临时记事本,发送地址',right_strings,'list_'+cstype,'form_list_'+cstype,false,list_plans.join('\n'));
+    var bljg=textarea_with_form_generate_b('textarea_list_'+cstype,'width:90%;height:24rem;',left_strings,'清空,复制,加密,解密,导入 txt 文件,发送到临时记事本,发送地址',right_strings,'list_'+cstype,'form_list_'+cstype,false,list_plans.join('\n'));
 
     bljg=bljg+'<p><textarea id="textarea_filter_items_klplan" style="display:none;" onclick="this.select();document.execCommand(\'copy\');"></textarea></p>\n';
     

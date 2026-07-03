@@ -1862,7 +1862,7 @@ function local_storage_view_form_b(keytype='',csid=''){
     left_strings=left_strings+'<span class="aclick" onclick="document.getElementById(\''+csid+'\').innerHTML=\'\';">Close</span> ';
     left_strings=left_strings+'<span class="aclick" onclick="local_storage_import_b(\'textarea_backup_localstorage\',true);">导入 localStorage</span> ';
 
-    var blstr=textarea_with_form_generate_b('textarea_backup_localstorage','height:20rem;',left_strings,'清空,复制,发送到临时记事本,发送地址',right_strings,'','form_backup_localstorage');
+    var blstr=textarea_with_form_generate_b('textarea_backup_localstorage','height:20rem;',left_strings,'清空,复制,加密,解密,导入 txt 文件,发送到临时记事本,发送地址',right_strings,'','form_backup_localstorage');
 
     var right_strings='</p>';
     '</form>';
