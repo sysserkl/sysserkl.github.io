@@ -105,6 +105,7 @@ function show_mermaid_b(cslist,odiv,show_no=true,add_hr=true,remove_hashtag=true
         if (blxl>=bllen){return;}
         
         var item=cslist[blxl];
+        //item 形如：# 杭州东-义乌站-（打的|21公里|40分钟）-里兆村-'''凉帽尖'''-里兆村-（步行|4.8公里|69分钟）-廿三里南站-（823路|17:35|18:10|57分钟）-义乌站
         
         if (remove_hashtag && (item.startsWith('# ') || item.startsWith('* '))){
             item=item.slice(2,).trimLeft();
@@ -113,8 +114,12 @@ function show_mermaid_b(cslist,odiv,show_no=true,add_hr=true,remove_hashtag=true
         if (item.startsWith('LR$-')){
             cshead='graph LR';
             item=item.slice(4,);
+        } else {
+            cshead='graph TD';
         }
         
+        var hash_value=(has_sha1?'<p style="font-size:small;">'+str_insert_delimiter(SHA1(item).toUpperCase(),4,'-')+'</p>':'');
+
         item=str_convert_mermaid_b(item,cshead);
         if (item!==''){
             line_no=line_no+1;
@@ -126,7 +131,7 @@ function show_mermaid_b(cslist,odiv,show_no=true,add_hr=true,remove_hashtag=true
             var result_t = await mermaid.render(chartId, item);
             var blsvg = result_t.svg;
             
-            odiv.insertAdjacentHTML('beforeend',`<p style="text-align:center;">${blsvg}</p>`);
+            odiv.insertAdjacentHTML('beforeend',`<div style="text-align:center;">${hash_value}${blsvg}</div>`);
 
             //以下几行保留 - 保留注释
             //var osub=document.createElement('p');
@@ -143,6 +148,7 @@ function show_mermaid_b(cslist,odiv,show_no=true,add_hr=true,remove_hashtag=true
     var blxl=0;
     var line_no=0;
     var bllen=cslist.length;
+    var has_sha1=(typeof SHA1=='function');
     sub_show_mermaid_b_one();
 }
 

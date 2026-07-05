@@ -5131,7 +5131,7 @@ function group_2_equal_bins_b(arr, numBins,to_int=false){
 }
 
 function str_insert_delimiter(str, csn, delimiter='-'){
-    //console.log(str_insert_delimiter("abcdefgh", 3, "-")); // 输出: "abc-def-gh"
+    //console.log(str_insert_delimiter("abcdefgh", 3, "-")); // 输出: "abc-def-gh" #split string
     if (csn <= 0){
         return str;
     }
