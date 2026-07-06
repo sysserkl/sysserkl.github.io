@@ -554,6 +554,26 @@ function showhide_enwc_b(){
     odiv.style.display=(odiv.style.display=='none'?'block':'none');
 }
 
+function menu_easy_enwc_b(str_t,cscount='',old_item=true){
+    if (cscount==''){
+        cscount="''";
+    }
+    
+    var group_list=[
+    ['easy','getlines_rnd_enwc_b('+cscount+',true,false,\'easy\');',true],
+    ['not easy','getlines_rnd_enwc_b('+cscount+',true,false,\'not easy\');',true],
+    ['<select id="select_random_old_words_enwc"><option>全部</option><option>当前</option></select>','',false],
+    ['<label><input type="checkbox" id="checkbox_random_old_words_enwc_b" checked>随机</label>','',false],
+
+    ];    
+    
+    if (old_item){
+        group_list=[['旧单词','getlines_rnd_enwc_b('+cscount+',true,false);',true]].concat(group_list);
+    }
+    
+    return menu_container_b(str_t,group_list,'');
+}
+
 function menu_base_enwc_b(){
     var str_t=klmenu_hide_b('#top');
     var str2_t=klmenu_hide_b('#a_recent_bookmark');
@@ -566,15 +586,7 @@ function menu_base_enwc_b(){
     '<a href="'+sele_path+'/html/enwords_today.htm" onclick="'+str_t+'" target=_blank>Today Words</a>',
     ];
 
-    var group_list=[
-    ['旧单词','getlines_rnd_enwc_b(\'\',true,false);',true],
-    ['easy','getlines_rnd_enwc_b(\'\',true,false,\'easy\');',true],
-    ['not easy','getlines_rnd_enwc_b(\'\',true,false,\'not easy\');',true],
-    ['<select id="select_random_old_words_enwc"><option>全部</option><option>当前</option></select>','',false],
-    ['<label><input type="checkbox" id="checkbox_random_old_words_enwc_b" checked>随机</label>','',false],
-
-    ];    
-    menu1.push(menu_container_b(str_t,group_list,''));
+    menu1.push(menu_easy_enwc_b(str_t));
     
     var group_list=[
     ['0','get_day_words_enwc_b(\'\',\'\',\'old\');',true],
@@ -682,8 +694,10 @@ function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true,csty
         var ensource=[].concat(words_searched_arr_global);
     }
     
-    cslines= Math.min(ensource.length,max_result_enwords_b(),Math.max(0,parseInt(cslines)));
-	document.getElementById('input_lines').value=cslines;
+    if (cslines!==-1){
+        cslines= Math.min(ensource.length,max_result_enwords_b(),Math.max(0,parseInt(cslines)));
+        document.getElementById('input_lines').value=cslines;
+    }
     
     var orandom=document.getElementById('checkbox_random_old_words_enwc_b');
     if (orandom){
@@ -707,7 +721,7 @@ function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true,csty
     switch (cstype){
         case 'easy':
             for (let item of ensource){
-                if (blcount>=cslines){break;}
+                if (cslines!==-1 && blcount>=cslines){break;}
                 if (!enwords_easy_global.includes(item[0])){continue;}
                 
                 words_searched_arr_global.push(item);
@@ -716,7 +730,7 @@ function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true,csty
             break;
         case 'not easy':
             for (let item of ensource){
-                if (blcount>=cslines){break;}
+                if (cslines!==-1 &&blcount>=cslines){break;}
                 if (enwords_easy_global.includes(item[0])){continue;}
             
                 words_searched_arr_global.push(item);
@@ -725,7 +739,7 @@ function getlines_rnd_enwc_b(cslines='',showhtml=true,without_textarea=true,csty
             break;
         default:    //all
             for (let item of ensource){
-                if (blcount>=cslines){break;}            
+                if (cslines!==-1 &&blcount>=cslines){break;}            
                 words_searched_arr_global.push(item);
                 blcount=blcount+1;
             }
