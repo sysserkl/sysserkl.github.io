@@ -315,6 +315,7 @@ function enwords_batch_div_b(wordslist_t,checkboxno='',showno=true,startno=0){
         if (enstr_t.substring(0,1)=='"' && enstr_t.slice(-1)=='"'){
             enstr_t=enstr_t.slice(1,-1);
         }
+        enstr_t=enstr_t.replace(/_/g,' ');
         if (enstr_t==''){continue;}
         blxl=blxl+1;
         bljg=bljg+'<input type="checkbox" name="checkbox_enword'+checkboxno+'" id="checkbox_enword'+id_name+'" value="'+specialstr_j(enstr_t,true)+'">';
