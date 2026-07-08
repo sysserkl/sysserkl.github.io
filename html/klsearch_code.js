@@ -154,6 +154,7 @@ function iframe_generate_klsearch(cstype='',cskey=false,iframe_or_close=''){
     var buttons_t=[];
     var result_t=[];
     var is_local_file=is_file_type_b();
+    var blheight=document_body_offsetHeight_b()*0.8+'px';
     for (let one_type of cstype){
         var is_proxy=false;
         if (one_type.slice(-3,)=='(p)'){
@@ -168,7 +169,7 @@ function iframe_generate_klsearch(cstype='',cskey=false,iframe_or_close=''){
                 if (is_local_file && blsrc.substring(0,4).toLowerCase()!=='http'){
                     if (blsrc.split('?')[0].slice(-4,).toLowerCase()=='.php'){continue;}
                 }
-                var list_t=iframe_generate_b(blxl,one_type,blsrc,'iframe_current_button');
+                var list_t=iframe_generate_b(blxl,one_type,blsrc,'iframe_current_button',blheight);
                 buttons_t.push(list_t[0]);
                 result_t.push(list_t[1]);
                 break;

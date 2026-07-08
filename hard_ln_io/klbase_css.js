@@ -2590,9 +2590,9 @@ function iframe_show_b(ospan,csno){
     oiframe.style.display='';
 }
 
-function iframe_generate_b(csxl,cstitle,cssrc,js_code=''){
+function iframe_generate_b(csxl,cstitle,cssrc,js_code='',csheight='40rem'){
     var buttons_t='<span class="aclick span_one_iframe_kl_b" onclick="iframe_show_b(this,'+csxl+');'+(js_code==''?'':js_code+'(event,this,'+csxl+');')+'">'+cstitle+'</span>';
-    var result_t='<iframe id="iframe_site_kl_b_'+csxl+'" class="iframe_site_kl_b" style="width:95%;height:40rem;display:none;" src="'+cssrc+'"></iframe>';
+    var result_t='<iframe id="iframe_site_kl_b_'+csxl+'" class="iframe_site_kl_b" style="width:95%;height:'+csheight+';display:none;" src="'+cssrc+'"></iframe>';
     return [buttons_t,result_t];
 }
 
@@ -2624,14 +2624,14 @@ function iframe_with_content_b(oparent,cscontent='',iframe_style='',css_js='',ad
     //};    //此行保留 - 保留注释
 }
 
-function iframe_init_b(cslist=[],obutton=false,ocontent=false){
+function iframe_init_b(cslist=[],obutton=false,ocontent=false,csheight='40rem'){
     var buttons_t=[];
     var result_t=[];
     if (cslist.length>0){
         var button_str,iframe_str;
         for (let blxl=0,lent=cslist.length;blxl<lent;blxl++){
             var bname=file_path_name_b(cslist[blxl])[1];
-            [button_str,iframe_str]=iframe_generate_b(blxl,bname,cslist[blxl]);
+            [button_str,iframe_str]=iframe_generate_b(blxl,bname,cslist[blxl],'',csheight);
             buttons_t.push(button_str);
             result_t.push(iframe_str);
         }
