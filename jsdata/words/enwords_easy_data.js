@@ -1592,7 +1592,14 @@ tau cross
 neuroscience
 nonintervention
 redheaded
-
+red-headed
+stane
+ore-dressing
+Edmund
+worm-like
+unscientific
+unforgivable
+unforgiveable
 
 
 `.trim().split('\n');

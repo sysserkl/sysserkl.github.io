@@ -216,8 +216,7 @@ function get_selected_lines_klr_b(cstype,csin,cskey,csid='textarea_rows_content'
 		var regexp  = new RegExp(cskey);
 		if ((cstype+csin=='selin' || cstype+csin=='delout') && regexp.test(item)){
             bljg.push(item);
-        }
-		if ((cstype+csin=='selout' || cstype+csin=='delin') && regexp.test(item)==false){
+        } else if ((cstype+csin=='selout' || cstype+csin=='delin') && regexp.test(item)==false){
             bljg.push(item);
         }
 	}

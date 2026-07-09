@@ -58,9 +58,10 @@ function menu_notepad(){
     klmenu_config=klmenu_config.concat([
     '<span class="span_menu" onclick="'+str_t+'service_worker_delete_b(\'notepad\');">更新版本</span>',
     enwords_mini_menu_item_b(str_t),    
+    '<span class="span_menu" onclick="'+str_t+'title_change_b();">修改页面标题</span>',    
     ]);
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗐','19rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗐','19rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem','','menus_notepad')+' ');
     klmenu_check_b('span_reg_notepad',true);
     klmenu_check_b('span_new_empty_notepad',true);
     klmenu_check_b('span_edit_show_wiki_notepad',true);
@@ -70,10 +71,11 @@ function menu_notepad(){
     var klmenu_blank=blank_rows_add_remove_klr_b('menu','textarea_content_notepad',str_t);
     
     var buttons=edit_buttons_b('edit_tools_click_notepad','notepad','oblong_box');
-    buttons=buttons+' 替换 <input type="text" id="input_rep1_notepad" /> <span class="span_box" onclick="find_in_textarea_notepad(1);" title="从编辑框指定位置开始查找字符串">📍</span> 为 <input type="text" id="input_rep2_notepad" /> <span class="span_box" onclick="find_in_textarea_notepad(2);" title="从编辑框指定位置开始查找字符串">📍</span> <span class="oblong_box" onclick="replace_str_notepad();">执行</span>';
+    buttons=buttons+' 替换 <input type="text" id="input_rep1_notepad" /> <span class="span_box" onclick="find_in_textarea_notepad(1);" title="从编辑框指定位置开始查找字符串">📍</span> 为 <input type="text" id="input_rep2_notepad" /> <span class="span_box" onclick="find_in_textarea_notepad(2);" title="从编辑框指定位置开始查找字符串">📍</span> <span class="oblong_box" onclick="replace_str_notepad();">执行</span> <span class="oblong_box" onclick="filter_str_notepad();">提取行</span> <span class="oblong_box" onclick="filter_str_notepad(true);">删除行</span>';
     var dom_show_hide='<span class="oblong_box" onclick="wiki_style_notepad();">wiki</span> <span class="oblong_box" onclick="diff_notepad();">diff</span> <span class="oblong_box" onclick="popup_show_hide_b(\'span_edit_buttons_notepad\',\'\');">🖊</span> ';
     var op=document.getElementById('p_menu_notepad');
     op.insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu_sort,'↕','10rem','1rem','1rem','30rem')+klmenu_b(klmenu_blank,'','15rem','1rem','1rem','30rem'),'','0rem')+' '+dom_show_hide+'<span id="span_edit_buttons_notepad" style="display:none;">'+buttons+'</span>');
+    
     
     var input_list=[
     ['input_rep1_notepad',10,0.9],
@@ -81,6 +83,11 @@ function menu_notepad(){
     ];
     input_size_b(input_list,'id');    
     mouseover_mouseout_oblong_span_b(op.querySelectorAll('span.oblong_box'));
+}
+
+function filter_str_notepad(is_delete=false){
+    var blkey=document.getElementById('input_rep1_notepad').value;
+    get_selected_lines_klr_b('sel',(is_delete?'out':'in'),blkey,'textarea_content_notepad');
 }
 
 function find_in_textarea_notepad(csno){
@@ -664,4 +671,14 @@ function idb_notepad(cstype='',cskey=false,is_delete=false,do_type=''){
     //-----------------------
     return idb_main_b(cstype,'notepad_dbc','notepad_dbf',sub_idb_notepad_switch);
     //idb_notepad('count').then(value => {console.log('行数：',value);}); //此行保留 - 保留注释    
+}
+
+function html_only_notepad(){
+    show_hide_notepad(false);
+    for (let item of ['p_search_buttons_notepad','div_recent_search','divhtml','span_count']){
+        var odiv=document.getElementById(item);
+        odiv.style.display=(odiv.style.display=='none'?'':'none');
+    }
+    var odiv=document.getElementById('menus_notepad');
+    odiv.style.display=(odiv.style.display=='none'?'inline':'none');
 }

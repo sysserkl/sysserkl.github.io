@@ -187,14 +187,19 @@ function weibo_weixin_user_rlater(){
 
 function add_date_rlater(){
     var oas=document.querySelectorAll('a.a_rlater_link');
+    var the_year=new Date().getFullYear();
     for (let one_a of oas){
         var blstr=one_a.innerText;
         if (blstr.match(/^\d{8}\s/)){continue;}
         var blhref=one_a.href;
         if (!blhref){continue;}
-        var bldate=(blhref.match(/[^\d]?(\d{4}[\-\/]*\d{2}[\-\/]*\d{2})[^\d]?/) || ['',''])[1];
-        if (bldate==''){continue;}
-        one_a.innerText=bldate+' | '+blstr;
+        var list_t=(blhref.match(/[^\d]?(\d{4}[\-\/]*\d{2}[\-\/]*\d{2})[^\d]?/) || ['','']);
+        //list_t 形如 [ "/2025/10/02/", "2025/10/02" ] 或 [ "/43389887", "43389887" ] 或 [ "t20200411_", "20200411" ] 或 [ "-528739-12", "528739-12" ]- 保留注释
+        
+        var date_str=list_t[1];
+        if (date_str==''){continue;}
+        if (parseInt(date_str.slice(0,4))>the_year){continue;}
+        one_a.innerText=date_str+' | '+blstr;
     }
 }
 

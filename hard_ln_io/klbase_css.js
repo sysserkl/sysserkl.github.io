@@ -3005,3 +3005,10 @@ function img_filter_preset_b(){
     };
 }
 
+function title_change_b(csid='span_title'){
+    var old_title=document.title;
+    var new_title=(prompt('输入新标题：',old_title) || '').trim();
+    if (new_title=='' || new_title==old_title){return;}
+    document.title=new_title;
+    document.getElementById(csid).innerText=new_title;
+}
