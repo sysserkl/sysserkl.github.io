@@ -8,409 +8,173 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Fri, 10 Jul 2026 09:38:46 +0800</lastBuildDate>
-<item><title>Cinnamon 下个版本将支持 Wayland - Solidot</title><link>https://www.solidot.org/story?sid=84788</link></item>
-<item><title>OpenMandriva 项目发生破坏事件 - Solidot</title><link>https://www.solidot.org/story?sid=84789</link></item>
-<item><title>2026 年二季度 PC 出货量下滑 5% - Solidot</title><link>https://www.solidot.org/story?sid=84790</link></item>
-<item><title>Euclid 望远镜发现已知最遥远的类星体 - Solidot</title><link>https://www.solidot.org/story?sid=84791</link></item>
-<item><title>美国部分地区居民多达三成对红肉过敏 - Solidot</title><link>https://www.solidot.org/story?sid=84792</link></item>
-<item><title>中国使用无人机救助被洪灾困住的灾民 - Solidot</title><link>https://www.solidot.org/story?sid=84793</link></item>
-<item><title>继父用 11 岁继女的照片生成数千张 CSAM 图像 - Solidot</title><link>https://www.solidot.org/story?sid=84794</link></item>
-<item><title>父母的手机上瘾影响与子女的关系 - Solidot</title><link>https://www.solidot.org/story?sid=84795</link></item>
-<item><title>Students use chatbots to cheat on exam - FlowingData</title><link>https://flowingdata.com/2026/07/09/students-use-chatbots-to-cheat-on-exam/</link></item>
-<item><title>Brown University - FlowingData</title><link>https://flowingdata.com/tag/brown-university/</link></item>
-<item><title>Inside Higher Ed - FlowingData</title><link>https://flowingdata.com/tag/inside-higher-ed/</link></item>
-<item><title>Roberto Serrano - FlowingData</title><link>https://flowingdata.com/tag/roberto-serrano/</link></item>
-<item><title>Wrong chart for the data - FlowingData</title><link>https://flowingdata.com/2026/07/09/process-396-wrong/</link></item>
-<item><title>Netflix second-season slump - FlowingData</title><link>https://flowingdata.com/2026/07/09/netflix-second-season-slump/</link></item>
-<item><title>American ancestry map - FlowingData</title><link>https://flowingdata.com/2026/07/08/american-ancestry-map/</link></item>
-<item><title>Filament Spool Dry Box – Pelican-Style Latching… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/09/filament-spool-dry-box-pelican-style-latching-3dprinting-3dthursday/</link></item>
-<item><title>Pyramid Ambient Light Desk Lamp – Grid Diffuser… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/09/pyramid-ambient-light-desk-lamp-grid-diffuser-panels-3dthursday-3dprinting/</link></item>
-<item><title>Arduino UNO R4 Case Kit – Snap-Fit with Wall Mount… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/09/arduino-uno-r4-case-kit-snap-fit-with-wall-mount-3dprinting-3dthursday/</link></item>
-<item><title>New nEw NEWS From Adafruit Round-Up: April, May &amp; June 2026 - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/07/new-new-news-from-adafruit-round-up-april-may-june-2026/</link></item>
-<item><title>A Modern Desk Lamp – Bambu Lamp Kit 001 with 3-Point Adjustability #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/09/a-modern-desk-lamp-bambu-lamp-kit-001-with-3-point-adjustability-3dthursday-3dprinting/</link></item>
-<item><title>Hex Screwdriver, Nut &amp; Bolt Organizer #3DPrinting #3DThursday - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/09/hex-screwdriver-nut-bolt-organizer-3dprinting-3dthursday/</link></item>
-<item><title>John Park’s Workshop — LIVE TODAY 7/9/26 - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/09/john-parks-workshop-live-today-7-9-26/</link></item>
-<item><title>ESP32 with External Antenna Case #3DPrinting #3DThursday - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/09/esp32-with-external-antenna-case-3dprinting-3dthursday/</link></item>
-<item><title>Raspberry Pi Retro Handheld – 5″ Elecrow Build #3DPrinting #3DThursday - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/09/raspberry-pi-retro-handheld-5-elecrow-build-3dprinting-3dthursday/</link></item>
-<item><title>Spool Dryer – Curved Desiccant Containers #3DPrinting #3DThursday - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/09/spool-dryer-curved-desiccant-containers-3dprinting-3dthursday/</link></item>
-<item><title>3D Hangouts – Flight Tracker, Chiptune Player and Noodle Sword - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/09/3d-hangouts-flight-tracker-chiptune-player-and-noodle-sword/</link></item>
-<item><title>DOOM ported to the BBC Micro vintage computer - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/09/doom-ported-to-the-bbc-micro-vintage-computer/</link></item>
-<item><title>Pool Noodle Master Sword #3DPrinting #3DThursday - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/09/pool-noodle-master-sword-3dprinting-3dthursday/</link></item>
-<item><title>Cyberdeck for Raspberry Pi Zero – 3.5″ Display Portable #3DPrinting #3DThursday - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/09/cyberdeck-for-raspberry-pi-zero-3-5-display-portable-3dprinting-3dthursday/</link></item>
-<item><title>Mini Patch Panel Enclosure – Maker Workspace #3DPrinting #3DThursday - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/09/mini-patch-panel-enclosure-maker-workspace-3dprinting-3dthursday/</link></item>
-<item><title>‘Testing is now underway’: Zelenskyy confirms progress on major US defense deals - Defense News</title><link>https://www.defensenews.com/global/europe/2026/07/10/testing-is-now-underway-zelenskyy-confirms-progress-on-major-us-defense-deals/</link></item>
-<item><title>Trump flies old Air Force One out of Turkey, switches to new jet in Britain for trip home - Defense News</title><link>https://www.defensenews.com/pentagon/2026/07/09/trump-flies-old-air-force-one-out-of-turkey-switches-to-new-jet-in-britain-for-trip-home/</link></item>
-<item><title>UK eyes $50 billion in pooled NATO funds for new long-range strike initiative - Defense News</title><link>https://www.defensenews.com/global/europe/2026/07/09/uk-eyes-50-billion-in-pooled-nato-funds-for-new-long-range-strike-initiative/</link></item>
-<item><title>Germany to buy US Tomahawks in shift toward own long-range capability - Defense News</title><link>https://www.defensenews.com/global/europe/2026/07/09/germany-to-buy-us-tomahawks-in-shift-toward-own-long-range-capability/</link></item>
-<item><title>Ukrainian ground robot maker doubles production, eyes ventures with foreign partners - Defense News</title><link>https://www.defensenews.com/global/europe/2026/07/09/ukrainian-ground-robot-maker-doubles-production-eyes-ventures-with-foreign-partners/</link></item>
-<item><title>Pentagon to explore cheaper replacements for the MQ-9 Reaper - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/07/08/pentagon-to-explore-cheaper-replacements-for-the-mq-9-reaper/</link></item>
-<item><title>The US military is not organized for cyber war - Defense News</title><link>https://www.defensenews.com/opinion/2026/07/08/the-us-military-is-not-organized-for-cyber-war/</link></item>
-<item><title>Ukraine to get ‘license’ for making Patriot interceptors, Trump pledges - Defense News</title><link>https://www.defensenews.com/global/europe/2026/07/08/ukraine-to-get-license-for-making-patriot-interceptors-trump-pledges/</link></item>
-<item><title>Trump turns on Spain and demands Greenland as NATO summit exposes cracks - Defense News</title><link>https://www.defensenews.com/global/europe/2026/07/08/trump-turns-on-spain-and-demands-greenland-as-nato-summit-exposes-cracks/</link></item>
-<item><title>China shows snazzy clip of DF-17 missile on state TV in show of force - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/07/08/china-shows-snazzy-clip-of-df-17-missile-on-state-tv-in-show-of-force/</link></item>
-<item><title>Army tests autonomous mass minelaying - Defense News</title><link>https://www.defensenews.com/video/2026/07/08/army-tests-autonomous-mass-minelaying/</link></item>
-<item><title>Ukraine will get ‘license’ for making Patriot interceptors, Trump says at NATO meeting - Defense News</title><link>https://www.defensenews.com/video/2026/07/08/ukraine-will-get-license-for-making-patriot-interceptors-trump-says-at-nato-meeting/</link></item>
-<item><title>NASA Sets Coverage for Astronaut Anil Menon Launch to Space Station - NASA</title><link>https://www.nasa.gov/news-release/nasa-sets-coverage-for-astronaut-anil-menon-launch-to-space-station/</link></item>
-<item><title>NASA Space Telescope Maps Magnetic Fields of ‘Lighthouse’ Pulsar - NASA</title><link>https://science.nasa.gov/missions/ixpe/nasa-space-telescope-maps-magnetic-fields-of-lighthouse-pulsar/</link></item>
-<item><title>Principal Investigator and Quality Assessment Reports Evaluate Umbra Synthetic Aperture Radar Data - NASA</title><link>https://science.nasa.gov/science-research/earth-science/principal-investigator-and-quality-assessment-reports-evaluate-umbra-synthetic-aperture-radar-data/</link></item>
-<item><title>Curiosity Sees Martian Sulfur Up Close - NASA</title><link>https://www.nasa.gov/image-article/curiosity-sees-martian-sulfur-up-close/</link></item>
-<item><title>NASA Scientists Take to Air and Space to Study Arctic Sea Ice - NASA</title><link>https://www.nasa.gov/missions/airborne-science/nasa-scientists-take-to-air-and-space-to-study-arctic-sea-ice/</link></item>
-<item><title>Super Typhoon Bavi - NASA</title><link>https://science.nasa.gov/earth/earth-observatory/super-typhoon-bavi/</link></item>
-<item><title>Students Connect NASA Science With Indigenous Knowledge to Study Coastal Erosion - NASA</title><link>https://science.nasa.gov/learning-resources/science-activation/students-connect-nasa-science-with-indigenous-knowledge-to-study-coastal-erosion/</link></item>
-<item><title>Hubble Captures Star-Studded Cluster - NASA</title><link>https://www.nasa.gov/image-article/hubble-captures-star-studded-cluster/</link></item>
-<item><title>Cottonwood Fire Chars Utah - NASA</title><link>https://science.nasa.gov/earth/earth-observatory/cottonwood-fire-chars-utah/</link></item>
-<item><title>NASA Transfers ‘Hundred Acre Wood’ to Patuxent Research Refuge - NASA</title><link>https://www.nasa.gov/centers-and-facilities/goddard/nasa-transfers-hundred-acre-wood-to-patuxent-research-refuge/</link></item>
-<item><title>Application Development - OSTechNix</title><link>https://ostechnix.com/category/application-development/</link></item>
-<item><title>Racket Core Concepts: A Practical Guide to Learning Racket Programming - OSTechNix</title><link>https://ostechnix.com/racket-core-concepts-explained-with-examples-in-linux/</link></item>
-<item><title>The Complete Kiwix Guide: Build Your Offline Knowledge Library on Linux - OSTechNix</title><link>https://ostechnix.com/kiwix-build-offline-knowledge-library/</link></item>
-<item><title>Linux Kernel 7.1 Has Officially Arrived in Fedora Linux - OSTechNix</title><link>https://ostechnix.com/linux-kernel-7-1-has-officially-arrived-in-fedora-linux/</link></item>
-<item><title>Things to Back Up Before Reinstalling Linux: The Complete Checklist (2026) - OSTechNix</title><link>https://ostechnix.com/things-to-back-up-before-reinstalling-linux/</link></item>
-<item><title>Linux Kernel 7.2 RC2 Released: Cleaning Up the “Monster Headers” - OSTechNix</title><link>https://ostechnix.com/linux-kernel-7-2-rc2-released/</link></item>
-<item><title>刘书林：思想政治教育学科在新时代 - 爱思想</title><link>https://www.aisixiang.com/data/178782.html</link></item>
-<item><title>于文秀：中国自主知识体系构建：本 - 爱思想</title><link>https://www.aisixiang.com/data/178823.html</link></item>
-<item><title>黄道炫：南方策源的革命 - 爱思想</title><link>https://www.aisixiang.com/data/178814.html</link></item>
-<item><title>郑永年：美国霸权是在衰落退场，还 - 爱思想</title><link>https://www.aisixiang.com/data/178868.html</link></item>
-<item><title>莫纪宏：中国自主宪法学知识体系中 - 爱思想</title><link>https://www.aisixiang.com/data/178995.html</link></item>
-<item><title>黄文艺：迈向中国法学高质量发展的 - 爱思想</title><link>https://www.aisixiang.com/data/178942.html</link></item>
-<item><title>莫纪宏：贯通习近平党建思想与习近 - 爱思想</title><link>https://www.aisixiang.com/data/178793.html</link></item>
-<item><title>季驰炜 徐志民：全民族抗战时期中 - 爱思想</title><link>https://www.aisixiang.com/data/178869.html</link></item>
-<item><title>林春逸：构建中国哲学社会科学自主 - 爱思想</title><link>https://www.aisixiang.com/data/178903.html</link></item>
-<item><title>张雷声：构建马克思主义知识体系的 - 爱思想</title><link>https://www.aisixiang.com/data/178871.html</link></item>
-<item><title>陈辉宗：构建中国哲学社会科学自主 - 爱思想</title><link>https://www.aisixiang.com/data/178952.html</link></item>
-<item><title>范丽珠 陈纳：以中华文明和信仰实 - 爱思想</title><link>https://www.aisixiang.com/data/179036.html</link></item>
-<item><title>田飞龙：这部法律，何以彰显中国智 - 爱思想</title><link>https://www.aisixiang.com/data/178810.html</link></item>
-<item><title>林毅夫：责任、时代、本领——在北 - 爱思想</title><link>https://www.aisixiang.com/data/178812.html</link></item>
-<item><title>刘坤：《共同纲领》：党领导制定的 - 爱思想</title><link>https://www.aisixiang.com/data/178850.html</link></item>
-<item><title>汪锋：从语言学的角度看茶的前世今 - 爱思想</title><link>https://www.aisixiang.com/data/179155.html</link></item>
-<item><title>王玉珏：加强文化遗产系统性保护和 - 爱思想</title><link>https://www.aisixiang.com/data/179151.html</link></item>
-<item><title>骆红旭：中华文明精神标识建构国家 - 爱思想</title><link>https://www.aisixiang.com/data/179125.html</link></item>
-<item><title>段治文 张元圆：毛泽东重塑中华文 - 爱思想</title><link>https://www.aisixiang.com/data/179060.html</link></item>
-<item><title>李正华：新时代文化强国建设的指导 - 爱思想</title><link>https://www.aisixiang.com/data/179059.html</link></item>
-<item><title>孙来斌：深刻领悟习近平文化思想的 - 爱思想</title><link>https://www.aisixiang.com/data/179050.html</link></item>
-<item><title>郝保权：提升文化原创能力的主体向 - 爱思想</title><link>https://www.aisixiang.com/data/179032.html</link></item>
-<item><title>方世南 高爽：超越“中心—边缘” - 爱思想</title><link>https://www.aisixiang.com/data/178998.html</link></item>
-<item><title>游雨泽：但丁故乡的珍贵文献遗产— - 爱思想</title><link>https://www.aisixiang.com/data/178963.html</link></item>
-<item><title>张宜春：人工智能时代的中华文化主 - 爱思想</title><link>https://www.aisixiang.com/data/178891.html</link></item>
-<item><title>任德永：通州为何存有琉球国墓地? - 爱思想</title><link>https://www.aisixiang.com/data/178890.html</link></item>
-<item><title>吴灿：以村落文化建设助推乡村全面 - 爱思想</title><link>https://www.aisixiang.com/data/178842.html</link></item>
-<item><title>金惠敏：文学与文化的争衡——对英 - 爱思想</title><link>https://www.aisixiang.com/data/178735.html</link></item>
-<item><title>童岭：武则天时代的“世界主义”与 - 爱思想</title><link>https://www.aisixiang.com/data/178656.html</link></item>
-<item><title>第五届琉球·冲绳学术问题国际研讨 - 爱思想</title><link>https://www.aisixiang.com/data/178564.html</link></item>
-<item><title>刘伟 张昱：“太空穿针引线”如何 - 爱思想</title><link>https://www.aisixiang.com/data/179149.html</link></item>
-<item><title>数据成为论文：重新定义“科学成果 - 爱思想</title><link>https://www.aisixiang.com/data/179148.html</link></item>
-<item><title>崔兴毅：为中国锂电蓄能半世纪 - 爱思想</title><link>https://www.aisixiang.com/data/179141.html</link></item>
-<item><title>张晓华 底亚星：雷达锐眸守望家国 - 爱思想</title><link>https://www.aisixiang.com/data/179140.html</link></item>
-<item><title>蔡奇：奋力跑好科技强国建设接力赛 - 爱思想</title><link>https://www.aisixiang.com/data/179136.html</link></item>
-<item><title>量子科技全球发展与竞争态势 - 爱思想</title><link>https://www.aisixiang.com/data/179132.html</link></item>
-<item><title>刘陈立：合成生物学：从“理解生命 - 爱思想</title><link>https://www.aisixiang.com/data/179128.html</link></item>
-<item><title>习近平：在国家科学技术奖励大会、 - 爱思想</title><link>https://www.aisixiang.com/data/179091.html</link></item>
-<item><title>刘冬梅：中国式现代化关键在科技现 - 爱思想</title><link>https://www.aisixiang.com/data/179058.html</link></item>
-<item><title>郑海荣：无创接入，脑机接口迎来更 - 爱思想</title><link>https://www.aisixiang.com/data/178837.html</link></item>
-<item><title>平劲松：非凡的主张需要非凡的证据 - 爱思想</title><link>https://www.aisixiang.com/data/178746.html</link></item>
-<item><title>张同杰：以科学精神对待地外文明搜 - 爱思想</title><link>https://www.aisixiang.com/data/178745.html</link></item>
-<item><title>钱学森：在上海机械学院系统工程研 - 爱思想</title><link>https://www.aisixiang.com/data/178265.html</link></item>
-<item><title>肖仰华：人工智能发展数据瓶颈与突 - 爱思想</title><link>https://www.aisixiang.com/data/178261.html</link></item>
-<item><title>江必新：《生态环境法典》的基本制度及其创新 - 爱思想</title><link>https://www.aisixiang.com/data/179177.html</link></item>
-<item><title>陆铭 钟世虎 雷镇环：激励与协调 ：央地关系的空间政治经济学 - 爱思想</title><link>https://www.aisixiang.com/data/179130.html</link></item>
-<item><title>达巍：多极化时代的美国 - 爱思想</title><link>https://www.aisixiang.com/data/179120.html</link></item>
-<item><title>高翔：习近平党建思想植根于中华优秀传统文化 - 爱思想</title><link>https://www.aisixiang.com/data/179109.html</link></item>
-<item><title>郭兴旺：关于构建检察机关高质效办案责任落实体系的思考 - 爱思想</title><link>https://www.aisixiang.com/data/179175.html</link></item>
-<item><title>林嘉：加强新就业形态劳动者权益保障 - 爱思想</title><link>https://www.aisixiang.com/data/179169.html</link></item>
-<item><title>黄进：着力建设德才兼备、德法兼修的高素质涉外法治人才队伍 - 爱思想</title><link>https://www.aisixiang.com/data/179167.html</link></item>
-<item><title>车浩：贿赂犯罪中“财物”的规范边界——以“预期收益”入罪为中心 - 爱思想</title><link>https://www.aisixiang.com/data/179163.html</link></item>
-<item><title>黄益平：AI或放大收入分配失衡，提振内需是最迫切任务 - 爱思想</title><link>https://www.aisixiang.com/data/179171.html</link></item>
-<item><title>尹俊：绿色发展是中国式现代化的鲜明底色 - 爱思想</title><link>https://www.aisixiang.com/data/179150.html</link></item>
-<item><title>程时雄 何宇航：发展数智经济 培育新质生产力 - 爱思想</title><link>https://www.aisixiang.com/data/179137.html</link></item>
-<item><title>许丹荔 王炳涵：“十五五”时期打造智能经济新形态的驱动因素、核心内涵与实践方略 - 爱思想</title><link>https://www.aisixiang.com/data/179123.html</link></item>
-<item><title>韩庆祥 虞海波：基于中华文明的中国式现代化范式 - 爱思想</title><link>https://www.aisixiang.com/data/179173.html</link></item>
-<item><title>朱培蕾：顺应发展潮流，始终走在时代前列——中国共产党为什么能的关键密码④ - 爱思想</title><link>https://www.aisixiang.com/data/179170.html</link></item>
-<item><title>李君如：在重温马克思主义建党学说经典著作中深刻学习领悟习近平党建思想 - 爱思想</title><link>https://www.aisixiang.com/data/179164.html</link></item>
-<item><title>阚秀玲：不断创新基层统一战线工作方式方法 - 爱思想</title><link>https://www.aisixiang.com/data/179161.html</link></item>
-<item><title>毛胜：在艰苦探索中实现大步迈进社会主义社会伟大飞跃——社会主义革命和建设的伟大成就 - 爱思想</title><link>https://www.aisixiang.com/data/179160.html</link></item>
-<item><title>张文木：无人机与土地——俄乌战场形势分析 - 爱思想</title><link>https://www.aisixiang.com/data/179134.html</link></item>
-<item><title>孙德刚：构建中阿命运共同体的进展、特征与前景 - 爱思想</title><link>https://www.aisixiang.com/data/179127.html</link></item>
-<item><title>多维度认识习近平党建思想的世界意义 - 爱思想</title><link>https://www.aisixiang.com/data/179089.html</link></item>
-<item><title>徐梦雅：数字帝国主义资本输出的政治经济学批判 - 爱思想</title><link>https://www.aisixiang.com/data/179061.html</link></item>
-<item><title>王金营 张寒蒙：区域间人口流动与聚集：中国人口负增长下经济发展的动力 - 爱思想</title><link>https://www.aisixiang.com/data/179176.html</link></item>
-<item><title>杜鹏 彭希哲 朱荟 陈恒 陈之殷：互助性养老：更好满足老年人多样化养老服务需求 - 爱思想</title><link>https://www.aisixiang.com/data/179142.html</link></item>
-<item><title>赵汀阳：人工智能是否将导致文明重新蛮荒化（re-barbarization）？ - 爱思想</title><link>https://www.aisixiang.com/data/179135.html</link></item>
-<item><title>王彦辉：周秦变革与秦汉社会结构的基本特征 - 爱思想</title><link>https://www.aisixiang.com/data/179122.html</link></item>
-<item><title>郭辉：晚清社会“现代性”的仪式表征——以万寿节为视角 - 爱思想</title><link>https://www.aisixiang.com/data/179113.html</link></item>
-<item><title>刘思妗：近年来海外智库对中华文化世界价值与传播效能的认知评析 - 爱思想</title><link>https://www.aisixiang.com/data/179165.html</link></item>
-<item><title>杨晨桢：区域国别学赋能国际传播效能提升 - 爱思想</title><link>https://www.aisixiang.com/data/179139.html</link></item>
-<item><title>王宵静：高/低语境概念的矛盾性及转化：语境化的视角 - 爱思想</title><link>https://www.aisixiang.com/data/179051.html</link></item>
-<item><title>李开渝：如何治理AI“一本正经”地胡说八道 - 爱思想</title><link>https://www.aisixiang.com/data/179033.html</link></item>
-<item><title>吴格奇 潘春雷：新闻价值视域下的外宣话语研究—— “一带一路”倡议十周年报道分析 - 爱思想</title><link>https://www.aisixiang.com/data/179009.html</link></item>
-<item><title>杨志云：发挥人工智能赋能教育变革引擎作用 - 爱思想</title><link>https://www.aisixiang.com/data/179154.html</link></item>
-<item><title>杨红：战略人才赋能科技发展的全球实践 - 爱思想</title><link>https://www.aisixiang.com/data/179146.html</link></item>
-<item><title>李洁 葛鹏：数字化时代全球老年学习模式一瞥 - 爱思想</title><link>https://www.aisixiang.com/data/179145.html</link></item>
-<item><title>陈平原：写作抗战中的大学的几点思考 - 爱思想</title><link>https://www.aisixiang.com/data/179143.html</link></item>
-<item><title>潘建伟：首先要做一个健康快乐的人 - 爱思想</title><link>https://www.aisixiang.com/data/179131.html</link></item>
-<item><title>高华平：“性”“情”论——由新出楚简中“性”、“情”二字的形义引发的思考 - 爱思想</title><link>https://www.aisixiang.com/data/179166.html</link></item>
-<item><title>周士宏 钱诗淇：汉语口语中的共享知识标记“嘛” - 爱思想</title><link>https://www.aisixiang.com/data/179162.html</link></item>
-<item><title>李掖平：红色文学创作的拓展和新变 - 爱思想</title><link>https://www.aisixiang.com/data/179157.html</link></item>
-<item><title>李遇春：“设文之体有常，变文之数无方” - 爱思想</title><link>https://www.aisixiang.com/data/179156.html</link></item>
-<item><title>黄强：外国文学中的足球：等待与哲思 - 爱思想</title><link>https://www.aisixiang.com/data/179144.html</link></item>
-<item><title>李雨琦 谢从高：全民族抗战时期中共对闽西国统区乡村上层动员研究 - 爱思想</title><link>https://www.aisixiang.com/data/179172.html</link></item>
-<item><title>吕鹏：数据库与人工智能：考古研究的双核驱动 - 爱思想</title><link>https://www.aisixiang.com/data/179152.html</link></item>
-<item><title>邹兆辰：何氏父子的史学情怀——何兹全、何芳川教授的学问人生 - 爱思想</title><link>https://www.aisixiang.com/data/179133.html</link></item>
-<item><title>薛艳伟：朱士嘉《中国地方志综录》的编纂与回响 - 爱思想</title><link>https://www.aisixiang.com/data/179115.html</link></item>
-<item><title>钟钦武：中日货币斗争中的商民参与（1921—1923）——以大连“金建”为中心 - 爱思想</title><link>https://www.aisixiang.com/data/179112.html</link></item>
-<item><title>张巍卓：天演与自然：重审严复天演哲学的作意 - 爱思想</title><link>https://www.aisixiang.com/data/179129.html</link></item>
-<item><title>苏杉杉：自然宗教？还是伦理宗教？——《易经》宗教观再议：自然宗教？还是伦理宗教？——《易经》宗教观再议 - 爱思想</title><link>https://www.aisixiang.com/data/179103.html</link></item>
-<item><title>毕冉：从“用中见体”到“体立用行” ——论朱子对《中庸》首章“大本”“达道”的阐释变化 - 爱思想</title><link>https://www.aisixiang.com/data/179102.html</link></item>
-<item><title>陈立胜：“物理最好玩”：宋明儒“物理学”发微 - 爱思想</title><link>https://www.aisixiang.com/data/179084.html</link></item>
-<item><title>刘皓垚：中国古代天学中的无神论基因———以《周髀》为中心的分析 - 爱思想</title><link>https://www.aisixiang.com/data/179064.html</link></item>
-<item><title>王学典：纵横学界的一位豪杰主编——追忆武卫华兄 - 爱思想</title><link>https://www.aisixiang.com/data/179174.html</link></item>
-<item><title>哲学社会科学工作者要自觉遵守学术规范 - 爱思想</title><link>https://www.aisixiang.com/data/179168.html</link></item>
-<item><title>石夫子：《国家重构：中国全方位改革路线图》（陈剑著）是怎样一部书？ - 爱思想</title><link>https://www.aisixiang.com/data/179106.html</link></item>
-<item><title>张国祚：新时代繁荣发展中国特色哲学社会科学的思想指南 - 爱思想</title><link>https://www.aisixiang.com/data/179093.html</link></item>
-<item><title>侯旭东：追忆何兹全先生 - 爱思想</title><link>https://www.aisixiang.com/data/179087.html</link></item>
-<item><title>吴姚函：唐代官员的工资怎么发 - 爱思想</title><link>https://www.aisixiang.com/data/179147.html</link></item>
-<item><title>戴建业：假如不能容忍自己不喜欢的言论…… - 爱思想</title><link>https://www.aisixiang.com/data/179126.html</link></item>
-<item><title>陈祖武：古籍梳理贯穿我的学术生涯 - 爱思想</title><link>https://www.aisixiang.com/data/179119.html</link></item>
-<item><title>何兹全：仙槎大哥和我的纪念 - 爱思想</title><link>https://www.aisixiang.com/data/179118.html</link></item>
-<item><title>陈祖武：历史所是一个做学问的好地方 - 爱思想</title><link>https://www.aisixiang.com/data/179117.html</link></item>
-<item><title>高翔，四川南部人，1963年10月生，研究生学历，历史学博士，中共党员，研究员，博士生导师。现..... - 爱思想</title><link>https://www.aisixiang.com/thinktank/GaoXiang.html</link></item>
-<item><title>Citizenship, Not Scrutiny - Law &amp; Liberty</title><link>https://lawliberty.org/citizenship-not-scrutiny/</link></item>
-<item><title>A New Map of the Constitution - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/a-new-map-of-the-constitution/</link></item>
-<item><title>The Seeing Stones of Modern Warfare - Law &amp; Liberty</title><link>https://lawliberty.org/the-seeing-stones-of-modern-warfare/</link></item>
-<item><title>The Art of Remembering - Law &amp; Liberty</title><link>https://lawliberty.org/forum/the-art-of-remembering/</link></item>
-<item><title>Watch YouTube Without Ads on the DuckDuckGo Browser - DuckDuckGo Blog</title><link>https://spreadprivacy.com/youtube-ad-blocking/</link></item>
-<item><title>Linux Sysctl Tuning: Kernel Parameter Optimization Guide - FOSS Linux</title><link>https://www.fosslinux.com/158641/sysctl-kernel-tuning-linux.htm</link></item>
-<item><title>Linux Resource Limits: Mastering ulimit, systemd, and cgroups - FOSS Linux</title><link>https://www.fosslinux.com/158629/linux-resource-limits-ulimit-systemd-cgroups.htm</link></item>
-<item><title>Linux Proxy Configuration: The Complete Guide to http_proxy, PAC, and System-Wide Settings (2026) - FOSS Linux</title><link>https://www.fosslinux.com/158631/linux-proxy-configuration-guide.htm</link></item>
-<item><title>Linux Rescue Mode: How to Recover a Broken System - FOSS Linux</title><link>https://www.fosslinux.com/158620/linux-rescue-mode-recover-broken-system.htm</link></item>
-<item><title>Linux Printer Setup: Ubuntu, Fedora, and Arch Complete Guide - FOSS Linux</title><link>https://www.fosslinux.com/158556/linux-printer-setup-complete-guide.htm</link></item>
-<item><title>Linux Bluetooth Setup and Troubleshooting: Complete Guide - FOSS Linux</title><link>https://www.fosslinux.com/158534/linux-bluetooth-setup-troubleshooting.htm</link></item>
-<item><title>Linux Package Management: The Complete Guide to apt, dnf, pacman, and zypper - FOSS Linux</title><link>https://www.fosslinux.com/158490/linux-package-management-apt-vs-dnf-vs-pacman.htm</link></item>
-<item><title>Linux for Developers: The Complete 2026 Setup Guide (Ubuntu, Fedora, Arch) - FOSS Linux</title><link>https://www.fosslinux.com/158478/linux-developers-complete-setup-guide.htm</link></item>
-<item><title>Proton Drive on Linux: CLI Setup Guide and Privacy Cloud Storage - FOSS Linux</title><link>https://www.fosslinux.com/158454/proton-drive-linux-cli-setup.htm</link></item>
-<item><title>Linux for Privacy: Tor, DNS, and Browser Hardening (2026) - FOSS Linux</title><link>https://www.fosslinux.com/158268/linux-for-privacy-tor-dns-and-browser-hardening.htm</link></item>
-<item><title>TMF wants to fund AI, faster permitting tech projects before money runs out - FedScoop</title><link>https://fedscoop.com/tmf-proposals-ai-permitting-tech-projects/</link></item>
-<item><title>Transportation Department CIO set to depart in September - FedScoop</title><link>https://fedscoop.com/transportation-department-cio-departure/</link></item>
-<item><title>NWS wants to accelerate a radar infrastructure overhaul. It’s seeking industry help. - FedScoop</title><link>https://fedscoop.com/nws-wants-accelerate-radar-next-infrastructure-overhaul/</link></item>
-<item><title>Turning defense workforce data into mission readiness - FedScoop</title><link>https://fedscoop.com/turning-defense-workforce-data-into-mission-readiness/</link></item>
-<item><title>Subpar Secret Service drone defense flagged in Trump assassination attempt report - FedScoop</title><link>https://fedscoop.com/trump-assassination-attempt-dhs-secret-service-counter-drone/</link></item>
-<item><title>Treasury seeks information on user analytics software - FedScoop</title><link>https://fedscoop.com/treasury-department-rfi-user-analytics-software/</link></item>
-<item><title>Why unified data services are key to helping agencies escape AI ‘pilot purgatory’ - FedScoop</title><link>https://fedscoop.com/why-unified-data-services-are-key-to-helping-agencies-escape-ai-pilot-purgatory/</link></item>
-<item><title>Energy Department’s CIO office is here to ‘feed’ the Genesis Mission team - FedScoop</title><link>https://fedscoop.com/energy-department-cio-office-genesis-mission/</link></item>
-<item><title>2026 FedScoop 50 Awards - FedScoop</title><link>https://fedscoop.com/fedscoop50/vote/</link></item>
-<item><title>VA patient system wrongly deemed ‘low risk’, watchdog says - FedScoop</title><link>https://fedscoop.com/va-patient-system-wrongly-deemed-low-risk-watchdog-says/</link></item>
-<item><title>Pirate Site Blocking Is Legally Impossible in Bulgaria, Supreme Court Ruled - TorrentFreak</title><link>https://torrentfreak.com/pirate-site-blocking-is-legally-impossible-in-bulgaria-supreme-court-ruled/</link></item>
-<item><title>Inverted Rows Can Counter the Hunching You Do at Your Desk All Day - HowStuffWorks</title><link>https://health.howstuffworks.com/wellness/diet-fitness/exercise/inverted-rows.htm</link></item>
-<item><title>Is the Cheapest Ferrari Worth It?By Miles Norellin - HowStuffWorks</title><link>https://auto.howstuffworks.com/cheapest-ferrari.htm</link></item>
-<item><title>Why the Air Force Suddenly Revoked 135 Sergeant PromotionsBy Grant Virellan - HowStuffWorks</title><link>https://science.howstuffworks.com/air-force-promotions-revoked.htm</link></item>
-<item><title>Who Was Lorenzo Salgado Araujo? Houston ICE Shooting VictimBy Wren Corvayne - HowStuffWorks</title><link>https://people.howstuffworks.com/Lorenzo-Salgado-Araujo-ice-shooting.htm</link></item>
-<item><title>What Is the Islamic Republic of Japan? - HowStuffWorks</title><link>https://people.howstuffworks.com/islamic-republic-of-japan.htm</link></item>
-<item><title>Where Is the Cheapest Gas in the U.S. in 2026? - HowStuffWorks</title><link>https://money.howstuffworks.com/personal-finance/budgeting/cheapest-gas-in-the-us.htm</link></item>
-<item><title>New World Screwworm Is Back After 60 Years: What Pet Owners Need to Know - HowStuffWorks</title><link>https://animals.howstuffworks.com/animal-facts/new-world-screwworm.htm</link></item>
-<item><title>Oil Prices Skyrocket Again After the Latest Trump-Iran Escalation - HowStuffWorks</title><link>https://money.howstuffworks.com/oil-prices-trump-iran.htm</link></item>
-<item><title>Can You Solve This Riddle? - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/leisure/online-games/riddle-game-86</link></item>
-<item><title>Why Does CTE Affect So Many Football Players?July 7 By Wren Corvayne - HowStuffWorks</title><link>https://health.howstuffworks.com/diseases-conditions/cte.htm</link></item>
-<item><title>What Is a Super El Niño Event? What to Know About This Year&amp;#39;sJuly 7 By Grant Virellan - HowStuffWorks</title><link>https://science.howstuffworks.com/nature/climate-weather/atmospheric/super-el-nino.htm</link></item>
-<item><title>Jon Snow Is Back! Well, Kind OfJuly 7 By Isla Brevant - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/jon-snow.htm</link></item>
-<item><title>Garth Brooks Takes His &amp;#39;90s Arena Era Back on Tour in 2026July 7 By Wren Corvayne - HowStuffWorks</title><link>https://entertainment.howstuffworks.com/garth-brooks-tour.htm</link></item>
-<item><title>Pringles Pop Dog Buns Are Real! Everything About the Limited-Edition LaunchJuly 6 By Elena Tralwyn - HowStuffWorks</title><link>https://recipes.howstuffworks.com/pringles-pop-dog-buns.htm</link></item>
-<item><title>What Is Legionnaires&amp;#39; Disease? The Upper East Side OutbreakJuly 6 By Grant Virellan - HowStuffWorks</title><link>https://health.howstuffworks.com/diseases-conditions/infectious/legionnaires-disease.htm</link></item>
-<item><title>What Is the &amp;#39;Schism&amp;#39; Between the Society of St. Pius X and the Vatican? - HowStuffWorks</title><link>https://people.howstuffworks.com/st-pius-x-schism.htm</link></item>
-<item><title>Why Is the Trump Administration Suing 99 Ranch Market? - HowStuffWorks</title><link>https://people.howstuffworks.com/99-ranch-lawsuit.htm</link></item>
-<item><title>What&amp;#39;s the Cheapest Country to Live In? - HowStuffWorks</title><link>https://money.howstuffworks.com/personal-finance/financial-planning/cheapest-country-to-live-in.htm</link></item>
-<item><title>Is a Baby Blue Whale Bigger Than a Fully Grown Elephant? - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/baby-whale-adult-elephant-comparison.htm</link></item>
-<item><title>Could a Horse Beat a Zebra in a Race? - HowStuffWorks</title><link>https://animals.howstuffworks.com/mammals/horse-vs-zebra-race.htm</link></item>
-<item><title>Is the Cheapest Lamborghini Even Remotely Affordable? - HowStuffWorks</title><link>https://auto.howstuffworks.com/cheapest-lamborghini.htm</link></item>
-<item><title>9 Things to Do in Orlando With Kids (That Aren&amp;#39;t All Theme Parks) - HowStuffWorks</title><link>https://lifestyle.howstuffworks.com/family/activities/things-to-do-in-orlando-with-kids.htm</link></item>
-<item><title>Why Are School Buses Yellow? - HowStuffWorks</title><link>https://science.howstuffworks.com/why-are-school-buses-yellow.htm</link></item>
-<item><title>How Do Lava Lamps Work? The Science Behind Liquid Motion - HowStuffWorks</title><link>https://science.howstuffworks.com/innovation/science-questions/how-does-lava-lamp-work.htm</link></item>
-<item><title>Why Do Some Cultures Believe the Number Four Is Unlucky? - HowStuffWorks</title><link>https://people.howstuffworks.com/number-4-unlucky.htm</link></item>
-<item><title>The Hamsa Appears in Multiple Cultures, but Why? - HowStuffWorks</title><link>https://people.howstuffworks.com/culture-traditions/cultural-traditions/hamsa.htm</link></item>
-<item><title>Meet William James Sidis, Smartest Man to Ever Live - HowStuffWorks</title><link>https://history.howstuffworks.com/historical-figures/william-james-sidis.htm</link></item>
-<item><title>6 Famous Outlaws of the Wild West - HowStuffWorks</title><link>https://history.howstuffworks.com/historical-figures/outlaws-wild-west.htm</link></item>
-<item><title>The Invasive Joro Spider Is Getting Cozy in the U.S. - HowStuffWorks</title><link>https://animals.howstuffworks.com/arachnids/joro-spider.htm</link></item>
-<item><title>Yes, the Zorse Is a Real Mix of a Horse and a Zebra - HowStuffWorks</title><link>https://animals.howstuffworks.com/animal-facts/zorse.htm</link></item>
-<item><title>Piranha: Fish With a Vicious Reputation and Mixed Diet - HowStuffWorks</title><link>https://animals.howstuffworks.com/fish/piranha.htm</link></item>
-<item><title>What Does a Catalytic Converter Do and Why Do People Steal Them? - HowStuffWorks</title><link>https://auto.howstuffworks.com/catalytic-converter.htm</link></item>
-<item><title>12 Celebrities Who Were Also Serious Race Car Drivers - HowStuffWorks</title><link>https://auto.howstuffworks.com/auto-racing/motorsports/8-actors-who-were-also-race-drivers.htm</link></item>
-<item><title>The Sun Spider Is an Arachnid but Not an Actual Spider - HowStuffWorks</title><link>https://animals.howstuffworks.com/insects/sun-spider.htm</link></item>
-<item><title>Did You Know There Are 23 Countries in North America? - HowStuffWorks</title><link>https://history.howstuffworks.com/north-american-history/countries-in-north-america.htm</link></item>
-<item><title>The Richest Family in the World Heads a Massive U.S. Chain - HowStuffWorks</title><link>https://money.howstuffworks.com/richest-family-in-the-world.htm</link></item>
-<item><title>Las Vegas and Seven Urban Legends That Haunt Tourists - Strange Sounds</title><link>https://strangesounds.org/2026/06/las-vegas-seven-urban-legends-tourists.html</link></item>
-<item><title>The Ten Biggest Gambling Losses in History - Strange Sounds</title><link>https://strangesounds.org/2026/06/biggest-gambling-losses-in-history.html</link></item>
-<item><title>Black Diamond’s Zone Harness is More Than Just a Sport Climbing Specialist - Alpinist</title><link>https://alpinist.com/mountain-standards/black-diamonds-zone-harness-is-more-than-just-a-sport-climbing-specialist/</link></item>
-<item><title>Gregory’s Updated Alpinisto 25 and 50L Packs Merge Alpine Features with Backpacking Comfort - Alpinist</title><link>https://alpinist.com/mountain-standards/gregorys-updated-alpinisto-25-and-50l-packs-merge-alpine-features-with-backpacking-comfort/</link></item>
-<item><title>Peering into the Void - Alpinist</title><link>https://alpinist.com/editors-note/peering-into-the-void/</link></item>
-<item><title>Small AI Models Gain Traction Around the World - IEEE Spectrum</title><link>https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals</link></item>
-<item><title>Japan Pioneered Humanoid Robots—Can It Now Catch China? - IEEE Spectrum</title><link>https://spectrum.ieee.org/humanoid-robots-japan</link></item>
-<item><title>Is Optical Scale-Up Finally Approaching? - IEEE Spectrum</title><link>https://spectrum.ieee.org/nvlink-fusion-optics</link></item>
-<item><title>Large Tabular Models Excel Where LLMs Fail - IEEE Spectrum</title><link>https://spectrum.ieee.org/large-tabular-models-nexus</link></item>
-<item><title>Inside the Race to Electrify Semitrailers for Long-Haul Freight - IEEE Spectrum</title><link>https://spectrum.ieee.org/self-powered-trailers-freight-decarbonization</link></item>
-<item><title>AI Models Overthink Problems—and It’s a Security Risk - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-reasoning-models-security-risk</link></item>
-<item><title>Stacking Chips Sideways Gives AI More Memory - IEEE Spectrum</title><link>https://spectrum.ieee.org/stacking-chips-sideways</link></item>
-<item><title>What Makes AI Art Worth Collecting? - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-art-market</link></item>
-<item><title>Independent Labs Crack Google’s Secret Cryptography Work - IEEE Spectrum</title><link>https://spectrum.ieee.org/google-quantum-cryptography-zero-knowledge</link></item>
-<item><title>Brain-Inspired Light Sensor Could Speed AI Image Processing - IEEE Spectrum</title><link>https://spectrum.ieee.org/hybrid-phototransistor</link></item>
-<item><title>Video Friday: An Earthbound Mars Rover for the Moon - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-nasa-lunar-rover</link></item>
-<item><title>Retired EV Batteries Get Second Life on the Grid - IEEE Spectrum</title><link>https://spectrum.ieee.org/second-life-ev-batteries</link></item>
-<item><title>Chip R&amp;D Is Accelerating to Keep Pace With AI - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-chip-design-fab-ucla</link></item>
-<item><title>Knowledge Bases - DigitalOcean</title><link>https://www.digitalocean.com/products/knowledge-bases</link></item>
-<item><title>Evaluations - DigitalOcean</title><link>https://www.digitalocean.com/products/inference-engine/evaluations</link></item>
-<item><title>Africa’s cultural landmarks: rock-hewn churches of Lalibela, Ethiopia - Aeon</title><link>https://aeon.co/videos/explore-the-wondrous-ethiopian-churches-that-are-carved-into-the-earth</link></item>
-<item><title>How to offset your brain - Aeon</title><link>https://aeon.co/essays/can-mindfulness-help-you-overcome-your-cognitive-biases</link></item>
-<item><title>Sangre violenta / sangre violeta - Aeon</title><link>https://aeon.co/videos/on-the-ground-with-the-voices-fighting-femicide-in-mexico</link></item>
-<item><title>Lawmakers Probe Growing Use of Chinese AI Models In US Companies - Slashdot</title><link>https://news.slashdot.org/story/26/07/09/1947218/lawmakers-probe-growing-use-of-chinese-ai-models-in-us-companies</link></item>
-<item><title>Google Search Hits All-Time Usage Record - Slashdot</title><link>https://tech.slashdot.org/story/26/07/09/1829252/google-search-hits-all-time-usage-record</link></item>
-<item><title>Meta Patents AI Device That Tracks Your Emotions, Watches You Take Your Meds - Slashdot</title><link>https://yro.slashdot.org/story/26/07/09/1835232/meta-patents-ai-device-that-tracks-your-emotions-watches-you-take-your-meds</link></item>
-<item><title>OpenAI Rolls Out GPT-5.6 After Government Greenlight, Announces &amp;#39;ChatGPT Work&amp;#39; - Slashdot</title><link>https://slashdot.org/story/26/07/09/1821245/openai-rolls-out-gpt-56-after-government-greenlight-announces-chatgpt-work</link></item>
-<item><title>Google Hands Open Health Stack To the Linux Foundation - Slashdot</title><link>https://news.slashdot.org/story/26/07/09/1659227/google-hands-open-health-stack-to-the-linux-foundation</link></item>
-<item><title>San Francisco Moves To Build Private Luxury Airport Terminal - Slashdot</title><link>https://news.slashdot.org/story/26/07/09/1649254/san-francisco-moves-to-build-private-luxury-airport-terminal</link></item>
-<item><title>macOS 28 Will Drop Support For Encrypted Mac OS Extended Volumes - Slashdot</title><link>https://hardware.slashdot.org/story/26/07/09/1641225/macos-28-will-drop-support-for-encrypted-mac-os-extended-volumes</link></item>
-<item><title>OpenAI Releases New Voice Models For More Natural Live Conversations - Slashdot</title><link>https://slashdot.org/story/26/07/09/0452203/openai-releases-new-voice-models-for-more-natural-live-conversations</link></item>
-<item><title>Parents&amp;#39; Phone Addiction Affects Bond With Kids, New Study Finds - Slashdot</title><link>https://mobile.slashdot.org/story/26/07/09/0445259/parents-phone-addiction-affects-bond-with-kids-new-study-finds</link></item>
-<item><title>Meta To Build $9 Billion Alberta Data Center, Its First In Canada - Slashdot</title><link>https://news.slashdot.org/story/26/07/09/0436235/meta-to-build-9-billion-alberta-data-center-its-first-in-canada</link></item>
-<item><title>Shoebox-Sized &amp;#39;Detector Satellites&amp;#39; Could Sniff Out a Nuclear Bomb In Space - Slashdot</title><link>https://science.slashdot.org/story/26/07/09/0427237/shoebox-sized-detector-satellites-could-sniff-out-a-nuclear-bomb-in-space</link></item>
-<item><title>US Food and Drug Administration Rejects Petition To Set PFAS Limits In Food - Slashdot</title><link>https://yro.slashdot.org/story/26/07/09/0359202/us-food-and-drug-administration-rejects-petition-to-set-pfas-limits-in-food</link></item>
-<item><title>A Silent Workspace In Claude Mirrors Key Features of Human Consciousness - Slashdot</title><link>https://slashdot.org/story/26/07/08/2059254/a-silent-workspace-in-claude-mirrors-key-features-of-human-consciousness</link></item>
-<item><title>John Deere Agrees To 10-Year Right-To-Repair Deal In FTC Antitrust Lawsuit - Slashdot</title><link>https://yro.slashdot.org/story/26/07/08/2049231/john-deere-agrees-to-10-year-right-to-repair-deal-in-ftc-antitrust-lawsuit</link></item>
-<item><title>Meta&amp;#39;s Glasses Will Turn Off the Camera If You Tamper With the Privacy Light - Slashdot</title><link>https://yro.slashdot.org/story/26/07/08/1750234/metas-glasses-will-turn-off-the-camera-if-you-tamper-with-the-privacy-light</link></item>
-<item><title>&amp;#39;Knockoff&amp;#39; Browser Extension Hides Sketchy Brands On Amazon - Slashdot</title><link>https://tech.slashdot.org/story/26/07/08/1643256/knockoff-browser-extension-hides-sketchy-brands-on-amazon?sbsrc=md</link></item>
-<item><title>Windows Drops Under 60% in Global Desktop OS Share - Slashdot</title><link>https://tech.slashdot.org/story/26/07/08/1728229/windows-drops-under-60-in-global-desktop-os-share?sbsrc=md</link></item>
-<item><title>Nobel-winning materials scientist Omar Yaghi joins China&amp;#39;s Tsinghua University - Slashdot</title><link>https://slashdot.org/submission/17348876/nobel-winning-materials-scientist-omar-yaghi-joins-chinas-tsinghua-university</link></item>
-<item><title>Linux Boots On The Atari Jaguar - Slashdot</title><link>https://slashdot.org/submission/17348872/linux-boots-on-the-atari-jaguar</link></item>
-<item><title>Once Unimaginable, Publishers Are Preparing to Opt Out of Google Search - Slashdot</title><link>https://slashdot.org/submission/17348868/once-unimaginable-publishers-are-preparing-to-opt-out-of-google-search</link></item>
-<item><title>How Flock Cameras Wrongly Tracked Journalist for Days Over &amp;#39;Stolen&amp;#39; Plates - Slashdot</title><link>https://slashdot.org/submission/17348866/how-flock-cameras-wrongly-tracked-journalist-for-days-over-stolen-plates</link></item>
-<item><title>Street Corn Queso - Bev Cooks</title><link>https://bevcooks.com/2026/07/street-corn-queso/</link></item>
-<item><title>Strawberry Basque Cheesecake - Bev Cooks</title><link>https://bevcooks.com/2026/06/strawberry-basque-cheesecake/</link></item>
-<item><title>Monthly Mixtape: Lush and Bouncy ’60s Pool Vibes - Bev Cooks</title><link>https://bevcooks.com/2026/06/monthly-mixtape-lush-and-bouncy-60s-pool-vibes/</link></item>
-<item><title>Blueberry Clafoutis - Bev Cooks</title><link>https://bevcooks.com/2026/06/blueberry-clafoutis/</link></item>
-<item><title>Mexican Street Corn Pasta Salad - Bev Cooks</title><link>https://bevcooks.com/2026/06/mexican-street-corn-pasta-salad/</link></item>
-<item><title>Burrata with Lemon and Olive Oil - Bev Cooks</title><link>https://bevcooks.com/2026/06/burrata-with-lemon-and-olive-oil/</link></item>
-<item><title>Best Tuna Salad - Bev Cooks</title><link>https://bevcooks.com/2026/06/best-tuna-salad/</link></item>
-<item><title>Ed Sheeran Visits Team England’s Camp Amid 2026 World Cup: ‘Anyone Can Win, And I Think It’ll Be Us’ - Billboard</title><link>https://www.billboard.com/music/music-news/ed-sheeran-visits-team-england-camp-2026-world-cup-watch-1236291123/</link></item>
-<item><title>Black Sabbath Drummer Bill Ward Reveals He Now Uses a Wheelchair, But ‘Can Still Play Pretty Good for 78’ - Billboard</title><link>https://www.billboard.com/music/music-news/black-sabbath-drummer-bill-ward-wheelchair-1236290811/</link></item>
-<item><title>This Rapper Bought Jelly Roll a Truck When He Was Struggling Financially: ‘That’s My Dog’ - Billboard</title><link>https://www.billboard.com/music/music-news/jelly-roll-truck-from-yelawolf-when-struggling-1236290689/</link></item>
-<item><title>Did j-hope Just Tease That BTS Is Releasing a New Song for the FIFA World Cup Final? - Billboard</title><link>https://www.billboard.com/music/music-news/bts-j-hope-teases-new-fifa-song-world-cup-final-1236290556/</link></item>
-<item><title>How the Late Rev. Jesse Jackson Inspired Howard Jones’ Return-to-Synth Single ‘Stand Up’ - Billboard</title><link>https://www.billboard.com/music/music-news/howard-jones-stand-up-song-1236290178/</link></item>
-<item><title>Bonnie Tyler, ‘Total Eclipse of the Heart’ Singer, Dies at 75 - Billboard</title><link>https://www.billboard.com/music/music-news/bonnie-tyler-dead-total-eclipse-of-the-heart-singer-1236290436/</link></item>
-<item><title>Charli xcx Poses With Martin Scorsese, Marc Jacobs &amp; John Cale for Alternate ‘Music, Fashion, Film’ Cover - Billboard</title><link>https://www.billboard.com/music/music-news/charli-xcx-music-fashion-film-alt-cover-1236290055/</link></item>
-<item><title>Justin Bieber Joins BTS, Shakira &amp; Madonna as  Co-Headliner of FIFA World Cup Final Halftime Show - Billboard</title><link>https://www.billboard.com/music/music-news/justin-bieber-bts-world-cup-final-halftime-show-headliner-1236289715/</link></item>
-<item><title>Charles Barkley Explains Why He ‘Politely Declined’ Taylor Swift &amp; Travis Kelce’s Wedding Invite - Billboard</title><link>https://www.billboard.com/music/music-news/taylor-swift-travis-kelce-wedding-charles-barkley-declined-1236289754/</link></item>
-<item><title>Ariana Grande Unveils Alternate ‘Petal’ Disc &amp; Haunting Song Snippets: ‘Good Luck on Your Way to Hell’ - Billboard</title><link>https://www.billboard.com/music/music-news/ariana-grande-song-snippets-petal-alternate-album-disc-1236289792/</link></item>
-<item><title>Música Mexicana - Billboard</title><link>https://www.billboard.com/p/tu-victoria-esta-aqui/</link></item>
-<item><title>Gadu Doushin - Psyche</title><link>https://psyche.co/videos/the-japanese-dance-tradition-that-finds-beauty-in-weakness</link></item>
-<item><title>How to imagine a better future for yourself - Psyche</title><link>https://psyche.co/guides/how-to-imagine-a-better-future-for-yourself</link></item>
-<item><title>Does modernisation erase cultural difference – or amplify it? - Psyche</title><link>https://psyche.co/ideas/does-modernisation-erase-cultural-difference-or-amplify-it</link></item>
-<item><title>The ghost behind - Psyche</title><link>https://psyche.co/videos/tracing-the-making-and-unmaking-of-four-friends-rockstar-dreams</link></item>
-<item><title>A college fling - Psyche</title><link>https://psyche.co/turning-points/my-college-fling-was-brief-hollow-yet-deeply-meaningful</link></item>
-<item><title>Same art, different name: would you see or hear it the same way? - Psyche</title><link>https://psyche.co/ideas/same-art-different-name-would-you-see-or-hear-it-the-same-way</link></item>
-<item><title>How to fix your attention span - Psyche</title><link>https://psyche.co/videos/how-to-reclaim-your-attention-from-the-distraction-economy</link></item>
-<item><title>We should study the history of emotions - Psyche</title><link>https://psyche.co/notes-to-self/critics-of-the-history-of-emotions-are-missing-the-point</link></item>
-<item><title>Who do you think you are? There are two answers - Psyche</title><link>https://psyche.co/ideas/who-do-you-think-you-are-there-are-two-answers</link></item>
-<item><title>Tips and tools for navigating hearing loss - Psyche</title><link>https://psyche.co/guides/tips-and-tools-for-navigating-hearing-loss</link></item>
-<item><title>The film that attacks you - Psyche</title><link>https://psyche.co/videos/the-groundbreaking-film-that-rejected-plot-to-embrace-the-irrational</link></item>
-<item><title>Why you should talk to your dead ancestors - Psyche</title><link>https://psyche.co/ideas/why-you-should-talk-to-your-dead-ancestors</link></item>
-<item><title>The wolverine gospel - Psyche</title><link>https://psyche.co/portraits/why-the-wolverine-nudged-out-god-in-one-biologists-cosmology</link></item>
-<item><title>Pierre Bourdieu: habitus - Psyche</title><link>https://psyche.co/videos/the-hidden-rules-of-the-game-that-dictate-how-we-navigate-the-world</link></item>
-<item><title>The thinking style that makes people vulnerable to extremism - Psyche</title><link>https://psyche.co/ideas/the-thinking-style-that-makes-people-vulnerable-to-extremism</link></item>
-<item><title>What moments of insight have in common - Psyche</title><link>https://psyche.co/notes-to-self/what-does-it-really-mean-to-have-a-moment-of-insight</link></item>
-<item><title>How to deal with relationship OCD - Psyche</title><link>https://psyche.co/guides/how-to-deal-with-relationship-ocd</link></item>
-<item><title>Ghosts of summers past - Psyche</title><link>https://psyche.co/turning-points/my-teens-in-foster-care-were-a-puzzle-with-missing-pieces</link></item>
-<item><title>Mary McLeod Bethune reminds us: education must be fought for - Psyche</title><link>https://psyche.co/ideas/mary-mcleod-bethune-reminds-us-education-must-be-fought-for</link></item>
-<item><title>The Lemonade That Actually Smells Like Lemon - CoffeeHow</title><link>https://coffeehow.co/how-to-make-lemonade-taste-like-lemon/</link></item>
-<item><title>FEIN Roastery Cafe Review: Specialty Coffee in Yerevan - CoffeeHow</title><link>https://coffeehow.co/specialty-coffee-yerevan-fein/</link></item>
-<item><title>Xfwl4’s First Preview Release - Xfce Blog</title><link>https://www.spurint.org/journal/2026/06/xfwl4s-first-preview-release</link></item>
-<item><title>Joy in learning computer science with Experience CS - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/joy-in-learning-computer-science-with-experience-cs/</link></item>
-<item><title>四渡赤水.1983.WEB-DL.1080p.10Bit.HEVC.AC3 - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669317.xml</link></item>
-<item><title>佩迪 Peddi (2026)/佩迪/低地之子/无名村英雄 Peddi (2026) Peddi (2026) [1080p] [WEBRip] [5.1] - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730997.xml</link></item>
-<item><title>旅と日々/旅途中的日子/旅行的意义/Tabi.To.Hibi.2025.1080p.WEBRip.x265.10bit.AAC-WORLD.AAC-WORLD SC - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669316.xml</link></item>
-<item><title>爱无退路 Jusqu&amp;#39;au bout (2026)/Jusqu Au Bout 爱无退路 2026 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730996.xml</link></item>
-<item><title>佩迪 Peddi (2026)/Peddi 2026 2160p NF WEB-DL MULTi DDP5.1 H.265-RUDR.eng - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730995.xml</link></item>
-<item><title>爆弹 爆弾 (2025)/爆弹 官方中字 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730994.xml</link></item>
-<item><title>火遮眼  (2025)/火遮眼 官方中字（完美修订版） - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730993.xml</link></item>
-<item><title>斯派德先生 Monsieur Spade (2024)/斯派德先生.Monsieur.Spade.S01.1080p.WEBRip.x265-KONTRAST.简英 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730992.xml</link></item>
-<item><title>肮脏天使 Dirty Angels (2024)/A 肮脏天使 1080P 原盘REMUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730991.xml</link></item>
-<item><title>临床13区：起源 13 клиническая. Начало (2024)/临床13区：起源 第五集 13.Klinicheskaya.Nachalo.S01.E05.2024 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730990.xml</link></item>
-<item><title>火遮眼  (2025)/H 火遮眼 (2025) 4K HDR 杜比视界 简英双语 对应时长01:53:11 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730989.xml</link></item>
-<item><title>火遮眼  (2025)/火遮眼..简英特效字幕 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730988.xml</link></item>
-<item><title>彭达的沼泽 Penda’s Fen (1974)/pendas.fen.1974.1080p.bluray.x264-bipolar - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730987.xml</link></item>
-<item><title>汤姆·汉克斯讲二战 World War II with Tom Hanks (2026)/World.War.II.with.Tom.Hanks.S01E01.1080p.WEB.h264-EDITH - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730986.xml</link></item>
-<item><title>边境燃烧 L&amp;#39;héroïque lande - La frontière brûle (2018)/边境燃烧 L&amp;#39;héroïque lande - La frontière brûle (2018) The Wild Frontier - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730985.xml</link></item>
-<item><title>红番区 紅番區 (1995)/红番区.Rumble.In.The.Bronx.1995.4k.Remux.1080p.BluRay.x265-CDRS.简中 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730984.xml</link></item>
-<item><title>大岛渚访问小川绅介 小川プロ訪問記 (1981)/大岛渚访问小川绅介 小川プロ訪問記 (1981) - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730983.xml</link></item>
-<item><title>租借女友 第四季 Part 2 彼女、お借りします 第4期 第2クール (2026)/租借女友S5 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730982.xml</link></item>
-<item><title>旅と日々/旅途中的日子/Tabi.To.Hibi.2025.1080p.WEBRip.x265.10bit.AAC-WORLD chs - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669315.xml</link></item>
-<item><title>火遮眼  (2025)/火遮眼 中文完美版 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730981.xml</link></item>
-<item><title>识骨寻踪 第一季 Bones (2005)/识骨寻踪.Bones.S01-S12.1080p.WEBRip.x265-INFINITY.简英 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730980.xml</link></item>
-<item><title>你会在那里吗？ 당신, 거기 있어 줄래요? (2016)/你会在那里吗 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730979.xml</link></item>
-<item><title>夺命航班 Black Box: Flight 298 (2026)/夺命航班 Black Box: Flight 298 (2026) Black Box (2026) [1080p] [WEBRip] [5.1] - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730978.xml</link></item>
-<item><title>庞贝末日 Pompeii (2014)/庞贝末日 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730977.xml</link></item>
-<item><title>太空救援 Салют-7 (2017)/太空救援国配特效字幕(匹配01.58.52) - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730976.xml</link></item>
-<item><title>火遮眼  (2025)/火遮眼简英特效字幕(匹配01.53.11) - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730975.xml</link></item>
-<item><title>海瑟 Hesher (2010)/Hesher.2010.BluRay.720p.x264.AC3-CMCT - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730974.xml</link></item>
-<item><title>/The.Seven-Ups.1973.REMASTERED.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669314.xml</link></item>
-<item><title>The Men&amp;#39;s Club/The.Mens.Club.1986.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669313.xml</link></item>
-<item><title>/The.Last.Seduction.1994.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669312.xml</link></item>
-<item><title>/Skullduggery.1970.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669311.xml</link></item>
-<item><title>/Pretty.Baby.1978.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669310.xml</link></item>
-<item><title>/Fritz.the.Cat.1972.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669309.xml</link></item>
-<item><title>/Damnation.Alley.1977.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669308.xml</link></item>
-<item><title>犯罪心理：演变 第十九季 Criminal Minds: Evolution (2026)/Criminal.Minds.S19E07.1080p.WEB.h264-ETHEL - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730973.xml</link></item>
-<item><title>新攻壳机动队 攻殻機動隊 THE GHOST IN THE SHELL (2026)/新攻壳机动队.The.Ghost.in.the.Shell.S01E01.官方简繁英 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730972.xml</link></item>
-<item><title>火遮眼  (2025)/火遮眼.The.Furious.2025.官方简繁英 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730971.xml</link></item>
-<item><title>SisLovesMe.21.11.27.The.Corruption.Of.Dakota.Burns.Chapter.One.Extended.Cut. - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669307.xml</link></item>
-<item><title>飞越疯人院 One Flew Over the Cuckoo&amp;#39;s Nest (1975)/飞越疯人院.One.Flew.Over.the.Cuckoo&amp;#39;s.Nest.1975.官方简繁英 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730970.xml</link></item>
-<item><title>泰星来客 第三季 Earth: Final Conflict (1999)/入侵地球 第3季第22集 DVD字幕版 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730969.xml</link></item>
-<item><title>妈妈叫我警长 第二季 Momma Named Me Sheriff Season 2 (2021)/Momma.Named.Me.Sheriff.S02E05.Puddin.1080p - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730968.xml</link></item>
-<item><title>三毛从军记.CCTV6HD.SanMao.Joins.The.Army.1992.HDTV.720p.x264.AC3-CMCT - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669305.xml</link></item>
-<item><title>La jalousie 2013/Jealousy 2013/嫉妒.La.jalousie.2013 - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669303.xml</link></item>
-<item><title>外星也难民 第六季 Solar Opposites (2025)/Solar.Opposites.S06E05.1080p.WEB.h264-ETHEL.简体&amp;英文 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730967.xml</link></item>
-<item><title>外星也难民 第六季 Solar Opposites (2025)/Solar.Opposites.S06E04.1080p.简体&amp;英文 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730966.xml</link></item>
-<item><title>外星也难民 第六季 Solar Opposites (2025)/Solar.Opposites.S06E03.1080p.WEB.h264-ETHEL.简体&amp;英文 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730965.xml</link></item>
-<item><title>联邦调查局 第八季 FBI (2025)/FBI.S08E22.Defector.1080p.HEVC.x265-MeGusta[EZTVx.to].CN&amp;EN精校版 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730964.xml</link></item>
-<item><title>联邦调查局 第八季 FBI (2025)/FBI.S08E21.Longshot.1080p.x265-ELiTE[EZTVx.to].CN&amp;EN精校版 - 射手网(伪)</title><link>http://assrt.net/xml/sub/730/730962.xml</link></item>
-<item><title>10 years later, ‘Pokémon Go’ is as popular as ever - Fast Company</title><link>https://www.fastcompany.com/91571001/ten-years-later-pokemon-go-is-as-popular-as-ever</link></item>
-<item><title>Singles in World Cup host cities continue to dust off their dating apps amid an influx of tourists - Fast Company</title><link>https://www.fastcompany.com/91571388/world-cup-dating-apps-feeld-tinder</link></item>
-<item><title>The economic cost of Trump’s clean energy rollbacks has been enormous—and it’s still growing - Fast Company</title><link>https://www.fastcompany.com/91571382/the-economic-cost-of-trumps-clean-energy-rollbacks-has-been-enormous-and-its-still-growing</link></item>
-<item><title>World Cup sponsors are already thinking about 2027 - Fast Company</title><link>https://www.fastcompany.com/91571546/world-cup-sponsors-are-already-thinking-about-2027</link></item>
-<item><title>Why you should think twice before letting an AI notetaker in your meeting - Fast Company</title><link>https://www.fastcompany.com/91571498/ai-notetaker-work-meetings-privacy-data</link></item>
-<item><title>You should be terrified by the newest super El Niño forecast. Here’s what’s at stake - Fast Company</title><link>https://www.fastcompany.com/91571392/super-el-nino-new-forecast-is-terrifying-whats-at-stake</link></item>
-<item><title>The biggest GEO mistake brands can make - Fast Company</title><link>https://www.fastcompany.com/91570326/the-biggest-geo-mistake-brands-can-make</link></item>
-<item><title>Walmart is latest grocer to cut prices amid high inflation and grocery costs - Fast Company</title><link>https://www.fastcompany.com/91571020/walmart-latest-grocer-to-cut-prices-amid-high-inflation-and-grocery-costs</link></item>
-<item><title>The latest housing forecast contains one encouraging sign for frustrated homebuyers - Fast Company</title><link>https://www.fastcompany.com/91570930/the-latest-housing-forecast-contains-one-encouraging-sign-for-frustrated-homebuyers</link></item>
-<item><title>Money stress and sleep deprivation: a vicious cycle - Fast Company</title><link>https://www.fastcompany.com/91564417/money-stress-and-sleep-deprivation-a-vicious-cycle</link></item>
-<item><title>You can now fly Delta business class for a lot less, but there’s a catch - Fast Company</title><link>https://www.fastcompany.com/91571419/you-can-now-fly-delta-business-class-for-a-lot-less-but-theres-a-catch</link></item>
-<item><title>Speed still matters in news, but the prize is no longer the click - Fast Company</title><link>https://www.fastcompany.com/91569588/speed-still-matters-news-prize-no-longer-click</link></item>
-<item><title>Trump’s mixed messaging on Iran war has mediators rushing to save the ceasefire - Fast Company</title><link>https://www.fastcompany.com/91571319/trumps-mixed-messaging-iran-war-mediators-rushing-save-ceasefire</link></item>
-<item><title>Why are U.S. AI companies so sure bigger is always better? - Fast Company</title><link>https://www.fastcompany.com/91571102/why-are-u-s-ai-companies-so-sure-bigger-is-always-better</link></item>
-<item><title>As Trump’s D.C. arch gets another review, officials are asking for these design changes - Fast Company</title><link>https://www.fastcompany.com/91571312/trumps-d-c-arch-gets-another-review-officials-asking-design-changes</link></item>
-<item><title>The 2026 Emmy nominations are in, and this HBO Max cast just won big - Fast Company</title><link>https://www.fastcompany.com/91571328/2026-emmy-nominations-in-this-hbo-max-cast-just-won-big</link></item>
-<item><title>If you don’t want to let everyone use your Instagram public photos for AI—here’s how to opt out of Meta Muse Image - Fast Company</title><link>https://www.fastcompany.com/91571325/meta-muse-image-ai-how-to-opt-out-instagram-public-photos</link></item>
-<item><title>A new global ranking named the best place to live—and the U.S. is nowhere near the top - Fast Company</title><link>https://www.fastcompany.com/91570909/a-new-global-ranking-just-named-the-best-place-to-live-and-the-us-isnt-even-close</link></item>
-<item><title>Freedom Fuel: Network of low-priced gas stations opening this week. Here’s the full list of locations - Fast Company</title><link>https://www.fastcompany.com/91571286/freedom-fuel-low-price-gas-stations-full-list-locations-opening-this-week</link></item>
-<item><title>Gen Zers don’t pay each other back when splitting the bill. Why? - Fast Company</title><link>https://www.fastcompany.com/91570301/gen-z-doesnt-pay-each-other-back-when-splitting-the-bill-why</link></item>
-<item><title>Bash Parameter Expansion: Defaults, Substrings, and Replacement - Linuxize</title><link>https://linuxize.com/post/bash-parameter-expansion/</link></item>
-<item><title>smartctl Command in Linux: Check Disk Health with SMART - Linuxize</title><link>https://linuxize.com/post/smartctl-command-in-linux/</link></item>
-<item><title>What Is Load Average in Linux: 1, 5, and 15 Minute Averages - Linuxize</title><link>https://linuxize.com/post/what-is-load-average-in-linux/</link></item>
-<item><title>Markdown Cheatsheet - Linuxize</title><link>https://linuxize.com/cheatsheet/markdown/</link></item>
-<item><title>How to Install Claude Code on Ubuntu and Linux - Linuxize</title><link>https://linuxize.com/post/how-to-install-claude-code-on-linux/</link></item>
-<item><title>ffmpeg Command in Linux: Convert, Compress, and Extract Media - Linuxize</title><link>https://linuxize.com/post/ffmpeg-command-in-linux/</link></item>
-<item><title>Fix npm E401: Unable to Authenticate - Linuxize</title><link>https://linuxize.com/post/fix-npm-e401-unable-to-authenticate/</link></item>
-<item><title>How to Install and Use Super Productivity on Linux - Linuxize</title><link>https://linuxize.com/post/how-to-install-super-productivity-on-linux/</link></item>
-<item><title>Linux Wildcards and Globbing Explained - Linuxize</title><link>https://linuxize.com/post/linux-wildcards-and-globbing/</link></item>
-<item><title>uniq Cheatsheet - Linuxize</title><link>https://linuxize.com/cheatsheet/uniq/</link></item>
-<item><title>What Is /dev/null in Linux - Linuxize</title><link>https://linuxize.com/post/what-is-dev-null-in-linux/</link></item>
-<item><title>Fix SSH &amp;quot;Host Key Verification Failed&amp;quot; Error - Linuxize</title><link>https://linuxize.com/post/fix-ssh-host-key-verification-failed/</link></item>
-<item><title>Hard Links vs Symbolic Links in Linux - Linuxize</title><link>https://linuxize.com/post/hard-links-vs-symbolic-links/</link></item>
-<item><title>How to Install NVIDIA CUDA Toolkit on Ubuntu 26.04 - Linuxize</title><link>https://linuxize.com/post/how-to-install-nvidia-cuda-toolkit-on-ubuntu-26-04/</link></item>
-<item><title>How to Check if a Command Exists in Bash - Linuxize</title><link>https://linuxize.com/post/bash-check-if-command-exists/</link></item>
-<item><title>setuid, setgid, and the Sticky Bit Explained - Linuxize</title><link>https://linuxize.com/post/setuid-setgid-sticky-bit/</link></item>
-<item><title>GitHub CLI: Manage Repositories, Issues, and Pull Requests - Linuxize</title><link>https://linuxize.com/post/github-cli-command/</link></item>
-<item><title>date Cheatsheet - Linuxize</title><link>https://linuxize.com/cheatsheet/date/</link></item>
-<item><title>How to Install Caddy on Ubuntu 26.04 - Linuxize</title><link>https://linuxize.com/post/how-to-install-caddy-on-ubuntu-26-04/</link></item>
-<item><title>curl vs wget: Differences and When to Use Each - Linuxize</title><link>https://linuxize.com/post/curl-vs-wget/</link></item>
-<item><title>PostgreSQL Backup and Restore with pg_dump and pg_restore - Linuxize</title><link>https://linuxize.com/post/postgresql-backup-with-pg-dump-and-pg-restore/</link></item>
-<item><title>pip Cheatsheet - Linuxize</title><link>https://linuxize.com/cheatsheet/pip/</link></item>
-<item><title>TCP vs UDP: Differences and When to Use Each - Linuxize</title><link>https://linuxize.com/post/tcp-vs-udp/</link></item>
-<item><title>rsync Incremental Backups with --link-dest - Linuxize</title><link>https://linuxize.com/post/rsync-incremental-backups-with-link-dest/</link></item>
-<item><title>How to Install and Use Ollama on Ubuntu: Run LLMs Locally - Linuxize</title><link>https://linuxize.com/post/how-to-install-and-use-ollama-on-ubuntu/</link></item>
+<lastBuildDate>Sun, 12 Jul 2026 09:22:13 +0800</lastBuildDate>
+<item><title>Inside A Relaxed Family Home Surrounded By Bushland - CONTEMPORIST</title><link>https://www.contemporist.com/inside-a-relaxed-family-home-surrounded-by-bushland/</link></item>
+<item><title>This Australian House Blends Concrete, Timber and Ocean Views - CONTEMPORIST</title><link>https://www.contemporist.com/this-australian-house-blends-concrete-timber-and-ocean-views/</link></item>
+<item><title>This Apartment Building in Greece Blooms With Petal-Shaped Balconies - CONTEMPORIST</title><link>https://www.contemporist.com/this-apartment-building-in-greece-blooms-with-petal-shaped-balconies/</link></item>
+<item><title>This Off-Grid Home Has a Living Room That Opens With the Turn of a Wheel - CONTEMPORIST</title><link>https://www.contemporist.com/this-off-grid-home-has-a-living-room-that-opens-with-the-turn-of-a-wheel/</link></item>
+<item><title>Large Glass Walls and Warm Natural Materials Define This Brazilian Beach House - CONTEMPORIST</title><link>https://www.contemporist.com/large-glass-walls-and-warm-natural-materials-define-this-brazilian-beach-house/</link></item>
+<item><title>This Mexican Tiny House Uses Prefabrication Without Sacrificing Style - CONTEMPORIST</title><link>https://www.contemporist.com/this-mexican-tiny-house-uses-prefabrication-without-sacrificing-style/</link></item>
+<item><title>Skip to main content - Mental Floss</title><link>https://www.mentalfloss.com/#main</link></item>
+<item><title>People Keep Sneaking Into an Empty IBM Campus - and Then Getting Arrested - Slashdot</title><link>https://slashdot.org/story/26/07/11/2129203/people-keep-sneaking-into-an-empty-ibm-campus---and-then-getting-arrested</link></item>
+<item><title>How the FSF Sysadmins are Blocking Botnets with reaction - Slashdot</title><link>https://news.slashdot.org/story/26/07/11/0450256/how-the-fsf-sysadmins-are-blocking-botnets-with-reaction</link></item>
+<item><title>DuckDuckGo&amp;#39;s Browser Now Blocks Most YouTube Ads - Slashdot</title><link>https://news.slashdot.org/story/26/07/11/2045206/duckduckgos-browser-now-blocks-most-youtube-ads</link></item>
+<item><title>Orbital Datacenter Plans Need an Environmental Review, FCC Told - Slashdot</title><link>https://science.slashdot.org/story/26/07/11/1917235/orbital-datacenter-plans-need-an-environmental-review-fcc-told</link></item>
+<item><title>This Factory Was Severely Short On Workers. Then It Offered Flexible Work. - Slashdot</title><link>https://it.slashdot.org/story/26/07/11/0639259/this-factory-was-severely-short-on-workers-then-it-offered-flexible-work</link></item>
+<item><title>China&amp;#39;s AI Companies May Be &amp;#39;Distilling&amp;#39; America&amp;#39;s AI Models - Slashdot</title><link>https://slashdot.org/story/26/07/11/040239/chinas-ai-companies-may-be-distilling-americas-ai-models</link></item>
+<item><title>EFF Celebrates 36th Anniversary, Says &amp;#39;We Need You in the Fight&amp;#39; - Slashdot</title><link>https://yro.slashdot.org/story/26/07/10/2241251/eff-celebrates-36th-anniversary-says-we-need-you-in-the-fight</link></item>
+<item><title>Meta Says US States Seek $1.4 Trillion In Penalties In August&amp;#39;s Youth Safety Trial - Slashdot</title><link>https://tech.slashdot.org/story/26/07/11/0614250/meta-says-us-states-seek-14-trillion-in-penalties-in-augusts-youth-safety-trial</link></item>
+<item><title>How Flock Cameras Wrongly Tracked a Journalist for Days, Then Sent Police to Arrest Him - Slashdot</title><link>https://yro.slashdot.org/story/26/07/11/0556236/how-flock-cameras-wrongly-tracked-a-journalist-for-days-then-sent-police-to-arrest-him</link></item>
+<item><title>FCC Approves Reflect Orbital&amp;#39;s Space Mirror Satellite That Astronomers Hate - Slashdot</title><link>https://science.slashdot.org/story/26/07/10/2230254/fcc-approves-reflect-orbitals-space-mirror-satellite-that-astronomers-hate</link></item>
+<item><title>China Lands Rocket During an Orbital Launch For First Time - Slashdot</title><link>https://science.slashdot.org/story/26/07/10/1840220/china-lands-rocket-during-an-orbital-launch-for-first-time</link></item>
+<item><title>Apple Sues OpenAI, Accusing It of Stealing Company Secrets - Slashdot</title><link>https://yro.slashdot.org/story/26/07/10/2223208/apple-sues-openai-accusing-it-of-stealing-company-secrets</link></item>
+<item><title>Brown Professor Suspects Majority of His Class Used AI To Cheat - Slashdot</title><link>https://news.slashdot.org/story/26/07/10/2215249/brown-professor-suspects-majority-of-his-class-used-ai-to-cheat</link></item>
+<item><title>Russia Hacks Doorbell Cameras To Spy On NATO Bases - Slashdot</title><link>https://tech.slashdot.org/story/26/07/10/1957214/russia-hacks-doorbell-cameras-to-spy-on-nato-bases</link></item>
+<item><title>Feds Demand Autonomous Vehicle Companies Stop Interfering With First Responders - Slashdot</title><link>https://tech.slashdot.org/story/26/07/10/1947248/feds-demand-autonomous-vehicle-companies-stop-interfering-with-first-responders</link></item>
+<item><title>一文看懂ChatGPT、Codex、Work 的差别 - 宝玉的分享</title><link>https://baoyu.io/blog/chatgpt-work-codex-guide</link></item>
+<item><title>从零开始玩转循环 (Getting started with loops) - 宝玉的分享</title><link>https://baoyu.io/blog/2026-07-06/claudedevs-2074208949205881033</link></item>
+<item><title>Google Opposes Site Blocking in Europe as U.S. Piracy Blocking Plans Gain Momentum - TorrentFreak</title><link>https://torrentfreak.com/google-opposes-site-blocking-in-europe-as-u-s-piracy-blocking-plans-gain-momentum/</link></item>
+<item><title>Pearson’s Anti-Piracy Vendor Takes Down Best-Selling Author’s Own GitHub Repo - TorrentFreak</title><link>https://torrentfreak.com/pearsons-anti-piracy-vendor-takes-down-best-selling-authors-own-github-repo/</link></item>
+<item><title>Making two degrees looks like a lot - FlowingData</title><link>https://flowingdata.com/2026/07/10/two-degrees-looks-like-a-lot/</link></item>
+<item><title>Bar charts do not work like this - FlowingData</title><link>https://flowingdata.com/2015/08/31/bar-chart-baselines-start-at-zero/</link></item>
+<item><title>The Hidden Grief of American Musicals - JSTOR Daily</title><link>https://daily.jstor.org/the-hidden-grief-of-american-musicals/</link></item>
+<item><title>The Atlas Behind the Revolution - JSTOR Daily</title><link>https://daily.jstor.org/the-atlas-behind-the-revolution/</link></item>
+<item><title>How the Himalayan Blackberry Took Over the Pacific Northwest - JSTOR Daily</title><link>https://daily.jstor.org/the-himalayan-blackberry-and-the-dream-of-american-progress/</link></item>
+<item><title>The Ghost Roads of Ireland’s Great Famine - JSTOR Daily</title><link>https://daily.jstor.org/the-ghost-roads-of-irelands-great-famine/</link></item>
+<item><title>Rollerena: New York’s Fairy Godmother - JSTOR Daily</title><link>https://daily.jstor.org/rollerena-new-yorks-fairy-godmother/</link></item>
+<item><title>The Meaning Behind Philippine Crucifixions - JSTOR Daily</title><link>https://daily.jstor.org/the-meaning-behind-philippine-crucifixions/</link></item>
+<item><title>Six Stories with First-Person Narrators - JSTOR Daily</title><link>https://daily.jstor.org/six-stories-with-first-person-narrators/</link></item>
+<item><title>The Hidden Rules of Fine Dining - JSTOR Daily</title><link>https://daily.jstor.org/the-hidden-rules-of-fine-dining/</link></item>
+<item><title>The Evolution of Britain’s Invasion Fiction - JSTOR Daily</title><link>https://daily.jstor.org/the-evolution-of-britains-invasion-fiction/</link></item>
+<item><title>The Oral Histories of the AIDS Crisis - JSTOR Daily</title><link>https://daily.jstor.org/the-oral-histories-of-the-aids-crisis/</link></item>
+<item><title>Fritz Eichenberg’s Art of Human Connection - JSTOR Daily</title><link>https://daily.jstor.org/fritz-eichenbergs-art-of-human-connection/</link></item>
+<item><title>The Rise and Fall of Britain’s Muskrat Empire - JSTOR Daily</title><link>https://daily.jstor.org/the-rise-and-fall-of-britains-muskrat-empire/</link></item>
+<item><title>Inside the Newspapers of Iran’s Revolution - JSTOR Daily</title><link>https://daily.jstor.org/inside-the-newspapers-of-irans-revolution/</link></item>
+<item><title>10 Modern and Contemporary Poems by Queer Writers - JSTOR Daily</title><link>https://daily.jstor.org/10-modern-and-contemporary-poems-by-queer-writers/</link></item>
+<item><title>The Nuclear Test Site That Advanced Oceanography - JSTOR Daily</title><link>https://daily.jstor.org/the-nuclear-test-site-that-advanced-oceanography/</link></item>
+<item><title>Anatomy of a Galileo Forgery - JSTOR Daily</title><link>https://daily.jstor.org/anatomy-of-a-galileo-forgery/</link></item>
+<item><title>Biologists Should Articulate Their Position on AI - Undark</title><link>https://undark.org/2026/07/02/opinion-biologists-leiden-declaration/</link></item>
+<item><title>Review: What Animals Can Teach Humans About Caregiving - Undark</title><link>https://undark.org/2026/06/26/book-review-creatures-guide-to-caring/</link></item>
+<item><title>The MAHA Movement’s Worrisome Embrace of Ibogaine - Undark</title><link>https://undark.org/2026/06/25/opinion-maha-ibogaine-addiction/</link></item>
+<item><title>Advocacy Groups Express Mixed Views on Embryo Editing - Undark</title><link>https://undark.org/2026/06/24/embryo-editing-disease-advocacy/</link></item>
+<item><title>Interview: California Lawmaker Calls for a Peptide Working Group - Undark</title><link>https://undark.org/2026/06/19/interview-joe-patterson-peptides/</link></item>
+<item><title>Making Sense of Data From Wearable Health Trackers - Undark</title><link>https://undark.org/2026/06/16/opinion-wearable-health-tracker-data/</link></item>
+<item><title>Toasting Marshmallows - xkcd</title><link>https://xkcd.com/3270/</link></item>
+<item><title>Airport Meeting - xkcd</title><link>https://xkcd.com/3269/</link></item>
+<item><title>Agriculture - The White House</title><link>https://www.whitehouse.gov/agriculture/</link></item>
+<item><title>Presidential Physical Fitness Test - The White House</title><link>https://www.whitehouse.gov/fitness/</link></item>
+<item><title>Presidential Greetings - The White House</title><link>https://www.whitehouse.gov/greetings/</link></item>
+<item><title>Minnesota Democrats Pardoned a Convicted Child Rapist. President Trump Deported Him. - The White House</title><link>https://www.whitehouse.gov/releases/2026/07/minnesota-democrats-pardoned-a-convicted-child-rapist-president-trump-deported-him/</link></item>
+<item><title>Fact Sheet: President Donald J. Trump Adjusts Imports of Commercial Aircraft, Jet Engines, and Aircraft and Engine Parts into the United States - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2026/07/fact-sheet-president-donald-j-trump-adjusts-imports-of-commercial-aircraft-jet-engines-and-aircraft-and-engine-parts-into-the-united-states/</link></item>
+<item><title>Adjusting Imports of Commercial Aircraft, Jet Engines, and Aircraft and Engine Parts into the United States - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2026/07/adjusting-imports-of-commercial-aircraft-jet-engines-and-aircraft-and-engine-parts-into-the-united-states/</link></item>
+<item><title>Fact Sheet: President Donald J. Trump Secures Historic Defense Investment from NATO Allies, Powering American Industry - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2026/07/fact-sheet-president-donald-j-trump-secures-historic-defense-investment-from-nato-allies-powering-american-industry/</link></item>
+<item><title>Democrats Fought Against Historic Tax Cuts. Now They’re Fighting Against Opportunity for America’s Kids. - The White House</title><link>https://www.whitehouse.gov/releases/2026/07/democrats-fought-against-historic-tax-cuts-now-theyre-fighting-against-opportunity-for-americas-kids/</link></item>
+<item><title>President Trump Rings in Trump Accounts with Historic Opening Bell Ceremony from the Oval Office - The White House</title><link>https://www.whitehouse.gov/releases/2026/07/president-trump-rings-in-trump-accounts-with-historic-opening-bell-ceremony-from-the-oval-office/</link></item>
+<item><title>America 250: Presidential Message on the Anniversary of the Battle of Chippawa - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2026/07/america-250-presidential-message-on-the-anniversary-of-the-battle-of-chippawa/</link></item>
+<item><title>Presidential Message on the Anniversary of the United States Secret Service - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2026/07/presidential-message-on-the-anniversary-of-the-united-states-secret-service/</link></item>
+<item><title>Saving America’s Story - The White House</title><link>https://www.whitehouse.gov/releases/2026/07/saving-americas-story/</link></item>
+<item><title>250th Anniversary of the Adoption of the Declaration of Independence - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2026/07/250th-anniversary-of-the-adoption-of-the-declaration-of-independence/</link></item>
+<item><title>布朗大学经济学教授怀疑班级里多数学生使用 AI 作弊 - Solidot</title><link>https://www.solidot.org/story?sid=84806</link></item>
+<item><title>苹果起诉 OpenAI，指控前华裔员工窃取商业机密 - Solidot</title><link>https://www.solidot.org/story?sid=84805</link></item>
+<item><title>日本成功测试可回收火箭技术 - Solidot</title><link>https://www.solidot.org/story?sid=84804</link></item>
+<item><title>现代环境让大脑不堪重负 - Solidot</title><link>https://www.solidot.org/story?sid=84803</link></item>
+<item><title>权威型领导人推动员工安静辞职 - Solidot</title><link>https://www.solidot.org/story?sid=84802</link></item>
+<item><title>人形机器人成功完成远超手术 - Solidot</title><link>https://www.solidot.org/story?sid=84801</link></item>
+<item><title>长征十号乙火箭成功回收 - Solidot</title><link>https://www.solidot.org/story?sid=84800</link></item>
+<item><title>OpenRouter 上近五成美国公司使用中国 AI 模型 - Solidot</title><link>https://www.solidot.org/story?sid=84799</link></item>
+<item><title>LinkedIn 和 X 上四分之一的长文是 AI 撰写的 - Solidot</title><link>https://www.solidot.org/story?sid=84798</link></item>
+<item><title>Google 搜索量在世界杯期间创下纪录 - Solidot</title><link>https://www.solidot.org/story?sid=84797</link></item>
+<item><title>美国国会调查美国公司使用中国 AI 模型 - Solidot</title><link>https://www.solidot.org/story?sid=84796</link></item>
+<item><title>Ukraine can soon build its own Patriots – but it could take years - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/07/10/ukraine-can-soon-build-its-own-patriots-but-it-could-take-years/</link></item>
+<item><title>Zelenskyy taps European allies to build Freya, a cheaper Patriot-alternative to Russia’s ballistic missiles - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/07/10/zelenskyy-taps-european-allies-to-build-freya-a-cheaper-patriot-alternative-to-russias-ballistic-missiles/</link></item>
+<item><title>US Marines successfully test-fire new medium-range air defense system - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/07/10/us-marines-successfully-test-fire-new-medium-range-air-defense-system/</link></item>
+<item><title>Rheinmetall, MBDA to develop laser weapon for German Navy - Defense News</title><link>https://www.defensenews.com/global/europe/2026/07/10/rheinmetall-mbda-to-develop-laser-weapon-for-german-navy/</link></item>
+<item><title>Italy busts Russian spy ring collecting data on Ukrainian air defense vulnerabilities - Defense News</title><link>https://www.defensenews.com/global/europe/2026/07/10/italy-busts-russian-spy-ring-collecting-data-on-ukrainian-air-defense-vulnerabilities/</link></item>
+<item><title>Summer Camp: It’s Alive! A Nature Discovery Camp - The Strong</title><link>https://www.museumofplay.org/event/summer-camp-its-alive-a-nature-discovery-camp/2026-07-06/</link></item>
+<item><title>Forest Explorers: Summer of Exploration! Presented by CooperVision - The Strong</title><link>https://www.museumofplay.org/event/forest-explorers-summer-of-exploration-presented-by-coopervision-2/</link></item>
+<item><title>Sabretooth’s Day at The Strong - The Strong</title><link>https://www.museumofplay.org/event/sabretooths-day-at-the-strong/</link></item>
+<item><title>Corn Hill Arts Festival Fairy House Showcase - The Strong</title><link>https://www.museumofplay.org/event/corn-hill-arts-festival-fairy-house-showcase/2026-07-11/</link></item>
+<item><title>Summer Camp: Museum Makers: Create, Curate, and Imagine - The Strong</title><link>https://www.museumofplay.org/event/summer-camp-museum-makers-create-curate-and-imagine/2026-07-13/</link></item>
+<item><title>Under the Sea: Summer of Exploration! Presented by CooperVision - The Strong</title><link>https://www.museumofplay.org/event/under-the-sea-summer-of-exploration-presented-by-coopervision/2026-07-13/</link></item>
+<item><title>Night Out at The Strong (18+) - The Strong</title><link>https://www.museumofplay.org/event/night-out-at-the-strong-18/</link></item>
+<item><title>Summer Camp: Curiosity Crew: A STEAM Exploration Camp - The Strong</title><link>https://www.museumofplay.org/event/summer-camp-curiosity-crew-a-steam-exploration-camp-2/2026-07-20/</link></item>
+<item><title>Down on the Farm: Summer of Exploration! Presented by CooperVision - The Strong</title><link>https://www.museumofplay.org/event/down-on-the-farm-summer-of-exploration-presented-by-coopervision/2026-07-20/</link></item>
+<item><title>Free Vision Screenings - The Strong</title><link>https://www.museumofplay.org/event/free-vision-screenings/2026-07-23/</link></item>
+<item><title>Summer Camp: Game Makers: Create, Solve, and Play - The Strong</title><link>https://www.museumofplay.org/event/summer-camp-curiosity-crew-a-steam-exploration-camp/2026-07-27/</link></item>
+<item><title>Arctic Freeze: Summer of Exploration! Presented by CooperVision - The Strong</title><link>https://www.museumofplay.org/event/arctic-freeze-summer-of-exploration-presented-by-coopervision/</link></item>
+<item><title>Save The Games: A Digital Preservation Symposium - The Strong</title><link>https://www.museumofplay.org/event/save-the-games-a-digital-preservation-symposium/2026-07-29/</link></item>
+<item><title>The Corn Hill Arts Festival - The Strong</title><link>https://www.museumofplay.org/venue/the-corn-hill-arts-festival/</link></item>
+<item><title>Ukraine Claims Scores Of Russian Ships Struck In Sea Of Azov - The War Zone</title><link>https://www.twz.com/news-features/ukraine-claims-scores-of-russian-ships-struck-in-sea-of-azov</link></item>
+<item><title>USAF Decides Against Flying B-21 Raiders With Just One Pilot - The War Zone</title><link>https://www.twz.com/air/usaf-decides-against-flying-b-21-raiders-with-just-one-pilot</link></item>
+<item><title>Carrier Qualifications Still Happening For A Few Navy Fighter Pilots In Training - The War Zone</title><link>https://www.twz.com/sea/carrier-qualifications-still-happening-for-a-few-navy-fighter-pilots-in-training</link></item>
+<item><title>Russia Confirms Talks With Turkey Over Fate Of S-400s Amid F-35 Push - The War Zone</title><link>https://www.twz.com/air/russia-confirms-talks-with-turkey-over-fate-of-s-400s-amid-f-35-push</link></item>
+<item><title>F-22 Raptors Arrive In England After Deployment To Israel For Iran War - The War Zone</title><link>https://www.twz.com/air/f-22-raptors-arrive-in-england-after-deployment-to-israel-for-iran-war</link></item>
+<item><title>Supercarrier USS Abraham Lincoln Passes 200 Consecutive Days At Sea Mark - The War Zone</title><link>https://www.twz.com/sea/supercarrier-uss-abraham-lincoln-passes-200-consecutive-days-at-sea-mark</link></item>
+<item><title>Chinese J-15 Fighter Seen Launching From A Carrier With Four Anti-Ship Missiles For First Time - The War Zone</title><link>https://www.twz.com/sea/chinese-j-15-fighter-seen-launching-from-a-carrier-with-four-anti-ship-missiles-for-first-time</link></item>
+<item><title>Why Does The F-47’s Design Look So Different Than What Many Expected? - The War Zone</title><link>https://www.twz.com/air/why-does-the-f-47s-design-look-so-different-than-what-many-expected</link></item>
+<item><title>Germany To Buy Ground-Launched Tomahawk Missiles - The War Zone</title><link>https://www.twz.com/land/germany-to-buy-ground-launched-tomahawk-missiles</link></item>
+<item><title>Renewed Attacks Between U.S. And Iran Stretch Into Third Day (Updated) - The War Zone</title><link>https://www.twz.com/news-features/renewed-attacks-between-u-s-and-iran-stretch-into-third-day</link></item>
+<item><title>Ukrainian-Built Patriot Missiles Won’t Be Defending The Country’s Skies Anytime Soon - The War Zone</title><link>https://www.twz.com/land/ukraine-built-patriot-missiles-wont-be-defending-the-countrys-skies-anytime-soon</link></item>
+<item><title>Taiwan’s Skyguard Anti-Aircraft Guns Now Equipped With Anti-Drone Nets - The War Zone</title><link>https://www.twz.com/land/taiwans-skyguard-anti-aircraft-guns-now-equipped-with-anti-drone-nets</link></item>
+<item><title>Trump Unexpectedly Swaps New Air Force One Jet For Old In Sudden Trip To British Base - The War Zone</title><link>https://www.twz.com/air/trump-unexpectedly-swaps-new-air-force-one-jet-for-old-in-sudden-trip-to-british-base</link></item>
+<item><title>What The U.S. Military Could Lose If Trump Cuts Off Trade With NATO Ally Spain - The War Zone</title><link>https://www.twz.com/news-features/what-the-u-s-military-could-lose-if-trump-cuts-off-trade-with-nato-ally-spain</link></item>
+<item><title>Deal To End Hostilities Between U.S. And Iran Faces Most Serious Challenge Yet (Updated) - The War Zone</title><link>https://www.twz.com/news-features/deal-to-end-hostilities-between-u-s-and-iran-faces-most-serious-challenge-yet</link></item>
+<item><title>UK And Dutch Partner On Next-Gen Amphibious Assault Ships - The War Zone</title><link>https://www.twz.com/news-features/uk-and-dutch-partner-on-next-gen-amphibious-assault-ships</link></item>
+<item><title>U.S. Strikes Iran In Retaliation For Multiple Attacks On Shipping In Strait Of Hormuz Over Last 24 Hours (Updated) - The War Zone</title><link>https://www.twz.com/news-features/u-s-strikes-iran-in-retaliation-for-multiple-attacks-on-shipping-in-strait-of-hormuz-over-last-24-hours</link></item>
+<item><title>Poor B-52 Readiness Creating Testing Challenges For New AGM-181A Nuclear Cruise Missile - The War Zone</title><link>https://www.twz.com/air/poor-b-52-readiness-creating-testing-challenges-for-new-agm-181a-nuclear-cruise-missile</link></item>
+<item><title>Where Are The Aircraft Carriers: July 7, 2026 - The War Zone</title><link>https://www.twz.com/sea/where-are-the-aircraft-carriers-july-7-2026</link></item>
+<item><title>Pirate Attacks Spike Off The Horn Of Africa - The War Zone</title><link>https://www.twz.com/news-features/pirate-attacks-on-shipping-off-the-horn-of-africa-spike</link></item>
+<item><title>Mysterious Rectangle ‘Silos’ Spotted At Sprawling Chinese Missile Test Base - The War Zone</title><link>https://www.twz.com/news-features/mysterious-rectangle-silos-emerge-at-sprawling-chinese-missile-test-base</link></item>
+<item><title>NATO Picks Saab GlobalEye To Replace Aging E-3 AWACS Fleet - The War Zone</title><link>https://www.twz.com/air/nato-picks-saab-globaleye-to-replace-aging-e-3-awacs-fleet</link></item>
+<item><title>VH-92 Patriot Getting Granite White House Helipad Will Finally Allow VH-3D Sea King To Retire - The War Zone</title><link>https://www.twz.com/air/vh-92-patriot-getting-granite-white-house-helipad-will-finally-allow-vh-3d-sea-king-to-retire</link></item>
+<item><title>North Korea’s Frigate Bristles With A Comical Number Of Machine Guns - The War Zone</title><link>https://www.twz.com/sea/north-koreas-frigate-bristles-with-a-comical-number-of-machine-guns</link></item>
+<item><title>Canada Picks German Type 212 Submarine For Badly Needed Fleet Renewal - The War Zone</title><link>https://www.twz.com/sea/canada-picks-german-type-212-submarine-for-badly-needed-fleet-renewal</link></item>
+<item><title>Out Of Patriot Interceptors, Ukraine Can’t Down Any Ballistic Missiles Striking Kyiv - The War Zone</title><link>https://www.twz.com/land/out-of-patriot-interceptors-ukraine-cant-down-any-ballistic-missiles-striking-kyiv</link></item>
+<item><title>China’s Submarine-Launched Ballistic Missile Test In The Pacific Is A Big Deal - The War Zone</title><link>https://www.twz.com/sea/chinas-submarine-launched-ballistic-missile-test-in-the-pacific-is-a-big-deal</link></item>
+<item><title>Russian Tu-142 Bear Drops Sonobuoys During Close Encounter With British Carrier - The War Zone</title><link>https://www.twz.com/sea/russian-tu-142-bear-drops-sonobuoys-during-close-encounter-with-british-carrier</link></item>
+<item><title>Bunker Talk: Happy 250th Birthday United States Of America Edition! - The War Zone</title><link>https://www.twz.com/news-features/bunker-talk-happy-250th-birthday-united-states-of-america-edition</link></item>
+<item><title>Hardened Aircraft Shelters At Russian Air Base In Crimea Damaged From Ukrainian Drone Strikes (Updated) - The War Zone</title><link>https://www.twz.com/news-features/hardened-aircraft-shelters-at-russian-air-base-in-crimea-damaged-from-ukrainian-drone-strikes</link></item>
+<item><title>This Is The Massive Aerial Armada That Is About To Fly Over The Capital - The War Zone</title><link>https://www.twz.com/space/this-is-the-massive-aerial-armada-that-is-about-to-fly-over-the-capital</link></item>
+<item><title>Royal Navy’s Sea Launch Of Combat-Proven Nyan Kamikaze Drone Points To Fleet’s ‘Hybrid’ Future - The War Zone</title><link>https://www.twz.com/news-features/royal-navys-sea-launch-of-combat-proven-nyan-kamikaze-drone-points-to-fleets-hybrid-future</link></item>
+<item><title>U.S. Navy MH-60S Seahawk Goes Down In Arabian Sea (Updated) - The War Zone</title><link>https://www.twz.com/air/mh-60s-seahawk-goes-down-in-arabian-sea-search-on-for-missing-crewmember</link></item>
+<item><title>Navy’s New ‘Doomsday Plane’ Delayed As Watchdog Says Developmental Concerns Are Now Realities - The War Zone</title><link>https://www.twz.com/nuclear/navys-new-doomsday-plane-delayed-as-watchdog-says-developmental-concerns-are-now-realities</link></item>
+<item><title>Russia “Highly Likely” Behind Drone Incursions Over U.S. Bases In England Report Concludes - The War Zone</title><link>https://www.twz.com/air/russia-highly-likely-behind-drone-incursions-over-u-s-bases-in-england-report-concludes</link></item>
+<item><title>Navy Already Looking For Alternatives To Its Brand New AARGM-ER Radar Busting Missile (Updated) - The War Zone</title><link>https://www.twz.com/air/navy-already-looking-for-alternatives-to-its-brand-new-aargm-er-radar-busting-missile</link></item>
+<item><title>F-15EX And Ghost Bat Team Up Over Pacific During Valiant Shield - The War Zone</title><link>https://www.twz.com/air/f-15ex-and-ghost-bat-team-up-over-pacific-during-valiant-shield</link></item>
+<item><title>Nobel-Winning US Chemist Will Move to China to Lead AI Institute - Slashdot</title><link>https://science.slashdot.org/story/26/07/10/0830229/nobel-winning-us-chemist-will-move-to-china-to-lead-ai-institute?sbsrc=md</link></item>
+<item><title>Disable Autoplay and Infinite Scroll Or Risk Massive Fines, EU Tells Meta - Slashdot</title><link>https://meta.slashdot.org/story/26/07/10/1737224/disable-autoplay-and-infinite-scroll-or-risk-massive-fines-eu-tells-meta?sbsrc=md</link></item>
+<item><title>The Mind-Bending Company That Gets a Million Job Applications—and Rejects - Slashdot</title><link>https://slashdot.org/submission/17348924/the-mind-bending-company-that-gets-a-million-job-applicationsand-rejects</link></item>
+<item><title>Cloudflare, Netlify and Vercel with new toys for phishers and threat actors - Slashdot</title><link>https://slashdot.org/submission/17348916/cloudflare-netlify-and-vercel-with-new-toys-for-phishers-and-threat-actors</link></item>
+<item><title>Say Hello To Google, Mystery Owner Behind Wyoming&amp;#39;s Largest Data Center Project - Slashdot</title><link>https://slashdot.org/submission/17348914/say-hello-to-google-mystery-owner-behind-wyomings-largest-data-center-project</link></item>
+<item><title>StormWall: Scientists Propose Space-Based Shield Against Dangerous Solar Storms - Slashdot</title><link>https://slashdot.org/submission/17348912/stormwall-scientists-propose-space-based-shield-against-dangerous-solar-storms</link></item>
+<item><title>AI Fiction Is Easy to Detect Because It&amp;#39;s Stupid and Bad, Research Finds - Slashdot</title><link>https://slashdot.org/submission/17348908/ai-fiction-is-easy-to-detect-because-its-stupid-and-bad-research-finds</link></item>
+<item><title>DOJ: We Can Force You To Decrypt That Laptop - Slashdot</title><link>https://it.slashdot.org/story/11/07/11/1531259/doj-we-can-force-you-to-decrypt-that-laptop?sbsrc=thisday</link></item>
+<item><title>Surgeon General Describes Censorship From Bush Administration - Slashdot</title><link>https://politics.slashdot.org/story/07/07/11/1719202/surgeon-general-describes-censorship-from-bush-administration?sbsrc=thisday</link></item>
+<item><title>Windows Longhorn Beta Screenshots - Slashdot</title><link>https://tech.slashdot.org/story/05/07/11/0445229/windows-longhorn-beta-screenshots?sbsrc=thisday</link></item>
+<item><title>Gates: Open Source Kills Jobs - Slashdot</title><link>https://slashdot.org/story/04/07/11/1714235/gates-open-source-kills-jobs?sbsrc=thisday</link></item>
+<item><title>USS Ronald Reagan Commissioning Tomorrow - Slashdot</title><link>https://tech.slashdot.org/story/03/07/11/1323256/uss-ronald-reagan-commissioning-tomorrow?sbsrc=thisday</link></item>
+<item><title>Lore of the rings - Aeon</title><link>https://aeon.co/essays/how-to-decode-the-archive-inside-ancient-tree-rings</link></item>
+<item><title>Lit Hub Weekly: July 6 – 10, 2026 - Literary  Hub</title><link>https://lithub.com/lit-hub-weekly-july-6-10-2026/</link></item>
+<item><title>A new Mary Oliver documentary captures the poet’s wild and precious life. - Literary  Hub</title><link>https://lithub.com/a-new-mary-oliver-documentary-captures-the-poets-wild-and-precious-life/</link></item>
+<item><title>Lit Hub Daily: July 10, 2026 - Literary  Hub</title><link>https://lithub.com/lit-hub-daily-july-10-2026/</link></item>
+<item><title>David Baerwald on Taking Writing Lessons from Hans Zimmer - Literary  Hub</title><link>https://lithub.com/david-baerwald-on-taking-writing-lessons-from-hans-zimmer/</link></item>
+<item><title>Elves Against Capitalism: How the Earth Liberation Front Came to America - Literary  Hub</title><link>https://lithub.com/elves-against-capitalism-how-the-earth-liberation-front-came-to-america/</link></item>
+<item><title>From Stalin to Trump, How Power Unmakes the World - Literary  Hub</title><link>https://lithub.com/from-stalin-to-trump-how-power-unmakes-the-world/</link></item>
+<item><title>Battle of the Aussie Snake Men: Charles Underwood vs. Joseph Shires - Literary  Hub</title><link>https://lithub.com/battle-of-the-aussie-snake-men-charles-underwood-vs-joseph-shires/</link></item>
+<item><title>Restoring the Voice of Kathy Leissner Whitman, the Texas Tower Sniper’s First Victim - Literary  Hub</title><link>https://lithub.com/restoring-the-voice-of-kathy-leissner-whitman-the-texas-tower-snipers-first-victim/</link></item>
+<item><title>Ubuntu 26.10 retires dbus-daemon after 22 year run as default - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/07/ubuntu-26-10-dbus-broker</link></item>
+<item><title>Claude desktop app for Linux enters beta – here’s how to try it - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/07/claude-desktop-linux-beta</link></item>
+<item><title>Linux Mint 23 to offer full Wayland support (but X11 is staying) - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/07/linux-mint-wayland-fully-supported</link></item>
+<item><title>TUXEDO OS drops Ubuntu to rebase on Debian Testing - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/07/slug-tuxedo-os-debian-rebase</link></item>
+<item><title>Ubuntu 25.10 loses security updates on 9 July, 2026 - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/07/ubuntu-2510-eol-july-9-2026</link></item>
+<item><title>Ubuntu is swapping its time sync tool for a Rust-based version - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/07/ubuntu-ntpd-rs-rust-time-sync</link></item>
+<item><title>Snap Store will be down for maintenance this weekend - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/07/snap-store-offline-july-2026</link></item>
+<item><title>Ubuntu 26.04 LTS has fixed its missing video/audio thumbnails - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/07/ubuntu-2604-video-audio-thumbnails-fix</link></item>
+<item><title>Linux App Release Roundup (June 2026) - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/07/linux-app-release-roundup-june-2026</link></item>
+<item><title>Firefox is adding Vulkan video decoding for Nvidia GPUs - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/07/firefox-vulkan-video-decoding-nvidia</link></item>
+<item><title>Ubuntu’s new ‘Myna’ AI offers voice typing – but how? - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/06/what-is-myna-ubuntu-ai-dictation</link></item>
+<item><title>This Flatpak runs a 30-year old version of GIMP – pre-GTK - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/06/gimp-1996-flatpak</link></item>
+<item><title>Using AirPods, Pixel Buds etc on Linux - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/06/budslink-airpods-galaxy-buds-linux</link></item>
+<item><title>An Irreverent Defense of the Classics - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/an-irreverent-defense-of-the-classics/</link></item>
+<item><title>Reading Erasmus in an Absurd Age - Law &amp; Liberty</title><link>https://lawliberty.org/reading-erasmus-in-an-absurd-age/</link></item>
 </channel></rss>
