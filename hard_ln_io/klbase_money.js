@@ -493,6 +493,8 @@ function elm_get_money_b(csstr,csdate,csaddress,to_line_style=false){
     //x1
     //¥8.75
     csstr=csstr.replace(/^支持\d+天无理由$/mg,'');
+    csstr=csstr.replace(/^不支持\d+天无理由退换$/mg,'');    
+    csstr=csstr.replace(/^\d+天无理由退换$/mg,'');    
     csstr=csstr.replace(/\n¥\n/g,'\n¥');
     csstr=csstr.replace(/^(实付|折|不?支持7天无理由)$/mg,'');
     csstr=csstr.replace(/\n+/mg,'\n');
@@ -888,7 +890,7 @@ function remove_line_money_b(textarea_id){
     
     var old_value=local_storage_get_b('wp_remove_line');
     if (old_value==''){
-        old_value='不支持7天无理由';
+        old_value='不支持7天无理由退换';
     }
     var new_value=prompt('输入待删除的行：',old_value);
     if (new_value==null || new_value==''){return;}

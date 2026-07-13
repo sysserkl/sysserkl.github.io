@@ -3,7 +3,7 @@
 //0.0.1-20260430 from: 千问
 //-----------------------
 function generate_i2d(originalImg,threshold,dotSize,gap,canvas,ctx,maxWidth=800,bgcolor='#000000'){
-    if (!originalImg.src) {return};
+    if (!originalImg.src){return;}
 
     // 1. 准备画布
     const scale = Math.min(1, maxWidth / originalImg.width);
