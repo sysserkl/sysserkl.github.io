@@ -1612,5 +1612,25 @@ departure gate
 boarding gate
 Asian
 handcart
+interventionist
+Katherine
+Pekingese
+photojournalist
+increasingly
+vlog
+wives
+rational number
+irrational number
+row house
+Bonaparte
+congratulate
+Continental Congress
+gentlemen-in-waiting
+heartwarming
+househusband
+Obama
+rower
+Tasmanian
+
 
 `.trim().split('\n');

@@ -186,6 +186,8 @@ function menu_enwords_book(){
     ['phrase','import_enwords_book(\'kaikki phrase\',1000);',true],
     ['单词','import_enwords_book(\'kaikki\',1000);',true],
     ['含有生词的phrase','import_enwords_book(\'kaikki phrase new\',1000);',true],
+    ['无词组的旧单词的phrase','import_enwords_book(\'kaikki phrase with old without phrase words\',1000);',true],
+    
     ];    
     klmenu_new.push(menu_container_b(str_t,format_list,'kaikki随机导入1000个：'));    
     
@@ -741,6 +743,24 @@ function import_enwords_book(cstype,csmax=-1){
                         result_t.push(aphrase);
                         if (result_t.length>=csmax){break;}
                     }
+                }
+                otextarea.value=result_t.join('\n').replace(/ /g,'_');
+            }
+            break;
+        case 'kaikki phrase with old without phrase words':
+            if (check_kaikki_phrase_b()){
+                var without_phrase=old_words_with_and_without_phrase_b()[0];
+                without_phrase.sort(randomsort_b);
+                var result_t=[];
+                for (let aphrase of kaikki_phrase_global){
+                    for (let aword of without_phrase){
+                        if (!aphrase.includes(aword)){continue;}    //可大大加快速度 - 保留注释
+                        if (aphrase.match(new RegExp('\\b'+aword+'\\b'))){
+                            result_t.push(aphrase);
+                            break;
+                        }
+                    }
+                    if (result_t.length>=csmax){break;}
                 }
                 otextarea.value=result_t.join('\n').replace(/ /g,'_');
             }

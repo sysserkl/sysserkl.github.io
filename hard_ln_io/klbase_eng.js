@@ -3279,6 +3279,17 @@ function phrase_in_old_words_b(merge_phrase=false){
     }
 }
 
+function old_words_with_and_without_phrase_b(){
+    var phrase_set,words_set;
+    [phrase_set,words_set]=phrase_in_old_words_b(true);
+    
+    phrase_set=new Set(Array.from(phrase_set).join(' ').split(/[\s\-]+/));
+    
+    var without_phrase=Array.from(array_difference_b(words_set,phrase_set,true));
+    var with_phrase=Array.from(array_intersection_b(words_set,phrase_set,true));
+    return [without_phrase,with_phrase];
+}
+
 function old_words_redundant_kltxt_b(is_all=false,row_query='span.txt_content',check_is_visible=false,return_reg=true){
     var result_t=[];
     var blmin=(is_all?0:1);

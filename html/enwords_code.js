@@ -1134,14 +1134,9 @@ function old_words_and_phrase_with_space_kle(){
 }
 
 function old_words_without_phrase_kle(){
-    var phrase_set,words_set;
-    [phrase_set,words_set]=phrase_in_old_words_b(true);
+    var without_phrase,with_phrase;
+    [without_phrase,with_phrase]=old_words_with_and_without_phrase_b();
     
-    phrase_set=new Set(Array.from(phrase_set).join(' ').split(/[\s\-]+/));
-    
-    var without_phrase=Array.from(array_difference_b(words_set,phrase_set,true));
-    var with_phrase=Array.from(array_intersection_b(words_set,phrase_set,true));
-
     var bljg='<h4>无词组的单词 <small>('+without_phrase.length+')</small></h4>';
     without_phrase.sort(randomsort_b);
     bljg=bljg+'<textarea style="height:25rem;">'+without_phrase.slice(0,1000)+'...</textarea>';
