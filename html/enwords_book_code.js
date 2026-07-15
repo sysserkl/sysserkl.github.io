@@ -751,8 +751,9 @@ function import_enwords_book(cstype,csmax=-1){
             if (check_kaikki_phrase_b()){
                 var without_phrase=old_words_with_and_without_phrase_b()[0];
                 without_phrase.sort(randomsort_b);
+                kaikki_phrase_global.sort(randomsort_b);
                 var result_t=[];
-                for (let aphrase of kaikki_phrase_global){
+                for (let aphrase of kaikki_phrase_global){  //循环顺序不可换，否则增加运行时间 - 保留注释
                     for (let aword of without_phrase){
                         if (!aphrase.includes(aword)){continue;}    //可大大加快速度 - 保留注释
                         if (aphrase.match(new RegExp('\\b'+aword+'\\b'))){
