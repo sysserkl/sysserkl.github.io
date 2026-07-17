@@ -405,10 +405,15 @@ function en_search_sites_b(maxlength=-1,ew=false,www=false){
 
 function enwords_checkbox_open_b(csname,cstype){
     function sub_enwords_checkbox_open_b_one(){
-        if (blxl>=ocheckbox.length){return;}
+        if (blxl>=ocheckbox.length){
+            document.title=old_title;
+            return;
+        }
+        
         if (ocheckbox[blxl].checked){
             open_link_en_b(cstype,ocheckbox[blxl].value);
             blxl=blxl+1;
+            document.title=blxl+'/'+ocheckbox.length+' - '+old_title;
             setTimeout(sub_enwords_checkbox_open_b_one,1000);
         } else {
             blxl=blxl+1;
@@ -441,6 +446,7 @@ function enwords_checkbox_open_b(csname,cstype){
     }
     
     var blxl=0;
+    var old_title=document.title;
     sub_enwords_checkbox_open_b_one();
 }
 

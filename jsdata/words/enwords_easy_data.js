@@ -1632,6 +1632,22 @@ Obama
 rower
 Tasmanian
 thoughtfulness
+shareware
+unhealthful
+ultramarathon
+slipped disc
+XVII
+vlogger
+XIV
+hiking boot
+XVI
+Warrick
+plainclothesmen
+Algeria
+needlelike
+Bhutanese
+closemouthed
+foldable
 
 
 `.trim().split('\n');
