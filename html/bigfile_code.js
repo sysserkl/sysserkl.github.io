@@ -131,6 +131,7 @@ function menu_bigfile(){
     var group_list=[
     ['⚪ reg','klmenu_check_b(this.id,true);',false,'span_reg_bigfile'],
     ['⚪ 将bigfile作为第一数据源','first_source_set_bigfile();',false,'span_first_source_bigfile'],
+    ['⚪ 重复播放','klmenu_check_b(this.id,true);',false,'span_repeat_play_bigfile'],
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,''));
 
@@ -871,6 +872,36 @@ function htm_files_prerequisite_bigfile(){
     sub_htm_files_prerequisite_bigfile_one();
 }
 
+function multimedia_view_bigfile(ospan,cstype){
+    function sub_multimedia_view_bigfile_play(){
+        audio.play();
+        if (klmenu_check_b('span_repeat_play_bigfile',false)){
+            setTimeout(sub_multimedia_view_bigfile_play,1);
+        }
+    }
+    
+    function sub_multimedia_view_bigfile_content(csstr){
+        switch (cstype){
+            case 'i':
+                document.getElementById('div_status').innerHTML='<img src="'+csstr+'" />';
+                break;
+            case 'a':
+                audio = new Audio(csstr);
+                sub_multimedia_view_bigfile_play();
+                break;
+        }
+    }
+    
+    var audio;
+    
+    if (typeof ospan=='string'){
+        var file_name=ospan;
+    } else {
+        var file_name=ospan.parentNode.querySelector('span.span_name_bigfile').innerText;
+    }
+    idb_bigfile_b('read','content',file_name,sub_multimedia_view_bigfile_content);
+}
+
 function html_form_bigfile(ospan,do_render=false){
     function sub_html_get_bigfile_spare(){
         let prerequisite_ignore_set=array_union_b(new Set(),prerequisite_set,true);
@@ -1002,7 +1033,6 @@ function page_bigfile(csno){
     function sub_page_bigfile_one(csxl){
         let item=current_data_bigfile_global[csxl][0];
         let htm_icon='';
-        
         if (parseFloat(current_data_bigfile_global[csxl][0][3])<=1){   //1MB大小以内 - 保留注释
             if (item[1]!=='bigfile_standalone.htm' && (item[1].endsWith('.htm') || item[1].endsWith('.html'))){
                 htm_icon='<span class="oblong_box" onclick="html_form_bigfile(this);" title="转换htm文件并载入或下载">🌐</span> ';
@@ -1011,7 +1041,14 @@ function page_bigfile(csno){
             }
         }
         
-        return '<li><span class="span_name_bigfile" style="font-weight:bold;">'+specialstr92_b(item[1])+'</span>: '+specialstr92_b(item[2])+' <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+item[3]+' '+(item[4].startsWith(today)?'<span style="color:'+scheme_global['a-hover']+';">'+item[4]+'</span>':item[4])+')</span><span class="oblong_box" onclick="delete_bigfile(this);" title="删除记录">🗑</span> <span class="oblong_box" onclick="copy_bigfile(this);" title="复制文件名">📎</span>  <span class="oblong_box" onclick="export_bigfile(this);" title="另存为文件">📤</span> '+htm_icon+'<span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+current_data_bigfile_global[csxl][1]+')</span></li>';
+        let av_icon='';
+        if (current_data_bigfile_global[csxl][0][1].match(/\.(avif|jpg|jpeg|gif|png|bmp|webp|tiff|tif)$/)){
+            av_icon='<span class="oblong_box" onclick="multimedia_view_bigfile(this,\'i\');" title="查看图片">🖼️</span> ';
+        } else if (current_data_bigfile_global[csxl][0][1].match(/\.(wav)$/)){
+            av_icon='<span class="oblong_box" onclick="multimedia_view_bigfile(this,\'a\');" title="播放音频">🔊️</span> ';
+        }
+        
+        return '<li><span class="span_name_bigfile" style="font-weight:bold;">'+specialstr92_b(item[1])+'</span>: '+specialstr92_b(item[2])+' <span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+item[3]+' '+(item[4].startsWith(today)?'<span style="color:'+scheme_global['a-hover']+';">'+item[4]+'</span>':item[4])+')</span><span class="oblong_box" onclick="delete_bigfile(this);" title="删除记录">🗑</span> <span class="oblong_box" onclick="copy_bigfile(this);" title="复制文件名">📎</span>  <span class="oblong_box" onclick="export_bigfile(this);" title="另存为文件">📤</span> '+htm_icon+av_icon+'<span style="font-size:0.8rem;color:'+scheme_global['memo']+';">('+current_data_bigfile_global[csxl][1]+')</span></li>';
     }
     
     var today=new Date().toLocaleString().split(',')[0];
