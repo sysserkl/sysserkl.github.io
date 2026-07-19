@@ -886,7 +886,8 @@ function multimedia_view_bigfile(ospan,cstype){
                 document.getElementById('div_status').innerHTML='<img src="'+csstr+'" />';
                 break;
             case 'a':
-                audio = new Audio(csstr);
+                audio=string_base64_2_file_b(csstr, false,'','audio')
+                //audio = new Audio(csstr); //此行保留 - 保留注释
                 sub_multimedia_view_bigfile_play();
                 break;
         }

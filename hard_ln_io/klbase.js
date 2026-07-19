@@ -2693,21 +2693,34 @@ function export_svg_b(svgElement, filename = 'chart.svg'){
     blob_2_download_link_b(blob, filename);
 }
 
-function string_base64_2_file_b(base64Data, cstype,savename){
+function string_base64_2_file_b(base64Data, file_type=false,savename='',do_type=''){
     // 提取Base64编码的数据（去除data URL前缀）
-    const base64String = base64Data.split(';base64,').pop();
+    var list_t=base64Data.split(';base64,');
+    const base64String = list_t.pop();
+    if (file_type===false){
+        file_type=list_t[0].replace('data:','');
+    }
     
     // 解码Base64数据为二进制
     const byteCharacters = atob(base64String);
-    const byteNumbers = new Array(byteCharacters.length);
-    for (let blxl = 0,lent= byteCharacters.length; blxl<lent; blxl++) {
+    var byteNumbers = new Uint8Array(byteCharacters.length);    
+    //var byteNumbers = new Array(byteCharacters.length);   //此行保留 - 保留注释
+    //Uint8Array 的内存占用极小且固定，访问速度极快，非常适合处理文件、图片、音频等二进制数据。
+    //new Array() 每个元素都是一个独立的 JS 对象引用，内存开销巨大，且处理大量数据时效率极低。
+    
+    for (let blxl = 0,lent= byteCharacters.length; blxl<lent; blxl++){
         byteNumbers[blxl] = byteCharacters.charCodeAt(blxl);
     }
-    const byteArray = new Uint8Array(byteNumbers);
-
-    // 创建Blob对象
-    const blob = new Blob([byteArray], { type: cstype });   //cstype 形如：audio/wav - 保留注释
-    blob_2_download_link_b(blob,savename);
+    
+    var blob = new Blob([byteNumbers], { type: file_type });   //file_type 形如：audio/wav - 保留注释
+    switch (do_type){
+        case 'audio':       
+            var sfile = URL.createObjectURL(blob);
+            return new Audio(sfile);        
+            break;
+        default:
+            blob_2_download_link_b(blob,savename);
+    }
 }
 
 function dom_value_2_txt_file_b(csid,savename='',csext='txt'){
