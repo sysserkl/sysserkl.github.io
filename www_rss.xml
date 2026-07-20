@@ -8,194 +8,185 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Sun, 19 Jul 2026 10:09:38 +0800</lastBuildDate>
-<item><title>天文学家确认了 25 光年外的一颗位于宜居带的岩石行星 - Solidot</title><link>https://www.solidot.org/story?sid=84862</link></item>
-<item><title>重度电视观众有更小的大脑结构 - Solidot</title><link>https://www.solidot.org/story?sid=84861</link></item>
-<item><title>Firefox 将从 9 月 1 日起每两周发布一个新版本 - Solidot</title><link>https://www.solidot.org/story?sid=84860</link></item>
-<item><title>亚马逊 AWS 计费系统单位错误导致客户看到了数亿乃至数万亿美元的账单 - Solidot</title><link>https://www.solidot.org/story?sid=84859</link></item>
-<item><title>What Air Purifiers Actually Catch - CNET</title><link>https://www.cnet.com/home/kitchen-and-household/features/air-purifiers-aqi-hvac-hepa-filters-cover-story/</link></item>
-<item><title>Temporary Tattoos for Medical Wearables - CNET</title><link>https://www.cnet.com/health/medical/temporary-tattoos-may-one-day-power-your-wearable-medical-devices/</link></item>
-<item><title>Inside Samsung&amp;#39;s Display Lab - CNET</title><link>https://www.cnet.com/tech/mobile/inside-samsungs-secret-lab-foldable-displays/</link></item>
-<item><title>iPadOS 27 Does a Great Job With Siri - CNET</title><link>https://www.cnet.com/tech/computing/ipados-27-public-beta-siri-hands-on/</link></item>
-<item><title>Expert-Approved Smart Scales - CNET</title><link>https://www.cnet.com/health/fitness/best-smart-scales/</link></item>
-<item><title>Samsung&amp;#39;s Galaxy Unpacked Event - CNET</title><link>https://www.cnet.com/tech/mobile/samsungs-galaxy-unpacked-event-what-to-expect-how-to-watch/</link></item>
-<item><title>A Floating Robot Friend - CNET</title><link>https://www.cnet.com/tech/floating-robots-safe-friendly-human-interaction/</link></item>
-<item><title>All Your Wearables Have One Glaring Weakness. What Can You Do About It? - CNET</title><link>https://www.cnet.com/tech/mobile/features/all-your-wearables-have-one-glaring-weakness-what-can-we-do-about-it/</link></item>
-<item><title>These Glitches In The Matrix Are Weirder Than The Matrix Itself! - theCHIVE</title><link>https://thechive.com/funny/glitch-in-matrix-photos/?utm_postid=5264237&amp;utm_editor=5264237_jake</link></item>
-<item><title>Saturday Hunnies &amp; Funnies Are In Order - theCHIVE</title><link>https://thechive.com/funny/saturday-hunnies-funnies-are-in-order/?utm_postid=5266297&amp;utm_editor=5266297_hendy</link></item>
-<item><title>The Hardest Paintings of All Time - theCHIVE</title><link>https://thechive.com/humanity/art/hardest-paintings-of-all-time/?utm_postid=5263922&amp;utm_editor=5263922_aaron</link></item>
-<item><title>A Hefty Dank Meme Dump - theCHIVE</title><link>https://thechive.com/funny/a-hefty-dank-meme-dump/?utm_postid=5266135&amp;utm_editor=5266135_hendy</link></item>
-<item><title>Send These Memes To Your Landlord Instead Of Rent This Month - theCHIVE</title><link>https://thechive.com/funny/landlord-memes/?utm_postid=5264646&amp;utm_editor=5264646_jake</link></item>
-<item><title>The Best Willem Dafoe Memes On The Internet - theCHIVE</title><link>https://thechive.com/entertainment/movies/the-best-of-willem-dafoe-memes-on-the-internet-funny-entertainment-celebrity-pop-culture-thechive/?utm_postid=5265859&amp;utm_editor=5265859_ryder</link></item>
-<item><title>Stuntmen Didn’t Give a S**t Back Then and We’re Here For It - theCHIVE</title><link>https://thechive.com/funny/wtf/vintage-stuntmen/?utm_postid=5264278&amp;utm_editor=5264278_jake</link></item>
-<item><title>Remember When Disney Movies Didn’t Suck? - theCHIVE</title><link>https://thechive.com/entertainment/movies/remember-when-disney-movies-didnt-suck/?utm_postid=5265624&amp;utm_editor=5265624_hendy</link></item>
-<item><title>Get Dressed, It’s Cat Saturday - theCHIVE</title><link>https://thechive.com/funny/cat-saturday-july-18-2026/?utm_postid=5265904&amp;utm_editor=5265904_alex</link></item>
-<item><title>Tweets So Dumb, They’re Genius - theCHIVE</title><link>https://thechive.com/funny/tweets-so-dumb-theyre-genius-july-18/?utm_postid=5265661&amp;utm_editor=5265661_chandler</link></item>
-<item><title>Friday Night Party Memes - theCHIVE</title><link>https://thechive.com/funny/friday-night-party-memes-funny-awesome-pabst-beer-drinking-busch-thechive/?utm_postid=5265778&amp;utm_editor=5265778_ryder</link></item>
-<item><title>Weird Song Titles Explained So They Kinda Make Sense - theCHIVE</title><link>https://thechive.com/entertainment/music-2/weird-song-titles-explained/?utm_postid=5265229&amp;utm_editor=5265229_alex</link></item>
-<item><title>Sometimes All You Need Is a Smile - theCHIVE</title><link>https://thechive.com/humanity/beautiful/wholesome-photo-dump/?utm_postid=5265286&amp;utm_editor=5265286_jake</link></item>
-<item><title>Soccer. Football. FIFA. Whatever. The Memes Still Score. - theCHIVE</title><link>https://thechive.com/funny/soccer-football-fifa-whatever-the-memes-still-score-awesome-sports-world-cup-thechive/?utm_postid=5265171&amp;utm_editor=5265171_ryder</link></item>
-<item><title>These Articles of Clothing Are Worth 0% of Your Money But 100% Worth a Laugh - theCHIVE</title><link>https://thechive.com/funny/strangest-clothes-on-internet/?utm_postid=5264616&amp;utm_editor=5264616_jake</link></item>
-<item><title>Dudes on Baseball Cards Who Will Win ZERO Modeling Competitions - theCHIVE</title><link>https://thechive.com/sports/ugly-players-baseball-cards/?utm_postid=5265654&amp;utm_editor=5265654_ty</link></item>
-<item><title>Simple Life Hacks That Everyone Should Know - theCHIVE</title><link>https://thechive.com/humanity/life-hacks-random/simple-life-hacks-that-everyone-should-know/?utm_postid=5265458&amp;utm_editor=5265458_hendy</link></item>
-<item><title>When Dumb Ideas Actually Pay Off - theCHIVE</title><link>https://thechive.com/humanity/life-hacks-random/dumb-ideas-that-paid-off/?utm_postid=5265743&amp;utm_editor=5265743_alex</link></item>
-<item><title>These Dogs Don’t Give A Woof. Dog Friday! - theCHIVE</title><link>https://thechive.com/humanity/dogs-fr-day-animals-cute-images-memes-woof-funny-thechive/?utm_postid=5265745&amp;utm_editor=5265745_ryder</link></item>
-<item><title>A Crisp Fall Dump For Those Who Dread This Heat - theCHIVE</title><link>https://thechive.com/humanity/nostalgia/a-crisp-fall-dump-for-those-who-dread-this-heat/?utm_postid=5265346&amp;utm_editor=5265346_hendy</link></item>
-<item><title>Twitter’s Reaction To ‘The Odyssey’ Is A JOURNEY - theCHIVE</title><link>https://thechive.com/entertainment/movies/twitters-reaction-the-odyssey/?utm_postid=5265710&amp;utm_editor=5265710_chandler</link></item>
-<item><title>BEER-a-FULL memes for the Weekend - theCHIVE</title><link>https://thechive.com/funny/beer-a-full-memes-for-the-weekend-2/?utm_postid=5265984&amp;utm_editor=5265984_rick</link></item>
-<item><title>Random Memes I Refuse to Delete From My Computer (Part 24) - theCHIVE</title><link>https://thechive.com/uncategorized/random-memes-refuse-to-delete-part-24/?utm_postid=5265416&amp;utm_editor=5265416_ty</link></item>
-<item><title>These Things Deserve The Highest Of Fives! - theCHIVE</title><link>https://thechive.com/humanity/things-memes-design-awesome-products-high-fives-funny-thechive/?utm_postid=5265130&amp;utm_editor=5265130_ryder</link></item>
-<item><title>A Self Burn? Those Are Rare! - theCHIVE</title><link>https://thechive.com/funny/a-self-burn-those-are-rare/?utm_postid=5264888&amp;utm_editor=5264888_hendy</link></item>
-<item><title>Medieval History Memes to Make Light of Europe’s Darkest Days - theCHIVE</title><link>https://thechive.com/funny/medieval-history-memes/?utm_postid=5257081&amp;utm_editor=5257081_aaron</link></item>
-<item><title>Memes That Hopefully Inspire Confidence - theCHIVE</title><link>https://thechive.com/funny/memes-confidence-inspire-wholesome-content-hilarious-funny-comedy-humor-thechive/?utm_postid=5264464&amp;utm_editor=5264464_ryder</link></item>
-<item><title>Bald Facts For All My Fellow Egg Heads Out There - theCHIVE</title><link>https://thechive.com/humanity/facts-random/facts-about-baldness/?utm_postid=5265284&amp;utm_editor=5265284_ty</link></item>
-<item><title>Who Was the Most Hated Roman Emperor Ever? - theCHIVE</title><link>https://thechive.com/humanity/history-random/most-hated-roman-emperor-ever/?utm_postid=5263040&amp;utm_editor=5263040_aaron</link></item>
-<item><title>18 Facts You Didn’t Need To Know… At All - theCHIVE</title><link>https://thechive.com/humanity/facts-random/17-facts-you-didnt-need-to-know-at-all/?utm_postid=5264825&amp;utm_editor=5264825_hendy</link></item>
-<item><title>The Original Wayne Manor Is For Sale! - theCHIVE</title><link>https://thechive.com/entertainment/movies/original-wayne-manor-batman-1960s-entertainment-celebrity-movies-nolan-thechive/?utm_postid=5265044&amp;utm_editor=5265044_ryder</link></item>
-<item><title>The Thrift Shop Is A Funny Place… - theCHIVE</title><link>https://thechive.com/funny/the-thrift-shop-is-a-funny-place/?utm_postid=5264849&amp;utm_editor=5264849_hendy</link></item>
-<item><title>Yo, Who Remembers These PS2 Games? - theCHIVE</title><link>https://thechive.com/gaming/who-remembers-these-ps2-games/?utm_postid=5263013&amp;utm_editor=5263013_aaron</link></item>
-<item><title>That’s A Bold Outfit Choice - theCHIVE</title><link>https://thechive.com/funny/bold-outfit-choice/?utm_postid=5265012&amp;utm_editor=5265012_chandler</link></item>
-<item><title>Always Have A Plan B. Even If It Sucks… - theCHIVE</title><link>https://thechive.com/funny/plan-b-marketing-fails-spills-awesome-dgaf-wtf-memes-photos-thechive/?utm_postid=5264432&amp;utm_editor=5264432_ryder</link></item>
-<item><title>It’s Wedding Season! “Wedding Crashers” Might Be the Comedy Movie G.O.A.T. - theCHIVE</title><link>https://thechive.com/entertainment/movies/best-lines-wedding-crashers/?utm_postid=5264850&amp;utm_editor=5264850_ty</link></item>
-<item><title>Historical Figures Who Would Have Been Absolute Nightmares on Social Media - theCHIVE</title><link>https://thechive.com/funny/historical-figures-who-would-have-been-absolute-nightmares-on-social-media/?utm_postid=5262845&amp;utm_editor=5262845_melissa</link></item>
-<item><title>Holy Sh*t History: The Great Fire of London - theCHIVE</title><link>https://thechive.com/humanity/history-random/the-great-fire-of-london/?utm_postid=5258162&amp;utm_editor=5258162_aaron</link></item>
-<item><title>Damn, That’s Beautiful – Slice of Life - theCHIVE</title><link>https://thechive.com/humanity/beautiful/damn-thats-beautiful-slice-of-life-awesome-lifehacks-photos-lifestyle-thechive/?utm_postid=5264367&amp;utm_editor=5264367_ryder</link></item>
-<item><title>Situations So Awkward They Should Be Illegal - theCHIVE</title><link>https://thechive.com/funny/redditors-awkward-situations/?utm_postid=5264490&amp;utm_editor=5264490_alex</link></item>
-<item><title>Jon Bernthal Reminds Us Why He’s the Mf’in GOAT - theCHIVE</title><link>https://thechive.com/entertainment/celebrity/jon-bernthal-goat/?utm_postid=5262475&amp;utm_editor=5262475_aaron</link></item>
-<item><title>Odyssey Linux – approachable Void-based Linux distribution - LinuxLinks</title><link>https://www.linuxlinks.com/odyssey-linux-approachable-void-based-linux-distribution/</link></item>
-<item><title>Hunim – small, fast, and unopinionated static site generator - LinuxLinks</title><link>https://www.linuxlinks.com/hunim-small-fast-unopinionated-static-site-generator/</link></item>
-<item><title>7 Best Free and Open Source Photo Geotagging Tools - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-photo-geotagging-tools/</link></item>
-<item><title>addrb – lightweight, read-only command-line address book - LinuxLinks</title><link>https://www.linuxlinks.com/addrb-lightweight-read-only-command-line-address-book/</link></item>
-<item><title>Grace Framework – web application framework - LinuxLinks</title><link>https://www.linuxlinks.com/grace-web-application-framework/</link></item>
-<item><title>Ramen – type-safe static site generator - LinuxLinks</title><link>https://www.linuxlinks.com/ramen-type-safe-static-site-generator/</link></item>
-<item><title>9 Best Free and Open Source Linux Student Information Systems - LinuxLinks</title><link>https://www.linuxlinks.com/studentinformationsystems/</link></item>
-<item><title>ghgrab – grab anything you want - LinuxLinks</title><link>https://www.linuxlinks.com/ghgrab-grab-anything/</link></item>
-<item><title>5 Best Free and Open Source DVD Authoring Tools - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-dvd-authoring-tools/</link></item>
-<item><title>Hermes Secure Email Gateway – secure email gateway and mail server - LinuxLinks</title><link>https://www.linuxlinks.com/hermes-secure-email-gateway/</link></item>
-<item><title>4 Useful Free and Open Source Haskell TUI Frameworks - LinuxLinks</title><link>https://www.linuxlinks.com/useful-free-open-source-haskell-tui-frameworks/</link></item>
-<item><title>JetBrains Mono – monospaced typeface designed for developers - LinuxLinks</title><link>https://www.linuxlinks.com/jetbrains-mono-monospaced-typeface-developers/</link></item>
-<item><title>6 Useful Free and Open Source YAML Code Formatters - LinuxLinks</title><link>https://www.linuxlinks.com/useful-free-open-source-yaml-code-formatters/</link></item>
-<item><title>Pitchfork – preforking HTTP server - LinuxLinks</title><link>https://www.linuxlinks.com/pitchfork-preforking-http-server/</link></item>
-<item><title>regexplain – explain and visualize regular expressions - LinuxLinks</title><link>https://www.linuxlinks.com/regexplain-visualize-regular-expressions/</link></item>
-<item><title>Pretty YAML – semi-tolerant and configurable YAML formatter - LinuxLinks</title><link>https://www.linuxlinks.com/pretty-yaml-semi-tolerant-configurable-yaml-formatter/</link></item>
-<item><title>9 Best Free and Open Source UPnP Media Servers - LinuxLinks</title><link>https://www.linuxlinks.com/upnpservers/</link></item>
-<item><title>reflex-vty – build terminal applications using functional reactive programming - LinuxLinks</title><link>https://www.linuxlinks.com/reflex-vty-build-terminal-applications/</link></item>
-<item><title>Best Free and Open Source Julia Static Site Generators - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-julia-static-site-generators/</link></item>
-<item><title>Anatol-X – Debian-based Linux distribution - LinuxLinks</title><link>https://www.linuxlinks.com/anatol-x-debian-based-linux-distribution/</link></item>
-<item><title>JellyDisk – automated DVD authoring suite - LinuxLinks</title><link>https://www.linuxlinks.com/jellydisk-automated-dvd-authoring-suite/</link></item>
-<item><title>PlutoPages – static site generator - LinuxLinks</title><link>https://www.linuxlinks.com/plutopages-static-site-generator/</link></item>
-<item><title>Frappe Education – education management system - LinuxLinks</title><link>https://www.linuxlinks.com/frappe-education-education-management-system/</link></item>
-<item><title>yamlfix – opinionated YAML formatter - LinuxLinks</title><link>https://www.linuxlinks.com/yamlfix-opinionated-yaml-formatter/</link></item>
-<item><title>11 Best Free and Open Source Proof Assistants - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-proof-assistants/</link></item>
-<item><title>SageOS – lean Debian-based Linux distribution - LinuxLinks</title><link>https://www.linuxlinks.com/sageos-lean-debian-based-linux-distribution/</link></item>
-<item><title>12 Best Free and Open Source Linux eCommerce Software - LinuxLinks</title><link>https://www.linuxlinks.com/ecommerce/</link></item>
-<item><title>Libertinus Fonts – comprehensive typeface collection - LinuxLinks</title><link>https://www.linuxlinks.com/libertinus-fonts-comprehensive-typeface-collection/</link></item>
-<item><title>7 Best Free and Open Source Crystal Static Site Generators - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-crystal-static-site-generators/</link></item>
-<item><title>SimUtil – launch and manage Android emulators and iOS simulators - LinuxLinks</title><link>https://www.linuxlinks.com/simutil-launch-and-manage-android-emulators-and-ios-simulators/</link></item>
-<item><title>Iodine – high-performance HTTP and WebSocket server - LinuxLinks</title><link>https://www.linuxlinks.com/iodine-high-performance-http-websocket-server/</link></item>
-<item><title>Nicolino – static site generator - LinuxLinks</title><link>https://www.linuxlinks.com/nicolino-static-site-generator/</link></item>
-<item><title>OpenEduCat – educational ERP system - LinuxLinks</title><link>https://www.linuxlinks.com/openeducat-educational-erp-system/</link></item>
-<item><title>yamlfmt – format YAML files - LinuxLinks</title><link>https://www.linuxlinks.com/yamlfmt-format-yaml-files/</link></item>
-<item><title>Beelink EQi 304 Mini PC Review – Introduction to the Series - LinuxLinks</title><link>https://www.linuxlinks.com/beelink-eqi-304-mini-pc-review-introduction/</link></item>
-<item><title>Hwaro – lightweight and fast static site generator - LinuxLinks</title><link>https://www.linuxlinks.com/hwaro-lightweight-fast-static-site-generator/</link></item>
-<item><title>mcpsnoop – transparent proxy and terminal interface - LinuxLinks</title><link>https://www.linuxlinks.com/mcpsnoop-transparent-proxy-terminal-interface/</link></item>
-<item><title>11 Best Free and Open Source Survey Tools - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-survey-tools/</link></item>
-<item><title>Wallaby-VK – virtual on-screen keyboard - LinuxLinks</title><link>https://www.linuxlinks.com/wallaby-vk-virtual-on-screen-keyboard/</link></item>
-<item><title>Create Vector Graphics with Open Source Software - LinuxLinks</title><link>https://www.linuxlinks.com/vectorgraphics/</link></item>
-<item><title>Itsi – high-performance web and application server - LinuxLinks</title><link>https://www.linuxlinks.com/itsi-high-performance-web-application-server/</link></item>
-<item><title>12 Best Free and Open Source Host-Based Intrusion Detection Systems - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-host-based-intrusion-detection-systems/</link></item>
-<item><title>Atkinson Hyperlegible Next – sans-serif typeface - LinuxLinks</title><link>https://www.linuxlinks.com/atkinson-hyperlegible-next-sans-serif-typeface/</link></item>
-<item><title>5 Best Free and Open Source Elm Static Site Generators - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-elm-static-site-generators/</link></item>
-<item><title>OpnForm – no-code form builder - LinuxLinks</title><link>https://www.linuxlinks.com/opnform-no-code-form-builder/</link></item>
-<item><title>dnsglobe – global DNS propagation checker - LinuxLinks</title><link>https://www.linuxlinks.com/dnsglobe-global-dns-propagation-checker/</link></item>
-<item><title>Zooid – self-hosted Matrix workspace for collaborating with AI coding agents - LinuxLinks</title><link>https://www.linuxlinks.com/zooid-self-hosted-matrix-workspace/</link></item>
-<item><title>Aya – proof assistant and dependently-typed programming language - LinuxLinks</title><link>https://www.linuxlinks.com/aya-proof-assistant-dependently-typed-programming-language/</link></item>
-<item><title>Jpsonic – web-based media streamer - LinuxLinks</title><link>https://www.linuxlinks.com/jpsonic-web-based-media-streamer/</link></item>
-<item><title>HeyForm – self-hosted form builder - LinuxLinks</title><link>https://www.linuxlinks.com/heyform-self-hosted-form-builder/</link></item>
-<item><title>Back to School - Mashable</title><link>https://mashable.com/series/back-to-school</link></item>
-<item><title>&amp;#39;House of the Dragon&amp;#39; Season 3 family tree: How the Targaryens, Hightowers, and Velaryons connect - Mashable</title><link>https://mashable.com/entertainment/house-of-the-dragon-season-3-family-tree-targaryen-velaryon-hightower</link></item>
-<item><title>&amp;#39;The Odyssey&amp;#39; hints at 3 myths without detailing them. Here are the untold stories. - Mashable</title><link>https://mashable.com/entertainment/the-odyssey-christopher-nolan-sinon-helen-clytemnestra-circe</link></item>
-<item><title>Netflix bought Ben Affleck&amp;#39;s AI startup for $587 million - Mashable</title><link>https://mashable.com/tech/netflix-paid-587-million-for-ben-affleck-ai-startup-interpositive</link></item>
-<item><title>FIFA World Cup schedule today: Games, kickoff times, livestream info for July 18 - Mashable</title><link>https://mashable.com/entertainment/fifa-world-cup-schedule-today-kickoff-livestream-july-18</link></item>
-<item><title>Enter the Mashable Big Guessing Game to win a new Apple Watch - Mashable</title><link>https://mashable.com/tech/big-guessing-game-apple-edition-round-2</link></item>
-<item><title>Where is Gemini 3.5 Pro? The AI model announced at Google I/O is still MIA. - Mashable</title><link>https://mashable.com/tech/google-gemini-3-5-pro-delay</link></item>
-<item><title>What’s next in Apple’s legal battle with OpenAI - Mashable</title><link>https://mashable.com/tech/whats-next-in-apples-legal-battle-with-openai</link></item>
-<item><title>Samsung Galaxy Z Fold 8 Ultra appears online with Messi&amp;#39;s face and a $13,000 price tag - Mashable</title><link>https://mashable.com/tech/galaxy-z-fold-8-ultra-caviar-lionel-messi-design</link></item>
-<item><title>Tatiana Maslany breaks down &amp;#39;Maximum Pleasure Guaranteed&amp;#39;s courtroom finale - Mashable</title><link>https://mashable.com/entertainment/maximum-pleasure-guaranteed-tatiana-maslany-interview</link></item>
-<item><title>A live-action Princess Tiana movie is in the works from Colman Domingo and Robert O&amp;#39;Hara - Mashable</title><link>https://mashable.com/entertainment/live-action-princess-tiana-princess-and-the-frog-movie-colman-domingo-robert</link></item>
-<item><title>&amp;#39;The Odyssey&amp;#39; sails towards a record-breaking opening weekend - Mashable</title><link>https://mashable.com/entertainment/the-odyssey-opening-weekend-box-office</link></item>
-<item><title>&amp;#39;The Odyssey&amp;#39; cyclops was inspired by one of history&amp;#39;s goriest paintings - Mashable</title><link>https://mashable.com/entertainment/odyssey-cyclops-polyphemus-nolan-goya-painting</link></item>
-<item><title>Adam McIntyre shares the piece of advice content creators aren&amp;#39;t likely to hear - Mashable</title><link>https://mashable.com/life/adam-mcintyre-creator-interview</link></item>
-<item><title>Julian Shapiro-Barnum enters his late-night era - Mashable</title><link>https://mashable.com/life/julian-shapiro-barnum-outside-tonight-interview</link></item>
-<item><title>Why is everyone eating Cream of Wheat on TikTok? - Mashable</title><link>https://mashable.com/life/why-is-cream-of-wheat-viral-tiktok-grocery-prices</link></item>
-<item><title>Gifts for the students gearing up for college - Mashable</title><link>https://mashable.com/tech/gearing-up-for-college</link></item>
-<item><title>NYT Connections hints today: Clues, answers for July 18, 2026 - Mashable</title><link>https://mashable.com/entertainment/nyt-connections-hint-answer-today-july-18-2026</link></item>
-<item><title>Wordle today: Answer, hints for July 18, 2026 - Mashable</title><link>https://mashable.com/entertainment/wordle-today-answer-july-18-2026</link></item>
-<item><title>NYT Mini crossword answers, hints for July 17, 2026 - Mashable</title><link>https://mashable.com/entertainment/nyt-mini-crossword-answers-hints-july-17-2026</link></item>
-<item><title>NYT Strands hints, answers for July 18, 2026 - Mashable</title><link>https://mashable.com/entertainment/strands-nyt-hint-july-18-2026</link></item>
-<item><title>When is the World Cup halftime show? How to watch Justin Bieber, BTS, Madonna, and Shakira live. - Mashable</title><link>https://mashable.com/life/fifa-world-cup-2026-halftime-show-start-time</link></item>
-<item><title>Why is Jennifer Hudson singing the U.S. anthem at the World Cup final? - Mashable</title><link>https://mashable.com/life/jennifer-hudson-national-anthem-world-cup-final</link></item>
-<item><title>Why is OpenAI selling a $70 ChatGPT basketball? - Mashable</title><link>https://mashable.com/life/openai-chatgpt-basketball-merch-why</link></item>
-<item><title>BookTok creators share the reading essentials they actually use - Mashable</title><link>https://mashable.com/life/booktok-creators-reveal-reading-essentials</link></item>
-<item><title>MacBook Neo vs. XPS 13: The golden age of ultraportables is here - Mashable</title><link>https://mashable.com/tech/macbook-neo-vs-xps-13</link></item>
-<item><title>&amp;#39;Kimmel&amp;#39; guest host Ike Barinholtz reacts to the Trump teleprompter scandal - Mashable</title><link>https://mashable.com/entertainment/trump-teleprompter-scandal-bets-kimmel-barinholtz</link></item>
-<item><title>Seth Meyers reacts to Trump&amp;#39;s catapult rant despite what happened last time - Mashable</title><link>https://mashable.com/entertainment/seth-meyers-trump-catapults</link></item>
-<item><title>&amp;#39;Daily Show&amp;#39; rips into JD Vance&amp;#39;s interview on Joe Rogan - Mashable</title><link>https://mashable.com/entertainment/daily-show-jd-vance-joe-rogan</link></item>
-<item><title>The Nutribullet Chill is the ice cream maker that&amp;#39;s staying on my counter this summer - Mashable</title><link>https://mashable.com/life/nutribullet-chill-ice-cream-maker-review</link></item>
-<item><title>These Pokémoan sex toys are actually kind of cute — shop the limited first-edition drop - Mashable</title><link>https://mashable.com/life/pokemoan-sex-toys-release-date</link></item>
-<item><title>7-Eleven and Hot Wheels just dropped an exclusive Nissan GT-R collectible — here&amp;#39;s how to get it - Mashable</title><link>https://mashable.com/life/7-eleven-hot-wheels-nissan-gtr-collectible</link></item>
-<item><title>The Cuisinart FastFreeze ice cream maker can&amp;#39;t compete with the Ninja Creami - Mashable</title><link>https://mashable.com/life/cuisinart-fastfreeze-ice-cream-maker-review</link></item>
-<item><title>Acer Swift Edge AI 14 review: A featherlight, long-lasting OLED laptop - Mashable</title><link>https://mashable.com/tech/acer-swift-edge-ai-14-laptop-review</link></item>
-<item><title>The HP OmniBook 3 16 has a bonkers 40-hour battery life. Yes, you read that right. - Mashable</title><link>https://mashable.com/tech/hp-omnibook-3-16-review-snapdragon-x-best-laptop-battery-life</link></item>
-<item><title>Dyson Hushjet Mini Cool review: I tested this portable fan during 2 heatwaves to find out if it&amp;#39;s worth $100 - Mashable</title><link>https://mashable.com/tech/dyson-hushjet-mini-cool-fan-review</link></item>
-<item><title>Ninja Slushi Twist review: Making 2 flavors at once rocks, but the regular Slushi is fine for most situations - Mashable</title><link>https://mashable.com/life/ninja-slushi-twist-review</link></item>
-<item><title>We spent a year testing the best red light masks. We found 5 we love and 2 to avoid. - Mashable</title><link>https://mashable.com/life/best-red-light-masks</link></item>
-<item><title>The best air purifiers for wildfire smoke tested: Our faves from Blueair, Coway Airmega, Shark, and more - Mashable</title><link>https://mashable.com/life/best-air-purifier-wildfire-smoke-tested</link></item>
-<item><title>We found the 6 best laptops for college students after years of testing - Mashable</title><link>https://mashable.com/tech/best-laptops-for-college-2026</link></item>
-<item><title>Teens talking to Meta AI about suicide will trigger alert - Mashable</title><link>https://mashable.com/tech/meta-ai-teen-suicide-self-harm-parent-alert</link></item>
-<item><title>A New York school district is testing robot teachers - Mashable</title><link>https://mashable.com/tech/new-york-school-testing-robot-teacher</link></item>
-<item><title>Should kids use Google AI search? These experts say no. - Mashable</title><link>https://mashable.com/tech/google-ai-search-ai-mode-unsafe-for-kids-teens</link></item>
-<item><title>Lawsuit claims Meta used AI to unfairly target employees for layoffs - Mashable</title><link>https://mashable.com/tech/meta-employee-lawsuit-claims-ai-discrimination</link></item>
-<item><title>Moon phase today: What the Moon will look like on July 18 - Mashable</title><link>https://mashable.com/science/moon-phase-today-july-18-2026</link></item>
-<item><title>A planet with an Earth-like atmosphere has been found - Mashable</title><link>https://mashable.com/science/exoplanet-earth-like-atmosphere-potential-for-life</link></item>
-<item><title>Webb telescope found the missing architect of another star system - Mashable</title><link>https://mashable.com/science/james-webb-space-telescope-exoplanet-discovered-by-spectrum</link></item>
-<item><title>Moon phase today: What the Moon will look like on July 17 - Mashable</title><link>https://mashable.com/science/moon-phase-today-july-17-2026</link></item>
-<item><title>T-Mobile is handing over the Apple iPhone 17 for free — how to claim yours - Mashable</title><link>https://mashable.com/tech/july-18-free-apple-iphone-deal</link></item>
-<item><title>The DJI Mini 5 Pro has hit its best-ever price at Amazon — buy for under $1,000 this weekend - Mashable</title><link>https://mashable.com/tech/july-18-dij-mini-5-fly-more-combo-deal</link></item>
-<item><title>Too hot to cook? Save on delivery with DoorDash e-gift cards and unlock $20 in free food. - Mashable</title><link>https://mashable.com/life/july-17-doordash-gift-card-deal</link></item>
-<item><title>Cadence&amp;#39;s &amp;#39;World Cup&amp;#39; travel pods show team spirit without being cringe — on sale now - Mashable</title><link>https://mashable.com/travel/cadence-world-cup-capsules</link></item>
-<item><title>What&amp;#39;s new to streaming this week? (July 10, 2026) - Mashable</title><link>https://mashable.com/entertainment/new-to-streaming-july-10-2026</link></item>
-<item><title>What&amp;#39;s new to streaming this week? (July 3, 2026) - Mashable</title><link>https://mashable.com/entertainment/new-to-streaming-july-3-2026</link></item>
-<item><title>What&amp;#39;s new to streaming this week? (June 26, 2026) - Mashable</title><link>https://mashable.com/entertainment/new-to-streaming-june-26-2026</link></item>
-<item><title>What&amp;#39;s new to streaming this week? (June 19, 2026) - Mashable</title><link>https://mashable.com/entertainment/new-to-streaming-june-19-2026</link></item>
-<item><title>&amp;#39;Dune: Part Three&amp;#39; footage is playing before &amp;#39;The Odyssey.&amp;#39; Here&amp;#39;s how to catch it. - Mashable</title><link>https://mashable.com/entertainment/how-to-watch-dune-part-three-footage-the-odyssey</link></item>
-<item><title>How Christopher Nolan weaponized Matt Damon&amp;#39;s persona for &amp;#39;The Odyssey&amp;#39; - Mashable</title><link>https://mashable.com/entertainment/matt-damon-the-odyssey</link></item>
-<item><title>Hurdle hints and answers for July 18, 2026 - Mashable</title><link>https://mashable.com/entertainment/hurdle-hints-answers-july-18-2026</link></item>
-<item><title>NYT Pips hints, answers for July 18, 2026 - Mashable</title><link>https://mashable.com/entertainment/pips-nyt-games-hints-answers-easy-medium-hard-july-18-2026</link></item>
-<item><title>&amp;#39;The Odyssey&amp;#39; has made IMAX 70mm a status symbol - Mashable</title><link>https://mashable.com/entertainment/the-odyssey-imax-70mm-exclusivity</link></item>
-<item><title>&amp;#39;Heartstopper Forever&amp;#39; means everything to me - Mashable</title><link>https://mashable.com/entertainment/heartstopper-forever-review</link></item>
-<item><title>Apple sends legal letters to dozens of OpenAI defectors, report says - Mashable</title><link>https://mashable.com/tech/apple-sends-legal-letters-to-dozens-of-former-employees-now-at-openai</link></item>
-<item><title>Nintendo and Hasbro are teaming up on &amp;#39;Legend of Zelda&amp;#39; toys — here&amp;#39;s what fans can expect - Mashable</title><link>https://mashable.com/entertainment/nintendo-hasbro-legend-of-zelda-toys-launch</link></item>
-<item><title>Soumya Kumar - Mashable</title><link>https://mashable.com/author/soumya-kumar</link></item>
-<item><title>Tabitha Britt - Mashable</title><link>https://mashable.com/author/tabitha-britt</link></item>
-<item><title>The best budget smartphones of 2026 so far - Mashable</title><link>https://mashable.com/tech/best-budget-smartphones-2026-so-far</link></item>
-<item><title>Russia repels Ukrainian drone attack near Stavropol, fires break out in industrial zone - TASS</title><link>https://tass.com/emergencies/2162087</link></item>
-<item><title>Earthquake in Venezuela - TASS</title><link>https://tass.com/earthquake-in-venezuela</link></item>
-<item><title>Latitude and Longitude - xkcd</title><link>https://xkcd.com/3273/</link></item>
-<item><title>The Princess and the Pea - xkcd</title><link>https://xkcd.com/3271/</link></item>
-<item><title>Adafruit New Products 7/15/2026 - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/18/adafruit-new-products-7-15-2026/</link></item>
-<item><title>Reactor’s Lift of SFF/H for Young Adult… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/18/reactors-lift-of-sff-h-for-young-adult-readers/</link></item>
-<item><title>From The Archives: MagTag Kitchen Timer - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/18/from-the-archives-magtag-kitchen-timer/</link></item>
-<item><title>speculative fiction - Adafruit Industries</title><link>https://blog.adafruit.com/tag/speculative-fiction/</link></item>
-<item><title>Sci-Fi Nuclear Core Battery Lamp - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/18/sci-fi-nuclear-core-battery-lamp/</link></item>
-<item><title>From the Adafruit Learning System: LED Campfire - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/17/from-the-adafruit-learning-system-led-campfire/</link></item>
-<item><title>Inky Bird Frame Birdwatcher Log #piday #raspberrypi - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/17/inky-bird-frame-birdwatcher-log-piday-raspberrypi/</link></item>
-<item><title>John Park’s CircuitPython Parsec: Bitmaptools Rotozoom Rotation - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/17/john-parks-circuitpython-parsec-bitmaptools-rotozoom-rotation/</link></item>
-<item><title>Zipper Switch #AdafruitLearnSystem - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/17/zipper-switch-adafruitlearnsystem/</link></item>
-<item><title>conductive thread - Adafruit Industries</title><link>https://blog.adafruit.com/tag/conductive-thread/</link></item>
-<item><title>How to Stay Cool in Extreme Heat - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/17/how-to-stay-cool-in-extreme-heat/</link></item>
-<item><title>NEW PRODUCT – NeoPixel Stick – 8 x 5050 WWA White LEDs with Integrated Drivers - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/17/new-product-neopixel-stick-8-x-5050-wwa-white-leds-with-integrated-drivers/</link></item>
-<item><title>ESP8266 NodeMCU Case – Fully Customizable + Ready-to-Print Profiles #3DPrinting #3DThursday - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/16/esp8266-nodemcu-case-fully-customizable-ready-to-print-profiles-3dprinting-3dthursday/</link></item>
-<item><title>Mushroom LED Lamp #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/16/mushroom-led-lamp-3dthursday-3dprinting/</link></item>
-<item><title>Digital Multimeter/Oscilloscope Probe Holder – 2020 Extrusion Mount #3DPrinting #3DThursday - Adafruit Industries</title><link>https://blog.adafruit.com/2026/07/16/digital-multimeter-oscilloscope-probe-holder-2020-extrusion-mount-3dprinting-3dthursday/</link></item>
+<lastBuildDate>Mon, 20 Jul 2026 09:46:46 +0800</lastBuildDate>
+<item><title>Zilog Z80 8-Bit CPU Turns 50, Open-source Replacement Heads To Drop-in DIP40 Silicon - Slashdot</title><link>https://hardware.slashdot.org/story/26/07/20/0046231/zilog-z80-8-bit-cpu-turns-50-open-source-replacement-heads-to-drop-in-dip40-silicon</link></item>
+<item><title>Dozens of Robotaxi Riders Are Falling Asleep, Sparking Frantic Calls For Emergency Services - Slashdot</title><link>https://tech.slashdot.org/story/26/07/19/236218/dozens-of-robotaxi-riders-are-falling-asleep-sparking-frantic-calls-for-emergency-services</link></item>
+<item><title>California&amp;#39;s &amp;#39;Truth in Recycling&amp;#39; Law Blocked by Judge - Slashdot</title><link>https://news.slashdot.org/story/26/07/19/210221/californias-truth-in-recycling-law-blocked-by-judge</link></item>
+<item><title>James Webb Space Telescope Discovers How Black Holes Feed Themselves - Slashdot</title><link>https://science.slashdot.org/story/26/07/19/191239/james-webb-space-telescope-discovers-how-black-holes-feed-themselves</link></item>
+<item><title>Robot &amp;#39;Decapitated&amp;#39; in World&amp;#39;s First-Ever Humanoid UFC Fight - Slashdot</title><link>https://hardware.slashdot.org/story/26/07/19/1746241/robot-decapitated-in-worlds-first-ever-humanoid-ufc-fight</link></item>
+<item><title>Windows 10 Still Being Used, Often Unpatched and Insecure - Slashdot</title><link>https://tech.slashdot.org/story/26/07/18/2130259/windows-10-still-being-used-often-unpatched-and-insecure</link></item>
+<item><title>Aptera Announces US-Wide Repair Network for Its Upcoming Solar Electric Car - Slashdot</title><link>https://tech.slashdot.org/story/26/07/19/0559215/aptera-announces-us-wide-repair-network-for-its-upcoming-solar-electric-car</link></item>
+<item><title>Former Richard Stallman Colleague Now Argues for Open AI Models Too - Slashdot</title><link>https://news.slashdot.org/story/26/07/19/0631207/former-richard-stallman-colleague-now-argues-for-open-ai-models-too</link></item>
+<item><title>Are There Cybersecurity Risks in Over-the-Air Tech Used in Autos? - Slashdot</title><link>https://tech.slashdot.org/story/26/07/19/046258/are-there-cybersecurity-risks-in-over-the-air-tech-used-in-autos</link></item>
+<item><title>New Study Links Teen Boys&amp;#39; ADHD Symptoms To Addictive Social Media Use - Slashdot</title><link>https://science.slashdot.org/story/26/07/18/0327200/new-study-links-teen-boys-adhd-symptoms-to-addictive-social-media-use</link></item>
+<item><title>&amp;#39;Grok Build&amp;#39; Coding Tool Open Sourced This Week, Promises to Respect Zero Data Retention - Slashdot</title><link>https://news.slashdot.org/story/26/07/19/034258/grok-build-coding-tool-open-sourced-this-week-promises-to-respect-zero-data-retention</link></item>
+<item><title>OpenAI Acknowledges GPT-5.6 May Accidentally Delete Files, Calls It &amp;#39;Honest Mistake&amp;#39; - Slashdot</title><link>https://developers.slashdot.org/story/26/07/19/0129228/openai-acknowledges-gpt-56-may-accidentally-delete-files-calls-it-honest-mistake</link></item>
+<item><title>France Orders ISPs to Block Access to Polymarket - Slashdot</title><link>https://yro.slashdot.org/story/26/07/18/2224236/france-orders-isps-to-block-access-to-polymarket</link></item>
+<item><title>How Microsoft&amp;#39;s &amp;#39;Little Workaround&amp;#39; Created a Major Threat to America&amp;#39;s Defense Department - Slashdot</title><link>https://yro.slashdot.org/story/26/07/18/0513229/how-microsofts-little-workaround-created-a-major-threat-to-americas-defense-department</link></item>
+<item><title>Next UK Prime Minister Drops Digital ID Scheme - Slashdot</title><link>https://news.slashdot.org/story/26/07/18/2214208/next-uk-prime-minister-drops-digital-id-scheme</link></item>
+<item><title>The cost of ‘free’: How Wikimedia Enterprise protects Wikipedia in the AI era - Wikimedia Foundation</title><link>https://wikimediafoundation.org/news/2026/07/16/wikimedia-enterprise-protecting-wikipedia-ai/</link></item>
+<item><title>Wikimedia Foundation co-hosts second UN Open Source Week edit-a-thon - Wikimedia Foundation</title><link>https://wikimediafoundation.org/news/2026/07/09/un-open-source-week-edit-a-thon-2026/</link></item>
+<item><title>This Graduate Student Equips NASA’s Robots With Assembly Skills - IEEE Spectrum</title><link>https://spectrum.ieee.org/graduate-student-nasas-robots-assembly</link></item>
+<item><title>Digital Surveillance Reshapes Fishery Enforcement in Indonesia - IEEE Spectrum</title><link>https://spectrum.ieee.org/fishery-satellite-surveillance</link></item>
+<item><title>When Career Risks Are Worth Taking - IEEE Spectrum</title><link>https://spectrum.ieee.org/career-risks</link></item>
+<item><title>The First Chatbot’s Multiple Personalities - IEEE Spectrum</title><link>https://spectrum.ieee.org/eliza-chatbot-source-code</link></item>
+<item><title>How I Turned AI to the Dark Side - IEEE Spectrum</title><link>https://spectrum.ieee.org/jailbreaking-llms</link></item>
+<item><title>Panasonic’s PV-460 Camcorder Stabilized Shaky Videos - IEEE Spectrum</title><link>https://spectrum.ieee.org/panasonic-camcorder-ieee-milstone</link></item>
+<item><title>Nokia’s 14 Years of Mobile-Phone Supremacy Ended in an Afternoon - IEEE Spectrum</title><link>https://spectrum.ieee.org/nokia-phones-history</link></item>
+<item><title>Building a Foundation Stack for General-Purpose Robots - IEEE Spectrum</title><link>https://spectrum.ieee.org/x-square-robot-embodied-ai-stack</link></item>
+<item><title>IEEE Remembers Pioneering Computer Scientist Peter G. Neumann - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-remembers-peter-g-neumann</link></item>
+<item><title>The Rebirth of High Frequency - IEEE Spectrum</title><link>https://content.knowledgehub.wiley.com/the-rebirth-of-high-frequency/</link></item>
+<item><title>STEM Needs Leaders From Every Generation at the Table - IEEE Spectrum</title><link>https://spectrum.ieee.org/stem-leaders-ieee-ilc</link></item>
+<item><title>IEEE Honors Robotics Pioneer Toshio Fukuda - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-honors-toshio-fukuda</link></item>
+<item><title>科技爱好者周刊（第 404 期）：你需要知道的 AI 内存知识 - 阮一峰的网络日志</title><link>http://www.ruanyifeng.com/blog/2026/07/weekly-issue-404.html</link></item>
+<item><title>Linus Torvalds Spent Years Dismissing AI, Only to Vouch for It - It's FOSS</title><link>https://itsfoss.com/news/linus-torvalds-on-ai/</link></item>
+<item><title>15 O&amp;#39;Reilly Linux eBooks for Under $30: A Bundle That Goes From Command Line Basics to Kubernetes - It's FOSS</title><link>https://itsfoss.com/news/oreilly-linux-ebooks-bundle/</link></item>
+<item><title>X (Formerly Twitter) is Possibly Going Open Source - It's FOSS</title><link>https://itsfoss.com/news/x-might-be-going-open-source/</link></item>
+<item><title>Vocalinux Turns Your Speech Into Text Without Giving Away Voice Data - It's FOSS</title><link>https://itsfoss.com/news/vocalinux-beta-release/</link></item>
+<item><title>Turns Out Wayland Isn&amp;#39;t the Input Lag Disaster Everyone Says it is - It's FOSS</title><link>https://itsfoss.com/news/x11-vs-wayland-input-latency/</link></item>
+<item><title>Cursor AI&amp;#39;s Silence on a Critical Flaw Jeopardizes Millions of Users - It's FOSS</title><link>https://itsfoss.com/news/cursor-ignores-critical-flaw/</link></item>
+<item><title>Become More Productive With These GNOME Extensions - It's FOSS</title><link>https://itsfoss.com/gnome-extensions-for-productivity/</link></item>
+<item><title>FOSS Weekly #26.29: Mint Goes Wayland, OpenBook Reader, Terminal Shortcut Tips, Linux Handheld Computers and More - It's FOSS</title><link>https://itsfoss.com/newsletter/foss-weekly-26-29/</link></item>
+<item><title>Remapping the Useless AI Slop Copilot Key in Linux - It's FOSS</title><link>https://itsfoss.com/remap-copilot-key-linux/</link></item>
+<item><title>7 Open Source Trello Alternatives For Your Kanban Boards - It's FOSS</title><link>https://itsfoss.com/open-source-trello-alternatives/</link></item>
+<item><title>8 Linux Handheld Computers You Can Splurge On - It's FOSS</title><link>https://itsfoss.com/linux-handhelds/</link></item>
+<item><title>I Mined and Built My Way Through Space Haven - It's FOSS</title><link>https://itsfoss.com/space-haven-review/</link></item>
+<item><title>FIFA World Cup Triggers a Global Anti-Piracy Crackdown - TorrentFreak</title><link>https://torrentfreak.com/fifa-world-cup-triggers-a-global-anti-piracy-crackdown/</link></item>
+<item><title>Spain World Cup Champions Gear Unveiled Within Moments of Victory Over Argentina - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/lifestyle/shopping/buy-spain-fifa-world-cup-2026-champions-jersey-shirts-merch-1236651853/</link></item>
+<item><title>Donald Trump Booed at World Cup Final - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/news/general-news/donald-trump-booed-world-cup-final-1236651867/</link></item>
+<item><title>World Cup Final: Spain Defeats Argentina to Take Second-Ever Win - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/news/general-news/2026-world-cup-winner-spain-defeats-argentina-1236651842/</link></item>
+<item><title>BTS Light Up FIFA World Cup Final Halftime Show With “Dynamite” Performance - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/music/music-news/bts-performs-dynamite-fifa-world-cup-2026-halftime-show-1236651816/</link></item>
+<item><title>Jason Sudeikis Brings Ted Lasso to World Cup Halftime Show to Hype Up Justin Bieber - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/jason-sudeikis-ted-lasso-cameo-world-cup-halftime-show-1236651814/</link></item>
+<item><title>World Cup Final Star-Spotting: Matt Damon, Tom Cruise, Jay-Z, Beyoncé and Timothée Chalamet in Attendance - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/world-cup-final-2026-celebrities-in-attendance-1236651733/</link></item>
+<item><title>Madonna, Justin Bieber, BTS, Shakira Headline Jam-Packed First-Ever FIFA World Cup Final Halftime Show - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/music/music-news/fifa-world-cup-halftime-madonna-justin-bieber-bts-shakira-1236651689/</link></item>
+<item><title>Anne Hathaway Reveals ‘Princess Diaries 3’ Update: “We Had a Story Breakthrough” - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-news/anne-hathaway-princess-diaries-3-update-1236651735/</link></item>
+<item><title>How to Livestream the World Cup Halftime Show With BTS, Bieber, Madonna and Shakira - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/watch-world-cup-halftime-show-2026-live-stream-free-online-1236651717/</link></item>
+<item><title>John Leguizamo Has Never Been as Vulnerable as in ‘The Odyssey’: “It Was So Intense for Me” - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-features/john-leguizamo-the-odyssey-eumaeus-chris-nolan-interview-1236651694/</link></item>
+<item><title>US service member killed in northern Iraq, US Central Command says - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/07/19/us-service-member-killed-in-northern-iraq-us-central-command-says/</link></item>
+<item><title>2 US troops killed, 1 missing after Iranian missile, drone attack in Jordan - Defense News</title><link>https://www.defensenews.com/flashpoints/2026/07/18/2-us-troops-killed-1-missing-after-iranian-missile-drone-attack-in-jordan/</link></item>
+<item><title>Election Integrity - The White House</title><link>https://www.whitehouse.gov/election-integrity/</link></item>
+<item><title>SETTING THE RECORD STRAIGHT: President Trump Declassifies Intel on Foreign Election Interference and Deep State Coverup - The White House</title><link>https://www.whitehouse.gov/releases/2026/07/setting-the-record-straight-president-trump-declassifies-intel-on-foreign-election-interference-deep-state-coverup/</link></item>
+<item><title>WHAT THEY ARE SAYING: President Trump Exposes Bombshell Evidence of Foreign Election Interference and Deep State Suppression - The White House</title><link>https://www.whitehouse.gov/releases/2026/07/what-they-are-saying-president-trump-exposes-bombshell-evidence-of-foreign-election-interference-and-deep-state-suppression/</link></item>
+<item><title>Trump Administration Unleashes Global Campaign to Crush Radical Left Terrorism - The White House</title><link>https://www.whitehouse.gov/releases/2026/07/trump-administration-unleashes-global-campaign-to-crush-radical-left-terrorism/</link></item>
+<item><title>Presidential Message on the Birthday of Saint Frances Xavier Cabrini - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2026/07/presidential-message-on-the-birthday-of-saint-frances-xavier-cabrini/</link></item>
+<item><title>Measuring Balance of Payments Deficits - The White House</title><link>https://www.whitehouse.gov/research/2026/07/measuring-balance-of-payments-deficits/</link></item>
+<item><title>Law Enforcement Leaders Across America Support Todd Blanche for Attorney General - The White House</title><link>https://www.whitehouse.gov/releases/2026/07/law-enforcement-leaders-across-america-support-todd-blanche-for-attorney-general/</link></item>
+<item><title>White House Launches Gold Eagle Initiative for Unprecedented Cybersecurity Vulnerability Coordination - The White House</title><link>https://www.whitehouse.gov/releases/2026/07/white-house-launches-gold-eagle-initiative-for-unprecedented-cybersecurity-vulnerability-coordination/</link></item>
+<item><title>Nominations and Withdrawals Sent to the Senate - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2026/07/nominations-and-withdrawals-sent-to-the-senate-e958/</link></item>
+<item><title>Fact Sheet: President Donald J. Trump Grants Further Regulatory Relief from Burdensome EPA Restrictions to Promote American Security - The White House</title><link>https://www.whitehouse.gov/fact-sheets/2026/07/fact-sheet-president-donald-j-trump-grants-further-regulatory-relief-from-burdensome-epa-restrictions-to-promote-american-security/</link></item>
+<item><title>Palm Beach Denial Challenges Wall Street&amp;#39;s AI Power Bet - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/project-tango-denial-challenges-wall-street-s-ai-power-bet</link></item>
+<item><title>Right-Sizing Data Centers: How to Match Footprint to Real-World Demand - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/right-sizing-data-centers-how-to-match-footprint-to-real-world-demand</link></item>
+<item><title>How NASA’s Artemis Lessons Apply to AI Infrastructure Planning - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/how-nasa-s-artemis-lessons-apply-to-ai-infrastructure-planning</link></item>
+<item><title>TSMC Expands Arizona Campus to $265B as AI Demand Surges - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/infrastructure/tsmc-expands-arizona-campus-to-265b-as-ai-demand-surges</link></item>
+<item><title>What Britain’s Next Prime Minister Could Mean for UK Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/regulations/what-britain-s-next-prime-minister-could-mean-for-uk-data-centers</link></item>
+<item><title>IDCA CEO Calls for Global Consensus on Data Center Development - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/idca-ceo-calls-for-global-consensus-on-data-center-development</link></item>
+<item><title>Community Partnerships Are Becoming Data Centers’ Most Valuable Asset - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/community-partnerships-are-becoming-data-centers-most-valuable-asset</link></item>
+<item><title>Quantum Meets the Data Center: Hybrid Systems Take Off - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/supercomputers/quantum-meets-the-data-center-hybrid-systems-take-off</link></item>
+<item><title>New York Data Center Moratorium: State Pauses Projects Over 50 MW - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/new-york-data-center-moratorium-state-pauses-projects-over-50-mw</link></item>
+<item><title>IBM Warns AI Infrastructure Shift Impacts Software Deals, Shares Plunge - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/business/ibm-warns-ai-infrastructure-spending-delays-software-deals-as-shares-plunge</link></item>
+<item><title>A Guide to Network Redundancy in Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/networking/a-guide-to-network-redundancy-in-data-centers</link></item>
+<item><title>Meta’s 5 GW Hyperion Turns AI into a Grid Anchor - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/meta-s-5-gw-hyperion-campus-signals-ai-s-shift-into-utility-territory</link></item>
+<item><title>Next-Gen CEMS: Simplifying Data Center Emissions Tracking - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-observability/next-gen-cems-simplifying-data-center-emissions-tracking</link></item>
+<item><title>Data Center Hardware Highlights: July 2026 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-hardware/data-center-hardware-highlights-july-2026</link></item>
+<item><title>NC Ends Data Center Power Tax Break, Keeps Capital Incentives - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/regulations/nc-ends-data-center-power-tax-break-keeps-capital-incentives</link></item>
+<item><title>Crusoe Pushes Data Center AI Competition Beyond GPUs - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/next-gen-data-centers/crusoe-pushes-data-center-competition-beyond-gpus</link></item>
+<item><title>FLOPS vs Megawatts: Who’s Winning in 2026 Supercomputing? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/supercomputers/flops-vs-megawatts-who-s-winning-in-2026-supercomputing-</link></item>
+<item><title>The Transparency Bet: Inside Decimal Digital’s Plan to Win Over a Wary Ohio Town - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/can-transparency-become-an-ai-data-center-advantage-</link></item>
+<item><title>Meta’s First Canadian AI Campus Was Planned Around the Grid - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/meta-s-first-canadian-ai-campus-was-planned-around-the-grid</link></item>
+<item><title>Leadership Updates: Key Data Center &amp;amp; Cloud Appointments (Q3 2026) - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/operations-and-management/leadership-updates-key-data-center-cloud-appointments-q3-2026-</link></item>
+<item><title>Can Growing Community Backlash Quiet the AI Data Center Boom? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/can-growing-community-backlash-quiet-the-ai-data-center-boom-</link></item>
+<item><title>NSF’s $20M Quantum Push: What It Could Mean for Future Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/supercomputers/nsf-s-20m-quantum-push-what-it-could-mean-for-future-data-centers</link></item>
+<item><title>Omdia: The Agentic Era Collapses Cloud Layers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/omdia-the-agentic-era-collapses-cloud-layers</link></item>
+<item><title>Second Major Virginia Data Center Project Dies, Raising AI Site Selection Stakes - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/second-major-virginia-data-center-project-dies-raising-ai-site-selection-stakes</link></item>
+<item><title>The Role of Brokers in Accelerating Data Center Construction - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/colocation/the-role-of-brokers-in-accelerating-data-center-construction</link></item>
+<item><title>IBM Brings Z to 19-Inch Racks as AI Reshapes Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/servers/ibm-brings-z17-mainframes-to-standard-racks</link></item>
+<item><title>Enter the Network Supercycle: Preparing Data Center Networks for AI’s Next Wave - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/networking/enter-the-network-supercycle-preparing-data-center-networks-for-ai-s-next-wave</link></item>
+<item><title>Texas’ 765 kV Decision: Build the Wires, the AI Will Follow - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/how-ercot-s-post-crez-bet-is-reshaping-ai-infrastructure</link></item>
+<item><title>What QTS’ Canceled $30B Project Reveals About AI Data Center Development - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/what-qts-canceled-30b-project-reveals-about-ai-data-center-development</link></item>
+<item><title>Do Data Centers Cause Air Pollution? It Depends on Power. - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/sustainability/do-data-centers-cause-air-pollution-it-depends-on-power-</link></item>
+<item><title>NERC Flags AI Data Center Grid Risks in Report - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/nerc-flags-ai-data-center-grid-risks-in-report</link></item>
+<item><title>The Switch Is the Bottleneck: Why AI Infrastructure Has a Network Problem - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/switches-routers/the-switch-is-the-bottleneck-why-ai-infrastructure-has-a-network-problem</link></item>
+<item><title>Texas Tests New Rules for AI Campuses Behind Existing Power Plants - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/texas-tests-new-rules-for-ai-campuses-behind-existing-power-plants</link></item>
+<item><title>New Data Center Developments: July 2026 - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/new-data-center-developments-july-2026</link></item>
+<item><title>AI Interconnect Delays Spur $1.75B National Grid-Joulent Deal - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/national-grid-agrees-to-1-75b-investment-in-joulent-to-expand-ai-power-infrastructure</link></item>
+<item><title>Google Says AI Growth Is Outrunning Grid Decarbonization - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/sustainability/google-says-ai-is-outrunning-grid-decarbonization</link></item>
+<item><title>Brookfield-Bloom $25B Aims to Make Energy Certainty Financeable - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/brookfield-bloom-s-25-billion-gambit-signals-ai-power-s-emergence-as-an-asset-class</link></item>
+<item><title>Data Center Power Coalition Launches to Tackle AI’s Biggest Bottleneck - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/data-center-power-coalition-launches-to-tackle-ai-s-biggest-bottleneck</link></item>
+<item><title>How Do Utilities Determine Which AI Data Centers Get Grid Access? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/how-utilities-decide-which-ai-data-centers-deserve-the-grid</link></item>
+<item><title>Why AI Data Centers Make Existing Power Plants More Valuable - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/why-ai-data-centers-make-existing-power-plants-more-valuable</link></item>
+<item><title>AWS Launches Graviton5-Powered EC2 Instances for AI and HPC - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/aws-makes-the-case-for-cpus-in-the-ai-stack</link></item>
+<item><title>Digital Realty Pays $3.5B for Blackstone Data Center Stakes - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/build-design/digital-realty-pays-3-5b-for-blackstone-data-center-stakes</link></item>
+<item><title>Stargate Update: AI’s Biggest Data Center Buildout Meets Reality - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/stargate-update-ai-s-biggest-data-center-buildout-meets-reality</link></item>
+<item><title>Rack-Based Environmental Monitoring: Benefits, Insights, and Getting Started - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-observability/rack-based-environmental-monitoring-benefits-insights-and-getting-started</link></item>
+<item><title>CoreWeave Unveils Aria to Streamline AI Workflows for Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/next-gen-data-centers/coreweave-pushes-beyond-gpu-cloud-with-aria</link></item>
+<item><title>AI’s Duplicate Demand Problem Drives Grids to Commitment-First Planning - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/ai-s-duplicate-demand-problem-is-rewriting-grid-planning</link></item>
+<item><title>Losing the Plot: Why a Responsible Approach to Land Is Pivotal to Data Center Development - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/why-a-responsible-approach-to-land-is-pivotal-to-data-center-development</link></item>
+<item><title>AI Data Center Loads Rewrite the Utility Playbook - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/ai-power-boom-rewrites-the-utility-playbook</link></item>
+<item><title>The Carolinas May Hold a Critical Resource for AI Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/the-carolinas-may-hold-a-critical-resource-for-ai-data-centers</link></item>
+<item><title>Oracle’s Wisconsin Suit Tests How States Hedge AI Data Center Risks - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/regulations/oracle-lawsuit-tests-wisconsin-ai-data-center-credit-rules</link></item>
+<item><title>Watership Down (abridged) - Wrong Hands</title><link>https://wronghands1.com/2026/07/17/watership-down-abridged/</link></item>
+<item><title>Richard Adams - Wrong Hands</title><link>https://wronghands1.com/tag/richard-adams/</link></item>
+<item><title>Watership Down - Wrong Hands</title><link>https://wronghands1.com/tag/watership-down/</link></item>
+<item><title>Jack and the Beanstalk and Gordon Ramsay - Wrong Hands</title><link>https://wronghands1.com/2026/07/14/jack-and-the-beanstalk-and-gordon-ramsay/</link></item>
+<item><title>Gordon Ramsay - Wrong Hands</title><link>https://wronghands1.com/tag/gordon-ramsay/</link></item>
+<item><title>The Great Gatsby (abridged) - Wrong Hands</title><link>https://wronghands1.com/2026/07/10/the-great-gatsby-abridged/</link></item>
+<item><title>Sisyphus’ moving day - Wrong Hands</title><link>https://wronghands1.com/2026/07/07/sisyphus-moving-day/</link></item>
+<item><title>Greek Mythology - Wrong Hands</title><link>https://wronghands1.com/tag/greek-mythology/</link></item>
+<item><title>Zilog To File For Chapter 11 - Slashdot</title><link>https://hardware.slashdot.org/story/01/12/07/1538223/zilog-to-file-for-chapter-11</link></item>
+<item><title>Truth in Recycling&amp;quot; law - Slashdot</title><link>https://news.slashdot.org/story/26/05/16/0544201/california-law-limits-recycling-logo-in-new-attack-on-plastic-waste</link></item>
+<item><title>The &amp;#39;Death of the Stick Shift&amp;#39; is Almost Here for Americans - Slashdot</title><link>https://tech.slashdot.org/story/26/07/18/0239231/the-death-of-the-stick-shift-is-almost-here-for-americans?sbsrc=md</link></item>
+<item><title>CNBC&amp;#39;s Jim Cramer Says He Needs &amp;#39;Cold Hard&amp;#39; Proof AI Is Paying Off - Slashdot</title><link>https://slashdot.org/story/26/07/18/0812205/cnbcs-jim-cramer-says-he-needs-cold-hard-proof-ai-is-paying-off?sbsrc=md</link></item>
+<item><title>Gen Z and Millennials are Buying CDs - Though Half Don&amp;#39;t Have CD Players - Slashdot</title><link>https://entertainment.slashdot.org/story/26/07/18/1948235/gen-z-and-millennials-are-buying-cds---though-half-dont-have-cd-players?sbsrc=md</link></item>
+<item><title>Samsung reportedly cuts some U.S. jobs - Slashdot</title><link>https://slashdot.org/submission/17349112/samsung-reportedly-cuts-some-us-jobs</link></item>
+<item><title>A Visual Catalog of Retro Macintosh Software (the icon-ic collection!) - Slashdot</title><link>https://slashdot.org/submission/17349104/a-visual-catalog-of-retro-macintosh-software-the-icon-ic-collection</link></item>
+<item><title>Gen Z Is Bringing CDs Back but They&amp;#39;re Missing One Important Piece of the Puzzle - Slashdot</title><link>https://slashdot.org/submission/17349090/gen-z-is-bringing-cds-back-but-theyre-missing-one-important-piece-of-the-puzzle</link></item>
+<item><title>SpaceX stock has cratered nearly 23% since joining the Nasdaq-100 - Slashdot</title><link>https://slashdot.org/submission/17349084/spacex-stock-has-cratered-nearly-23-since-joining-the-nasdaq-100</link></item>
+<item><title>Windows 10: &amp;quot;the most secure Windows ever&amp;quot; - Slashdot</title><link>https://slashdot.org/submission/17349070/windows-10-the-most-secure-windows-ever</link></item>
+<item><title>法国命令 ISP 屏蔽 Polymarket - Solidot</title><link>https://www.solidot.org/story?sid=84864</link></item>
+<item><title>《半秒钟》——XZ 后门启示录 - Solidot</title><link>https://www.solidot.org/story?sid=84866</link></item>
+<item><title>Python 3.15.0 beta 4 is here! - Python</title><link>https://blog.python.org/2026/07/python-3150-beta-4/</link></item>
+<item><title>Packaging Council Inaugural Election Dates - Python</title><link>https://blog.python.org/2026/06/2026-packaging-council-election-dates/</link></item>
+<item><title>Mitigated API authentication bypass for python.org download metadata - Python</title><link>https://blog.python.org/2026/06/mitigated-api-bypass-for-download-metadata-python-dot-org/</link></item>
+<item><title>Python 3.15.0 beta 3 is here! - Python</title><link>https://blog.python.org/2026/06/python-3150-beta-3/</link></item>
+<item><title>How surveillance tech erodes your privacy - TED</title><link>https://www.ted.com/talks/jen_golbeck_how_surveillance_tech_erodes_your_privacy</link></item>
+<item><title>climate change - TED</title><link>https://www.ted.com/talks?sort=newest&amp;topics%5B0%5D=climate%20change</link></item>
+<item><title>The growing megafire crisis — and how to contain it - TED</title><link>https://www.ted.com/talks/george_t_whitesides_the_growing_megafire_crisis_and_how_to_contain_it</link></item>
+<item><title>Why opting out of politics is a political choice - TED</title><link>https://www.ted.com/talks/katie_paris_and_danielle_roberts_why_opting_out_of_politics_is_a_political_choice</link></item>
+<item><title>The kind of AI we actually need - TED</title><link>https://www.ted.com/talks/van_jones_the_kind_of_ai_we_actually_need</link></item>
+<item><title>The magical, mesmerizing migration of monarch butterflies - TED</title><link>https://www.ted.com/talks/jaime_rojo_the_magical_mesmerizing_migration_of_monarch_butterflies</link></item>
+<item><title>Sustainability - TED</title><link>https://www.ted.com/topics/sustainability</link></item>
+<item><title>Personal Growth - TED</title><link>https://www.ted.com/topics/personal+growth</link></item>
+<item><title>Mental Health - TED</title><link>https://www.ted.com/talks?sort=newest&amp;topics%5B0%5D=mental+health</link></item>
+<item><title>Communication - TED</title><link>https://www.ted.com/talks?sort=newest&amp;topics%5B0%5D=communication</link></item>
+<item><title>George T. Whitesides - TED</title><link>https://www.ted.com/speakers/george_t_whitesides</link></item>
+<item><title>social-change - TED</title><link>https://www.ted.com/talks?sort=newest&amp;topics%5B0%5D=social-change</link></item>
+<item><title>It&amp;#39;s time for infectious generosity. Here&amp;#39;s how - TED</title><link>https://www.ted.com/talks/123235</link></item>
+<item><title>The fantastically weird world of photosynthetic sea slugs - TED</title><link>https://www.ted.com/talks/107690</link></item>
+<item><title>How your brain responds to stories -- and why they&amp;#39;re crucial for leaders - TED</title><link>https://www.ted.com/talks/70380</link></item>
+<item><title>The counterintuitive way to be more persuasive - TED</title><link>https://www.ted.com/talks/70360</link></item>
+<item><title>Why social health is key to happiness and longevity - TED</title><link>https://www.ted.com/talks/145676</link></item>
+<item><title>With spatial intelligence, AI will understand the real world - TED</title><link>https://www.ted.com/talks/130471</link></item>
+<item><title>Browse all Newest - TED</title><link>https://www.ted.com/talks?sort=newest</link></item>
+<item><title>entertainment - TED</title><link>https://www.ted.com/talks?sort=newest&amp;topics%5B0%5D=entertainment</link></item>
+<item><title>Can a camera on every corner make us safer? - TED</title><link>https://www.ted.com/talks/185012</link></item>
+<item><title>The power of imagination — onstage and off - TED</title><link>https://www.ted.com/talks/183607</link></item>
+<item><title>Why AI will never replace a great teacher - TED</title><link>https://www.ted.com/talks/185013</link></item>
+<item><title>global-issues - TED</title><link>https://www.ted.com/talks?sort=newest&amp;topics%5B0%5D=global-issues</link></item>
+<item><title>The deadly threat affecting millions — and how to prevent it. - TED</title><link>https://www.ted.com/talks/184697</link></item>
+<item><title>Beyond the Talk: Ann Patchett on reading, writing and the books she can’t put down - TED</title><link>https://www.ted.com/talks/183608</link></item>
+<item><title>Why depression isn&amp;#39;t what you think - TED</title><link>https://www.ted.com/talks/184094</link></item>
+<item><title>How algorithms manipulate you (and how to fight back) - TED</title><link>https://www.ted.com/talks/182968</link></item>
+<item><title>Become a TED Member today - TED</title><link>https://giving.ted.com/page/tedmember?utm_medium=website&amp;utm_source=spotlight&amp;utm_campaign=membership-ted&amp;utm_content=q3-spotlight</link></item>
+<item><title>Ideas change everything. - TED</title><link>https://www.ted.com/about?utm_medium=website&amp;utm_source=homepage-spotlight_dark-theme&amp;utm_campaign=about-ted&amp;utm_term=title</link></item>
+<item><title>Learn more about TED - TED</title><link>https://www.ted.com/about?utm_medium=website&amp;utm_source=homepage-spotlight_dark-theme&amp;utm_campaign=about-ted&amp;utm_term=button</link></item>
+<item><title>Browse all Sustainability - TED</title><link>https://www.ted.com/talks?sort=newest&amp;topics%5B0%5D=sustainability</link></item>
+<item><title>climate-change - TED</title><link>https://www.ted.com/talks?sort=newest&amp;topics%5B0%5D=climate-change</link></item>
+<item><title>How to power the world 24/7 — without oil - TED</title><link>https://www.ted.com/talks/168924</link></item>
+<item><title>The purity test that&amp;#39;s killing clean energy - TED</title><link>https://www.ted.com/talks/167831</link></item>
+<item><title>The missing piece in climate action (it&amp;#39;s not what you think) - TED</title><link>https://www.ted.com/talks/166883</link></item>
+<item><title>Browse all Podcasts - TED</title><link>https://www.ted.com/talks?q=podcast-audio-only&amp;sort=newest</link></item>
+<item><title>Reducing toxic polarization – one conversation at a time - TED</title><link>https://www.ted.com/talks/133708</link></item>
+<item><title>TED Talks Daily Book Club: Horse Barbie - TED</title><link>https://www.ted.com/talks/133618</link></item>
+<item><title>Fixable Live - A conversation with Scott Galloway - TED</title><link>https://www.ted.com/talks/131782</link></item>
+<item><title>Carrie Brownstein - TED</title><link>https://www.ted.com/talks/131781</link></item>
 </channel></rss>

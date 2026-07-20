@@ -4950,8 +4950,8 @@ function current_page_2_ensentence_b(cstype=''){
     if (!odiv){return;}
     
     var left_str='<p><span id="span_sentences_from_len_kltxt_b"></span>';
-    left_str=left_str+close_button_b('divhtml2','');      
-    left_str=left_str+`字符串长度：<input type="number" id="input_sentences_from_kltxt_split_len_b" placeholder="分割长度" min=0 value="5000" style="width:4rem;" /> 
+    left_str=left_str+close_button_b('divhtml2','')+' ';
+    left_str=left_str+`字符串长度：<input type="number" id="input_sentences_from_kltxt_split_len_b" placeholder="分割长度" min=0 value="10000" style="width:4rem;" /> 
 <span class="aclick" onclick="ensentence_in_textarea_split_b();">分割</span>
 <span class="aclick" onclick="ensentence_in_textarea_sort_b();">按长度升序</span>
 小于<input type="number" id="input_sentences_from_kltxt_minor_merge_b" style="width:2rem;" value=2 />时不分割
