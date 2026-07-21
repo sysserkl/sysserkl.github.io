@@ -2,6 +2,7 @@ var enwords_easy_global=`
 Aaronson
 Abbie
 abductee
+abortion pill
 above-mentioned
 abovementioned
 abovenamed
@@ -10,6 +11,7 @@ abundantly clear
 academic freedom
 accusingly
 Achilles
+action painter
 activewear
 actress
 Adele
@@ -20,6 +22,7 @@ aeroplane
 affordably
 Africa
 African
+agribusiness
 Airbus
 air conditioner
 air-dried
@@ -29,6 +32,7 @@ airworthiness
 airworthy
 Aladdin
 Alaska
+Algeria
 Alita
 Allah
 anciently
@@ -82,6 +86,7 @@ Arnim
 arrestee
 Aruba
 Asia
+Asian
 as if
 asphalt paper
 as usual
@@ -106,7 +111,9 @@ balloon-like
 balloonlike
 barroom
 batlike
+battery-operated
 battery-powered
+beachwear
 bearlike
 beat around the bush
 beautician
@@ -122,6 +129,7 @@ best-selling
 better-known
 Beverly
 Beverly Hills
+Bhutanese
 Biden
 bidirectionally
 big data
@@ -163,9 +171,11 @@ blameable
 blamelessly
 Bloomfield
 boarding card
+boarding gate
 boatmen
 Bolivia
 Bollywood
+Bonaparte
 bondman
 bondmen
 bondsmen
@@ -244,6 +254,7 @@ chipmaker
 Chunjie
 churchmen
 churro
+cigarette end
 clansmen
 Claude
 Claudia
@@ -252,6 +263,7 @@ clergymen
 cleverness
 clickable
 climatology
+closemouthed
 cloud-based
 Coachella
 coenzyme
@@ -273,8 +285,10 @@ Compton
 computerization
 configurable
 confusingly
+congratulate
 congressmen
 consumer goods
+Continental Congress
 control freak
 convertibility
 cookware
@@ -287,6 +301,7 @@ cough
 couldn't
 could've
 councilmen
+councilwoman
 counterclockwise
 counterrevolutionist
 cowhouse
@@ -339,6 +354,7 @@ demand curve
 dendrologic
 Denny
 denuclearization
+departure gate
 Derek
 desalt
 destabilize
@@ -385,6 +401,7 @@ easternmost
 e-bike
 ecologist
 econometrics
+economy of scale
 Edmond
 Edmund
 Edom
@@ -416,6 +433,7 @@ Eritrea
 Estonia
 Estonian
 eternal triangle
+Ethan
 Eton
 Eurocentric
 Eurocentrism
@@ -476,6 +494,7 @@ flawlessly
 fleetwide
 flowerbed
 Flynn
+foldable
 FOMO
 food coma
 foreseeable
@@ -518,6 +537,7 @@ Gaza
 gecko
 geese
 gentlemen
+gentlemen-in-waiting
 gentlewomen
 geographically
 geologic
@@ -551,6 +571,7 @@ half-remembered
 half-yearly
 Hampton
 Hancock
+handcart
 Handel
 handloom
 handwritten
@@ -563,6 +584,8 @@ H-bomb
 headquarter
 headquarters
 heart-shaped
+heartwarming
+heaven forbid
 heavy industry
 Hebrew
 heed
@@ -585,6 +608,7 @@ Heywood
 high jump
 hikeable
 hiker
+hiking boot
 Hindenburg
 hisself
 Hobson
@@ -604,6 +628,7 @@ hot-swappable
 hour-long
 hourlong
 housebound
+househusband
 housetop
 Humboldt
 Hume
@@ -620,6 +645,7 @@ hydrotherapy
 hyena
 hypertext
 icebound
+ice machine
 ill-tempered
 I'm
 imaginary number
@@ -631,8 +657,10 @@ imprisonable
 impulsiveness
 inaccurately
 in all weathers
+incessantly
 inconveniently
 incorrectly
+increasingly
 indoor
 indoors
 Indo-Pacific
@@ -661,11 +689,13 @@ intergovernmental
 interoffice
 interplay
 interventionism
+interventionist
 interviewee
 interwar
 investment company
 investment trust
 invisibility
+irrational number
 Islamophobia
 Jacksonville
 Jaime
@@ -673,6 +703,7 @@ Jamie
 jaywalker
 Jeanette
 Jeannette
+Jefferson
 Joab
 Joanna
 Jodi
@@ -692,6 +723,7 @@ jurymen
 Kaaba
 Kansas
 karat
+Katherine
 Kathy
 Keats
 keel-boat
@@ -715,6 +747,7 @@ ladylike
 lamplike
 lamplit
 landmine
+lap steel
 Latvia
 laughingly
 lawfully
@@ -737,6 +770,7 @@ Lindsay
 Linus
 lionlike
 listicle
+Lithuania
 little-known
 livestreamer
 lobsterman
@@ -763,6 +797,7 @@ MacMillan
 mailmen
 mainboard
 Malaysia
+Malaysian
 malnutrition
 Maoism
 Mariana Islands
@@ -813,6 +848,7 @@ moonlit
 Morse code
 Moses
 motherboard
+motherfucker
 motherless
 motherly
 motion sickness
@@ -834,6 +870,7 @@ nanoparticle
 national anthem
 national debt
 natural gas
+needlelike
 needless to say
 needn't
 Negrophobia
@@ -922,6 +959,7 @@ nunship
 nutcracker
 nutmeat
 oarsmen
+Obama
 observability
 odorless
 ohm
@@ -970,12 +1008,15 @@ pardonably
 parent company
 parklike
 passphrase
+pass wind
 Patrick
 patrilinear
 Pauli
 payphone
 peahen
+pedal steel
 peer-review
+Pekingese
 Penrose
 periodically
 periodic law
@@ -984,11 +1025,13 @@ permanent tooth
 Persian
 phish
 phonecard
+photojournalist
 physiologically
 piecework
 Pierre
 pink-collar
 placename
+plainclothesmen
 planetologist
 planner
 pleasureless
@@ -1044,6 +1087,7 @@ ramen
 randomize
 ransomware
 rapist
+rational number
 ratproof
 read-only
 Reagan
@@ -1083,6 +1127,8 @@ Robb
 rollable
 ropelike
 ropemaker
+rower
+row house
 rowhouse
 rubber bullet
 Rubio
@@ -1145,6 +1191,7 @@ Shakti
 shallowly
 shareability
 shareable
+shareware
 Shawn
 shellshock
 shellshocked
@@ -1164,6 +1211,7 @@ singable
 single-parent family
 Singlish
 sinless
+sister-in-law
 sisterless
 sisterly
 sisters-in-law
@@ -1185,6 +1233,7 @@ skywards
 slaughtermen
 sleeping bag
 sleeveless
+slipped disc
 Slovenia
 slow-witted
 smallish
@@ -1221,6 +1270,8 @@ Stalin
 Stalinism
 Stalinist
 stalker
+stand out a mile
+stand out like a sore thumb
 stane
 starlit
 star-shaped
@@ -1259,6 +1310,8 @@ streetlamp
 streetscape
 streetwear
 stubbornness
+stumble across
+stumble onto
 subcommittee
 subdirectory
 subfolder
@@ -1305,12 +1358,14 @@ Syria
 taco
 tactful
 tactless
+tag cloud
 tag line
 Taiwan
 Taiwanese
 Tajikistan
 tango
 taskbar
+Tasmanian
 Tate
 tau cross
 tax-exempt
@@ -1359,6 +1414,8 @@ thirtysomething
 thirty-three
 thobe
 Thor
+thought balloon
+thoughtfulness
 three-legged race
 threepence
 throve
@@ -1413,11 +1470,13 @@ twenty-seven
 twenty-seventh
 twenty-six
 twenty-sixth
+twentysomething
 twenty-third
 twenty-three
 Tyson
 Uganda
 ugliness
+ultramarathon
 unacceptably
 unafraid
 unattractive
@@ -1464,6 +1523,7 @@ ungovernability
 ungovernableness
 unguessable
 unharmed
+unhealthful
 unheedful
 unhesitatingly
 unhurriedly
@@ -1543,6 +1603,8 @@ vertically
 victimless
 video card
 virology
+vlog
+vlogger
 vodka
 volcanology
 Volga
@@ -1553,6 +1615,7 @@ waiting room
 walkability
 Walter
 warbonnet
+Warrick
 Warsaw Pact
 watchmaker
 watercooler
@@ -1574,6 +1637,7 @@ Westphalia
 West Virginia
 wheatfield
 white-collar
+Whitehall
 white-robed
 whole-wheat
 who've
@@ -1587,6 +1651,7 @@ windward
 wineskin
 wirelessly
 withheld
+wives
 wolfskin
 wonton
 woodbin
@@ -1601,56 +1666,17 @@ world-building
 worm-like
 worthlessness
 wrongness
+XIV
 XV
+XVI
+XVII
 yearslong
 Yeats
 Yemen
 Zelenskyy
 zero gravity
 Zuma
-departure gate
-boarding gate
-Asian
-handcart
-interventionist
-Katherine
-Pekingese
-photojournalist
-increasingly
-vlog
-wives
-rational number
-irrational number
-row house
-Bonaparte
-congratulate
-Continental Congress
-gentlemen-in-waiting
-heartwarming
-househusband
-Obama
-rower
-Tasmanian
-thoughtfulness
-shareware
-unhealthful
-ultramarathon
-slipped disc
-XVII
-vlogger
-XIV
-hiking boot
-XVI
-Warrick
-plainclothesmen
-Algeria
-needlelike
-Bhutanese
-closemouthed
-foldable
-Lithuania
-Malaysian
-twentysomething
-heaven forbid
+
+
 
 `.trim().split('\n');
