@@ -1,7 +1,7 @@
 var search_sites_list_global=[
 //left_part,right_part,key_word_type,color,site_name,(c:check，用在usescript中；p:proxy b:button；0:important；n:without key, just link；l:toLowerCase()；m:show in right menu),category,title - 保留注释
 //key_word_type: 1+, 2-,3\s, 4gbk, 5_ - 保留注释
-['https://cn.bing.com/translator/','',0,'','BT','n0','ENG',''],
+['https://fanyi.baidu.com/mtpe-individual/multimodal','',0,'','百度翻译','n0','ENG',''],
 ['https://cn.bing.com/dict/search?q=','',0,'','Bing(cn)','c0m','ENG',''],
 ['https://dict.youdao.com/search?le=eng&q=','',0,'','Youdao','c0m','ENG',''],
 ['https://dict.cn/','',0,'','Dict.cn','c0','ENG',''],

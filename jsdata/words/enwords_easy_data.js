@@ -35,6 +35,7 @@ Alaska
 Algeria
 Alita
 Allah
+All Saints' Day
 anciently
 Andrea
 anglicise
@@ -294,6 +295,8 @@ convertibility
 cookware
 Cornwall
 correctness
+cosmic ray
+cosmic string
 cosplayer
 Costa Rica
 cottonseed
@@ -324,6 +327,7 @@ customisable
 customizable
 Damascus
 Danny
+dare say
 dark-eyed
 Darlington
 data type
@@ -503,6 +507,7 @@ formidably
 Forrest
 forty-four
 forty-nine
+forty-one
 forty-seven
 forty-six
 forty-three
@@ -512,6 +517,7 @@ foxhound
 Francophobia
 Frankfort
 Frankfurt
+frankfurter
 frankness
 freethinker
 Frenchmen
@@ -563,6 +569,8 @@ grown
 guardsmen
 guilt
 gunmen
+Gutenberg
+hadn't
 hair dryer
 half-dozen
 half-empty
@@ -1599,6 +1607,7 @@ utility pole
 value added
 valueless
 Vancouver
+venture capital
 vertically
 victimless
 video card

@@ -961,7 +961,7 @@ function batch_search_form_offline_file_browser(){
     bljg=bljg+'<span class="aclick" onclick="document.getElementById(\'div_statistics\').style.display=\'none\';">关闭</span>';
     bljg=bljg+textarea_buttons_b('textarea_batch_search_ofb','清空,复制,全选');
     bljg=bljg+'<span class="aclick" onclick="batch_search_result_offline_file_browser();">批量文件名匹配搜索</span> ';
-    bljg=bljg+'<select id="select_remove_str_ofb"><option>行首的*号</option><option>行尾的hash值列</option><option>每行左侧字符串至空格处</option></select> ';
+    bljg=bljg+'<select id="select_remove_str_ofb"><option>行首的*#号</option><option>行尾的hash值列</option><option>每行左侧字符串至空格处</option></select> ';
     bljg=bljg+'<span class="aclick" onclick="remove_characters_offline_file_browser();">去除字符串</span>';
     bljg=bljg+'</p>\n';
     bljg=bljg+'<div id="div_batch_search_result_ofb"></div>\n';
@@ -986,8 +986,8 @@ function remove_characters_offline_file_browser(cstype=false){
         case '行尾的hash值列':
             otextarea.value=blstr.replace(/\s+[^\s]+$/mg,'');
             break;
-        case '行首的*号':
-            otextarea.value=blstr.replace(/^\*\s*/mg,'');        
+        case '行首的*#号':
+            otextarea.value=blstr.replace(/^[\*#]\s*/mg,'');        
             break;
         case '每行左侧字符串至空格处':
             otextarea.value=blstr.replace(/^[^ ]*\s*/gm, '');
