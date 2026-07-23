@@ -1214,7 +1214,7 @@ function input_size_b(cslist,cstype='name',font_size=false,return_dom=false){
     return dom_list;
 }
 
-function input_with_x_b(csid,cswidth,xid='',csexpand=false,regid=false,isreg=false,is_focus=false){
+function input_with_x_b(csid,cswidth,xid='',csexpand=false,regid=false,isreg=false,is_focus=false,plus_button=false){
     //csexpand 可以是 数值型 - 保留注释
     var oinput=document.getElementById(csid);
     if (!oinput){return false;}
@@ -1228,8 +1228,8 @@ function input_with_x_b(csid,cswidth,xid='',csexpand=false,regid=false,isreg=fal
     if (xid==''){
         xid=csid+'_x';
     }
-    var inputx='<input type="button" value="❌" id="'+xid+'" onclick=\'document.getElementById("'+csid+'").value="";document.getElementById("'+csid+'").focus();\'>';
     
+    var inputx='<input type="button" value="❌" id="'+xid+'" onclick=\'document.getElementById("'+csid+'").value="";document.getElementById("'+csid+'").focus();\'>';
     oinput.insertAdjacentHTML('afterend',inputx);
     
     var input_list=[
@@ -1248,6 +1248,12 @@ function input_with_x_b(csid,cswidth,xid='',csexpand=false,regid=false,isreg=fal
     if (input_reg!==''){
         oinput.parentNode.insertAdjacentHTML('afterend',' '+input_reg);
     }
+    
+    if (plus_button){
+        var inputp='<span class="aclick" onclick=\'let oinput=document.getElementById("'+csid+'"); oinput.value="+"+oinput.value.replace(/\\s/g," +"); oinput.focus();\'>➕</span>';
+        oinput.parentNode.insertAdjacentHTML('afterend',' '+inputp);
+    }
+    
     if (is_focus){
         oinput.focus();
     }

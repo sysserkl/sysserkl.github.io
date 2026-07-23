@@ -1677,7 +1677,7 @@ function style_offline_file_browser(){
 
 function init_offline_file_browser(){
     var t0 = performance.now();
-    input_with_x_b('input_search',15);
+    input_with_x_b('input_search',15,'',false,false,false,false,true);
 
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'));
     menu_offline_file_browser();
