@@ -2911,7 +2911,7 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
     //var blweek=date_2_ymd_b(false,'w');    
     //blweek=(blweek==0?7:blweek);
     var cached_no=local_storage_get_b('enwords_recent_no');
-    var rand_page_no_list=[day_no_enwords_b()[0]];
+    var rand_page_no_list=[day_no_enwords_b()[0],Math.ceil(en_words_temp_important_global.length/words_count_per_page)];
     if (cached_no!==''){
         rand_page_no_list.push(parseInt(cached_no));
     }

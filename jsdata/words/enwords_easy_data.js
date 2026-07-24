@@ -1692,6 +1692,14 @@ would've
 dip net
 dipnet
 curry favour
+stormtrooper
+Aegean Islands
+Afghan bread
+clickbait
+doughnutlike
+geochemistry
+learnable
+Lovecraft
 
 
 `.trim().split('\n');
