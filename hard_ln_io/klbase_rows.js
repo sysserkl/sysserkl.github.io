@@ -493,6 +493,30 @@ function english_punctuation_b(csstr){
     return csstr;
 }
 
+function punctuation_replace_b(text, csreplace = ' ',cstype='',is_plus=true){
+    if (is_plus){
+        if (cstype=='cn'){
+            var pattern = /[\u3000-\u303F\uFF00-\uFFEF\u2000-\u206F]+/g;
+        } else {
+            var pattern = /\p{P}+/gu;
+        }
+    } else {
+        if (cstype=='cn'){
+            var pattern = /[\u3000-\u303F\uFF00-\uFFEF\u2000-\u206F]/g;
+        } else {
+            var pattern = /\p{P}/gu;
+        }
+    }
+    
+    if (text===false){
+        return pattern;
+    }
+    if (csreplace===false){
+        return text.split(pattern);
+    }
+    return text.replace(pattern, csreplace);
+}
+
 function chinese_punctuation_b(csstr){
     for (var blxl=1;blxl<3;blxl++){
         csstr=csstr.replace(/([^\x00-\xff])\?/g,"$1？");

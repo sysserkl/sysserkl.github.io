@@ -1628,6 +1628,7 @@ function important_movies_offline_file_browser(do_ssd_tf=false){
     }
     
     var both_exist_set=new Set();
+    var used_key_set=new Set();
     for (let blxl=0,lent=offline_file_data_raw_global.length;blxl<lent;blxl++){
         var item=offline_file_data_raw_global[blxl];
         //-----------------------
@@ -1645,14 +1646,23 @@ function important_movies_offline_file_browser(do_ssd_tf=false){
         }
         //-----------------------
         if (!item[1].includes('/完整影视/')){continue;}   //不考虑待看 - 保留注释
-        if (item[2].match(/\.(mkv|mp4|rmvb)$/i)==null){continue;}
+        if (item[2].match(/\.(avi|mkv|mp4|rmvb)$/i)==null){continue;}
         for (let akey of important_set_t){
             if (item[1].includes(akey) || item[2].includes(akey)){  //不使用 .toLowerCase() 会加快速度 - 保留注释
                 offline_file_data_raw_global[blxl][6]='💖';
+                used_key_set.add(akey);
                 break;
             }
         }
     }
+    
+    var important_left=array_difference_b(important_set_t,used_key_set,true);
+    if (important_left.size>0){
+        var odiv=document.getElementById('div_statistics');
+        odiv.innerHTML='💖未使用的关键词：'+Array.from(important_left).join(' | ')+close_button_b('div_statistics','');
+        odiv.style.display='';
+    }
+    
     important_movie_global=[];  //便于统计时统一计算length需要，important_movie_global 不能是 new Set() - 保留注释
     ssd_tf_file_list_merged_global=[];
     

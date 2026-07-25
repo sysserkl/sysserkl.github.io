@@ -1700,6 +1700,14 @@ doughnutlike
 geochemistry
 learnable
 Lovecraft
+Morrison
+multicolored
+nonexistence
+photosynthesize
+re-export
+unhesitating
+buff-colored
+fairy-light
 
 
 `.trim().split('\n');
