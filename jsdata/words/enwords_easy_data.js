@@ -1708,6 +1708,24 @@ re-export
 unhesitating
 buff-colored
 fairy-light
+goal-directed
+bejeweled
+bejewelled
+cleantech
+E. coli
+highchair
+multibillion
+Nuremberg
+purchasing power
+Rosenberg
+tableland
+Zipporah
+abstract expressionism
+dimwit
+dolt
+slave labor
+for some reason
+lockable
 
 
 `.trim().split('\n');
