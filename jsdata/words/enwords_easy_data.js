@@ -1726,6 +1726,14 @@ dolt
 slave labor
 for some reason
 lockable
+Crawford
+grandbaby
+hexahedra
+housepainter
+human capital
+Menshevik
+multilingual
+
 
 
 `.trim().split('\n');
