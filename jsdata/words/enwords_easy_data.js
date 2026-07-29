@@ -1707,7 +1707,7 @@ photosynthesize
 re-export
 unhesitating
 buff-colored
-fairy-light
+fairy light
 goal-directed
 bejeweled
 bejewelled
@@ -1733,7 +1733,11 @@ housepainter
 human capital
 Menshevik
 multilingual
-
+betelnut
+bird flu
+command economy
+blackbody
+cellblock
 
 
 `.trim().split('\n');

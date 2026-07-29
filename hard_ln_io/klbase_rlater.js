@@ -40,7 +40,7 @@ function fav_add_rlater_b(csid,csa,prefix='readlater',addtag=false){
 
 function select_delete_type_generate_rlater_b(only_mark_option=true){
     var extra_str=(only_mark_option?'<option>仅做标记不删除记录</option>':'');
-    return '<span class="span_menu"><select id="select_delete_type_rlater" onchange="delete_type_rlater_global=this.value;"><option>删除到iframe</option><option>新窗口打开删除页面</option>'+extra_str+'</select></span>';
+    return '<span class="span_menu"><select onchange="delete_type_rlater_global=this.value;"><option>删除到iframe</option><option>新窗口打开删除页面</option>'+extra_str+'</select></span>';
 }
 
 function delete_open_php_rlater_b(cshref,csid,prefix='readlater'){
@@ -370,6 +370,15 @@ function years_rlater_b(all_len,current_len=false,ospan=false){
     return '<p>ToDoList: <span id="span_todolist_rlater">'+blstr+'</span></p><div id="div_info_rlater"></div>';
 }
 
+function marked_link_style_rlater_b(cslink,cstitle,is_strong=false){
+    if (readlater_marked_rows_global.includes(cslink)){
+        return '<span style="background-color:'+scheme_global['shadow']+'; border-radius: 0.5rem;">'+cstitle+'</span>';
+    } else if (is_strong){
+        return '<font color=red><strong>'+cstitle+'</strong></font>';
+    }
+    return cstitle;
+}
+
 function one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong=false,prgname='readlater',other_str='',with_li=true,is_simple=false){
     var bljg='';
     if (with_li){
@@ -377,13 +386,7 @@ function one_link_gerenrate_rlater_b(idno,cslink,cstitle,csstrong=false,prgname=
     }
     bljg=bljg+'<a class="a_rlater_link" id="a_rlater_link_'+idno+'" href="'+cslink+'" target=_blank onmousedown="this.style.backgroundColor=\''+scheme_global['pink']+'\';">'; //替代 onclick, ondragstart，支持鼠标右键 - 保留注释
 
-    if (readlater_marked_rows_global.includes(cslink)){
-        bljg=bljg+'<span style="background-color:'+scheme_global['shadow']+'; border-radius: 0.5rem;">'+cstitle+'</span>';
-    } else if (csstrong){
-        bljg=bljg+'<font color=red><strong>'+cstitle+'</strong></font>';
-    } else {
-        bljg=bljg+cstitle;
-    }
+    bljg=bljg+marked_link_style_rlater_b(cslink,cstitle,csstrong);
     bljg=bljg+'</a>';
     
     if (!is_simple){

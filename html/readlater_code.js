@@ -199,7 +199,8 @@ function add_date_rlater(){
         var date_str=list_t[1];
         if (date_str==''){continue;}
         if (parseInt(date_str.slice(0,4))>the_year){continue;}
-        one_a.innerText=date_str+' | '+blstr;
+        
+        one_a.innerHTML=marked_link_style_rlater_b(blhref,date_str+' | '+blstr);
     }
 }
 
