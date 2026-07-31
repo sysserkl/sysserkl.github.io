@@ -1383,6 +1383,7 @@ function lat_lng_date_get_offline_file_browser(){
     
     var left_str='<p>';
     left_str=left_str+close_button_b('div_statistics','');
+    left_str=left_str+'<span class="aclick" onclick="gpx_offline_file_browser();">保存为GPX文件</span>';
     var right_str='('+result_t.length+' '+(result_t.length*100/offline_file_data_current_global.length).toFixed(2)+'%)</p>';
 
     var bljg=textarea_with_form_generate_b('textarea_lat_lng_date_ofb','height:10rem;',left_str,'清空,复制,发送到临时记事本,发送地址',right_str);
@@ -1392,6 +1393,26 @@ function lat_lng_date_get_offline_file_browser(){
     odiv.style.display='block';
     odiv.scrollIntoView();
     document.getElementById('textarea_lat_lng_date_ofb').value=result_t.join('\n');
+}
+
+function gpx_offline_file_browser(){
+    var list_t=document.getElementById('textarea_lat_lng_date_ofb').value.trim().split('\n');
+    var result_t=[];
+    var old_value='';
+    for (let arow of list_t){
+        arow=arow.split(' /// ');
+        if (arow.length<3){continue;}
+        if (arow[1]+'_'+arow[2]==old_value){continue;}
+        result_t.push([arow[1],arow[2]]);
+        old_value=arow[1]+'_'+arow[2];
+    }
+    
+    var bljg=[];
+    for (let blxl=0,lent=result_t.length;blxl<lent-1;blxl++){
+        bljg.push(gpx_head_tail_leaflet_b(latlon_2_gpx_file_leaflet_b(result_t.slice(blxl,blxl+1),'point'+blxl,false)));  //一个点一个轨迹 - 保留注释
+    }
+    
+    string_2_txt_file_b(bljg.join('\n'),'photo_lat_lon_export_'+now_time_str_b('-',true)+'.gpx','gpx');
 }
 
 function file_list_offline_file_browser(){

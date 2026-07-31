@@ -732,3 +732,33 @@ function style_generate_klphotos_b(cssize=''){
 .div_thumb {width:`+csw+`; height:`+csh+`; border:0.1rem dashed #c0c0c0; padding:0.2rem;margin:0.2rem; position:relative; float:left;}
 .td_thumb {font-size:1.3rem; color:707070;word-break:normal; word-wrap:normal;}`;
 }
+
+function today_album_klphotos_b(csfilter='d'){
+    var photos=[];
+    var bigday_imgpath=album_path_b();
+    var range1,range2;
+    switch (csfilter){
+        case 'd':
+            var bltoday=date2str_b('').slice(-4,);
+            range1=9; 
+            range2=13;
+            break;
+        case 'm':
+            var bltoday=date2str_b('').slice(-4,-2);
+            range1=9; 
+            range2=11;            
+            break;
+        default:
+            return [];
+    }
+    
+    for (let item of photo_source_global){
+        item=item.slice(1,);    //去掉第一个caption元素 - 保留注释
+        for (let aphoto of item){
+            if (aphoto.substring(range1,range2)==bltoday){
+                photos.push([bigday_imgpath,aphoto,bltoday]);
+            }
+        }
+    }
+    return photos;
+}
