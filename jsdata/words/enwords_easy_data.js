@@ -1745,5 +1745,6 @@ shamefully
 white-glove service
 bathwater
 winemaker
+5 o'clock shadow
 
 `.trim().split('\n');
