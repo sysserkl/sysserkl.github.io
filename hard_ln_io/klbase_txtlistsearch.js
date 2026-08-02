@@ -3884,7 +3884,7 @@ function digest_sort_kltxt_b(show_html=true){
         }
     }    
 
-    var digest_t=[].concat(digest_global);
+    var digest_t=array_unique_b(digest_global);
     var hash_count=0;
     
     for (let blxl=0,lent=filelist.length;blxl<lent;blxl++){

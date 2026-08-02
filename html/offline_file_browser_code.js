@@ -1680,8 +1680,10 @@ function important_movies_offline_file_browser(do_ssd_tf=false){
     var important_left=array_difference_b(important_set_t,used_key_set,true);
     if (important_left.size>0){
         var odiv=document.getElementById('div_statistics');
-        odiv.innerHTML='💖未使用的关键词：'+Array.from(important_left).join(' | ')+close_button_b('div_statistics','');
-        odiv.style.display='';
+        if (odiv){
+            odiv.innerHTML='💖未使用的关键词：'+Array.from(important_left).join(' | ')+close_button_b('div_statistics','');
+            odiv.style.display='';
+        }
     }
     
     important_movie_global=[];  //便于统计时统一计算length需要，important_movie_global 不能是 new Set() - 保留注释
