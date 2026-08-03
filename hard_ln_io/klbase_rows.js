@@ -920,7 +920,7 @@ function batch_open_www_klr_b(cstype='',csid='textarea_rows_content',status_id='
             }
             list_t[blno]=klwiki_link_b(atitle,false);
         }
-    } else {
+    } else if (cstype!=='batchwww'){
         if (cstype.includes('_')){
             var type_list=cstype.split('_');
         } else {

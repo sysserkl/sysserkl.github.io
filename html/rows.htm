@@ -11,6 +11,12 @@ klbase_addons_import_js_b(['css','en_de_str','date','rows','eng','d3','mermaid',
 import_wordcloud_js_d3_b();
 </script>
 <script>
+mermaid.initialize({
+    //startOnLoad: true, // 根据你的需求设置是否自动加载
+    maxEdges: 5000     // 将边数上限修改为你需要的更高数值，例如 1000
+});
+</script>
+<script>
 //-----------------------
 //history
 //0.0.8-20211117 页框化
