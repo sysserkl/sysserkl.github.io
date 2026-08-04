@@ -1748,6 +1748,13 @@ winemaker
 5 o'clock shadow
 Dolittle
 globetrotter
+Kenya
+atomic physics
+record holder
+Sasha
+shamelessly
+Lucas
+planetology
 
 
 `.trim().split('\n');
