@@ -186,6 +186,7 @@ function weibo_weixin_user_rlater(){
 }
 
 function add_date_rlater(){
+    var t0 = performance.now();
     var oas=document.querySelectorAll('a.a_rlater_link');
     var the_year=new Date().getFullYear();
     for (let one_a of oas){
@@ -202,6 +203,7 @@ function add_date_rlater(){
         
         one_a.innerHTML=marked_link_style_rlater_b(blhref,date_str+' | '+blstr);
     }
+    console.log('add_date_rlater() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
 
 function menu_rlater(){
@@ -211,7 +213,7 @@ function menu_rlater(){
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'search_in_site_rlater();">站内搜索</span>',   
     '<span class="span_menu" onclick="'+str_t+'fav_show_rlater();">Fav</span>',   
-    '<span class="span_menu" onclick="'+str_t+'add_date_rlater();">当前结果根据链接添加日期</span>',   
+    //'<span class="span_menu" onclick="'+str_t+'add_date_rlater();">当前结果根据链接添加日期</span>',   
     load_sentence_menu_b(str_t),
     '<span class="span_menu" onclick="'+str_t+'month_rlater(0,-1,true);">去年今日</span>',       
     ];
@@ -300,7 +302,7 @@ function menu_rlater(){
     }
     
     var klmenu_idb=[
-    '<span id="span_reg_rlater" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',      
+    //'<span id="span_reg_rlater" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ reg</span>',      
     select_delete_type_generate_rlater_b(),
     '<a href="?load=-1" onclick="'+str_t+'">仅导入最新data文件</a>',    
     '<span class="span_menu" onclick="'+str_t+'clear_cached_deleted_rows_rlater_b(\'readlater_deleted_rows\');">清除今日删除记录</span>',
@@ -308,7 +310,13 @@ function menu_rlater(){
     idb_menu_generate_bigfile_b('readlater','select_big_file_readlater',blparent,'import_bigfile_rlater'),
 
     ];    
-    
+
+    var group_list=[
+    ['⚪ reg','klmenu_check_b(this.id,true);',true,'span_reg_rlater'],
+    ['⚪ 标题添加日期','klmenu_check_b(this.id,true);',true,'span_add_date_rlater'],
+    ];    
+    klmenu_idb.push(menu_container_b(str_t,group_list,''));    
+        
     var group_list=[
     ['write','if (confirm(\'是否写入数据到IDB？\')){idb_rlater(\'write\');}',true],
     ['read','if (confirm(\'是否从IDB读取数据？\')){idb_rlater(\'read\');}',true],
@@ -1244,6 +1252,9 @@ function div_column_count_rlater(cscontent,is_one=true){
     var odiv=document.getElementById('div_search_links');
     odiv.innerHTML=cscontent;
     odiv.style.columnCount=((is_one || ismobile_b())?1:2);
+    if (klmenu_check_b('span_add_date_rlater',false)){
+        add_date_rlater();
+    }    
 }
 
 function search_in_site_rlater(){
