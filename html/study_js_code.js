@@ -183,6 +183,20 @@ function recover01str_study_js(compressedStr){
     return decompressed;
 }
 
+function plus_0_123_study_js(){
+    var result_t1=(0.1+0.2==0.3);
+    var result_t2=(Math.sumPrecise([0.1,0.2])==0.3);
+
+    var result_t3=(0.1+0.2+1.000==1.3);
+    var result_t4=(Math.sumPrecise([0.1,0.2,1.000])==1.3);
+    
+    //大数吃小数：1e20 太大，后面加的 3、1 根本进不去，最后 -1e20 又把前面的 1e20 抵消，连带把真正的小数也一起丢了 - 保留注释
+    var sum1 = [0.1, 0.2, 1e20, 3, 1, -1e20].reduce((a, b) => a + b, 0);    //初始值是 0 - 保留注释
+    // ES2026：自动补偿求和
+    var sum2=Math.sumPrecise([0.1, 0.2, 1e20, 3, 1, -1e20]);
+    document.getElementById('td_interactive_info').innerHTML=result_t1+'<br />'+result_t2+'<br />'+result_t3+'<br />'+result_t4+'<br />'+sum1+'<br />'+sum2;
+}
+
 function li_show_study_js(){
     study_js_type_dict_global={   //全局变量，*表示显示源代码但不执行 - 保留注释
     //study_dict_start
@@ -195,6 +209,7 @@ function li_show_study_js(){
     'Object.fromEntries':['objects_from_entries_study_js'],
     'new Map':['new_map_study_js'],
     '01compress':['compress01str_study_js','*recover01str_study_js'],
+    'plus_0_123':['plus_0_123_study_js'],
     //study_dict_end
     }
         

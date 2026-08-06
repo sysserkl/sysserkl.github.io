@@ -1746,7 +1746,6 @@ white-glove service
 bathwater
 winemaker
 5 o'clock shadow
-Dolittle
 globetrotter
 Kenya
 atomic physics
@@ -1764,6 +1763,12 @@ antinutrient
 cabdriver
 chinaware
 hasn't
+it'll
+near beer
+multimillion
+can opener
+open-minded
+twopence
 
 
 `.trim().split('\n');

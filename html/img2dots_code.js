@@ -26,6 +26,8 @@ function generate_i2d(originalImg,threshold,dotSize,gap,canvas,ctx,maxWidth=800,
     
     const imgData = tempCtx.getImageData(0, 0, blw, blh);
     const data = imgData.data; // RGBA 数据
+    document.getElementById('span_info').innerHTML='原图颜色数：'+img_color_count_b(data).size;
+    
     const width = imgData.width;
     const height = imgData.height;
 
@@ -59,6 +61,7 @@ function generate_i2d(originalImg,threshold,dotSize,gap,canvas,ctx,maxWidth=800,
     
     var odiv=document.getElementById('divhtml');
     console.clear();
+    
     var console_list=[];
     var mark_list=[];
     var html_list=[];    

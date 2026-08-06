@@ -397,3 +397,24 @@ function img_split_canvas_b(oimg,ocanvas,ctx,one_part,csext='jpeg'){
     ctx.drawImage(oimg, one_part[0],one_part[1], one_part[2], one_part[3], 0,0, one_part[2], one_part[3]);
     return ocanvas.toDataURL('image/'+csext);
 }
+
+function img_color_count_b(data,ignore_transparent=false){
+    //const data = imgData.data; // RGBA 数据 - 此行保留
+    
+    const colorSet = new Set();
+
+    for (let i = 0; i < data.length; i += 4){
+        const r = data[i];
+        const g = data[i + 1];
+        const b = data[i + 2];
+        const a = data[i + 3];
+        
+        // 可选：忽略完全透明的像素
+        if (a === 0 && ignore_transparent){continue;}
+        
+        // 将 RGBA 组合成一个唯一字符串作为 key
+        const colorKey = `${r},${g},${b},${a}`;
+        colorSet.add(colorKey);
+    }
+    return colorSet;
+}
