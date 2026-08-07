@@ -1769,6 +1769,16 @@ multimillion
 can opener
 open-minded
 twopence
+watchcase
+preprocess
+red panda
+atomic weight
+atomic mass
+brothers-in-arms
+northern hemisphere
+bioterrorism
+cardphone
+
 
 
 `.trim().split('\n');
