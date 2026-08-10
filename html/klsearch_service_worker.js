@@ -7,8 +7,10 @@ self.addEventListener('install', function(e) {
             '../hard_ln_io/klbase.js',            
             '../hard_ln_io/klbase_css.js',
             '../hard_ln_io/klbase_en_de_str.js',
+            '../hard_ln_io/klbase_search.js',
             '../module/gbk.js',
             '../jsdata/search_sites_pb_data.js',
+            '../jsdata/words/endict_ellipsis_data.js',
             ]);
         })
     );
