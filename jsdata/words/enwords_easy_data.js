@@ -1778,6 +1778,8 @@ brothers-in-arms
 northern hemisphere
 bioterrorism
 cardphone
+Polynesia
+world-shattering
 
 
 
