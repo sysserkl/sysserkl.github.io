@@ -296,6 +296,7 @@ function init_klsearch(){
     }
     menu_klsearch();
     recent_search_klsearch();
+    character_2_icon_b('❓');    
 }
 
 function local_or_remote_host_klsearch(ospan){

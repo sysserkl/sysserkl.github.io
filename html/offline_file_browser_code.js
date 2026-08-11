@@ -956,13 +956,18 @@ function diff_offline_file_browser(csdir1='',csdir2='',showhtml=true){
 
 function batch_search_form_offline_file_browser(){   
     var postpath=postpath_b();
-    bljg='<textarea name="textarea_batch_search_ofb" id="textarea_batch_search_ofb" style="width:90%;height:20rem;"></textarea>';
+    bljg='<table width=100%><tr><td>';
+    bljg=bljg+'<textarea name="textarea_batch_search_ofb" id="textarea_batch_search_ofb" style="width:100%;height:20rem;"></textarea>';
+    bljg=bljg+'</td><td>';
+    bljg=bljg+'<textarea name="textarea_wikitable_ofb" id="textarea_wikitable_ofb" style="width:100%;height:20rem;"></textarea>';
+    bljg=bljg+'</tr></table>';
     bljg=bljg+'<p>';
     bljg=bljg+'<span class="aclick" onclick="document.getElementById(\'div_statistics\').style.display=\'none\';">关闭</span>';
     bljg=bljg+textarea_buttons_b('textarea_batch_search_ofb','清空,复制,全选');
     bljg=bljg+'<span class="aclick" onclick="batch_search_result_offline_file_browser();">批量文件名匹配搜索</span> ';
     bljg=bljg+'<select id="select_remove_str_ofb"><option>行首的*#号</option><option>行尾的hash值列</option><option>每行左侧字符串至空格处</option></select> ';
     bljg=bljg+'<span class="aclick" onclick="remove_characters_offline_file_browser();">去除字符串</span>';
+    bljg=bljg+'<span class="aclick" onclick="remove_wikitable_offline_file_browser();">wikitable 对应文件名删除</span>';
     bljg=bljg+'</p>\n';
     bljg=bljg+'<div id="div_batch_search_result_ofb"></div>\n';
     var odiv=document.getElementById('div_statistics');
@@ -970,6 +975,37 @@ function batch_search_form_offline_file_browser(){
     odiv.style.display='';
     odiv.scrollIntoView();
 }
+
+function remove_wikitable_offline_file_browser(){
+    var list_t=document.getElementById('textarea_batch_search_ofb').value.trim().split('\n');
+    var owikitable=document.getElementById('textarea_wikitable_ofb');
+    
+    var table_content=owikitable.value.split('\n');
+    var lent=table_content.length;
+    var found_list=[];
+    var not_found_list=[];
+    for (let arow of list_t){
+        arow=arow.trim();
+        if (arow==''){continue;}
+        var blfound=false;
+        for (let blxl=0;blxl<lent;blxl++){
+            if (table_content[blxl].startsWith('| '+arow+' || ')){
+                console.log('移除',table_content[blxl]);
+                found_list.push(arow);
+                table_content[blxl]='';
+                blfound=true;
+            }
+        }
+        if (!blfound){
+            not_found_list.push(arow);
+        }
+    }
+    var bljg=table_content.join('\n');
+    bljg=bljg.replace(/\|\-\s*\n\s*\n\|\-\s*\n/g,'|-\n');
+    owikitable.value=bljg;
+    alert('移除了 '+found_list.length+'个文件，未发现 '+not_found_list.length+' 个文件');
+}
+
 
 function remove_characters_offline_file_browser(cstype=false){
     if (cstype==false){
