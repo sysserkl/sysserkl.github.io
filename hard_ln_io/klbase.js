@@ -4766,7 +4766,7 @@ function upload_files_to_list_b(input_id,run_fn=false,csext='',csmax_count=10,cs
         if (sub_upload_files_to_list_b_check(one_file)!==''){return;}
     }
 
-    if (!confirm('是否上传 '+bllen+' 个文件？')){return;}
+    if (bllen==0 || !confirm('是否上传 '+bllen+' 个文件？')){return;}
     var blxl=0;
     var old_title=document.title;
     var result_t=[];

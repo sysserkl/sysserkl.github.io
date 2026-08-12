@@ -1782,6 +1782,24 @@ Polynesia
 world-shattering
 bilingual
 biosynthesis
-
+come with the turf
+go with the territory
+house-warming
+lithographical
+lithographically
+pope's nose
+mortar attack
+divide and rule
+courtesy visit
+courtesy car
+mortar bomb
+courtesy bus
+merpeople
+merperson
+queer someone's pitch
+mortar fire
+narrow money
+adult actress
+deerskin
 
 `.trim().split('\n');
