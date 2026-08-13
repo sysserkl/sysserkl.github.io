@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>maze</title>
+<meta charset="UTF-8">
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css'],['maze.js'],[],['maze_code.js']);
+</script>
+<script>
+// 迷宫配置
+var cols_maze_global = 50;
+var rows_maze_global = 30;
+var grid = [];
+
+css_root_style_b('18','13',['base','menu'],[],1);
+</script>
+<style>
+#table_maze { border-collapse: collapse; }
+#table_maze td { width: 1.5rem; height: 1.5rem; box-sizing: border-box; }
+#table_maze .td_maze_path { background-color: tomato; opacity: 0.3; }
+#table_maze .td_maze_answer { background-color: green; opacity: 0.3; }
+</style>
+</head>
+<body>
+<h2 style="margin-top:0px;font-size:1.2rem;"><span id="span_title">maze</span></h2>
+<div style="margin:0.5rem;">
+<!--canvas id="mazeCanvas"></canvas-->
+<p>
+<span class="aclick" onclick="generate_maze()">生成</span>
+<span class="aclick" onclick="answer_maze();">答案</span>
+</p>
+<table id="table_maze"></table>
+</div>
+<script>
+//以下几行保留 - 保留注释
+//var border_color_maze_global='black';
+//var path_color='blue';
+//var cell_size_maze_global=20;
+//var canvas = document.getElementById('mazeCanvas');
+//var ctx = canvas_set_maze_b(canvas,rows_maze_global,cols_maze_global,cell_size_maze_global);
+// 初始生成
+init_maze();
+</script>
+</body>
+</html>
