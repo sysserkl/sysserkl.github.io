@@ -14,6 +14,7 @@ function menu_maze(){
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
     '<span id="span_auto_complete_maze" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 直线自动填满</span>',        
+    '<span id="span_auto_no_fork_maze" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 无岔路自动填充</span>',        
     ]);
 
     var group_list=[
@@ -24,7 +25,8 @@ function menu_maze(){
     klmenu_config.push(menu_container_b(str_t,group_list,''));
     
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🌀','8rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','18rem','1rem','1rem','30rem'),'','0rem')+' ');
-    klmenu_check_b('span_auto_complete_maze',true);        
+    klmenu_check_b('span_auto_complete_maze',true);
+    klmenu_check_b('span_auto_no_fork_maze',true);
 }
 
 function refresh_maze(){
@@ -81,8 +83,11 @@ function td_click_maze(otd){
     } else {
         otd.classList.add('td_maze_answer');
         if (klmenu_check_b('span_auto_complete_maze',false)){
-            auto_complete_maze(otd);
+            do_auto_complete_maze(otd);
         }
+        if (klmenu_check_b('span_auto_no_fork_maze',false)){
+            do_auto_no_fork_maze(otd);
+        }        
     }
 }
 
@@ -99,7 +104,7 @@ function class_get_maze(otd){
     return [rc,ltrb];
 }
 
-function auto_complete_maze(otd){
+function do_auto_complete_maze(otd){
     var rc0,ltrb0,rc1,ltrb1;
     [rc0,ltrb0]=class_get_maze(otd);
     
@@ -163,3 +168,41 @@ function auto_complete_maze(otd){
     }
 }
 
+function do_auto_no_fork_maze(otd){
+    if (otd.classList.contains('td_maze_rc0_0') || otd.classList.contains('td_maze_rc'+(rows_maze_global-1)+'_'+(cols_maze_global-1))){return;}
+
+    var otable=document.getElementById('table_maze');
+
+    var rc,ltrb;
+    [rc,ltrb]=class_get_maze(otd);
+    //console.log('fork',rc,ltrb);
+    
+    var dom_list=[];
+    if (ltrb[1]==0){
+        dom_list.push(otable.querySelector('td.td_maze_rc'+rc[1]+'_'+(rc[2]-1)));
+    }
+
+    if (ltrb[2]==0){
+        dom_list.push(otable.querySelector('td.td_maze_rc'+(rc[1]-1)+'_'+rc[2]));    
+    }
+    
+    if (ltrb[3]==0){
+        dom_list.push(otable.querySelector('td.td_maze_rc'+rc[1]+'_'+(rc[2]+1)));    
+    }
+    
+    if (ltrb[4]==0){
+        dom_list.push(otable.querySelector('td.td_maze_rc'+(rc[1]+1)+'_'+rc[2]));        
+    }
+    
+    var open_dom=[];
+    for (let one_dom of dom_list){
+        if (!one_dom){continue;}
+        if (one_dom.classList.contains('td_maze_answer')){continue;}
+        open_dom.push(one_dom);
+    }
+    
+    if (open_dom.length==1){
+        open_dom[0].classList.add('td_maze_answer');
+        do_auto_no_fork_maze(open_dom[0]);
+    }
+}

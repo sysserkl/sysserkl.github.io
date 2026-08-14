@@ -1801,5 +1801,19 @@ mortar fire
 narrow money
 adult actress
 deerskin
+dare I suggest
+battle-axe
+battle-ax
+battleax
+breast-pocket
+graveside
+intercommunication
+jobseeker
+mooncake
+signalman
+signaller
+unlawfulness
+polo-neck
+Turing machine
 
 `.trim().split('\n');
