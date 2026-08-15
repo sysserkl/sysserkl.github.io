@@ -2504,7 +2504,7 @@ function sentence_horizontal_overflow_check_b(){
 }
 
 function sentence_split_status_generate_b(){
-    return {'小写':0,'长度':0,'单词数':0,'http':0,'()':0,'_Dr.':0,'Dr.':0,'etc':0,'console':false,'alone':0,'lengthy':0,'open_end':0,'month':0,'no':0};
+    return {'小写':0,'长度':0,'单词数':0,'http':0,'()':0,'_Dr.':0,'Dr.':0,'etc':0,'console':false,'alone':0,'lengthy':0,'open_end':0,'month':0,'no':0,'vs':0};
 }
 
 function sentence_split_b(csstr,csno=-1,re_combine=false){   //sentence split - 保留注释
@@ -2541,6 +2541,11 @@ function sentence_split_b(csstr,csno=-1,re_combine=false){   //sentence split - 
         
         if (csstr1.match(/\bNo\.\s*$/) && csstr2.match(/^\s*\d+\s/)){
             sub_sentence_split_b_count('no',csstr1,csstr2);
+            return true;
+        }
+        
+        if (csstr1.match(/\bvs\.\s*$/i)){
+            sub_sentence_split_b_count('vs',csstr1,csstr2);
             return true;
         }
 
