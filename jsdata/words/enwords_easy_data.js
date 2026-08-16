@@ -1824,7 +1824,17 @@ bacterium
 coal black
 coal-black
 ghostwriter
-
-
+ladies-in-waiting
+megapixel
+Nevada
+overactivity
+overpayment
+reconceptualization
+superstardom
+wedding ring
+DBMS
+servicewomen
+ex-servicewoman
+servicewoman
 
 `.trim().split('\n');

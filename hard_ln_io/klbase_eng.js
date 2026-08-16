@@ -369,7 +369,7 @@ function en_search_sites_b(maxlength=-1,ew=false,www=false){
     ['c','Collins'],    
     ['o','Oxford'],
     ['+','Cambridge'],
-    //['r','wordReference'],
+    ['r','reverso'],
     ['k','KL Search'],
     ['kai','Kai'],
     ];
@@ -500,9 +500,9 @@ function open_link_en_b(cstype,csword,do_open=true){
         case 'm':
             blhref='https://www.merriam-webster.com/dictionary/'+web_href_key_b(csword,'+',true);
             break;  
-        //case 'r':
-            //blhref='https://www.wordreference.com/definition/'+encodeURIComponent(csword);
-            //break;
+        case 'r':
+            blhref='https://dictionary.reverso.net/english-definition/'+encodeURIComponent(csword);
+            break;
         case 's':
             var blhref=klwebphp_path_b('klbase_html_jump.htm');
             blhref=blhref+'?selenium_news_search.php?search='+encodeURIComponent( '\\b'+csword+'\\b(:title)(:r)');
