@@ -1,0 +1,16 @@
+var sourcelist=[
+["https://www.raspberrypi.org/blog/how-to-improve-students-problem-solving-skills-using-subgoal-labels/","How to improve students’ problem-solving skills using subgoal labels","2026-08-17","Raspberry Pi","0",],
+["https://www.raspberrypi.org/blog/celebrating-the-community-douglas-and-oasis-mathare/","Celebrating the community: Douglas and Oasis Mathare","2026-08-17","Raspberry Pi","0",],
+["https://www.raspberrypi.org/blog/supporting-ai-education-for-150000-learners-in-aotearoa-new-zealand-and-australia/","Supporting AI education for 150,000 learners in Aotearoa New Zealand and Australia","2026-08-17","Raspberry Pi","0",],
+["https://www.solidot.org/story?sid=85105","美国历史上的奴隶制可预测今天的黑人白人死亡率差异","2026-08-17","Solidot","1",],
+["https://www.solidot.org/story?sid=85106","穷人比富人更早出现身体上的老化迹象","2026-08-17","Solidot","1",],
+["https://www.solidot.org/story?sid=85107","欧洲创纪录热浪杀死了 2.5 万人","2026-08-17","Solidot","1",],
+["https://wronghands1.com/2026/08/14/possible-sequels/","Possible Sequels","2026-08-17","Wrong Hands","0",],
+["https://wronghands1.com/tag/forrest-gump/","Forrest Gump","2026-08-17","Wrong Hands","0",],
+["https://wronghands1.com/2026/08/11/minimalist-interior-design/","minimalist interior design","2026-08-17","Wrong Hands","0",],
+["https://wronghands1.com/2026/08/07/ride-and-prejudice/","Ride and Prejudice","2026-08-17","Wrong Hands","0",],
+["https://wronghands1.com/2026/08/04/from-the-archives-a-brief-history-of-consumption/","from the archives: a brief history of consumption","2026-08-17","Wrong Hands","0",],
+["https://wronghands1.com/tag/consumption/","Consumption","2026-08-17","Wrong Hands","0",],
+["https://wronghands1.com/tag/materialism/","Materialism","2026-08-17","Wrong Hands","0",],
+["https://shumeipai.nxez.com/2026/08/16/bucknell-university-baja-sae-data-acquisition-daq-challenge.html","巴克内尔大学 Baja 赛车数据采集（DAQ）挑战赛","2026-08-17","树莓派实验室","1",],
+];

@@ -559,11 +559,16 @@ function txtmenus_kltxt_b(cstype=''){
     
     search_list=search_list.concat([
     '<span class="span_menu" onclick="'+str_t+'name_form_kltxt_b();">姓名溯源</span>',    
-    '<span class="span_menu" onclick="'+str_t+'rearray_kltxt_b();">重新分组</span>',
     '<hr />',
-    '<span class="span_menu" onclick="'+str_t+'separate_search_kltxt_b();">分离搜索</span>',    
+    '<span class="span_menu" onclick="'+str_t+'separate_search_kltxt_b();">多关键字分离搜索</span>',    
     ]);
 
+    var group_list=[
+    ['重新分组','rearray_kltxt_b();',true],
+    ['记录分割','array_split_kltxt_b();',true],
+    ];    
+    search_list.push(menu_container_b(str_t,group_list,''));
+    
     var menu_config=root_font_size_menu_b(str_t);
     menu_config=menu_config.concat([
     enwords_mini_menu_item_b(str_t),
@@ -674,6 +679,15 @@ function content_horizontal_overflow_check_kltxt_b(){
     var ocontainer=document.getElementById('divhtml');
     var ospans=ocontainer.querySelectorAll('span.txt_content');
     doms_horizontal_overflow_check_b(ocontainer,ospans);
+}
+
+function array_split_kltxt_b(){
+    array_split_by_range_b('filelist',getlines_kltxt_b);
+    line_count_kltxt_b();
+}
+
+function line_count_kltxt_b(){
+    document.getElementById('linecount').innerHTML='('+filelist.length+'行)';
 }
 
 function recent_added_in_digest_kltxt_b(){
@@ -1533,7 +1547,7 @@ function select_array_kltxt_b(cstype){
     for (let item of newlist_t){
         filelist.push(item);
     }
-    document.getElementById('linecount').innerHTML='('+filelist.length+'行)';
+    line_count_kltxt_b();
 }
 
 function rearray_kltxt_b(){
@@ -1565,11 +1579,8 @@ function rearray_kltxt_b(){
     }
 
     if (newlist_t.length>0){
-        filelist=[];
-        for (let item of newlist_t){
-            filelist.push(item);
-        }
-        document.getElementById('linecount').innerHTML='('+filelist.length+'行)';
+        filelist=newlist_t;
+        line_count_kltxt_b();
     }
 }
 
@@ -2831,7 +2842,14 @@ function rare_enwords_search_kltxt_b(show_rare_word=false,import_sentence=false,
         }        
     }
     
-    if (typeof en_sentence_count_global == 'undefined'){return;}
+    if (typeof en_sentence_count_global == 'undefined'){
+        return;
+    }
+    
+    if (typeof en_sentence_global == 'undefined'){
+        load_enword_file_b('en_sentence_global', 'enwords_sentence',function (){return rare_enwords_search_kltxt_b(show_rare_word,import_sentence,show_new_word,do_search,scan_rare);});
+        return;
+    }
     
     show_rare_and_load_sentence_kltxt_b(show_rare_word,import_sentence,sub_rare_enwords_search_kltxt_b_done);
 }
@@ -3593,7 +3611,7 @@ function decode_and_create_menu_kltxt_b(){
         }
     }
 
-    document.getElementById('linecount').innerHTML='('+filelist.length+'行)';
+    line_count_kltxt_b();
     document.getElementById('readingdata').innerHTML='';
 }
 

@@ -8,6 +8,7 @@ function menu_more_kltxt_klwiki_en2(){
     '<span class="span_menu" onclick="'+str_t+'batch_search_form_kltxt_klwiki_en2();">单词批量查找</span>',
     '<span class="span_menu" onclick="'+str_t+'common_rare_old_words_kltxt_klwiki_en2();">当前范围常见稀有旧单词</span>',
     '<span class="span_menu" onclick="'+str_t+'rare_old_words_in_chapter_kltxt_klwiki_en2();">稀有旧单词章节统计</span>',
+    '<span class="span_menu" onclick="'+str_t+'txtsearch_kltxt_b(\'^==.TXTBOOK.==$\');">跳转到TXTBOOK所在行</span>',
     '<a href="../jsdata/words/enwords_sentence_data.js'+file_date_parameter_b()+'" onclick="'+str_t+'" target=_blank>enwords_sentence_data.js</a>',    
     
     ];
