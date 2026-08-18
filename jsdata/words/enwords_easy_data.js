@@ -1836,5 +1836,20 @@ DBMS
 servicewomen
 ex-servicewoman
 servicewoman
+fava bean
+deerhound
+Eileen
+crossbeam
+Anakin
+Anakim
+Asgard
+Midgard
+Asgardian
+delimiter
+doorframe
+housemaid
+listlessness
+
+
 
 `.trim().split('\n');

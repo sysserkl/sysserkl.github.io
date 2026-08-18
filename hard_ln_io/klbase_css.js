@@ -123,9 +123,12 @@ function css_root_style_b(pcsize='16',mobilesize='30',cssname=[''],usercss=[],ch
     style_base_wiki_dict['.oblong_box']='.oblong_box {border-radius: 0.5rem;border:0.1rem solid '+scheme_global['shadow']+';padding:0.1rem 0.3rem;word-break:break-all;word-wrap:break-word;}';
     style_base_wiki_dict['recent_oblong_box']='div#div_recent_search span.oblong_box {word-break:break-all;word-wrap:break-word;}';
     style_base_wiki_dict['.span_box']='span.span_box {user-select: none; cursor:pointer;}\nspan.span_box:hover {color:'+scheme_global['a-hover']+';}';
+    style_base_wiki_dict['.span_digest']='span.span_digest {font-weight:bold;border-bottom:0.15rem solid '+scheme_global['pink']+';}';
+
     style_base_wiki_dict['.span_underline_box']='span.span_underline_box {user-select: none; cursor:pointer;}\nspan.span_underline_box:hover {color:'+scheme_global['a-hover']+'; text-decoration:underline;}';
     style_base_wiki_dict['.span_link']='span.span_link {color:'+scheme_global['a']+';text-decoration:underline;cursor:pointer;}\nspan.span_link:hover {color:'+scheme_global['a-hover']+';}';
-        
+    
+    console.log(cssname); //此行保留 - 保留注释
     if (cssname.includes('base')){
         list_t=list_t.concat([
         'body {font-size:1rem; margin:0px; padding:0px;color:'+scheme_global['color']+';background-color:'+scheme_global['background']+';}',
@@ -155,7 +158,6 @@ function css_root_style_b(pcsize='16',mobilesize='30',cssname=[''],usercss=[],ch
         'textarea{border:0.1rem solid '+scheme_global['memo']+';font-size:0.9rem;line-height:130%;width:'+(ismobile_b()?'90':'95')+'%;padding:0.5rem;color:'+scheme_global['color']+';background-color:'+scheme_global['background']+';}',
         'SELECT {font-size:0.9rem;}',
         '.span_from_url, .span_from_wiki {color:'+scheme_global['memo']+';font-size:0.7rem;font-style: italic;}',
-        '.span_digest {font-weight:bold;border-bottom:0.15rem solid '+scheme_global['pink']+';}',
         '.span_from_url a, .span_from_wiki a {color:'+scheme_global['memo']+';text-decoration:none;}',
         'a.a_oblong_box {color:'+scheme_global['color']+';background-color:'+scheme_global['background']+';text-decoration:none;border-radius: 0.5rem;border:0.1rem solid '+scheme_global['shadow']+';padding:0.1rem 0.3rem;line-height:1.8rem;}',
         'a.a_oblong_box:hover {color:'+scheme_global['a-hover']+';box-shadow: 0.1rem 0.1rem 0.1rem '+scheme_global['shadow']+';}',
@@ -2521,6 +2523,7 @@ function edit_buttons_b(js_fn='',cstype=[],dom_type='button'){
         result_t=result_t.concat([
         '{{c|t=b|n=+}}', 
         '{{c|t=r|n=+}}', 
+        '<esentence>+</esentence>', 
         '<klpc 512>+</klpc>', 
         [' li="10" name=""','用于 website 的 txt 模式'],
         '<mrt m>+</mrt>', 
