@@ -3866,6 +3866,7 @@ function digest_number_2_txt_kltxt_b(){
     var t0 = performance.now();
     var bllen=filelist.length;
     for (let blxl=0,lent=digest_global.length;blxl<lent;blxl++){
+        digest_global[blxl]=digest_global[blxl].trim(); //去掉首尾空格 - 保留注释
         var item=digest_global[blxl];
         if (item.length>=2 && item.substring(0,1)=='#' && item.slice(-1)=='#'){
             digest_special_raw_global['#'].add(item);   //第一行为0 - 保留注释
@@ -3937,7 +3938,7 @@ function digest_sort_kltxt_b(show_html=true){
         
         var bljg=textarea_with_form_generate_b('textarea_digest_sort_kltxt_b','height:10rem;','<p>','清空,复制,发送到临时记事本,发送地址','</p>');
 
-        var buttons='<p style="font-size:0.9rem;">原摘要数：'+digest_global.length+'，其中<b>#</b>开头的摘要有：'+hash_count+'；原摘要无重复数：'+new Set(digest_global).size+'；#NO# hash摘要数：'+hash_len+'；*摘要数：'+asterisk_len+'；整理后：'+result_t.length+'</p>';
+        var buttons='<p style="font-size:0.9rem;">原摘要数：'+digest_global.length+'，其中<b>#</b>开头的摘要有：'+hash_count+'；原摘要无重复数：'+new Set(digest_global).size+'；#NO# hash摘要数：'+hash_len+'；*摘要数：'+asterisk_len+'；整理后：'+result_t.length+' 相差：'+(new Set(digest_global).size+hash_len+asterisk_len-result_t.length)+'</p>';
         buttons=buttons+'<p  style="font-size:0.9rem;">注：原摘要的数字形式会转化为文字形式。原摘要中的<b>#</b>会排在最前面。</p>';
         document.getElementById('divhtml').innerHTML=bljg+buttons;
         document.getElementById('textarea_digest_sort_kltxt_b').value=result_t.join('\n');
