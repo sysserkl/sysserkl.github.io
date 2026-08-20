@@ -93,6 +93,9 @@ function object_klbase64(cstype){
             case 'black and white':
                 grey_result_klbase64(img_original_obj,true);                
                 break;
+            case 'mirror':
+                mirror_result_klbase64(img_original_obj);
+                break;
         }
     };
     img_original_obj.src=document.getElementById('img_original').src;
@@ -197,6 +200,29 @@ function resize_result_klbase64(oimg){
     document.getElementById('span_resized_img_size').innerHTML='Width: '+resize_w+' Height: '+resize_h+' Data Length: '+kbmbgb_b(resized_src.length,2);
 }
 
+function mirror_result_klbase64(oimg){
+    var elements = document.getElementsByName('mirror_type_klbase64');
+    var bltype='horizontal';
+    for (let item of elements){
+        if (item.checked){
+            var bltype=item.value;
+            break;
+        }
+    }
+    
+    var blwidth=oimg.width;
+    var blheight=oimg.height;
+    
+    document.getElementById('div_canvas').innerHTML='<canvas id="canvas_mirror" width='+blwidth+' height='+blheight+' style="margin:1rem;padding:1rem;display:none;"></canvas>';
+    var canvas=document.getElementById('canvas_mirror');
+    var ctx=canvas.getContext('2d');    
+    flip_img_b(canvas,ctx,oimg,bltype);
+
+    var mirrored_src=canvas.toDataURL('image/jpeg');
+    document.getElementById('img_mirrored').src=mirrored_src;
+    document.getElementById('textarea_base64_result').value=mirrored_src;
+}
+
 function init_klbase64(){
     menu_klbase64();
     document.getElementById('img_original').style.maxWidth=(ismobile_b()?'80%':'');
@@ -269,6 +295,23 @@ Max Height: <input type="number" id="input_maxh" min=1 />
     odiv.scrollIntoView();
 }
 
+function mirror_form_klbase64(){
+    var blstr=`<p style="line-height:1.8rem;">
+<label><input type="radio" name="mirror_type_klbase64" value="horizontal">horizontal</label>
+<label><input type="radio" name="mirror_type_klbase64" value="vertical">vertical</label>
+<label><input type="radio" name="mirror_type_klbase64" value="both">both</label>
+<span class="oblong_box" onclick="object_klbase64('mirror');">Mirror</span>
+</p>
+<p><b>Mirrored Image</b> <span id="span_mirrored_img_size"></span></p>
+<p><img id="img_mirrored" src="" alt="" style="padding:1rem;border:0.1rem black solid;"></p>`;//+modified_form_klbase64('Mirrored');
+    var odiv=document.getElementById('div_form');
+    odiv.innerHTML=blstr;
+    
+    mouseover_mouseout_oblong_span_b(document.querySelectorAll('div#div_form span.oblong_box'));
+    document.getElementById('img_mirrored').style.maxWidth=(ismobile_b()?'80%':'');
+    odiv.scrollIntoView();
+}
+
 function split_form_klbase64(){
     var blstr=`<p>
 Split Width: <input type="number" id="input_split_width" min=1 value=0 />
@@ -295,6 +338,7 @@ function menu_klbase64(){
     '<span class="span_menu" onclick="'+str_t+'filter_form_klbase64();">Filter</span>',    
     '<span class="span_menu" onclick="'+str_t+'resize_form_klbase64();">Resize</span>',
     '<span class="span_menu" onclick="'+str_t+'split_form_klbase64();">Split</span>',
+    '<span class="span_menu" onclick="'+str_t+'mirror_form_klbase64();">Mirror</span>',
     ];
     document.getElementById('h2_title').insertAdjacentHTML('afterbegin',klmenu_multi_button_div_b(klmenu_b(klmenu0,'','10rem','1rem','1rem','60rem'),'','0rem')+' ');
 }

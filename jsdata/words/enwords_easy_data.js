@@ -1855,5 +1855,8 @@ self-sealing
 Christchurch
 Hobbes
 semihard
+Ursa Minor
+Kepler
+earthrise
 
 `.trim().split('\n');

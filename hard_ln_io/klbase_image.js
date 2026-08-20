@@ -418,3 +418,23 @@ function img_color_count_b(data,ignore_transparent=false){
     }
     return colorSet;
 }
+
+function flip_img_b(ocanvas,ctx,image, mode){
+    // 根据模式设置不同的变换矩阵
+    switch (mode){
+    case 'horizontal': // 水平镜像（左右翻转）
+        ctx.scale(-1, 1);
+        ctx.translate(-image.width, 0);
+        break;
+    case 'vertical': // 垂直镜像（上下翻转）
+        ctx.scale(1, -1);
+        ctx.translate(0, -image.height);
+        break;
+    case 'both': // 水平 + 垂直（相当于旋转180度）
+        ctx.scale(-1, -1);
+        ctx.translate(-image.width, -image.height);
+        break;
+    }
+    // 将原图绘制到变换后的画布上
+    ctx.drawImage(image, 0, 0);
+}
