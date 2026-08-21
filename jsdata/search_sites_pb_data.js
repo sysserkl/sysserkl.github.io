@@ -15,7 +15,7 @@ var search_sites_list_global=[
 
 ['https://www.ahdictionary.com/word/search.html?q=','',0,'','AHD','0','ENG',''],
 ['https://www.definitions.net/definition/','',1,'','definitions','','ENG',''],
-['https://www.dictionary.com/browse/','',0,'#6666cc','Dictionary.com','','ENG',''],
+['https://www.dictionary.com/browse/','',0,'#6666cc','Dictionary.com','0','ENG',''],
 ['https://www.howtopronounce.com/','',2,'','htp','','ENG',''],
 ['https://www.behindthename.com/name/','',2,'','btn','','ENG',''],
 ['https://kaikki.org/dictionary/English/words/index.html?s=','',0,'#CC6600','kaikki','0m','ENG',''], 

@@ -329,7 +329,8 @@ function enwords_key_new_rare_menu_kltxt_b(csmenu,str_t,is_full=true){
     if (is_full){
         var group_list=[
         ['枚举','rare_enwords_enumerate_kltxt_b();',true],
-        ['搜索','rare_enwords_search_kltxt_b();',true],
+        ['搜索','rare_enwords_search_kltxt_b(false,true);',true],
+        ['搜索+例句','rare_enwords_search_kltxt_b(true,true,false,true,false,true);',true],
         ['例句+生词+','rare_enwords_search_kltxt_b(true,true,true);',true],
         ['可选','show_rare_and_load_sentence_kltxt_b(true,true,flist_2_ensentence_b);',true],    
         ['当前页面','current_page_rare_words_kltxt_b(\'rare\',true);',true],
@@ -653,7 +654,7 @@ function txtmenus_kltxt_b(cstype=''){
     var bljg='';
     var colors=klmenu_b(color_menu,'🎨',(ismobile_b()?'16rem':'20rem'),'',fontsize,'20rem');
     if (cstype!=='digest'){
-        bljg=bljg+klmenu_b(menu_general,'','45rem','',fontsize);
+        bljg=bljg+klmenu_b(menu_general,'','35rem','',fontsize);
         bljg=bljg+klmenu_b(menu_dir,'🔍',menu_dir_width,'',fontsize);
         bljg=bljg+klmenu_b(menu_digest,'🖊','34rem','',fontsize);       
         bljg=bljg+colors;
@@ -2818,7 +2819,7 @@ function rare_enwords_key_generate_kltxt_b(){
     return '-class="kleng" -eword +\\b('+en_sentence_count_global.join('|')+')\\b';
 }
 
-function rare_enwords_search_kltxt_b(show_rare_word=false,import_sentence=false,show_new_word=false,do_search=true,scan_rare=false){
+function rare_enwords_search_kltxt_b(show_rare_word=false,import_sentence=false,show_new_word=false,do_search=true,scan_rare=false,rare_sentence=false){
     function sub_rare_enwords_search_kltxt_b_new(){
         var type_list=[];
         if (show_new_word){
@@ -2827,8 +2828,12 @@ function rare_enwords_search_kltxt_b(show_rare_word=false,import_sentence=false,
         if (scan_rare){
             type_list.push(5);
         }
+        
         if (type_list.length>0){
             new_words_kltxt_b(type_list,'exclude',true);
+        }
+        if (rare_sentence){
+            current_page_2_ensentence_b('rare');
         }
     }
     
@@ -2842,14 +2847,12 @@ function rare_enwords_search_kltxt_b(show_rare_word=false,import_sentence=false,
         }        
     }
     
-    if (typeof en_sentence_count_global == 'undefined'){
-        return;
-    }
+    if (typeof en_sentence_count_global == 'undefined'){return;}
     
-    if (typeof en_sentence_global == 'undefined'){
-        load_enword_file_b('en_sentence_global', 'enwords_sentence',function (){return rare_enwords_search_kltxt_b(show_rare_word,import_sentence,show_new_word,do_search,scan_rare);});
-        return;
-    }
+    //if (typeof en_sentence_global == 'undefined'){
+        //load_enword_file_b('en_sentence_global', 'enwords_sentence',function (){return rare_enwords_search_kltxt_b(show_rare_word,import_sentence,show_new_word,do_search,scan_rare);});
+        //return;
+    //}
     
     show_rare_and_load_sentence_kltxt_b(show_rare_word,import_sentence,sub_rare_enwords_search_kltxt_b_done);
 }
