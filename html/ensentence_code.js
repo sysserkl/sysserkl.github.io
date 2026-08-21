@@ -66,6 +66,7 @@ function menu_ensentence(){
 
     var group_list=[
     ['无例句的单词','rare_old_words_ensentence(\'无例句的单词\',false,false,1,0,3000);',true],
+    ['1条例句的单词','rare_old_words_ensentence(\'1条例句的单词\',false,false,2,0,3000,false,1);',true],
     ['词组1000','phrase_not_in_ensentence(0,1000);',true],
     ];    
     klmenu1.push(menu_container_b(str_t,group_list,''));
@@ -717,10 +718,12 @@ function words_2_today_ensentence(){
     document.getElementById('divhtml').innerHTML=enwords_array_to_html_b(words,false)+bltextarea;
 }
 
-function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=false,max_count=2,rows_min=10,rows_max=5000,source_check=false){
+function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=false,max_count=2,rows_min=10,rows_max=5000,source_check=false,min_count=false){
     function sub_rare_old_words_ensentence_words(words_list){
         for (let aword of words_list){
-            var blkey='w_'+aword.toLowerCase(); //否则 一些 Save 之类的在例句中出现次数很少，但 save 出现次数很多，结果 Save 被列为出现次数很少的单词 - 保留注释
+            aword=aword.toLowerCase().replace(/'{2,}/g,'').replace(/^'+/,'').replace(/'+$/,''); //否则 一些 Save 之类的在例句中出现次数很少，但 save 出现次数很多，结果 Save 被列为出现次数很少的单词 - 保留注释
+            //去除斜体''和加粗''' - 保留注释
+            var blkey='w_'+aword;
             if (result_t[blkey]==undefined){
                 result_t[blkey]=[aword,0];
             }
@@ -734,6 +737,15 @@ function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=
         result_t=object2array_b(result_t);
         result_t.sort();
         result_t.sort(function (a,b){return a[1]>b[1] ? 1 : -1;});   //出现次数从少到多排列 - 保留注释
+        if (min_count!==false){
+            for (let blno=0,lent=result_t.length;blno<lent;blno++){
+                if (result_t[blno][1]>=min_count){
+                    result_t=result_t.slice(blno,);
+                    break;
+                }
+            }
+        }
+        
         var oldset=simple_words_b(true,true);
         en_word_temp_get_b();
         words_searched_arr_global=[];
@@ -750,6 +762,7 @@ function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=
             words_searched_arr_global.sort(randomsort_b);
             words_searched_arr_global=words_searched_arr_global.slice(0,rows_max);
         }
+        
         words_searched_arr_global=rare_old_words_sort_ensentence(words_searched_arr_global);
         
         var bltextarea=rare_old_words_form_ensentence(words_searched_arr_global,generate_js);
@@ -776,12 +789,14 @@ function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=
         
         document.getElementById('divhtml').innerHTML='<p>'+progress_list.join(' ')+'</p><p>'+remain_str+'</p>'+enwords_array_to_html_b(words_searched_arr_global,false)+bltextarea;
         
-        if (source_check){
-            var local_id='enwords_one_source_ensentence';
-        } else {
-            var local_id=(max_count>1?'enwords_rare_ensentence':'enwords_non_ensentence');
+        if (min_count===false){
+            if (source_check){
+                var local_id='enwords_one_source_ensentence';
+            } else {
+                var local_id=(max_count>1?'enwords_rare_ensentence':'enwords_non_ensentence');
+            }
+            local_storage_today_b(local_id,40,words_searched_arr_global.length,'/');
         }
-        local_storage_today_b(local_id,40,words_searched_arr_global.length,'/');
         
         if (show_sentence){
             show_sentence_enwc_b();

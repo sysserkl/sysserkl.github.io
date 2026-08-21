@@ -1850,7 +1850,7 @@ doorframe
 housemaid
 listlessness
 VIP
-identitiy politics
+identity politics
 self-sealing
 Christchurch
 Hobbes
@@ -1858,5 +1858,7 @@ semihard
 Ursa Minor
 Kepler
 earthrise
+antielitism
+anti-sexist
 
 `.trim().split('\n');
