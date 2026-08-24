@@ -8,350 +8,598 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Sat, 22 Aug 2026 06:15:44 +0800</lastBuildDate>
-<item><title>Keep coding when your internet drops: Offline support in the Code Editor - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/offline-support-in-the-code-editor/</link></item>
-<item><title>Making American Tennis Great Again - Law &amp; Liberty</title><link>https://lawliberty.org/making-american-tennis-great-again/</link></item>
-<item><title>The Forgotten World of Thornton W. Burgess - Law &amp; Liberty</title><link>https://lawliberty.org/the-forgotten-world-of-thornton-w-burgess/</link></item>
-<item><title>The Price of Portland’s Luxury Beliefs - Law &amp; Liberty</title><link>https://lawliberty.org/the-price-of-portlands-luxury-beliefs/</link></item>
-<item><title>The Environmental Conservative in an Ideological Age - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/the-environmental-conservative-in-an-ideological-age/</link></item>
-<item><title>To See How Well You’re Aging, Try Standing on One Leg - Everyday Health</title><link>https://www.everydayhealth.com/healthy-aging/to-see-how-well-youre-aging-try-standing-on-one-leg/</link></item>
-<item><title>Personalized Cancer Vaccines Just Got One Step Closer to Reality - Everyday Health</title><link>https://www.everydayhealth.com/cancer/personalized-cancer-vaccines-just-got-one-step-closer-to-reality/</link></item>
-<item><title>Can ‘Ferritin Face’ Reveal That You Have Anemia? - Everyday Health</title><link>https://www.everydayhealth.com/blood-disorders/can-ferritan-face-reveal-anemia/</link></item>
-<item><title>Frozen Fruit Bars Sold Nationwide Recalled for Potential Glass Contamination - Everyday Health</title><link>https://www.everydayhealth.com/diet-nutrition/fruit-popsicles-recalled-for-potential-glass-contamination/</link></item>
-<item><title>That New Taylor Swift Hit Could Raise Your Risk of a Serious Car Crash - Everyday Health</title><link>https://www.everydayhealth.com/general-health/pop-music-could-raise-risk-of-serious-car-crash/</link></item>
-<item><title>Is Your Cold Actually COVID? What to Know as the Summer Surge Begins - Everyday Health</title><link>https://www.everydayhealth.com/infectious-diseases/is-your-summer-cold-actually-covid/</link></item>
-<item><title>Taking the Stairs Could Slash Your Risk of Early Death, a New Study Says - Everyday Health</title><link>https://www.everydayhealth.com/healthy-living/taking-the-stairs-could-slash-risk-of-early-death/</link></item>
-<item><title>Could Estrogen Therapy Help Protect the Brain Against Alzheimer’s? - Everyday Health</title><link>https://www.everydayhealth.com/neurological-disorders/could-estrogen-therapy-help-protect-against-alzheimers/</link></item>
-<item><title>The 13 Best Workout Leggings We Found for Every Need After Testing Dozens - Everyday Health</title><link>https://www.everydayhealth.com/fitness-products/best-workout-leggings/</link></item>
-<item><title>These Are the Products I Use for Cleaner Air, Filtered Water, and Peace of Mind at Home - Everyday Health</title><link>https://www.everydayhealth.com/wellness/editor-favorites-healthy-home/</link></item>
-<item><title>We Tested Dozens of Shoes and These 9 Were The Best for Flat Feet - Everyday Health</title><link>https://www.everydayhealth.com/foot-health/best-shoes-for-flat-feet/</link></item>
-<item><title>8 Stainless Steel Cookware Sets That Make Healthy Cooking Easier - Everyday Health</title><link>https://www.everydayhealth.com/wellness/best-stainless-steel-cookware/</link></item>
-<item><title>Milwaukee’s Basic M18 Trimmer Checks the Boxes - Popular Mechanics</title><link>https://www.popularmechanics.com/home/lawn-garden/a73496127/milwaukee-m18-string-trimmer-review/</link></item>
-<item><title>Anker Solix C2000 Vs Bluetti Elite 300 - Popular Mechanics</title><link>https://www.popularmechanics.com/home/tools/a73455644/anker-vs-bluetti-power-station-review/</link></item>
-<item><title>Could Black Holes Help Solve Quantum Gravity? - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a73490119/oxford-physicist-could-finally-solve-quantum-gravity-mystery/</link></item>
-<item><title>The Best Lawn Dethatchers for a Healthier Lawn - Popular Mechanics</title><link>https://www.popularmechanics.com/home/lawn-garden/a35873527/best-lawn-dethatchers/</link></item>
-<item><title>The 4 Best Whole-Home Power Stations of 2026 - Popular Mechanics</title><link>https://www.popularmechanics.com/home/tools/a73495119/best-whole-home-power-stations/</link></item>
-<item><title>Spacetime “Crystallized” Into Our Universe - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a73478040/deepest-level-of-reality-time-and-space/</link></item>
-<item><title>They Handed the Soviets the Blueprint for the Atomic Bomb—and Remained At Large for 10 More Years - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a73436117/booksellers-soviet-spy-ring/</link></item>
-<item><title>After 96 Years, Archaeologists Finally Found the Missing Part of a Legendary Statue - Popular Mechanics</title><link>https://www.popularmechanics.com/science/archaeology/a73495031/archaeologists-found-part-of-ramesses-ii-statue/</link></item>
-<item><title>Unearthed Treasures - Popular Mechanics</title><link>https://www.popularmechanics.com/unearthed-treasures/</link></item>
-<item><title>A Diver Stumbled Upon the Treasure of a Lifetime—and It May Lead to a Hidden Shipwreck - Popular Mechanics</title><link>https://www.popularmechanics.com/science/archaeology/a73494988/diver-finds-hidden-coins-treasure-of-lifetime/</link></item>
-<item><title>Europe’s Drought Is Drying up Its Rivers—and Remnants of Lost Worlds Are Emerging - Popular Mechanics</title><link>https://www.popularmechanics.com/science/archaeology/a73478855/europe-river-artifacts/</link></item>
-<item><title>EcoFlow Smart Generator 4000 Review - Popular Mechanics</title><link>https://www.popularmechanics.com/home/a73484126/ecoflow-smart-generator-4000-review/</link></item>
-<item><title>The 8 Best Carpet Cleaners - Popular Mechanics</title><link>https://www.popularmechanics.com/home/g37939813/best-carpet-cleaners/</link></item>
-<item><title>The 8 Best Dehumidifiers - Popular Mechanics</title><link>https://www.popularmechanics.com/home/a35419771/best-dehumidifiers/</link></item>
-<item><title>The Best Nugget Ice Makers - Popular Mechanics</title><link>https://www.popularmechanics.com/home/a38304163/best-nugget-ice-makers/</link></item>
-<item><title>New Science Is Forcing Us to Rethink the Moment We Die - Popular Mechanics</title><link>https://www.popularmechanics.com/video/a73405058/astounding-pop-mech-show-ep-58-new-science-is-forcing-us-to-rethink-the-moment-we-die/</link></item>
-<item><title>Spacetime May Be Only Part of Reality - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a73487022/spacetime-higher-dimension-universe/</link></item>
-<item><title>A Medieval Man Was Smashed by a Giant Catapult - Popular Mechanics</title><link>https://www.popularmechanics.com/science/archaeology/a73486224/first-man-smashed-by-siege-weapon/</link></item>
-<item><title>This Bank Has a Problem: The Cheese Is Melting - Popular Mechanics</title><link>https://www.popularmechanics.com/science/environment/a73476463/climate-change-cheese/</link></item>
-<item><title>Archaeologists May Have Found a Lost Egyptian City - Popular Mechanics</title><link>https://www.popularmechanics.com/science/archaeology/a73465693/egypt-lost-city/</link></item>
-<item><title>An Engineer Says He’s Overcome Earth’s Gravity - Popular Mechanics</title><link>https://www.popularmechanics.com/space/rockets/a73405686/engineer-said-he-can-overcome-earths-gravity/</link></item>
-<item><title>A SpaceX Rocket Piece Just Crashed Into the Moon - Popular Mechanics</title><link>https://www.popularmechanics.com/space/moon-mars/a73358498/moon-debris-falcon-9/</link></item>
-<item><title>Some UAPs are Non-Human Craft, Research Suggests - Popular Mechanics</title><link>https://www.popularmechanics.com/space/a73256425/some-uap-are-non-human-craft-scientist-says/</link></item>
-<item><title>Black Holes May Give Us Most Powerful Tools - Popular Mechanics</title><link>https://www.popularmechanics.com/space/deep-space/a73286304/black-hole-as-humanitys-most-powerful-tool/</link></item>
-<item><title>Ancient Rock Art’s Secret Ingredient: Human Blood - Popular Mechanics</title><link>https://www.popularmechanics.com/science/archaeology/a73470286/rock-murals-blood/</link></item>
-<item><title>A Big Rock Was Actually a 2,000-Year-Old Shipwreck - Popular Mechanics</title><link>https://www.popularmechanics.com/science/archaeology/a73439016/2000-year-old-roman-shipwreck/</link></item>
-<item><title>A Mosaic May Reveal Rome’s Ancient Firehouse - Popular Mechanics</title><link>https://www.popularmechanics.com/science/archaeology/a73448380/ancient-firehouse-building/</link></item>
-<item><title>A Construction Crew Found a $10 Million Gold Hoard - Popular Mechanics</title><link>https://www.popularmechanics.com/science/archaeology/a73448390/mysterious-gold-basement-wall/</link></item>
-<item><title>A B-52 Accidentally Lost Two Hydrogen Bombs Over North Carolina. One Nearly Detonated. One Is Still Buried. - Popular Mechanics</title><link>https://www.popularmechanics.com/military/a73355695/b52-crash-hydrogen-bombs-goldsboro-north-carolina/</link></item>
-<item><title>Five Cambridge Grads Became Spies For the Soviets - Popular Mechanics</title><link>https://www.popularmechanics.com/military/a73465968/cambridge-five-soviet-spies/</link></item>
-<item><title>Army Finds Way to Keep Hands Warm Without Gloves - Popular Mechanics</title><link>https://www.popularmechanics.com/military/research/a73453387/army-warm-hands-without-gloves/</link></item>
-<item><title>The CIA’s Secret Heart Attack Gun - Popular Mechanics</title><link>https://www.popularmechanics.com/military/a73355710/cia-shellfish-toxin-dart-gun/</link></item>
-<item><title>The Secret Doomsday Bunker Beneath a Hotel - Popular Mechanics</title><link>https://www.popularmechanics.com/military/a73344794/greenbrier-doomsday-bunker/</link></item>
-<item><title>Consciousness Arises From Your Feelings—Not Thoughts, Scientists Say - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a73249621/feelings-consciousness-neuroscience/</link></item>
-<item><title>An Invisible Force Connects You to the World - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a73172635/electromagnetic-fields-consciousness/</link></item>
-<item><title>Your Consciousness Might Travel During NDEs - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a71786452/test-of-near-death-experiences/</link></item>
-<item><title>She Can ‘Trip’ Without Any Psychedelics - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a71782732/hallucinations-psychedelics-altered-consciousness/</link></item>
-<item><title>Where Does Your Consciousness Go When You Die? - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a71652440/dying-brain-consciousness/</link></item>
-<item><title>The Best Cheap Washing Machines - Popular Mechanics</title><link>https://www.popularmechanics.com/home/g38757143/best-cheap-washing-machines/</link></item>
-<item><title>The Best Smoke Alarms of 2026 - Popular Mechanics</title><link>https://www.popularmechanics.com/home/a37344160/best-smoke-detectors/</link></item>
-<item><title>The Best Window Air Conditioners - Popular Mechanics</title><link>https://www.popularmechanics.com/home/a1549/best-window-air-conditioners/</link></item>
-<item><title>Bissell Pet Hair Eraser vs. Shark AZ2002 Vertex - Popular Mechanics</title><link>https://www.popularmechanics.com/home/tools/a73464128/bissell-pet-hair-eraser-turbo-lift-off-vs-shark-az200z-vertex/</link></item>
-<item><title>The 9 Best String Trimmers of 2026 - Popular Mechanics</title><link>https://www.popularmechanics.com/home/lawn-garden/a145/the-best-new-string-trimmers-comparison-test/</link></item>
-<item><title>Ryobi 18-Volt One+ Expand-It String Trimmer Review - Popular Mechanics</title><link>https://www.popularmechanics.com/home/lawn-garden/a73474696/ryobi-18-volt-expand-it-string-trimmer-review/</link></item>
-<item><title>Couch Cleaning Tips That Actually Work - Popular Mechanics</title><link>https://www.popularmechanics.com/home/interior-projects/a73484170/how-to-clean-a-couch/</link></item>
-<item><title>Frigidaire FFRA051WAE Window A/C Review - Popular Mechanics</title><link>https://www.popularmechanics.com/home/tools/a73477399/frigidaire-ffra051wae-window-ac-review/</link></item>
-<item><title>The 6 Best Cell Phones for Seniors - Popular Mechanics</title><link>https://www.popularmechanics.com/technology/gadgets/g42862680/best-cell-phones-for-seniors/</link></item>
-<item><title>The 2026 Labor Day TV Deals Worth Shopping - Popular Mechanics</title><link>https://www.popularmechanics.com/technology/gadgets/a73476464/labor-day-tv-sales-2026/</link></item>
-<item><title>The 6 Best Flashlights for Everyday Use - Popular Mechanics</title><link>https://www.popularmechanics.com/technology/gadgets/g3035/best-flashlight/</link></item>
-<item><title>The Best 3D Printers for Every Kind of Maker - Popular Mechanics</title><link>https://www.popularmechanics.com/technology/gadgets/a3137/best-3d-printers/</link></item>
-<item><title>The 6 Best Replaceable-Blade Knives - Popular Mechanics</title><link>https://www.popularmechanics.com/adventure/outdoor-gear/a73424118/best-replaceable-blade-knives/</link></item>
-<item><title>The 8 Best Trail Cameras of 2026 - Popular Mechanics</title><link>https://www.popularmechanics.com/adventure/outdoor-gear/a37679766/best-trail-cameras/</link></item>
-<item><title>The 8 Best Binoculars for Stargazing and Birding - Popular Mechanics</title><link>https://www.popularmechanics.com/adventure/outdoor-gear/a29491947/best-binoculars/</link></item>
-<item><title>Popular Mechanics Explains Precognition - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a69307012/popular-mechanics-explains-precognition/</link></item>
-<item><title>A New Formula for Pi Is Here - Popular Mechanics</title><link>https://www.popularmechanics.com/science/math/a71855480/new-pi-formula-revolutionizes-mathematics/</link></item>
-<item><title>Scientists Finally Figured Out Color Perception - Popular Mechanics</title><link>https://www.popularmechanics.com/science/math/a70784732/color-theory-schrodinger/</link></item>
-<item><title>The Mystery of How Smoke Particles Move—Solved - Popular Mechanics</title><link>https://www.popularmechanics.com/science/math/a70315027/scientists-tracked-particles-floating-through-the-airand-solved-a-100-year-old-mystery/</link></item>
-<item><title>The 8 Best Portable Jump Starters - Popular Mechanics</title><link>https://www.popularmechanics.com/cars/a38293716/best-portable-jump-starters/</link></item>
-<item><title>The CX-5 Interface is High-Tech and Low-Friction - Popular Mechanics</title><link>https://www.popularmechanics.com/cars/a71936519/the-2026-mazda-cx-5-interface-is-high-tech-and-low-friction/</link></item>
-<item><title>The 9 Best Car Seat Covers - Popular Mechanics</title><link>https://www.popularmechanics.com/cars/g36186593/best-car-seat-covers/</link></item>
-<item><title>The 6 Best Car Sun Shades - Popular Mechanics</title><link>https://www.popularmechanics.com/cars/g36804652/best-car-sun-shades/</link></item>
-<item><title>Mathematicians Found a New Kind of Prime Number - Popular Mechanics</title><link>https://www.popularmechanics.com/science/math/a70393699/mathematicians-discovered-new-kind-of-prime-number/</link></item>
-<item><title>A Calculation For Pi May Help Explain the Universe - Popular Mechanics</title><link>https://www.popularmechanics.com/science/math/a69692722/pi-calculation-ramanujan/</link></item>
-<item><title>Planet Earth Is Conscious With a ‘Mind’ Shaping the Fate of All Life, Controversial Theory Suggests - Popular Mechanics</title><link>https://www.popularmechanics.com/science/environment/a73454046/gaia-hypothesis-earth-consciousness/</link></item>
-<item><title>Could the World Beneath Your Feet Be Conscious? - Popular Mechanics</title><link>https://www.popularmechanics.com/science/environment/a73438699/fungal-networks-consciousness/</link></item>
-<item><title>A ‘Monster’ El Niño Could Hit This Fall - Popular Mechanics</title><link>https://www.popularmechanics.com/science/environment/a73437044/el-nino-forecast-fall/</link></item>
-<item><title>This Machine Could Prove Bad Luck Isn’t Random - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a73423916/bad-luck-isnt-random-machine-proof/</link></item>
-<item><title>You Trick Your Eyes to See a ‘Forbidden’ World - Popular Mechanics</title><link>https://www.popularmechanics.com/science/health/a73378173/forbidden-colors-human-vision/</link></item>
-<item><title>The Best RV Generators to Power Your Road Trip - Popular Mechanics</title><link>https://www.popularmechanics.com/adventure/g60871361/best-rv-generator/</link></item>
-<item><title>The 8 Best Electronic Deadbolts - Popular Mechanics</title><link>https://www.popularmechanics.com/home/a39428012/best-electronic-deadbolts/</link></item>
-<item><title>The 8 Best Countertop Ice Makers - Popular Mechanics</title><link>https://www.popularmechanics.com/home/a37285918/best-countertop-ice-makers/</link></item>
-<item><title>Tested and Approved: The Best Outdoor Pizza Ovens - Popular Mechanics</title><link>https://www.popularmechanics.com/home/food-drink/g35744736/best-outdoor-pizza-ovens/</link></item>
-<item><title>The 9 Best Cordless Leaf Blowers of 2026 - Popular Mechanics</title><link>https://www.popularmechanics.com/home/lawn-garden/a2195/best-battery-powered-leaf-blowers/</link></item>
-<item><title>The Best Labor Day Grill Sales - Popular Mechanics</title><link>https://www.popularmechanics.com/home/food-drink/a73475252/grill-labor-day-sales-2026/</link></item>
-<item><title>200,000 Barrels Leak Radioactive Waste in Atlantic - Popular Mechanics</title><link>https://www.popularmechanics.com/science/environment/a73467447/north-atlantic-radiation-barrels/</link></item>
-<item><title>The Best DeWalt Labor Day Deals - Popular Mechanics</title><link>https://www.popularmechanics.com/home/tools/a73475251/dewalt-labor-day-sale-2026/</link></item>
-<item><title>The ‘Somerton Man’ Mystery Is Almost Over - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a73466190/somerton-man/</link></item>
-<item><title>中国准备发射嫦娥七号，前往月球南极寻找水冰 - Solidot</title><link>https://www.solidot.org/story?sid=85160</link></item>
-<item><title>微软隐藏 OneDrive Photos，但该应用并未删除 - Solidot</title><link>https://www.solidot.org/story?sid=85159</link></item>
-<item><title>微软调查部分用户在安装 Windows 11 八月安全更新后遭遇游戏崩溃的报告 - Solidot</title><link>https://www.solidot.org/story?sid=85158</link></item>
-<item><title>混合型 T 细胞在超级百岁老人血液中显著增加 - Solidot</title><link>https://www.solidot.org/story?sid=85157</link></item>
-<item><title>达斯·维达赞美 Flock 车牌跟踪系统 - Solidot</title><link>https://www.solidot.org/story?sid=85156</link></item>
-<item><title>Bilibili 进军国际市场 - Solidot</title><link>https://www.solidot.org/story?sid=85155</link></item>
-<item><title>天文学家发现银河系已知最快的恒星 - Solidot</title><link>https://www.solidot.org/story?sid=85154</link></item>
-<item><title>Thunderbird 跟随 Firefox 采用双周发布模式 - Solidot</title><link>https://www.solidot.org/story?sid=85153</link></item>
-<item><title>太阳能扩张政策与鸟类多样性下降相关 - Solidot</title><link>https://www.solidot.org/story?sid=85152</link></item>
-<item><title>U.S. Homebuyers Must Wait Until Mid-2027 for Mortgage Rate Relief - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/washington-dc-real-estate-news/fannie-mae-2027-mortgage-rate-forecast-august-2026-housing-forecast-iran-war-impact-on-mortgage-rates-in-2026-strait-of-hormuz-14827.php</link></item>
-<item><title>Miami Real Estate Venture Studio Challenges Traditional Venture Capital Model - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/miami-real-estate-news/world-property-ventures-real-estate-venture-studio-permanent-capital-structures-berkshire-hathaway-alphabet-vc-capital-formation-data-michael-gerrity--14806.php</link></item>
-<item><title>Miami a Victim of Its Own Success, Now America&amp;#39;s Second-Costliest Region - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/miami-real-estate-news/miami-cost-of-living-data-for-2026-miami-cost-of-living-index-for-2026-bureau-of-economic-analysis-regional-price-parities-for-2024-attom-2026-data-14805.php</link></item>
-<item><title>Asia&amp;#39;s Hotel Market Stages Powerful Rebound in 2026 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/hong-kong/asia-2026-hotel-investment-data-jll-hotels-hospitality-group-asia-pacific-hotel-market-report-hotel-transaction-data-for-2026-nihat-ercan-ab-capital-j-14804.php</link></item>
-<item><title>U.S. Industrial Market Regains Balance as Demand Outpaces Supply in Q2 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/dallas-real-estate-news/us-industrial-real-estate-market-data-june-2026-colliers-international-us-industrial-market-statistics-report-for-q2-2026-industrial-construction-data-14803.php</link></item>
-<item><title>Greater Miami Area Resdiential Sales Post Strongest June in Three Years - Real Estate News</title><link>https://www.worldpropertyjournal.com/north-america-residential-news/miami-june-2026-home-sales-data-condo-sales-data-for-june-2026-miami-association-of-realtors-miami-median-home-prices-miami-condo-median-prices-miami--14802.php</link></item>
-<item><title>The Next Trillion-Dollar Opportunity in Real Estate Isn&amp;#39;t Property - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/miami-real-estate-news/world-property-ventures-michael-gerrity-global-listings-real-estate-venture-capital-amazon-alphabet-bloomberg-real-estate-ai-infrastructure-companies--14785.php</link></item>
-<item><title>U.S. Mortgage Applications Uptick One Percent Mid-June - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/washington-dc-real-estate-news/june-2026-mortgage-applications-data-mortgage-bankers-association-weekly-mortgage-applications-survey-current-mortgage-rates-fomc-mike-fratantoni-mba--14784.php</link></item>
-<item><title>Cheap-Money Homeownership in America is Over, Time to Face a New Cost Reality - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/los-angeles-real-estate-news/2026-morgan-stanley-housing-report-home-affordability-issues-in-2026-median-home-prices-low-cost-homeownership-data-14783.php</link></item>
-<item><title>Global AI Demand Drives Data Center Crunch, Construction Boom - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/atlanta-real-estate-news/cbre-2026-global-data-center-report-pat-lynch-data-center-vacancy-rates-data-center-construction-data-new-data-centers-under-construction-gordon-dolve-14782.php</link></item>
-<item><title>California Tech Wealth, Global Capital Fuel Miami&amp;#39;s Luxury Housing Boom in 2026 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/miami-beach/may-2026-miami-housing-data-may-2026-miami-home-sales-data-miami-condo-sales-data-in-may-2026-miami-luxury-home-sales-data-for-may-2026-14781.php</link></item>
-<item><title>The Fed Holds Rates Steady in Warsh Mid-2026 Debut - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/washington-dc-real-estate-news/federal-reserve-june-2026-interest-rate-data-kevin-warsh-june-2026-fed-fund-rate-federal-open-market-committee-june-2026-vote-national-association-of--14780.php</link></item>
-<item><title>AI, Data Centers and Private Credit Spark U.S. Real Estate Investing in 2026 - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/united-states/dallas-real-estate-news/pwc-real-estate-and-real-assets-us-deals-2026-midyear-outlook-report-tim-bodner-real-estate-investing-trends-in-2026-pwc-2026-real-estate-data-14779.php</link></item>
-<item><title>Asia-Pacific Luxury Hotel Investment Surges - Real Estate News</title><link>https://www.worldpropertyjournal.com/real-estate-news/hong-kong/jll-asia-pacific-hotel-investment-report-luxury-asia-pacific-hotel-investment-data-in-2025-new-luxury-hotels-in-asia-xander-nijnens-marina-bracciani-14777.php</link></item>
-<item><title>India seeks role in France’s sixth-generation fighter program - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/08/21/india-seeks-role-in-frances-sixth-generation-fighter-program/</link></item>
-<item><title>US Army to end experimental drone battalion in Europe - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/08/21/us-army-to-end-experimental-drone-battalion-in-europe/</link></item>
-<item><title>The US Navy has battled operational tempo ordeals for years. The Iran war exposed the flaws. - Defense News</title><link>https://www.defensenews.com/news/your-navy/2026/08/20/the-us-navy-has-battled-operational-tempo-ordeals-for-years-the-iran-war-exposed-the-flaws/</link></item>
-<item><title>US Navy leads multinational effort for next-gen SeaSparrow missile - Defense News</title><link>https://www.defensenews.com/air-warfare/2026/08/20/us-navy-leads-multinational-effort-for-next-gen-seasparrow-missile/</link></item>
-<item><title>Ukraine braces for combined salvos of up to 200 missiles as overnight attack kills 15 in Kyiv - Defense News</title><link>https://www.defensenews.com/global/europe/2026/08/20/ukraine-braces-for-combined-salvos-of-up-to-200-missiles-as-overnight-attack-kills-15-in-kyiv/</link></item>
-<item><title>US Air Force flight to Antarctica turns back after Russian hazardous space activity warning - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/08/20/us-air-force-flight-to-antarctica-turns-back-after-russian-hazardous-space-activity-warning/</link></item>
-<item><title>US approves possible $4.5 billion sale of KC-46As, equipment to Qatar - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2026/08/20/us-approves-possible-45-billion-sale-of-kc-46as-equipment-to-qatar/</link></item>
-<item><title>Switzerland seeks additional $1.2 billion for air defense in 2026 budget - Defense News</title><link>https://www.defensenews.com/global/europe/2026/08/20/switzerland-seeks-additional-12-billion-for-air-defense-in-2026-budget/</link></item>
-<item><title>Art Problems: How Do I Get the Guggenheim Fellowship? - Hyperallergic</title><link>https://hyperallergic.com/art-problems-how-do-i-get-the-guggenheim-fellowship/</link></item>
-<item><title>At This Year&amp;#39;s Rencontres d&amp;#39;Arles, Photography Rethinks Its Centers - Hyperallergic</title><link>https://hyperallergic.com/at-this-years-rencontres-darles-photography-rethinks-its-centers/</link></item>
-<item><title>Miles Greenberg Rehearses Myths for the Future - Hyperallergic</title><link>https://hyperallergic.com/miles-greenberg-rehearses-myths-for-the-future/</link></item>
-<item><title>Maya Lin to Build Otherworldly “Floating Landscape” at UT Austin - Hyperallergic</title><link>https://hyperallergic.com/maya-lin-to-build-otherworldly-floating-landscape-at-ut-austin/</link></item>
-<item><title>Artists Commit to the Bit at This Year’s Vulva Gala - Hyperallergic</title><link>https://hyperallergic.com/artists-commit-to-the-bit-at-this-years-vulva-gala/</link></item>
-<item><title>UT Austin’s Harry Ransom Center Provides Funded Fellowships in the Arts and Humanities - Hyperallergic</title><link>https://hyperallergic.com/ut-austins-harry-ransom-center-provides-funded-fellowships-in-the-arts-and-humanities/</link></item>
-<item><title>Pavilions We Loved in Venice - Hyperallergic</title><link>https://hyperallergic.com/pavilions-we-loved-in-venice/</link></item>
-<item><title>National Pavilions We Loved at the Venice Biennale - Hyperallergic</title><link>https://hyperallergic.com/national-pavilions-we-loved-at-the-venice-biennale/</link></item>
-<item><title>Six Epic Artworks Inspired by “The Odyssey” - Hyperallergic</title><link>https://hyperallergic.com/six-epic-artworks-inspired-by-the-odyssey/</link></item>
-<item><title>Beer With a Painter: Rina Banerjee - Hyperallergic</title><link>https://hyperallergic.com/beer-with-a-painter-rina-banerjee/</link></item>
-<item><title>Heatwaves in France Damage Beloved Flowers at Monet’s Gardens - Hyperallergic</title><link>https://hyperallergic.com/heatwaves-in-france-damage-beloved-flowers-at-monets-gardens/</link></item>
-<item><title>Wolf Kahn Foundation Opens New Space in NYC - Hyperallergic</title><link>https://hyperallergic.com/wolf-kahn-foundation-opens-new-space-in-nyc/</link></item>
-<item><title>“Radiant Geometries&amp;quot; Opens at Rice University&amp;#39;s Moody Center for the Arts - Hyperallergic</title><link>https://hyperallergic.com/radiant-geometries-opens-at-rice-universitys-moody-center-for-the-arts/</link></item>
-<item><title>A Progressive Win for Artists in Florida - Hyperallergic</title><link>https://hyperallergic.com/a-progressive-win-for-artists-in-florida/</link></item>
-<item><title>China again blocks the Wikimedia Foundation as a permanent observer to the World Intellectual Property Organization (WIPO) - Wikimedia Foundation</title><link>https://wikimediafoundation.org/news/2026/07/08/wikimedia-foundation-denied-wipo-permanent-observer-status/</link></item>
-<item><title>Steep rise in electric vehicle sales - FlowingData</title><link>https://flowingdata.com/2026/08/21/steep-rise-in-electric-vehicle-sales/</link></item>
-<item><title>How the U.S. national debt got to $40 trillion - FlowingData</title><link>https://flowingdata.com/2026/08/20/how-the-u-s-national-debt-got-to-40-trillion/</link></item>
-<item><title>Seeing data from different perspectives - FlowingData</title><link>https://flowingdata.com/2026/08/20/process-402-perspective/</link></item>
-<item><title>David Shaw: Health for a Living Planet - World Sensorium</title><link>https://worldsensorium.com/david-shaw-health-for-a-living-planet/</link></item>
-<item><title>Vertical Farming: Reimagining Agriculture in an Urban Age - World Sensorium</title><link>https://worldsensorium.com/vertical-farming-reimagining-agriculture-in-an-urban-age/</link></item>
-<item><title>Using Evolution to Better Your Neighborhood - World Sensorium</title><link>https://worldsensorium.com/using-evolution-to-better-your-neighborhood/</link></item>
-<item><title>Bioenergetic Landscapes: Rethinking Our Relationship with Trees - World Sensorium</title><link>https://worldsensorium.com/bioenergetic-landscapes-rethinking-our-relationship-with-trees/</link></item>
-<item><title>What a Village Knows That a City’s Forgotten - World Sensorium</title><link>https://worldsensorium.com/what-a-village-knows-that-a-citys-forgotten/</link></item>
-<item><title>The New Extractivism - World Sensorium</title><link>https://worldsensorium.com/the-new-extractivism/</link></item>
-<item><title>Cold Veggie Peanut Noodles - World Sensorium</title><link>https://worldsensorium.com/cold-veggie-peanut-noodles/</link></item>
-<item><title>Sniffing around with AI - World Sensorium</title><link>https://worldsensorium.com/sniffing-around-with-ai/</link></item>
-<item><title>Artificial Olfaction or Olfactory Intelligence? - World Sensorium</title><link>https://worldsensorium.com/artificial-olfaction-or-olfactory-intelligence/</link></item>
-<item><title>AI and Scent: Creating an Ethics of Synthetic Smell - World Sensorium</title><link>https://worldsensorium.com/ai-and-scent-creating-an-ethics-of-synthetic-smell/</link></item>
-<item><title>Multispecies Meanings: Merle Bergers on Plant Communication, Natural Perfumery, and Ecological Attention - World Sensorium</title><link>https://worldsensorium.com/multispecies-meanings-merle-bergers-on-plant-communication-natural-perfumery-and-ecological-attention/</link></item>
-<item><title>How to Meet an Alien - World Sensorium</title><link>https://worldsensorium.com/how-to-meet-an-alien/</link></item>
-<item><title>The Language of Living Air - World Sensorium</title><link>https://worldsensorium.com/the-language-of-living-air/</link></item>
-<item><title>Uncertainty Salad - World Sensorium</title><link>https://worldsensorium.com/uncertainty-salad/</link></item>
-<item><title>Nintendo Wipes Out 400+ Switch Emulator Repos in Single-Day GitHub Sweep - TorrentFreak</title><link>https://torrentfreak.com/nintendo-wipes-out-400-switch-emulator-repos-in-single-day-github-sweep/</link></item>
-<item><title>‘Filmmaker’ Who Sued PTP, BTN, and Four Other Private Torrent Trackers May Be an Impostor - TorrentFreak</title><link>https://torrentfreak.com/filmmaker-who-sued-ptp-btn-and-four-other-private-torrent-trackers-may-be-an-impostor/</link></item>
-<item><title>How to save money on a trip to Europe - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/local-tips-to-save-money-on-european-trip</link></item>
-<item><title>8 ways to pack light for a long trip - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/how-to-pack-light-for-a-long-trip</link></item>
-<item><title>Best places to visit in Europe - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-places-to-visit-europe</link></item>
-<item><title>How to commit to a trip - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/how-to-commit-to-a-trip</link></item>
-<item><title>Ultimate weekend in Porto - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/perfect-weekend-in-porto</link></item>
-<item><title>Stay at a European university this summer - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/university-sleepover-europe-summer</link></item>
-<item><title>Walk the length of the Manhattan - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/local-strolls-manhattan-from-top-to-bottom</link></item>
-<item><title>Art in Florence: The Must-See Masterpieces - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/florences-must-see-masterpieces</link></item>
-<item><title>The 11 best places to visit in Ontario - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-places-to-visit-in-ontario</link></item>
-<item><title>How to do London on a budget - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/london-on-a-budget</link></item>
-<item><title>The 13 best places to visit in Europe in winter - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-winter-destinations-europe</link></item>
-<item><title>11 things to do in Bar Harbor, Maine, and the best way to do them - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-bar-harbor</link></item>
-<item><title>15 of the most beautiful cemeteries to visit around the world - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-cemeteries-in-the-world</link></item>
-<item><title>8 best amusement parks in the USA - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-amusement-parks-in-the-usa</link></item>
-<item><title>Türkiye on a budget - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/turkey-budget-travel</link></item>
-<item><title>The 13 best things to do in Nagoya, Japan - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-nagoya</link></item>
-<item><title>The 10 best places to visit in Sicily - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-places-to-visit-in-sicily</link></item>
-<item><title>12 things to know before traveling to Bangkok - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/things-to-know-before-traveling-to-bangkok</link></item>
-<item><title>18 things to do in Sri Lanka and the best way to do them - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-sri-lanka</link></item>
-<item><title>Best places to see fall colors in the USA - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-fall-colors-us</link></item>
-<item><title>Everything you need to know about car camping - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/guide-to-car-camping</link></item>
-<item><title>Is This the Best Place to Dive in North America? - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/diving-in-the-bermuda-triangle</link></item>
-<item><title>The best times to visit Bermuda - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-time-to-visit-bermuda</link></item>
-<item><title>11 best places to visit in Portugal - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-places-to-visit-in-portugal</link></item>
-<item><title>Find the best airfares with this guide to booking budget flights - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/how-to-find-cheap-flights</link></item>
-<item><title>Guide to Lille, France - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/weekend-in-lille</link></item>
-<item><title>12 of the top things to do in Munich - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-munich</link></item>
-<item><title>12 of the prettiest towns and villages in Spain - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/beautiful-spanish-towns-to-visit</link></item>
-<item><title>13 of the best things to do in Stockholm - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-stockholm</link></item>
-<item><title>A Gaudí-inspired masterpiece reopens to the public outside Barcelona - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/masia-freixa-opens-public-terrassa</link></item>
-<item><title>7 of the best hikes in Costa Rica - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-hikes-in-costa-rica</link></item>
-<item><title>The best hotels for seeing fall foliage - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/fall-foliage-hotels</link></item>
-<item><title>Montenegro vs Albania: how to choose between two Balkan beachfront countries - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/montenegro-vs-albania</link></item>
-<item><title>8 of the best places to drink coffee in Costa Rica - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-coffee-tours-in-costa-rica</link></item>
-<item><title>Best beaches in India: where they are and what you can expect - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-beaches-in-india</link></item>
-<item><title>What to eat and drink in Costa Rica - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/what-to-eat-and-drink-in-costa-rica</link></item>
-<item><title>Where to drink pulque in Mexico City - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-pulque-in-mexico-city</link></item>
-<item><title>A guide to Lombok, Indonesia - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/guide-to-lombok-indonesia</link></item>
-<item><title>Sydney to Perth by train: What to expect on one of the world’s longest train trips - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/what-to-expect-on-the-indian-pacific-sydney-to-perth</link></item>
-<item><title>9 incredible road trips that showcase the beauty of India - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-road-trips-in-india</link></item>
-<item><title>The 10 best places to visit in Japan - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-places-to-visit-in-japan</link></item>
-<item><title>A guide to accessible travel in Costa Rica - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/accessible-travel-costa-rica</link></item>
-<item><title>10 beautiful destinations to see fall foliage around the world - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-places-world-fall-colors</link></item>
-<item><title>14 of the best things to do in Palermo, Sicily - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-palermo-sicily</link></item>
-<item><title>15 things to know before visiting Hawaiʻi - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/things-to-know-traveling-to-hawaii</link></item>
-<item><title>Wander Historic Red Hook, Brooklyn&amp;#39;s Best-Kept Secret - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/walking-tour-red-hook-brooklyn</link></item>
-<item><title>Costa Rica&amp;#39;s Best Surf Spots - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-surf-spots-in-costa-rica</link></item>
-<item><title>Where to see wildlife in Costa Rica - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-wildlife-experiences-costa-rica</link></item>
-<item><title>4 Classic Itineraries for Costa Rica - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/best-costa-rica-itineraries</link></item>
-<item><title>15 of the best things to do in Crete - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-crete</link></item>
-<item><title>What you need to know about the next solar eclipse - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/things-to-know-solar-eclipse</link></item>
-<item><title>11 small US airports we love - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/tiny-airports-usa</link></item>
-<item><title>A Guide to Volcán Arenal - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/first-time-guide-to-arenal</link></item>
-<item><title>5 Things to do in Mykonos, Greece, and the Best Ways to do Them - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-mykonos</link></item>
-<item><title>18 things to know before visiting Portugal - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/things-to-know-before-traveling-to-portugal</link></item>
-<item><title>20 things to do in Helsinki and the best way to do them - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-helsinki</link></item>
-<item><title>8 things to do in Hawaiʻi and the best way to do them - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/top-things-to-do-in-hawaii</link></item>
-<item><title>10 tips for seeing Melbourne on a budget - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/melbourne-on-a-budget</link></item>
-<item><title>12 picturesque honeymoon destinations (and when to visit them) - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/honeymoon-destinations-when-to-visit</link></item>
-<item><title>4 fabulous road trips from Sydney to Melbourne, Australia - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/road-trips-sydney-melbourne-australia</link></item>
-<item><title>A guide to Coney Island - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/coney-island-new-york</link></item>
-<item><title>A walking tour of Patan, Nepal&amp;#39;s city of history and heritage - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/patan-nepal-walking-tour-history-culture</link></item>
-<item><title>Checking in: New England escapism at Hidden Pond - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/checking-in-hidden-pond</link></item>
-<item><title>When is the best time to visit New Orleans? - Lonely Planet</title><link>https://www.lonelyplanet.com/articles/when-to-visit-new-orleans</link></item>
-<item><title>American Who Wiped His Phone With &amp;#39;Duress&amp;#39; Password During Border Search Gets Felony Charges - Slashdot</title><link>https://yro.slashdot.org/story/26/08/21/202201/american-who-wiped-his-phone-with-duress-password-during-border-search-gets-felony-charges</link></item>
-<item><title>his GrapheneOS-powered Pixel - Slashdot</title><link>https://yro.slashdot.org/story/26/07/28/1652243/grapheneos-defends-data-wiping-function-that-blocked-us-border-search</link></item>
-<item><title>AI Boosted Homework Scores, Then Exam Scores Dropped - Slashdot</title><link>https://news.slashdot.org/story/26/08/21/1951227/ai-boosted-homework-scores-then-exam-scores-dropped</link></item>
-<item><title>Man Dressed As Darth Vader Defends Flock Cameras to San Diego City Council - Slashdot</title><link>https://yro.slashdot.org/story/26/08/21/1840254/man-dressed-as-darth-vader-defends-flock-cameras-to-san-diego-city-council</link></item>
-<item><title>Micron Unveils $10 Billion AI Memory Research Lab In Boise - Slashdot</title><link>https://hardware.slashdot.org/story/26/08/21/1752224/micron-unveils-10-billion-ai-memory-research-lab-in-boise</link></item>
-<item><title>Linus Torvalds Endures A Debug Session From Hell, &amp;#39;Enormously Helped&amp;#39; By AI - Slashdot</title><link>https://it.slashdot.org/story/26/08/21/1742239/linus-torvalds-endures-a-debug-session-from-hell-enormously-helped-by-ai</link></item>
-<item><title>Walmart To Finally Start Accepting Apple Pay and Google Pay - Slashdot</title><link>https://news.slashdot.org/story/26/08/21/1525227/walmart-to-finally-start-accepting-apple-pay-and-google-pay</link></item>
-<item><title>Google Gives Publishers a &amp;#39;Preferred Sources&amp;#39; Button to Fight AI-Driven Traffic Losses - Slashdot</title><link>https://news.slashdot.org/story/26/08/21/0113259/google-gives-publishers-a-preferred-sources-button-to-fight-ai-driven-traffic-losses</link></item>
-<item><title>declining referral traffic - Slashdot</title><link>https://news.slashdot.org/story/26/07/31/1639202/publishers-are-losing-google-traffic-as-ai-answers-replace-links</link></item>
-<item><title>Microsoft Gives Task Manager Another Task: Watching AI Workloads - Slashdot</title><link>https://tech.slashdot.org/story/26/08/21/0136250/microsoft-gives-task-manager-another-task-watching-ai-workloads</link></item>
-<item><title>China Is About to Launch Its Most Ambitious Moon Mission Yet - Slashdot</title><link>https://science.slashdot.org/story/26/08/21/0121220/china-is-about-to-launch-its-most-ambitious-moon-mission-yet</link></item>
-<item><title>Are You Sure You Want a Car With a Giant Touch Screen? - Slashdot</title><link>https://tech.slashdot.org/story/26/08/20/2030251/are-you-sure-you-want-a-car-with-a-giant-touch-screen</link></item>
-<item><title>China&amp;#39;s YouTube Rival Bilibili Is Going Global - Slashdot</title><link>https://news.slashdot.org/story/26/08/20/208238/chinas-youtube-rival-bilibili-is-going-global</link></item>
-<item><title>Watching TikTok Videos and Instagram Reels Deactivates the Brain&amp;#39;s Cognitive Control Network - Slashdot</title><link>https://tech.slashdot.org/story/26/08/20/1928242/watching-tiktok-videos-and-instagram-reels-deactivates-the-brains-cognitive-control-network</link></item>
-<item><title>Ukrainian Publishers Call For Support After Russian Attacks Destroy 10 Million Books - Slashdot</title><link>https://news.slashdot.org/story/26/08/20/201221/ukrainian-publishers-call-for-support-after-russian-attacks-destroy-10-million-books</link></item>
-<item><title>Voters Aren&amp;#39;t Waiting For November to Try Ousting Officials Over Data Centers - Slashdot</title><link>https://politics.slashdot.org/story/26/08/20/1951246/voters-arent-waiting-for-november-to-try-ousting-officials-over-data-centers</link></item>
-<item><title>Does Using AI to Edit an Op-Ed on Students&amp;#39; Math Skills Undermine the Argument? - Slashdot</title><link>https://news.slashdot.org/story/26/08/20/1729258/does-using-ai-to-edit-an-op-ed-on-students-math-skills-undermine-the-argument</link></item>
-<item><title>FCC Abolishes Gigabit Speed Goal, Suggesting It Is Unfair To Slower Technologies - Slashdot</title><link>https://mobile.slashdot.org/story/26/08/19/2141221/fcc-abolishes-gigabit-speed-goal-suggesting-it-is-unfair-to-slower-technologies?sbsrc=md</link></item>
-<item><title>San Francisco Bay Area dethroned as largest tech talent market - Slashdot</title><link>https://slashdot.org/submission/17350102/san-francisco-bay-area-dethroned-as-largest-tech-talent-market</link></item>
-<item><title>Chinese Property Developer Evergrande&amp;#39;s Founder Sentenced to Life in Prison - Slashdot</title><link>https://slashdot.org/submission/17350096/chinese-property-developer-evergrandes-founder-sentenced-to-life-in-prison</link></item>
-<item><title>SpaceX&amp;#39;s orbital data centers would create a new category of e-waste - Slashdot</title><link>https://slashdot.org/submission/17350090/spacexs-orbital-data-centers-would-create-a-new-category-of-e-waste</link></item>
-<item><title>US Moves Medical Marijuana Off Schedule I - Slashdot</title><link>https://slashdot.org/submission/17350078/us-moves-medical-marijuana-off-schedule-i</link></item>
-<item><title>American Airlines Changed Passengers&amp;#39; Flights w/o Asking and No Human Oversight - Slashdot</title><link>https://slashdot.org/submission/17350050/american-airlines-changed-passengers-flights-wo-asking-and-no-human-oversight</link></item>
-<item><title>The fog of hunger - Aeon</title><link>https://aeon.co/essays/a-hungry-woman-is-easier-to-dismiss-than-a-well-fed-woman</link></item>
-<item><title>A vocabulary for the future: touch - Aeon</title><link>https://aeon.co/videos/repulsion-at-the-core-of-attraction-on-the-paradox-of-touch</link></item>
-<item><title>Dolphins and other lovers - Aeon</title><link>https://aeon.co/essays/why-the-andoque-of-the-amazon-fear-the-seductive-dolphin</link></item>
-<item><title>How to Containerize a 15-Year-Old Legacy Linux Application Without Downtime - OSTechNix</title><link>https://ostechnix.com/containerize-legacy-linux-application/</link></item>
-<item><title>How to Install OpenMetadata on Ubuntu 26.04 LTS with Docker Compose: Complete Step-by-Step Guide - OSTechNix</title><link>https://ostechnix.com/install-openmetadata-ubuntu-docker-compose/</link></item>
-<item><title>Do You Really Need Antivirus on Linux? Here’s What New Users Should Know - OSTechNix</title><link>https://ostechnix.com/do-you-need-antivirus-on-linux/</link></item>
-<item><title>Linux Kernel 7.2 RC6 Released: The Largest RC6 in Recent Years - OSTechNix</title><link>https://ostechnix.com/linux-kernel-7-2-rc6-released/</link></item>
-<item><title>Build a Local AI Agent on Debian using Ollama, Python, and SearXNG - OSTechNix</title><link>https://ostechnix.com/build-local-ai-agent-linux-debian-ollama/</link></item>
-<item><title>Do Not Sell or Share My Personal Information - The Pirate Bay</title><link>https://thepiratebay.fun/recent</link></item>
-<item><title>Latest articles - Make Tech Easier</title><link>https://maketecheasier.com/latest-articles/</link></item>
-<item><title>Editorial Policy - Make Tech Easier</title><link>https://maketecheasier.com/editorial-policy/</link></item>
-<item><title>Corrections - Make Tech Easier</title><link>https://maketecheasier.com/corrections/</link></item>
-<item><title>An Inflatable Pool Party by Craig &amp; Karl Fills a Dubai Atrium with Summer Fun - Colossal</title><link>https://www.thisiscolossal.com/2026/08/craig-and-karl-under-the-sun-dubai-installation/</link></item>
-<item><title>Spark Inspiration and Creativity with a Milwaukee Art Escape - Colossal</title><link>https://www.thisiscolossal.com/2026/08/milwaukee-art-escape/</link></item>
-<item><title>On Vintage Boards, Lou Benesch Conjures the Fantastic World of The Magician - Colossal</title><link>https://www.thisiscolossal.com/2026/08/lou-benesch-the-magicians-room-antique-wood-works/</link></item>
-<item><title>‘Stories in the Seams’ Showcases the Enduring Legacy of Black Quilts Across Centuries - Colossal</title><link>https://www.thisiscolossal.com/2026/08/stories-in-the-seams-quilts-sharbreon-plummer-book/</link></item>
-<item><title>Sift Through Grace Baldwin’s Giant Junk Drawer Filled with Nostalgia - Colossal</title><link>https://www.thisiscolossal.com/2026/08/grace-baldwin-giant-junk-drawer-sculpture/</link></item>
-<item><title>Damien Hoar de Galvan Puzzles Scraps of Reclaimed Wood for a Daily Sculpture Project - Colossal</title><link>https://www.thisiscolossal.com/2026/08/damien-hoar-de-galvan-wood-sculptures/</link></item>
-<item><title>Four Shortlisted Artists Stand to Win the Winston Taylor Photo Portrait Prize 2026 - Colossal</title><link>https://www.thisiscolossal.com/2026/08/winston-taylor-photo-portrait-prize-photography/</link></item>
-<item><title>A Rare Black Panther Shadows His Leopard Mate in Incredible Shot by Photographer Mithun H - Colossal</title><link>https://www.thisiscolossal.com/2020/07/mithun-h-black-panther/</link></item>
-<item><title>A Towering Iceberg and Its Shadow Split the World into Quadrants - Colossal</title><link>https://www.thisiscolossal.com/2016/10/iceberg-quadrants-david-burdeny/</link></item>
-<item><title>Anila Quayyum Agha’s ‘Intersections’ Illuminates Rice Gallery - Colossal</title><link>https://www.thisiscolossal.com/2015/10/intersections-rice-gallery/</link></item>
-<item><title>Artist Vincent Bal Turns the Shadows of Everyday Objects into Ingenious Illustrations - Colossal</title><link>https://www.thisiscolossal.com/2016/11/vincent-bal-shadow-doodles/</link></item>
-<item><title>Dark Emotions Evoke Growth in Alejandro Aguliar Canela’s Graphite Drawings - Colossal</title><link>https://www.thisiscolossal.com/2026/08/alejandro-aguliar-canela-graphite-drawings/</link></item>
-<item><title>Glowing Paintings by Francesco Pirazzi Meditate on the Enigmas of Absence - Colossal</title><link>https://www.thisiscolossal.com/2026/08/francesco-pirazzi-paintings-landscapes-architecture-trees-mystery/</link></item>
-<item><title>Julie Green’s ‘The Last Supper’ Memorializes Hundreds of People’s Final Meals While on Death Row - Colossal</title><link>https://www.thisiscolossal.com/2026/08/julie-green-last-supper-ceramic-plates-final-meals/</link></item>
-<item><title>Milk Cartons and Bottle Gourds Form Sipho Mabona’s Tribute to His Late Father - Colossal</title><link>https://www.thisiscolossal.com/2026/08/sipho-mabona-calabasha-sculpture-series/</link></item>
-<item><title>In Jewel-Like Paintings, Wiley Wallace Conjures Enchantment in the Desert - Colossal</title><link>https://www.thisiscolossal.com/2026/08/wiley-wallace-night-blooms-acrylic-paintings-desert-crystals/</link></item>
-<item><title>Clay Transforms into Vibrant and Funky ‘Habibti’ Sculptures by Maryam Yousif - Colossal</title><link>https://www.thisiscolossal.com/2026/08/maryam-yousif-ceramic-sculptures/</link></item>
-<item><title>Sly Foxes Emerge from Boxes and Under Bridges in Murals by Annatomix - Colossal</title><link>https://www.thisiscolossal.com/2026/08/annatomix-murals-foxes-animals/</link></item>
-<item><title>A New Book Celebrates More Than 250 Trailblazing Women Photographers Across 200 Years - Colossal</title><link>https://www.thisiscolossal.com/2026/08/great-women-photographers/</link></item>
-<item><title>‘Turn the Volume Up!’ Highlights the History of Speaking Out for Change in America - Colossal</title><link>https://www.thisiscolossal.com/2026/08/turn-the-volume-up-nasher-museum-protest-art/</link></item>
-<item><title>The Ocean Photographer of the Year Finalists Highlight the Sorrowful and Sublime - Colossal</title><link>https://www.thisiscolossal.com/2026/08/ocean-photographer-of-the-year-2026-photograph-finalists/</link></item>
-<item><title>Brussels’ Grand-Place Is Carpeted with 750,000 Fresh Dahlias in a Tribute to Hokusai - Colossal</title><link>https://www.thisiscolossal.com/2026/08/brussels-grand-place-flower-carpet-dahlias-hokusai/</link></item>
-<item><title>American muscle from the year 2049 - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/21/american-muscle-from-the-year-2049/</link></item>
-<item><title>That’s some flippin’ good parts use – and I’m not squiddin’! - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/20/thats-some-flippin-good-parts-use-and-im-not-squiddin/</link></item>
-<item><title>BigBrickStan - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/bigbrickstan/</link></item>
-<item><title>Move over Speed Champions, this Ford Pinto is on fire! (metaphorically) - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/20/move-over-speed-champions-this-ford-pinto-is-on-fire-metaphorically/</link></item>
-<item><title>Vancouver Brick Customs - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/vancouver-brick-customs/</link></item>
-<item><title>Bustin’ Force Ghosts? The Empire has a Trooper for that - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/19/bustin-force-ghosts-the-empire-has-a-trooper-for-that/</link></item>
-<item><title>Click to see Jack’s final Trooper variant… - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/19/bustin-force-ghosts-the-empire-has-a-trooper-for-that/#more-512162</link></item>
-<item><title>Gear up for more LEGO mecha from the Lancer RPG - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/19/gear-up-for-more-lego-mecha-from-the-lancer-rpg/</link></item>
-<item><title>See the rest of Dane’s LEGO Lancer mechs after the fold… - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/19/gear-up-for-more-lego-mecha-from-the-lancer-rpg/#more-512182</link></item>
-<item><title>LEGO Icons 11385 Star Trek USS Enterprise NCC-1701 Bridge: trials and tribble-ations aboard the Enterprise[Review] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/18/lego-icons-11385-star-trek-uss-enterprise-ncc-1701-bridge-trials-and-tribble-ations-aboard-the-enterprisereview/</link></item>
-<item><title>Click here to be beamed aboard our full review of the bridge! - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/18/lego-icons-11385-star-trek-uss-enterprise-ncc-1701-bridge-trials-and-tribble-ations-aboard-the-enterprisereview/#more-512000</link></item>
-<item><title>Star Trek the Original Series - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/star-trek-the-original-series/</link></item>
-<item><title>The Summer Joust 2026 winners have been crowned! (And there was much rejoicing) [Feature] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/17/the-summer-joust-2026-winners-have-been-crowned-and-there-was-much-rejoicing-feature/</link></item>
-<item><title>Like a moth to the flame, we’re drawn to this insane LEGO creature - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/17/like-a-moth-to-the-flame-were-drawn-to-this-insane-lego-creature/</link></item>
-<item><title>Brave the climb with this LEGO koi mid-transformation - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/16/brave-the-climb-with-this-lego-koi-mid-transformation/</link></item>
-<item><title>LEGO frogs have never looked so... Good? - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/15/lego-frogs-have-never-looked-so-good/</link></item>
-<item><title>From football fields to a re-animated relic - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/15/from-football-fields-to-a-re-animated-relic/</link></item>
-<item><title>Re-visiting a ronin masterpiece – this time in red! - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/14/re-visiting-a-ronin-masterpiece-this-time-in-red/</link></item>
-<item><title>a tableau of a wandering ronin - The Brothers Brick</title><link>https://www.brothers-brick.com/2024/07/03/a-masterful-build-of-a-masterless-samurai/</link></item>
-<item><title>gain entry into the Masterpiece Gallery - The Brothers Brick</title><link>https://www.brothers-brick.com/2025/09/27/meet-the-lego-builders-behind-the-2025-masterpiece-gallery-exhibition/#more-459430</link></item>
-<item><title>LEGO Collectible Minifigures 71053 Shrek Series: Smash (Mouth) hit? [Review] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/08/11/lego-collectible-minifigures-71053-shrek-series-smash-mouth-hit-review/</link></item>
-<item><title>LEGO Super Mario 72051 Donkey Kong Arcade: Jump Up, Super Star [Review] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/07/24/lego-super-mario-72051-donkey-kong-arcade-jump-up-super-star-review/</link></item>
-<item><title>Built to Be Noticed: 900-Horsepower ’41 Willys Coupe - Street Muscle</title><link>https://www.streetmusclemag.com/features/car-features/built-to-be-noticed-900-horsepower-41-willys-coupe/</link></item>
-<item><title>The Earliest 1970 Chevrolet Chevelle LS6 Is Still Up For Grabs At No Sale At Auction - Street Muscle</title><link>https://www.streetmusclemag.com/features/the-earliest-1970-chevrolet-chevelle-ls6-is-still-up-for-grabs/</link></item>
-<item><title>1957 Chevy Bel Air: Blacktop Blistering Bad Boy - Street Muscle</title><link>https://www.streetmusclemag.com/features/1957-chevy-bel-air-blacktop-blistering-bad-boy/</link></item>
-<item><title>Dakota Digital New Products Debut At Goodguys Columbus - Street Muscle</title><link>https://www.streetmusclemag.com/news/dakota-digital-new-products-debut-at-goodguys-columbus/</link></item>
-<item><title>California Man Seeks Corvette Guinness World Record For Long Ownership - Street Muscle</title><link>https://www.streetmusclemag.com/features/california-man-seeks-corvette-guinness-world-record-for-long-ownership/</link></item>
-<item><title>Second-Gen Suspension Boost: Trans Am Gets BMR Watt’s Link - Street Muscle</title><link>https://www.streetmusclemag.com/tech-stories/second-gen-suspension-boost-trans-am-gets-bmr-watts-link/</link></item>
-<item><title>Killer Mike’s Buick Grind National Receives A TMI Interior Package - Street Muscle</title><link>https://www.streetmusclemag.com/news/killer-mikes-buick-grind-national-receives-a-tmi-interior-package/</link></item>
-<item><title>Economy MUSCLEPAK Rearend: Bolt-In 9-Inch Strength - Street Muscle</title><link>https://www.streetmusclemag.com/tech-stories/economy-musclepak-rearend-bolt-in-9-inch-strength/</link></item>
-<item><title>The Barrett-Jackson 2026 Las Vegas Auction Select Preview Is Live - Street Muscle</title><link>https://www.streetmusclemag.com/news/the-barrett-jackson-2026-las-vegas-auction-select-preview-is-live/</link></item>
-<item><title>Hand-Me-Down ’72 Charger Rallye Survivor - Street Muscle</title><link>https://www.streetmusclemag.com/features/hand-me-down-72-charger-rallye-survivor/</link></item>
-<item><title>Bob Ashton Announces MCACN’s New Website For Classic Car Owners - Street Muscle</title><link>https://www.streetmusclemag.com/news/bob-ashton-announces-mcacns-new-website-for-classic-car-owners/</link></item>
-<item><title>600-Horse ’27 Dodge Charger Super Bee Launch Edition Is Quickest, Fastest, Most Powerful Bee Ever - Street Muscle</title><link>https://www.streetmusclemag.com/news/600-hp-super-bee-launch-model-quickest-fastest-super-bee-yet/</link></item>
-<item><title>Traction Control Celebrates 55 Years At GM - Street Muscle</title><link>https://www.streetmusclemag.com/news/traction-control-celebrates-55-years-at-gm/</link></item>
-<item><title>Insane Muscle Car Collection: Yenkos, COPOs, Bosses And More! - Street Muscle</title><link>https://www.streetmusclemag.com/features/insane-muscle-car-collection-yenkos-copos-bosses-and-more/</link></item>
-<item><title>Here Are Some Facts Defining 100 Years Of The Milford Proving Ground - Street Muscle</title><link>https://www.streetmusclemag.com/news/here-are-some-facts-defining-100-years-of-the-milford-proving-ground/</link></item>
-<item><title>We Wuz Robbed! The Most Stolen Vehicles Of 2025 - Street Muscle</title><link>https://www.streetmusclemag.com/news/we-wuz-robbed-the-most-stolen-vehicles-of-2025/</link></item>
-<item><title>SPAL Electric Fan And Shroud Kit: Worth The Switch - Street Muscle</title><link>https://www.streetmusclemag.com/tech-stories/spal-electric-fan-and-shroud-kit-worth-the-switch/</link></item>
-<item><title>The One That Never Got Away: Original-Owner ’70 Hemi Challenger R/T SE - Street Muscle</title><link>https://www.streetmusclemag.com/features/one-that-never-got-away-original-owner-70-hemi-challenger-rt-se/</link></item>
-<item><title>Streetside Classics Announces A New 260-Car Showroom In Katy - Street Muscle</title><link>https://www.streetmusclemag.com/news/streetside-classics-announces-a-new-260-car-showroom-in-katy/</link></item>
-<item><title>Alternator Upgrades: Five Important Tips From Powermaster - Street Muscle</title><link>https://www.streetmusclemag.com/tech-stories/alternator-upgrades-five-important-tips-from-powermaster/</link></item>
-<item><title>Ram Announces Rumble Bee Pricing, And Yes, They Have HEMIs! - Street Muscle</title><link>https://www.streetmusclemag.com/news/ram-announces-rumble-bee-pricing-and-yes-they-have-hemis/</link></item>
-<item><title>Silver Sport Transmissions’ Magnum 6-Speed Kit Fills A Mopar Void - Street Muscle</title><link>https://www.streetmusclemag.com/tech-stories/silver-sport-transmissions-magnum-6-speed-kit-fills-a-mopar-void/</link></item>
-<item><title>Studebaker 2R5 Pickup Puts The “Street” Back In “Pro Street” - Street Muscle</title><link>https://www.streetmusclemag.com/features/studebaker2r5-pickup-puts-the-street-back-in-pro-street/</link></item>
-<item><title>Pushing The Limits: Making Ultra-Durable V8 Engines For Retail - Street Muscle</title><link>https://www.streetmusclemag.com/news/pushing-the-limits-making-ultra-durable-v8-engines-for-retail/</link></item>
-<item><title>Three 1966 Ford GT40s Reunited At The Goodwood Festival of Speed - Street Muscle</title><link>https://www.streetmusclemag.com/news/three-1966-ford-gt40s-reunited-at-the-goodwood-festival-of-speed/</link></item>
-<item><title>Apple Cuts Jobs In Siri, Vision Pro Immersive Video and Gaming Teams - Slashdot</title><link>https://apple.slashdot.org/story/26/08/21/207246/apple-cuts-jobs-in-siri-vision-pro-immersive-video-and-gaming-teams</link></item>
-<item><title>Canonical integrates NVIDIA Nemotron 3.5 Lightning with Ubuntu for always-on AI agents - Ubuntu blog</title><link>https://ubuntu.com/blog/nvidia-nemotron-3-5-lightning</link></item>
-<item><title>Advantech AOM-2721 is now Ubuntu Certified - Ubuntu blog</title><link>https://ubuntu.com/blog/advantech-aom-2721-ubuntu-certified</link></item>
-<item><title>Mikhail Khazov - Ubuntu blog</title><link>https://ubuntu.com/blog/author/khazov-m</link></item>
-<item><title>Ferrari’s 499P Centenary Winner Edition Brings a Le Mans Legend to Sim Racing - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/industrial-design/ferraris-499p-centenary-winner-edition-brings-a-le-mans-legend-to-sim-racing/</link></item>
-<item><title>Baz Luhrmann Brings Hollywood Glamour to Britain’s Most Luxurious Train - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/baz-luhrmann-brings-hollywood-glamour-to-britains-most-luxurious-train/</link></item>
-<item><title>Urwerk Bids Farewell to the UR-120 “Spock” with the New Blue Planet Edition - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/urwerk-bids-farewell-to-the-ur-120-spock-with-the-new-blue-planet-edition/</link></item>
-<item><title>Spyker C8 Preliator XXV Is an 800-HP Manual Hypercar Built by Hand - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/spyker-c8-preliator-xxv-is-an-800-hp-manual-hypercar-built-by-hand/</link></item>
-<item><title>IWC Celebrates 140 Years of Mercedes-Benz with a Smarter Big Pilot - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/iwc-celebrates-140-years-of-mercedes-benz-with-a-smarter-big-pilot/</link></item>
-<item><title>BRABUS’ First Luxury Catamaran - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/brabus-first-luxury-catamaran/</link></item>
-<item><title>Bugatti Destrier One-of-One Hypercar - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/bugatti-destrier-one-of-one-hypercar/</link></item>
-<item><title>TAG Heuer Celebrates Japanese Racing Heritage with the Carrera Chronograph x Team Ikuzawa - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/tag-heuer-carrera-x-team-ikuzawa-watch/</link></item>
-<item><title>Rezvani Dune Off-Road Supercar - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/rezvani-dune-off-road-supercar/</link></item>
-<item><title>This Madrid House Is Built Around Five Interlocking Cylinders - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/urban-design/this-madrid-house-is-built-around-five-interlocking-cylinders/</link></item>
-<item><title>Diamond Atelier’s DA#22 ULTRON Is a 205-HP Hyperbike Built Like a Sci-Fi Machine - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/diamond-ateliers-da22-ultron/</link></item>
-<item><title>Louis Vuitton &amp; Alex Israel Woody Wagon Colognes - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/industrial-design/louis-vuitton-alex-israel-woody-wagon-colognes/</link></item>
-<item><title>RIFFMATE Reinvents the Electric Guitar with a Stringless AI-Powered Design - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/industrial-design/riffmate-reinvents-the-electric-guitar-with-a-stringless-ai-powered-design/</link></item>
-<item><title>Bugatti’s One-Off W16 Mistral Blanc Éternel Is a Rolling Work of Art - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/bugattis-one-off-w16-mistral-blanc-eternel-is-a-rolling-work-of-art/</link></item>
+<lastBuildDate>Mon, 24 Aug 2026 17:15:04 +0800</lastBuildDate>
+<item><title>1win — официальный сайт букмекерской конторы 1вин - OSRadar</title><link>https://www.osradar.com/1win-oficialnyy-sayt-bukmekerskoy-kontory-1vin/</link></item>
+<item><title>Пин Ап Казино Официальный сайт | Pin Up Casino играть онлайн – Вход, Зеркало - OSRadar</title><link>https://www.osradar.com/pin-ap-kazino-oficialnyy-sayt-pin-up-casino-igrat-onlayn-vhod-zerkalo/</link></item>
+<item><title>1win casino and sportsbook in India - OSRadar</title><link>https://www.osradar.com/1win-casino-and-sportsbook-in-india/</link></item>
+<item><title>Casino Spinfin – Responsible Gaming and Account Management - OSRadar</title><link>https://www.osradar.com/casino-spinfin-responsible-gaming-and-account-management/</link></item>
+<item><title>Mostbet AZ – bukmeker ve kazino Mostbet – Giriş rəsmi sayt - OSRadar</title><link>https://www.osradar.com/mostbet-az-bukmeker-ve-kazino-mostbet-giris-r-smi-sayt-2/</link></item>
+<item><title>Pin Up Casino – Onlayn Kazino Azərbaycanda – Giriş və Başlama - OSRadar</title><link>https://www.osradar.com/pin-up-casino-onlayn-kazino-az-rbaycanda-giris-v-baslama/</link></item>
+<item><title>Azərbaycanda Onlayn Kazino Pin Up – Rəsmi Giriş - OSRadar</title><link>https://www.osradar.com/az-rbaycanda-onlayn-kazino-pin-up-r-smi-giris/</link></item>
+<item><title>Казино онлайн 2026 – самые перспективные площадки для любителей азартных игр - OSRadar</title><link>https://www.osradar.com/kazino-onlayn-2026-samye-perspektivnye-ploshchadki-dlya-lyubiteley-azartnyh-igr/</link></item>
+<item><title>Aphrodite Casino en ligne France – machines à sous et jeux de table disponibles - OSRadar</title><link>https://www.osradar.com/aphrodite-casino-en-ligne-france-machines-a-sous-et-jeux-de-table-disponibles/</link></item>
+<item><title>胡晓明：阐释力与创造力：在技术理 - 爱思想</title><link>https://www.aisixiang.com/data/181271.html</link></item>
+<item><title>王刚：“ 继往开来、融贯中西 ” - 爱思想</title><link>https://www.aisixiang.com/data/181245.html</link></item>
+<item><title>莫砺锋：旅韩日记（一） - 爱思想</title><link>https://www.aisixiang.com/data/181213.html</link></item>
+<item><title>刘坤轮：关于构建我国法律职业伦理 - 爱思想</title><link>https://www.aisixiang.com/data/181198.html</link></item>
+<item><title>尹韵公：构建中国新闻传播学自主知 - 爱思想</title><link>https://www.aisixiang.com/data/181267.html</link></item>
+<item><title>胡正荣：构建能够回应现实并深化理 - 爱思想</title><link>https://www.aisixiang.com/data/181202.html</link></item>
+<item><title>周玉顺：延安时期中国共产党如何开 - 爱思想</title><link>https://www.aisixiang.com/data/181355.html</link></item>
+<item><title>蒯正明：习近平党建思想引领新型政 - 爱思想</title><link>https://www.aisixiang.com/data/181265.html</link></item>
+<item><title>朱廷水 杨易凌：尺牍证史 医心永 - 爱思想</title><link>https://www.aisixiang.com/data/181468.html</link></item>
+<item><title>欧阳敏：党中央在香山期间对“如何 - 爱思想</title><link>https://www.aisixiang.com/data/181467.html</link></item>
+<item><title>张旭东：关于鲁迅文学分析的六点论 - 爱思想</title><link>https://www.aisixiang.com/data/181205.html</link></item>
+<item><title>邵六益：中华民族的法律生成：《民 - 爱思想</title><link>https://www.aisixiang.com/data/181197.html</link></item>
+<item><title>王越：德国的儿童青少年心理健康服 - 爱思想</title><link>https://www.aisixiang.com/data/181463.html</link></item>
+<item><title>张允若：试论“AI生成”对人类传 - 爱思想</title><link>https://www.aisixiang.com/data/181146.html</link></item>
+<item><title>敦志刚：如何构建适应国际秩序重塑 - 爱思想</title><link>https://www.aisixiang.com/data/181161.html</link></item>
+<item><title>吴素娟 张健华：夯实内生动力 筑 - 爱思想</title><link>https://www.aisixiang.com/data/181351.html</link></item>
+<item><title>吴宏政：巩固文化主体性根植于中华 - 爱思想</title><link>https://www.aisixiang.com/data/181350.html</link></item>
+<item><title>李媛媛：深化对“第二个结合”的理 - 爱思想</title><link>https://www.aisixiang.com/data/181312.html</link></item>
+<item><title>徐畅 吴兴智：法治助推非遗焕发新 - 爱思想</title><link>https://www.aisixiang.com/data/181295.html</link></item>
+<item><title>王依依：数字记忆的文化意蕴与时代 - 爱思想</title><link>https://www.aisixiang.com/data/181294.html</link></item>
+<item><title>陈运平 陈德明：持续推进陶瓷文化 - 爱思想</title><link>https://www.aisixiang.com/data/181293.html</link></item>
+<item><title>王思林：从泼水祈安康到巡游易婚俗 - 爱思想</title><link>https://www.aisixiang.com/data/181282.html</link></item>
+<item><title>刘慧梅：西方休闲文化的源流与精神 - 爱思想</title><link>https://www.aisixiang.com/data/181279.html</link></item>
+<item><title>樊庆彦：诗意栖居：中国古代休闲文 - 爱思想</title><link>https://www.aisixiang.com/data/181278.html</link></item>
+<item><title>阳银银：列宁对“无产阶级文化派” - 爱思想</title><link>https://www.aisixiang.com/data/181254.html</link></item>
+<item><title>孙金龙 黄润秋：科学规范考核 强 - 爱思想</title><link>https://www.aisixiang.com/data/181193.html</link></item>
+<item><title>殷辂：文化缺失与地域歧视 - 爱思想</title><link>https://www.aisixiang.com/data/181140.html</link></item>
+<item><title>习近平生态文明思想引领美丽中国建 - 爱思想</title><link>https://www.aisixiang.com/data/181084.html</link></item>
+<item><title>赵曼君等：中国与亚太伙伴共护候鸟 - 爱思想</title><link>https://www.aisixiang.com/data/181074.html</link></item>
+<item><title>陈艺方：读懂传统戏服图案中的文化 - 爱思想</title><link>https://www.aisixiang.com/data/181072.html</link></item>
+<item><title>刘箴：人工智能让中华优秀传统文化 - 爱思想</title><link>https://www.aisixiang.com/data/181061.html</link></item>
+<item><title>刘广超：以法典实施推动全民生态文 - 爱思想</title><link>https://www.aisixiang.com/data/180971.html</link></item>
+<item><title>王恩哥：要敢于选择“重要但不热闹 - 爱思想</title><link>https://www.aisixiang.com/data/181386.html</link></item>
+<item><title>王亮：人工智能何以向上向善 - 爱思想</title><link>https://www.aisixiang.com/data/181384.html</link></item>
+<item><title>王嘉珏 王斌锐：以体系化攻关破解 - 爱思想</title><link>https://www.aisixiang.com/data/181380.html</link></item>
+<item><title>金观平：支持基础研究贵在长期稳定 - 爱思想</title><link>https://www.aisixiang.com/data/181341.html</link></item>
+<item><title>张仪帆 魏鹏：科技评价改革要突出 - 爱思想</title><link>https://www.aisixiang.com/data/181340.html</link></item>
+<item><title>雷环捷：当代科学精神的三重面相 - 爱思想</title><link>https://www.aisixiang.com/data/181313.html</link></item>
+<item><title>陈柏良 李闽榕：让人工智能这匹千 - 爱思想</title><link>https://www.aisixiang.com/data/181260.html</link></item>
+<item><title>王峰：一线牵情 千丝织梦——姚穆 - 爱思想</title><link>https://www.aisixiang.com/data/181189.html</link></item>
+<item><title>关铭闻：攀登！向着高水平科技自立 - 爱思想</title><link>https://www.aisixiang.com/data/181183.html</link></item>
+<item><title>张思 金星晔：构建自主完备、开放 - 爱思想</title><link>https://www.aisixiang.com/data/181154.html</link></item>
+<item><title>马宝成：防范应对自然灾害重在加强 - 爱思想</title><link>https://www.aisixiang.com/data/181153.html</link></item>
+<item><title>陈振林：加快提升应对气候变化与极 - 爱思想</title><link>https://www.aisixiang.com/data/181152.html</link></item>
+<item><title>陈晓漫：在理性标尺下，丈量人类未 - 爱思想</title><link>https://www.aisixiang.com/data/181136.html</link></item>
+<item><title>谭笑间：科技关键元素：“科技之钥 - 爱思想</title><link>https://www.aisixiang.com/data/181135.html</link></item>
+<item><title>刘锋：硅基能否取代碳基，从《未来 - 爱思想</title><link>https://www.aisixiang.com/data/181114.html</link></item>
+<item><title>黄日涵 彭婷：突破信息茧房：新媒体时代铸牢中华民族共同体意识研究 - 爱思想</title><link>https://www.aisixiang.com/data/181516.html</link></item>
+<item><title>江必新：论中国法学自主知识体系的构成 - 爱思想</title><link>https://www.aisixiang.com/data/181511.html</link></item>
+<item><title>柴宝勇：坚持党的领导是中国特色社会主义最本质的特征 - 爱思想</title><link>https://www.aisixiang.com/data/181501.html</link></item>
+<item><title>袁宏永：抓实城市基础设施生命线安全工程 - 爱思想</title><link>https://www.aisixiang.com/data/181499.html</link></item>
+<item><title>步平：日本靖国神社问题的历史考察 - 爱思想</title><link>https://www.aisixiang.com/data/181488.html</link></item>
+<item><title>伍科霖：民生保障的权利关联论证及其社会法展开 - 爱思想</title><link>https://www.aisixiang.com/data/181513.html</link></item>
+<item><title>钱旭：论权威解释在国际裁判中的效力与适用 - 爱思想</title><link>https://www.aisixiang.com/data/181512.html</link></item>
+<item><title>纪文华：加强对外投资法治建设 - 爱思想</title><link>https://www.aisixiang.com/data/181495.html</link></item>
+<item><title>赵谦 随志浩：法学一流课程建设的架构指标论 - 爱思想</title><link>https://www.aisixiang.com/data/181484.html</link></item>
+<item><title>孙凤：“零负债”青年背后的储蓄观变迁 - 爱思想</title><link>https://www.aisixiang.com/data/181505.html</link></item>
+<item><title>王笑宇：特色赛事引领文商体旅融合消费新风向 - 爱思想</title><link>https://www.aisixiang.com/data/181504.html</link></item>
+<item><title>魏琪嘉：筑牢产业安全防线 - 爱思想</title><link>https://www.aisixiang.com/data/181497.html</link></item>
+<item><title>尹建堃：找回劳动：数字时代新就业形态的高质量发展 - 爱思想</title><link>https://www.aisixiang.com/data/181482.html</link></item>
+<item><title>吴江：锻造适应现代化建设需要的干部队伍 - 爱思想</title><link>https://www.aisixiang.com/data/181509.html</link></item>
+<item><title>张会平：政务大模型的创新发展和实践应用 - 爱思想</title><link>https://www.aisixiang.com/data/181508.html</link></item>
+<item><title>刘靖北：坚持党中央集中统一领导 - 爱思想</title><link>https://www.aisixiang.com/data/181500.html</link></item>
+<item><title>崔鹏：科学应对灾害风险 - 爱思想</title><link>https://www.aisixiang.com/data/181498.html</link></item>
+<item><title>刘和平：一旦特朗普对伊朗动用战术核武，将打开人类的“地狱之门” - 爱思想</title><link>https://www.aisixiang.com/data/181515.html</link></item>
+<item><title>戴博元 罗纳德：稀土与大国竞争——关键战略资源的历史逻辑与当代启示 - 爱思想</title><link>https://www.aisixiang.com/data/181514.html</link></item>
+<item><title>项昊宇：美国“联盟威慑”战略对亚太安全秩序的影响 - 爱思想</title><link>https://www.aisixiang.com/data/181510.html</link></item>
+<item><title>杨振姣 司钰坤：全球通道畅通视角下中国陆海通道的战略定位、现实约束与应对路径 - 爱思想</title><link>https://www.aisixiang.com/data/181489.html</link></item>
+<item><title>周力：从“麦加协议”看中东国家的战略自主之路 - 爱思想</title><link>https://www.aisixiang.com/data/181477.html</link></item>
+<item><title>苏玉波 董育余：数字型共有文化符号铸牢中华民族共同体意识的逻辑机理与实践路径 - 爱思想</title><link>https://www.aisixiang.com/data/181486.html</link></item>
+<item><title>王星：零工技能：劳动者“选择的自由”的关键 - 爱思想</title><link>https://www.aisixiang.com/data/181483.html</link></item>
+<item><title>段威 郑骄阳：运用数智技术赋能中华民族共有精神家园建设 - 爱思想</title><link>https://www.aisixiang.com/data/181471.html</link></item>
+<item><title>政光景：社会科学定量研究的范式演进——兼“理论导向的交叉研究”方法论倡导 - 爱思想</title><link>https://www.aisixiang.com/data/181409.html</link></item>
+<item><title>徐佳：全球社交媒体禁令的模式与张力 - 爱思想</title><link>https://www.aisixiang.com/data/181507.html</link></item>
+<item><title>匡文波：短视频摆拍的深层透视与系统应对 - 爱思想</title><link>https://www.aisixiang.com/data/181503.html</link></item>
+<item><title>严功军：国际传播范式生成的历史审视与当代重构 - 爱思想</title><link>https://www.aisixiang.com/data/181491.html</link></item>
+<item><title>韦路：中国新闻传播学自主知识体系建构的十年探索与未来展望 - 爱思想</title><link>https://www.aisixiang.com/data/181456.html</link></item>
+<item><title>丁学良：中国内地出去留学的总数萎缩 - 爱思想</title><link>https://www.aisixiang.com/data/181522.html</link></item>
+<item><title>汪长明：“博物馆热”催生思政育人新模式 - 爱思想</title><link>https://www.aisixiang.com/data/181472.html</link></item>
+<item><title>石中英：拔尖创新人才不是“拔”出来的，而是自己“长”出来的 - 爱思想</title><link>https://www.aisixiang.com/data/181405.html</link></item>
+<item><title>耿博雅 石中英：论青少年合理怀疑精神的培育——基于近现代哲学家关于怀疑论述的分析 - 爱思想</title><link>https://www.aisixiang.com/data/181404.html</link></item>
+<item><title>肖瑞峰：论北宋诗僧的西湖诗 - 爱思想</title><link>https://www.aisixiang.com/data/181459.html</link></item>
+<item><title>汤拥华：共情的重构：微短剧与新大众文艺的批评伦理 - 爱思想</title><link>https://www.aisixiang.com/data/181452.html</link></item>
+<item><title>万娜：马克思主义美学观点中“人民性”维度的经典重释 - 爱思想</title><link>https://www.aisixiang.com/data/181412.html</link></item>
+<item><title>王确：守望魂脉　赓续根脉：探索中国文学新实践 - 爱思想</title><link>https://www.aisixiang.com/data/181410.html</link></item>
+<item><title>李岳锋：圣化与神化：东西方神话原型的精神境界比较——兼论“圣人”与“英雄”何以奠基两种文明 - 爱思想</title><link>https://www.aisixiang.com/data/181524.html</link></item>
+<item><title>淳庆：中国古建筑中的防火智慧 - 爱思想</title><link>https://www.aisixiang.com/data/181502.html</link></item>
+<item><title>熊剑平：中国古代的防间与保密工作 - 爱思想</title><link>https://www.aisixiang.com/data/181493.html</link></item>
+<item><title>王晓欣：郑天挺教授的元史教学与思考 - 爱思想</title><link>https://www.aisixiang.com/data/181492.html</link></item>
+<item><title>刘景华：世界文明的“原初时代”——论文明起源及其特色的形成 - 爱思想</title><link>https://www.aisixiang.com/data/181490.html</link></item>
+<item><title>张大为：“天下文明”：“天下”政治与“中国”之道 - 爱思想</title><link>https://www.aisixiang.com/data/181523.html</link></item>
+<item><title>谢遐龄：追思束景南先生并论宋明道学研究的启蒙意义 - 爱思想</title><link>https://www.aisixiang.com/data/181521.html</link></item>
+<item><title>浦汉昕：量子生物过程达到诚的极致一一和GROK的对话之三 - 爱思想</title><link>https://www.aisixiang.com/data/181520.html</link></item>
+<item><title>浦汉昕：量子世界的“诚”与“不诚”——和GROK对话之二 - 爱思想</title><link>https://www.aisixiang.com/data/181519.html</link></item>
+<item><title>浦汉昕：关于诚和地球表层---和GROK的对话之一 - 爱思想</title><link>https://www.aisixiang.com/data/181518.html</link></item>
+<item><title>廉思：加快构建中国青年研究自主知识体系 - 爱思想</title><link>https://www.aisixiang.com/data/181506.html</link></item>
+<item><title>来新夏：追忆先师张星烺、余嘉锡、陈垣 - 爱思想</title><link>https://www.aisixiang.com/data/181479.html</link></item>
+<item><title>蔡媛青 荆林波：建构中国特色哲学社会科学学科评价体系 - 爱思想</title><link>https://www.aisixiang.com/data/181445.html</link></item>
+<item><title>张俊娥：中文核心期刊的数据特征 - 爱思想</title><link>https://www.aisixiang.com/data/181442.html</link></item>
+<item><title>张霞：见证延安风貌 读懂民心力量——陈嘉庚眼里的延安党群关系 - 爱思想</title><link>https://www.aisixiang.com/data/181394.html</link></item>
+<item><title>王学斌：先立乎其大者，则其小者弗能夺也 - 爱思想</title><link>https://www.aisixiang.com/data/181454.html</link></item>
+<item><title>陈理：江泽民关于巩固和发展最广泛的爱国统一战线的创新与贡献 - 爱思想</title><link>https://www.aisixiang.com/data/181354.html</link></item>
+<item><title>张宏志：把中国特色社会主义成功推向二十一世纪——关于江泽民同志历史贡献的三个观察点 - 爱思想</title><link>https://www.aisixiang.com/data/181353.html</link></item>
+<item><title>李庆刚：历尽天华成此景 人间万事出艰辛——江泽民与中华民族伟大复兴 - 爱思想</title><link>https://www.aisixiang.com/data/181342.html</link></item>
+<item><title>赵月枝，1965年出生于丽水缙云，加拿大皇家学会院士，清华大学人文讲席教授，清华大学新闻与传播..... - 爱思想</title><link>https://www.aisixiang.com/thinktank/ZhaoYuezhi.html</link></item>
+<item><title>For her Birthday in Ibiza, Dua Lipa Puts a Textural Twist on the LBD - WMagazine</title><link>https://www.wmagazine.com/fashion/dua-lipa-birthday-lbd-ibiza</link></item>
+<item><title>Michelle Pfeiffer&amp;#39;s Opulent Velvet Summer Set is Fit for a Queen - WMagazine</title><link>https://www.wmagazine.com/fashion/michelle-pfeiffer-velvet-fforme-margots-got-money-troubles</link></item>
+<item><title>Margaret Qualley Wears Chanel&amp;#39;s Viral Naked Shoes on the Red Carpet - WMagazine</title><link>https://www.wmagazine.com/fashion/margaret-qualley-chanel-naked-shoes-the-dog-stars</link></item>
+<item><title>Sienna Miller Boils Boho Down to the Basics in Jeans and a Button-Up - WMagazine</title><link>https://www.wmagazine.com/fashion/sienna-miller-boho-chic-basics-chloe-bag</link></item>
+<item><title>A Bret Easton Ellis Watch List: From &amp;#39;The Shards&amp;#39; to &amp;#39;American Psycho&amp;#39; - WMagazine</title><link>https://www.wmagazine.com/culture/bret-easton-ellis-watch-list-tv-film-adaptations</link></item>
+<item><title>A Look at Gabrielle Union &amp; Dwyane Wade&amp;#39;s Stylish East Coast Vacation - WMagazine</title><link>https://www.wmagazine.com/fashion/gabrielle-union-dwyane-wade-kaavia-vacation-style</link></item>
+<item><title>Angelina Jolie&amp;#39;s &amp;#39;Without Blood&amp;#39;: Cast, Release Date, Info - WMagazine</title><link>https://www.wmagazine.com/culture/angelina-jolie-without-blood-cast-release-date</link></item>
+<item><title>In a Vintage Cami, Hailey Bieber Bids Butter Yellow Adieu in Favor of Canary - WMagazine</title><link>https://www.wmagazine.com/fashion/hailey-bieber-canary-yellow-dolce-gabbana-camisole</link></item>
+<item><title>Sarah Pidgeon Celebrates Her &amp;#39;Love Story&amp;#39; Emmy Nod in &amp;#39;90s Minimalism - WMagazine</title><link>https://www.wmagazine.com/fashion/sarah-pidgeon-love-story-khaite-balenciaga-bag</link></item>
+<item><title>Rihanna Makes the Case for Head-to-Toe Seafoam Green on an Outing in New York City - WMagazine</title><link>https://www.wmagazine.com/fashion/rihanna-teal-seafoam-green-kids-dentist-visit</link></item>
+<item><title>Everything We Know About the &amp;#39;Ocean&amp;#39;s Eleven&amp;#39; Prequel - WMagazine</title><link>https://www.wmagazine.com/culture/oceans-eleven-prequel-margot-robbie-bradley-cooper-cast</link></item>
+<item><title>Rachel Sennott, Katherine LaNasa, Rhea Seehorn &amp; More Share Their Ghost Stories - WMagazine</title><link>https://www.wmagazine.com/video/rachel-sennott-katherine-lanasa-rhea-seehorn-ghost-stories</link></item>
+<item><title>Inside Madonna&amp;#39;s Glamorous 68th Birthday Party in Greece - WMagazine</title><link>https://www.wmagazine.com/fashion/madonna-68th-birthday-party-greece-children</link></item>
+<item><title>Sadie Sink and Carlacia Grant Do Archival Alexander McQueen, Two Ways - WMagazine</title><link>https://www.wmagazine.com/fashion/sadie-sink-carlacia-grant-alexander-mcqueen-archival</link></item>
+<item><title>Meadow Walker Pays Homage to Paul Walker at &amp;#39;Fast &amp; Furious&amp;#39; Screening - WMagazine</title><link>https://www.wmagazine.com/fashion/meadow-paul-walker-fast-furious-anniversary-bottega-veneta</link></item>
+<item><title>The Best Looks of the Venice Film Festival Red Carpet: A Red Carpet History - WMagazine</title><link>https://www.wmagazine.com/fashion/venice-film-festival-red-carpet-highlights-archives</link></item>
+<item><title>Kristen Stewart and Alia Shawkat&amp;#39;s &amp;#39;The Wrong Girls&amp;#39; Costumes Rewrite Stoner-Comedy Style - WMagazine</title><link>https://www.wmagazine.com/fashion/kristen-stewart-alia-shawkat-the-wrong-girls-movie-costumes-heidi-bivens-interview</link></item>
+<item><title>Dua Lipa Turns Lingerie Dressing and Bridal White Into the Perfect Girls’ Trip Formula - WMagazine</title><link>https://www.wmagazine.com/fashion/dua-lipa-lingerie-dressing-bachelorette-party-italy</link></item>
+<item><title>Hollywood Pays Tribute to Hayden Panettiere, &amp;#39;Nashville&amp;#39; Star Dead at 36 - WMagazine</title><link>https://www.wmagazine.com/culture/hayden-panettiere-death-celebrity-tributes</link></item>
+<item><title>Jennie’s Backwards Calvin Klein Jeans Are a ’90s Kate Moss Deep Cut - WMagazine</title><link>https://www.wmagazine.com/fashion/jennie-backwards-jeans-calvin-klein-kate-moss</link></item>
+<item><title>Polo Ralph Lauren Returns as the Official Outfitter of the US Open - WMagazine</title><link>https://www.wmagazine.com/wyouth/polo-ralph-lauren-us-open</link></item>
+<item><title>Kaia Gerber and Lewis Pullman Are a Match Made in Wardrobe-Classics Heaven - WMagazine</title><link>https://www.wmagazine.com/fashion/kaia-gerber-lewis-pullman-date-night-couple-style-los-angeles</link></item>
+<item><title>Dua Lipa&amp;#39;s Giant Chanel Basket Bag Tests the Limits of Carry-On Luggage - WMagazine</title><link>https://www.wmagazine.com/fashion/dua-lipa-big-chanel-striped-bag-airport-style</link></item>
+<item><title>The Ultimate Insider&amp;#39;s Guide to Patmos, According to Ileana Makri - WMagazine</title><link>https://www.wmagazine.com/life/ileana-makri-patmos-travel-guide-hotels-restaurants-shopping</link></item>
+<item><title>Kristen Stewart&amp;#39;s Vintage T-Shirt Collection Remains Unmatched - WMagazine</title><link>https://www.wmagazine.com/fashion/kristen-stewart-vintage-band-t-shirts-photos</link></item>
+<item><title>The Insider’s Guide to Marbella, Spain - WMagazine</title><link>https://www.wmagazine.com/life/marbella-spain-travel-guide</link></item>
+<item><title>Gabbriette Cosigns the Babydoll Dress—With a Gothic Spin, Of Course - WMagazine</title><link>https://www.wmagazine.com/fashion/gabbriette-sheer-black-babydoll-dress-trend</link></item>
+<item><title>Kylie Jenner Strips Down to the Essentials as the New Face of Alo - WMagazine</title><link>https://www.wmagazine.com/fashion/kylie-jenner-alo-campaign-photos-exclusive</link></item>
+<item><title>The Arts Lover’s Guide to Helsinki - WMagazine</title><link>https://www.wmagazine.com/culture/helsinki-finland-travel-guide-museums-galleries</link></item>
+<item><title>Naomi Watts&amp;#39;s Daughter Kai Schreiber Braves the Citi Bike in Heels - WMagazine</title><link>https://www.wmagazine.com/fashion/kai-schreiber-naomi-watts-citi-bike-heels</link></item>
+<item><title>What Is &amp;#39;Teenage Sex and Death at Camp Miasma&amp;#39; by Jane Schoenbrun About? - WMagazine</title><link>https://www.wmagazine.com/culture/teenage-sex-death-camp-miasma-movie-director-jane-schoenbrun-interview</link></item>
+<item><title>Dakota Fanning Beams in Butter-Yellow Mugler for &amp;#39;The Sun Never Sets&amp;#39; - WMagazine</title><link>https://www.wmagazine.com/fashion/dakota-fanning-butter-yellow-mugler-the-sun-never-sets</link></item>
+<item><title>August Horoscope 2026: The 4 Zodiac Signs Getting a Confidence Boost From the Leo Solar Eclipse - WMagazine</title><link>https://www.wmagazine.com/life/solar-eclipse-august-horoscope-leo-virgo-cancer-capricorn-taurus-pisces-astrology</link></item>
+<item><title>Rihanna and Her Kids Take Barbados in Style - WMagazine</title><link>https://www.wmagazine.com/fashion/rihanna-barbados-children-rocki-rza-riot</link></item>
+<item><title>Ravyn Lenae’s Versace Bra Top Is Hypnotizing on &amp;#39;The Tonight Show&amp;#39; - WMagazine</title><link>https://www.wmagazine.com/fashion/ravyn-lenae-versace-bra-top</link></item>
+<item><title>13 Beauty Products That Make Mastering Makeup a Breeze - WMagazine</title><link>https://www.wmagazine.com/beauty/best-cream-based-makeup-products</link></item>
+<item><title>Dominic Sessa Learned a Lot Playing Anthony Bourdain. Just Don’t Ask Him to Cook - WMagazine</title><link>https://www.wmagazine.com/culture/tony-movie-dominic-sessa-anthony-bourdain-interview</link></item>
+<item><title>Anne Hathaway Proves Her Baby Bump Is Very Much Real With a Tattered Halter Top - WMagazine</title><link>https://www.wmagazine.com/fashion/anne-hathaway-the-end-of-oak-street-lein-studio</link></item>
+<item><title>Anne Hathaway’s Maternity Style Is Fit for a Queen - WMagazine</title><link>https://www.wmagazine.com/fashion/anne-hathaway-pregnancy-style-odyssey-press-tour</link></item>
+<item><title>Kristen Stewart Pairs a Luxe Leather Dress With Men’s Sneakers - WMagazine</title><link>https://www.wmagazine.com/fashion/kristen-stewart-the-wrong-girls-adidas</link></item>
+<item><title>Kylie Jenner&amp;#39;s Signature Red Carpet Style Has Come a Long Way - WMagazine</title><link>https://www.wmagazine.com/fashion/kylie-jenner-red-carpet-style-transformation</link></item>
+<item><title>Gigi Hadid &amp; Bella Hadid Debut Twinning Hairstyles on Vacation - WMagazine</title><link>https://www.wmagazine.com/fashion/gigi-hadid-bella-hadid-family-vacation</link></item>
+<item><title>Catherine Opie Enters the Culture Wars Once More - WMagazine</title><link>https://www.wmagazine.com/culture/catherine-opie-photography-art-interview-photos</link></item>
+<item><title>Katie Holmes and Jason Bard Yarmosky Go Red Carpet Official in Style - WMagazine</title><link>https://www.wmagazine.com/fashion/katie-holmes-jason-bard-yarmosky-red-carpet-fforme</link></item>
+<item><title>The Ultimate Travel Souvenir? A New Skill - WMagazine</title><link>https://www.wmagazine.com/life/skillcation-ideas-for-adults</link></item>
+<item><title>我和亚洲象的三十六年｜森林修复手记 - 绿色和平</title><link>https://www.greenpeace.org.cn/2026/08/12/forest-restoration-2/</link></item>
+<item><title>一台空调，凉不了一座城 | 绿色和平 x 一览众山小 - 绿色和平</title><link>https://www.greenpeace.org.cn/2026/07/29/european-cities-extreme-heat/</link></item>
+<item><title>阿根廷火了，是山火：那些不可复制的旷野正在消失 - 绿色和平</title><link>https://www.greenpeace.org.cn/2026/07/02/patagonia-wildfire/</link></item>
+<item><title>半卷书｜“买票占座放零食”风波：事实、法律、伦理及其他 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_33839514</link></item>
+<item><title>科隆展首次售罄展位：主办方告诉我们，为什么&amp;quot;全球最大游戏展&amp;quot;还能越做越大 - 游研社</title><link>https://www.yystv.cn/p/14315</link></item>
+<item><title>在欧洲，我看到了最国际化的一届电竞世俱杯 - 游研社</title><link>https://www.yystv.cn/p/14314</link></item>
+<item><title>《金铲铲之战》也要开始“怀旧”了？ - 游研社</title><link>https://www.yystv.cn/p/14311</link></item>
+<item><title>国内最会做战棋的工作室，时隔8年搬出了自己的杀手锏 - 游研社</title><link>https://www.yystv.cn/p/14310</link></item>
+<item><title>当你玩到世界上最「孤独」的多人游戏 - 游研社</title><link>https://www.yystv.cn/p/14313</link></item>
+<item><title>自诩为玩家谋利的黑客，靠泄露GTA6来卖数字货币 - 游研社</title><link>https://www.yystv.cn/p/14312</link></item>
+<item><title>《黑神话：钟馗》公布超长实机：游科的花样，有点多 - 游研社</title><link>https://www.yystv.cn/p/14302</link></item>
+<item><title>不靠买量靠社区，Twitch如何帮中国游戏打入全球玩家的&amp;quot;主场&amp;quot;？ - 游研社</title><link>https://www.yystv.cn/p/14306</link></item>
+<item><title>吉田修平谈索尼取消实体光盘：我不明白这是否真的是个大问题 - 游研社</title><link>https://www.yystv.cn/p/14304</link></item>
+<item><title>B站的AI视频工具，正在补上AI视频的最后一环 - 游研社</title><link>https://www.yystv.cn/p/14303</link></item>
+<item><title>P社的御用作曲家告诉我，《群星》音乐的创作灵感来得很容易 - 游研社</title><link>https://www.yystv.cn/p/14305</link></item>
+<item><title>我在一座小岛上，过了几天“没正事”的日子 - 游研社</title><link>https://www.yystv.cn/p/14307</link></item>
+<item><title>Alex Warren Cancels Auckland Show Due to Illness - Billboard</title><link>https://www.billboard.com/music/concerts/alex-warren-cancels-auckland-show-1236322785/</link></item>
+<item><title>Hilltop Hoods to Headline Castaway Festival Across Three Australian Cities - Billboard</title><link>https://www.billboard.com/music/concerts/hilltop-hoods-castaway-festival-1236322667/</link></item>
+<item><title>Australian Promoter Fuzzy Rebrands for 30th Anniversary - Billboard</title><link>https://www.billboard.com/pro/fuzzy-30-years-rebrand/</link></item>
+<item><title>The Wallflowers Announce First-Ever Australian Tour - Billboard</title><link>https://www.billboard.com/music/concerts/the-wallflowers-australian-tour-1236322645/</link></item>
+<item><title>QMusic Confirms Kristy Ellis as New CEO - Billboard</title><link>https://www.billboard.com/pro/qmusic-appoints-kristy-ellis-new-ceo/</link></item>
+<item><title>Fans Choose ENHYPEN’s ‘THE SIN : BLISS’ as This Week’s Favorite New Music - Billboard</title><link>https://www.billboard.com/music/pop/enhypen-the-sin-bliss-best-new-music-poll-results-1236322619/</link></item>
+<item><title>These $32 Running Headphones Light Up at Night to Keep You Safe On Your Evening Walk or Run - Billboard</title><link>https://www.billboard.com/culture/product-recommendations/best-light-up-wireless-headphones-for-safe-evening-run-walk-1236321918/</link></item>
+<item><title>Here’s What Dr. Dre Really Thinks About AI in Music - Billboard</title><link>https://www.billboard.com/music/music-news/dr-dre-ai-music-1236322613/</link></item>
+<item><title>Drake’s Appearance at Ella Langley’s Show Has Fans Wondering About a Collab - Billboard</title><link>https://www.billboard.com/music/music-news/drake-ella-langley-concert-collab-rumors-choosin-texas-1236322570/</link></item>
+<item><title>KATSEYE Achieves First No. 1 Album on Billboard 200 With ‘WILD’ - Billboard</title><link>https://www.billboard.com/music/chart-beat/katseye-wild-number-one-billboard-200-albums-chart-1236322567/</link></item>
+<item><title>Sixty Frames for the Record: A Three.js Game, Seven Fly-Throughs, and a Wall of CRTs - Codrops</title><link>https://tympanus.net/codrops/2026/08/22/sixty-frames-for-the-record-a-three-js-game-seven-fly-throughs-and-a-wall-of-crts/</link></item>
+<item><title>Run Rob Run: Building a Music-Reactive Goo with Three.js and WebGPU - Codrops</title><link>https://tympanus.net/codrops/2026/08/20/run-rob-run-building-a-music-reactive-goo-with-three-js-and-webgpu/</link></item>
+<item><title>Robert Aperios - Codrops</title><link>https://tympanus.net/codrops/author/roberteaperios/</link></item>
+<item><title>Relighting Images with Depth Maps and Three.js - Codrops</title><link>https://tympanus.net/codrops/2026/08/19/relighting-images-with-depth-maps-and-three-js/</link></item>
+<item><title>Building an Animated Testimonial Hero Using the GSAP Timeline and Dynamic CMS Data - Codrops</title><link>https://tympanus.net/codrops/2026/08/18/building-an-animated-testimonial-hero-using-the-gsap-timeline-and-dynamic-cms-data/</link></item>
+<item><title>Jonas Arleth - Codrops</title><link>https://tympanus.net/codrops/author/jonasarleth/</link></item>
+<item><title>Creativity at Enterprise-Scale, Without Compromise: The OFF+BRAND. Story - Codrops</title><link>https://tympanus.net/codrops/2026/08/17/creativity-at-enterprise-scale-without-compromise-the-offbrand-story/</link></item>
+<item><title>Inside HAOQI.DESIGN: Letting DOM and WebGL Share a Retro-Futurist Stage - Codrops</title><link>https://tympanus.net/codrops/2026/08/15/inside-haoqi-design-letting-dom-and-webgl-share-a-retro-futurist-stage/</link></item>
+<item><title>From Motion to Meaning: Denis Avramenko’s Approach to Interactive Design - Codrops</title><link>https://tympanus.net/codrops/2026/08/13/from-motion-to-meaning-denis-avramenkos-approach-to-interactive-design/</link></item>
+<item><title>Denis Avramenko - Codrops</title><link>https://tympanus.net/codrops/author/denisavramenko/</link></item>
+<item><title>Rockstar 向微软和 Discord 发去法庭传票以识别 GTA6 泄密者身份 - Solidot</title><link>https://www.solidot.org/story?sid=85164</link></item>
+<item><title>3 分钟冲刺跑产生的分子反应与 90 分钟中等强度运动截然不同 - Solidot</title><link>https://www.solidot.org/story?sid=85165</link></item>
+<item><title>波兰加密货币交易所 CEO 在 2022 年失踪，4 年后他的继任者也失踪了 - Solidot</title><link>https://www.solidot.org/story?sid=85166</link></item>
+<item><title>柳树和杨树释放出的化合物会恶化城市空气质量 - Solidot</title><link>https://www.solidot.org/story?sid=85167</link></item>
+<item><title>卡巴斯基发现第一种针对汽车的 Android 恶意程序 - Solidot</title><link>https://www.solidot.org/story?sid=85168</link></item>
+<item><title>机器人短跑超越人类，但刹住是问题 - Solidot</title><link>https://www.solidot.org/story?sid=85169</link></item>
+<item><title>极端磁场改变光传播方式 - Solidot</title><link>https://www.solidot.org/story?sid=85170</link></item>
+<item><title>调查显示三分之一英文网页有 AI 创作痕迹 - Solidot</title><link>https://www.solidot.org/story?sid=85172</link></item>
+<item><title>九成生物医学论文有 AI 辅助写作痕迹 - Solidot</title><link>https://www.solidot.org/story?sid=85173</link></item>
+<item><title>因门把手安全隐患特斯拉在华召回近 300 万辆车 - Solidot</title><link>https://www.solidot.org/story?sid=85163</link></item>
+<item><title>使用胁迫密码删除手机数据的美国公民被控妨碍联邦执法的重罪 - Solidot</title><link>https://www.solidot.org/story?sid=85162</link></item>
+<item><title>中国要求政府部门提前停用 Windows 10 政府版改用 Linux - Solidot</title><link>https://www.solidot.org/story?sid=85161</link></item>
+<item><title>Windows 11 26H2 is weeks away, and Microsoft just revealed everything about it - Windows Latest</title><link>https://www.windowslatest.com/2026/08/24/microsoft-details-windows-11-26h2-ahead-of-this-years-feature-update/</link></item>
+<item><title>Windows 11’s File Explorer is restoring a feature it disabled for security, with a new “Preview anyway” button - Windows Latest</title><link>https://www.windowslatest.com/2026/08/24/windows-11s-file-explorer-is-restoring-a-feature-it-disabled-for-security-thanks-to-preview-anyway/</link></item>
+<item><title>“Sort of a feature,” Microsoft on why Ctrl+C fails on Windows 11 due to a design choice for Clipboard history - Windows Latest</title><link>https://www.windowslatest.com/2026/08/23/sort-of-a-feature-microsoft-on-why-ctrlc-fails-on-windows-11-due-to-a-design-choice/</link></item>
+<item><title>Microsoft now pays you if you invite your friends to use Edge browser on mobile - Windows Latest</title><link>https://www.windowslatest.com/2026/08/23/microsoft-now-pays-you-in-microsoft-rewards-points-if-you-invite-your-friends-to-use-edge-browser-on-mobile/</link></item>
+<item><title>Windows 11 is modernizing a mouse indicator that hasn’t changed since the Windows XP - Windows Latest</title><link>https://www.windowslatest.com/2026/08/23/windows-11-is-modernizing-a-mouse-indicator-that-hasnt-changed-since-the-windows-xp/</link></item>
+<item><title>Microsoft built a Classic Outlook “skin” for New Outlook to win over users who won’t switch - Windows Latest</title><link>https://www.windowslatest.com/2026/08/23/microsoft-built-a-classic-outlook-skin-for-new-outlook-to-win-over-users-who-wont-switch/</link></item>
+<item><title>Microsoft explains why Pinball vanished from Windows: “We couldn’t afford to spend days studying the code” - Windows Latest</title><link>https://www.windowslatest.com/2026/08/22/microsoft-explains-why-pinball-vanished-from-windows-we-couldnt-afford-to-spend-days-studying-the-code/</link></item>
+<item><title>Microsoft built a dedicated app that forces Bing everywhere on Windows 11, including Chrome, Firefox, and Brave - Windows Latest</title><link>https://www.windowslatest.com/2026/08/22/microsoft-built-a-dedicated-app-that-forces-bing-everywhere-on-windows-11-including-chrome-firefox-and-brave/</link></item>
+<item><title>Windows 11 will let you decide how much memory goes to graphics and AI on PCs with unified memory, and it’s a big deal for gaming - Windows Latest</title><link>https://www.windowslatest.com/2026/08/21/windows-11-will-let-you-decide-how-much-memory-goes-to-graphics-and-ai-on-pcs-with-unified-memory/</link></item>
+<item><title>Microsoft reveals Windows 11 26H2 auto-enables a PC recovery feature, verify if it’s already turned on - Windows Latest</title><link>https://www.windowslatest.com/2026/08/21/windows-11-26h2-will-auto-enable-point-in-time-restore-by-default-how-to-check-yours/</link></item>
+<item><title>Journalism Can Help Expose Bad Science And Trigger Real-World Change, New Study Shows - ScienceAlert</title><link>https://www.sciencealert.com/journalism-can-help-expose-bad-science-and-trigger-real-world-change-new-study-shows</link></item>
+<item><title>These Babies Grew Up With Strict Sugar Limits. Decades Later, The Results Are Dramatic. - ScienceAlert</title><link>https://www.sciencealert.com/these-babies-grew-up-with-strict-sugar-limits-decades-later-the-results-are-dramatic</link></item>
+<item><title>Massive Study Links The Time You Eat Breakfast to How Long You&amp;#39;ll Live - ScienceAlert</title><link>https://www.sciencealert.com/massive-study-links-the-time-you-eat-breakfast-to-how-long-youll-live</link></item>
+<item><title>An Ancient Shark Graveyard Has Been Found in The Egyptian Desert - ScienceAlert</title><link>https://www.sciencealert.com/an-ancient-shark-graveyard-has-been-found-in-the-egyptian-desert</link></item>
+<item><title>New Evidence Challenges What Experts Said About Working From Home - ScienceAlert</title><link>https://www.sciencealert.com/new-evidence-challenges-what-experts-said-about-working-from-home</link></item>
+<item><title>Parkinson&amp;#39;s Link to Gut Bacteria Hints at Unexpectedly Simple Treatment - ScienceAlert</title><link>https://www.sciencealert.com/parkinsons-tie-to-gut-bacteria-hints-at-unexpectedly-simple-treatment</link></item>
+<item><title>Trichotillomania: New Study Explains Why People Feel Compelled to Pull Out Their Own Hair - ScienceAlert</title><link>https://www.sciencealert.com/trichotillomania-new-study-explains-why-people-feel-compelled-to-pull-out-their-own-hair</link></item>
+<item><title>Scientists Observe Quantum Heat Waves at Room Temperature For The First Time - ScienceAlert</title><link>https://www.sciencealert.com/scientists-observe-quantum-heat-waves-at-room-temperature-for-the-first-time</link></item>
+<item><title>A New Kind of Plastic Vaporizes When Heated And Then Reassembles Itself - ScienceAlert</title><link>https://www.sciencealert.com/a-new-kind-of-plastic-vaporizes-when-heated-and-then-reassembles-itself</link></item>
+<item><title>Carl Sagan Turned This 1990 Photograph Into a Warning. It&amp;#39;s More Relevant Now Than Ever - ScienceAlert</title><link>https://www.sciencealert.com/voyager-1-took-a-final-look-back-at-earth-36-years-ago-today-its-more-relevant-than-ever</link></item>
+<item><title>Scientists Reveal The Strange Neurological Reason Your Pupils Dilate When You&amp;#39;re Surprised - ScienceAlert</title><link>https://www.sciencealert.com/scientists-reveal-the-strange-neurological-reason-your-pupils-dilate-when-youre-surprised</link></item>
+<item><title>One Type of Diabetes Responds Better to a Weekly GLP-1 Drug Than to Insulin - ScienceAlert</title><link>https://www.sciencealert.com/one-type-of-diabetes-responds-better-to-a-weekly-glp-1-drug-than-to-insulin</link></item>
+<item><title>Scientists Discover a Bizarre New Way Life Can Make DNA… Without DNA - ScienceAlert</title><link>https://www.sciencealert.com/scientists-discover-a-bizarre-new-way-life-can-make-dna-without-dna</link></item>
+<item><title>This Once-Daily Pill Helps The Skin Regain Its Color in People With Vitiligo - ScienceAlert</title><link>https://www.sciencealert.com/this-once-daily-pill-helps-the-skin-regain-its-color-in-people-with-vitiligo</link></item>
+<item><title>Science Weighs in on Whether All Those Photos Are Helping or Hurting Your Memory - ScienceAlert</title><link>https://www.sciencealert.com/science-weighs-in-on-whether-all-those-photos-are-helping-or-hurting-your-memory</link></item>
+<item><title>There Are Fungi in The Ocean, And They May Be Way More Important Than We Realized - ScienceAlert</title><link>https://www.sciencealert.com/there-are-fungi-in-the-ocean-and-they-may-be-way-more-important-than-we-realized</link></item>
+<item><title>Your Heart Can Actually Build Its Own Bypass After a Heart Attack - ScienceAlert</title><link>https://www.sciencealert.com/your-heart-can-actually-build-its-own-bypass-after-a-heart-attack</link></item>
+<item><title>Hidden Pulses Within Your Brain May Hold Your Thoughts Together - ScienceAlert</title><link>https://www.sciencealert.com/hidden-pulses-within-your-brain-may-hold-your-thoughts-together</link></item>
+<item><title>All Those Nuclear Tests Decades Ago Have Revealed Something New About Our Planet&amp;#39;s Core - ScienceAlert</title><link>https://www.sciencealert.com/all-those-nuclear-tests-decades-ago-have-revealed-something-new-about-our-planets-core</link></item>
+<item><title>A Single Blood Sample May Reveal The Biological Age of Each of Your Organs - ScienceAlert</title><link>https://www.sciencealert.com/a-single-blood-sample-may-reveal-the-biological-age-of-each-of-your-organs</link></item>
+<item><title>The Perfect Cold Water  #piday #raspberrypi - Adafruit Industries</title><link>https://blog.adafruit.com/2026/08/22/the-perfect-cold-water-piday-raspberrypi/</link></item>
+<item><title>The Brooklyn Museum Presents Art of Manga… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/08/22/the-brooklyn-museum-presents-art-of-manga-artofmanga/</link></item>
+<item><title>Today is CircuitPython Day 2026! Live stream… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/08/21/today-is-circuitpython-day-2026-live-stream-schedule-circuitpythonday2026/</link></item>
+<item><title>photo editing - Adafruit Industries</title><link>https://blog.adafruit.com/tag/photo-editing/</link></item>
+<item><title>brooklyn museum - Adafruit Industries</title><link>https://blog.adafruit.com/tag/brooklyn-museum/</link></item>
+<item><title>The Digi-Comp I, a plastic mechanical computer from 1963 - Adafruit Industries</title><link>https://blog.adafruit.com/2026/08/22/the-digi-comp-i-a-plastic-mechanical-computer-from-1963/</link></item>
+<item><title>Deep Sleep with CircuitPython #CircuitPythonDay - Adafruit Industries</title><link>https://blog.adafruit.com/2026/08/21/deep-sleep-with-circuitpython-circuitpythonday/</link></item>
+<item><title>John Park’s Workshop — LIVE! Today CircuitPython Day 8/21/26 - Adafruit Industries</title><link>https://blog.adafruit.com/2026/08/21/john-parks-workshop-live-today-circuitpython-day-8-21-26/</link></item>
+<item><title>Unlocking a locked/deactivated e-waste Cricut Maker - Adafruit Industries</title><link>https://blog.adafruit.com/2026/08/21/unlocking-a-locked-deactivated-e-waste-cricut-maker/</link></item>
+<item><title>A Guide to Self-Hosting AI Models on a Raspberry Pi #piday #raspberrypi - Adafruit Industries</title><link>https://blog.adafruit.com/2026/08/21/a-guide-to-self-hosting-ai-models-on-a-raspberry-pi-piday-raspberrypi/</link></item>
+<item><title>NASA images reveal 60-foot-wide crater on moon left by SpaceX rocket - Adafruit Industries</title><link>https://blog.adafruit.com/2026/08/21/nasa-images-reveal-60-foot-wide-crater-on-moon-left-by-spacex-rocket/</link></item>
+<item><title>LIVE! 3D Hangouts Circuit Python Day - Adafruit Industries</title><link>https://blog.adafruit.com/2026/08/21/live-3d-hangouts-circuit-python-day/</link></item>
+<item><title>Comcast adds home motion sensing to millions of Xfinity routers - Adafruit Industries</title><link>https://blog.adafruit.com/2026/08/21/comcast-adds-home-motion-sensing-to-millions-of-xfinity-routers/</link></item>
+<item><title>proximity detection - Adafruit Industries</title><link>https://blog.adafruit.com/tag/proximity-detection/</link></item>
+<item><title>More GTA 6 leaks reveal new gameplay and the entire map - Adafruit Industries</title><link>https://blog.adafruit.com/2026/08/21/more-gta-6-leaks-reveal-new-gameplay-and-the-entire-map/</link></item>
+<item><title>CircuitPython Day 2026 - Adafruit Industries</title><link>https://blog.adafruit.com/tag/circuitpython-day-2026/</link></item>
+<item><title>live streaming - Adafruit Industries</title><link>https://blog.adafruit.com/tag/live-streaming/</link></item>
+<item><title>Deskbuddy – ESP32 Touchscreen Personal Desk Dashboard #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2026/08/20/deskbuddy-esp32-touchscreen-personal-desk-dashboard-3dthursday-3dprinting/</link></item>
+<item><title>SCO Successor Xinuos Asks Court to Rehear Its Claims Against IBM/Red Hat Over Project Monterey - Slashdot</title><link>https://linux.slashdot.org/story/26/08/24/037241/sco-successor-xinuos-asks-court-to-rehear-its-claims-against-ibmred-hat-over-project-monterey</link></item>
+<item><title>interviewed one of the presidents of SCO - Slashdot</title><link>https://tech.slashdot.org/story/00/05/05/0713234/sco-answers-questions-about-linux</link></item>
+<item><title>One-Third of Web Pages are Now Written With AI, Says Pew Research - Slashdot</title><link>https://slashdot.org/story/26/08/24/0359209/one-third-of-web-pages-are-now-written-with-ai-says-pew-research</link></item>
+<item><title>Could Mecha Comet&amp;#39;s Linux PC-Phone Hybrid Be the Future of Linux Smartphones? - Slashdot</title><link>https://linux.slashdot.org/story/26/08/24/0228216/could-mecha-comets-linux-pc-phone-hybrid-be-the-future-of-linux-smartphones</link></item>
+<item><title>The Global Race To Make a Practical Quantum Computer Just Took a Big Leap Forward - Slashdot</title><link>https://tech.slashdot.org/story/26/08/23/2348249/the-global-race-to-make-a-practical-quantum-computer-just-took-a-big-leap-forward</link></item>
+<item><title>Twitch And Amazon Hit With Lawsuit for Training AI With Streamers&amp;#39; Content - Slashdot</title><link>https://yro.slashdot.org/story/26/08/23/2127238/twitch-and-amazon-hit-with-lawsuit-for-training-ai-with-streamers-content</link></item>
+<item><title>OpenAI Faces Safety Scrutiny After Introducing &amp;#39;ChatGPT For Teens&amp;#39; - Slashdot</title><link>https://news.slashdot.org/story/26/08/23/2058201/openai-faces-safety-scrutiny-after-introducing-chatgpt-for-teens</link></item>
+<item><title>Iran-linked Cyberattackers Shut Down a UK Power Plant for Four Days - Slashdot</title><link>https://news.slashdot.org/story/26/08/23/1849216/iran-linked-cyberattackers-shut-down-a-uk-power-plant-for-four-days</link></item>
+<item><title>Slovakia Finds Russian Backdoor In Traffic Speed Cameras - Slashdot</title><link>https://yro.slashdot.org/story/26/08/23/1735228/slovakia-finds-russian-backdoor-in-traffic-speed-cameras</link></item>
+<item><title>Stanford Economist Now Believes an AI Job Apocalypse Is Unlikely - Slashdot</title><link>https://it.slashdot.org/story/26/08/22/211256/stanford-economist-now-believes-an-ai-job-apocalypse-is-unlikely</link></item>
+<item><title>closing the on-ramp for people starting their careers - Slashdot</title><link>https://it.slashdot.org/story/26/08/22/0418223/is-ai-really-to-blame-for-high-unemployment-among-recent-graduates-what-economists-say</link></item>
+<item><title>23 Years After SimCity 4&amp;#39;s Release, &amp;#39;Eternal Commuter&amp;#39; Bug Finally Fixed - Slashdot</title><link>https://games.slashdot.org/story/26/08/23/0417243/23-years-after-simcity-4s-release-eternal-commuter-bug-finally-fixed</link></item>
+<item><title>Canonical is Funding a PhD to Automate C to Rust Translation - Slashdot</title><link>https://developers.slashdot.org/story/26/08/23/0458226/canonical-is-funding-a-phd-to-automate-c-to-rust-translation</link></item>
+<item><title>Supply Chain Issues Delaying US Grid Batteries&amp;#39; Installation - Slashdot</title><link>https://hardware.slashdot.org/story/26/08/23/0333203/supply-chain-issues-delaying-us-grid-batteries-installation</link></item>
+<item><title>Debian is Voting on Whether to Allow AI-Assisted Contributions - Slashdot</title><link>https://linux.slashdot.org/story/26/08/23/0539230/debian-is-voting-on-whether-to-allow-ai-assisted-contributions</link></item>
+<item><title>Defamation Suit Demanding Elsevier Retract Paper Heads Closer To Trial - Slashdot</title><link>https://science.slashdot.org/story/26/08/23/0113210/defamation-suit-demanding-elsevier-retract-paper-heads-closer-to-trial</link></item>
+<item><title>Microsoft Blames Windows Gaming Issues On RGB Lighting Devices - Slashdot</title><link>https://tech.slashdot.org/story/26/08/23/0046217/microsoft-blames-windows-gaming-issues-on-rgb-lighting-devices</link></item>
+<item><title>Low Emission Zone Led To Better Lung Size, Function Among London Children - Slashdot</title><link>https://news.slashdot.org/story/26/08/22/0537243/low-emission-zone-led-to-better-lung-size-function-among-london-children?sbsrc=md</link></item>
+<item><title>Flock is Secretly Building a Powerful New Prompt-Based AI Tool for Police - Slashdot</title><link>https://yro.slashdot.org/story/26/08/22/0526219/flock-is-secretly-building-a-powerful-new-prompt-based-ai-tool-for-police?sbsrc=md</link></item>
+<item><title>Synthetic everything is warping America - Slashdot</title><link>https://slashdot.org/submission/17350144/synthetic-everything-is-warping-america</link></item>
+<item><title>Iran-linked hackers behind cyber attack that shut down UK power plant - Slashdot</title><link>https://slashdot.org/submission/17350142/iran-linked-hackers-behind-cyber-attack-that-shut-down-uk-power-plant</link></item>
+<item><title>Chinese robot runs 100m sprint quicker than Usain Bolt&amp;#39;s world record - Slashdot</title><link>https://slashdot.org/submission/17350134/chinese-robot-runs-100m-sprint-quicker-than-usain-bolts-world-record</link></item>
+<item><title>OpenAI and Google Move Into K-12 Classrooms with New Kid-Friendly AI Offerings - Slashdot</title><link>https://slashdot.org/submission/17350132/openai-and-google-move-into-k-12-classrooms-with-new-kid-friendly-ai-offerings</link></item>
+<item><title>Brand Hype Has Existed Since the Bronze Age, Scientists Discover - Slashdot</title><link>https://slashdot.org/submission/17350128/brand-hype-has-existed-since-the-bronze-age-scientists-discover</link></item>
+<item><title>Staying Faithful When the Work Is Slow and Hard - TGC</title><link>https://www.thegospelcoalition.org/article/staying-faithful-slow-hard/</link></item>
+<item><title>What Is a Human in the AI Age? - TGC</title><link>https://www.thegospelcoalition.org/article/human-ai-age/</link></item>
+<item><title>When Unhealed Illness Brings Shame - TGC</title><link>https://www.thegospelcoalition.org/article/shame-unhealed-illness/</link></item>
+<item><title>Three Things Genesis 1 Reveals About God - TGC</title><link>https://africa.thegospelcoalition.org/article/three-things-genesis-1-reveals-about-god/</link></item>
+<item><title>Pastoral Ministry When Parenting Gets Hard - TGC</title><link>https://www.9marks.org/article/pastoral-ministry-when-parenting-gets-hard/</link></item>
+<item><title>We Need Healthy Tribalism - TGC</title><link>https://www.thegospelcoalition.org/article/need-healthy-tribalism/</link></item>
+<item><title>Learn to Grieve Well - TGC</title><link>https://www.thegospelcoalition.org/article/learn-grieve-well/</link></item>
+<item><title>A Roach Infestation Taught Me to Rest - TGC</title><link>https://www.thegospelcoalition.org/article/roach-infestation-taught-rest/</link></item>
+<item><title>Is This College Really Christian? - TGC</title><link>https://www.thegospelcoalition.org/article/college-really-christian/</link></item>
+<item><title>Forget a dorm room TV: I’d pick up a monitor with USB-C and fast charging for back to school instead - Tomsguide</title><link>https://www.tomsguide.com/computing/monitors/forget-a-dorm-room-tv-id-pick-up-a-monitor-with-usb-c-and-fast-charging-for-back-to-school-instead</link></item>
+<item><title>I started watching a random free sci-fi movie on Prime Video. I&amp;#39;m still thinking about it days later - Tomsguide</title><link>https://www.tomsguide.com/entertainment/prime-video/i-started-watching-a-random-free-sci-fi-movie-on-prime-video-im-still-thinking-about-it-days-later</link></item>
+<item><title>I&amp;#39;ve got a fly infestation — here&amp;#39;s the hack I found to tackle the problem for good - Tomsguide</title><link>https://www.tomsguide.com/home/ive-got-a-fly-infestation-heres-the-hack-i-found-to-tackle-the-problem-for-good</link></item>
+<item><title>RGB LED vs Tandem OLED TVs: We’ve tested both and here are the differences - Tomsguide</title><link>https://www.tomsguide.com/tvs/4k-tvs/rgb-led-vs-tandem-oled-tvs-weve-tested-both-and-here-are-the-differences</link></item>
+<item><title>A weightlifting coach says these are the 5 dumbbell exercises he&amp;#39;d start with to build strength, stability, coordination and confidence - Tomsguide</title><link>https://www.tomsguide.com/wellness/workouts/a-weightlifting-coach-says-these-are-the-5-dumbbell-exercises-hed-start-with-to-build-strength-stability-coordination-and-confidence</link></item>
+<item><title>I paired my iPhone with the Insta360 Mic Pro — and it beats my old DJI Mic with one neat feature - Tomsguide</title><link>https://www.tomsguide.com/phones/i-paired-my-iphone-with-the-insta360-mic-pro-and-it-beats-my-old-dji-mic-with-one-neat-feature</link></item>
+<item><title>5 biggest new shows to stream this week —including the return of an Apple TV sci-fi thriller - Tomsguide</title><link>https://www.tomsguide.com/entertainment/streaming/5-biggest-new-shows-to-stream-this-week-including-the-return-of-an-apple-tv-sci-fi-thriller</link></item>
+<item><title>I found an easier way to transfer my chats between ChatGPT, Claude and Gemini — and it only takes a single Chrome extension - Tomsguide</title><link>https://www.tomsguide.com/ai/i-found-an-easier-way-to-transfer-my-chats-between-chatgpt-claude-and-gemini-and-it-only-takes-a-single-chrome-extension</link></item>
+<item><title>People are mixing coffee with Diet Coke (yes, really) — I&amp;#39;m an ex-barista, and I tried the viral &amp;#39;fridge cigarette&amp;#39; - Tomsguide</title><link>https://www.tomsguide.com/home/coffee-makers/people-are-mixing-coffee-with-diet-coke-yes-really-im-an-ex-barista-and-i-tried-the-viral-fridge-cigarette</link></item>
+<item><title>5 best new Netflix movies and shows to stream this week (Aug. 24-30) - Tomsguide</title><link>https://www.tomsguide.com/entertainment/netflix/5-best-new-netflix-movies-and-shows-to-stream-this-week-aug-24-30-2026</link></item>
+<item><title>It&amp;#39;s Aussie marathon season — and these 18 top-rated running essentials will help you cross the finish line - Tomsguide</title><link>https://www.tomsguide.com/wellness/running/its-aussie-marathon-season-and-these-18-top-rated-running-essentials-will-help-you-cross-the-finish-line</link></item>
+<item><title>3 feel-good movies on Tubi to chase away the Sunday scaries (August 23) - Tomsguide</title><link>https://www.tomsguide.com/entertainment/netflix/3-feel-good-movies-on-tubi-to-chase-away-the-sunday-scaries-august-23</link></item>
+<item><title>Over 12,000 readers voted: These are the top 5 Netflix releases coming later this year - Tomsguide</title><link>https://www.tomsguide.com/entertainment/netflix/over-12-000-readers-voted-these-are-the-top-5-netflix-releases-coming-later-this-year</link></item>
+<item><title>How to watch &amp;#39;The Vampire Lestat: One Night Only Live&amp;#39; online — stream the music concert from anywhere - Tomsguide</title><link>https://www.tomsguide.com/entertainment/streaming/watch-the-vampire-lestat-one-night-only</link></item>
+<item><title>My 12-year-old noticed a missing Amazon shopping feature — so I tried to build it with AI - Tomsguide</title><link>https://www.tomsguide.com/ai/my-12-year-old-noticed-a-missing-amazon-shopping-feature-so-i-tried-to-build-it-with-ai</link></item>
+<item><title>3 romantic comedies on Prime Video you probably haven&amp;#39;t seen - Tomsguide</title><link>https://www.tomsguide.com/entertainment/streaming/3-romantic-comedies-on-prime-video-you-probably-havent-seen</link></item>
+<item><title>There&amp;#39;s a simple way to watch Man City vs Bournemouth for *FREE* - Tomsguide</title><link>https://www.tomsguide.com/entertainment/sports/watch-man-city-vs-bournemouth-for-free</link></item>
+<item><title>Classic sitcom fans, take our quiz to spot the fake episodes from the real ones — from ‘Friends’ to Fonzie - Tomsguide</title><link>https://www.tomsguide.com/entertainment/streaming/classic-sitcom-fans-take-our-quiz-to-spot-the-fake-episodes-from-the-real-ones-from-friends-to-fonzie</link></item>
+<item><title>I brought my yellowed pillowcases back to bright white using a simple 2-ingredient soak - Tomsguide</title><link>https://www.tomsguide.com/mattresses/pillows-bedding/i-brought-my-yellowed-pillowcases-back-to-bright-white-using-a-simple-2-ingredient-soak</link></item>
+<item><title>I’m shopping these 23 REI deals before fall — up to 50% off Patagonia fleeces, Arc’teryx gear and more - Tomsguide</title><link>https://www.tomsguide.com/wellness/fitness/im-shopping-these-23-rei-deals-before-fall-up-to-50-percent-off-patagonia-fleeces-arcteryx-gear-and-more</link></item>
+<item><title>There&amp;#39;s a simple way to watch Dutch Grand Prix 2026 — stream F1 from anywhere in the world now - Tomsguide</title><link>https://www.tomsguide.com/entertainment/sports/watch-dutch-grand-prix-2026-f1</link></item>
+<item><title>I asked an expert who works with seniors for 5 standing bodyweight exercises to build full-body strength and mobility: Here’s what he said - Tomsguide</title><link>https://www.tomsguide.com/wellness/workouts/i-asked-an-expert-who-works-with-seniors-for-5-standing-bodyweight-exercises-to-build-full-body-strength-and-mobility-heres-what-he-said</link></item>
+<item><title>25 years later, &amp;#39;The Fast and the Furious’ franchise has lost its soul —but it can get it back - Tomsguide</title><link>https://www.tomsguide.com/entertainment/movies/25-years-later-the-fast-and-the-furious-franchise-has-lost-its-soul-but-it-can-get-it-back</link></item>
+<item><title>9 last-minute back-to-school laptop deals under $800 I recommend right now - Tomsguide</title><link>https://www.tomsguide.com/computing/laptops/9-last-minute-back-to-school-laptop-deals-under-usd800-i-recommend-right-now</link></item>
+<item><title>83% of phone storage issues come down to just two culprits — here’s how to fix both - Tomsguide</title><link>https://www.tomsguide.com/phones/iphones/83-of-phone-storage-issues-come-down-to-just-two-culprits-heres-how-to-fix-both</link></item>
+<item><title>I’ve swapped to an induction cooktop from gas — 3 things I love, and 1 thing you need to know - Tomsguide</title><link>https://www.tomsguide.com/home/kitchen-dining/ive-swapped-to-an-induction-cooktop-from-gas-3-things-i-love-and-1-thing-you-need-to-know</link></item>
+<item><title>7 things to share with ChatGPT to get better answers immediately - Tomsguide</title><link>https://www.tomsguide.com/ai/7-things-to-share-with-chatgpt-to-get-better-answers-immediately</link></item>
+<item><title>I came for the mind-bending sci-fi in this animated thriller on Netflix. I left in tears - Tomsguide</title><link>https://www.tomsguide.com/entertainment/netflix/i-came-for-the-mind-bending-sci-fi-in-this-animated-thriller-on-netflix-i-left-in-tears</link></item>
+<item><title>Most people skip this muscle group in their workouts — but it&amp;#39;s one of the most essential for healthy aging - Tomsguide</title><link>https://www.tomsguide.com/wellness/workouts/most-people-skip-this-muscle-group-in-their-workouts-but-its-one-of-the-most-essential-for-healthy-aging</link></item>
+<item><title>I&amp;#39;ve been testing Pixel 11 Pro XL for a week — here&amp;#39;s why HiLight is the most disappointing new feature - Tomsguide</title><link>https://www.tomsguide.com/phones/google-pixel-phones/ive-been-testing-pixel-11-pro-xl-for-a-week-heres-why-hilight-is-the-most-disappointing-new-feature</link></item>
+<item><title>I slept on the Helix Down &amp; Feather Pillow for 3 months and love its cool feel and cradling neck support, but one type of sleeper should give it a major swerve - Tomsguide</title><link>https://www.tomsguide.com/mattresses/pillows-bedding/i-slept-on-the-helix-down-and-feather-pillow-for-3-months-and-love-its-cool-feel-and-cradling-neck-support-but-one-type-of-sleeper-should-give-it-a-major-swerve</link></item>
+<item><title>I drove the Jeep Cherokee and Kia Sportage Hybrid for a week — here’s the $40K compact SUV I recommend - Tomsguide</title><link>https://www.tomsguide.com/vehicle-tech/evs/i-drove-the-jeep-cherokee-and-kia-sportage-hybrid-for-a-week-heres-the-usd40k-compact-suv-i-recommend</link></item>
+<item><title>I walked 12,000 steps with the $799 Apple Watch Ultra 3 and the $199 Garmin Cirqa: Here’s which came out on top - Tomsguide</title><link>https://www.tomsguide.com/wellness/fitness-trackers/i-walked-12-000-steps-with-the-usd799-apple-watch-ultra-3-and-the-usd199-garmin-cirqa-heres-which-came-out-on-top</link></item>
+<item><title>Ranking all 14 ‘X-Men’ movies, from worst to best - Tomsguide</title><link>https://www.tomsguide.com/entertainment/movies/ranking-all-14-x-men-movies-from-worst-to-best</link></item>
+<item><title>I did the bear plank shoulder tap every day for a week to build deep core strength and anti-rotation stability — here’s what I learned - Tomsguide</title><link>https://www.tomsguide.com/wellness/workouts/i-did-the-bear-plank-shoulder-tap-every-day-for-a-week-to-build-deep-core-strength-and-anti-rotation-stability-heres-what-i-learned</link></item>
+<item><title>This is the 5-move ab routine women over 40 need to build deep core strength without a single crunch - Tomsguide</title><link>https://www.tomsguide.com/wellness/workouts/this-is-the-5-move-ab-routine-women-over-40-need-to-build-deep-core-strength-without-a-single-crunch</link></item>
+<item><title>The iPhone 18 Pro has me ready to break my 15-year Android streak — but it needs to do these 5 things first - Tomsguide</title><link>https://www.tomsguide.com/phones/iphones/the-iphone-18-pro-has-me-ready-to-break-my-15-year-android-streak-but-it-needs-to-do-these-5-things-first</link></item>
+<item><title>Life stress waking you up at 3 a.m.? A sleep doctor shares 3 steps to beat &amp;#39;adjustment insomnia&amp;#39; - Tomsguide</title><link>https://www.tomsguide.com/wellness/sleep/life-stress-waking-you-up-at-3-a-m-a-sleep-doctor-shares-3-steps-to-beat-adjustment-insomnia</link></item>
+<item><title>The delightful Keanu Reeves comedy you probably missed just landed on Prime Video — and it&amp;#39;s what I&amp;#39;m watching this weekend - Tomsguide</title><link>https://www.tomsguide.com/entertainment/prime-video/the-delightful-keanu-reeves-comedy-you-probably-missed-just-landed-on-prime-video-and-its-what-im-watching-this-weekend</link></item>
+<item><title>What to watch tonight: 18 new shows and movies added to HBO Max, Hulu, Paramount+ and more (Aug. 22) - Tomsguide</title><link>https://www.tomsguide.com/entertainment/streaming/what-to-watch-tonight-18-new-shows-and-movies-added-to-hbo-max-hulu-paramount-and-more-aug-22</link></item>
+<item><title>3 best new to Prime Video shows to binge-watch this weekend (August 22-23) - Tomsguide</title><link>https://www.tomsguide.com/entertainment/prime-video/3-best-new-to-prime-video-shows-to-binge-watch-this-weekend-august-22-23</link></item>
+<item><title>Netflix top 10 movies — here’s the 3 worth watching right now (August 22-23) - Tomsguide</title><link>https://www.tomsguide.com/entertainment/netflix/netflix-top-10-movies-heres-the-3-worth-watching-right-now-august-22-23</link></item>
+<item><title>There&amp;#39;s a simple way to watch South Africa vs New Zealand for *FREE* — stream Test 1 - Tomsguide</title><link>https://www.tomsguide.com/entertainment/sports/watch-south-africa-vs-new-zealand-1st-test-free</link></item>
+<item><title>How to watch &amp;#39;The Run For a Million&amp;#39; online — stream the Taylor Sheridan horse-reining competition from anywhere - Tomsguide</title><link>https://www.tomsguide.com/entertainment/streaming/watch-the-run-for-a-million</link></item>
+<item><title>3 newly added Paramount+ shows you need to binge-watch this weekend (Aug. 21-23) - Tomsguide</title><link>https://www.tomsguide.com/entertainment/paramount-plus/3-newly-added-paramount-shows-you-need-to-binge-watch-this-weekend-aug-21-23-2026</link></item>
+<item><title>My kitchen is getting a makeover: 5 clever IKEA finds I&amp;#39;m buying from $4 - Tomsguide</title><link>https://www.tomsguide.com/home/my-kitchen-is-getting-a-makeover-5-clever-ikea-finds-im-buying-from-usd4</link></item>
+<item><title>The Helix Sunset Luxe is the softest side sleeper mattress I’ve slept on — why I’d buy it at up to $749 off this Labor Day - Tomsguide</title><link>https://www.tomsguide.com/mattresses/the-helix-sunset-luxe-is-the-softest-side-sleeper-mattress-ive-slept-on-why-id-buy-it-at-up-to-usd749-off-this-labor-day</link></item>
+<item><title>Stuck in a dead zone? 3 free Google Maps alternatives that work with zero signal - Tomsguide</title><link>https://www.tomsguide.com/phones/stuck-in-a-dead-zone-3-free-google-maps-alternatives-that-work-with-zero-signal</link></item>
+<item><title>The Sinking City 2 is one of my biggest gaming surprises of the year — and it’s scratching that Resident Evil itch - Tomsguide</title><link>https://www.tomsguide.com/gaming/pc-gaming/the-sinking-city-2-is-one-of-my-biggest-gaming-surprises-of-the-year-and-its-scratching-that-resident-evil-itch</link></item>
+<item><title>Best Buy&amp;#39;s 60th Anniversary sale is almost over! 41 deals I&amp;#39;d snag in a heartbeat - Tomsguide</title><link>https://www.tomsguide.com/sales-events/best-buys-60th-anniversary-sale-is-almost-over-41-deals-id-snag-in-a-heartbeat</link></item>
+<item><title>Why did the colour black take over this season’s runways? - Wallpaper*</title><link>https://www.wallpaper.com/fashion-beauty/black-fashion-trend-aw-2026</link></item>
+<item><title>Elevate the everyday with this sculptural lighter - Wallpaper*</title><link>https://www.wallpaper.com/design-interiors/dumae-kayla-lighter</link></item>
+<item><title>Goy Architects breathes new life into a material-rich 1950s Singapore bungalow - Wallpaper*</title><link>https://www.wallpaper.com/architecture/architects-directory/goy-architects-singapore</link></item>
+<item><title>How do you build a universe fit for a Pedro Almodóvar film? - Wallpaper*</title><link>https://www.wallpaper.com/design-interiors/pedro-almodovar-bitter-christmas-set-design</link></item>
+<item><title>A historical Madrid home enters the 21st century through smart minimalism by Solar.xyz - Wallpaper*</title><link>https://www.wallpaper.com/architecture/architects-directory/solarxyz-spain</link></item>
+<item><title>Why we still can’t escape ancient Rome’s most successful housing idea - Wallpaper*</title><link>https://www.wallpaper.com/architecture/carlo-ratti-on-objectify-condominio-italy</link></item>
+<item><title>A trio of homes by Syn Architects offers a contemporary take on Saudi heritage - Wallpaper*</title><link>https://www.wallpaper.com/architecture/architects-directory/syn-architects-saudi-arabia</link></item>
+<item><title>Modern bathroom ideas that turn your bathroom into the most precious room of the house - Wallpaper*</title><link>https://www.wallpaper.com/design-interiors/interior-design/bathroom-design-trends-ideas-2027</link></item>
+<item><title>Langosteria London is The OWO’s glamorous new catch - Wallpaper*</title><link>https://www.wallpaper.com/travel/restaurants/langosteria-london-the-owo-review</link></item>
+<item><title>In Lagos, photographer Stephen Tayo captures the modern order of the 1920s Aludara movement - Wallpaper*</title><link>https://www.wallpaper.com/art/exhibitions-shows/stephen-tayo-what-comes-to-mind-when-you-see-the-garment-lagos</link></item>
+<item><title>Remembering &amp;#39;King of Lucite&amp;#39; Charles Hollis Jones - Wallpaper*</title><link>https://www.wallpaper.com/design-interiors/charles-hollis-jones-obituary</link></item>
+<item><title>The Kip House, a classic piece of post-war American Modernism is up for sale in Berkeley - Wallpaper*</title><link>https://www.wallpaper.com/architecture/residential/the-kip-house-a-classic-piece-of-post-war-american-modernism-is-up-for-sale-in-berkeley</link></item>
+<item><title>We report from the world’s most moneyed automotive event, Monterey Car Week 2026 - Wallpaper*</title><link>https://www.wallpaper.com/transportation/we-report-from-the-worlds-most-moneyed-automotive-event-monterey-car-week-2026</link></item>
+<item><title>A new residency from Belmond and Loewe brings artists to the Mallorcan town of Deià - Wallpaper*</title><link>https://www.wallpaper.com/fashion-beauty/loewe-foundation-craft-prize-la-residencia-belmond-hotel-mallorca</link></item>
+<item><title>What predictions does Jean-Christophe Babin, CEO of LVMH Watches, have for the future of watchmaking? - Wallpaper*</title><link>https://www.wallpaper.com/watches-jewellery/what-predictions-does-jean-christophe-babin-ceo-of-lvmh-watches-have-for-the-future-of-watchmaking</link></item>
+<item><title>Is your home ‘ultra-processed’? Why architects are rethinking what we build with - Wallpaper*</title><link>https://www.wallpaper.com/architecture/ultra-processed-architecture</link></item>
+<item><title>Nômade Temple Ibiza gives the island a new place of worship - Wallpaper*</title><link>https://www.wallpaper.com/travel/hotels/nomade-temple-ibiza-review</link></item>
+<item><title>This minimalist villa by Othmane Bengebara is conceived for both gatherings and retreat - Wallpaper*</title><link>https://www.wallpaper.com/architecture/architects-directory/othmane-bengebara-studio-morocco</link></item>
+<item><title>Innodigym’s new compact home gym offers multiple functions in the smallest of footprints - Wallpaper*</title><link>https://www.wallpaper.com/tech/innodigym-omni-x1-pro-review</link></item>
+<item><title>The mighty Mercedes-Maybach GLS doubles down on luxury to create the ultimate SUV - Wallpaper*</title><link>https://www.wallpaper.com/transportation/mercedes-maybach-gls-review</link></item>
+<item><title>Want to try on Stanley Kubrick’s sunglasses for size? Jacques Marie Mage is reissuing them - Wallpaper*</title><link>https://www.wallpaper.com/fashion-beauty/jacques-marie-mage-sunglasses-stanley-kubrick</link></item>
+<item><title>Gracie Abrams makes history as the face of Chanel’s new Coco Mademoiselle fragrance - Wallpaper*</title><link>https://www.wallpaper.com/fashion-beauty/fragrance/gracie-abrams-chanel-coco-mademoiselle-crush-absolu-film</link></item>
+<item><title>In transit: Anya Hindmarch has travel all mapped out - Wallpaper*</title><link>https://www.wallpaper.com/travel/in-transit-with-fashion-accessories-designer-anya-hindmarch</link></item>
+<item><title>Doshi Levien’s first textile accessories collection for Hay is a contemporary take on Indian embroidery - Wallpaper*</title><link>https://www.wallpaper.com/design-interiors/doshi-levien-hay-textiles-dori-collection</link></item>
+<item><title>Tour a treetop home peeking through Brazil’s leafy canopies - Wallpaper*</title><link>https://www.wallpaper.com/architecture/residential/sao-paulo-treetop-home-brazil</link></item>
+<item><title>The Fairphone (Gen. 6+) puts best tech practice in your pocket without compromise - Wallpaper*</title><link>https://www.wallpaper.com/tech/the-fairphone-gen-6-puts-best-tech-practice-in-your-pocket-without-compromise</link></item>
+<item><title>The home of Donald Judd&amp;#39;s most ambitious work is about to be restored - Wallpaper*</title><link>https://www.wallpaper.com/art/donald-judd-artillery-sheds-restoration-marfa</link></item>
+<item><title>Inside Paul Smith’s Nottingham archive, a treasure trove of British fashion - Wallpaper*</title><link>https://www.wallpaper.com/fashion-beauty/paul-smith-archive-nottingham</link></item>
+<item><title>Studio Mehta&amp;#39;s Kenyan retreat is luxuriously built using local and recycled materials - Wallpaper*</title><link>https://www.wallpaper.com/architecture/architects-directory/studio-mehta-kenya</link></item>
+<item><title>An essential directory of Anna Castelli Ferrieri&amp;#39;s most notable designs - Wallpaper*</title><link>https://www.wallpaper.com/design-interiors/anna-castelli-ferrieri-kartell-ultimate-guide</link></item>
+<item><title>The Savoy reaffirms its place as one of London’s great hotels - Wallpaper*</title><link>https://www.wallpaper.com/travel/hotels/the-savoy-london-review</link></item>
+<item><title>Gloriously inappropriate cartoon Modern Toss marks 21 years - Wallpaper*</title><link>https://www.wallpaper.com/art/exhibitions-shows/gloriously-inappropriate-cartoon-modern-toss-marks-21-years</link></item>
+<item><title>Merit Beauty checks into The Ritz-Carlton for its first hospitality collaboration - Wallpaper*</title><link>https://www.wallpaper.com/travel/travel-events/merit-beauty-the-ritz-carlton-collaboration</link></item>
+<item><title>Get your hands on rare Comme des Garçons with this landmark auction - Wallpaper*</title><link>https://www.wallpaper.com/fashion-beauty/comme-des-garcons-dot-comme-london-auction</link></item>
+<item><title>A compact Japanese house by Hitotomori is hidden behind a minimalist wooden fence - Wallpaper*</title><link>https://www.wallpaper.com/architecture/architects-directory/hitotomori-emerging-japanese-architectural-studio</link></item>
+<item><title>Lighting designer Nathan Orsman illuminates a garage in the Hamptons with cinematic glare - Wallpaper*</title><link>https://www.wallpaper.com/design-interiors/orsman-design-garage-hamptons</link></item>
+<item><title>A new book traces the underexplored architectural legacy of Studley Park - Wallpaper*</title><link>https://www.wallpaper.com/architecture/studley-park-riverside-modern-book</link></item>
+<item><title>Enter Saikindō, a Japanese hi-fi bar in Abu Dhabi, disguised as a fashion atelier - Wallpaper*</title><link>https://www.wallpaper.com/travel/bars/saikindo-four-seasons-hotel-abu-dhabi-review</link></item>
+<item><title>Five unique hypercars showcase the outer limits of contemporary performance design - Wallpaper*</title><link>https://www.wallpaper.com/transportation/new-hypercars-2026</link></item>
+<item><title>Seiko’s designers let their imaginations run wild with a new generation of watches - Wallpaper*</title><link>https://www.wallpaper.com/watches-jewellery/seiko-power-design-project-2026</link></item>
+<item><title>5 Pristine Arizona homes that beat the heat - Wallpaper*</title><link>https://www.wallpaper.com/architecture/residential/arizona-homes</link></item>
+<item><title>Amid Copenhagen Fashion Week’s pantomime of street style, Galib Gassanoff’s latest collection was pure poetry - Wallpaper*</title><link>https://www.wallpaper.com/fashion-beauty/copenhagen-fashion-week-galib-gassanoff-institution-ss-27</link></item>
+<item><title>Alex Prager takes on Disney Princesses: ‘They are as iconic as an Hermès bag or Marilyn Monroe’ - Wallpaper*</title><link>https://www.wallpaper.com/art/alex-prager-takes-on-disney-princesses-they-are-as-iconic-as-an-hermes-bag-or-marilyn-monroe</link></item>
+<item><title>Dior Beauty’s history is now an animated film – meet the art director and watch it here - Wallpaper*</title><link>https://www.wallpaper.com/fashion-beauty/ugo-bienvenu-animated-dior-beauty-miss-dior</link></item>
+<item><title>The new &amp;#39;Made x Barbican&amp;#39; collection features furniture and lighting inspired by sculptural Brutalism - Wallpaper*</title><link>https://www.wallpaper.com/design-interiors/made-barbican-furniture-lighting-collection-london-design-festival-2026</link></item>
+<item><title>A craft-rich eco-lodge by Moyésoa offers an ‘immersive experience’ in Côte d&amp;#39;Ivoire - Wallpaper*</title><link>https://www.wallpaper.com/architecture/architects-directory/moyesoa-ivory-coast</link></item>
+<item><title>Get up to speed on the CD revival with six stylish new ultra-compact and portable players - Wallpaper*</title><link>https://www.wallpaper.com/tech/compact-cd-players</link></item>
+<item><title>Vestige Binidufà gives Menorca’s bucolic side its moment - Wallpaper*</title><link>https://www.wallpaper.com/travel/hotels/vestige-binidufa-menorca-review</link></item>
+<item><title>A new sake merges French winemaking with Japanese brewing traditions - Wallpaper*</title><link>https://www.wallpaper.com/entertaining/food-drink/yukiguma-sake</link></item>
+<item><title>MAD’s Shenzhen Bay Culture Square encourages you not to look up, but to wander through - Wallpaper*</title><link>https://www.wallpaper.com/architecture/public-buildings/mad-shenzhen-bay-culture-square-china</link></item>
+<item><title>5 found dead at Oregon property; homicide investigation underway - BNO News</title><link>https://bnonews.com/index.php/2026/08/5-found-dead-at-oregon-property-homicide-investigation-underway/</link></item>
+<item><title>Mother, 2-year-old son killed in lightning strike in South Florida - BNO News</title><link>https://bnonews.com/index.php/2026/08/mother-2-year-old-son-killed-in-lightning-strike-in-south-florida/</link></item>
+<item><title>6 injured, structures lost as 13,000-acre Hawk Fire burns near Reno, Nevada - BNO News</title><link>https://bnonews.com/index.php/2026/08/6-injured-structures-lost-as-13000-acre-hawk-fire-burns-near-reno-nevada/</link></item>
+<item><title>30 killed after landfill collapse in Guinea’s capital - BNO News</title><link>https://bnonews.com/index.php/2026/08/30-killed-after-landfill-collapse-in-guineas-capital/</link></item>
+<item><title>Norway’s King Harald’s health worsens over weekend - BNO News</title><link>https://bnonews.com/index.php/2026/08/norways-king-haralds-health-worsens-over-weekend/</link></item>
+<item><title>Idaho Amber Alert: Izabella Bond abducted from Payette - BNO News</title><link>https://bnonews.com/index.php/2026/08/idaho-amber-alert-izabella-bond-abducted-from-payette/</link></item>
+<item><title>7 killed, including 2 police officers, in wrong-way crash in England - BNO News</title><link>https://bnonews.com/index.php/2026/08/7-killed-including-2-police-officers-in-wrong-way-crash-in-england/</link></item>
+<item><title>Man found dead at Tennessee home, possible pipe bomb discovered - BNO News</title><link>https://bnonews.com/index.php/2026/08/man-found-dead-at-tennessee-home-possible-pipe-bomb-discovered/</link></item>
+<item><title>Jake Lang arrested after vehicles drive onto sidewalk toward Minneapolis protesters - BNO News</title><link>https://bnonews.com/index.php/2026/08/jake-lang-arrested-after-vehicles-drive-onto-sidewalk-toward-minneapolis-protesters/</link></item>
+<item><title>Fire tears through apartment complex near Tampa; at least 400 displaced - BNO News</title><link>https://bnonews.com/index.php/2026/08/fire-tears-through-apartment-complex-near-tampa-at-least-400-displaced/</link></item>
+<item><title>NASA Is About to Launch a Powerful New Eye on the Universe - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260823094140.htm</link></item>
+<item><title>Trump to Award Congressional Space Medal of Honor to Artemis II Astronauts - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260823094138.htm</link></item>
+<item><title>Scientists Discover a Real-life “Dragon” and Name It After Syrax - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260823015005.htm</link></item>
+<item><title>Gut Bacteria May Unlock a Hidden Benefit of Vegetables - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260822015145.htm</link></item>
+<item><title>A Major Alzheimer’s Risk Gene May Shrink Brain Cells Years Before Symptoms - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260821012234.htm</link></item>
+<item><title>Scientists Left This Farm Field Alone. Thousands of Orchids Appeared - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260822015208.htm</link></item>
+<item><title>The Dental Crown of the Future Could Be 3D-printed While You Wait - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260822015217.htm</link></item>
+<item><title>Scientists Turn Tiny “Defects” Into a 5.5x Heat Transfer Boost - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260823014940.htm</link></item>
+<item><title>Physicists Create a Tiny “Big Bang” with Surprisingly Small Atomic Nuclei - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260822015143.htm</link></item>
+<item><title>A Hidden “on Switch” in Human DNA Has Finally Been Decoded - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260823014943.htm</link></item>
+<item><title>Experimental Compound Helps Burn Fat Without Muscle Loss - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260823014953.htm</link></item>
+<item><title>Cannabis Use Linked to 37% Higher Stroke Risk in Massive Study - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260822015215.htm</link></item>
+<item><title>This Common Vitamin Was Linked to 13% Better Cognitive Scores - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260822015138.htm</link></item>
+<item><title>Multilingual People May Have Brains Up to 13 Years Younger - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260821012226.htm</link></item>
+<item><title>This Yeast Supplement May Boost Cancer-Fighting Immunity - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260821012230.htm</link></item>
+<item><title>This Weight-Loss Hormone May Protect the Liver Even Without Weight Loss - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260820202854.htm</link></item>
+<item><title>A SpaceX Rocket Smashed Into the Moon — NASA Just Revealed the Crater - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260820002429.htm</link></item>
+<item><title>Japanese Scientists Use Tiny Silver Particles to Make DNA Assembly Up to 5x More Efficient - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260816044842.htm</link></item>
+<item><title>Tiny Robots Powered by Light Can Hunt Down and Collect Bacteria - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260816044850.htm</link></item>
+<item><title>Queen Bees Have a Disturbing Way to Survive Pesticides - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260821012224.htm</link></item>
+<item><title>A Lost Mega-Cliff May Explain the Grand Canyon’s Missing Billion Years - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260820202828.htm</link></item>
+<item><title>Ozempic Does Something Unexpected to the Brain’s Hunger Neurons - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260820002436.htm</link></item>
+<item><title>Schizophrenia’s Lost Brain Connections Follow a Surprising Pattern - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260820002443.htm</link></item>
+<item><title>Coffee Drinkers Have Less Fat, More Muscle, and Surprising Hormone Differences - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260819041228.htm</link></item>
+<item><title>Quitting Alcohol May Prime the Brain for Relapse - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260822015148.htm</link></item>
+<item><title>Peppermint Oil Lowers Blood Pressure in Just 20 Days - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260821012238.htm</link></item>
+<item><title>Exercise May Work Better for Keeping Weight Off Than Losing It - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260821012240.htm</link></item>
+<item><title>Tooth Count May Predict Survival After Pancreatic Cancer Surgery - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260821012218.htm</link></item>
+<item><title>AI-Designed “intrabodies” Could Unlock New Treatments for Alzheimer’s, Parkinson’s and MND - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260819041242.htm</link></item>
+<item><title>Scientists Discover the Brain Has a Fast Lane and Slow Lane for Clearing Waste - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260811011130.htm</link></item>
+<item><title>This Gut Microbe May Help Keep You Strong as You Age - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260820202904.htm</link></item>
+<item><title>3 Minutes of Sprinting Does Something 90 Minutes of Exercise Does Not - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260821012208.htm</link></item>
+<item><title>A Simple at-Home Test Could Cut Colorectal Cancer Death Risk by 43% - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260820202833.htm</link></item>
+<item><title>Scientists Discover How Gut Bacteria “train” the Intestine to Fight Inflammation - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260820002439.htm</link></item>
+<item><title>This Tiny Gold Crystal Could Bring Quantum Technology Out of the Deep Freeze - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260806050706.htm</link></item>
+<item><title>Sunlight Creates Quantum Entanglement Once Thought to Require Lasers - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260807035133.htm</link></item>
+<item><title>The Key to Colonizing Mars May Be Hidden Inside Asteroids - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260805082504.htm</link></item>
+<item><title>Cell-inspired Nanoreactor Turns Sunlight Into Hydrogen Peroxide - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260804034642.htm</link></item>
+<item><title>Claude Fable 5 AI Finds a Tiny Formula That Topples an 87-year-old Math Conjecture - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260804034634.htm</link></item>
+<item><title>This Frozen Fiber Makes Light and Sound Interact 1,000x More Strongly - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260821012228.htm</link></item>
+<item><title>Scientists Catch a Hidden Electronic State Forming in Just 30 Femtoseconds - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260820202856.htm</link></item>
+<item><title>NASA’s Moon Base Is Taking Shape With 20+ Lunar Landings Planned - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260810015706.htm</link></item>
+<item><title>Voyager 2 Was Running out of Power. NASA Just Bought It More Time - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260810015703.htm</link></item>
+<item><title>Scientists Tracked 12 People in Antarctica for 10 Months—what Happened Could Shape Future Mars Missions - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260806050722.htm</link></item>
+<item><title>A 0.42-Nanometer Breakthrough Could Push Transistors Beyond Silicon - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260808234943.htm</link></item>
+<item><title>Scientists Discover Bacteria That Lock Toxic Uranium Into a Stable Form - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260807035149.htm</link></item>
+<item><title>These Underwater Bones Could Solve a Mystery About Extinct Giants - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260802223428.htm</link></item>
+<item><title>Ancient Arctic Carbon Is Pouring Into the Sea, but the Seabed Captures Most of It - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260802223424.htm</link></item>
+<item><title>Some Coastal Cities Are Sinking Faster Than the Ocean Is Rising - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260801042824.htm</link></item>
+<item><title>Major Study Challenges Long-Held Fears About Acetaminophen and Ibuprofen Use in Babies - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260805082510.htm</link></item>
+<item><title>World’s Most-Used Weedkiller Disrupts Honeybee Brains - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260804034638.htm</link></item>
+<item><title>Two Deadly Flowers Could Inspire Powerful New Medicines - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260801042818.htm</link></item>
+<item><title>AI Reveals a Massive Algae Boom Across the World’s Oceans - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260801042834.htm</link></item>
+<item><title>The “Asian Water Tower” Is Losing 24 Billion Tonnes of Groundwater Every Year - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260820002454.htm</link></item>
+<item><title>Scientists Discover a Natural Arctic Cloud Factory Missing from Climate Models - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260816044839.htm</link></item>
+<item><title>Black Holes Keep Tearing These Stars Apart - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260822015119.htm</link></item>
+<item><title>400-Year-Old Shark Eyes Defy Aging - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260821012232.htm</link></item>
+<item><title>“One-in-a-Million” Sea Creature Fossil Preserves Soft Tissue for 450 Million Years - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/08/260820002450.htm</link></item>
+<item><title>Digger Is A ‘Leap Into The Unknown’ For Tom Cruise: ‘It Took All Of My Knowledge’ - Empire</title><link>https://www.empireonline.com/movies/news/digger-tom-cruise-leap-into-the-unknown-exclusive/</link></item>
+<item><title>Insidious: Out Of The Further - Empire</title><link>https://www.empireonline.com/movies/reviews/insidious-out-of-the-further/</link></item>
+<item><title>Blue Eye Samurai Season 2 Trailer Brings Mizu To London – With A Third And Final Season Confirmed - Empire</title><link>https://www.empireonline.com/tv/news/blue-eye-samurai-sets-third-and-final-season-at-netflix-as-season-2-trailer-brings-mizu-to-london/</link></item>
+<item><title>Digger Is A Disaster Movie Where ‘The Disaster Is Us’, Says Alejandro G. Iñárritu - Empire</title><link>https://www.empireonline.com/movies/news/digger-disaster-movie-where-disaster-is-us-alejandro-g-inarritu-exclusive/</link></item>
+<item><title>The Pitt Season 3 Trailer: Noah Wyle Clocks Back In As Another Intense Shift Begins On HBO Max - Empire</title><link>https://www.empireonline.com/tv/news/the-pitt-season-3-trailer-noah-wyle-clocks-back-in-as-another-intense-shift-begins-on-hbo-max/</link></item>
+<item><title>Meghan Markle Circling Acting Return In Guy Ritchie’s The Gentlemen Netflix Series - Empire</title><link>https://www.empireonline.com/tv/news/meghan-markle-circling-acting-return-in-guy-ritchies-the-gentlemen-netflix-series/</link></item>
+<item><title>Digger: Riz Ahmed ‘Forgot About Tom Cruise’ While Starring Opposite His Wild New Character - Empire</title><link>https://www.empireonline.com/movies/news/digger-riz-ahmed-forgot-about-tom-cruise-exclusive/</link></item>
+<item><title>The Empire Film Podcast Ft. Teenage Sex And Death At Camp Miasma Director Jane Schoenbrun - Empire</title><link>https://www.empireonline.com/movies/news/the-empire-film-podcast-ft-teenage-sex-and-death-at-camp-miasma-director-jane-schoenbrun/</link></item>
+<item><title>Cyberpunk: Edgerunners Season 2 Trailer Is Here To Take You Back To Night City - Empire</title><link>https://www.empireonline.com/tv/news/cyberpunk-edgerunners-season-2-trailer-release-date-netflix/</link></item>
+<item><title>Charles Melton Eyeing Destin Daniel Cretton’s Naruto Movie As Fan-Favourite Ninja Mentor Kakashi - Empire</title><link>https://www.empireonline.com/movies/news/charles-melton-eyeing-destin-daniel-crettons-naruto-movie-as-villain-kakashi/</link></item>
+<item><title>Empire’s Digger Subscriber Cover, Created By Dawn Baillie, Revealed - Empire</title><link>https://www.empireonline.com/movies/news/digger-subscriber-cover-dawn-baillie-revealed/</link></item>
+<item><title>Empire’s World-Exclusive Digger Cover Revealed - Empire</title><link>https://www.empireonline.com/movies/news/digger-cover-revealed-tom-cruise-world-exclusive/</link></item>
+<item><title>Wildwood Trailer Teases An Epic Stop-Motion Fantasy Tale Of Love, Loss And War From Laika Studios - Empire</title><link>https://www.empireonline.com/movies/news/wildwood-trailer-teases-an-epic-stop-motion-fantasy-tale-of-love-loss-and-war-from-laika-studios/</link></item>
+<item><title>Avengers: Doomsday’s Disney+ Watchlist Has Arrived – Here’s Everything You Need To Watch - Empire</title><link>https://www.empireonline.com/movies/news/avengers-doomsdays-disney-watchlist-has-arrived-heres-everything-you-need-to-watch/</link></item>
+<item><title>Hayden Panettiere, Star Of Scream Franchise And Heroes, Dies Age 36 - Empire</title><link>https://www.empireonline.com/movies/news/hayden-panettiere-star-of-scream-franchise-and-heroes-dies-age-36/</link></item>
+<item><title>Zootopia 3 Officially Confirmed By Disney At D23 - Empire</title><link>https://www.empireonline.com/movies/news/zootopia-3-confirmed-by-disney/</link></item>
+<item><title>Coyote vs. ACME Review - Empire</title><link>https://www.empireonline.com/movies/reviews/coyote-vs-acme/</link></item>
+<item><title>The End Of Oak Street Review - Empire</title><link>https://www.empireonline.com/movies/reviews/the-end-of-oak-street/</link></item>
+<item><title>Nimrods Review - Empire</title><link>https://www.empireonline.com/movies/reviews/nimrods/</link></item>
+<item><title>The Last House Review - Empire</title><link>https://www.empireonline.com/movies/reviews/the-last-house/</link></item>
+<item><title>Ice Cream Man Review - Empire</title><link>https://www.empireonline.com/movies/reviews/ice-cream-man/</link></item>
+<item><title>Teenage Sex And Death At Camp Miasma Review - Empire</title><link>https://www.empireonline.com/movies/reviews/teenage-sex-and-death-at-camp-miasma/</link></item>
+<item><title>Three Great Dinosaur Movies To Stream – That Aren’t Jurassic Park Films - Empire</title><link>https://www.empireonline.com/movies/features/three-great-dinosaur-movies-that-arent-jurassic-park-films/</link></item>
+<item><title>Is Marvel Back? Spider-Man, Mutants, Doomsday And Black Panther 3 Say Yes - Empire</title><link>https://www.empireonline.com/movies/features/is-marvel-back-spider-man-mutants-doomsday-black-panther-3/</link></item>
+<item><title>Sons Of Anarchy Sets ‘Legends’ Spin-Off With Original Cast Coming Back And A Meta Twist - Empire</title><link>https://www.empireonline.com/tv/news/sons-of-anarchy-sets-legends-spin-off-with-original-cast-coming-back-and-a-meta-twist/</link></item>
+<item><title>Slow Horses Season 6 Trailer: Olivia Cooke Is Back As Apple TV Spy Series Teases An Explosive Return - Empire</title><link>https://www.empireonline.com/tv/news/slow-horses-season-6-trailer-olivia-cooke-is-back-as-apple-tv-spy-series-teases-an-explosive-return/</link></item>
+<item><title>IT: Welcome To Derry Finally Scores Season 2 Renewal At HBO Max — Reveals First Plot Details - Empire</title><link>https://www.empireonline.com/tv/news/it-welcome-to-derry-finally-scores-season-2-renewal-at-hbo-max-reveals-first-plot-details/</link></item>
+<item><title>VisionQuest Trailer Concludes Marvel TV Trilogy With Vision And Ultron’s Existential Odyssey - Empire</title><link>https://www.empireonline.com/tv/news/visionquest-trailer-marvel-trilogy-vision-ultron-existential-odyssey/</link></item>
+<item><title>Ahsoka Season 2 Trailer Kicks Off A Star War With Thrawn, Nightsisters, Anakin And More - Empire</title><link>https://www.empireonline.com/tv/news/ahsoka-season-2-trailer-star-wars-thrawn-anakin-more/</link></item>
+<item><title>Lanterns Review - Empire</title><link>https://www.empireonline.com/tv/reviews/lanterns/</link></item>
+<item><title>Furious Review - Empire</title><link>https://www.empireonline.com/tv/reviews/furious/</link></item>
+<item><title>Mortal Shell II Review - Empire</title><link>https://www.empireonline.com/gaming/reviews/mortal-shell-ii/</link></item>
+<item><title>Marvel Tōkon: Fighting Souls Review - Empire</title><link>https://www.empireonline.com/gaming/reviews/marvel-tokon-fighting-souls/</link></item>
+<item><title>Halo: Campaign Evolved Review - Empire</title><link>https://www.empireonline.com/gaming/reviews/halo-campaign-evolved/</link></item>
+<item><title>D-topia Review - Empire</title><link>https://www.empireonline.com/gaming/reviews/d-topia-review/</link></item>
+<item><title>Councillor Dianne Saxe decided at the last minute to run in a different ward - Toronto Life</title><link>https://torontolife.com/city/councillor-dianne-saxe-decided-at-the-last-minute-to-run-in-a-different-ward/</link></item>
+<item><title>Olivia Chow is 11 points ahead of Brad Bradford among decided and leaning voters - Toronto Life</title><link>https://torontolife.com/city/olivia-chow-is-11-points-ahead-of-brad-bradford-among-decided-and-leaning-voters/</link></item>
+<item><title>A 12-storey rental tower may soon rise above Hamilton’s Gore Park - Toronto Life</title><link>https://torontolife.com/real-estate/hamilton-gore-park-residences-rentals/</link></item>
+<item><title>Toronto’s best new tasting menus for $100 or less - Toronto Life</title><link>https://torontolife.com/food/torontos-best-new-tasting-menus-for-100-or-less/</link></item>
+<item><title>An Ontario judge is defying the province’s new cash bail system - Toronto Life</title><link>https://torontolife.com/city/an-ontario-judge-is-defying-the-provinces-new-cash-bail-system/</link></item>
+<item><title>A new art installation asks, “Can we trust our politicians?” - Toronto Life</title><link>https://torontolife.com/culture/public-trust-exhibition/</link></item>
+<item><title>Mirvish Village is struggling to land retailers - Toronto Life</title><link>https://torontolife.com/real-estate/mirvish-village-retail-commercial-the-annex/</link></item>
+<item><title>The wackiest things to eat at the CNE this year, ranked - Toronto Life</title><link>https://torontolife.com/food/a-ranking-of-the-wackiest-things-to-eat-at-the-cne-2026/</link></item>
+<item><title>Mark Carney has asked Canada’s premiers to lift the ban on American booze - Toronto Life</title><link>https://torontolife.com/city/mark-carney-has-asked-canadas-premiers-to-lift-the-american-booze-ban/</link></item>
+<item><title>Doug Ford’s spring visit to Texas cost more than $93,000 - Toronto Life</title><link>https://torontolife.com/city/doug-fords-spring-visit-to-texas-cost-more-than-93000/</link></item>
+<item><title>The Toronto Tempo introduced its new mascots and we love them already - Toronto Life</title><link>https://torontolife.com/city/the-toronto-tempo-introduced-its-new-mascots-and-we-love-them-already/</link></item>
+<item><title>Nate Erskine-Smith is running for Toronto city council - Toronto Life</title><link>https://torontolife.com/city/nate-erskine-smith-is-running-for-toronto-city-council/</link></item>
+<item><title>“It’s a sickness, really”: Jen Agg will never stop building new restaurants - Toronto Life</title><link>https://torontolife.com/culture/jen-agg-table-boss-interview/</link></item>
+<item><title>The province is giving $9.8 million to the Skills Development Fund - Toronto Life</title><link>https://torontolife.com/city/the-province-is-giving-9-8-million-to-the-skills-development-fund/</link></item>
+<item><title>Now’s your chance to own one of Toronto’s World Cup beaver statues - Toronto Life</title><link>https://torontolife.com/culture/nows-your-chance-to-own-one-of-torontos-world-cup-beaver-statues/</link></item>
+<item><title>Can Zanzibar recover from its devastating fire? - Toronto Life</title><link>https://torontolife.com/real-estate/zanzibar-tavern-fire-strip-clubs-yonge/</link></item>
+<item><title>There’s a Legionnaires’ disease outbreak at Bathurst and Dupont - Toronto Life</title><link>https://torontolife.com/city/theres-a-legionnaires-disease-outbreak-at-bathurst-and-dupont/</link></item>
+<item><title>Where Down Home owners Joel Gray and Hannah Harradine eat in Grey County - Toronto Life</title><link>https://torontolife.com/food/where-down-home-owners-joel-gray-and-hannah-harradine-eat-in-grey-county/</link></item>
+<item><title>Justin Trudeau and a toilet plunger went viral in Home Hardware - Toronto Life</title><link>https://torontolife.com/city/justin-trudeau-katy-perry-home-hardware-toilet-video/</link></item>
+<item><title>Jen Agg hit “emotional rock bottom” while opening General Public - Toronto Life</title><link>https://torontolife.com/culture/jen-agg-table-boss-excerpt/</link></item>
+<item><title>Rhythm is a dancer: hoofers unite at a big-deal international tap dance festival - Toronto Life</title><link>https://torontolife.com/culture/toronto-international-tap-dance-festival/</link></item>
+<item><title>Sort-of Secret: Biggs Ribs, a halal barbecue restaurant in Brampton - Toronto Life</title><link>https://torontolife.com/food/biggs-ribs-halal-barbecue-brampton-hamilton/</link></item>
+<item><title>Selling Seduction: This Toronto pickup artist charged exorbitant sums to teach men how to get laid. Then he was arrested for sexual assault - Toronto Life</title><link>https://torontolife.com/deep-dives/selling-seduction-this-toronto-pickup-artist-charged-exorbitant-sums-to-teach-men-how-to-get-laid-then-he-was-arrested-for-sexual-assault/</link></item>
+<item><title>The Toronto police posted 2,500 stolen items online in an effort to return them - Toronto Life</title><link>https://torontolife.com/city/the-toronto-police-posted-2500-stolen-items-online-in-an-effort-to-return-them/</link></item>
+<item><title>Ally Pankiw said “absolutely not” to the possibility of directing Harry Potter - Toronto Life</title><link>https://torontolife.com/culture/ally-pankiw-said-absolutely-not-to-the-possibility-of-directing-harry-potter/</link></item>
+<item><title>The Court of Appeal for Ontario says Doug Ford can get rid of Toronto bike lanes - Toronto Life</title><link>https://torontolife.com/city/the-court-of-appeal-for-ontario-says-doug-ford-can-get-rid-of-toronto-bike-lanes/</link></item>
+<item><title>Carolyn Parrish and Bonnie Crombie are tied in the Mississauga mayoral race, despite Doug Ford backing Parrish - Toronto Life</title><link>https://torontolife.com/city/carolyn-parrish-and-bonnie-crombie-are-tied-in-the-mississauga-mayoral-race-despite-doug-ford-backing-parrish/</link></item>
+<item><title>You can get Mexican street-style barbecue at this west-end wine bar - Toronto Life</title><link>https://torontolife.com/food/cascabel-bbq-mexican-street-style-barbecue-paradise-grapevine-geary/</link></item>
+<item><title>A major Heated Rivalry casting update was just announced - Toronto Life</title><link>https://torontolife.com/culture/a-major-heated-rivalry-casting-update-was-just-announced/</link></item>
+<item><title>Ten Canadian youth deaths were caused by e-scooter and e-bike accidents last year - Toronto Life</title><link>https://torontolife.com/city/ten-canadian-youth-deaths-were-caused-by-e-scooter-and-e-bike-accidents-last-year/</link></item>
+<item><title>Inside Hank, a new mid-century modern menswear boutique at Bayview Village - Toronto Life</title><link>https://torontolife.com/style/menswear-store-bayview-village/</link></item>
+<item><title>This new King West steakhouse offers butler service - Toronto Life</title><link>https://torontolife.com/food/sonny-cant-dance-king-west-steakhouse-butler-service/</link></item>
+<item><title>The Ontario PC party allegedly sent a spy to Jamaica to surveil Bonnie Crombie’s vacation - Toronto Life</title><link>https://torontolife.com/city/the-ontario-pc-party-allegedly-sent-a-spy-to-jamaica-to-surveil-bonnie-crombies-vacation/</link></item>
+<item><title>An Ontario cabinet minister wants “steep fines and jail time” for deepfake scammers - Toronto Life</title><link>https://torontolife.com/city/an-ontario-cabinet-minister-wants-steep-fines-and-jail-time-for-deepfake-scammers/</link></item>
+<item><title>A new report says Ontario auto thefts have decreased by 8.4 per cent - Toronto Life</title><link>https://torontolife.com/city/a-new-report-says-ontario-auto-thefts-have-decreased-by-8-4-per-cent/</link></item>
+<item><title>This new wine bar wants to level up your park picnics - Toronto Life</title><link>https://torontolife.com/food/the-wine-thief-bar-bloorcourt/</link></item>
+<item><title>Everything there is to eat and drink at the Distillery District’s Country Fest - Toronto Life</title><link>https://torontolife.com/food/everything-there-is-to-eat-and-drink-at-the-distillery-districts-country-fest/</link></item>
+<item><title>Number one draft pick Gavin McKenna brings hope to the Toronto Maple Leafs - Toronto Life</title><link>https://torontolife.com/city/number-one-draft-pick-gavin-mckenna-brings-hope-to-the-toronto-maple-leafs/</link></item>
+<item><title>The cost of Ontario Line construction has more than tripled - Toronto Life</title><link>https://torontolife.com/city/the-cost-of-ontario-line-construction-has-more-than-tripled/</link></item>
+<item><title>The pod people are coming: Love Is Blind is heading to Canada - Toronto Life</title><link>https://torontolife.com/culture/love-is-blind-canada/</link></item>
+<item><title>Toronto police are cracking down on e-bikes and e-scooters - Toronto Life</title><link>https://torontolife.com/city/toronto-police-are-cracking-down-on-e-bikes-and-e-scooters/</link></item>
+<item><title>“It’s a lot more than twiddling knobs onstage”: Michael Rancic reveals the secret history of electronic music in Canada - Toronto Life</title><link>https://torontolife.com/culture/a-nation-of-tinkerers/</link></item>
+<item><title>Editor’s Letter: The rise of romantic relationships with AI - Toronto Life</title><link>https://torontolife.com/city/editors-letter-the-rise-of-romantic-relationships-with-ai/</link></item>
+<item><title>A Porter flight was cancelled due to a misbehaving child. One stranded passenger says people should have more empathy - Toronto Life</title><link>https://torontolife.com/city/a-porter-flight-was-cancelled-due-to-a-misbehaving-child-one-stranded-passenger-says-people-should-have-more-empathy/</link></item>
+<item><title>The city’s best pizza slices, according to Toronto chefs - Toronto Life</title><link>https://torontolife.com/food/the-citys-best-pizza-slices-according-to-toronto-chefs/</link></item>
+<item><title>“I overdosed countless times and delivered a baby while addicted to heroin. Safe consumption sites saved my life” - Toronto Life</title><link>https://torontolife.com/memoir/safe-consumption-sites-memoir/</link></item>
+<item><title>$5 million for a Georgian Bay cottage with a yacht-ready private harbour - Toronto Life</title><link>https://torontolife.com/real-estate/penetanguishene-georgian-bay-cottage-private-harbour/</link></item>
+<item><title>Where Chotto Matte’s global executive chef Jordan Sclare eats in Kensington Market - Toronto Life</title><link>https://torontolife.com/food/where-chotto-matte-chef-jordan-sclare-eats-kensington-market/</link></item>
+<item><title>The Perfect Boyfriend: A fascinating, touching and terrifying conversation with Sarah Griffin and her AI partner, Sinclair - Toronto Life</title><link>https://torontolife.com/deep-dives/the-perfect-boyfriend-a-fascinating-touching-and-terrifying-conversation-with-sarah-griffin-and-her-ai-partner-sinclair/</link></item>
+<item><title>The union representing TTC station supervisors has voted in favour of a strike - Toronto Life</title><link>https://torontolife.com/city/the-union-representing-ttc-station-supervisors-has-voted-in-favour-of-a-strike/</link></item>
+<item><title>Mayor Olivia Chow is still in the lead ahead of October’s mayoral election - Toronto Life</title><link>https://torontolife.com/city/mayor-olivia-chow-is-still-in-the-lead-ahead-of-octobers-mayoral-election/</link></item>
+<item><title>An art exhibition will open in the ruins of the burned-out St. Anne’s Church - Toronto Life</title><link>https://torontolife.com/culture/an-art-exhibition-will-open-in-the-ruins-of-the-burned-out-st-annes-church/</link></item>
+<item><title>For the second time in less than a month, a SickKids employee has been charged with child sexual abuse offences - Toronto Life</title><link>https://torontolife.com/city/for-the-second-time-in-less-than-a-month-a-sickkids-employee-has-been-charged-with-child-sexual-abuse-offences/</link></item>
+<item><title>The Junction is getting a British Indian sports bar - Toronto Life</title><link>https://torontolife.com/food/tap-n-tandoor-british-indian-sports-bar-junction/</link></item>
+<item><title>What NBA champion Lu Dort loves about Yorkville - Toronto Life</title><link>https://torontolife.com/shopping/what-nba-champion-lu-dort-loves-about-yorkville/</link></item>
+<item><title>“The answer is so personal that it’s hard to talk about in an interview:” Matt Johnson’s second movie in six months, Tony, is out now - Toronto Life</title><link>https://torontolife.com/culture/matt-johnson-tony/</link></item>
+<item><title>Dear Urban Diplomat: My favourite coffee shop just adopted a no-laptops policy. What’s a remote worker to do? - Toronto Life</title><link>https://torontolife.com/city/dear-urban-diplomat-my-favourite-coffee-shop-just-adopted-a-no-laptops-policy-whats-a-remote-worker-to-do/</link></item>
+<item><title>This Toronto restaurant will pay for your meal—and give you $100—if you finish their spiciest curry - Toronto Life</title><link>https://torontolife.com/food/curryish-tavern-spicy-curry-challenge/</link></item>
+<item><title>The Toronto Zoo has been blessed with a pygmy hippo baby - Toronto Life</title><link>https://torontolife.com/city/toronto-zoo-pygmy-hippo-birth/</link></item>
+<item><title>Toronto police officers “likely” stole $5,000 from a Liberty Village apartment, according to a judge - Toronto Life</title><link>https://torontolife.com/city/toronto-police-officers-likely-stole-5000-from-a-liberty-village-apartment-according-to-a-judge/</link></item>
+<item><title>The Théâtre français de Toronto finds a permanent home—in a Danforth rental tower - Toronto Life</title><link>https://torontolife.com/real-estate/theatre-francais-danforth-rental-woodbourne-core-group/</link></item>
+<item><title>A Toronto woman found a coyote on her bed - Toronto Life</title><link>https://torontolife.com/city/a-toronto-woman-found-a-coyote-in-her-bed/</link></item>
+<item><title>Does Prime Minister Mark Carney want to expand Billy Bishop after all? - Toronto Life</title><link>https://torontolife.com/city/does-prime-minister-mark-carney-want-to-expand-billy-bishop-after-all/</link></item>
+<item><title>Mayor Chow and Prime Minister Carney agree on $2.7-billion deal for affordable housing - Toronto Life</title><link>https://torontolife.com/real-estate/affordable-housing-rentals-mark-carney-olivia-chow/</link></item>
+<item><title>Summer of the Slush: Eleven frozen drinks to slurp right now - Toronto Life</title><link>https://torontolife.com/food/frozen-drinks-slushies/</link></item>
+<item><title>“I’m uncomfortable with idolatry”: Leslie Feist on her induction into the Canadian Songwriters Hall of Fame - Toronto Life</title><link>https://torontolife.com/culture/im-uncomfortable-with-idolatry-leslie-feist-on-her-induction-into-the-canadian-songwriters-hall-of-fame/</link></item>
+<item><title>Please don’t bother Heated Rivalry’s cast and crew while they’re filming - Toronto Life</title><link>https://torontolife.com/culture/please-dont-bother-heated-rivalrys-cast-and-crew-while-theyre-filming/</link></item>
+<item><title>Toronto police have laid 4,033 charges as part of an organized retail crime crackdown - Toronto Life</title><link>https://torontolife.com/city/toronto-police-have-laid-4033-charges-as-part-of-an-organized-retail-crime-crackdown/</link></item>
+<item><title>A 60-year-old Riverdale apartment is going net-zero in style - Toronto Life</title><link>https://torontolife.com/real-estate/woodgreen-444-logan-net-zero-retrofit-riverdale/</link></item>
+<item><title>According to poll results, most Ontarians believe the provincial expenses scandal “reflects a broader culture of entitlement” - Toronto Life</title><link>https://torontolife.com/city/according-to-poll-results-most-ontarians-believe-the-provincial-expenses-scandal-reflects-a-broader-culture-of-entitlement/</link></item>
+<item><title>“I feel like Muskoka is the main character”: Meet Jacob Whiteduck-Lavoie, the star of America’s hottest new show, Sterling Point - Toronto Life</title><link>https://torontolife.com/culture/muskoka-sterling-point/</link></item>
+<item><title>This King West cocktail bar is transforming into a faux boutique hotel - Toronto Life</title><link>https://torontolife.com/food/hotel-a-toi-lobby-bar-king-west/</link></item>
+<item><title>A small business in Woodbridge says Toys “R” Us Canada never paid for a $168,000 order - Toronto Life</title><link>https://torontolife.com/city/a-small-business-in-woodbridge-says-toys-r-us-canada-never-paid-for-a-168000-order/</link></item>
+<item><title>Due to flooding, states of emergency have been declared in Lincoln and St. Catharines - Toronto Life</title><link>https://torontolife.com/city/due-to-flooding-states-of-emergency-have-been-declared-in-lincoln-and-st-catharines/</link></item>
+<item><title>“The best songs expose something about the performer”: This Toronto songwriter just earned one of the country’s top musical honours - Toronto Life</title><link>https://torontolife.com/culture/zale-interview/</link></item>
+<item><title>A couple of Swiss Chalet superfans tied the knot last month - Toronto Life</title><link>https://torontolife.com/food/a-couple-of-swiss-chalet-superfans-tied-the-knot-last-month/</link></item>
+<item><title>Scammers are selling fake Toronto Islands ferry tickets - Toronto Life</title><link>https://torontolife.com/city/scammers-are-selling-fake-toronto-islands-ferry-tickets/</link></item>
+<item><title>Could the Ontario Science Centre become a TDSB school? - Toronto Life</title><link>https://torontolife.com/real-estate/ontario-science-centre-olivia-chow-doug-ford-ontario-place/</link></item>
+<item><title>There’s a new queer-owned café and community space in the west end - Toronto Life</title><link>https://torontolife.com/food/vers-queer-cafe-events-space-carleton-village/</link></item>
+<item><title>This Cabbagetown violinist makes $71,000 a year. How does she spend it? - Toronto Life</title><link>https://torontolife.com/city/this-cabbagetown-violinist-makes-71000-a-year-how-does-she-spend-it/</link></item>
+<item><title>Tennis Lessons: On the precipice of superstardom, Victoria Mboko’s knee gave out. The agony and ecstacy of being a teen prodigy - Toronto Life</title><link>https://torontolife.com/deep-dives/tennis-lessons-on-the-precipice-of-superstardom-victoria-mbokos-knee-gave-out-the-agony-and-ecstacy-of-being-a-teen-prodigy/</link></item>
+<item><title>$6.5 million for a Casa Loma mansion with a covered entrance and two toilets in the ensuite - Toronto Life</title><link>https://torontolife.com/real-estate/casa-loma-forest-hill-shorncliffe-mansion-st-clair/</link></item>
+<item><title>Six must-see shows at the SummerWorks Festival - Toronto Life</title><link>https://torontolife.com/culture/summerworks-festival-2026/</link></item>
+<item><title>Where Punch chef Mandar Kulkarni eats in Scarborough - Toronto Life</title><link>https://torontolife.com/food/where-punch-chef-mandar-kulkarni-eats-in-scarborough/</link></item>
+<item><title>According to a new poll, Chris Alexander’s mayoral run could hurt Brad Bradford’s chances - Toronto Life</title><link>https://torontolife.com/city/according-to-a-new-poll-chris-alexanders-mayoral-run-could-hurt-brad-bradfords-chances/</link></item>
+<item><title>Toronto police say a man posing as a psychic convinced a victim to pay him $800,000 - Toronto Life</title><link>https://torontolife.com/city/toronto-police-say-a-man-posing-as-a-psychic-convinced-a-victim-to-pay-him-800000/</link></item>
+<item><title>Eleven decadent new frozen treats to enjoy this summer - Toronto Life</title><link>https://torontolife.com/food/eleven-decadent-new-frozen-treats-to-enjoy-this-summer/</link></item>
+<item><title>Metrolinx admitted to dumping diesel fuel in Lake Simcoe - Toronto Life</title><link>https://torontolife.com/city/metrolinx-admitted-to-dumping-diesel-fuel-in-lake-simcoe/</link></item>
+<item><title>What TL Insiders can look forward to in August - Toronto Life</title><link>https://torontolife.com/insider/what-tl-insiders-can-look-forward-to-in-august-5/</link></item>
+<item><title>A Toronto resident has tested positive for West Nile virus - Toronto Life</title><link>https://torontolife.com/city/a-toronto-resident-has-tested-positive-for-west-nile-virus/</link></item>
+<item><title>The art exhibitions you need to see in Toronto this August - Toronto Life</title><link>https://torontolife.com/culture/the-art-exhibitions-you-need-to-see-in-toronto-this-august/</link></item>
+<item><title>A city report says only 44 per cent of Toronto’s World Cup Fan Festival premium tickets were sold - Toronto Life</title><link>https://torontolife.com/city/a-city-report-says-only-44-per-cent-of-torontos-world-cup-fan-festival-premium-tickets-were-sold/</link></item>
+<item><title>The CNE received 50,000 applications for 5,000 available jobs - Toronto Life</title><link>https://torontolife.com/city/the-cne-received-50000-applications-for-5000-available-jobs/</link></item>
+<item><title>$3.2 million for a mid-century-modern monument hidden in a forest off Royal York - Toronto Life</title><link>https://torontolife.com/real-estate/stonegate-queensway-etobicoke-royal-york-esa-mid-century-modern/</link></item>
+<item><title>Ontario’s first medical school dedicated to training family doctors will open in 2028 - Toronto Life</title><link>https://torontolife.com/city/ontarios-first-medical-school-dedicated-to-training-family-doctors-will-open-in-2028/</link></item>
+<item><title>How a sleepy market and a cash windfall helped this 20-something buy her first condo - Toronto Life</title><link>https://torontolife.com/real-estate/how-a-sleepy-market-and-a-cash-windfall-helped-this-20-something-buy-her-first-condo/</link></item>
+<item><title>A Peel police officer left a loaded gun in a change room at the mall - Toronto Life</title><link>https://torontolife.com/city/a-peel-police-officer-left-a-loaded-gun-in-a-change-room-at-the-mall/</link></item>
+<item><title>Brad Bradford has never heard of former citizenship and immigration minister Chris Alexander - Toronto Life</title><link>https://torontolife.com/city/brad-bradford-has-never-heard-of-former-citizenship-and-immigration-minister-chris-alexander/</link></item>
+<item><title>Here are the GTHA buildings with the highest and lowest condo fees - Toronto Life</title><link>https://torontolife.com/real-estate/gta-gtha-condos-condo-fees-wahi-ritz-carlton/</link></item>
+<item><title>Another real estate giant is gobbling up Toronto’s apartment towers - Toronto Life</title><link>https://torontolife.com/real-estate/bst-canada-rentals-apartments-investors/</link></item>
+<item><title>#Thunderbird - Linux Journal</title><link>https://www.linuxjournal.com/tag/thunderbird-0</link></item>
+<item><title>Two US tanker aircraft leave Bulgaria a month after deployment upset Iran - Defense News</title><link>https://www.defensenews.com/global/europe/2026/08/24/two-us-tanker-aircraft-leave-bulgaria-a-month-after-deployment-upset-iran/</link></item>
 </channel></rss>
