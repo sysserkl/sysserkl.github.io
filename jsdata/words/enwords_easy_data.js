@@ -1861,8 +1861,9 @@ earthrise
 antielitism
 anti-sexist
 centre of gravity
-
-
+Bremen
+Duncan
+salesgirl
 
 
 

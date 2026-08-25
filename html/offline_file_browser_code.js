@@ -956,19 +956,27 @@ function diff_offline_file_browser(csdir1='',csdir2='',showhtml=true){
 
 function batch_search_form_offline_file_browser(){   
     var postpath=postpath_b();
-    bljg='<table width=100%><tr><td>';
+    bljg='<table width=95%><tr><td>';
     bljg=bljg+'<textarea name="textarea_batch_search_ofb" id="textarea_batch_search_ofb" style="width:100%;height:20rem;"></textarea>';
     bljg=bljg+'</td><td>';
     bljg=bljg+'<textarea name="textarea_wikitable_ofb" id="textarea_wikitable_ofb" style="width:100%;height:20rem;"></textarea>';
-    bljg=bljg+'</tr></table>';
-    bljg=bljg+'<p>';
+    bljg=bljg+'</tr>';
+    bljg=bljg+'<tr><td width=50%>';
+    //bljg=bljg+'<p>';
     bljg=bljg+'<span class="aclick" onclick="document.getElementById(\'div_statistics\').style.display=\'none\';">关闭</span>';
     bljg=bljg+textarea_buttons_b('textarea_batch_search_ofb','清空,复制,全选');
     bljg=bljg+'<span class="aclick" onclick="batch_search_result_offline_file_browser();">批量文件名匹配搜索</span> ';
     bljg=bljg+'<select id="select_remove_str_ofb"><option>行首的*#号</option><option>行尾的hash值列</option><option>每行左侧字符串至空格处</option></select> ';
     bljg=bljg+'<span class="aclick" onclick="remove_characters_offline_file_browser();">去除字符串</span>';
     bljg=bljg+'<span class="aclick" onclick="remove_wikitable_offline_file_browser();">wikitable 对应文件名删除</span>';
-    bljg=bljg+'</p>\n';
+    //bljg=bljg+'</p>\n';    
+    bljg=bljg+'</td>';
+    bljg=bljg+'<td width=50%>';
+    bljg=bljg+textarea_buttons_b('textarea_wikitable_ofb','清空,复制,全选');
+
+    bljg=bljg+'</td></tr>';
+    bljg=bljg+'</table>';
+
     bljg=bljg+'<div id="div_batch_search_result_ofb"></div>\n';
     var odiv=document.getElementById('div_statistics');
     odiv.innerHTML=bljg;
