@@ -18,8 +18,10 @@ function menu_progress(){
     '<span class="span_menu" onclick="'+str_t+'category_progress(\'miscellaneous\');">miscellaneous</span>',    
     '<span id="span_show_table_progress" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ table</span>',    
     ];
+    
+    var klmenu_config=root_font_size_menu_b(str_t);
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'📈','14rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'📈','14rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','16rem','1rem','1rem','30rem'),'','0rem')+' ');
     klmenu_check_b('span_show_table_progress',true);            
 }
 
@@ -42,6 +44,11 @@ function category_progress(csname){
     var op=document.getElementById('p_bookmark_progress');
     op.innerHTML=result_t.join(' ');
     mouseover_mouseout_oblong_span_b(op.querySelectorAll('span.oblong_box'));    
+    
+    var odoms=document.querySelectorAll('div.div_statistics_plot_b td.legendLabel');
+    for (let one_dom of odoms){
+        one_dom.setAttribute('contenteditable','true');
+    }
 }
 
 function jump_to_item_progress(csno){

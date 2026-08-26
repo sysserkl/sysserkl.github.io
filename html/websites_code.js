@@ -448,6 +448,10 @@ function opml_klwebsites(){
         var oa2=one_span.querySelector('a.a_rss_link');
         if (!oa1 || !oa2){continue;}
         var blname=specialstr92_b(oa1.innerText);
+        if (blname.includes('📶')){
+            blname=blname.replace('📶','');  //替换一次 - 保留注释
+        }
+        
         opml_list.push('	<outline text="'+blname+'" htmlUrl="'+oa1.href.replace(new RegExp('&','g'),'&amp;')+'" language="unknown" title="'+blname+'" type="rss" version="RSS" xmlUrl="'+oa2.href.replace(new RegExp('&','g'),'&amp;')+'"/>');
     }
     opml_list.sort(function (a,b){return zh_sort_b(a,b);});
