@@ -354,10 +354,21 @@ function en_word_links_b(csword='',ew=false,www=false){
     var bljg='';
     
     for (let item of list_t){
-        bljg=bljg+'<span class="span_link" title="'+item[1]+'" onclick="open_link_en_b(\''+item[0]+'\',\''+specialstr_j(csword)+'\'); en_word_temp_change_b(this,\''+item[0]+'\');"';
-        bljg=bljg+'>'+item[0]+'</span> ';
+        if (item[0]=='li'){
+            bljg=bljg+'<span class="span_link" title="'+item[1]+'" onmouseover="en_word_more_b(this,\''+item[0]+'\',\''+specialstr_j(csword)+'\');"';
+            bljg=bljg+'>'+item[0]+'</span> ';        
+        } else {
+            bljg=bljg+'<span class="span_link" title="'+item[1]+'" onclick="open_link_en_b(\''+item[0]+'\',\''+specialstr_j(csword)+'\'); en_word_temp_change_b(this,\''+item[0]+'\');"';
+            bljg=bljg+'>'+item[0]+'</span> ';
+        }
     }
     return bljg.trim();
+}
+
+function en_word_more_b(ospan,cstype,csword){
+    open_link_en_b(cstype,csword);
+    en_word_temp_change_b(ospan,cstype);
+    ospan.removeAttribute('onmouseover');
 }
 
 function en_search_sites_b(maxlength=-1,ew=false,www=false){
