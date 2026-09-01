@@ -1,4 +1,5 @@
 var enwords_easy_global=`
+5 o'clock shadow
 Aaronson
 Abbie
 abductee
@@ -7,6 +8,7 @@ above-mentioned
 abovementioned
 abovenamed
 absorbable
+abstract expressionism
 abundantly clear
 academic freedom
 accusingly
@@ -18,8 +20,11 @@ Adele
 adjustability
 Adolf
 adoptee
+adult actress
+Aegean Islands
 aeroplane
 affordably
+Afghan bread
 Africa
 African
 agribusiness
@@ -28,6 +33,7 @@ air conditioner
 air-dried
 airplane
 airsickness
+air supremacy
 airworthiness
 airworthy
 Aladdin
@@ -36,6 +42,8 @@ Algeria
 Alita
 Allah
 All Saints' Day
+Anakim
+Anakin
 anciently
 Andrea
 anglicise
@@ -47,6 +55,7 @@ annoyingly
 Anson
 Anthony
 anti-abortion
+antiaging
 antibacterial
 anticancer
 anti-capitalism
@@ -60,6 +69,7 @@ anticompetitive
 anti-democratic
 antidemocratic
 anti-dumping
+antielitism
 anti-fascist
 antifascist
 anti-imperialism
@@ -67,10 +77,13 @@ anti-imperialist
 anti-modern
 anti-nationalist
 antinationalist
+antinutrient
 antiparticle
 anti-racist
 anti-religious
 antireligious
+anti-sexist
+antisexist
 antislavery
 anti-smoking
 antismoking
@@ -86,11 +99,16 @@ arm-wrestling
 Arnim
 arrestee
 Aruba
+Asgard
+Asgardian
 Asia
 Asian
 as if
 asphalt paper
 as usual
+atomic mass
+atomic physics
+atomic weight
 audiobook
 Austria
 authoress
@@ -106,14 +124,20 @@ baby tooth
 back-breaking
 backstabber
 bacteriology
+bacterium
 bad-tempered
 bagless
 balloon-like
 balloonlike
 barroom
+bateau neck
+bathwater
 batlike
 battery-operated
 battery-powered
+battle-ax
+battleax
+battle-axe
 beachwear
 bearlike
 beat around the bush
@@ -122,11 +146,15 @@ Becker
 bedless
 bed-wetting
 beekeeper
+bejeweled
+bejewelled
 believability
+Belize
 beltlike
 Benjamin
 Bernie
 best-selling
+betelnut
 better-known
 Beverly
 Beverly Hills
@@ -138,6 +166,7 @@ bigger
 biggest
 biggish
 bikeway
+bilingual
 biochemically
 biochemist
 biochemistry
@@ -157,12 +186,16 @@ biogeochemistry
 biologically
 biomedical
 biomolecular
+biosynthesis
+bioterrorism
 biplane
+bird flu
 birthmark
 birth mother
 birthweight
 bitcoin
 blackboard
+blackbody
 black-hearted
 black tea
 Blackwell
@@ -170,10 +203,13 @@ bladelike
 blamable
 blameable
 blamelessly
+blocklist
 Bloomfield
 boarding card
 boarding gate
 boatmen
+boat neckline
+bola tie
 Bolivia
 Bollywood
 Bonaparte
@@ -189,14 +225,20 @@ botanically
 bowmen
 boxlike
 braless
+Brazil
 breakable
+breakfast cereal
+breast-pocket
+Bremen
 Brice
 bridezilla
 Brighton
 broken-hearted
 brotherless
+brothers-in-arms
 Bruno
 Bryant
+buff-colored
 buglike
 buildable
 Bulgaria
@@ -208,6 +250,7 @@ busload
 busyness
 by dint of
 bye-election
+cabdriver
 cable television
 calendar year
 calf-love
@@ -220,7 +263,9 @@ Campbell
 Canberra
 cancerphobia
 candlelit
+can opener
 capital-intensive
+cardphone
 carefulness
 carelessness
 carmaker
@@ -237,7 +282,9 @@ cavalrymen
 ceaseless
 ceaselessly
 cell biology
+cellblock
 centimetre
+centre of gravity
 Chadwick
 changeless
 charmless
@@ -249,9 +296,11 @@ chickenfeed
 Chihuahua
 child rearing
 child-rearing
+chinaware
 Chinese copy
 Chinese New Year
 chipmaker
+Christchurch
 Chunjie
 churchmen
 churro
@@ -260,13 +309,18 @@ clansmen
 Claude
 Claudia
 Clayton
+cleantech
 clergymen
 cleverness
 clickable
+clickbait
 climatology
+close-mouthed
 closemouthed
 cloud-based
 Coachella
+coal black
+coal-black
 coenzyme
 coffee house
 cold-hearted
@@ -278,6 +332,8 @@ comanage
 co-management
 comanager
 combination lock
+come with the turf
+command economy
 committeemen
 common sense
 common share
@@ -293,6 +349,7 @@ Continental Congress
 control freak
 convertibility
 cookware
+coppersmith
 Cornwall
 correctness
 cosmic ray
@@ -307,31 +364,41 @@ councilmen
 councilwoman
 counterclockwise
 counterrevolutionist
+courtesy bus
+courtesy car
+courtesy visit
 cowhouse
 cowpox
 coyly
 craftsman
 craftsmen
+Crawford
 crewmen
 Crimea
 Crimean
 crime rate
 criminology
 Crockett
+crossbeam
+crossbowman
 crossbowmen
 cross hairs
+crow's-feet
 cubic centimeter
 cultureless
 currently
+curry favour
 customisable
 customizable
 Damascus
 Danny
+dare I suggest
 dare say
 dark-eyed
 Darlington
 data type
 Davis
+DBMS
 Dead Sea
 dealt
 deary
@@ -348,11 +415,14 @@ decolonization
 decreasingly
 deepfake
 deep-voiced
+deerhound
+deerskin
 deerstalker
 defenceless
 dehumidifier
 dehumidify
 deindustrialization
+delimiter
 de-list
 demand curve
 dendrologic
@@ -366,6 +436,9 @@ dewax
 deworm
 didn't
 diminishing returns
+dimwit
+dip net
+dipnet
 director's cut
 disbelieve
 disbelievingly
@@ -375,21 +448,28 @@ disk-shaped
 disremember
 disrespect
 disrespectful
+divide and rule
 Dnieper
 dogskin
 dog-tired
+dolt
 Donald
+doorframe
 door-knocker
 doorknocker
 doormen
 Dorothy
 double agent
+double digits
+double-figure
+doughnutlike
 Douglas
 Douglass
 draggable
 dreamless
 dreamscape
 driving school
+Duncan
 dunderhead
 dune
 dustless
@@ -401,8 +481,10 @@ earthlight
 earthman
 Earthpeople
 Earthperson
+earthrise
 easternmost
 e-bike
+E. coli
 ecologist
 econometrics
 economy of scale
@@ -420,6 +502,7 @@ eighty-nine
 eighty-one
 eighty-three
 eighty-two
+Eileen
 elementary school
 Eliot
 e-mail
@@ -456,18 +539,22 @@ expensiveness
 experimentally
 experimentation
 explosive device
+ex-servicewoman
 extended family
 eyewall
+fairy light
 falsifiability
 fatalist
 fat-free
 fatherless
 fatherly
 faultless
+fava bean
 featherless
 featureless
 feces
 feelingless
+ferry-house
 ferrymen
 f-hole
 fifty-eight
@@ -486,6 +573,7 @@ fire apparatus
 fireclay
 firelit
 firepit
+fireproof
 fishermen
 fishlike
 fish oil
@@ -501,10 +589,12 @@ Flynn
 foldable
 FOMO
 food coma
+foreign-born
 foreseeable
 forgivable
 formidably
 Forrest
+for some reason
 forty-four
 forty-nine
 forty-one
@@ -545,22 +635,29 @@ geese
 gentlemen
 gentlemen-in-waiting
 gentlewomen
+geochemistry
 geographically
 geologic
 geological
+ghostwriter
 girlhood
+globetrotter
+goal-directed
 goatskin
 good-humoredly
 goodhumoredly
 good-humouredly
 goodnight
 good-tempered
+go with the territory
 gracefully
 gracefulness
 grammatical
 grammatically
+grandbaby
 grandniece
 grasslike
+graveside
 grayish
 green tea
 Greig
@@ -586,6 +683,7 @@ handwritten
 Harrington
 Harris
 harvestable
+hasn't
 hawklike
 Hazlitt
 H-bomb
@@ -612,13 +710,17 @@ herb tea
 herdsmen
 hertz
 hesitatingly
+hexahedra
 Heywood
+highchair
+high-fiber
 high jump
 hikeable
 hiker
 hiking boot
 Hindenburg
 hisself
+Hobbes
 Hobson
 Hoffman
 Hoffmann
@@ -637,7 +739,12 @@ hour-long
 hourlong
 housebound
 househusband
+housemaid
+housepainter
 housetop
+house-warming
+hover-fly
+human capital
 Humboldt
 Hume
 humorless
@@ -654,6 +761,7 @@ hyena
 hypertext
 icebound
 ice machine
+identity politics
 ill-tempered
 I'm
 imaginary number
@@ -688,6 +796,7 @@ insufferable
 insufferably
 interchangeability
 interchangeably
+intercommunication
 interdepartmental
 interdependence
 interdependency
@@ -705,7 +814,10 @@ investment trust
 invisibility
 irrational number
 Islamophobia
+Ithaki
+it'll
 Jacksonville
+jailbird
 Jaime
 Jamie
 jaywalker
@@ -714,6 +826,7 @@ Jeannette
 Jefferson
 Joab
 Joanna
+jobseeker
 Jodi
 jointer-plane
 JOMO
@@ -738,6 +851,8 @@ keel-boat
 kennelmen
 Kent
 Kentucky
+Kenya
+Kepler
 keylogger
 Kidman
 kidnapper
@@ -749,6 +864,7 @@ knives
 knowledge-intensive
 Kuiper belt
 labor-intensive
+ladies-in-waiting
 ladybird
 ladybug
 ladylike
@@ -765,23 +881,31 @@ leaderless
 leafless
 leaflike
 leaf-shaped
+learnable
 learned helplessness
 learnt
 Lebanese
 Leninism
 Leto
+life-altering
 light industry
 lightless
 lightsaber
+lightship
 lighttight
 Lindsay
 Linus
 lionlike
 listicle
+listlessness
+lithographical
+lithographically
 Lithuania
 little-known
 livestreamer
+living fossil
 lobsterman
+lockable
 locksmith
 logically
 Loki
@@ -792,8 +916,10 @@ long-sleeved
 lossless
 lovable
 loveable
+Lovecraft
 loveless
 loverless
+Lucas
 luckless
 Lunar New Year
 luncheon
@@ -818,9 +944,13 @@ matrilinear
 McDonald's
 mealtime
 meant
+megapixel
 memory card
 men-at-arms
+Menshevik
 merchildren
+merpeople
+merperson
 Micawber
 microaggression
 microbiologist
@@ -839,6 +969,7 @@ Micronesian
 microservice
 middlemen
 middleware
+Midgard
 milliampere
 mindshare
 minimisation
@@ -851,21 +982,32 @@ mistranslate
 mobsmen
 monkeypox
 monopolise
+mooncake
 moonless
 moonlit
+Morrison
 Morse code
+mortar attack
+mortar bomb
+mortar fire
 Moses
 motherboard
 motherfucker
 motherless
 motherly
 motion sickness
+motorbike
 mountaintop
 mournfulness
 Mozart
+multibillion
+multicolored
 multicourse
 multigenerational
 multihour
+multilingual
+multimillion
+multipurpose
 multi-step
 multiuser
 multiyear
@@ -875,9 +1017,11 @@ mystically
 name tag
 nanogram
 nanoparticle
+narrow money
 national anthem
 national debt
 natural gas
+near beer
 needlelike
 needless to say
 needn't
@@ -899,6 +1043,7 @@ neuroradiology
 neuroscience
 neuroscientist
 neutron star
+Nevada
 New Hampshire
 newshound
 Niger
@@ -949,6 +1094,7 @@ Norris
 northeaster
 northeastward
 northerner
+northern hemisphere
 northwardly
 north-westerly
 northwestward
@@ -964,6 +1110,7 @@ numbness
 nun
 nunhood
 nunship
+Nuremberg
 nutcracker
 nutmeat
 oarsmen
@@ -975,6 +1122,7 @@ Oman
 oncologist
 one-parent family
 open-handed
+open-minded
 opportunity cost
 ordinary share
 ore-dressing
@@ -982,6 +1130,7 @@ Oreo
 outpatient
 outsole
 outspokenly
+overactivity
 overcaution
 overconsume
 overconsumption
@@ -999,6 +1148,7 @@ over-optimism
 overoptimism
 over-optimistic
 overoptimistic
+overpayment
 overregulate
 overregulation
 overreliance
@@ -1034,6 +1184,7 @@ Persian
 phish
 phonecard
 photojournalist
+photosynthesize
 physiologically
 piecework
 Pierre
@@ -1041,11 +1192,15 @@ pink-collar
 placename
 plainclothesmen
 planetologist
+planetology
 planner
 pleasureless
 plowmen
 policemen
 political correctness
+polo-neck
+Polynesia
+pope's nose
 post-industrial
 postindustrial
 postmodern
@@ -1060,6 +1215,9 @@ pre-Islamic
 pre-Muslim
 pre-pandemic
 prepandemic
+preposterously
+preposterousness
+preprocess
 pre-revolutionary
 preventable
 prewarn
@@ -1079,15 +1237,19 @@ protectively
 protégée
 provable
 Prussia
+pseudorandom
 psychologically
 psychology
 Pulitzer
 punishable
+purchasing power
 purple state
 Putin
 pyriform
 Quebec
+queer someone's pitch
 Quran
+rabbit-ear
 radiotherapist
 rainband
 rainwater
@@ -1108,13 +1270,17 @@ rechargeable
 recognisable
 recognizable
 recognizably
+reconceptualization
 reconnection
 record-breaking
+record holder
 redden
 red-haired
 red-headed
 redheaded
 redness
+red panda
+re-export
 reformer
 reformistic
 reinsert
@@ -1124,6 +1290,7 @@ rent-free
 repaint
 replaceable
 reportable
+resting place
 reusability
 rewatch
 riflemen
@@ -1133,8 +1300,11 @@ river-bed
 riverside
 Robb
 rollable
+romanticism
 ropelike
 ropemaker
+Rosenberg
+Rotterdam
 rower
 row house
 rowhouse
@@ -1148,9 +1318,11 @@ salable
 saleable
 Salem
 salesclerk
+salesgirl
 salesmen
 salespeople
 Samoa
+Sasha
 satisfyingly
 sceptical
 Schumann
@@ -1160,6 +1332,7 @@ Scotsmen
 Scott
 sea-fowl
 seafowl
+seagrass
 sealskin
 seamen
 searchable
@@ -1175,14 +1348,20 @@ see you around
 see you later
 selectively
 selectmen
+self-cleaning
 self-improvement
+self-sealing
 self-test
 semidarkness
+semihard
 seminude
 semisolid
 semitransparent
 sense of humor
 serval
+servicemen
+servicewoman
+servicewomen
 setup wizard
 seventy-five
 seventy-four
@@ -1197,6 +1376,8 @@ sexology
 shaggy-mane
 Shakti
 shallowly
+shamefully
+shamelessly
 shareability
 shareable
 shareware
@@ -1210,12 +1391,17 @@ shoemaking
 shootable
 short-sighted
 short-sightedness
+should've
 shyly
 shyness
 Siberian
+signaller
+signalman
 Silk Road
 simplehearted
 singable
+single digits
+single figures
 single-parent family
 Singlish
 sinless
@@ -1229,6 +1415,7 @@ sixth
 sixty-eight
 sixty-five
 sixty-four
+sixty-ninth
 sixty-one
 sixty-seven
 sixty-six
@@ -1239,6 +1426,7 @@ skeptically
 skippable
 skywards
 slaughtermen
+slave labor
 sleeping bag
 sleeveless
 slipped disc
@@ -1256,6 +1444,7 @@ snowshoe
 snowslide
 snuff movie
 so-called
+social climber
 soft power
 soft toy
 solar flare
@@ -1264,6 +1453,7 @@ Somaliland
 sonless
 souplike
 Southampton
+southwardly
 southwestward
 spacelab
 spaceport
@@ -1308,6 +1498,7 @@ stoneground
 stony-faced
 stormless
 stormproof
+stormtrooper
 strategically
 Straus
 Strauss
@@ -1338,6 +1529,7 @@ summerlong
 Summer Palace
 sunbath
 sunbathe
+sunbather
 sundae
 sundrenched
 sunlit
@@ -1351,18 +1543,21 @@ supermodel
 superphone
 supersmart
 superspy
+superstardom
 superstorm
 superuser
 superweapon
 survivable
 swappable
 sweatproof
+sweat-stained
 swimsuit
 swimwear
 Swiss roll
 swordsmen
 symptomless
 Syria
+tableland
 taco
 tactful
 tactless
@@ -1401,7 +1596,9 @@ terabit
 testes
 thankless
 theftproof
+Thelma
 theme park
+theological seminary
 they've
 thinker
 thinnest
@@ -1450,9 +1647,11 @@ townsmen
 Toynbee
 traceability
 tradesmen
+transhipment
 transoceanic
 transphobe
 transphobia
+transship
 travel sickness
 treeless
 treelike
@@ -1460,12 +1659,14 @@ treetop
 tribesmen
 trioxide
 Trotwood
+Trudy
 trust-buster
 trust-busting
 trustee investment
 tsar
 Tunguska
 Tupperware
+Turing machine
 twenty-eight
 twenty-eighth
 twenty-fifth
@@ -1481,6 +1682,7 @@ twenty-sixth
 twentysomething
 twenty-third
 twenty-three
+twopence
 Tyson
 Uganda
 ugliness
@@ -1533,6 +1735,7 @@ unguessable
 unharmed
 unhealthful
 unheedful
+unhesitating
 unhesitatingly
 unhurriedly
 unhurt
@@ -1541,6 +1744,7 @@ unimaginable
 unimaginably
 uninfected
 uninteresting
+unionbusting
 uniquely
 uniqueness
 universalisation
@@ -1550,6 +1754,7 @@ unkind
 unknowable
 unknowingly
 unladylike
+unlawfulness
 unlikable
 unlikeable
 unliveable
@@ -1563,6 +1768,7 @@ unneeded
 unobjectionably
 unopened
 unpardonable
+unperfect
 unpractised
 unpredictably
 unprofitable
@@ -1590,6 +1796,7 @@ unsold
 unsolved
 unsteadily
 unsuitably
+unsurprising
 unsurprisingly
 unsustainable
 untie
@@ -1600,10 +1807,12 @@ unusable
 unvaccinated
 unwisely
 upgradeable
+Ursa Minor
 Uruguay
 usefulness
 utilisation
 utility pole
+utopianism
 value added
 valueless
 Vancouver
@@ -1611,6 +1820,7 @@ venture capital
 vertically
 victimless
 video card
+VIP
 virology
 vlog
 vlogger
@@ -1626,6 +1836,7 @@ Walter
 warbonnet
 Warrick
 Warsaw Pact
+watchcase
 watchmaker
 watercooler
 waterless
@@ -1636,7 +1847,9 @@ watt-hour
 waveform
 weaponize
 weaponless
+wedding ring
 Welchman
+well-lighted
 well paid
 we're
 western hemisphere
@@ -1646,6 +1859,7 @@ Westphalia
 West Virginia
 wheatfield
 white-collar
+white-glove service
 Whitehall
 white-robed
 whole-wheat
@@ -1657,6 +1871,7 @@ Wilkins
 Willard
 windowless
 windward
+winemaker
 wineskin
 wirelessly
 withheld
@@ -1672,8 +1887,10 @@ work-related
 workwear
 workweek
 world-building
+world-shattering
 worm-like
 worthlessness
+would've
 wrongness
 XIV
 XV
@@ -1682,199 +1899,13 @@ XVII
 yearslong
 Yeats
 Yemen
+y'know
+you're
+you've
 Zelenskyy
 zero gravity
-Zuma
-coppersmith
-crossbowman
-pseudorandom
-would've
-dip net
-dipnet
-curry favour
-stormtrooper
-Aegean Islands
-Afghan bread
-clickbait
-doughnutlike
-geochemistry
-learnable
-Lovecraft
-Morrison
-multicolored
-nonexistence
-photosynthesize
-re-export
-unhesitating
-buff-colored
-fairy light
-goal-directed
-bejeweled
-bejewelled
-cleantech
-E. coli
-highchair
-multibillion
-Nuremberg
-purchasing power
-Rosenberg
-tableland
 Zipporah
-abstract expressionism
-dimwit
-dolt
-slave labor
-for some reason
-lockable
-Crawford
-grandbaby
-hexahedra
-housepainter
-human capital
-Menshevik
-multilingual
-betelnut
-bird flu
-command economy
-blackbody
-cellblock
-jailbird
-romanticism
-self-cleaning
-shamefully
-white-glove service
-bathwater
-winemaker
-5 o'clock shadow
-globetrotter
-Kenya
-atomic physics
-record holder
-Sasha
-shamelessly
-Lucas
-planetology
-ferry-house
-Ithaki
-crow's-feet
-foreign-born
-antiaging
-antinutrient
-cabdriver
-chinaware
-hasn't
-it'll
-near beer
-multimillion
-can opener
-open-minded
-twopence
-watchcase
-preprocess
-red panda
-atomic weight
-atomic mass
-brothers-in-arms
-northern hemisphere
-bioterrorism
-cardphone
-Polynesia
-world-shattering
-bilingual
-biosynthesis
-come with the turf
-go with the territory
-house-warming
-lithographical
-lithographically
-pope's nose
-mortar attack
-divide and rule
-courtesy visit
-courtesy car
-mortar bomb
-courtesy bus
-merpeople
-merperson
-queer someone's pitch
-mortar fire
-narrow money
-adult actress
-deerskin
-dare I suggest
-battle-axe
-battle-ax
-battleax
-breast-pocket
-graveside
-intercommunication
-jobseeker
-mooncake
-signalman
-signaller
-unlawfulness
-polo-neck
-Turing machine
-servicemen
-boat neckline
-bateau neck
-breakfast cereal
-utopianism
-bacterium
-coal black
-coal-black
-ghostwriter
-ladies-in-waiting
-megapixel
-Nevada
-overactivity
-overpayment
-reconceptualization
-superstardom
-wedding ring
-DBMS
-servicewomen
-ex-servicewoman
-servicewoman
-fava bean
-deerhound
-Eileen
-crossbeam
-Anakin
-Anakim
-Asgard
-Midgard
-Asgardian
-delimiter
-doorframe
-housemaid
-listlessness
-VIP
-identity politics
-self-sealing
-Christchurch
-Hobbes
-semihard
-Ursa Minor
-Kepler
-earthrise
-antielitism
-anti-sexist
-centre of gravity
-Bremen
-Duncan
-salesgirl
-Brazil
-blocklist
-air supremacy
-Belize
-Thelma
-you're
-well-lighted
-theological seminary
-sunbather
-
-
+Zuma
 
 
 `.trim().split('\n');
