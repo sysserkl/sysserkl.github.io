@@ -1907,5 +1907,9 @@ zero gravity
 Zipporah
 Zuma
 fusebox
+Brooke
+Jerome
+normal curve
+Tagore
 
 `.trim().split('\n');

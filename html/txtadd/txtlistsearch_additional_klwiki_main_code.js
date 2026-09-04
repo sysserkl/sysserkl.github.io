@@ -3,11 +3,17 @@ function menu_more_kltxt_klwiki_main(){
     if (!ospan){return;}
 
     var str_t=klmenu_hide_b('');
+    var blparent=menu_parent_node_b(str_t);
+    
+    var common_pages=['KL Xubuntu 20.04 安装、升级记录','MediaWiki:Common.js','文件包内容列表','光盘柜01','光盘柜02','光盘柜03'];
+    common_pages.sort(zh_sort_b);
     var klmenu1=[
     '<span class="span_menu" onclick="'+str_t+'yymmdd_kltxt_klwiki_main();">联合早报yymmdd不一致检索</span>',    
     '<span class="span_menu" onclick="'+str_t+'weixin_kltxt_klwiki_main();">微信sharer_shareid</span>',    
     '<span class="span_menu" onclick="'+str_t+'theregister_without_r_kltxt_klwiki_main();">当前范围 theregister without ® and Sponsor</span>',
     '<span class="span_menu" onclick="'+str_t+'eword_duplicate_kltxt_klwiki_main();">行内重复 eword 检索</span>',
+    '<span class="span_menu">'+list_2_option_b(common_pages,'select_common_pages_klwiki_main')+' <span class="aclick" onclick="'+blparent+'copy_wiki_title_klwiki_main();">复制</span></span>',
+    
     ];
 
     var group_list=[
@@ -26,6 +32,18 @@ function menu_more_kltxt_klwiki_main(){
     
     var blstr=klmenu_b(klmenu1,'W','25rem','1rem','1rem','30rem');
     ospan.outerHTML=blstr;
+}
+
+function copy_wiki_title_klwiki_main(){
+    var blstr=document.getElementById('select_common_pages_klwiki_main').value;
+    var blat=filelist.indexOf('<title>'+blstr+'</title>');
+    if (blat>=0){
+        getlines_kltxt_b(blat+1);
+    }
+    
+    blstr='<title>'+blstr.replace(/\s/g,'\\s').replace(/\./g,'\\.')+'</title>';
+    copy_2_clipboard_b(blstr);
+    document.getElementById('input_search').value=blstr;
 }
 
 function yymmdd_kltxt_klwiki_main(){

@@ -363,11 +363,15 @@ function popup_selection_money_b(){
         }
     }
     //-----------------------
-    var list_t=["健康","食品","休闲","水电物","衣物","电脑","蔬菜","水果","礼金","交通","餐馆","工具","卫生","办公","卧室","化妆","厨房","家装","阅读","牛奶","通信","影视","投资","生活"];
+    var list_t=category_get_money_b();
     sub_popup_selection_money_b_generate(list_t,'span_class','popup_class','input_class');
     
     var from_list=local_storage_get_b('recent_from_wp',25,true);
     sub_popup_selection_money_b_generate(from_list,'span_from','popup_from','input_address',true);
+}
+
+function category_get_money_b(){
+    return ["办公","餐馆","厨房","电脑","工具","化妆","家装","健康","交通","礼金","牛奶","生活","食品","蔬菜","水电物","水果","通信","投资","卫生","卧室","休闲","衣物","影视","阅读"];
 }
 
 function eval_calculator_money_b(oinput){
@@ -665,7 +669,7 @@ function elm_buttons_money_b(dom_id,textarea_id){
 <span class="aclick" onclick="import_merge_money_b('`+textarea_id+`',1,'蔬菜');">数量为1的蔬菜</span>
 <span class="aclick" onclick="import_merge_money_b('`+textarea_id+`',1,'水果');">数量为1的水果</span>
 
-分类/名称修改为：<select id="select_wp_import_category_name"><option></option><option>蔬菜</option><option>水果</option></select>
+分类/名称修改为：<select id="select_wp_import_category_name">`+list_2_option_b(category_get_money_b()).join('')+`</select>
 <span class="aclick" onclick="import_vegetable_fruit_money_b('`+textarea_id+`');">修改分类和名称</span>
 <span class="aclick" onclick="import_vegetable_fruit_money_b('`+textarea_id+`','分类',false);">修改分类</span>
 <span class="aclick" onclick="import_number1_money_b('`+textarea_id+`');">数量改为1</span>
