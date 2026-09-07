@@ -1912,6 +1912,9 @@ Jerome
 normal curve
 Tagore
 Benson
-
+well kept
+ultra-leftist
+non-aligned
+non-alignment
 
 `.trim().split('\n');
