@@ -207,7 +207,7 @@ function len_between_select_ensentence(){
     }
 }
 
-function hash_result_sentences(){
+function hash_result_sentences(max_len=600){
     function sub_hash_result_sentences_html(csarr,cskey=false,csstring=''){
         var bllen=csarr.length;
         if (bllen>2){
@@ -230,7 +230,7 @@ function hash_result_sentences(){
         var blmin,blmax,bllen;
         [blmin,blmax,bllen]=len_between_status_ensentence();
         if (blmin!==false){
-            sentence_len='<p>当前句子共'+bllen+'条，长度在 '+blmin+'~'+blmax+' 之间</p>';
+            sentence_len='<p>当前句子共'+bllen+'条，长度在 '+blmin+'~'+((blmax>=max_len)?'<font color=red>'+blmax+'</font>':blmax)+' 之间</p>';
         }
     }
     
@@ -623,7 +623,7 @@ function row_duplicate_ensentence(show_html=true){
     return bljg;
 }
 
-function length_sort_ensentence(is_short=true,do_merge=-1,keep_kleng=true,csmax=false,show_html=true){
+function length_sort_ensentence(is_short=true,do_merge=-1,keep_kleng=true,csmax=false,show_html=true,max_len=600){
     function sub_length_sort_ensentence_group(csarr){
         let bllen=csarr.length;
         let pie_list=[];
@@ -706,7 +706,7 @@ function length_sort_ensentence(is_short=true,do_merge=-1,keep_kleng=true,csmax=
         var blmin,blmax,bllen;
         [blmin,blmax,bllen]=len_between_status_ensentence();
         if (blmin!==false){
-            var blrange='<p>当前句子共'+bllen+'条，长度在 '+blmin+'~'+blmax+' 之间</p>';
+            var blrange='<p>当前句子共'+bllen+'条，长度在 '+blmin+'~'+((!do_merge && blmax>=max_len)?'<font color=red>'+blmax+'</font>':blmax)+' 之间</p>';
             odiv.insertAdjacentHTML('afterbegin',blrange);
         }
     }
