@@ -8,280 +8,48 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Tue, 08 Sep 2026 08:36:40 +0800</lastBuildDate>
-<item><title>Linux Kernel 7.3 RC2 is Officially Released: Here’s What’s New - OSTechNix</title><link>https://ostechnix.com/linux-kernel-7-3-rc2-released/</link></item>
-<item><title>8 SSH Hardening Tips to Secure a Linux Server Against Brute-Force Attacks - OSTechNix</title><link>https://ostechnix.com/ssh-hardening-brute-force-attacks-linux/</link></item>
-<item><title>Testing Your Website’s Global CDN Performance from the Command Line - OSTechNix</title><link>https://ostechnix.com/test-cdn-performance-command-line-curl-dig/</link></item>
-<item><title>Paint.NET Can Now Run on Linux: Here’s How to Install It in Ubuntu - OSTechNix</title><link>https://ostechnix.com/install-paint-net-on-ubuntu-linux/</link></item>
-<item><title>How to Self-Host n8n Locally on Ubuntu 26.04 LTS with Docker Compose - OSTechNix</title><link>https://ostechnix.com/self-host-n8n-locally-ubuntu-docker-compose/</link></item>
-<item><title>How Sound Could Make Sense of Big Data - IEEE Spectrum</title><link>https://spectrum.ieee.org/data-sonification-stephen-roddy</link></item>
-<item><title>Cyborg Roaches Can Stab You With Needles - IEEE Spectrum</title><link>https://spectrum.ieee.org/cyborg-rescue-roach</link></item>
-<item><title>This Robot Will Draw Your Blood Now - IEEE Spectrum</title><link>https://spectrum.ieee.org/blood-draw-robot-vitestro-aletta</link></item>
-<item><title>Video Friday: Digit Redecorates - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-agility-robotics-digit</link></item>
-<item><title>The Best Way to Explore Lunar Craters Is a Giant Robot Ball - IEEE Spectrum</title><link>https://spectrum.ieee.org/moon-ball-robot</link></item>
-<item><title>Betting on AI and Robots to Automate Superconductor Discovery - IEEE Spectrum</title><link>https://spectrum.ieee.org/high-temperature-superconductor-ai-research</link></item>
-<item><title>Protecting Dynamic Industrial Robot Cable Carriers - IEEE Spectrum</title><link>https://spectrum.ieee.org/industrial-robot-cable-carrier-protection</link></item>
-<item><title>AI Efficiency Could Cost Us the Next Generation of Experts - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-engineer-skills</link></item>
-<item><title>Researchers Quantum Teleport Data Across 100 Channels at Once - IEEE Spectrum</title><link>https://spectrum.ieee.org/quantum-teleportation-networks-communications-china</link></item>
-<item><title>Cash In on the AI Boom by Renting Out Your Spare Compute - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-inference-distributed-computing</link></item>
-<item><title>The E.U.’s AI Drive Undermines Its ​Own Chip Strategy - IEEE Spectrum</title><link>https://spectrum.ieee.org/europes-ai-drive</link></item>
-<item><title>The First Battery Was Inspired By a Dead Frog - IEEE Spectrum</title><link>https://spectrum.ieee.org/voltaic-pile-first-battery</link></item>
-<item><title>Low-Power Wearable System Accurately Tracks Motion - IEEE Spectrum</title><link>https://spectrum.ieee.org/wearable-motion-sensor-suit</link></item>
-<item><title>Noodling on Nuclear Engines - IEEE Spectrum</title><link>https://spectrum.ieee.org/bimodal-nuclear-engine</link></item>
-<item><title>Spain Slows Nuclear Phaseout Amidst Energy Turbulence - IEEE Spectrum</title><link>https://spectrum.ieee.org/spain-nuclear-power-reactor-shutdowns</link></item>
-<item><title>瑞士政府试点用开源软件取代 Microsoft 365 - Solidot</title><link>https://www.solidot.org/story?sid=85304</link></item>
-<item><title>Nitter 和 XCancel 恢复服务 - Solidot</title><link>https://www.solidot.org/story?sid=85305</link></item>
-<item><title>Autistici/Inventati 在被美国列为恐怖分子组织后宣布关闭 - Solidot</title><link>https://www.solidot.org/story?sid=85306</link></item>
-<item><title>中国白色家电欧洲市场份额达到两成 - Solidot</title><link>https://www.solidot.org/story?sid=85307</link></item>
-<item><title>Liquid Network 价值 3.2 亿美元的比特币被盗 - Solidot</title><link>https://www.solidot.org/story?sid=85309</link></item>
-<item><title>中国游戏市场规模在 2025 年首次突破 500 亿美元 - Solidot</title><link>https://www.solidot.org/story?sid=85310</link></item>
-<item><title>LG 智能电视会在待机状态下扫描家庭网络和记录麦克风音频 - Solidot</title><link>https://www.solidot.org/story?sid=85311</link></item>
-<item><title>泰国暂停所有数据中心项目建设 - Solidot</title><link>https://www.solidot.org/story?sid=85312</link></item>
-<item><title>Isar Aerospace 成为成功将火箭送入轨道的首个欧洲公司 - Solidot</title><link>https://www.solidot.org/story?sid=85313</link></item>
-<item><title>Chrome 的网站数据设置再次豁免了 Google 网站 - Solidot</title><link>https://www.solidot.org/story?sid=85303</link></item>
-<item><title>内存短缺将继续推动消费电子产品价格上涨 - Solidot</title><link>https://www.solidot.org/story?sid=85302</link></item>
-<item><title>OpenAI’s ChatGPT Was Built on Concealed ‘Mass Piracy’, Authors Tell Court - TorrentFreak</title><link>https://torrentfreak.com/openais-chatgpt-was-built-on-concealed-mass-piracy-authors-tell-court/</link></item>
-<item><title>Online Piracy Costs the UK 9,400 Nurses a Year, If Pirates Keep Their Word - TorrentFreak</title><link>https://torrentfreak.com/online-piracy-costs-the-uk-9400-nurses-a-year-if-pirates-keep-their-word/</link></item>
-<item><title>Epidemiology: Microplastics Cause Lung Cancer - Science 2.0</title><link>https://science20.com/science_20/20260906/epidemiology_microplastics_cause_lung_cancer-300087</link></item>
-<item><title>Your Smartphone May Be Off On Your Exercise Calories By 25% - Science 2.0</title><link>https://science20.com/science_20/20260905/your_smartphone_may_be_off_on_your_exercise_calories_by_25-300088</link></item>
-<item><title>When A Bump Gets Greedy: A Connection I Had Missed For 25 Years - Science 2.0</title><link>https://science20.com/a_quantum_diaries_survivor/20260903/when_a_bump_gets_greedy_a_connection_i_had_missed_for_25_years</link></item>
-<item><title>If You Like Stories, Thank The Inventors Of Fire - Science 2.0</title><link>https://science20.com/news_articles/20260902/if_you_like_stories_thank_the_inventors_of_fire-300085</link></item>
-<item><title>Rain Gardens: Placement Matters More Than Square Footage - Science 2.0</title><link>https://science20.com/the_conversation/20260902/rain_gardens_placement_matters_more_than_square_footage-300084</link></item>
-<item><title>The Precedent For Creating A &amp;#39;Conservative&amp;#39; Science Journal - Science 2.0</title><link>https://science20.com/science_20/20260902/the_precedent_for_creating_a_conservative_science_journal-300083</link></item>
-<item><title>Are You Your Brain Or Your Body? - Science 2.0</title><link>https://science20.com/news_articles/20260831/are_you_your_brain_or_your_body-300082</link></item>
-<item><title>The US Creating Starfleet Academy Sounds Exciting - Science 2.0</title><link>https://science20.com/science_20/20260831/the_us_creating_starfleet_academy_sounds_exciting-300081</link></item>
-<item><title>Dog Aging Project: Humans and Dogs Age A Lot Alike - Science 2.0</title><link>https://science20.com/news_articles/20260831/dog_aging_project_humans_and_dogs_age_a_lot_alike-300080</link></item>
-<item><title>People Who Appropriate Oppression Are Harming Socialization By Their Kids - Science 2.0</title><link>https://science20.com/science_20/20260831/people_who_appropriate_oppression_are_harming_socialization_by_their_kids</link></item>
-<item><title>Tax Breaks, Not Subsidies, Spur Innovation - Science 2.0</title><link>https://science20.com/science_20/20260828/tax_breaks_not_subsidies_spur_innovation-300078</link></item>
-<item><title>AI Breakthroughs And An 11% Surge In Math Majors - Science 2.0</title><link>https://science20.com/the_conversation/20260827/ai_breakthroughs_and_an_11_surge_in_math_majors-300077</link></item>
-<item><title>Navigating Vaccine Guidance - Science 2.0</title><link>https://science20.com/science_20/20260825/navigating_vaccine_guidance-300076</link></item>
-<item><title>Tariffs Have Been Good For U.S. Whiskey Drinkers - Science 2.0</title><link>https://science20.com/science_20/20260820/tariffs_have_been_good_for_us_whiskey_drinkers-300073</link></item>
-<item><title>Fasting Linked To Faster Disease Accumulation - Science 2.0</title><link>https://science20.com/news_articles/20260820/fasting_linked_to_faster_disease_accumulation-300072</link></item>
-<item><title>Your Brain Is Still Analog - Science 2.0</title><link>https://science20.com/science_20/20260820/your_brain_is_still_analog-300071</link></item>
-<item><title>With Hannah McElhinney&amp;#39;s &amp;#39;Wormhole&amp;#39;, Alternative Medicine Risk Gets A Spotlight - Science 2.0</title><link>https://science20.com/the_conversation/20260819/with_hannah_mcelhinneys_wormhole_alternative_medicine_risk_gets_a</link></item>
-<item><title>Is Climate Doom Discouraging Action? Here&amp;#39;s How To Identify It - Science 2.0</title><link>https://science20.com/the_conversation/20260818/is_climate_doom_discouraging_action_heres_how_to_identify_it-300068</link></item>
-<item><title>Halloween Science Is Now In Its 2nd Edition - Science 2.0</title><link>https://science20.com/science_20/20260817/halloween_science_is_now_in_its_2nd_edition-300067</link></item>
-<item><title>Antonio Rosino, a Life for Chess - Science 2.0</title><link>https://science20.com/a_quantum_diaries_survivor/20260817/antonio_rosino_a_life_for_chess-300066</link></item>
-<item><title>Switzerland&amp;#39;s Federal Government Tests Open-Source Alternatives to Microsoft on 3,000 Computers - Slashdot</title><link>https://yro.slashdot.org/story/26/09/07/0128205/switzerlands-federal-government-tests-open-source-alternatives-to-microsoft-on-3000-computers</link></item>
-<item><title>Instead of Fighting AI, Some Teachers Work It Into Their Lessons - Slashdot</title><link>https://news.slashdot.org/story/26/09/07/0021232/instead-of-fighting-ai-some-teachers-work-it-into-their-lessons</link></item>
-<item><title>A Man Charged His EV at a Dealership - and Was Billed $418 - Slashdot</title><link>https://hardware.slashdot.org/story/26/09/07/012247/a-man-charged-his-ev-at-a-dealership---and-was-billed-418</link></item>
-<item><title>&amp;#39;She Lost Her Sight. Her Billionaire Father Bet On a Daring New Treatment.&amp;#39; - Slashdot</title><link>https://science.slashdot.org/story/26/09/07/0036234/she-lost-her-sight-her-billionaire-father-bet-on-a-daring-new-treatment</link></item>
-<item><title>&amp;#39;The Jobs Apocalypse Is Postponed. An AI Jobs Boom Is Here&amp;#39; - Slashdot</title><link>https://slashdot.org/story/26/09/06/214258/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here</link></item>
-<item><title>Bitcoin-based Liquid Network Says $320 Million Withdrawn in Hack - Slashdot</title><link>https://yro.slashdot.org/story/26/09/07/0727220/bitcoin-based-liquid-network-says-320-million-withdrawn-in-hack</link></item>
-<item><title>Roku&amp;#39;s 24/7 AI Slop Channel Is Even Worse Than Expected - Slashdot</title><link>https://entertainment.slashdot.org/story/26/09/06/0633216/rokus-247-ai-slop-channel-is-even-worse-than-expected</link></item>
-<item><title>US Military Disables Ad Trackers On Devices To Protect Troops - Slashdot</title><link>https://yro.slashdot.org/story/26/09/06/0553230/us-military-disables-ad-trackers-on-devices-to-protect-troops</link></item>
-<item><title>Where a Massive Solar Storm Could Take Down the US Power Grid for Millions - Slashdot</title><link>https://hardware.slashdot.org/story/26/09/05/2253221/where-a-massive-solar-storm-could-take-down-the-us-power-grid-for-millions</link></item>
-<item><title>TiVo Will Start Charging Fees For Its Automatic Commercial Break-Skipping Feature &amp;#39;SkipMode&amp;#39; - Slashdot</title><link>https://entertainment.slashdot.org/story/26/09/06/0347252/tivo-will-start-charging-fees-for-its-automatic-commercial-break-skipping-feature-skipmode</link></item>
-<item><title>Flock Offered Webinar Teaching Cops How to Surveil &amp;#39;No Kings&amp;#39; Protesters - Slashdot</title><link>https://yro.slashdot.org/story/26/09/05/0659243/flock-offered-webinar-teaching-cops-how-to-surveil-no-kings-protesters</link></item>
-<item><title>UN Votes To Encourage Map Projections More Accurately Reflecting the True Size of Continents - Slashdot</title><link>https://yro.slashdot.org/story/26/09/06/0017242/un-votes-to-encourage-map-projections-more-accurately-reflecting-the-true-size-of-continents</link></item>
-<item><title>Private German Rocket Makes History, Reaches Orbit From European Soil - Slashdot</title><link>https://science.slashdot.org/story/26/09/06/0446242/private-german-rocket-makes-history-reaches-orbit-from-european-soil</link></item>
-<item><title>was unsuccessful - Slashdot</title><link>https://science.slashdot.org/story/25/03/31/217214/first-flight-of-isar-aerospaces-spectrum-rocket-lasted-just-40-seconds</link></item>
-<item><title>2026 Hugo Award Winners Include Ursula Le Guin-Authored Graphic Novel - Slashdot</title><link>https://news.slashdot.org/story/26/09/06/0316245/2026-hugo-award-winners-include-ursula-le-guin-authored-graphic-novel</link></item>
-<item><title>To Promote Grand Theft Auto 6, Mayor Might Transform Miami into &amp;#39;Vice City&amp;#39; - Slashdot</title><link>https://games.slashdot.org/story/26/09/06/0123212/to-promote-grand-theft-auto-6-mayor-might-transform-miami-into-vice-city</link></item>
-<item><title>How US Campaigns Are Already Using AI to Try to Sway Voters - Slashdot</title><link>https://politics.slashdot.org/story/26/09/05/223250/how-us-campaigns-are-already-using-ai-to-try-to-sway-voters?sbsrc=md</link></item>
-<item><title>Road trip comparison - EV, hybrid, and gas - Slashdot</title><link>https://slashdot.org/submission/17350546/road-trip-comparison---ev-hybrid-and-gas</link></item>
-<item><title>Hackers Use Phishing Lures using Invisible Unicode Characters - Slashdot</title><link>https://slashdot.org/submission/17350526/hackers-use-phishing-lures-using-invisible-unicode-characters</link></item>
-<item><title>OpenAI Chief Scientist Warns Nobody Is Prepared for Rapidly Advancing AI - Slashdot</title><link>https://slashdot.org/submission/17350520/openai-chief-scientist-warns-nobody-is-prepared-for-rapidly-advancing-ai</link></item>
-<item><title>Los Angeles Public School System Bans Most AI for Students - Slashdot</title><link>https://slashdot.org/submission/17350511/los-angeles-public-school-system-bans-most-ai-for-students</link></item>
-<item><title>39 New Passkey Authentication Compromises + Bad UI = Passwords on Paper? - Slashdot</title><link>https://slashdot.org/submission/17350509/39-new-passkey-authentication-compromises--bad-ui--passwords-on-paper</link></item>
-<item><title>Urgent: Fund and rebuild the FDA - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Urgent:_Fund_and_rebuild_the_FDA)</link></item>
-<item><title>Urgent: Impeach budget director Russell Vought - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Urgent:_Impeach_budget_director_Russell_Vought)</link></item>
-<item><title>Urgent: Vote against Heidi Overton for head of FDA - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Urgent:_Vote_against_Heidi_Overton_for_head_of_FDA)</link></item>
-<item><title>Urgent: If Superman lived among us now - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Urgent:_If_Superman_lived_among_us_now)</link></item>
-<item><title>Urgent: Stand up to big tech on data centers - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Urgent:_Stand_up_to_big_tech_on_data_centers)</link></item>
-<item><title>Urgent: Reject perverse deal for veterans&amp;#39; medical treatment - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Urgent:_Reject_perverse_deal_for_veterans&amp;#39;_medical_treatment)</link></item>
-<item><title>Urgent: Refuse to hand over voter data - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Urgent:_Refuse_to_hand_over_voter_data)</link></item>
-<item><title>Urgent: Rescind plan to block election ballots - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Urgent:_Rescind_plan_to_block_election_ballots)</link></item>
-<item><title>Urgent: Impeach and remove RFK jr. - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Urgent:_Impeach_and_remove_RFK_jr.)</link></item>
-<item><title>Urgent: Investigate local use of Flock cameras - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Urgent:_Investigate_local_use_of_Flock_cameras)</link></item>
-<item><title>Urgent: Reject corrupter&amp;#39;s handouts to billionaire barons - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Urgent:_Reject_corrupter&amp;#39;s_handouts_to_billionaire_barons)</link></item>
-<item><title>Polish general imprisoned with German SS general - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Polish_general_imprisoned_with_German_SS_general)</link></item>
-<item><title>UK Prime Minister Burnham disregarding gravity of climate disaster - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(UK_Prime_Minister_Burnham_disregarding_gravity_of_climate_disaster)</link></item>
-<item><title>Cyclosporidia outbreak should have been caught - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Cyclosporidia_outbreak_should_have_been_caught)</link></item>
-<item><title>Losing data stored in a cloudy place - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Losing_data_stored_in_a_cloudy_place)</link></item>
-<item><title>Pernicious error of measuring wealth - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Pernicious_error_of_measuring_wealth)</link></item>
-<item><title>Better lung capacity after reducing air pollution - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Better_lung_capacity_after_reducing_air_pollution)</link></item>
-<item><title>Sanctions on president of International Criminal Court - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Sanctions_on_president_of_International_Criminal_Court)</link></item>
-<item><title>Machines that kill without distinction - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Machines_that_kill_without_distinction)</link></item>
-<item><title>Italian thugs killed Abderrahim Fakir - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Italian_thugs_killed_Abderrahim_Fakir)</link></item>
-<item><title>Scientific research on racism and dementia - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Scientific_research_on_racism_and_dementia)</link></item>
-<item><title>Rejecting corporate Democrats - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Rejecting_corporate_Democrats)</link></item>
-<item><title>Heatwaves and wildfires adding to tipping point - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Heatwaves_and_wildfires_adding_to_tipping_point)</link></item>
-<item><title>Policies most Americans sensibly demand - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Policies_most_Americans_sensibly_demand)</link></item>
-<item><title>Politics of bully&amp;#39;s military snub to South Korea - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Politics_of_bully&amp;#39;s_military_snub_to_South_Korea)</link></item>
-<item><title>Cities cancelled Flock and went with other surveillance - Richard Stallman</title><link>https://stallman.org/archives/2026-may-aug.html#4_September_2026_(Cities_cancelled_Flock_and_went_with_other_surveillance)</link></item>
-<item><title>Urgent: Limit monitoring systems - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#25_August_2026_(Urgent:_Limit_monitoring_systems)</link></item>
-<item><title>Urgent: Sign up to be a poll worker - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#25_August_2026_(Urgent:_Sign_up_to_be_a_poll_worker)</link></item>
-<item><title>Urgent: Oppose SEC deregulation - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#25_August_2026_(Urgent:_Oppose_SEC_deregulation)</link></item>
-<item><title>Urgent: Direct tariff refunds to consumers - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#25_August_2026_(Urgent:_Direct_tariff_refunds_to_consumers)</link></item>
-<item><title>Hot summer caused crop failure in Europe - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#25_August_2026_(Hot_summer_caused_crop_failure_in_Europe)</link></item>
-<item><title>Suggestion for negotiating with the Taliban - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#25_August_2026_(Suggestion_for_negotiating_with_the_Taliban)</link></item>
-<item><title>Finland halts deportation of Russian family - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#25_August_2026_(Finland_halts_deportation_of_Russian_family)</link></item>
-<item><title>Increase in traffic fatalities on music release dates - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#25_August_2026_(Increase_in_traffic_fatalities_on_music_release_dates)</link></item>
-<item><title>3M firefighting products - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html##25_August_2026_(3M_firefighting_products)</link></item>
-<item><title>Wrecker distancing US from South Korea - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#25_August_2026_(Wrecker_distancing_US_from_South_Korea)</link></item>
-<item><title>USS Abraham Lincoln shortage - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#23_August_2026_(USS_Abraham_Lincoln_shortage)</link></item>
-<item><title>Carlitos Ricardo Parias - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#23_August_2026_(Carlitos_Ricardo_Parias)</link></item>
-<item><title>Trump&amp;#39;s tax cuts - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#23_August_2026_(Trump&amp;#39;s_tax_cuts)</link></item>
-<item><title>Sunrise Movement - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#23_August_2026_(Sunrise_Movement)</link></item>
-<item><title>Trump&amp;#39;s attack againts Iran - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#23_August_2026_(Trump&amp;#39;s_attack_againts_Iran)</link></item>
-<item><title>Eissa Hashemi and Maryam Tahmasebi - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#23_August_2026_(Eissa_Hashemi_and_Maryam_Tahmasebi)</link></item>
-<item><title>Mississippi ICE facility gas leaks - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#23_August_2026_(Mississippi_ICE_facility_gas_leaks)</link></item>
-<item><title>Dictator Kim gratitude - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#23_August_2026_(Dictator_Kim_gratitude)</link></item>
-<item><title>Afghan women deportation - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#23_August_2026_(Afghan_women_deportation)</link></item>
-<item><title>Tories to shut down soup kitchens - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#23_August_2026_(Tories_to_shut_down_soup_kitchens)</link></item>
-<item><title>Ex Myanmar ambassador in Britain - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#23_August_2026_(Ex_Myanmar_ambassador_in_Britain)</link></item>
-<item><title>Israeli besieged Palestinian families - Richard Stallman</title><link>https://stallman.org/archives/2026-jul-oct.html#23_August_2026_(Israeli_besieged_Palestinian_families)</link></item>
-<item><title>The ex-public schoolboy behind small boat demos – who hasn&amp;#39;t stopped a single dinghy - inews.co.uk</title><link>https://inews.co.uk/news/ex-public-schoolboy-small-boats-4753521</link></item>
-<item><title>New first-time buyer ISA on the way - inews.co.uk</title><link>https://inews.co.uk/news/politics/new-first-time-buyer-isa-on-the-way-4754095</link></item>
-<item><title>The real reason King Charles released his pointed letter about Harry - inews.co.uk</title><link>https://inews.co.uk/opinion/the-kings-pointed-letter-to-harry-has-a-clear-message-to-him-4754967</link></item>
-<item><title>The image that will haunt Farage - inews.co.uk</title><link>https://inews.co.uk/opinion/the-image-that-will-haunt-farage-4753537</link></item>
-<item><title>French surge unit to stop migrant mega-dinghies… won&amp;#39;t be in place for weeks - inews.co.uk</title><link>https://inews.co.uk/news/politics/french-surge-unit-stop-migrant-mega-dinghies-not-for-weeks-4753593</link></item>
-<item><title>The state pension triple lock is morally indefensible - inews.co.uk</title><link>https://inews.co.uk/opinion/state-pension-triple-lock-morally-indefensible-4753427</link></item>
-<item><title>How the triple lock state pension could be scrapped – and what could replace it - inews.co.uk</title><link>https://inews.co.uk/news/politics/how-the-triple-lock-state-pension-could-be-scrapped-and-what-could-replace-it-4753388</link></item>
-<item><title>What the Chancellor isn&amp;#39;t telling you about tax rises - inews.co.uk</title><link>https://inews.co.uk/news/what-chancellor-isnt-telling-you-tax-rises-4753784</link></item>
-<item><title>The Nineties king who fuelled Britain’s dreadful excess culture - inews.co.uk</title><link>https://inews.co.uk/opinion/nineties-king-who-fuelled-britains-dreadful-excess-culture-4743481</link></item>
-<item><title>&amp;#39;We ran out of children&amp;#39;: How the baby bust is devastating primary schools - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/children-baby-bust-devastating-primary-schools-4744311</link></item>
-<item><title>Nine surprising foodie buys at Iceland, according to a food editor - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/nine-surprising-foodie-buys-iceland-food-editor-4744334</link></item>
-<item><title>Zoe Ball has found her home on Greatest Hits – Radio 2 are right to worry - inews.co.uk</title><link>https://inews.co.uk/culture/radio/zoe-ball-greatest-hits-radio-2-worry-4749297</link></item>
-<item><title>The new royal split created by King&amp;#39;s hidden message to Harry and Meghan - inews.co.uk</title><link>https://inews.co.uk/news/king-tells-harry-and-meghan-they-are-still-not-working-royals-after-uk-return-4754888</link></item>
-<item><title>The UK’s nuclear-submarine town at the top of Putin’s target list - inews.co.uk</title><link>https://inews.co.uk/news/the-town-on-frontline-of-putins-target-list-4740952</link></item>
-<item><title>Everything we know about Portsmouth protesters at demo against mega-dinghy rescue - inews.co.uk</title><link>https://inews.co.uk/news/hundreds-protesters-clash-police-mega-dinghy-portsmouth-4753209</link></item>
-<item><title>The low-cost solution that could have saved lives during Amazon plane crash in Miami - inews.co.uk</title><link>https://inews.co.uk/news/world/solution-saved-lives-amazon-miami-plane-crash-4753410</link></item>
-<item><title>Trump now seems to be embracing Nazi chic. Someone take his phone off him - inews.co.uk</title><link>https://inews.co.uk/news/world/trump-embracing-nazi-chic-now-someone-take-phone-off-him-4753372</link></item>
-<item><title>The American families torn apart by Maga - inews.co.uk</title><link>https://inews.co.uk/news/world/family-fallouts-trump-supporters-4741061</link></item>
-<item><title>Man Utd&amp;#39;s very own Erling Haaland might just save Michael Carrick - inews.co.uk</title><link>https://inews.co.uk/sport/football/man-utd-benjamin-sesko-michael-carrick-4753327</link></item>
-<item><title>The Score: Arsenal&amp;#39;s enigma, Fulham&amp;#39;s bad omen and hope for Hull City - inews.co.uk</title><link>https://inews.co.uk/sport/football/the-score-arsenal-fulham-hull-city-4751154</link></item>
-<item><title>Fulham have built a new era on sand - inews.co.uk</title><link>https://inews.co.uk/sport/football/fulham-have-built-a-new-era-on-sand-4752356</link></item>
-<item><title>UK forces Putin&amp;#39;s shadow fleet into open… with more than 170 boats near coast - inews.co.uk</title><link>https://inews.co.uk/news/uk-forces-putins-shadow-fleet-into-open-4748764</link></item>
-<item><title>The far-right victory that exceeds Putin&amp;#39;s wildest dreams - inews.co.uk</title><link>https://inews.co.uk/news/world/far-right-victory-exceeds-putins-wildest-dreams-4742200</link></item>
-<item><title>Putin’s next gamble could be devastating for Russia - inews.co.uk</title><link>https://inews.co.uk/news/world/putins-next-gamble-could-be-devastating-for-russia-4751269</link></item>
-<item><title>The far right just won a major victory. This is what it means for Europe - inews.co.uk</title><link>https://inews.co.uk/news/far-right-won-major-victory-this-what-means-europe-4753493</link></item>
-<item><title>The eye-watering cost to taxpayers of Burnham’s slick social media campaign - inews.co.uk</title><link>https://inews.co.uk/news/politics/eye-watering-cost-of-burnhams-social-media-4749233</link></item>
-<item><title>Rob Reiner&amp;#39;s son, Nick, charged with two counts of first-degree murder - inews.co.uk</title><link>https://inews.co.uk/news/rob-reiners-son-nick-to-be-charged-with-two-counts-of-first-degree-murder-4116003</link></item>
-<item><title>Rob Reiner’s seven best films, from When Harry Met Sally to Misery - inews.co.uk</title><link>https://inews.co.uk/culture/film/rob-reiner-seven-best-films-when-harry-met-sally-misery-4110027</link></item>
-<item><title>Full article - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/wellbeing/grateful-daily-life-five-easy-steps-4612696</link></item>
-<item><title>I test drive electric cars – these are the fastest-charging for under £50,000 - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/test-electric-cars-fastest-charging-under-50k-4484912</link></item>
-<item><title>Why electric cars might be about to get more expensive - inews.co.uk</title><link>https://inews.co.uk/news/politics/why-electric-cars-might-more-expensive-4477239</link></item>
-<item><title>The one thing no one tells you about electric cars - inews.co.uk</title><link>https://inews.co.uk/opinion/thing-no-one-tells-you-about-electric-cars-4387496</link></item>
-<item><title>I&amp;#39;ve got a gene that means coffee is bad for my heart – half the public have it - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/gene-coffee-bad-heart-half-public-4398605</link></item>
-<item><title>Read the full article - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/six-golden-rules-happy-secure-relationship-4383560</link></item>
-<item><title>Clive Martin - inews.co.uk</title><link>https://inews.co.uk/author/clive-martin</link></item>
-<item><title>How a bohemian £250-a-month housing solution became a nightmare - inews.co.uk</title><link>https://inews.co.uk/opinion/bohemian-solution-cheap-housing-turned-nightmare-4678785</link></item>
-<item><title>I&amp;#39;m a teacher – the biggest mistakes parents make when sending kids to university - inews.co.uk</title><link>https://inews.co.uk/opinion/teacher-biggest-mistakes-parents-make-sending-kids-university-4752645</link></item>
-<item><title>The fight to replace Farage has already begun - inews.co.uk</title><link>https://inews.co.uk/opinion/the-fight-to-replace-farage-has-already-begun-4743883</link></item>
-<item><title>Reform’s Gen Z members may get sick of their party’s chaos - inews.co.uk</title><link>https://inews.co.uk/opinion/reform-gen-zers-fear-party-becoming-joke-4737036</link></item>
-<item><title>I secretly moved to Argentina – my boss sacked me when he found out - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/secretly-moved-argentina-boss-sacked-when-found-out-4750048</link></item>
-<item><title>I&amp;#39;ve been sleeping with my colleague for 12 years, but I&amp;#39;ll never leave my husband - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/sleeping-with-colleague-12-years-never-leave-husband-4747139</link></item>
-<item><title>Five no-cook dinners to serve during busy weeks – according to a food editor - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/five-no-cook-dinners-busy-weeks-food-editor-4744342</link></item>
-<item><title>More first-time buyers are taking bigger mortgages – but will they regret it? - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/banks-offer-mortgages-6-5-times-income-4749792</link></item>
-<item><title>I&amp;#39;ve got a final salary pension – can I trade it for a pot of cash instead? - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/pensions-and-retirement/final-salary-pension-can-i-trade-for-cash-4747409</link></item>
-<item><title>How retirees can now get £3,000 a year more from the same pension pot - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/pensions-and-retirement/retirees-more-same-pension-pot-4748454</link></item>
-<item><title>The three simple ways to avoid EES border check delays - inews.co.uk</title><link>https://inews.co.uk/news/three-simple-ways-avoid-ees-border-check-delays-4752590</link></item>
-<item><title>Temperatures to reach 26°C – but rain to return next week - inews.co.uk</title><link>https://inews.co.uk/news/temperatures-reach-28c-rain-return-next-week-4745263</link></item>
-<item><title>The Yellowface author on why she&amp;#39;ll never write a sequel - inews.co.uk</title><link>https://inews.co.uk/culture/books/yellowface-author-never-write-sequel-4722925</link></item>
-<item><title>The 16 best new books to read this autumn - inews.co.uk</title><link>https://inews.co.uk/culture/books/16-best-books-read-autumn-4718440</link></item>
-<item><title>Dan Snow on being a &amp;#39;history hunk&amp;#39;: &amp;#39;I&amp;#39;m needy. It&amp;#39;s flattering&amp;#39; - inews.co.uk</title><link>https://inews.co.uk/culture/television/dan-snow-history-hunk-needy-flattering-4675373</link></item>
-<item><title>France&amp;#39;s busy summer holiday hotspot that&amp;#39;s perfect for September hikes - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/travel/france-busy-summer-holiday-hotspot-perfect-september-hikes-4715107</link></item>
-<item><title>I&amp;#39;ve done solo hikes in Europe for 15 years, these are the best for a long weekend - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/travel/solo-hikes-europe-15-years-best-long-weekend-4732736</link></item>
-<item><title>The Bologna alternative with beautiful architecture, great food and no crowds - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/travel/bologna-alternative-modena-architecture-food-no-crowds-4608505</link></item>
-<item><title>England are repeating the same mistake with Kevin Pietersen - inews.co.uk</title><link>https://inews.co.uk/sport/cricket/england-kevin-pietersen-same-mistake-4754102</link></item>
-<item><title>Kai Havertz and Arsenal&amp;#39;s perplexing form of dominance - inews.co.uk</title><link>https://inews.co.uk/sport/football/arsenal-kai-havertz-perplexing-dominance-4749270</link></item>
-<item><title>Tottenham have an Omar Marmoush problem - inews.co.uk</title><link>https://inews.co.uk/sport/football/tottenham-omar-marmoush-problem-4749255</link></item>
-<item><title>The private school tricks state school parents can copy – on the cheap - inews.co.uk</title><link>https://inews.co.uk/opinion/parents-kids-private-school-experience-cheap-4744086</link></item>
-<item><title>My wife prioritises our kids over everything – I’m thinking of leaving her - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/wife-prioritises-kids-leaving-her-3038413</link></item>
-<item><title>The seven elite universities losing millions of pounds… while bosses&amp;#39; pay rises - inews.co.uk</title><link>https://inews.co.uk/news/education/seven-elite-universities-losing-millions-bosses-pay-soars-4747053</link></item>
-<item><title>I’m a professional declutterer – eight easy tricks to end your constant tidying up - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/professional-declutterer-eight-easy-tricks-end-constant-tidying-4715428</link></item>
-<item><title>Trump&amp;#39;s UK nuclear claim is the latest rambling of an old man who&amp;#39;s lost it - inews.co.uk</title><link>https://inews.co.uk/news/world/trumps-uk-nuclear-claim-latest-rambling-old-man-lost-it-4749378</link></item>
-<item><title>I&amp;#39;ve sent three children to uni – these are the biggest mistakes parents make - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/three-children-uni-biggest-mistakes-parents-4743425</link></item>
-<item><title>I&amp;#39;m a Gen X with just £21,000 in a pension at 49. I want £500,000 by retirement - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/money/gen-x-21000-pension-at-49-500000-retirement-4704354</link></item>
-<item><title>I confessed I was unravelling – then my friend dumped me with &amp;#39;therapy speak&amp;#39; - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/confessed-unravelling-friend-dumped-me-therapy-speak-4749416</link></item>
-<item><title>&amp;#39;It would be ridiculous&amp;#39;: Burnham’s wife Frankie isn’t playing by the usual rules - inews.co.uk</title><link>https://inews.co.uk/news/politics/andy-burnhams-wife-isnt-playing-no-10-rules-4744759</link></item>
-<item><title>I’m a women&amp;#39;s cancer expert – four symptoms you should never ignore - inews.co.uk</title><link>https://inews.co.uk/inews-lifestyle/womens-cancer-expert-four-symptoms-never-ignore-4734494</link></item>
-<item><title>Croatia buys South Korean rocket artillery after HIMARS purchase from the US - Defense News</title><link>https://www.defensenews.com/global/europe/2026/09/07/croatia-buys-south-korean-rocket-artillery-after-himars-purchase-from-the-us/</link></item>
-<item><title>The Socialist Republic of Viet Nam - Chiphell</title><link>https://www.chiphell.com/article-35367-1.html</link></item>
-<item><title>【案例分享】桂林 | 122m² 设计了一个能“ - Chiphell</title><link>https://www.chiphell.com/article-35372-1.html</link></item>
-<item><title>LS460L 迟来的开箱... - Chiphell</title><link>https://www.chiphell.com/article-35378-1.html</link></item>
-<item><title>中卫丨沙漠中的艺术殿堂 - Chiphell</title><link>https://www.chiphell.com/article-35369-1.html</link></item>
-<item><title>Intel Xeon Max 9470 實測：一顆 CPU 玩出 - Chiphell</title><link>https://www.chiphell.com/article-35366-1.html</link></item>
-<item><title>两轮上的二人世界：一路骑进“幸福崃道” - Chiphell</title><link>https://www.chiphell.com/article-35370-1.html</link></item>
-<item><title>山西之行-创折叠自行车最长最高406公里6394 - Chiphell</title><link>https://www.chiphell.com/article-35376-1.html</link></item>
-<item><title>WALLHACK 发布小岛工作室联名款 SP-005 玻璃鼠标垫 - Chiphell</title><link>https://www.chiphell.com/thread-2898053-1-1.html</link></item>
-<item><title>为火神而创！「三屏联动」智屏设计大赛正式开启 - Chiphell</title><link>https://www.chiphell.com/thread-2898047-1-1.html</link></item>
-<item><title>2026年8月Steam硬件调查报告 RTX 5070进前三，当前一代游戏显卡 - Chiphell</title><link>https://www.chiphell.com/thread-2897787-1-1.html</link></item>
-<item><title>Epic 喜加一：原价 31 元二战题材射击游戏《Beach Invasion 1944 - Chiphell</title><link>https://www.chiphell.com/thread-2897771-1-1.html</link></item>
-<item><title>实体音乐介质销售大幅提升 2026H1美国黑胶唱片和CD销量分别增加1 - Chiphell</title><link>https://www.chiphell.com/thread-2897448-1-1.html</link></item>
-<item><title>古尔曼：苹果考虑调整 App Store 以提高收入和利润率 - Chiphell</title><link>https://www.chiphell.com/thread-2897398-1-1.html</link></item>
-<item><title>古尔曼：库克不会在苹果秋季发布会视频中出现，现在是特努斯时代 - Chiphell</title><link>https://www.chiphell.com/thread-2897382-1-1.html</link></item>
-<item><title>微软杰出工程师称手搓代码时代已结束，Win11 开发模式已迎巨变 - Chiphell</title><link>https://www.chiphell.com/thread-2897385-1-1.html</link></item>
-<item><title>前 R 星员工揭秘《GTA》系列开发流程：发售前两周全员通关一遍游 - Chiphell</title><link>https://www.chiphell.com/thread-2897383-1-1.html</link></item>
-<item><title>2026年Q2全球PC GPU市场逆势增长， 笔记本需求成主要驱动力 - Chiphell</title><link>https://www.chiphell.com/thread-2897376-1-1.html</link></item>
-<item><title>利民推出 AXP120-X77 下压式风冷散热器：77mm 高度、六年质保，2 - Chiphell</title><link>https://www.chiphell.com/thread-2897370-1-1.html</link></item>
-<item><title>酷冷至尊预告酷方 540 不锈钢机箱，新品上市在即 - Chiphell</title><link>https://www.chiphell.com/thread-2897353-1-1.html</link></item>
-<item><title>Intel Core Ultra 5 250K Plus - Chiphell</title><link>https://www.chiphell.com/article-35384-1.html</link></item>
-<item><title>Fractal Summit - Chiphell</title><link>https://www.chiphell.com/article-35368-1.html</link></item>
-<item><title>EXPO ULL vs. EXPO on G.Skill F5-6000A363 - Chiphell</title><link>https://www.chiphell.com/article-35355-1.html</link></item>
-<item><title>Gigabyte B850 Aorus Elite-P Ice &amp; Gigaby - Chiphell</title><link>https://www.chiphell.com/article-35345-1.html</link></item>
-<item><title>Colofire ME26A 橘舍 - Chiphell</title><link>https://www.chiphell.com/article-35336-1.html</link></item>
-<item><title>活动--CHH第十一届机王争霸赛 - Chiphell</title><link>https://www.chiphell.com/article-35198-1.html</link></item>
-<item><title>[第十一届机王争霸赛]ATX组—— 机心&amp;初心  by youzhusky - Chiphell</title><link>https://www.chiphell.com/article-35387-1.html</link></item>
-<item><title>姗姗来迟——insta360 X6 - Chiphell</title><link>https://www.chiphell.com/article-35386-1.html</link></item>
-<item><title>莱茵与阿尔卑斯之间 德荷瑞奥列十六日漫游（Part3） - Chiphell</title><link>https://www.chiphell.com/article-35385-1.html</link></item>
-<item><title>[第十一届机王争霸赛]MOD组—— CYCLOPS/独眼巨人 by‌ A.A.A - Chiphell</title><link>https://www.chiphell.com/article-35383-1.html</link></item>
-<item><title>[第十一届机王争霸赛]无光乱斗组——这个光轴不太纯粹 by 斐然 ... - Chiphell</title><link>https://www.chiphell.com/article-35382-1.html</link></item>
-<item><title>[第十一届机王争霸赛]ATX组——3A风冷海景房  by 二次元小萌新 ... - Chiphell</title><link>https://www.chiphell.com/article-35381-1.html</link></item>
-<item><title>原木外壳，赛博心脏 MATX 小钢炮｜R7‑9800X3D+5070，乔思伯 T7 装机分享 ... - Chiphell</title><link>https://www.chiphell.com/article-35380-1.html</link></item>
-<item><title>莱茵与阿尔卑斯之间 德荷瑞奥列十六日漫游（Part2） - Chiphell</title><link>https://www.chiphell.com/article-35377-1.html</link></item>
-<item><title>标本BB110T-6&amp;23款初代光阳ST250 - Chiphell</title><link>https://www.chiphell.com/article-35375-1.html</link></item>
-<item><title>用我心爱的蓝色小徕卡记录着桂林的山和水 - Chiphell</title><link>https://www.chiphell.com/article-35374-1.html</link></item>
-<item><title>素银极客 -AboCase ContainerL 装机分享 - Chiphell</title><link>https://www.chiphell.com/article-35373-1.html</link></item>
-<item><title>x-lab 首台砾石公路车 GT8 评测 - Chiphell</title><link>https://www.chiphell.com/article-35371-1.html</link></item>
-<item><title>The planet is… up to something - Aeon</title><link>https://aeon.co/videos/is-this-artemis-ii-timelapse-the-pale-blue-dot-for-our-times</link></item>
-<item><title>Continental divide - Aeon</title><link>https://aeon.co/essays/why-the-pan-american-highway-only-half-exists</link></item>
-<item><title>Only Connect S22E09 Culture Club v Ad Astra 720p iP WEB-DL AAC2 0 H 264-RTN - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801229.xml</link></item>
-<item><title>Kill Bill: The Whole Bloody Affair /杀死比尔：血色全传/Kill Bill: The Whole Bloody Affair /追殺比爾：完全血腥事件/杀死比尔一刀未剪完整合剪版/標殺令：終極血腥版/Kill Bill The Whole Bloody Affair (2011) - 2160p WEB-DL DoVi H265 DDP 5.1.srt - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669524.xml</link></item>
-<item><title>Futurama S11E07/飞出个未来/Futurama.S11E07.MULTi.1080p.WEB.H264-UKDTV - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801228.xml</link></item>
-<item><title>老大哥：驯鹿游戏/Big Brother US S28E30 1080p AMZN WEB-DL DDP2 0 H 264-NTb - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801227.xml</link></item>
-<item><title>八月的两周 Two Weeks in August (2026)/八月的两周 Two Weeks in August (2026) - 射手网(伪)</title><link>http://assrt.net/xml/sub/731/731831.xml</link></item>
-<item><title>Vivant - Season 2/别班2/Vivant - S02E07 (17) - Sub - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669523.xml</link></item>
-<item><title>President Curtis S01E07/柯蒂斯总统/President.Curtis.S01E07.1080p.WEB.h264-EDITH - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801226.xml</link></item>
-<item><title>客户部的科林/Colin from Accounts S03E08 Rum n Raisin 1080p FXTL WEB-DL DDP5 1 H 264-NTb - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801225.xml</link></item>
-<item><title>翠鸟谋杀案/Marble Hall Murders S01E01 1080p AMZN WEB-DL DDP5 1 H 264-RAWR - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801224.xml</link></item>
-<item><title>Special Ops: Lioness S03E06/特别行动：母狮/Special Ops Lioness S03E06 Sugar Land 1080p AMZN WEB-DL DDP5 1 H 264-playWEB - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801223.xml</link></item>
-<item><title>不眠/Vigil S03E03 720p WEB H264-JFF[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801222.xml</link></item>
-<item><title>The Walking Dead: Dead City S03E07/行尸走肉：死亡之城/The.Walking.Dead.Dead.City.S03E07.1080p.WEB.h264-ETHEL[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801221.xml</link></item>
-<item><title>Vigil S03E03/不眠/Vigil S03E04 720p WEB H264-JFF - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801220.xml</link></item>
-<item><title>红色娘子军.1961.祝希娟.王心刚.陈强.牛犇 - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669522.xml</link></item>
-<item><title>The Voice Kids S14E03/The Voice UK S14E03 720p WEB H264-JFF - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801219.xml</link></item>
-<item><title>林间鸽踪/Anna Pigeon S01E05 The Rope 1080p AMZN WEB-DL DDP5 1 H 264-RAWR - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801218.xml</link></item>
-<item><title>The Wings Of Eagles (1957) [1080p] [BluRay] [YTS] - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801217.xml</link></item>
-<item><title>Deadliest Catch S22E16/致命捕猎/Deadliest.Catch.S22E16.1080p.WEB.h264-EDITH - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801216.xml</link></item>
-<item><title>Big Brother US S28E27/老大哥：驯鹿游戏/Big.Brother.US.S28E29.1080p.WEB.h264-EDITH - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801215.xml</link></item>
-<item><title>Conan OBrien Must Go S03E03/柯南非走不可/Conan.OBrien.Must.Go.S03E03.1080p.WEB.h264-ETHEL - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801214.xml</link></item>
-<item><title>Big Brother US S28E27/老大哥：驯鹿游戏/Big.Brother.US.S28E27.1080p.WEB.h264-EDITH - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801213.xml</link></item>
-<item><title>雷霆家族大对决/Clash of the Thundermans 2026 1080p AMZN WEB-DL DD 5 1 H 264-playWEB - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801212.xml</link></item>
-<item><title>跟我来/Come With Me 2026 1080p AMZN WEB-DL DDP5 1 H 264-BYNDR - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801211.xml</link></item>
-<item><title>Star Trek: Strange New Worlds S04E07/星际迷航：奇异新世界/Star.Trek.Strange.New.Worlds.S04E07.1080p.HEVC.x265-MeGusta - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801210.xml</link></item>
-<item><title>好友互整/Impractical Jokers S13E07 1080p WEB-DL x264 AC3 SNAKE[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801209.xml</link></item>
-<item><title>OnlyTarts.23.10.13.Olivia.Sparkle - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669521.xml</link></item>
-<item><title>Big Brother US S28E27/老大哥：驯鹿游戏/Big Brother US S28E28 1080p AMZN WEB-DL DDP2 0 H 264-NTb - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801208.xml</link></item>
-<item><title>Fightland S01E06/战斗之地/Fightland.S01E06.1080p.WEB.h264-ETHEL - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801207.xml</link></item>
-<item><title>天桥骄子/Project Runway S22E09 720p WEB H264-JFF - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801206.xml</link></item>
-<item><title>末日地堡/Silo S03E10 Troy 1080p ATVP WEB-DL DDP5 1 Atmos H 264-playWEB - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801205.xml</link></item>
-<item><title>Stuart Fails to Save the Universe S01E07/斯图尔特未能拯救宇宙/Stuart.Fails.to.Save.the.Universe.S01E07.1080p.WEB.H264-CAKES - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801204.xml</link></item>
-<item><title>Taskmaster S22E01/挑战大师/Taskmaster.S22E01.1080p.WEB.h264-EDITH - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801203.xml</link></item>
-<item><title>贝尼多姆命案/Benidorm Is Murder S01E06 1080p MY5 WEB-DL AAC2 0 H 264-RAWR - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801202.xml</link></item>
-<item><title>锻刀大赛第三季/Forged.in.Fire.S03.1080p.AMZN.WEBRip.DDP2.0.x264-playWEB[rartv] - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669520.xml</link></item>
-<item><title>方舟一号/The Ark S03E06 Deja Vu 1080p AMZN WEB-DL DDP5 1 H 264-RAWR[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801201.xml</link></item>
-<item><title>D.O.P.E. Unit S01E05/DOPE 麻药取缔部特搜课/D O P E Unit S01E05 Desperate Moves 720p AMZN WEB-DL DDP5 1 H 264-RAWR - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801200.xml</link></item>
-<item><title>Chad Powers S02E05/查德·鲍尔斯/Chad.Powers.S02E05.1080p.WEB.H264-CAKES - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801199.xml</link></item>
-<item><title>Masterchef US S16E16/少年厨艺大师/MasterChef.US.S16E16.1080p.WEB.H264-HOTDOGWATER - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801198.xml</link></item>
-<item><title>プリンセッション・オーケストラ/公主專場管弦樂/Princession Orchestra/歌姬奏章（暫譯）/皇家少女樂團21-26 - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669519.xml</link></item>
-<item><title>プリンセッション・オーケストラ/Princession Orchestra/歌姬奏章（暫譯）/公主專場管弦樂/皇家少女樂團23-26 - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669518.xml</link></item>
-<item><title>Americas Got Talent S21E17/美国达人/Americas.Got.Talent.S21E17.1080p.WEB.h264-EDITH[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801197.xml</link></item>
-<item><title>The Gentlemen S02E02/绅士们/The Gentlemen S02E01 The Road To Kingdom 1080p NF WEB-DL DDP5 1 Atmos H 264-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801196.xml</link></item>
-<item><title>Chad Powers S02E02/查德·鲍尔斯/Chad.Powers.S02E02.1080p.WEB.h264-ETHEL - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801195.xml</link></item>
-<item><title>The Gentlemen S02E02/绅士们/The Gentlemen S02E05 A Suburban A-Road On The Outskirts Of Basingstoke 1080p NF WEB-DL DDP5 1 Atmos H 264-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801194.xml</link></item>
-<item><title>Liberal Education Worthy of the Name - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/liberal-education-worthy-of-the-name/</link></item>
-<item><title>The Argument We Forgot How to Have - Law &amp; Liberty</title><link>https://lawliberty.org/the-argument-we-forgot-how-to-have/</link></item>
+<lastBuildDate>Wed, 09 Sep 2026 10:48:47 +0800</lastBuildDate>
+<item><title>Do I have asthma? All you need to know about symptoms, diagnosis and treatments - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-asthma-symptoms-diagnosis-treatments.html</link></item>
+<item><title>More injuries following the policy change of body-checking in women&amp;#39;s ice hockey—but the players are positive - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-injuries-policy-body-women-ice.html</link></item>
+<item><title>Knowing right from wrong is not enough: Trauma linked to fragmented adolescent conscience - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-wrong-trauma-linked-fragmented-adolescent.html</link></item>
+<item><title>Menopause is missing from most electronic health records, study finds - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-menopause-electronic-health.html</link></item>
+<item><title>AI helping doctors to detect intestinal disease - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-ai-doctors-intestinal-disease.html</link></item>
+<item><title>Observational study links prenatal paracetamol exposure to altered reproductive development in daughters - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-links-prenatal-paracetamol-exposure-reproductive.html</link></item>
+<item><title>Resting electronic device on bare skin risks disfigurement due to heat, doctors warn - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-resting-electronic-device-skin-disfigurement.html</link></item>
+<item><title>Stomach microbe exposure may be linked to more than 1 in 5 bowel cancer cases worldwide - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-stomach-microbe-exposure-linked-bowel.html</link></item>
+<item><title>Different daily step count and stepping pace combos may all lower the risk of early death - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-daily-pace-combos-early-death.html</link></item>
+<item><title>Sugar substitutes fail to fuel sweet cravings or weight gain across yearlong trials - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-sugar-substitutes-fuel-sweet-cravings.html</link></item>
+<item><title>Mutation of the MECP2 gene, the main cause of Rett syndrome, alters pubertal development and sex hormones in mice - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-mutation-mecp2-gene-main-rett.html</link></item>
+<item><title>Predicting response to biologics for severe asthma through breath analysis - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-response-biologics-severe-asthma-analysis.html</link></item>
+<item><title>Mpox outbreak in 2022 caused by less severe form of the virus, study reveals - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-mpox-outbreak-severe-virus-reveals.html</link></item>
+<item><title>A doctor&amp;#39;s take: Expert-backed tips to protect kids from germs for the school year - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-doctor-expert-kids-germs-school.html</link></item>
+<item><title>Incidence of acute kidney injury is higher in summer, especially among young people in Japan - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-incidence-acute-kidney-injury-higher.html</link></item>
+<item><title>Scientists engineer ready-to-use cancer-fighting T cells for solid tumors - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-scientists-ready-cancer-cells-solid.html</link></item>
+<item><title>This is how dense breast tissue may lead to cancer - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-dense-breast-tissue-cancer.html</link></item>
+<item><title>How a simple group therapy program is helping depressed teen mothers in Kenya - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-simple-group-therapy-depressed-teen.html</link></item>
+<item><title>Menopause-linked brain changes may differ from those in puberty and pregnancy - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-menopause-linked-brain-differ-puberty.html</link></item>
+<item><title>DRC&amp;#39;s Ebola outbreak has the potential to become a global pandemic. How to make sure it doesn&amp;#39;t - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-drc-ebola-outbreak-potential-global.html</link></item>
+<item><title>Scientists reveal how blood cells release key signaling lipid - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-scientists-reveal-blood-cells-key.html</link></item>
+<item><title>Healthy lifestyle in middle age adds happiness alongside longevity to old age - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-healthy-lifestyle-middle-age-happiness.html</link></item>
+<item><title>Hormone therapy use for hot flashes and night sweats in menopausal women linked to lower cardiovascular risk - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-hormone-therapy-hot-night-menopausal.html</link></item>
+<item><title>Why is smoking linked to a lower risk of Parkinson&amp;#39;s? - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-linked-parkinson.html</link></item>
+<item><title>New review highlights promise of intra-arterial stem cell therapy to improve stroke recovery - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-highlights-intra-arterial-stem-cell.html</link></item>
+<item><title>Strengthening responses to Bundibugyo virus outbreaks with faster diagnostics and deeper insights - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-responses-bundibugyo-virus-outbreaks-faster.html</link></item>
+<item><title>MASH may require personalized treatment as distinct disease subtypes emerge - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-mash-require-personalized-treatment-distinct.html</link></item>
+<item><title>Researchers lay out the case for integrating psychologists into primary health-care settings - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-lay-case-psychologists-primary-health.html</link></item>
+<item><title>Specific CAR T-cell subgroup could make lower-dose cancer therapy more effective - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-specific-car-cell-subgroup-dose.html</link></item>
+<item><title>Dopamine-targeting treatments show only modest benefits for anhedonia, prompting calls for new research approaches - Medical Xpress</title><link>https://medicalxpress.com/news/2026-09-dopamine-treatments-modest-benefits-anhedonia.html</link></item>
+<item><title>美国今年上半年 CD 和黑胶唱片销量大幅增长 - Solidot</title><link>https://www.solidot.org/story?sid=85315</link></item>
+<item><title>英国犯罪率下降，但公众并没有感到更安全 - Solidot</title><link>https://www.solidot.org/story?sid=85316</link></item>
+<item><title>iPhone 折叠版早期产能严重受限 - Solidot</title><link>https://www.solidot.org/story?sid=85317</link></item>
+<item><title>美国军方正禁用设备上的广告追踪功能 - Solidot</title><link>https://www.solidot.org/story?sid=85318</link></item>
+<item><title>Asahi Linux 宣布支持 M3 系列 Mac - Solidot</title><link>https://www.solidot.org/story?sid=85319</link></item>
+<item><title>澳大利亚想要社媒平台允许用户退出算法驱动的信息流 - Solidot</title><link>https://www.solidot.org/story?sid=85320</link></item>
+<item><title>Jellyfin 12.0 释出 - Solidot</title><link>https://www.solidot.org/story?sid=85321</link></item>
+<item><title>控制呼吸为何能控制焦虑？ - Solidot</title><link>https://www.solidot.org/story?sid=85322</link></item>
+<item><title>科学家建议冲马桶合盖以减少气凝胶 - Solidot</title><link>https://www.solidot.org/story?sid=85323</link></item>
+<item><title>Brave 声称其比竞争对手使用的系统资源更少页面加载速度更快 - Solidot</title><link>https://www.solidot.org/story?sid=85324</link></item>
+<item><title>小鼠实验显示 GLP-1 减肥药或有助于延缓衰老 - Solidot</title><link>https://www.solidot.org/story?sid=85314</link></item>
+<item><title>“资深影迷”鲁迅：一生观影171部，不看电影的两年专心做“奶爸” - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34033632</link></item>
+<item><title>AI on your terms: Firefox meets you where you areRead More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/firefox/firefox-ai-on-your-terms/</link></item>
 </channel></rss>
