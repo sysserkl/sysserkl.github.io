@@ -381,7 +381,7 @@ function enwords_debut_highlight_kltxt_b(){
         if (blxl>=bllen || lent==0){
             document.title=old_title;
             if (highlight_list.length>0){
-                document.getElementById('divhtml2').innerHTML='<div style="margin:0.5rem;">'+enwords_different_types_div_b(highlight_list,false,'','','',close_button_b('divhtml2'))+'</div>';
+                document.getElementById('divhtml2').innerHTML='<div style="margin:0.5rem;">'+enwords_different_types_div_b(highlight_list,false,'','','',close_button_b('divhtml2'),'15rem')+'</div>';
                 highlight_text_b(highlight_list,orows,true,new_words_kltxt_b);
             } else {
                 alert('未发现首词');
@@ -4976,6 +4976,7 @@ function current_page_2_ensentence_b(cstype=''){
     left_str=left_str+`字符串长度：<input type="number" id="input_sentences_from_kltxt_split_len_b" placeholder="分割长度" min=0 value="10000" style="width:4rem;" /> 
 <span class="aclick" onclick="ensentence_in_textarea_split_b();">分割</span>
 <span class="aclick" onclick="ensentence_in_textarea_sort_b();">按长度升序</span>
+<span class="aclick" onclick="ensentence_in_textarea_group_b(true);">按稀有单词排序</span>
 小于<input type="number" id="input_sentences_from_kltxt_minor_merge_b" style="width:2rem;" value=2 />时不分割
 <span class="aclick" onclick="ensentence_in_textarea_group_b();">按稀有单词分割</span>
 <span class="aclick" onclick="ensentence_in_textarea_remove_open_end_b();">剔除开放结尾行</span>
@@ -5022,7 +5023,7 @@ function ensentence_in_textarea_remove_open_end_b(){
     ensentence_in_textarea_len_b(result_t);
 }
 
-function ensentence_in_textarea_group_b(){
+function ensentence_in_textarea_group_b(just_sort=false){
     if (typeof en_sentence_count_global == 'undefined'){return;}
 
     var otextarea=document.getElementById('textarea_sentences_from_kltxt_b');
@@ -5043,6 +5044,16 @@ function ensentence_in_textarea_group_b(){
     rare_dict=object2array_b(rare_dict,true,2);
     rare_dict.sort();
     rare_dict.sort(function (a,b){return a.length>b.length?-1:1;});
+    
+    if (just_sort){
+        for (let blxl=0,lent=rare_dict.length;blxl<lent;blxl++){
+            rare_dict[blxl]=rare_dict[blxl].slice(1,).join('\n\n');
+        }
+        otextarea.value=rare_dict.join('\n\n');
+        return;
+    }
+    
+    
     
     var blminor=parseInt(document.getElementById('input_sentences_from_kltxt_minor_merge_b').value.trim());
     var right_part_list=[];

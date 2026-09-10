@@ -1717,7 +1717,7 @@ function enwords_lines_2_js_array_b(aword,emoji_list,three_lines=false){
     return str_t;
 }
 
-function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',textarea_name='',button_type='',more_buttons=''){
+function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',textarea_name='',button_type='',more_buttons='',csheight=''){
     var blstr='<p>';
     blstr=blstr+'<select onchange="enwords_different_types_textarea_b(this);">';
     var type_names=['','(o)asterisk','cut','(o)js','count','(o)temp','(o)wiki','reg','space','rare_words','filter','group','random_sort','switch with the first textarea','移除行无非字母字符','移除短单词'];
@@ -1737,7 +1737,7 @@ function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',tex
         blstr=blstr+'<form method="POST" action="'+postpath+'temp_txt_share.php" target=_blank>\n';    
     }
     
-    blstr=blstr+'<textarea class="textarea_enwords_raw_types"'+(textarea_id==''?'':' id="'+textarea_id+'"')+(textarea_name==''?'':' name="'+textarea_name+'"')+'>'+cswlist.join('\n')+'</textarea>';
+    blstr=blstr+'<textarea class="textarea_enwords_raw_types"'+(textarea_id==''?'':' id="'+textarea_id+'"')+(textarea_name==''?'':' name="'+textarea_name+'"')+' style="height:'+csheight+';">'+cswlist.join('\n')+'</textarea>';
     
     var buttons=more_buttons;
     if (textarea_id!=='' && button_type!==''){
