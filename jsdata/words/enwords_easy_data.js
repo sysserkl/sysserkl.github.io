@@ -1924,6 +1924,14 @@ overtired
 removeable
 floppy disk
 non-aggression
-
+riverward
+semisweet
+sunburned
+sunburnt
+unhurried
+wolfhound
+lie detector
+hard-liner
+wild-goose chase
 
 `.trim().split('\n');
