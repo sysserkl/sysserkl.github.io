@@ -5197,7 +5197,13 @@ function recent_rare_words_buttons_kltxt_b(textarea_id=''){
     var bljg='<input type="number" id="input_recent_rare_old_words_kltxt_b" value="25" style="width:3rem;" /> 个';
     bljg=bljg+'<span class="aclick" onclick="recent_rare_words_kltxt_b(\''+textarea_id+'\');">最新录入的稀有旧单词</span> ';
     bljg=bljg+'<span class="aclick" onclick="recent_rare_words_kltxt_b(\''+textarea_id+'\',true);">随机稀有旧单词</span> ';
+    bljg=bljg+'<select id="select_sort_recent_rare_old_words_kltxt_b">'+sort_select_klr_b().join('')+'</select> <span class="aclick" onclick="do_sort_recent_rare_words_kltxt_b(\''+textarea_id+'\');">排序</span> ';
     return bljg;
+}
+
+function do_sort_recent_rare_words_kltxt_b(textarea_id){
+    var bltype=document.getElementById('select_sort_recent_rare_old_words_kltxt_b').value;
+    sort_rows_klr_b(textarea_id,bltype);
 }
 
 function recent_rare_words_kltxt_b(textarea_id,is_random=false){

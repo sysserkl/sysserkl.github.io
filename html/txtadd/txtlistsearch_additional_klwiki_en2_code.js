@@ -2,6 +2,9 @@ function menu_more_kltxt_klwiki_en2(){
     var ospan=document.getElementById('span_for_more_menu_kltxt');
     if (!ospan){return;}
 
+    var file_list=klbase_addons_import_js_b(['rows'],[],[],[],false,false);
+    file_dom_create_b(file_list,true,'js');
+    
     var str_t=klmenu_hide_b('');
     var klmenu1=[    
     '<span class="span_menu" onclick="'+str_t+'days_kltxt_klwiki_en2();">今日段落阅读</span>',
