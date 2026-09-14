@@ -1934,5 +1934,10 @@ lie detector
 hard-liner
 wild-goose chase
 greylag
+love-struck
+Odesa
+eye chart
+Mirren
+Obi-Wan
 
 `.trim().split('\n');
