@@ -42,16 +42,16 @@ function generate_maze(){
     rows_maze_global=parseInt(document.getElementById('input_rows_maze').value.trim());
     cols_maze_global=parseInt(document.getElementById('input_cols_maze').value.trim());
     
-    grid = [];
-    init_grid_maze_b(grid,rows_maze_global,cols_maze_global);    //,cell_size_maze_global,border_color_maze_global,canvas,ctx);
+    grid_maze_global = [];
+    init_grid_maze_b(grid_maze_global,rows_maze_global,cols_maze_global);    //,cell_size_maze_global,border_color_maze_global,canvas,ctx);
     
     var otable=document.getElementById('table_maze');
-    table_maze_generate_b(rows_maze_global,cols_maze_global,grid,otable,null,'td_click_maze');
+    table_maze_generate_b(rows_maze_global,cols_maze_global,grid_maze_global,otable,null,'td_click_maze');
 }
 
 function answer_maze(){
     var otable=document.getElementById('table_maze');
-    var blpath=find_path_maze_b(grid,rows_maze_global,cols_maze_global); //,cell_size_maze_global,path_color,false,canvas,ctx);
+    var blpath=find_path_maze_b(grid_maze_global,rows_maze_global,cols_maze_global); //,cell_size_maze_global,path_color,false,canvas,ctx);
     
     var has_answer=otable.querySelector('td.td_maze_answer');
     
@@ -205,4 +205,14 @@ function do_auto_no_fork_maze(otd){
         open_dom[0].classList.add('td_maze_answer');
         do_auto_no_fork_maze(open_dom[0]);
     }
+}
+
+function data_maze(){
+    if (typeof grid_maze_global == 'undefined'){return;}
+    var result_t=[];
+    for (let arow of grid_maze_global){
+        result_t.push(JSON.stringify(arow));
+    }
+    
+    document.getElementById('div_status').innerHTML='<textarea>const MAZE_DATA = [\n'+result_t.join(',\n')+'\n];\n</textarea>';
 }

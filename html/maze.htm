@@ -11,7 +11,7 @@ klbase_addons_import_js_b(['css'],['maze.js'],[],['maze_code.js']);
 // 迷宫配置
 var cols_maze_global = 50;
 var rows_maze_global = 30;
-var grid = [];
+var grid_maze_global = [];
 
 css_root_style_b('18','13',['base','menu'],[],1);
 </script>
@@ -29,8 +29,10 @@ css_root_style_b('18','13',['base','menu'],[],1);
 <p>
 <span class="aclick" onclick="generate_maze()">生成</span>
 <span class="aclick" onclick="answer_maze();">答案</span>
+<span class="aclick" onclick="data_maze();">获取数据</span>
 </p>
 <table id="table_maze"></table>
+<div id="div_status"></div>
 </div>
 <script>
 //以下几行保留 - 保留注释

@@ -580,8 +580,15 @@ function klwiki_txtbook_oldwords_diff_ensentence(){
 function enwords_count_sentence_data_save_ensentence(){
     var otextarea=document.getElementById('textarea_rare_words');
     if (!otextarea){return;}
-    if (!confirm('是否保存为enwords_count_sentence_data.js？')){return;}
     var list_t=otextarea.value.trim().split('\n');
+    list_t.sort();
+    en_sentence_count_global.sort();
+    if (en_sentence_count_global.toString()==list_t.toString()){
+        alert('无变化');
+        return;
+    }
+    
+    if (!confirm('是否保存为enwords_count_sentence_data.js？')){return;}
     for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
         list_t[blxl]='"'+specialstr_j(list_t[blxl])+'",';
     }   
