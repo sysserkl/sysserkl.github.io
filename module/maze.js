@@ -1,32 +1,32 @@
-function canvas_set_maze_b(canvas,ROWS,COLS,CELL_SIZE){
-    canvas.width = COLS * CELL_SIZE;
-    canvas.height = ROWS * CELL_SIZE;
-    return canvas.getContext('2d');
-}
+//function canvas_set_maze_b(canvas,ROWS,COLS,maze_dict['cell_size']){
+    //canvas.width = COLS * maze_dict['cell_size'];
+    //canvas.height = ROWS * maze_dict['cell_size'];
+    //return canvas.getContext('2d');
+//}
 
-function init_grid_maze_b(grid,ROWS,COLS,CELL_SIZE=20,border_color='grey',canvas=false,ctx=false) {
+function init_grid_maze_b(grid,maze_dict,border_color='grey',canvas=false,ctx=false) {
     function sub_init_grid_maze_b_cell(cell,r,c){
-        const x = c * CELL_SIZE;
-        const y = r * CELL_SIZE;
+        const x = c * maze_dict['cell_size'];
+        const y = r * maze_dict['cell_size'];
         
         //以下几行保留 - 保留注释
         //if (cell.walls.top) {
             //ctx.moveTo(x, y); 
-            //ctx.lineTo(x + CELL_SIZE, y);
+            //ctx.lineTo(x + maze_dict['cell_size'], y);
         //}
         
         //if (cell.walls.left) {
             //ctx.moveTo(x, y); 
-            //ctx.lineTo(x, y + CELL_SIZE);
+            //ctx.lineTo(x, y + maze_dict['cell_size']);
         //}
                 
         if (cell.walls.right) {
-            ctx.moveTo(x + CELL_SIZE, y); 
-            ctx.lineTo(x + CELL_SIZE, y + CELL_SIZE);
+            ctx.moveTo(x + maze_dict['cell_size'], y); 
+            ctx.lineTo(x + maze_dict['cell_size'], y + maze_dict['cell_size']);
         }
         if (cell.walls.bottom) {
-            ctx.moveTo(x, y + CELL_SIZE); 
-            ctx.lineTo(x + CELL_SIZE, y + CELL_SIZE);
+            ctx.moveTo(x, y + maze_dict['cell_size']); 
+            ctx.lineTo(x + maze_dict['cell_size'], y + maze_dict['cell_size']);
         }
     }
     
@@ -49,19 +49,19 @@ function init_grid_maze_b(grid,ROWS,COLS,CELL_SIZE=20,border_color='grey',canvas
         for (let r = 0; r < ROWS; r++) {
             if (grid[r][0].walls.left) {
                 const x = 0;
-                const y = r * CELL_SIZE;
+                const y = r * maze_dict['cell_size'];
                 ctx.moveTo(x, y);
-                ctx.lineTo(x, y + CELL_SIZE);
+                ctx.lineTo(x, y + maze_dict['cell_size']);
             }
         }
         
         // 补上最上方的第一行上墙
         for (let c = 0; c < COLS; c++) {
             if (grid[0][c].walls.top) {
-                const x = c * CELL_SIZE;
+                const x = c * maze_dict['cell_size'];
                 const y = 0;
                 ctx.moveTo(x, y);
-                ctx.lineTo(x + CELL_SIZE, y);
+                ctx.lineTo(x + maze_dict['cell_size'], y);
             }
         }
         ctx.stroke();
@@ -87,6 +87,9 @@ function init_grid_maze_b(grid,ROWS,COLS,CELL_SIZE=20,border_color='grey',canvas
         if (dy === -1) { c1.walls.bottom = false; c2.walls.top = false; }
     }
 
+    var ROWS=maze_dict['rows'];
+    var COLS=maze_dict['cols'];
+    
     for (let r = 0; r < ROWS; r++) {
         let row = [];
         for (let c = 0; c < COLS; c++) {
@@ -124,30 +127,33 @@ function init_grid_maze_b(grid,ROWS,COLS,CELL_SIZE=20,border_color='grey',canvas
 }
 
 // 求解算法：BFS 寻找最短路径
-function find_path_maze_b(grid,ROWS,COLS,CELL_SIZE=20,path_color='tomato',otable=false,canvas=false,ctx=false) {
+function find_path_maze_b(grid,maze_dict,path_color='tomato',otable=false,canvas=false,ctx=false){
     function sub_find_path_maze_b_draw(path){
         if (!canvas){return;}
         
         ctx.strokeStyle = path_color;
-        ctx.lineWidth = CELL_SIZE / 3; // 路径宽度
+        ctx.lineWidth = maze_dict['cell_size'] / 3; // 路径宽度
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
         ctx.beginPath();
         
         // 从入口中心开始
-        ctx.moveTo(CELL_SIZE / 2, CELL_SIZE / 2);
+        ctx.moveTo(maze_dict['cell_size'] / 2, maze_dict['cell_size'] / 2);
         
         // 连接路径上的每个格子中心
         for (let i = 1; i < path.length; i++) {
-            const x = path[i].col * CELL_SIZE + CELL_SIZE / 2;
-            const y = path[i].row * CELL_SIZE + CELL_SIZE / 2;
+            const x = path[i].col * maze_dict['cell_size'] + maze_dict['cell_size'] / 2;
+            const y = path[i].row * maze_dict['cell_size'] + maze_dict['cell_size'] / 2;
             ctx.lineTo(x, y);
         }
         
         // 延伸到出口中心
-        ctx.lineTo((COLS - 0.5) * CELL_SIZE, (ROWS - 0.5) * CELL_SIZE);
+        ctx.lineTo((COLS - 0.5) * maze_dict['cell_size'], (ROWS - 0.5) * maze_dict['cell_size']);
         ctx.stroke();
     }
+
+    var ROWS=maze_dict['rows'];
+    var COLS=maze_dict['cols'];
     
     if (grid.length==0){return [];}
     
@@ -169,7 +175,7 @@ function find_path_maze_b(grid,ROWS,COLS,CELL_SIZE=20,path_color='tomato',otable
                 path.push(temp);
                 temp = parent.get(`${temp.row},${temp.col}`);
             }
-            table_maze_generate_b(COLS,ROWS,grid,otable,path);
+            table_maze_generate_b(maze_dict,grid,otable,path);
             sub_find_path_maze_b_draw(path.reverse());
             return path;
         }
@@ -198,8 +204,11 @@ function find_path_maze_b(grid,ROWS,COLS,CELL_SIZE=20,path_color='tomato',otable
     return []; // 理论上完美迷宫一定有解
 }
 
-function table_maze_generate_b(ROWS,COLS,grid,table,path = null,onclick_fn='') {
+function table_maze_generate_b(maze_dict,grid,table,path = null,onclick_fn='') {
     if (!table){return;}
+
+    var ROWS=maze_dict['rows'];
+    var COLS=maze_dict['cols'];
     
     if (path) {
         for (let item of path){
@@ -287,11 +296,11 @@ function findPath_3d_maze_b(grid, ROWS, COLS){
     return [];
 }
 
-function mark_3d_maze_b(THREE,CELL,WALL_H,color, x, z){
+function mark_3d_maze_b(THREE,maze_dict,color, x, z){
     const g = new THREE.Group();
     
     const ring = new THREE.Mesh(
-        new THREE.TorusGeometry(CELL * 0.3, 0.06, 10, 40),
+        new THREE.TorusGeometry(maze_dict['cell'] * 0.3, 0.06, 10, 40),
         new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 0.9 })
     );
     
@@ -299,11 +308,11 @@ function mark_3d_maze_b(THREE,CELL,WALL_H,color, x, z){
     ring.position.y = 0.06;
     
     const ball = new THREE.Mesh(
-        new THREE.SphereGeometry(CELL * 0.13, 20, 16),
+        new THREE.SphereGeometry(maze_dict['cell'] * 0.13, 20, 16),
         new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 1.1 })
     );
     
-    ball.position.y = WALL_H * 0.6;
+    ball.position.y = maze_dict['wall_h'] * 0.6;
     g.add(ring, ball);
     g.position.set(x, 0, z);
     
@@ -334,7 +343,7 @@ function init_3d_maze_b(THREE,OrbitControls,csw,csh,add_img=false){
     var controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.dampingFactor = 0.08;
-    controls.minDistance = 5;
+    controls.minDistance = 0.5;
     controls.maxDistance = 400;
     controls.maxPolarAngle = Math.PI * 0.49;
 
@@ -350,7 +359,7 @@ function init_3d_maze_b(THREE,OrbitControls,csw,csh,add_img=false){
     if (add_img){
         // 补一盏暖光，让画面更有画廊感
         const spot = new THREE.PointLight(0xffd9a0, 40, 0, 2);
-        spot.position.set(0, WALL_H * 3, 0);
+        spot.position.set(0, maze_dict['wall_h'] * 3, 0);
         scene.add(spot);
     }
     
@@ -361,12 +370,11 @@ function init_3d_maze_b(THREE,OrbitControls,csw,csh,add_img=false){
     return [renderer,scene,camera,controls,sun,mazeGroup,artGroup];
 }
 
-function render_3d_maze_b(THREE,CELL,WALL_T,WALL_H,sun,scene,controls,camera,pathMesh,mazeGroup,grid,renderer,texLoader=false,ART_H=0,ART_Y=0,ART_MAX_W=0,PICTURES=[],artGroup=false){
-
+function render_3d_maze_b(THREE,maze_dict,sun,scene,controls,camera,pathMesh,mazeGroup,grid,renderer,texLoader=false,PICTURES=[],artGroup=false,has_in_out=true){
     const ROWS = grid.length;
     const COLS = grid[0].length;
-    const cx = c => (c - (COLS - 1) / 2) * CELL;   // 列 → x
-    const cz = r => (r - (ROWS - 1) / 2) * CELL;   // 行 → z
+    const cx = c => (c - (COLS - 1) / 2) * maze_dict['cell'];   // 列 → x
+    const cz = r => (r - (ROWS - 1) / 2) * maze_dict['cell'];   // 行 → z
 
     dispose_group_3d_maze_b(mazeGroup);
     if (artGroup){
@@ -385,7 +393,7 @@ function render_3d_maze_b(THREE,CELL,WALL_T,WALL_H,sun,scene,controls,camera,pat
 
     /* ① 地板 */
     const floor = new THREE.Mesh(
-        new THREE.PlaneGeometry(COLS * CELL, ROWS * CELL),
+        new THREE.PlaneGeometry(COLS * maze_dict['cell'], ROWS * maze_dict['cell']),
         new THREE.MeshStandardMaterial({ color: 0x1a2233, roughness: 0.95 }),
     );
     floor.rotation.x = -Math.PI / 2;
@@ -407,28 +415,28 @@ function render_3d_maze_b(THREE,CELL,WALL_T,WALL_H,sun,scene,controls,camera,pat
         if (fr >= 0 && fr < ROWS) slots.push({ x, z, nx: 0, nz: nSign, face: [fr, c], axis: 'x' });
     };
 
-    for (let r = 0; r < ROWS; r++) {
-        for (let c = 0; c < COLS; c++) {
+    for (let r = 0; r < ROWS; r++){
+        for (let c = 0; c < COLS; c++){
             const w = grid[r][c].walls;
             const hasRight = c < COLS - 1 ? (w.right || grid[r][c + 1].walls.left) : w.right;
             const hasBottom = r < ROWS - 1 ? (w.bottom || grid[r + 1][c].walls.top) : w.bottom;
             if (hasRight) {
-                addWall(cx(c) + CELL / 2, cz(r), WALL_T, CELL + WALL_T);
-                addVSlot(cx(c) + CELL / 2, cz(r), r, c, -1);   // 朝左格
-                addVSlot(cx(c) + CELL / 2, cz(r), r, c, +1);   // 朝右格
+                addWall(cx(c) + maze_dict['cell'] / 2, cz(r), maze_dict['wall_t'], maze_dict['cell'] + maze_dict['wall_t']);
+                addVSlot(cx(c) + maze_dict['cell'] / 2, cz(r), r, c, -1);   // 朝左格
+                addVSlot(cx(c) + maze_dict['cell'] / 2, cz(r), r, c, +1);   // 朝右格
             }
             if (hasBottom) {
-                addWall(cx(c), cz(r) + CELL / 2, CELL + WALL_T, WALL_T);
-                addHSlot(cx(c), cz(r) + CELL / 2, r, c, -1);   // 朝上格
-                addHSlot(cx(c), cz(r) + CELL / 2, r, c, +1);   // 朝下格
+                addWall(cx(c), cz(r) + maze_dict['cell'] / 2, maze_dict['cell'] + maze_dict['wall_t'], maze_dict['wall_t']);
+                addHSlot(cx(c), cz(r) + maze_dict['cell'] / 2, r, c, -1);   // 朝上格
+                addHSlot(cx(c), cz(r) + maze_dict['cell'] / 2, r, c, +1);   // 朝下格
             }
             if (c === 0 && w.left) {                          // 最左列外墙
-                addWall(cx(c) - CELL / 2, cz(r), WALL_T, CELL + WALL_T);
-                slots.push({ x: cx(c) - CELL / 2, z: cz(r), nx: +1, nz: 0, face: [r, c], axis: 'z' });
+                addWall(cx(c) - maze_dict['cell'] / 2, cz(r), maze_dict['wall_t'], maze_dict['cell'] + maze_dict['wall_t']);
+                slots.push({ x: cx(c) - maze_dict['cell'] / 2, z: cz(r), nx: +1, nz: 0, face: [r, c], axis: 'z' });
             }
             if (r === 0 && w.top) {                           // 最上排外墙
-                addWall(cx(c), cz(r) - CELL / 2, CELL + WALL_T, WALL_T);
-                slots.push({ x: cx(c), z: cz(r) - CELL / 2, nx: 0, nz: +1, face: [r, c], axis: 'x' });
+                addWall(cx(c), cz(r) - maze_dict['cell'] / 2, maze_dict['cell'] + maze_dict['wall_t'], maze_dict['wall_t']);
+                slots.push({ x: cx(c), z: cz(r) - maze_dict['cell'] / 2, nx: 0, nz: +1, face: [r, c], axis: 'x' });
             }
         }
     }
@@ -441,8 +449,8 @@ function render_3d_maze_b(THREE,CELL,WALL_T,WALL_H,sun,scene,controls,camera,pat
     wallMesh.castShadow = wallMesh.receiveShadow = true;
     const d = new THREE.Object3D();
     walls.forEach((w, i) => {
-        d.position.set(w.x, WALL_H / 2, w.z);
-        d.scale.set(w.sx, WALL_H, w.sz);
+        d.position.set(w.x, maze_dict['wall_h'] / 2, w.z);
+        d.scale.set(w.sx, maze_dict['wall_h'], w.sz);
         d.updateMatrix();
         wallMesh.setMatrixAt(i, d.matrix);
     });
@@ -452,12 +460,13 @@ function render_3d_maze_b(THREE,CELL,WALL_T,WALL_H,sun,scene,controls,camera,pat
     /* ── ③ 路径管道 ── */
     const path = findPath_3d_maze_b(grid, ROWS, COLS);
     pathMesh = null;
-    if (path.length > 1) {
+    
+    if (path.length > 1){
         const y = 0.4;
         const pts = path.map(c => new THREE.Vector3(cx(c.col), y, cz(c.row)));
         pathMesh = new THREE.Mesh(
             new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts, false, 'centripetal', 0.4),
-            Math.max(64, pts.length * 8), CELL * 0.13, 12, false),
+            Math.max(64, pts.length * 8), maze_dict['cell'] * 0.13, 12, false),
             new THREE.MeshStandardMaterial({ color: 0xff6347, emissive: 0xff6347, emissiveIntensity: 0.5, roughness: 0.35 })
         );
         pathMesh.visible = document.getElementById('ckPath').checked;
@@ -465,15 +474,14 @@ function render_3d_maze_b(THREE,CELL,WALL_T,WALL_H,sun,scene,controls,camera,pat
     }
 
     /* ── ④ 起点 / 终点 ── */
-    mazeGroup.add(mark_3d_maze_b(THREE,CELL,WALL_H,0x35e08a, cx(0), cz(0)), mark_3d_maze_b(THREE,CELL,WALL_H,0x4aa3ff, cx(COLS - 1), cz(ROWS - 1)));
-
+    if (has_in_out){
+        mazeGroup.add(mark_3d_maze_b(THREE,maze_dict,0x35e08a, cx(0), cz(0)), mark_3d_maze_b(THREE,maze_dict,0x4aa3ff, cx(COLS - 1), cz(ROWS - 1)));
+    }
     /* ── ⑤ 挂画 ── */
-    const placed = place_pictures_3d_maze_b(THREE,WALL_T,ART_H,ART_Y,ART_MAX_W,renderer,texLoader,PICTURES,artGroup,slots, ROWS, COLS);
+    const placed = place_pictures_3d_maze_b(THREE,camera,maze_dict,renderer,texLoader,PICTURES,artGroup,slots, ROWS, COLS);
        
-    //artGroup.visible = document.getElementById('ckArt').checked;
-
     /* ── ⑥ 光照 / 阴影 / 雾自适应 ── */
-    const span = Math.max(ROWS, COLS) * CELL;
+    const span = Math.max(ROWS, COLS) * maze_dict['cell'];
     sun.position.set(span * 0.6, span * 1.3, span * 0.5);
     Object.assign(sun.shadow.camera, {
         left: -span * 0.75, right: span * 0.75, top: span * 0.75, bottom: -span * 0.75, near: 1, far: span * 3
@@ -484,7 +492,7 @@ function render_3d_maze_b(THREE,CELL,WALL_T,WALL_H,sun,scene,controls,camera,pat
     controls.maxDistance = span * 4;
     camera.userData.span = span;
     reset_camera_3d_maze_b(camera,controls);
-    return pathMesh;
+    return [pathMesh,placed];
 }
 
 function dispose_group_3d_maze_b(g){
@@ -502,12 +510,12 @@ function dispose_group_3d_maze_b(g){
     g.clear();
 }
 
-function place_pictures_3d_maze_b(THREE,WALL_T,ART_H,ART_Y,ART_MAX_W,renderer,texLoader,PICTURES,artGroup,slots, ROWS, COLS){
+function place_pictures_3d_maze_b(THREE,camera,maze_dict,renderer,texLoader,PICTURES,artGroup,slots, ROWS, COLS){
     if (!PICTURES.length){return 0;}
 
     // 洗牌，保证每次分布不同
     const pool = slots.slice();
-    for (let i = pool.length - 1; i > 0; i--) {
+    for (let i = pool.length - 1; i > 0; i--){
         const j = Math.floor(Math.random() * (i + 1));
         [pool[i], pool[j]] = [pool[j], pool[i]];
     }
@@ -518,26 +526,59 @@ function place_pictures_3d_maze_b(THREE,WALL_T,ART_H,ART_Y,ART_MAX_W,renderer,te
         const key = s.face[0] + ',' + s.face[1];
         if (usedCell.has(key)){continue;}     // 同一个格子只挂一张，分布更均匀
         usedCell.add(key);
-        artGroup.add(make_picture_3d_maze_b(THREE,WALL_T,ART_H,ART_Y,ART_MAX_W,renderer,texLoader,s, PICTURES[n], n));
+        artGroup.add(make_picture_3d_maze_b(THREE,camera,maze_dict,renderer,texLoader,s, PICTURES[n], n));
         n++;
     }
     return n;
 }
+ 
+function make_picture_3d_maze_b(THREE,camera,maze_dict,renderer,texLoader,slot, pic, index){
+    // ★ 画表面到墙段中心的偏移（统一用这一个值）
+    const FWD = maze_dict['wall_t'] / 2 + 0.02 + 0.09;  // 0.175 + 0.02 + 0.09 = 0.285
+    //const FWD = maze_dict['cell'] / 2 + maze_dict['wall_t'] / 2 + 0.02 + 0.09;
+    
+    function updateView(bw, bh){
+        const k = 2 * Math.tan(camera.fov * Math.PI / 360);
+        const ideal = Math.max((bh / 0.78) / k, (bw / 0.78) / (k * camera.aspect));
+        
+        // ★ 画表面位置（用统一偏移）
+        const surfaceX = slot.x + slot.nx * FWD;
+        const surfaceZ = slot.z + slot.nz * FWD;
 
-function make_picture_3d_maze_b(THREE,WALL_T,ART_H,ART_Y,ART_MAX_W,renderer,texLoader,slot, pic, index){
+        // 从画表面往后退
+        const maxDist = maze_dict['cell'] * 0.35;  // 直接用语义清晰的"格子内 35%"
+        const dist = Math.min(Math.max(ideal, maze_dict['cell'] * 0.15), maxDist);
+
+        g.userData.pic.viewPos = new THREE.Vector3(
+            surfaceX + slot.nx * dist,
+            maze_dict['art_y'],
+            surfaceZ + slot.nz * dist
+        );
+
+        // ★ viewTarget 也看画表面（不是 g.position）
+        g.userData.pic.viewTarget = new THREE.Vector3(surfaceX, maze_dict['art_y'], surfaceZ);
+    }
+    
     const g = new THREE.Group();
-    g.userData.pic = { url: pic.url, title: pic.title, full: null };
+    g.userData.pic = {
+        url: pic.url, title: pic.title, full: null,
+        obj: g,
+        anchor: { x: slot.x, z: slot.z },
+        normal: { x: slot.nx, z: slot.nz },
+        face: slot.face,
+        viewPos: null, viewTarget: null
+    };
 
-    // 局部 +z 为「朝外」方向：rotation.y 把它转到墙面法线
     const rotY = slot.nz > 0 ? 0 : slot.nz < 0 ? Math.PI : (slot.nx > 0 ? Math.PI / 2 : -Math.PI / 2);
     g.rotation.y = rotY;
+    
+    // ★ g.position 也用同一个 FWD
     g.position.set(
-        slot.x + slot.nx * (WALL_T / 2 + 0.02),
-        ART_Y,
-        slot.z + slot.nz * (WALL_T / 2 + 0.02)
+        slot.x + slot.nx * FWD,
+        maze_dict['art_y'],
+        slot.z + slot.nz * FWD
     );
 
-    // 背板（画框）
     const back = new THREE.Mesh(
         new THREE.BoxGeometry(1, 1, 1),
         new THREE.MeshStandardMaterial({ color: 0x232b3d, roughness: 0.55, metalness: 0.25 })
@@ -545,7 +586,6 @@ function make_picture_3d_maze_b(THREE,WALL_T,ART_H,ART_Y,ART_MAX_W,renderer,texL
     back.position.z = 0.04;
     back.castShadow = true;
 
-    // 画芯
     const canvas = new THREE.Mesh(
         new THREE.PlaneGeometry(1, 1),
         new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.45 })
@@ -553,53 +593,93 @@ function make_picture_3d_maze_b(THREE,WALL_T,ART_H,ART_Y,ART_MAX_W,renderer,texL
     canvas.position.z = 0.09;
 
     const applyAspect = a => {
-        const w = Math.min(ART_H * a, ART_MAX_W);   // 超宽图按最大宽度截断
-        back.scale.set(w + 0.22, ART_H + 0.22, 0.08);
-        canvas.scale.set(w, ART_H, 1);
+        const k = 2 * Math.tan(camera.fov * Math.PI / 360);
+        const safeMaxDist = maze_dict['cell'] * 0.35;
+        const maxW = Math.max(maze_dict['cell'] * 0.15, Math.min(maze_dict['art_max_w'], 0.78 * k * safeMaxDist * camera.aspect - 0.22));
+        let w = maze_dict['art_h'] * a, h = maze_dict['art_h'];
+        if (w > maxW) { w = maxW; h = maxW / a; }
+        back.scale.set(w + 0.22, h + 0.22, 0.08);
+        canvas.scale.set(w, h, 1);
+        updateView(back.scale.x, back.scale.y);
     };
-    applyAspect(1);   // 先按正方形占位，图片加载后再修正
+
+    applyAspect(1);
 
     g.add(back, canvas);
+    g.userData.pic.frame = back;
+    g.userData.pic.canvas = canvas;
 
-    texLoader.load(
-        pic.url,
-        tex => {
-            tex.colorSpace = THREE.SRGBColorSpace;
-            tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
-            applyAspect(tex.image.width / tex.image.height);
-            canvas.material.map = tex;
-            canvas.material.needsUpdate = true;
-        },
-        undefined,
-        () => {   // 加载失败 → 用彩色占位图兜底
-            const t = placeholder_texture_3d_maze_b(THREE,pic.title || `No.${index + 1}`, index);
+    texture_thumb_3d_maze_b(THREE, pic.url, renderer, maze_dict,(tex, ratio) => {
+        if (!tex){
+            const t = placeholder_texture_3d_maze_b(THREE);
             applyAspect(1);
             canvas.material.map = t;
             canvas.material.needsUpdate = true;
-            g.userData.pic.full = t.image.toDataURL ? t.image.toDataURL() : pic.url;
+            return;
         }
-    );
+        applyAspect(ratio);                    // 真实宽高比 → 顺带算好 viewPos
+        canvas.material.map = tex;
+        canvas.material.needsUpdate = true;
+    });
+    
+    //texLoader.load(
+        //pic.url,
+        //tex => {
+            //tex.colorSpace = THREE.SRGBColorSpace;
+            //tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
+            //applyAspect(tex.image.width / tex.image.height);
+            //canvas.material.map = tex;
+            //canvas.material.needsUpdate = true;
+        //},
+        //undefined,
+        //() => {
+            //const t = placeholder_texture_3d_maze_b(THREE,pic.title || `No.${index + 1}`, index);
+            //applyAspect(1);
+            //canvas.material.map = t;
+            //canvas.material.needsUpdate = true;
+            //g.userData.pic.full = t.image.toDataURL ? t.image.toDataURL() : pic.url;
+        //}
+    //);
 
     return g;
 }
 
-function placeholder_texture_3d_maze_b(THREE,text, i){
+//function placeholder_texture_3d_maze_b(THREE,text, i){
+    //const cv = document.createElement('canvas');
+    //cv.width = cv.height = 512;
+    //const g = cv.getContext('2d');
+    //const hue = (i * 67) % 360;
+    //const grd = g.createLinearGradient(0, 0, 512, 512);
+    //grd.addColorStop(0, `hsl(${hue},55%,45%)`);
+    //grd.addColorStop(1, `hsl(${(hue + 50) % 360},55%,25%)`);
+    //g.fillStyle = grd; 
+    //g.fillRect(0, 0, 512, 512);
+    //g.strokeStyle = 'rgba(255,255,255,.25)'; 
+    //g.lineWidth = 6;
+    //g.strokeRect(24, 24, 464, 464);
+    //g.fillStyle = '#fff'; 
+    //g.font = 'bold 44px sans-serif';
+    //g.textAlign = 'center'; 
+    //g.textBaseline = 'middle';
+    //g.fillText(text, 256, 256);
+    //const t = new THREE.CanvasTexture(cv);
+    //t.colorSpace = THREE.SRGBColorSpace;
+    //return t;
+//}
+
+function placeholder_texture_3d_maze_b(THREE){
+    if (SHARED_PLACEHOLDER){ return SHARED_PLACEHOLDER; }
     const cv = document.createElement('canvas');
-    cv.width = cv.height = 512;
+    cv.width = cv.height = 128;                    // 512 → 128
     const g = cv.getContext('2d');
-    const hue = (i * 67) % 360;
-    const grd = g.createLinearGradient(0, 0, 512, 512);
-    grd.addColorStop(0, `hsl(${hue},55%,45%)`);
-    grd.addColorStop(1, `hsl(${(hue + 50) % 360},55%,25%)`);
-    g.fillStyle = grd; g.fillRect(0, 0, 512, 512);
-    g.strokeStyle = 'rgba(255,255,255,.25)'; g.lineWidth = 6;
-    g.strokeRect(24, 24, 464, 464);
-    g.fillStyle = '#fff'; g.font = 'bold 44px sans-serif';
-    g.textAlign = 'center'; g.textBaseline = 'middle';
-    g.fillText(text, 256, 256);
-    const t = new THREE.CanvasTexture(cv);
-    t.colorSpace = THREE.SRGBColorSpace;
-    return t;
+    g.fillStyle = '#2a3348'; g.fillRect(0, 0, 128, 128);
+    g.strokeStyle = 'rgba(255,255,255,.3)'; g.lineWidth = 3;
+    g.strokeRect(8, 8, 112, 112);
+    SHARED_PLACEHOLDER = new THREE.CanvasTexture(cv);
+    SHARED_PLACEHOLDER.colorSpace = THREE.SRGBColorSpace;
+    SHARED_PLACEHOLDER.generateMipmaps = false;
+    SHARED_PLACEHOLDER.minFilter = THREE.LinearFilter;
+    return SHARED_PLACEHOLDER;
 }
 
 function pick_art_3d_maze_b(ev, artGroup, pointer, raycaster, camera,r){
@@ -623,16 +703,59 @@ function on_hover_3d_maze_b(ev,renderer,artGroup,pointer,raycaster,camera){
     renderer.domElement.style.cursor = pick_art_3d_maze_b(ev,artGroup,pointer,raycaster,camera,r) ? 'pointer' : 'default';
 }
 
-function pointerup_3d_maze_b(ev,downXY,renderer,artGroup,pointer,raycaster,camera,img_id,cap_id,box_id,r){
+function pointerup_3d_maze_b(ev,downXY,renderer,artGroup,pointer,raycaster,camera,controls,camAnim,img_id,cap_id,box_id,r,is_frontal){
+    function sub_pointerup_3d_maze_b_fly_to(pos, target, dur = 800){
+        camAnim = { fp: camera.position.clone(), ft: controls.target.clone(), tp: pos, tt: target, t: 0, dur };
+    }
+
     const moved = Math.hypot(ev.clientX - downXY.x, ev.clientY - downXY.y);
     downXY = null;
-    if (moved > 5){return;}             // 拖动旋转视角时不触发点击
+    if (moved > 5){
+        return [downXY,camAnim];
+    }             // 拖动旋转视角时不触发点击
     
     const pic = pick_art_3d_maze_b(ev,artGroup,pointer,raycaster,camera,r);
     if (pic){
-        document.getElementById(img_id).src = pic.full || pic.url;
+        document.getElementById(img_id).src='';
+        //document.getElementById(img_id).src = pic.full || pic.url;
+        document.getElementById(img_id).src = pic.url;
         document.getElementById(cap_id).textContent = pic.title || '';
         document.getElementById(box_id).style.display='flex';
+        if (is_frontal && pic.viewPos){
+            sub_pointerup_3d_maze_b_fly_to(pic.viewPos, pic.viewTarget, 800);   // 视角切到画的正前方
+        }
     }
-    return downXY;
+    return [downXY,camAnim];
+}
+
+function texture_thumb_3d_maze_b(THREE, url, renderer, maze_dict, cb){
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+        let w = img.width, h = img.height;
+        const s = maze_dict['tex_max_side'] / Math.max(w, h);
+        if (s < 1){ w = Math.max(1, Math.round(w * s)); h = Math.max(1, Math.round(h * s)); }
+        let tex = null;
+        try {
+            const cv = document.createElement('canvas');
+            cv.width = w; cv.height = h;
+            cv.getContext('2d').drawImage(img, 0, 0, w, h);
+            tex = new THREE.CanvasTexture(cv);
+        } catch(e){
+            tex = null;
+        }              // 跨域无 CORS → fallback
+        
+        if (!tex){
+            tex = new THREE.Texture(img); 
+            tex.needsUpdate = true; 
+        }
+        
+        tex.colorSpace = THREE.SRGBColorSpace;
+        tex.generateMipmaps = false;           // ★ 省 33%
+        tex.minFilter = THREE.LinearFilter;    // ★ 关 mipmap 必须配对
+        tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
+        cb(tex, img.width / img.height);
+    };
+    img.onerror = () => cb(null, 1);
+    img.src = url;
 }

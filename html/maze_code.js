@@ -2,7 +2,7 @@ function init_maze(){
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.6rem'),true,false,2);
     menu_maze();
     character_2_icon_b('🌀');    
-    generate_maze();
+    generate_maze(maze_dict);
 }
 
 function menu_maze(){
@@ -18,8 +18,8 @@ function menu_maze(){
     ]);
 
     var group_list=[
-    ['rows: <input type="number" id="input_rows_maze" value='+rows_maze_global+' style="width:4rem;" />','',false],
-    ['cols: <input type="number" id="input_cols_maze" value='+cols_maze_global+' style="width:4rem;" />','',false],
+    ['rows: <input type="number" id="input_rows_maze" value='+maze_dict['rows']+' style="width:4rem;" />','',false],
+    ['cols: <input type="number" id="input_cols_maze" value='+maze_dict['cols']+' style="width:4rem;" />','',false],
 
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,''));
@@ -38,20 +38,20 @@ function refresh_maze(){
     }
 }
 
-function generate_maze(){
-    rows_maze_global=parseInt(document.getElementById('input_rows_maze').value.trim());
-    cols_maze_global=parseInt(document.getElementById('input_cols_maze').value.trim());
+function generate_maze(maze_dict){
+    maze_dict['rows']=parseInt(document.getElementById('input_rows_maze').value.trim());
+    maze_dict['cols']=parseInt(document.getElementById('input_cols_maze').value.trim());
     
     grid_maze_global = [];
-    init_grid_maze_b(grid_maze_global,rows_maze_global,cols_maze_global);    //,cell_size_maze_global,border_color_maze_global,canvas,ctx);
+    init_grid_maze_b(grid_maze_global,maze_dict);
     
     var otable=document.getElementById('table_maze');
-    table_maze_generate_b(rows_maze_global,cols_maze_global,grid_maze_global,otable,null,'td_click_maze');
+    table_maze_generate_b(maze_dict,grid_maze_global,otable,null,'td_click_maze');
 }
 
 function answer_maze(){
     var otable=document.getElementById('table_maze');
-    var blpath=find_path_maze_b(grid_maze_global,rows_maze_global,cols_maze_global); //,cell_size_maze_global,path_color,false,canvas,ctx);
+    var blpath=find_path_maze_b(grid_maze_global,maze_dict);
     
     var has_answer=otable.querySelector('td.td_maze_answer');
     
@@ -115,9 +115,9 @@ function do_auto_complete_maze(otd){
         [rc1,ltrb1]=class_get_maze(one_td);
 
         if (rc1[0].startsWith('td_maze_rc'+rc0[1]+'_')){
-            console.log('r');
-            console.log(rc0,ltrb0);
-            console.log(rc1,ltrb1);
+            //console.log('r');
+            //console.log(rc0,ltrb0);
+            //console.log(rc1,ltrb1);
             
             let col_min=Math.min(rc0[2],rc1[2]);
             let col_max=Math.max(rc0[2],rc1[2]);
@@ -141,9 +141,9 @@ function do_auto_complete_maze(otd){
         }
 
         if (rc1[0].endsWith('_'+rc0[2])){
-            console.log('c');
-            console.log(rc0,ltrb0);
-            console.log(rc1,ltrb1);
+            //console.log('c');
+            //console.log(rc0,ltrb0);
+            //console.log(rc1,ltrb1);
             
             let row_min=Math.min(rc0[1],rc1[1]);
             let row_max=Math.max(rc0[1],rc1[1]);
@@ -169,7 +169,7 @@ function do_auto_complete_maze(otd){
 }
 
 function do_auto_no_fork_maze(otd){
-    if (otd.classList.contains('td_maze_rc0_0') || otd.classList.contains('td_maze_rc'+(rows_maze_global-1)+'_'+(cols_maze_global-1))){return;}
+    if (otd.classList.contains('td_maze_rc0_0') || otd.classList.contains('td_maze_rc'+(maze_dict['rows']-1)+'_'+(maze_dict['cols']-1))){return;}
 
     var otable=document.getElementById('table_maze');
 

@@ -438,3 +438,139 @@ function flip_img_b(ocanvas,ctx,image, mode){
     // 将原图绘制到变换后的画布上
     ctx.drawImage(image, 0, 0);
 }
+
+function pick_mime_type_img_b(){
+  return ['video/webm;codecs=vp9', 'video/webm;codecs=vp8', 'video/webm', 'video/mp4;codecs=avc1.42E01E', 'video/mp4'].find(t => MediaRecorder.isTypeSupported(t));
+}
+
+function create_recorder_img_b(canvas, { fps = 30, bitrate = 5_000_000, timeslice = 1000 } = {}){
+    let recorder = null;
+    let stream   = null;
+    let chunks   = [];
+    let resolveFinish = null;   // 录制完成时用它把 blob 交出去
+    let rejectFinish  = null;
+
+    return {
+        get recording() {
+            return !!recorder;
+        },
+        
+        get state() {
+            return recorder?.state ?? 'inactive';
+        },
+
+        /** 开始录制，返回 Promise<Blob>，录制完成后兑现 */
+        start(){
+            if (recorder){
+                return Promise.reject(new Error('已在录制中'));
+            }
+
+            const mimeType = pick_mime_type_img_b();
+            if (!mimeType){
+                return Promise.reject(new Error('浏览器不支持录制'));
+            }
+
+            stream   = canvas.captureStream(fps);
+            chunks   = [];
+            recorder = new MediaRecorder(stream, { mimeType, videoBitsPerSecond: bitrate });
+
+            recorder.ondataavailable = e => {
+                if (e.data && e.data.size > 0){
+                    chunks.push(e.data);
+                }
+            };
+
+            // 收尾：最后一块数据到位后才触发
+            recorder.onstop = () => {
+                const blob = new Blob(chunks, { type: recorder.mimeType });
+                chunks = [];
+                stream.getTracks().forEach(t => t.stop());
+                recorder = stream = null;
+                resolveFinish(blob);
+            };
+
+            recorder.onerror = e => rejectFinish?.(e.error ?? e);
+
+            const finished = new Promise((res, rej) => {
+                resolveFinish = res;
+                rejectFinish  = rej;
+            });
+
+            recorder.start(timeslice);
+            return finished;   // 注意：这个 Promise 要等 stop() 才兑现
+        },
+
+        /** 停止录制（异步收尾，结果由 start() 返回的 Promise 给出） */
+        stop(){
+            if (recorder && recorder.state !== 'inactive'){
+                recorder.stop();
+            }
+        },
+
+        pause(){
+            if (recorder?.state === 'recording'){
+                recorder.pause(); 
+            }
+        },
+        
+        resume(){
+            if (recorder?.state === 'paused'){
+                recorder.resume();
+            }
+        },
+    };
+}
+
+function rec_set_img_b(rec,start_dom,stop_save_dom,pause_dom){
+    function sub_rec_set_img_b_status(state){
+        const map = {
+            idle: { start: false, stop: true,  pause: true  },
+            running: { start: true,  stop: false, pause: false },
+        };
+        
+        const s = map[state] ?? map.idle;
+        
+        //需要button 才能显示出 disabled 效果 - 保留注释
+        start_dom.disabled = s.start;
+        stop_save_dom.disabled  = s.stop;
+        pause_dom.disabled = s.pause;
+        
+        start_dom.style.color=(s.start?scheme_global['memo']:'');
+        stop_save_dom.style.color=(s.stop?scheme_global['memo']:'');
+        pause_dom.style.color=(s.pause?scheme_global['memo']:'');
+        
+        pause_dom.textContent = '暂停';
+    }
+
+    start_dom.onclick = async () => {
+        sub_rec_set_img_b_status('running');
+        try {
+            const blob = await rec.start();            // ← 点停止后才会走到这里
+            const ext  = blob.type.includes('mp4') ? 'mp4' : 'webm';
+            if (confirm('是否保存？')){
+                blob_2_download_link_b(blob, `canvas-${Date.now()}.${ext}`);
+            }
+            //以下3行保留 - 保留注释
+            //<video id="preview" controls style="display:none"></video>
+            //document.getElementById('preview').src = url;
+            //document.getElementById('preview').style.display = 'block';
+        } catch (err){
+            console.error(err);
+            alert('录制失败：' + err.message);
+        } finally {
+            sub_rec_set_img_b_status('idle');
+        }
+    };
+
+    stop_save_dom.onclick = () => rec.stop();            // 只发指令，结果交给上面的 await
+    
+    pause_dom.onclick = function (){
+        if (rec.state === 'recording'){
+            rec.pause();
+            this.textContent = '继续';      // this === pause_dom
+        } else {
+            rec.resume();
+            this.textContent = '暂停';
+        }
+    };    
+}

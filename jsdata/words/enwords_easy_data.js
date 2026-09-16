@@ -1945,6 +1945,13 @@ aptitude test
 seaman recruit
 giftware
 schoolmate
+ultrathin
+child-centred
+show and tell
+frock coat
+ultra-leftism
+Asimov
+Chinglish
 
 
 `.trim().split('\n');

@@ -2668,10 +2668,16 @@ function blob_2_download_link_b(blob,savename){
     var odom = document.createElement('a');
     odom.href = blurl;
     odom.setAttribute('download', savename);
+    odom.style.display = 'none';
+    
     document.body.appendChild(odom); 
     odom.click();
+    
     document.body.removeChild(odom);
-    URL.revokeObjectURL(blurl);
+    
+    setTimeout(() => URL.revokeObjectURL(url), 10_000);   // 立刻 revoke 可能中断下载
+    
+    //URL.revokeObjectURL(blurl);
 }
 
 function export_svg_b(svgElement, filename = 'chart.svg'){
