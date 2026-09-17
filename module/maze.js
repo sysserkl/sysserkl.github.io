@@ -588,7 +588,7 @@ function make_picture_3d_maze_b(THREE,camera,maze_dict,renderer,texLoader,slot, 
 
     const canvas = new THREE.Mesh(
         new THREE.PlaneGeometry(1, 1),
-        new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.45 })
+        new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.45 })    
     );
     canvas.position.z = 0.09;
 
@@ -621,51 +621,9 @@ function make_picture_3d_maze_b(THREE,camera,maze_dict,renderer,texLoader,slot, 
         canvas.material.map = tex;
         canvas.material.needsUpdate = true;
     });
-    
-    //texLoader.load(
-        //pic.url,
-        //tex => {
-            //tex.colorSpace = THREE.SRGBColorSpace;
-            //tex.anisotropy = renderer.capabilities.getMaxAnisotropy();
-            //applyAspect(tex.image.width / tex.image.height);
-            //canvas.material.map = tex;
-            //canvas.material.needsUpdate = true;
-        //},
-        //undefined,
-        //() => {
-            //const t = placeholder_texture_3d_maze_b(THREE,pic.title || `No.${index + 1}`, index);
-            //applyAspect(1);
-            //canvas.material.map = t;
-            //canvas.material.needsUpdate = true;
-            //g.userData.pic.full = t.image.toDataURL ? t.image.toDataURL() : pic.url;
-        //}
-    //);
 
     return g;
 }
-
-//function placeholder_texture_3d_maze_b(THREE,text, i){
-    //const cv = document.createElement('canvas');
-    //cv.width = cv.height = 512;
-    //const g = cv.getContext('2d');
-    //const hue = (i * 67) % 360;
-    //const grd = g.createLinearGradient(0, 0, 512, 512);
-    //grd.addColorStop(0, `hsl(${hue},55%,45%)`);
-    //grd.addColorStop(1, `hsl(${(hue + 50) % 360},55%,25%)`);
-    //g.fillStyle = grd; 
-    //g.fillRect(0, 0, 512, 512);
-    //g.strokeStyle = 'rgba(255,255,255,.25)'; 
-    //g.lineWidth = 6;
-    //g.strokeRect(24, 24, 464, 464);
-    //g.fillStyle = '#fff'; 
-    //g.font = 'bold 44px sans-serif';
-    //g.textAlign = 'center'; 
-    //g.textBaseline = 'middle';
-    //g.fillText(text, 256, 256);
-    //const t = new THREE.CanvasTexture(cv);
-    //t.colorSpace = THREE.SRGBColorSpace;
-    //return t;
-//}
 
 function placeholder_texture_3d_maze_b(THREE){
     if (SHARED_PLACEHOLDER){ return SHARED_PLACEHOLDER; }
@@ -682,7 +640,23 @@ function placeholder_texture_3d_maze_b(THREE){
     return SHARED_PLACEHOLDER;
 }
 
-function pick_art_3d_maze_b(ev, artGroup, pointer, raycaster, camera,r){
+//function pick_art_3d_maze_b(ev, artGroup, pointer, raycaster, camera,r){
+    //if (!artGroup.visible){ return null; }
+
+    //pointer.x =  ((ev.clientX - r.left) / r.width)  * 2 - 1;
+    //pointer.y = -((ev.clientY - r.top)  / r.height) * 2 + 1;
+
+    //raycaster.setFromCamera(pointer, camera);
+    //const hits = raycaster.intersectObjects(artGroup.children, true);
+    //for (const h of hits){
+        //let o = h.object;
+        //while (o && !o.userData.pic){ o = o.parent; }
+        //if (o){ return o.userData.pic; }
+    //}
+    //return null;
+//}
+
+function pick_art_3d_maze_b(ev, artGroup, pointer, raycaster, camera, r){
     if (!artGroup.visible){ return null; }
 
     pointer.x =  ((ev.clientX - r.left) / r.width)  * 2 - 1;
@@ -690,10 +664,19 @@ function pick_art_3d_maze_b(ev, artGroup, pointer, raycaster, camera,r){
 
     raycaster.setFromCamera(pointer, camera);
     const hits = raycaster.intersectObjects(artGroup.children, true);
+    const dir = raycaster.ray.direction;          // 世界空间射线方向（已归一化）
+
     for (const h of hits){
         let o = h.object;
         while (o && !o.userData.pic){ o = o.parent; }
-        if (o){ return o.userData.pic; }
+        if (!o){ continue; }
+
+        const pic = o.userData.pic;
+        // ★ 背面剔除：射线必须与画面法线相反（dot < 0）才算从正面看
+        const n = pic.normal;
+        if (n && (dir.x * n.x + dir.z * n.z) >= -0.02){ continue; }
+
+        return pic;
     }
     return null;
 }

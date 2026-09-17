@@ -1,7 +1,7 @@
 function flowchart_study_mermaid(cstyle='LR'){
     //cstyle: TD LR RL
     const data=`
-    graph ${cstyle}
+    flowchart ${cstyle}
     A[开始] --> B{条件判断}
     B -->|是| C[执行操作甲]
     B -->|否| D[执行操作<b>乙</b>]
@@ -94,7 +94,7 @@ function menu_study_mermaid(){
 function li_show_study_mermaid(){    
     study_mermaid_type_dict_global={   //全局变量，*表示显示源代码但不执行 - 保留注释
     //study_dict_start
-    'flowchar':['flowchart_study_mermaid','*graph_generate_study_mermaid'],
+    'flowchart':['flowchart_study_mermaid','*graph_generate_study_mermaid'],
     'gantt':['gantt_study_mermaid','*graph_generate_study_mermaid'],
     'pie':['pie_study_mermaid','*graph_generate_study_mermaid'],
     'sequence_diagram':['sequence_diagram_study_mermaid','*graph_generate_study_mermaid'],

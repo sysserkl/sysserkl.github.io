@@ -8,236 +8,138 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Wed, 16 Sep 2026 08:15:03 +0800</lastBuildDate>
-<item><title>Skip To Main Content - Intel Newsroom</title><link>https://www.intel.com/content/www/us/en/newsroom/news-stories.html#primary-content</link></item>
-<item><title>夜晚睡眠光照太亮可能会损伤心脏 - Solidot</title><link>https://www.solidot.org/story?sid=85388</link></item>
-<item><title>出于兴趣阅读有助于促进终身的身心健康 - Solidot</title><link>https://www.solidot.org/story?sid=85387</link></item>
-<item><title>英国殖民之前的澳大利亚原居民人口约 222 万 - Solidot</title><link>https://www.solidot.org/story?sid=85386</link></item>
-<item><title>F-Droid 上的应用有多少是在 AI 帮助下编写的？ - Solidot</title><link>https://www.solidot.org/story?sid=85385</link></item>
-<item><title>廉价太阳能改变世界能源格局 - Solidot</title><link>https://www.solidot.org/story?sid=85384</link></item>
-<item><title>一款在浏览器里运行、部署在自己服务器上的 SQL 客户端 - Solidot</title><link>https://www.solidot.org/story?sid=85383</link></item>
-<item><title>美国军方首次证实在太空部署了武器 - Solidot</title><link>https://www.solidot.org/story?sid=85382</link></item>
-<item><title>科学家演示水下太阳能电池 - Solidot</title><link>https://www.solidot.org/story?sid=85381</link></item>
-<item><title>Steam Frame 起售价 1059 美元 - Solidot</title><link>https://www.solidot.org/story?sid=85380</link></item>
-<item><title>NVIDIA中国开发者日定档10月苏州，现场设认证考试与黑客松决赛 - Solidot</title><link>https://www.solidot.org/story?sid=85379</link></item>
-<item><title>Windows 11 的 9 月例行安全更新再次引发了大量故障 - Solidot</title><link>https://www.solidot.org/story?sid=85378</link></item>
-<item><title>XCancel 服务再次下线 - Solidot</title><link>https://www.solidot.org/story?sid=85377</link></item>
-<item><title>This Australian House Balances Bushfire Safety With Warm Interior Design - CONTEMPORIST</title><link>https://www.contemporist.com/this-australian-house-balances-bushfire-safety-with-warm-interior-design/</link></item>
-<item><title>Wiki World Creates a Playful Red Cabin Inspired by a Submarine - CONTEMPORIST</title><link>https://www.contemporist.com/wiki-world-creates-a-playful-red-cabin-inspired-by-a-submarine/</link></item>
-<item><title>A’ Design Awards &amp; Competition – Call for Submissions - CONTEMPORIST</title><link>https://www.contemporist.com/a-design-awards-competition-call-for-submissions-sept2026/</link></item>
-<item><title>A Modern Concrete and Wood House Designed Around Mature Trees - CONTEMPORIST</title><link>https://www.contemporist.com/a-modern-concrete-and-wood-house-designed-around-mature-trees/</link></item>
-<item><title>A 1963 Modernist Home Gets a Fresh New Chapter in Sydney - CONTEMPORIST</title><link>https://www.contemporist.com/a-1963-modernist-home-gets-a-fresh-new-chapter-in-sydney/</link></item>
-<item><title>Casa Malonic Is a White-Walled Mexico Home Built Around the Horizon - CONTEMPORIST</title><link>https://www.contemporist.com/casa-malonic-is-a-white-walled-mexico-home-built-around-the-horizon/</link></item>
-<item><title>While Hollywood Fears an AI Future, China&amp;#39;s Film Industry is Embracing It - Slashdot</title><link>https://entertainment.slashdot.org/story/26/09/14/0115231/while-hollywood-fears-an-ai-future-chinas-film-industry-is-embracing-it</link></item>
-<item><title>Scientists Discover Mysterious New X-Ray Objects &amp;#39;Unlike Any They Have Seen Before&amp;#39; - Slashdot</title><link>https://science.slashdot.org/story/26/09/12/189245/scientists-discover-mysterious-new-x-ray-objects-unlike-any-they-have-seen-before</link></item>
-<item><title>Cops Searched Thousands of Flock Cameras for Reasons of &amp;#39;LMAO,&amp;#39; &amp;#39;IDK,&amp;#39; &amp;#39;Hehe,&amp;#39; And &amp;#39;Asdfg&amp;#39; - Slashdot</title><link>https://yro.slashdot.org/story/26/09/15/0032227/cops-searched-thousands-of-flock-cameras-for-reasons-of-lmao-idk-hehe-and-asdfg</link></item>
-<item><title>Math Professor Accuses OpenAI of Copying His Work, Says AI Compute Power Makes Racing to Publish &amp;#39;Pointless&amp;#39; - Slashdot</title><link>https://science.slashdot.org/story/26/09/14/2246218/math-professor-accuses-openai-of-copying-his-work-says-ai-compute-power-makes-racing-to-publish-pointless</link></item>
-<item><title>ChatGPT-Using Lawyer Cited Its Fake Witnesses and Police Testimony in Court - Slashdot</title><link>https://slashdot.org/story/26/09/14/0611201/chatgpt-using-lawyer-cited-its-fake-witnesses-and-police-testimony-in-court</link></item>
-<item><title>Reservations Go Live for Valve&amp;#39;s Steam Frame VR Headset. An Experiment in Progress? - Slashdot</title><link>https://games.slashdot.org/story/26/09/14/2019212/reservations-go-live-for-valves-steam-frame-vr-headset-an-experiment-in-progress</link></item>
-<item><title>A Visit to San Francisco&amp;#39;s AI-run Store: No Customers, Nothing Useful, And Losing Money Fast - Slashdot</title><link>https://slashdot.org/story/26/09/13/0523208/a-visit-to-san-franciscos-ai-run-store-no-customers-nothing-useful-and-losing-money-fast</link></item>
-<item><title>manipulated the bot into giving away its entire inventory for free&amp;quot; - Slashdot</title><link>https://slashdot.org/story/25/12/18/1849218/anthropics-ai-lost-hundreds-of-dollars-running-a-vending-machine-after-being-talked-into-giving-everything-away</link></item>
-<item><title>No Rolling Power Outages for California Since 2020 - Thanks to 17,000 MW of New Battery Storage - Slashdot</title><link>https://yro.slashdot.org/story/26/09/14/0446243/no-rolling-power-outages-for-california-since-2020---thanks-to-17000-mw-of-new-battery-storage</link></item>
-<item><title>Union Contract with Microsoft Ratified by 1,900 Blizzard Developers and Workers - Slashdot</title><link>https://games.slashdot.org/story/26/09/14/0153249/union-contract-with-microsoft-ratified-by-1900-blizzard-developers-and-workers</link></item>
-<item><title>Should US Open-Weight AI Labs &amp;#39;Distill&amp;#39; Frontier Models Too? - Slashdot</title><link>https://news.slashdot.org/story/26/09/13/2334206/should-us-open-weight-ai-labs-distill-frontier-models-too</link></item>
-<item><title>220 Million Traveler Records Exposed In Vietnam-Linked APIS Leak - Slashdot</title><link>https://yro.slashdot.org/story/26/09/12/1758204/220-million-traveler-records-exposed-in-vietnam-linked-apis-leak</link></item>
-<item><title>Columbia美国官网 - 什么值得买</title><link>https://www.smzdm.com/mall/columbia/</link></item>
-<item><title>MOUNTAIN HARDWEAR美国官网 - 什么值得买</title><link>https://www.smzdm.com/mall/mountainhardwear/</link></item>
-<item><title>小天鹅/LittleSwan - 什么值得买</title><link>https://pinpai.smzdm.com/335/</link></item>
-<item><title>蕉下/Beneunder - 什么值得买</title><link>https://pinpai.smzdm.com/37802/</link></item>
-<item><title>卡姿兰/CARSLAN - 什么值得买</title><link>https://pinpai.smzdm.com/969/</link></item>
-<item><title>科颜氏/Kiehl&amp;#39;s - 什么值得买</title><link>https://pinpai.smzdm.com/2197/</link></item>
-<item><title>马克华菲/MARK FAIRWHALE - 什么值得买</title><link>https://pinpai.smzdm.com/5083/</link></item>
-<item><title>五粮液/WULIANGYE - 什么值得买</title><link>https://pinpai.smzdm.com/97/</link></item>
-<item><title>十月稻田/SHI YUE DAO TIAN - 什么值得买</title><link>https://pinpai.smzdm.com/15089/</link></item>
-<item><title>凯米/CHEMILENS - 什么值得买</title><link>https://pinpai.smzdm.com/49843/</link></item>
-<item><title>依视路/essilor - 什么值得买</title><link>https://pinpai.smzdm.com/3543/</link></item>
-<item><title>周六福/ZHOU LIU FU - 什么值得买</title><link>https://pinpai.smzdm.com/62481/</link></item>
-<item><title>米奇啵啵/mikibobo - 什么值得买</title><link>https://pinpai.smzdm.com/182221/</link></item>
-<item><title>江苏科学技术出版社/PHOENIX SCIENCE PRESS - 什么值得买</title><link>https://pinpai.smzdm.com/61453/</link></item>
-<item><title>学而思网校/Xueersi Online School - 什么值得买</title><link>https://pinpai.smzdm.com/59575/</link></item>
-<item><title>凤凰新华/PHOENIX XINHUA - 什么值得买</title><link>https://pinpai.smzdm.com/289856/</link></item>
-<item><title>布鲁可积木/BLOKS - 什么值得买</title><link>https://pinpai.smzdm.com/271209/</link></item>
-<item><title>活石/LIVING STONES - 什么值得买</title><link>https://pinpai.smzdm.com/2845/</link></item>
-<item><title>真彩/truecolor - 什么值得买</title><link>https://pinpai.smzdm.com/1633/</link></item>
-<item><title>拓竹/Bambu Lab - 什么值得买</title><link>https://pinpai.smzdm.com/314701/</link></item>
-<item><title>19.98 万元起，最高 1129 匹马力，吉利银河战舰 700杀疯了 - 什么值得买</title><link>https://post.smzdm.com/p/a260nz5d/</link></item>
-<item><title>大牌55W充电宝跌出性价比！二手70才更香，支持三口快充 - 什么值得买</title><link>https://post.smzdm.com/p/ak8k240k/</link></item>
-<item><title>男人过了40别再剃寸头留长发了，换这3种发型显年轻 - 什么值得买</title><link>https://post.smzdm.com/p/a5ro7337/</link></item>
-<item><title>一张图看懂秋天吃什么，附16道中秋家宴菜照着做就行！ - 什么值得买</title><link>https://post.smzdm.com/talk/p/a03q9xn9/</link></item>
-<item><title>130度电池只卖29.98万！腾势N8L把大六座纯电价格打下来了？ - 什么值得买</title><link>https://post.smzdm.com/p/a03qe38r/</link></item>
-<item><title>一年从180减到130，用2对哑铃+1双跑鞋，从胖子到瘦子再到薄肌，手把手教你，减肥增肌真不难 - 什么值得买</title><link>https://post.smzdm.com/p/a260373q/</link></item>
-<item><title>实测光帆AI全感穿戴：耳表协同+eSIM，是创新还是噱头？ - 什么值得买</title><link>https://post.smzdm.com/p/apqv4299/</link></item>
-<item><title>云鲸逍遥002Max圆盘AI水箱版，热水加压拖地，兼顾颜值与清洁实力 - 什么值得买</title><link>https://post.smzdm.com/p/avgxq7m4/</link></item>
-<item><title>980元佳明安夺Enduro太阳能表，二手到底是捡漏还是坑 - 什么值得买</title><link>https://post.smzdm.com/p/apqv24k0/</link></item>
-<item><title>首个AI原生NAS操作系统TOS 7｜铁威马F4-425 Pro - 什么值得买</title><link>https://post.smzdm.com/p/apqxw6k7/</link></item>
-<item><title>被宜家“邪修收纳”惊到了！只要换个用法，就能让家井井有条 - 什么值得买</title><link>https://post.smzdm.com/p/axkzepq2/</link></item>
-<item><title>趣尝鲜 五谷鲜鸡蛋15枚/盒 净重750g 源头直发 - 什么值得买</title><link>https://www.smzdm.com/p/182336016/#hfeeds</link></item>
-<item><title>PLUS会员、今日必买：可心柔 V9婴儿乳霜保湿抽纸3层60抽10包 - 什么值得买</title><link>https://www.smzdm.com/p/182275530/#hfeeds</link></item>
-<item><title>今日必买：雪中飞 610+蓬松 立领羽绒服外套 男女同款 - 什么值得买</title><link>https://www.smzdm.com/p/182370005/#hfeeds</link></item>
-<item><title>PLUS会员：伊利 金典鲜牛奶4.0g鲜活乳蛋白235ml*4瓶定制装 开学季儿童早餐 - 什么值得买</title><link>https://www.smzdm.com/p/181890746/#hfeeds</link></item>
-<item><title>京鲜生 陕西大荔冬枣 净重3斤 单果16g+ 生鲜水果 源头直发包邮 - 什么值得买</title><link>https://www.smzdm.com/p/182338600/#hfeeds</link></item>
-<item><title>伊利 SHUHUA 舒化 全脂型 无乳糖牛奶 220ml*24盒 - 什么值得买</title><link>https://www.smzdm.com/p/182295256/#hfeeds</link></item>
-<item><title>JEEP SPIRIT 户外三防冲锋衣外套 - 什么值得买</title><link>https://www.smzdm.com/p/182338284/#hfeeds</link></item>
-<item><title>稻草熊 塑料收纳箱大号抽屉式 两个装 - 什么值得买</title><link>https://www.smzdm.com/p/182388975/#hfeeds</link></item>
-<item><title>今日必买：洁柔 可湿水抽纸柔韧软抽三层100抽300张*20包 195x123mm - 什么值得买</title><link>https://www.smzdm.com/p/182336462/#hfeeds</link></item>
-<item><title>今日必买：五粮液 股份出品盛世龙年浓香型纯粮食白酒 52度 500ml*2瓶 白酒礼盒送礼 - 什么值得买</title><link>https://www.smzdm.com/p/182319453/#hfeeds</link></item>
-<item><title>JEEP SPIRIT 男士冰丝速干运动套装 A4-05-D9901 - 什么值得买</title><link>https://www.smzdm.com/p/182338219/#hfeeds</link></item>
-<item><title>今日必买：班尼路 男冰感舒适透气户外运动速干新款长裤 - 什么值得买</title><link>https://www.smzdm.com/p/181738400/#hfeeds</link></item>
-<item><title>伊利 QQ Star QQ星儿童成长牛奶 125ml*20盒 礼盒装 - 什么值得买</title><link>https://www.smzdm.com/p/182310118/#hfeeds</link></item>
-<item><title>思念 玉米蔬菜猪肉蒸煎饺 1kg - 什么值得买</title><link>https://www.smzdm.com/p/182335188/#hfeeds</link></item>
-<item><title>70岁张丰毅肌肉刷屏！中年男人自己动手练力量 - 什么值得买</title><link>https://post.smzdm.com/p/axkzp7o3/</link></item>
-<item><title>8.98cm超薄+热活水，拒绝以脏拖脏？石头P30 Pro水箱版实测 - 什么值得买</title><link>https://post.smzdm.com/p/anvx6x5v/</link></item>
-<item><title>看得见的污渍，测得出的干净：科沃斯X12S PRO滚筒活水洗地全面实测 - 什么值得买</title><link>https://post.smzdm.com/p/ad796rzk/</link></item>
-<item><title>侃爷花612万给自己装钛合金牙，我看完默默约了个洗牙 - 什么值得买</title><link>https://post.smzdm.com/p/a70no92o/</link></item>
-<item><title>问界脱离华为主导，赛力斯收回定价权，车主售后服务将转移 - 什么值得买</title><link>https://post.smzdm.com/p/ak8k2n39/</link></item>
-<item><title>活水洗地才是真的干净——全新科沃斯X12S PRO轻松拿捏居家地面清洁！ - 什么值得买</title><link>https://post.smzdm.com/p/al3ln85e/</link></item>
-<item><title>史上最大升级，小米 18 Pro来了！2nm芯片+ 双2亿像素+妙享背屏 - 什么值得买</title><link>https://post.smzdm.com/p/aqrmp4ep/</link></item>
-<item><title>男人最亏的一件事：花大钱洗车，不花2块钱洗嘴：70%的地方没洗过 - 什么值得买</title><link>https://post.smzdm.com/p/a4qpvl68/</link></item>
-<item><title>硬核大家谈｜从键盘到运动户外：7年值友，如何把兴趣熬成内容 - 什么值得买</title><link>https://post.smzdm.com/p/a6z03nrg/</link></item>
-<item><title>上班穿什么鞋，走一天不累还能见人，这六个牌子绕不开 - 什么值得买</title><link>https://post.smzdm.com/p/aqrmpg8x/</link></item>
-<item><title>一米八+落地开：国庆长假，我入手一支能拍“全家福”的自拍杆 - 什么值得买</title><link>https://post.smzdm.com/p/ad7930qp/</link></item>
-<item><title>小米推出三筒洗衣机 14kg 系列，两颗独立小筒专洗内衣婴儿服，到手价 3999 元起 - 什么值得买</title><link>https://post.smzdm.com/p/a70n274g/</link></item>
-<item><title>戴森扫拖机器人又一款新品来了！戴森 R3 AI 国行 6999 元，9 月 16 日首销 - 什么值得买</title><link>https://post.smzdm.com/p/ak8k09k9/</link></item>
-<item><title>LG 智能电视被抓到在关机后录音，两次回应都没回答最关键的问题 - 什么值得买</title><link>https://post.smzdm.com/p/axkz9er2/</link></item>
-<item><title>全年旅游时间表！原来每个月都有适合旅行的城市 - 什么值得买</title><link>https://post.smzdm.com/p/a5rozvr3/</link></item>
-<item><title>81入手 京东京造500考杜拉户外徒步裤 |平替始祖鸟Gamma神裤？ - 什么值得买</title><link>https://post.smzdm.com/p/a03qemm8/</link></item>
-<item><title>咳了一个多月了，终于解决了 - 什么值得买</title><link>https://post.smzdm.com/p/axkz9kzw/</link></item>
-<item><title>9.9五只的苏式月饼，有可能比一百多的广式月饼更好吃吗？ - 什么值得买</title><link>https://post.smzdm.com/p/am98wdev/</link></item>
-<item><title>为什么一只尼龙包敢卖三四千？TUMI的“贵三倍”拆给你看 - 什么值得买</title><link>https://post.smzdm.com/p/a6z0m57z/</link></item>
-<item><title>单品研究｜优衣库U系列最后一季，Lemaire走了，为什么反而更值得买了？ - 什么值得买</title><link>https://post.smzdm.com/p/apqvlr32/</link></item>
-<item><title>特步 儿童缓震运动跑鞋 （门店有售） - 什么值得买</title><link>https://www.smzdm.com/p/182394965/</link></item>
-<item><title>海澜之家 100%绵羊毛澳洲羊毛针织衫 - 什么值得买</title><link>https://www.smzdm.com/p/182394964/</link></item>
-<item><title>海澜之家 男士牛仔裤 山不在高系列（门店有售） - 什么值得买</title><link>https://www.smzdm.com/p/182394969/</link></item>
-<item><title>海澜之家 牛仔裤男26新亦心即为系列直筒大码裤（门店有售） - 什么值得买</title><link>https://www.smzdm.com/p/182394945/</link></item>
-<item><title>海澜之家 加厚长袖卫衣男（门店有售） - 什么值得买</title><link>https://www.smzdm.com/p/182394947/</link></item>
-<item><title>李宁 反光减震回弹儿童运动鞋 - 什么值得买</title><link>https://www.smzdm.com/p/182395523/</link></item>
-<item><title>海澜之家 休闲裤男26新款系列（门店有售） - 什么值得买</title><link>https://www.smzdm.com/p/182394946/</link></item>
-<item><title>机械革命 无界 14S 2026 轻薄本游戏本 (R7 H 255 24G 512G 高色域 银) - 什么值得买</title><link>https://www.smzdm.com/p/182145900/</link></item>
-<item><title>海澜之家 山不在高系列 男士羽绒服（门店同款） - 什么值得买</title><link>https://www.smzdm.com/p/182394970/</link></item>
-<item><title>云鲸双机一年使用心得：地面清洁用出1＋1＞2a - 什么值得买</title><link>https://post.smzdm.com/p/al3lnmrg/</link></item>
-<item><title>120度电池包不兼容一二代平台！蔚来的路走窄了！ - 什么值得买</title><link>https://post.smzdm.com/p/axkzp7k2/</link></item>
-<item><title>quanjude 全聚德 烤鸭 北京特产 礼品北京五香烤鸭含鸭饼鸭酱1380g - 什么值得买</title><link>https://wiki.smzdm.com/p/2jxq0k/</link></item>
-<item><title>妮维雅 丝润柔肤系列爽肤水 200ml - 什么值得买</title><link>https://wiki.smzdm.com/p/k49y40/</link></item>
-<item><title>Scotch-Brite 思高 XY003847130 胶棉拖把 2头 绿色 - 什么值得买</title><link>https://wiki.smzdm.com/p/lp0q4e/</link></item>
-<item><title>DARLIE 好来 牙刷套装 (俊朗健齿2支+柔彩健齿2支) - 什么值得买</title><link>https://wiki.smzdm.com/p/d6dv0r/</link></item>
-<item><title>Panasonic 松下 F-71C6VX2系列 家用空气净化器 - 什么值得买</title><link>https://wiki.smzdm.com/p/70py958/</link></item>
-<item><title>Chasing la dolce vita - Aeon</title><link>https://aeon.co/essays/italianness-is-a-state-of-travelling-in-both-directions</link></item>
-<item><title>Once upon a screen: explosive paradox - Aeon</title><link>https://aeon.co/videos/are-we-ever-really-done-seeing-a-movie-on-platoon-and-memory</link></item>
-<item><title>The bombarding of childhood - Aeon</title><link>https://aeon.co/essays/its-not-just-screen-time-kids-are-bombarded-by-hectic-media</link></item>
-<item><title>Why This Black Ferrari Enzo Is A True Unicorn Supercar - Maxim</title><link>https://www.maxim.com/rides/this-royal-all-black-ferrari-enzo-is-a-true-unicorn-supercar/</link></item>
-<item><title>‘Oasis – Live ’27’ Trailer: British Rockers Announce Another Global Tour - Maxim</title><link>https://www.maxim.com/entertainment/oasis-live-27-trailer-british-rockers-kick-off-another-global-tour/</link></item>
-<item><title>Panerai Celebrates A Century Of Florence Boutique With Special Edition Luminor Firenze 8 Giorni Watches - Maxim</title><link>https://www.maxim.com/style/panerai-celebrates-a-century-of-florence-boutique-with-special-edition-luminor-firenze-8-giorni-timepieces/</link></item>
-<item><title>Pappy Van Winkle Unveils Highly Anticipated 2026 Whiskey Collection - Maxim</title><link>https://www.maxim.com/food-drink/pappy-van-winkle-unveils-highly-anticipated-2026-whiskey-collection/</link></item>
-<item><title>Rihanna Stuns In Cheeky Savage x Fenty Black Lace Corset Photo Shoot - Maxim</title><link>https://www.maxim.com/style/rihanna-stuns-in-cheeky-savage-x-fenty-black-lace-corset-photo-shoot/</link></item>
-<item><title>Aston Martin &amp; ‘The Rolls-Royce Of Motorcycles’ Launch Street-Legal Superbike - Maxim</title><link>https://www.maxim.com/rides/aston-martin-rolls-royce-of-motorcycles-launch-new-street-legal-amb-002-superbike/</link></item>
-<item><title>Inside The Lodge at 58° North, Alaska’s Unforgettable Luxury Fishing Retreat - Maxim</title><link>https://www.maxim.com/travel/inside-alaskas-most-unforgettable-luxury-fishing-lodge/</link></item>
-<item><title>‘The Odyssey’ Is Officially Universal Pictures’ Highest-Grossing Release &amp; The Biggest R-Rated Movie Ever - Maxim</title><link>https://www.maxim.com/entertainment/the-odyssey-is-universal-pictures-highest-grossing-movie-ever-an-early-oscars-contender/</link></item>
-<item><title>Gisele Bündchen Lifts Weights In Lacy Bodysuit For i-D’s ‘Mother’ Issue - Maxim</title><link>https://www.maxim.com/news/gisele-bundchen-lifts-weights-in-lacy-bodysuit-for-i-ds-mother-issue/</link></item>
-<item><title>Alexander Zverev Wins Second Grand Slam Title at US Open Wearing Custom Jacob &amp; Co. Watches - Maxim</title><link>https://www.maxim.com/sports/alexander-zverev-wins-second-grand-slam-title-at-us-open-wearing-custom-jacob-co-watches/</link></item>
-<item><title>Louis XIII’s $28,000 ‘Black Pearl’ Cognac Comes With Its Own Cooling Mini Cellar - Maxim</title><link>https://www.maxim.com/food-drink/louis-xiiis-28000-black-pearl-cognac-comes-with-its-own-mini-cellar/</link></item>
-<item><title>Blackpink’s ROSÉ Teams With Levi’s For New ‘Keep It Loose’ Campaign - Maxim</title><link>https://www.maxim.com/style/blackpinks-rose-teams-with-levis-for-new-keep-it-loose-campaign/</link></item>
-<item><title>Spirit Of The Week: WhistlePig The Boss Hog XIII—The Golden Pharaoh Rye Whiskey - Maxim</title><link>https://www.maxim.com/food-drink/spirit-of-the-week-whistlepig-the-boss-hog-xiii-the-golden-pharaoh-rye-whiskey/</link></item>
-<item><title>Jennifer Lawrence Joins Instagram, Threatens To Quit Over ‘Anything Negative’ And Gains 4 Million Followers - Maxim</title><link>https://www.maxim.com/entertainment/jennifer-lawrence-joins-instagram-threatens-to-quit-over-anything-negative-after-gaining-2-5-million-followers/</link></item>
-<item><title>The Confidence Code: How Elite Leaders Command Respect Without Ego - Maxim</title><link>https://www.maxim.com/maxim-sphere/the-confidence-code-how-elite-leaders-command-respect-without-ego/</link></item>
-<item><title>Maxim Models Competition Spotlight: Kimmi Villiers, Caneeka Smith, Lana Sutliff, Laura Levin &amp; Maggie Talucci - Maxim</title><link>https://www.maxim.com/news/maxim-models-competition-spotlight-kimmi-villiers-caneeka-smith-lana-sutliff-laura-levin-maggie-talucci/</link></item>
-<item><title>Exclusive: UFC Octagon Girl Chrissy Blair Stuns In Beachy Photoshoot - Maxim</title><link>https://www.maxim.com/sports/exclusive-ufc-octagon-girl-chrissy-blair-stuns-in-beachy-photoshoot/</link></item>
-<item><title>The Brabus Shadow 1000 XC Is A 1,000-HP Gullwing Superboat - Maxim</title><link>https://www.maxim.com/rides/the-brabus-shadow-1000-xc-is-a-1000-hp-gullwing-superboat/</link></item>
-<item><title>Kendall Jenner Is The New Global Ambassador For ‘Calming’ Drinks Brand TRIP - Maxim</title><link>https://www.maxim.com/food-drink/kendall-jenner-is-the-new-global-ambassador-for-calming-drinks-brand-trip/</link></item>
-<item><title>The New Parker’s Heritage Bourbon Has a Secret Ingredient: Rye Whiskey - Maxim</title><link>https://www.maxim.com/food-drink/the-new-parkers-heritage-bourbon-has-a-secret-ingredient-rye-whiskey/</link></item>
-<item><title>Luminox Just Dropped a Stealthy New Watch For America’s 250th Anniversary - Maxim</title><link>https://www.maxim.com/style/this-blacked-out-luminox-watch-honors-250-years-of-american-military-heroism/</link></item>
-<item><title>Sabrina Carpenter &amp; Johnnie Walker Debut Limited-Edition Black Label Bottle Design - Maxim</title><link>https://www.maxim.com/food-drink/sabrina-carpenter-johnnie-walker-debut-limited-edition-black-label-bottle-design/</link></item>
-<item><title>Killer Redhead: A Deep Dive Inside Ferrari’s Legendary Testarossa Badge - Maxim</title><link>https://www.maxim.com/rides/killer-redhead-a-deep-dive-inside-ferraris-legendary-testarossa-badge/</link></item>
-<item><title>TAG Heuer Speeds Into Formula 1 Madrid With New Carrera Sport Chronograph - Maxim</title><link>https://www.maxim.com/style/tag-heuer-speeds-into-formula-1-madrid-with-new-carrera-sport-chronograph/</link></item>
-<item><title>Breitling Celebrates Jazz Legend Miles Davis With Retooled Navitimer Chronograph - Maxim</title><link>https://www.maxim.com/entertainment/breitling-celebrates-jazz-legend-miles-davis-with-retooled-navitimer-chronograph/</link></item>
-<item><title>‘Onimusha: Way of the Sword’ Brings Samurai Gaming Back To Its Sword-Swinging Origins - Maxim</title><link>https://www.maxim.com/entertainment/onimusha-way-of-the-sword-brings-samurai-gaming-back-to-its-sword-swinging-origins/</link></item>
-<item><title>Tate McRae Fronts Calvin Klein ‘Feel The Fit’ Denim Campaign - Maxim</title><link>https://www.maxim.com/style/tate-mcrae-fronts-calvin-klein-fall-2026-feel-the-fit-denim-campaign/</link></item>
-<item><title>‘Star Wars Zero Company’ Final Gaming Trailer: Strategy &amp; Cinematics Combine For A New Intergalactic Adventure - Maxim</title><link>https://www.maxim.com/entertainment/star-wars-zero-company-final-gaming-trailer-strategy-cinematics-combine-for-a-new-intergalactic-adventure/</link></item>
-<item><title>Bugatti Is ‘Definitely’ Considering A Manual Hypercar, According To CEO Mate Rimac - Maxim</title><link>https://www.maxim.com/rides/bugatti-is-definitely-considering-a-manual-hypercar-according-to-ceo-mate-rimac/</link></item>
-<item><title>Model Sam Fuller Poses For Antoine Verglas Photo Shoot - Maxim</title><link>https://www.maxim.com/news/model-sam-fuller-poses-for-antoine-verglas-photo-shoot/</link></item>
-<item><title>Anya Taylor-Joy Stars In Ethereal Photo Shoot For V Magazine - Maxim</title><link>https://www.maxim.com/entertainment/anya-taylor-joy-stars-in-ethereal-photo-shoot-for-v-magazine/</link></item>
-<item><title>Grace Ann Nader Is Hanky Panky Lingerie’s First-Ever ‘Mischief Maker’ Model - Maxim</title><link>https://www.maxim.com/entertainment/grace-ann-nader-is-hanky-panky-lingeries-first-ever-mischief-maker-model/</link></item>
-<item><title>‘Succession’ Star Nicholas Braun &amp; Authentic Hospitality Open New Ray’s Hometown Bar In Detroit - Maxim</title><link>https://www.maxim.com/food-drink/first-look-authentic-hospitality-nicholas-braun-open-new-rays-hometown-bar-in-detroit/</link></item>
-<item><title>Hotter days and more of them - FlowingData</title><link>https://flowingdata.com/2026/09/15/hotter-days-and-more-of-them/</link></item>
-<item><title>connected scatterplot - FlowingData</title><link>https://flowingdata.com/charttype/connected-scatter-plot/</link></item>
-<item><title>Consuming more than the Colorado River provides - FlowingData</title><link>https://flowingdata.com/2026/09/15/consuming-more-than-the-colorado-river-provides/</link></item>
-<item><title>Colorado River - FlowingData</title><link>https://flowingdata.com/tag/colorado-river/</link></item>
-<item><title>consumption - FlowingData</title><link>https://flowingdata.com/tag/consumption/</link></item>
-<item><title>Japan requests revision to UN-supported map - FlowingData</title><link>https://flowingdata.com/2026/09/14/japan-requests-revision-to-un-supported-map/</link></item>
-<item><title>Orion for Linux beta update lets you customise the toolbar - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/09/orion-browser-linux-043-update</link></item>
-<item><title>Firefox 156 reduces CPU usage when viewing JPGs - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/09/firefox-156-released</link></item>
-<item><title>Conflux icon set gives a modern look to Linux desktops - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/09/conflux-linux-icons</link></item>
-<item><title>Shotwell 33 goes stable with its long-awaited GTK4 port - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/09/shotwell-gtk4-port-released</link></item>
-<item><title>Ubuntu 26.10 completes transition to Rust-based coreutils - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-rust-coreutils-complete</link></item>
-<item><title>Ubuntu pulls 24.04.5 downloads due to installer bug - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/09/ubuntu-pulls-24-04-5-download</link></item>
-<item><title>Option to set default terminal is coming to GNOME Settings - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/09/default-terminal-gnome-settings</link></item>
-<item><title>Linux Mint reveals two brand-new desktop apps - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/09/linux-mint-new-apps</link></item>
-<item><title>GIMP 3.2.6 released with faster font loading, Wacom barrel rotation - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/09/gimp-3-2-6-wacom-rotation-input</link></item>
-<item><title>Ubuntu 26.10 will ship with Linux kernel 7.3 - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-kernel-version</link></item>
-<item><title>Ubuntu 24.04.5 LTS released with Linux 7.0 - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/09/ubuntu-24-04-5-lts-released-with-linux-kernel-7-0</link></item>
-<item><title>Liquid Glass GNOME Shell extension uses real refraction shaders - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/09/liquid-glass-gnome-shell</link></item>
-<item><title>Diagnostic Info - 当然我在扯淡</title><link>https://phish.opendns.com/main?url=www.yinwang.org%2Fblog&amp;server=lax4&amp;prefs=&amp;tagging=&amp;nref#</link></item>
-<item><title>Tanker fleet modernization will continue for decades, US Air Force officials say - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/09/15/tanker-fleet-modernization-will-continue-for-decades-us-air-force-officials-say/</link></item>
-<item><title>Iran war has cost $38 billion, depleted two-thirds of US missile interceptors, CBO says - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/09/15/iran-war-has-cost-38-billion-depleted-two-thirds-of-us-missile-interceptors-cbo-says/</link></item>
-<item><title>Iranian strikes damaged hundreds of US military buildings, dozens of aircraft - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2026/09/15/iranian-strikes-damaged-hundreds-of-us-military-buildings-dozens-of-aircraft/</link></item>
-<item><title>F-35 proved combat readiness during Middle East deployments, Air Force officials say - Defense News</title><link>https://www.defensenews.com/air/2026/09/15/f-35-proved-combat-readiness-during-middle-east-deployments-air-force-officials-say/</link></item>
-<item><title>US Marine Stand-In Forces in the Pacific worry China, report details - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/09/15/us-marine-stand-in-forces-in-the-pacific-a-concern-to-china-report-details/</link></item>
-<item><title>UN weighs moving Ukraine aid supplies underground after warehouse hits - Defense News</title><link>https://www.defensenews.com/global/europe/2026/09/15/un-weighs-moving-ukraine-aid-supplies-underground-after-warehouse-hits/</link></item>
-<item><title>US Space Force to add 10,000 guardians in next 5 years - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/09/15/us-space-force-to-add-10000-guardians-in-next-5-years/</link></item>
-<item><title>Ukraine launches offensive push in north of Donetsk region, senior commander says - Defense News</title><link>https://www.defensenews.com/global/europe/2026/09/15/ukraine-launches-offensive-push-in-north-of-donetsk-region-senior-commander-says/</link></item>
-<item><title>Italian NATO jet downs drone in Lithuania, minister says it probably came from Russia - Defense News</title><link>https://www.defensenews.com/global/europe/2026/09/15/italian-nato-jet-downs-drone-in-lithuania-minister-says-it-probably-came-from-russia/</link></item>
-<item><title>Russian frigate fires flares towards Danish military helicopter - Defense News</title><link>https://www.defensenews.com/global/europe/2026/09/15/russian-frigate-fires-flares-towards-danish-military-helicopter/</link></item>
-<item><title>Turkey certifies military training aircraft as safe, a first for local authorities - Defense News</title><link>https://www.defensenews.com/global/europe/2026/09/15/turkey-certifies-military-training-aircraft-as-safe-a-first-for-local-authorities/</link></item>
-<item><title>Russia and Iran deepen weapons partnership amid wars in Ukraine, Middle East - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/09/15/russia-and-iran-deepen-weapons-partnership-amid-wars-in-ukraine-middle-east/</link></item>
-<item><title>Space-based ISR launches to grow fourfold in next decade, Novaspace says - Defense News</title><link>https://www.defensenews.com/space/2026/09/15/space-based-isr-launches-to-grow-fourfold-in-next-decade-novaspace-says/</link></item>
-<item><title>France experiments with smaller tank units to evade drone attacks - Defense News</title><link>https://www.defensenews.com/global/europe/2026/09/15/france-experiments-with-smaller-tank-units-to-evade-drone-attacks/</link></item>
-<item><title>US Navy, Boeing ink first MQ-25A Stingray production contract - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/09/15/us-navy-boeing-ink-first-mq-25a-stingray-production-contract/</link></item>
-<item><title>US Air Force secretary reveals deployment of on-orbit space control weapons - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/09/14/us-air-force-secretary-reveals-deployment-of-on-orbit-space-control-weapons/</link></item>
-<item><title>‘It’s not science fiction’: US Air Force must build trust in AI, says expert - Defense News</title><link>https://www.defensenews.com/air/2026/09/14/its-not-science-fiction-us-air-force-must-build-trust-in-ai-says-expert/</link></item>
-<item><title>US military must focus on ‘right mix’ of weapons amid stockpile concerns: Official - Defense News</title><link>https://www.defensenews.com/air/2026/09/14/us-military-must-focus-on-right-mix-of-weapons-amid-stockpile-concerns-official/</link></item>
-<item><title>Lockheed to build 4 more Vectis drones, 2027 first flight remains on target - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/09/14/lockheed-to-build-4-more-vectis-drones-2027-first-flight-remains-on-target/</link></item>
-<item><title>Geissele Automatics reveals ‘production-ready’ assault rifle for SOCOM - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/09/14/geissele-automatics-reveals-production-ready-assault-rifle-for-socom/</link></item>
-<item><title>US Air Force to stand up point defense career field within 2 years, Wilsbach says - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/09/14/us-air-force-to-stand-up-point-defense-career-field-within-2-years-wilsbach-says/</link></item>
-<item><title>Vengeance and Fury: US Air Force names new CCAs amid ambitious production goal - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/09/14/vengeance-and-fury-us-air-force-names-new-ccas-amid-ambitious-production-goal/</link></item>
-<item><title>Polish minister proposes drills near Kaliningrad to draw Russian troops from Ukraine - Defense News</title><link>https://www.defensenews.com/global/europe/2026/09/14/polish-minister-proposes-drills-near-kaliningrad-to-draw-russian-troops-from-ukraine/</link></item>
-<item><title>US, South Korean officials to broach thorny Hormuz mission at talks this week - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/09/14/us-south-korean-officials-to-broach-thorny-hormuz-mission-at-talks-this-week/</link></item>
-<item><title>L3Harris gets $4.7 billion deal to help boost Patriot interceptor production - Defense News</title><link>https://www.defensenews.com/industry/2026/09/14/l3harris-gets-47-billion-deal-to-help-boost-patriot-interceptor-production/</link></item>
-<item><title>Rep. Issa Files Competing U.S. Pirate Site Blocking Bill - TorrentFreak</title><link>https://torrentfreak.com/rep-issa-files-competing-u-s-pirate-site-blocking-bill/</link></item>
-<item><title>Accused Impostor in Private Tracker Lawsuit Driven by Revenge, Defense Says - TorrentFreak</title><link>https://torrentfreak.com/accused-impostor-in-private-tracker-lawsuit-driven-by-revenge-defense-says/</link></item>
-<item><title>Rightsholders Can’t Use OpenAI and Anthropic to Dismantle Meta’s Seeding Defense - TorrentFreak</title><link>https://torrentfreak.com/rightsholders-cant-use-openai-and-anthropic-to-dismantle-metas-seeding-defense/</link></item>
-<item><title>Drone maker unveils ‘low-cost’ alternative to MQ-9 Reaper - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/09/14/drone-maker-unveils-low-cost-alternative-to-mq-9-reaper/</link></item>
-<item><title>PCS Move? Reset Your Finances the Right Way | Money Minute - Defense News</title><link>https://www.defensenews.com/video/2026/09/14/pcs-move-reset-your-finances-the-right-way-money-minute/</link></item>
-<item><title>First look: New designs for Space Force mess dress uniforms include pockets for women - Defense News</title><link>https://www.defensenews.com/video/2026/09/15/first-look-new-designs-for-space-force-mess-dress-uniforms-include-pockets-for-women/</link></item>
-<item><title>Does the US need a culture shift to create a workforce for the defense industrial base? - Defense News</title><link>https://www.defensenews.com/video/2026/09/14/does-the-us-need-a-culture-shift-to-create-a-workforce-for-the-defense-industrial-base/</link></item>
-<item><title>The Army gets a new ammo can and a fleet of defensive laser systems | News Shorts - Defense News</title><link>https://www.defensenews.com/video/2026/09/14/the-army-gets-a-new-ammo-can-and-a-fleet-of-defensive-laser-systems-news-shorts/</link></item>
-<item><title>Nepal Army deploys drones to help flood victims and a look inside NATO’s arms production | Headlines - Defense News</title><link>https://www.defensenews.com/video/2026/09/14/nepal-army-deploys-drones-to-help-flood-victims-and-a-look-inside-natos-arms-production-headlines/</link></item>
-<item><title>Recruiting workers for the defense industrial base | Defense News Weekly Full Episode 9.15.26 - Defense News</title><link>https://www.defensenews.com/video/2026/09/14/recruiting-workers-for-the-defense-industrial-base-defense-news-weekly-full-episode-91526/</link></item>
-<item><title>Researchers Turned “Empty Space” Into a Tool for Superconductivity - SciTechDaily</title><link>https://scitechdaily.com/researchers-turned-empty-space-into-a-tool-for-superconductivity/</link></item>
-<item><title>Mysterious Gamma Rays Reveal Hidden Magnetism Inside Atomic Nuclei - SciTechDaily</title><link>https://scitechdaily.com/mysterious-gamma-rays-reveal-hidden-magnetism-inside-atomic-nuclei/</link></item>
-<item><title>The Physics That Curves a Ping-Pong Ball Just Showed Up in Quantum Light - SciTechDaily</title><link>https://scitechdaily.com/the-physics-that-curves-a-ping-pong-ball-just-showed-up-in-quantum-light/</link></item>
-<item><title>Why Your Immune System Weakens With Age Is More Complicated Than Scientists Thought - SciTechDaily</title><link>https://scitechdaily.com/why-your-immune-system-weakens-with-age-is-more-complicated-than-scientists-thought/</link></item>
-<item><title>Nighttime Light May Make Your Heart Thicker and Stiffer - SciTechDaily</title><link>https://scitechdaily.com/nighttime-light-may-make-your-heart-thicker-and-stiffer/</link></item>
-<item><title>Scientists Find a Potential “Root” of Alzheimer’s Disease - SciTechDaily</title><link>https://scitechdaily.com/scientists-find-a-potential-root-of-alzheimers-disease/</link></item>
-<item><title>Scientists Turn Sunlight Into Quantum Entanglement - SciTechDaily</title><link>https://scitechdaily.com/scientists-turn-sunlight-into-quantum-entanglement/</link></item>
-<item><title>Hubble Discovers a Mysterious 10-Sided Wave Forming on Saturn - SciTechDaily</title><link>https://scitechdaily.com/hubble-discovers-a-mysterious-10-sided-wave-forming-on-saturn/</link></item>
-<item><title>Scientists Discover the Moon May Have Formed in Just Five Hours - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-the-moon-may-have-formed-in-just-five-hours/</link></item>
-<item><title>Brazilian Tree Compounds Fight COVID-19 on Multiple Fronts - SciTechDaily</title><link>https://scitechdaily.com/brazilian-tree-compounds-fight-covid-19-on-multiple-fronts/</link></item>
-<item><title>Scientists Reveal Who Really Benefits From a Heart Calcium Scan - SciTechDaily</title><link>https://scitechdaily.com/scientists-reveal-who-really-benefits-from-a-heart-calcium-scan/</link></item>
-<item><title>What Really Disappears When You Lose Weight on GLP-1 Drugs? - SciTechDaily</title><link>https://scitechdaily.com/what-really-disappears-when-you-lose-weight-on-glp-1-drugs/</link></item>
-<item><title>Nickel Catalysts Don’t Work the Way Scientists Thought - SciTechDaily</title><link>https://scitechdaily.com/nickel-catalysts-dont-work-the-way-scientists-thought/</link></item>
-<item><title>A Material Just a Few Atoms Thick Reveals Strange New Magnetism - SciTechDaily</title><link>https://scitechdaily.com/a-material-just-a-few-atoms-thick-reveals-strange-new-magnetism/</link></item>
-<item><title>A Quantum Computer Could Make Electron Microscopes Far More Powerful - SciTechDaily</title><link>https://scitechdaily.com/a-quantum-computer-could-make-electron-microscopes-far-more-powerful/</link></item>
-<item><title>Scientists Discover Rain Can Damage Paint With Tiny Electrical “Lightning” - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-rain-can-damage-paint-with-tiny-electrical-lightning/</link></item>
-<item><title>Scientists Solve a 4,000-Year-Old Mystery About Britain’s Giant Standing Stones - SciTechDaily</title><link>https://scitechdaily.com/scientists-solve-a-4000-year-old-mystery-about-britains-giant-standing-stones/</link></item>
-<item><title>A 25,000-Year-Old Drug Habit Was Hidden in Ancient Teeth - SciTechDaily</title><link>https://scitechdaily.com/a-25000-year-old-drug-habit-was-hidden-in-ancient-teeth/</link></item>
-<item><title>UCLA Scientists Develop Cancer-Fighting Cells That Tumors Struggle to Escape - SciTechDaily</title><link>https://scitechdaily.com/ucla-scientists-develop-cancer-fighting-cells-that-tumors-struggle-to-escape/</link></item>
-<item><title>Healthy Foods Like Spinach May Worsen Gut Inflammation in IBD - SciTechDaily</title><link>https://scitechdaily.com/healthy-foods-like-spinach-may-worsen-gut-inflammation-in-ibd/</link></item>
-<item><title>Could a Decades-Old Diabetes Drug Help the Body Age More Slowly? - SciTechDaily</title><link>https://scitechdaily.com/could-a-decades-old-diabetes-drug-help-the-body-age-more-slowly/</link></item>
-<item><title>Scientists Say the Universe Isn’t Slowing Down After All - SciTechDaily</title><link>https://scitechdaily.com/scientists-say-the-universe-isnt-slowing-down-after-all/</link></item>
-<item><title>A Century-Old Mystery in Venus’s Clouds Just Got Even Stranger - SciTechDaily</title><link>https://scitechdaily.com/a-century-old-mystery-in-venuss-clouds-just-got-even-stranger/</link></item>
-<item><title>The Moon May Be Hiding a 100-Million-Year Record of Exploding Stars - SciTechDaily</title><link>https://scitechdaily.com/the-moon-may-be-hiding-a-100-million-year-record-of-exploding-stars/</link></item>
-<item><title>The Official Fourteenth Amendment - Law &amp; Liberty</title><link>https://lawliberty.org/podcast/the-official-fourteenth-amendment/</link></item>
-<item><title>The Importance of Being Indebted - Law &amp; Liberty</title><link>https://lawliberty.org/the-importance-of-being-indebted/</link></item>
-<item><title>Free Speech Maximalism’s Terror Problem - Law &amp; Liberty</title><link>https://lawliberty.org/free-speech-maximalisms-terror-problem/</link></item>
-<item><title>Unconstitutional Conservatism? - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/un-constitutional-conservatism/</link></item>
-<item><title>Liberty Unlicensed - Law &amp; Liberty</title><link>https://lawliberty.org/classic/liberty-unlicensed/</link></item>
+<lastBuildDate>Thu, 17 Sep 2026 08:23:46 +0800</lastBuildDate>
+<item><title>tomato risotto with frizzled red onions - smitten kitchen</title><link>https://smittenkitchen.com/2026/09/tomato-risotto-with-frizzled-red-onions/</link></item>
+<item><title>peach cobbler loaf - smitten kitchen</title><link>https://smittenkitchen.com/2026/08/peach-cobbler-loaf/</link></item>
+<item><title>Students Built 108 Websites in Two Weeks in Bangladesh - WordPress Blog</title><link>https://wordpress.org/news/2026/09/108-student-websites/</link></item>
+<item><title>WordPress Signs the Open Weights and American AI Leadership Letter - WordPress Blog</title><link>https://wordpress.org/news/2026/08/open-weight/</link></item>
+<item><title>User:Bikake - wikiHow</title><link>https://www.wikihow.com/User:Bikake</link></item>
+<item><title>What Color Sour Patch Kid Am I - wikiHow</title><link>https://www.wikihow.com/index.php?title=What-Color-Sour-Patch-Kid-Am-I&amp;diff=34471023&amp;oldid=0</link></item>
+<item><title>Reboot from Command Prompt on Windows - wikiHow</title><link>https://www.wikihow.com/index.php?title=Reboot-from-Command-Prompt-on-Windows&amp;diff=34471021&amp;oldid=34015131</link></item>
+<item><title>Which Carb Am I - wikiHow</title><link>https://www.wikihow.com/index.php?title=Which-Carb-Am-I&amp;diff=34471020&amp;oldid=34468069</link></item>
+<item><title>Make a Bow and Arrow in Minecraft - wikiHow</title><link>https://www.wikihow.com/index.php?title=Make-a-Bow-and-Arrow-in-Minecraft&amp;diff=34471019&amp;oldid=34354452</link></item>
+<item><title>Which Color Matches My Mood Today - wikiHow</title><link>https://www.wikihow.com/index.php?title=Which-Color-Matches-My-Mood-Today&amp;diff=34471018&amp;oldid=34471012</link></item>
+<item><title>Jjk Epilogue - wikiHow</title><link>https://www.wikihow.com/index.php?title=Jjk-Epilogue&amp;diff=34471017&amp;oldid=34468065</link></item>
+<item><title>Get Rid of Wolf Spiders - wikiHow</title><link>https://www.wikihow.com/index.php?title=Get-Rid-of-Wolf-Spiders&amp;diff=34471009&amp;oldid=34466211</link></item>
+<item><title>User_talk:Aceistheplace - wikiHow</title><link>https://www.wikihow.com/index.php?title=User_talk:Aceistheplace&amp;diff=34471006&amp;oldid=34245486</link></item>
+<item><title>User:WikiCassowaryCaster573 - wikiHow</title><link>https://www.wikihow.com/User:WikiCassowaryCaster573</link></item>
+<item><title>What Do I Need Most in Life Right Now - wikiHow</title><link>https://www.wikihow.com/index.php?title=What-Do-I-Need-Most-in-Life-Right-Now&amp;diff=34471002&amp;oldid=34466142</link></item>
+<item><title>User:Acnsdhjcaj - wikiHow</title><link>https://www.wikihow.com/User:Acnsdhjcaj</link></item>
+<item><title>Kill Flying Termites - wikiHow</title><link>https://www.wikihow.com/index.php?title=Kill-Flying-Termites&amp;diff=34471000&amp;oldid=34243035</link></item>
+<item><title>Strongest Jjk Characters - wikiHow</title><link>https://www.wikihow.com/index.php?title=Strongest-Jjk-Characters&amp;diff=34470999&amp;oldid=34466143</link></item>
+<item><title>Image:Claudio schwarz 73U_5cXhWKE unsplash (1).jpg - wikiHow</title><link>https://www.wikihow.com/index.php?title=Image:Claudio-schwarz-73U_5cXhWKE-unsplash-(1).jpg&amp;diff=34470996&amp;oldid=0</link></item>
+<item><title>Spongebob Villains - wikiHow</title><link>https://www.wikihow.com/index.php?title=Spongebob-Villains&amp;diff=34470994&amp;oldid=34470346</link></item>
+<item><title>How Well Do I Know My Crush - wikiHow</title><link>https://www.wikihow.com/index.php?title=How-Well-Do-I-Know-My-Crush&amp;diff=34470993&amp;oldid=34470457</link></item>
+<item><title>Get Rid of Millipedes - wikiHow</title><link>https://www.wikihow.com/index.php?title=Get-Rid-of-Millipedes&amp;diff=34470992&amp;oldid=34470990</link></item>
+<item><title>User:WikiFlamingoDiver164 - wikiHow</title><link>https://www.wikihow.com/User:WikiFlamingoDiver164</link></item>
+<item><title>Kill Fleas and Ticks in Your Home - wikiHow</title><link>https://www.wikihow.com/index.php?title=Kill-Fleas-and-Ticks-in-Your-Home&amp;diff=34470985&amp;oldid=33453517</link></item>
+<item><title>User_talk:Darri 1552 - wikiHow</title><link>https://www.wikihow.com/index.php?title=User_talk:Darri-1552&amp;diff=34470982&amp;oldid=34466200</link></item>
+<item><title>User:Sarah.Davis.1 - wikiHow</title><link>https://www.wikihow.com/User:Sarah.Davis.1</link></item>
+<item><title>User_talk:Sarah.Davis.1 - wikiHow</title><link>https://www.wikihow.com/index.php?title=User_talk:Sarah.Davis.1&amp;diff=34470979&amp;oldid=0</link></item>
+<item><title>User:Sarah.Davis.1/profilebox occupation - wikiHow</title><link>https://www.wikihow.com/index.php?title=User:Sarah.Davis.1/profilebox-occupation&amp;diff=34470977&amp;oldid=0</link></item>
+<item><title>User:Sarah.Davis.1/profilebox live - wikiHow</title><link>https://www.wikihow.com/index.php?title=User:Sarah.Davis.1/profilebox-live&amp;diff=34470975&amp;oldid=0</link></item>
+<item><title>User:Sarah.Davis.1/profilebox aboutme - wikiHow</title><link>https://www.wikihow.com/index.php?title=User:Sarah.Davis.1/profilebox-aboutme&amp;diff=34470973&amp;oldid=0</link></item>
+<item><title>User:Miss_Akira - wikiHow</title><link>https://www.wikihow.com/User:Miss_Akira</link></item>
+<item><title>Paramount Told Negotiators, &amp;#39;We&amp;#39;re Done,&amp;#39; Next 48 Hours Critical - TMZ</title><link>https://www.tmz.com/2026/09/16/paramount-negotiations-are-ongoing/</link></item>
+<item><title>Taylor Frankie Paul Allegedly Failed Multiple Drug Tests, Parenting Time Cut - TMZ</title><link>https://www.tmz.com/2026/09/16/taylor-frankie-paul-allegedly-failed-multiple-drug-tests/</link></item>
+<item><title>Patriots Owner Robert Kraft Doubles Macklemore&amp;#39;s $1 Million Palestine Donation - TMZ</title><link>https://www.tmz.com/2026/09/16/robert-kraft-doubles-macklemore-palestine-donation/</link></item>
+<item><title>Clavicular and Lily Snyder Split After Giving Relationship a Second Chance - TMZ</title><link>https://www.tmz.com/2026/09/16/clavicular-lily-snyder-break-up/</link></item>
+<item><title>Dave Portnoy Says He Stands By Robert Kraft 100%, Calls Macklemore Antisemitic - TMZ</title><link>https://www.tmz.com/2026/09/16/dave-portnoy-stands-by-robert-kraft-in-macklemore-ed-sheeran-debate/</link></item>
+<item><title>NFL Star Orlando Brown Jr. Fires Back at Ex&amp;#39;s Claims of Civil Theft After Breakup - TMZ</title><link>https://www.tmz.com/2026/09/16/orlando-brown-jr-wants-ex-holly-civil-theft-lawsuit-dismissed/</link></item>
+<item><title>Travis Kelce: Ponzi Scheme Leader Who Bilked NFL Star Stole Millions to Buy Gucci, Private Jets - TMZ</title><link>https://www.tmz.com/2026/09/16/travis-kelce-ponzi-scheme-leader-bought-gucci-and-rides-on-private-jets/</link></item>
+<item><title>Paramount to Leave California According to L.A. Mayor Office, CA A.G., Sources - TMZ</title><link>https://www.tmz.com/2026/09/16/paramount-is-about-to-leave-california/</link></item>
+<item><title>Colin Kaepernick Says Macklemore Situation Vindicates His National Anthem Protest - TMZ</title><link>https://www.tmz.com/2026/09/16/colin-kaepernick-calls-out-robert-kraft-nfl-owners-amid-macklemore-tour-oust/</link></item>
+<item><title>Georgia Hassarati, David Dobrik and Squad Take Over South Africa - TMZ</title><link>https://www.tmz.com/2026/09/16/david-dobrik-and-friends-go-to-south-africa/</link></item>
+<item><title>Malcolm-Jamal Warner&amp;#39;s Mom Says Widow &amp;#39;Terminated&amp;#39; Her Relationship With Grandkid - TMZ</title><link>https://www.tmz.com/2026/09/16/malcolm-jamal-warner-mother-calls-out-his-widow-for-ending-granddaughter-relationship/</link></item>
+<item><title>Pinkchyu Hot Shots To Slay Her 24th Birthday - TMZ</title><link>https://www.tmz.com/2026/09/16/pinkchyu-hot-goth-girl-sexy-pictures-for-her-birthday/</link></item>
+<item><title>Michael Jackson Estate Fighting Daughter Paris&amp;#39; Demand for $1 Million in Legal Fees - TMZ</title><link>https://www.tmz.com/2026/09/16/michael-jackson-estate-fighting-daughter-paris-over-legal-fees/</link></item>
+<item><title>TMZ, NYP &amp;#39;The Low Down&amp;#39; Today&amp;#39;s Gripping Stories: Helicopter Crash Video &amp; More - TMZ</title><link>https://www.tmz.com/2026/09/16/nbc4-los-angeles-news-helicopter-crash-final-moments/</link></item>
+<item><title>Rep. Beth Van Duyne Says If She Looked Like Sydney Sweeney She Would Always Be Naked - TMZ</title><link>https://www.tmz.com/2026/09/16/rep-beth-van-duyne-supports-sydney-sweeney-naked-commercials/</link></item>
+<item><title>Macklemore Pledges $1 Million to Palestinian Relief After Ed Sheeran Tour Exit - TMZ</title><link>https://www.tmz.com/2026/09/16/macklemore-palestine-charity-donation/</link></item>
+<item><title>Giants RB Cam Skattebo Caught on Video Trying to Hurry Into MetLife Before SNF - TMZ</title><link>https://www.tmz.com/2026/09/16/cam-skattebo-stuck-outside-metlife-video/</link></item>
+<item><title>Brian Wolfe, Former Blue Jays Pitcher, Dead At 45 - TMZ</title><link>https://www.tmz.com/2026/09/16/brian-wolfe-former-blue-jays-pitcher-dead/</link></item>
+<item><title>Travis Kelce Named Victim in Multimillion-Dollar Ponzi Scheme - TMZ</title><link>https://www.tmz.com/2026/09/16/travis-kelce-victim-ponzi-scheme/</link></item>
+<item><title>Kanye Exec Milo Yiannopoulos&amp;#39; Yeezy Paychecks at Risk Of Being Seized By Estranged Husband - TMZ</title><link>https://www.tmz.com/2026/09/16/milo-yiannopoulos-yeezy-paychecks-could-be-seized-by-estranged-husband/</link></item>
+<item><title>付费给大学生睡足七小时提高了他们的学习成绩 - Solidot</title><link>https://www.solidot.org/story?sid=85400</link></item>
+<item><title>PS2 Fat 使用的安全芯片在时隔 26 年被破解 - Solidot</title><link>https://www.solidot.org/story?sid=85399</link></item>
+<item><title>Denuvo 起诉黑客违反 DMCA 反规避条款 - Solidot</title><link>https://www.solidot.org/story?sid=85398</link></item>
+<item><title>AWS 称无法恢复中东部分可用区资源和数据的访问 - Solidot</title><link>https://www.solidot.org/story?sid=85397</link></item>
+<item><title>FAST 发现极短周期、最轻双中子星系统 - Solidot</title><link>https://www.solidot.org/story?sid=85396</link></item>
+<item><title>Mistral 与 Mozilla 合作推出 Firefox Smart Window - Solidot</title><link>https://www.solidot.org/story?sid=85395</link></item>
+<item><title>Mozilla 报告称中国开放权重模型与美国前沿模型仅相差 4.4 个月 - Solidot</title><link>https://www.solidot.org/story?sid=85394</link></item>
+<item><title>SDL3 移植到 HarmonyOS / OpenHarmony - Solidot</title><link>https://www.solidot.org/story?sid=85393</link></item>
+<item><title>时光机器遭遇大规模机器流量 - Solidot</title><link>https://www.solidot.org/story?sid=85392</link></item>
+<item><title>Fedora 45 Beta 释出 - Solidot</title><link>https://www.solidot.org/story?sid=85391</link></item>
+<item><title>日本百岁老人人数首次超过 10 万人 - Solidot</title><link>https://www.solidot.org/story?sid=85389</link></item>
+<item><title>A Talent for Murder - Roger Ebert</title><link>https://www.rogerebert.com/reviews/a-talent-for-murder-helen-mirren-alden-ehrenreich-movie-review-2026</link></item>
+<item><title>Love of Your LifeMarya E. Gates - Roger Ebert</title><link>https://www.rogerebert.com/reviews/love-of-your-life-margaret-qualley-prime-video-film-review-2026</link></item>
+<item><title>I Play RockyBrian Tallerico - Roger Ebert</title><link>https://www.rogerebert.com/reviews/i-play-rocky-peter-farrelly-movie-review-2026</link></item>
+<item><title>Misty GreenCortlyn Kelly - Roger Ebert</title><link>https://www.rogerebert.com/reviews/misty-green-chris-rock-film-review-2026</link></item>
+<item><title>Your Mother Your Mother Your MotherBrian Tallerico - Roger Ebert</title><link>https://www.rogerebert.com/reviews/your-mother-your-mother-your-mother-mahershala-ali-movie-review-2026</link></item>
+<item><title>Shaun the Sheep: The Beast of Mossy BottomBrian Tallerico - Roger Ebert</title><link>https://www.rogerebert.com/reviews/shaun-the-sheep-the-beast-of-mossy-bottom-movie-review-2026</link></item>
+<item><title>The Stunt DriverBrian Tallerico - Roger Ebert</title><link>https://www.rogerebert.com/reviews/the-stunt-driver-jay-baruchel-movie-review-2026</link></item>
+<item><title>Being HeumannZachary Lee - Roger Ebert</title><link>https://www.rogerebert.com/reviews/being-heumann-sian-heder-apple-tv-documentary-movie-review-2026</link></item>
+<item><title>Black ZombiePeyton Robinson - Roger Ebert</title><link>https://www.rogerebert.com/reviews/black-zombie-documentary-film-review-2026</link></item>
+<item><title>American HostageBrian Tallerico - Roger Ebert</title><link>https://www.rogerebert.com/reviews/american-hostage-jon-hamm-tv-review-2026</link></item>
+<item><title>The Oldest Person in the WorldCarlos Aguilar - Roger Ebert</title><link>https://www.rogerebert.com/reviews/the-oldest-person-in-the-world-documentary-film-review-2026</link></item>
+<item><title>On a StringClint Worthington - Roger Ebert</title><link>https://www.rogerebert.com/reviews/on-a-string-isabel-hagen-movie-review-2026</link></item>
+<item><title>Mighty MaryBrian Tallerico - Roger Ebert</title><link>https://www.rogerebert.com/reviews/mighty-mary-hugh-jackman-elizabeth-banks-documentary-film-review-2026</link></item>
+<item><title>TIFF 2026: Hombre Al Agua, Paradise Lost, Faith - Roger Ebert</title><link>https://www.rogerebert.com/festivals/tiff-2026-hombre-al-agua-paradise-lost-faith</link></item>
+<item><title>Cortlyn Kelly - Roger Ebert</title><link>https://www.rogerebert.com/contributors/cortlyn-kelly</link></item>
+<item><title>FESTIVALS &amp; AWARDSTIFF 2026: Bunker, Up Against It, Girl Group2 hours ago - Roger Ebert</title><link>https://www.rogerebert.com/festivals/tiff-2026-bunker-up-against-it-girl-group</link></item>
+<item><title>TV/STREAMINGIn Its Second Season, “Outlander: Blood of My Blood” Is Still Peak Romance 7 hours ago - Roger Ebert</title><link>https://www.rogerebert.com/streaming/outlander-blood-of-my-blood-spinoff-starz-tv-review-2026</link></item>
+<item><title>TV/STREAMING“MobLand” Shoots Its Way Through A Vulgar, Invigorating Second Season7 hours ago - Roger Ebert</title><link>https://www.rogerebert.com/streaming/mobland-season-2-tom-hardy-pierce-brosnan-helen-mirren-paramount-plus-tv-review-2026</link></item>
+<item><title>FESTIVALS &amp; AWARDSToronto International Film Festival 2026: Table of Contents9 hours ago - Roger Ebert</title><link>https://www.rogerebert.com/festivals/toronto-international-film-festival-2026-table-of-contents</link></item>
+<item><title>FESTIVALS &amp; AWARDSVenice Film Festival 2026: Table of Contents9 hours ago - Roger Ebert</title><link>https://www.rogerebert.com/festivals/venice-film-festival-2026-table-of-contents</link></item>
+<item><title>FESTIVALS &amp; AWARDSTIFF 2026: Wild Wild East, Our Loves, The Violinist9 hours ago - Roger Ebert</title><link>https://www.rogerebert.com/festivals/tiff-2026-wild-wild-east-our-loves-the-violinist</link></item>
+<item><title>TRIBUTESMaking Fashion Fun: Bob Mackie (1939-2026)23 hours ago - Roger Ebert</title><link>https://www.rogerebert.com/tributes/bob-mackie-tribute</link></item>
+<item><title>FESTIVALS &amp; AWARDSTIFF 2026: Cheyenne, Rescue, Union Town1 day ago - Roger Ebert</title><link>https://www.rogerebert.com/festivals/tiff-2026-cheyenne-rescue-union-town</link></item>
+<item><title>FESTIVALS &amp; AWARDSTIFF 2026: Trash Mountain, Babies, Everybody Wants to F*ck Me1 day ago - Roger Ebert</title><link>https://www.rogerebert.com/festivals/tiff-2026-trash-mountain-babies-everybody-wants-to-fck-me</link></item>
+<item><title>INTERVIEWSA Dog with a Bone: Maria Sten on “Neagley”1 day ago - Roger Ebert</title><link>https://www.rogerebert.com/interviews/neagley-maria-sten-interview</link></item>
+<item><title>TV/STREAMING“Neagley” Can’t Reach The Heights of “Reacher,” But It Punches Above Its Weight1 day ago - Roger Ebert</title><link>https://www.rogerebert.com/streaming/neagley-reacher-spinoff-prime-video-tv-review-2026</link></item>
+<item><title>FESTIVALS &amp; AWARDSTIFF 2026: Strong Son, God Bless You Mr. Kopu2 days ago - Roger Ebert</title><link>https://www.rogerebert.com/festivals/tiff-2026-strong-son-god-bless-you-mr-kopu</link></item>
+<item><title>The Best Family Films of 2026 - Roger Ebert</title><link>https://www.rogerebert.com/collections/the-best-family-films-of-2026</link></item>
+<item><title>FilipiñanaCarlos Aguilar - Roger Ebert</title><link>https://www.rogerebert.com/reviews/filipinana-movie-review-2026</link></item>
+<item><title>Barbara ForeverPeyton Robinson - Roger Ebert</title><link>https://www.rogerebert.com/reviews/barbara-forever-documentary-film-review-2026</link></item>
+<item><title>Oasis: Don’t Look Back in AngerMatt Zoller Seitz - Roger Ebert</title><link>https://www.rogerebert.com/reviews/oasis-dont-look-back-in-anger-concert-film-review</link></item>
+<item><title>The US Has Admitted For The First Time That It Placed Weapons In Space – What Does This Mean? - IFLScience</title><link>https://www.iflscience.com/the-us-has-admitted-for-the-first-time-that-it-placed-weapons-in-space-what-does-this-mean-84669</link></item>
+<item><title>We All Know That Cats Are Way More Impressive Than Servile Dogs – Biologically And Culturally – Even If You Won&amp;#39;t Admit It - IFLScience</title><link>https://www.iflscience.com/we-all-know-that-cats-are-way-more-impressive-than-servile-dogs-biologically-and-culturally-even-if-you-wont-admit-it-84644</link></item>
+<item><title>T. Rex Teeth Reveal It Was A Hot-Blooded Beast Capable Of Living In The Deep Cold - IFLScience</title><link>https://www.iflscience.com/t-rex-teeth-reveal-it-was-a-hot-blooded-beast-capable-of-living-in-the-deep-cold-84670</link></item>
+<item><title>Human Mini-Brains Have Been Transplanted Into The Heads Of Mice, Forming New Neural Networks - IFLScience</title><link>https://www.iflscience.com/human-mini-brains-have-been-transplanted-into-the-heads-of-mice-forming-new-neural-networks-84660</link></item>
+<item><title>Mother Humpback Whale Seen Apparently Mourning Her Stillborn Calf For The First Time - IFLScience</title><link>https://www.iflscience.com/mother-humpback-whale-seen-apparently-mourning-her-stillborn-calf-for-the-first-time-84657</link></item>
+<item><title>Watch A Tardigrade Frolicking In The Snow And A Cell With A Prehensile &amp;quot;Trunk&amp;quot; As This Year&amp;#39;s Nikon Small World In Motion Video Winners - IFLScience</title><link>https://www.iflscience.com/watch-a-tardigrade-frolicking-in-the-snow-and-a-cell-with-a-prehensile-trunk-as-this-years-nikon-small-world-in-motion-video-winners-84659</link></item>
+<item><title>Prehistoric Teeth Previously Thought To Belong To A Neanderthal Who Was Eaten By Humans Turn Out To Be Something Else - IFLScience</title><link>https://www.iflscience.com/prehistoric-teeth-previously-thought-to-belong-to-a-neanderthal-who-was-eaten-by-humans-turn-out-to-be-something-else-84557</link></item>
+<item><title>What&amp;#39;s The Next Frontier In Dementia Research? | IFLScience The Big Questions - IFLScience</title><link>https://www.iflscience.com/whats-the-next-frontier-in-dementia-research-iflscience-the-big-questions-84609</link></item>
+<item><title>Amateur MMA Fighter Claims He Has Been Offered Over $500,000 To Fight A Chimpanzee. It Would Be One Hell Of A Funeral - IFLScience</title><link>https://www.iflscience.com/amateur-mma-fighter-claims-he-has-been-offered-over-500000-to-fight-a-chimpanzee-it-would-be-one-hell-of-a-funeral-84577</link></item>
+<item><title>A Single Particle Of Light From The Brightest Gamma-Ray Burst Ever Known Is Challenging Einstein’s Relativity - IFLScience</title><link>https://www.iflscience.com/a-single-particle-of-light-from-the-brightest-gamma-ray-burst-ever-known-is-challenging-einsteins-relativity-84588</link></item>
+<item><title>For The First Time, More Than 100,000 People In Japan Are Over 100 Years Old – So What&amp;#39;s Their Secret? - IFLScience</title><link>https://www.iflscience.com/for-the-first-time-more-than-100000-people-in-japan-are-over-100-years-old-so-whats-their-secret-84668</link></item>
+<item><title>Mathematician Corrects One Of The Oldest And Most Enduring Myths In Human History: The Idea That The Parthenon Contains Optical Illusions - IFLScience</title><link>https://www.iflscience.com/mathematician-corrects-one-of-the-oldest-and-most-enduring-myths-in-human-history-the-idea-that-the-parthenon-contains-optical-illusions-84662</link></item>
+<item><title>Mystery Of One Of The Oldest Space Weather Impacts On Human Technology Solved - IFLScience</title><link>https://www.iflscience.com/mystery-of-one-of-the-oldest-space-weather-impacts-on-human-technology-solved-84663</link></item>
+<item><title>Yet Another Study Suggests The &amp;quot;Autism Epidemic&amp;quot; Is A Mirage Caused By More People Seeking And Receiving Diagnoses - IFLScience</title><link>https://www.iflscience.com/yet-another-study-suggests-the-autism-epidemic-is-a-mirage-caused-by-more-people-seeking-and-receiving-diagnoses-84666</link></item>
+<item><title>Scientists Find Surprisingly Simple Way To Improve People&amp;#39;s Grades. All It Costs Is $52 A Semester - IFLScience</title><link>https://www.iflscience.com/researchers-find-surprisingly-simple-way-to-improve-peoples-grades-all-it-costs-is-52-a-semester-84658</link></item>
+<item><title>The Last Neanderthals Kept Returning To This One Cave, Until Our Species Took Over - IFLScience</title><link>https://www.iflscience.com/the-last-neanderthals-kept-returning-to-this-one-cave-until-our-species-took-over-84622</link></item>
+<item><title>Largest Viking Silver Hoard In Danish History Contains 700 Pieces Of Treasure, Including Jewelry, Coins, And Silver Bars - IFLScience</title><link>https://www.iflscience.com/largest-viking-silver-hoard-in-danish-history-contains-700-pieces-of-treasure-including-jewelry-coins-and-silver-bars-84625</link></item>
+<item><title>Wealthy Owners Of 1,800-Year-Old Roman Villa Had A Cat Called Emerald And Dog Called Ocean - And Immortalized Them Both In A Mosaic - IFLScience</title><link>https://www.iflscience.com/wealthy-owners-of-1800-year-old-roman-villa-had-a-cat-called-emerald-and-dog-called-ocean-and-immortalized-them-both-in-a-mosaic-84617</link></item>
+<item><title>Brain Implant Translates The Gestures People With Paralysis Can’t Make, Along With Their Silenced Words - IFLScience</title><link>https://www.iflscience.com/brain-implant-translates-the-gestures-people-with-paralysis-cant-make-along-with-their-silenced-words-84645</link></item>
+<item><title>Top US Medical Groups Say The CDC Can’t Be Trusted On Winter Vaccines – So They’re Bringing The Science Instead - IFLScience</title><link>https://www.iflscience.com/top-us-medical-groups-say-the-cdc-cant-be-trusted-on-winter-vaccines-so-theyre-bringing-the-science-instead-84639</link></item>
+<item><title>Love False Lashes? Me Too, Says Microscopic Arachnid That Lives On Your Face - IFLScience</title><link>https://www.iflscience.com/love-false-lashes-me-too-says-microscopic-arachnid-that-lives-on-your-face-84628</link></item>
+<item><title>New Theory Of Consciousness Suggests The Brain Uses Analog Computing To Create Awareness And Experience - IFLScience</title><link>https://www.iflscience.com/new-theory-of-consciousness-suggests-the-brain-uses-analog-computing-to-create-awareness-and-experience-84627</link></item>
+<item><title>One Of The World&amp;#39;s Weirdest Trees Just Gained A New Species That Was Hiding In Plain Sight - IFLScience</title><link>https://www.iflscience.com/one-of-the-worlds-weirdest-trees-just-gained-a-new-species-that-was-hiding-in-plain-sight-84656</link></item>
+<item><title>Bubbles The Dolphin Comes Up With A Gross New Way To Hunt By Chugging On Fish Vomit - IFLScience</title><link>https://www.iflscience.com/bubbles-the-dolphin-comes-up-with-a-gross-new-way-to-hunt-by-chugging-on-fish-vomit-84654</link></item>
+<item><title>The Very Last Epishelf Lake In The Canadian Arctic Has Vanished – And It’s Gone For Good - IFLScience</title><link>https://www.iflscience.com/the-very-last-epishelf-lake-in-the-canadian-arctic-has-vanished-and-its-gone-for-good-84651</link></item>
+<item><title>Under Trump, US Environmental Protection Agency Removes Limits On Air Pollution From Coal And Gas Power Plants - IFLScience</title><link>https://www.iflscience.com/under-trump-us-environmental-protection-agency-removes-limits-on-air-pollution-from-coal-and-gas-power-plants-84650</link></item>
+<item><title>How Small Can The Smallest Stellar Object Be? One Of The Largest Images From JWST Suggests Smaller Than We Thought Possible - IFLScience</title><link>https://www.iflscience.com/how-small-can-the-smallest-stellar-object-be-one-of-the-largest-images-from-jwst-suggests-smaller-than-we-thought-possible-84655</link></item>
+<item><title>Active Supermassive Black Holes Seen Creating Star-Forming Rings In Blow To Conventional Models - IFLScience</title><link>https://www.iflscience.com/active-supermassive-black-holes-seen-creating-star-forming-rings-in-blow-to-conventional-models-84653</link></item>
+<item><title>This Is The Best Month This Year To See Neptune – The Farthest Planet In The Solar System – From Your Own Backyard - IFLScience</title><link>https://www.iflscience.com/this-is-the-best-month-this-year-to-see-neptune-the-farthest-planet-in-the-solar-system-from-your-own-backyard-84646</link></item>
+<item><title>Japanese Spacecraft Heading To Unusual Asteroid Begins Firing Lasers At A Second Asteroid - IFLScience</title><link>https://www.iflscience.com/japanese-spacecraft-heading-to-unusual-asteroid-begins-firing-lasers-at-a-second-asteroid-84642</link></item>
+<item><title>YouTuber Uploads Digital Copy Of A Fly&amp;#39;s Brain Into Minecraft, And Then It Got Weird - IFLScience</title><link>https://www.iflscience.com/youtuber-uploads-digital-copy-of-a-flys-brain-into-minecraft-and-then-it-got-weird-84636</link></item>
+<item><title>Why The USA Is Building A Massive New $1.2 Billion Magnet Factory In South Carolina - IFLScience</title><link>https://www.iflscience.com/why-the-usa-is-building-a-massive-new-12-billion-magnet-factory-in-south-carolina-84638</link></item>
+<item><title>How Close Are Scientists To Creating &amp;quot;Digital Twins&amp;quot; Of Human Brains? If Technology Can Catch Up, The Uses Could Be Endless - IFLScience</title><link>https://www.iflscience.com/how-close-are-scientists-to-creating-digital-twins-of-human-brains-if-technology-can-catch-up-the-uses-could-be-endless-84545</link></item>
+<item><title>Man Manages To Access Bitcoin Wallet After 12 Years, Becomes An Instant Millionaire Overnight - IFLScience</title><link>https://www.iflscience.com/man-manages-to-access-bitcoin-wallet-after-12-years-becomes-an-instant-millionaire-overnight-84489</link></item>
+<item><title>Switzerland Has Over 370,000 Nuclear Bunkers, Enough To Host Every Person In The Country - IFLScience</title><link>https://www.iflscience.com/switzerland-has-over-370000-nuclear-bunkers-enough-to-host-every-person-in-the-country-84578</link></item>
+<item><title>Star Trek At 60 – The Iconic Franchise Changed More Than Science, It Changed Society - IFLScience</title><link>https://www.iflscience.com/star-trek-at-60-the-iconic-franchise-changed-more-than-science-it-changed-society-84579</link></item>
+<item><title>Are You In Love Or Limerence? The Psychological Disorder Where A Crush Turns Into Obsession - IFLScience</title><link>https://www.iflscience.com/are-you-in-love-or-limerence-the-psychological-disorder-where-a-crush-turns-into-obsession-84482</link></item>
+<item><title>The UN Voted To Adopt A New World Map That Shows Africa At Its True Size – The US Voted Against It - IFLScience</title><link>https://www.iflscience.com/the-un-voted-to-adopt-a-new-world-map-that-shows-africa-at-its-true-size-the-us-voted-against-it-84571</link></item>
+<item><title>Man Who Had Stress-Induced Amnesia For 6 Years Recovered His Memories After Switching To An Easier Job - IFLScience</title><link>https://www.iflscience.com/man-who-had-stress-induced-amnesia-for-6-years-recovered-his-memories-after-switching-to-an-easier-job-84647</link></item>
+<item><title>The US Has Produced Twice As Many Serial Killers As The Rest Of The World Combined. What&amp;#39;s Behind This Terrifying Statistic? - IFLScience</title><link>https://www.iflscience.com/the-us-has-produced-twice-as-many-serial-killers-as-the-rest-of-the-world-combined-whats-behind-this-terrifying-statistic-84498</link></item>
 </channel></rss>
