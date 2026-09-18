@@ -1966,6 +1966,12 @@ yestereve
 exclusionist
 Japanesy
 driveway
+Ernst
+exercise bicycle
+flywheel
+Houthi
+misspelt
+
 
 
 `.trim().split('\n');
