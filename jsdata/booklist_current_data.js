@@ -1,4 +1,5 @@
 var csbooklist_source_global=[
+["the_expedition_of_humphry_clinker_3140", "The Expedition of Humphry Clinker(T. Smollett)","已整理,englishwords","3",""],
 ["grimms_fairy_tales_1738", "Grimms' Fairy Tales(Jacob Grimm)","已整理,englishwords","3",""],
 ["crime_and_punishment_1934", "Crime and Punishment(Fyodor Dostoyevsky)","已整理,englishwords","3",""],
 ["beyond_good_and_evil_1805", "Beyond Good and Evil(Friedrich Wilhelm Nietzsche)","已整理,englishwords","3",""],
@@ -79,7 +80,6 @@ var csbooklist_source_global=[
 ["history_of_tom_jones_a_f_3017", "History of Tom Jones, a Foundling(Henry Fielding)","已整理,englishwords","3",""],
 ["the_adventures_of_roderick_random_3115", "The Adventures of Roderick Random(T. Smollett)","已整理,englishwords","3",""],
 ["cranfordelizabeth_cleghorn_gaskell_815", "Cranford(Elizabeth Cleghorn Gaskell)","已整理,englishwords","3",""],
-["the_expedition_of_humphry_clinker_3140", "The Expedition of Humphry Clinker(T. Smollett)","已整理,englishwords","3",""],
 ["the_adventures_of_ferdinand_count_fc_12855", "The Adventures of Ferdinand Count Fathom — Complete(T. Smollett)","已整理,englishwords","3",""],
 ["the_blue_castle_a_novel_2103", "The Blue Castle - a novel(L. M. Montgomery)","已整理,englishwords","3",""],
 ["the_enchanted_april_1763", "The Enchanted April(Elizabeth Von Arnim)","已整理,englishwords","3",""],

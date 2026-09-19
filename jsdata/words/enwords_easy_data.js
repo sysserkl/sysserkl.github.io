@@ -1971,6 +1971,17 @@ exercise bicycle
 flywheel
 Houthi
 misspelt
+Samson
+unreasonableness
+yuletide
+white paper
+gundog
+apple cart
+upset the applecart
+demilitarization
+air-cooled
+anti-aging
+Bretton Woods
 
 
 
