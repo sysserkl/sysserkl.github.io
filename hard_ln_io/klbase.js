@@ -2675,7 +2675,7 @@ function blob_2_download_link_b(blob,savename){
     
     document.body.removeChild(odom);
     
-    setTimeout(() => URL.revokeObjectURL(url), 10_000);   // 立刻 revoke 可能中断下载
+    setTimeout(() => URL.revokeObjectURL(blurl), 10_000);   // 立刻 revoke 可能中断下载
     
     //URL.revokeObjectURL(blurl);
 }

@@ -4944,9 +4944,8 @@ function current_page_2_ensentence_b(cstype=''){
     }
 
     var key_list=current_page_rare_words_kltxt_b(cstype);
-    
     if (key_list.length>0){
-        var reg_str=new RegExp('\\b('+key_list.join('|')+')\\b','i');
+        var reg_str=new RegExp('\\b('+key_list.join('|')+')\\b','i');   //如果 dodecahedron decahedron 都在 key_list 中，可能 dodecahedron 被部分加亮，两个单词可能都被忽略 - 保留注释
         var filtered_list=[];
         for (let arow of result_t){
             if (arow.match(reg_str)){

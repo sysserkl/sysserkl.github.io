@@ -748,7 +748,7 @@ function rare_old_words_sort_ensentence(csarr){
 function rare_old_words_form_ensentence(cslist,generate_js){
     var more_buttons='';
     if (generate_js){
-        more_buttons='<span class="aclick" onclick="enwords_count_sentence_data_save_ensentence();">save as enwords_count_sentence_data.js file</span>';
+        more_buttons=more_buttons+'<span class="aclick" onclick="enwords_count_sentence_data_save_ensentence();">save as enwords_count_sentence_data.js file</span>';
     }
     var bljg=enwords_different_types_div_b(cslist,true,'textarea_rare_words','textarea_rare_words','复制,发送到临时记事本,发送地址',more_buttons);
     return bljg;

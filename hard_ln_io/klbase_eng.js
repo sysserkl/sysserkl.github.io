@@ -1720,7 +1720,7 @@ function enwords_lines_2_js_array_b(aword,emoji_list,three_lines=false){
 function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',textarea_name='',button_type='',more_buttons='',csheight=''){
     var blstr='<p>';
     blstr=blstr+'<select onchange="enwords_different_types_textarea_b(this);">';
-    var type_names=['','(o)asterisk','cut','(o)js','count','(o)temp','(o)wiki','reg','space','rare_words','filter','group','random_sort','switch with the first textarea','移除行无非字母字符','移除短单词'];
+    var type_names=['','(o)asterisk','cut','(o)js','count','(o)temp','(o)wiki','reg','space','rare_words','filter','group','random_sort','switch with the first textarea','移除行无非字母字符','移除短单词','含有短单词的长单词'];
     type_names.sort();
     for (let item of type_names){
         blstr=blstr+'<option>'+item+'</option>\n';
@@ -1905,6 +1905,27 @@ function enwords_different_types_textarea_b(oselect){
                 osecond_textarea.value=raw_str;
                 bljg=false;
             }
+            break;
+        case '含有短单词的长单词':
+            result_t=new Set();
+            let included_set=new Set();
+            for (let itema of raw_list){
+                for (let itemb of raw_list){
+                    if (itema==itemb){continue;}
+                    if (itema.includes(itemb)){
+                        result_t.add(itema);
+                        included_set.add(itemb);
+                    }
+                }
+            }
+            console.log('既包含又被包含的单词：',array_intersection_b(result_t,included_set,true));
+            result_t=array_difference_b(result_t,included_set,true);
+            result_t=Array.from(result_t);
+            result_t.sort(function (a,b){return a.length>b.length?-1:1;});
+            console.log('包含的单词：',result_t);            
+            
+            bljg=sub_enwords_different_types_textarea_b_bljg(result_t.join('\n'));
+            console.log('被包含的单词：',included_set);
             break;
         case '移除短单词':
         case 'filter':
