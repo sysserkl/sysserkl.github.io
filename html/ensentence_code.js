@@ -860,11 +860,11 @@ function rare_old_words_ensentence(cscaption='',show_sentence=false,generate_js=
         
         var line_split=sentence_split_b(en_sentence_global[blxl][0],blxl,re_combine);
         if (source_check){
-            var words_list=new Set(line_split.join('\n').toLowerCase().match(/[a-zA-Z\-']+/mg) || []);
+            var words_list=new Set(line_split.join('\n').toLowerCase().match(/[a-zA-Z0-9\-'áéíóúñüö]+/mg) || []);
             sub_rare_old_words_ensentence_words(words_list);
         } else {
             for (let aline of line_split){
-                var words_list=new Set(aline.match(/[a-zA-Z\-']+/g) || []);
+                var words_list=new Set(aline.match(/[a-zA-Z0-9\-'áéíóúñüö]+/g) || []);
                 sub_rare_old_words_ensentence_words(words_list);
             }
         }

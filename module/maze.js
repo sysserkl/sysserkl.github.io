@@ -1,9 +1,3 @@
-//function canvas_set_maze_b(canvas,ROWS,COLS,maze_dict['cell_size']){
-    //canvas.width = COLS * maze_dict['cell_size'];
-    //canvas.height = ROWS * maze_dict['cell_size'];
-    //return canvas.getContext('2d');
-//}
-
 function init_grid_maze_b(grid,maze_dict,border_color='grey',canvas=false,ctx=false) {
     function sub_init_grid_maze_b_cell(cell,r,c){
         const x = c * maze_dict['cell_size'];
@@ -74,7 +68,7 @@ function init_grid_maze_b(grid,maze_dict,border_color='grey',canvas=false,ctx=fa
         if (col < COLS - 1 && !grid[row][col + 1].visited) neighbors.push(grid[row][col + 1]);
         if (row < ROWS - 1 && !grid[row + 1][col].visited) neighbors.push(grid[row + 1][col]);
         if (col > 0 && !grid[row][col - 1].visited) neighbors.push(grid[row][col - 1]);
-        if (neighbors.length === 0) return null;
+        if (neighbors.length === 0){return null;}
         return neighbors[Math.floor(Math.random() * neighbors.length)];
     }
 
@@ -348,6 +342,11 @@ function init_3d_maze_b(THREE,OrbitControls,csw,csh,add_img=false){
     controls.maxPolarAngle = Math.PI * 0.49;
 
     scene.add(new THREE.HemisphereLight(0x9fc4ff, 0x1a2033, 0.9));
+
+    const fillLight = new THREE.DirectionalLight(0xffffff, 0.6);
+    fillLight.position.set(-30, 40, -20);
+    fillLight.castShadow = false;
+    scene.add(fillLight);
     
     var sun = new THREE.DirectionalLight(0xffffff, 2.4);
     sun.position.set(30, 60, 20);
@@ -380,16 +379,6 @@ function render_3d_maze_b(THREE,maze_dict,sun,scene,controls,camera,pathMesh,maz
     if (artGroup){
         dispose_group_3d_maze_b(artGroup);
     }
-    // 清空旧迷宫
-    //mazeGroup.traverse(o => {
-        //if (o.geometry){
-            //o.geometry.dispose();
-        //}
-        //if (o.material) {
-            //(Array.isArray(o.material) ? o.material : [o.material]).forEach(m => m.dispose());
-        //}
-    //});
-    //mazeGroup.clear();
 
     /* ① 地板 */
     const floor = new THREE.Mesh(
@@ -487,7 +476,8 @@ function render_3d_maze_b(THREE,maze_dict,sun,scene,controls,camera,pathMesh,maz
         left: -span * 0.75, right: span * 0.75, top: span * 0.75, bottom: -span * 0.75, near: 1, far: span * 3
     });
     sun.shadow.camera.updateProjectionMatrix();
-    scene.fog.near = span * 0.9; scene.fog.far = span * 3.2;
+    scene.fog.near = span * 0.9; 
+    scene.fog.far = span * 3.2;
     controls.target.set(0, 0, 0);
     controls.maxDistance = span * 4;
     camera.userData.span = span;
@@ -640,22 +630,6 @@ function placeholder_texture_3d_maze_b(THREE){
     return SHARED_PLACEHOLDER;
 }
 
-//function pick_art_3d_maze_b(ev, artGroup, pointer, raycaster, camera,r){
-    //if (!artGroup.visible){ return null; }
-
-    //pointer.x =  ((ev.clientX - r.left) / r.width)  * 2 - 1;
-    //pointer.y = -((ev.clientY - r.top)  / r.height) * 2 + 1;
-
-    //raycaster.setFromCamera(pointer, camera);
-    //const hits = raycaster.intersectObjects(artGroup.children, true);
-    //for (const h of hits){
-        //let o = h.object;
-        //while (o && !o.userData.pic){ o = o.parent; }
-        //if (o){ return o.userData.pic; }
-    //}
-    //return null;
-//}
-
 function pick_art_3d_maze_b(ev, artGroup, pointer, raycaster, camera, r){
     if (!artGroup.visible){ return null; }
 
@@ -686,7 +660,7 @@ function on_hover_3d_maze_b(ev,renderer,artGroup,pointer,raycaster,camera){
     renderer.domElement.style.cursor = pick_art_3d_maze_b(ev,artGroup,pointer,raycaster,camera,r) ? 'pointer' : 'default';
 }
 
-function pointerup_3d_maze_b(ev,downXY,renderer,artGroup,pointer,raycaster,camera,controls,camAnim,img_id,cap_id,box_id,r,is_frontal){
+function pointerup_3d_maze_b(ev,downXY,renderer,artGroup,pointer,raycaster,camera,controls,camAnim,img_id,cap_id,box_id,r,is_frontal,show_big_photo){
     function sub_pointerup_3d_maze_b_fly_to(pos, target, dur = 800){
         camAnim = { fp: camera.position.clone(), ft: controls.target.clone(), tp: pos, tt: target, t: 0, dur };
     }
@@ -699,11 +673,13 @@ function pointerup_3d_maze_b(ev,downXY,renderer,artGroup,pointer,raycaster,camer
     
     const pic = pick_art_3d_maze_b(ev,artGroup,pointer,raycaster,camera,r);
     if (pic){
-        document.getElementById(img_id).src='';
-        //document.getElementById(img_id).src = pic.full || pic.url;
-        document.getElementById(img_id).src = pic.url;
-        document.getElementById(cap_id).textContent = pic.title || '';
-        document.getElementById(box_id).style.display='flex';
+        if (show_big_photo){
+            document.getElementById(img_id).src='';
+            //document.getElementById(img_id).src = pic.full || pic.url;
+            document.getElementById(img_id).src = pic.url;
+            document.getElementById(cap_id).textContent = pic.title || '';
+            document.getElementById(box_id).style.display='flex';
+        }
         if (is_frontal && pic.viewPos){
             sub_pointerup_3d_maze_b_fly_to(pic.viewPos, pic.viewTarget, 800);   // 视角切到画的正前方
         }
@@ -717,7 +693,10 @@ function texture_thumb_3d_maze_b(THREE, url, renderer, maze_dict, cb){
     img.onload = () => {
         let w = img.width, h = img.height;
         const s = maze_dict['tex_max_side'] / Math.max(w, h);
-        if (s < 1){ w = Math.max(1, Math.round(w * s)); h = Math.max(1, Math.round(h * s)); }
+        if (s < 1){
+            w = Math.max(1, Math.round(w * s)); 
+            h = Math.max(1, Math.round(h * s));
+        }
         let tex = null;
         try {
             const cv = document.createElement('canvas');
