@@ -539,8 +539,7 @@ function txtmenus_kltxt_b(cstype=''){
         menu_dir.push(menu_container_b(str_t,group_list,'显示搜索关键字目录：'));
         
         menu_dir=menu_dir.concat([
-        '<span class="span_menu" onclick="'+str_t+'ellipsis_lines_kltxt_b();">未显示的行不足为省略号</span>',
-        '<hr />'
+        '<hr />',
         ]);
     }
     var menu_dir_width='14rem';
@@ -630,10 +629,11 @@ function txtmenus_kltxt_b(cstype=''){
     '<span class="span_menu" onclick="'+str_t+'digest_sort_kltxt_b();">按文章顺序重新生成不重复的摘要</span>',    
     '<span class="span_menu" onclick="'+str_t+'wiki_style_kltxt_b();">当前页面WIKI格式生成</span>',
     '<span class="span_menu" onclick="'+str_t+'multi_sentence_in_quote_kltxt_b();">标记引号内含有多个句子部分</span>',
+    '<span class="span_menu" onclick="'+str_t+'ellipsis_lines_kltxt_b();">未显示的行显示为省略号</span>',    
     ];
     
     var group_list=[
-    ['全部','digest_lines_kltxt_b();',true],
+    ['全部','digest_lines_kltxt_b(-1);',true],
     ['最新的500条','digest_lines_kltxt_b(500);',true],
     ['跳转到最新的10条并进入阅读模式','digest_lines_kltxt_b(10,true,true);',true],
     ];    
@@ -3960,6 +3960,10 @@ function digest_lines_kltxt_b(recent_lines=-1,do_jump=false,reading_mode=false){
 	var start_lineno, end_lineno, blmax;
     [start_lineno,end_lineno,blmax]=start_end_lineno_kltxt_b();
     
+    if (recent_lines>0){
+        blmax=Math.max(blmax,recent_lines);
+    }
+    
     var list_t=[];
     var blcount=0;
     digest_number_2_txt_kltxt_b();
@@ -3988,7 +3992,7 @@ function digest_lines_kltxt_b(recent_lines=-1,do_jump=false,reading_mode=false){
         }
         if (blfound){
             blcount=blcount+1;
-            if (blcount>=blmax){break;}        
+            if (recent_lines>0 && blcount>=blmax){break;}
         }
         if (all_scanned){
             console.log('all_scanned');
@@ -4007,6 +4011,8 @@ function digest_lines_kltxt_b(recent_lines=-1,do_jump=false,reading_mode=false){
     img_load_check_kltxt_b();
     console.log('digest_lines_kltxt_b() 费时：'+(performance.now() - t0) + ' milliseconds');
 }
+
+//function ellipsis_lines_kltxt_b
 
 function digest_in_bookmark_kltxt_b(pageno){
     var bookmark=reader_lastbook_id_get_b()[1];
