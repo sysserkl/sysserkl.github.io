@@ -30,6 +30,10 @@ function date_size_digest(without_digest=false,sortno=0){
         result_t.push(abook.concat([bldate,blsize]));
     }
     
+    if (without_digest){
+        local_storage_today_b('without_digest_count',40,result_t.length,' / ');
+    }
+    
     if (sortno==1 || sortno==2){
         result_t.sort(function (a,b){return zh_sort_b(a,b,digest_statistics_sort_asc_dec_global,sortno);});    
     } else {

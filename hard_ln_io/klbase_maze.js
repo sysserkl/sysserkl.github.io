@@ -1,3 +1,4 @@
+//腾讯元宝
 function init_grid_maze_b(grid,maze_dict,border_color='grey',canvas=false,ctx=false) {
     function sub_init_grid_maze_b_cell(cell,r,c){
         const x = c * maze_dict['cell_size'];
@@ -169,7 +170,7 @@ function find_path_maze_b(grid,maze_dict,path_color='tomato',otable=false,canvas
                 path.push(temp);
                 temp = parent.get(`${temp.row},${temp.col}`);
             }
-            table_maze_generate_b(maze_dict,grid,otable,path);
+            table_generate_maze_b(maze_dict,grid,otable,path);
             sub_find_path_maze_b_draw(path.reverse());
             return path;
         }
@@ -198,7 +199,7 @@ function find_path_maze_b(grid,maze_dict,path_color='tomato',otable=false,canvas
     return []; // 理论上完美迷宫一定有解
 }
 
-function table_maze_generate_b(maze_dict,grid,table,path = null,onclick_fn='') {
+function table_generate_maze_b(maze_dict,grid,table,path = null,onclick_fn='') {
     if (!table){return;}
 
     var ROWS=maze_dict['rows'];
@@ -213,9 +214,9 @@ function table_maze_generate_b(maze_dict,grid,table,path = null,onclick_fn='') {
         }
     } else {
         table.innerHTML='';
-        for (let r = 0; r < ROWS; r++) {
+        for (let r = 0; r < ROWS; r++){
             const tr = document.createElement('tr');
-            for (let c = 0; c < COLS; c++) {
+            for (let c = 0; c < COLS; c++){
                 const cell = grid[r][c];
                 const td = document.createElement('td');
 
@@ -314,10 +315,10 @@ function mark_3d_maze_b(THREE,maze_dict,color, x, z){
 }
 
 function reset_camera_3d_maze_b(camera,controls){
-  const span = camera.userData.span || 20;
-  camera.position.set(0, span * 1.15, span * 1.05);   // 俯视斜角
-  controls.target.set(0, 0, 0);
-  controls.update();
+    const span = camera.userData.span || 20;
+    camera.position.set(0, span * 1.15, span * 1.05);   // 俯视斜角
+    controls.target.set(0, 0, 0);
+    controls.update();
 }
 
 function init_3d_maze_b(THREE,OrbitControls,csw,csh,add_img=false){
@@ -397,11 +398,15 @@ function render_3d_maze_b(THREE,maze_dict,sun,scene,controls,camera,pathMesh,maz
     const addVSlot = (x, z, r, c, nSign) => {
         // nSign = -1 面朝左边的格 (r,c)；+1 面朝右边的格 (r,c+1)
         const fc = nSign < 0 ? c : c + 1;
-        if (fc >= 0 && fc < COLS) slots.push({ x, z, nx: nSign, nz: 0, face: [r, fc], axis: 'z' });
+        if (fc >= 0 && fc < COLS){
+            slots.push({ x, z, nx: nSign, nz: 0, face: [r, fc], axis: 'z' });
+        }
     };
     const addHSlot = (x, z, r, c, nSign) => {
         const fr = nSign < 0 ? r : r + 1;
-        if (fr >= 0 && fr < ROWS) slots.push({ x, z, nx: 0, nz: nSign, face: [fr, c], axis: 'x' });
+        if (fr >= 0 && fr < ROWS){
+            slots.push({ x, z, nx: 0, nz: nSign, face: [fr, c], axis: 'x' });
+        }
     };
 
     for (let r = 0; r < ROWS; r++){
@@ -409,21 +414,21 @@ function render_3d_maze_b(THREE,maze_dict,sun,scene,controls,camera,pathMesh,maz
             const w = grid[r][c].walls;
             const hasRight = c < COLS - 1 ? (w.right || grid[r][c + 1].walls.left) : w.right;
             const hasBottom = r < ROWS - 1 ? (w.bottom || grid[r + 1][c].walls.top) : w.bottom;
-            if (hasRight) {
+            if (hasRight){
                 addWall(cx(c) + maze_dict['cell'] / 2, cz(r), maze_dict['wall_t'], maze_dict['cell'] + maze_dict['wall_t']);
                 addVSlot(cx(c) + maze_dict['cell'] / 2, cz(r), r, c, -1);   // 朝左格
                 addVSlot(cx(c) + maze_dict['cell'] / 2, cz(r), r, c, +1);   // 朝右格
             }
-            if (hasBottom) {
+            if (hasBottom){
                 addWall(cx(c), cz(r) + maze_dict['cell'] / 2, maze_dict['cell'] + maze_dict['wall_t'], maze_dict['wall_t']);
                 addHSlot(cx(c), cz(r) + maze_dict['cell'] / 2, r, c, -1);   // 朝上格
                 addHSlot(cx(c), cz(r) + maze_dict['cell'] / 2, r, c, +1);   // 朝下格
             }
-            if (c === 0 && w.left) {                          // 最左列外墙
+            if (c === 0 && w.left){                          // 最左列外墙
                 addWall(cx(c) - maze_dict['cell'] / 2, cz(r), maze_dict['wall_t'], maze_dict['cell'] + maze_dict['wall_t']);
                 slots.push({ x: cx(c) - maze_dict['cell'] / 2, z: cz(r), nx: +1, nz: 0, face: [r, c], axis: 'z' });
             }
-            if (r === 0 && w.top) {                           // 最上排外墙
+            if (r === 0 && w.top){                           // 最上排外墙
                 addWall(cx(c), cz(r) - maze_dict['cell'] / 2, maze_dict['cell'] + maze_dict['wall_t'], maze_dict['wall_t']);
                 slots.push({ x: cx(c), z: cz(r) - maze_dict['cell'] / 2, nx: 0, nz: +1, face: [r, c], axis: 'x' });
             }
@@ -587,7 +592,10 @@ function make_picture_3d_maze_b(THREE,camera,maze_dict,renderer,texLoader,slot, 
         const safeMaxDist = maze_dict['cell'] * 0.35;
         const maxW = Math.max(maze_dict['cell'] * 0.15, Math.min(maze_dict['art_max_w'], 0.78 * k * safeMaxDist * camera.aspect - 0.22));
         let w = maze_dict['art_h'] * a, h = maze_dict['art_h'];
-        if (w > maxW) { w = maxW; h = maxW / a; }
+        if (w > maxW){
+            w = maxW; 
+            h = maxW / a;
+        }
         back.scale.set(w + 0.22, h + 0.22, 0.08);
         canvas.scale.set(w, h, 1);
         updateView(back.scale.x, back.scale.y);
@@ -642,13 +650,15 @@ function pick_art_3d_maze_b(ev, artGroup, pointer, raycaster, camera, r){
 
     for (const h of hits){
         let o = h.object;
-        while (o && !o.userData.pic){ o = o.parent; }
-        if (!o){ continue; }
+        while (o && !o.userData.pic){
+            o = o.parent;
+        }
+        if (!o){continue;}
 
         const pic = o.userData.pic;
         // ★ 背面剔除：射线必须与画面法线相反（dot < 0）才算从正面看
         const n = pic.normal;
-        if (n && (dir.x * n.x + dir.z * n.z) >= -0.02){ continue; }
+        if (n && (dir.x * n.x + dir.z * n.z) >= -0.02){continue;}
 
         return pic;
     }

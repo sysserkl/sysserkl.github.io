@@ -46,7 +46,7 @@ function generate_maze(maze_dict){
     init_grid_maze_b(grid_maze_global,maze_dict);
     
     var otable=document.getElementById('table_maze');
-    table_maze_generate_b(maze_dict,grid_maze_global,otable,null,'td_click_maze');
+    table_generate_maze_b(maze_dict,grid_maze_global,otable,null,'td_click_maze');
 }
 
 function answer_maze(){

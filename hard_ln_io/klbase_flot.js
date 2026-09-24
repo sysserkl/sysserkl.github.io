@@ -493,6 +493,7 @@ function statistics_data_type_b(data_type,selected_items_filter=''){
             ['gpx_file_statistics','GPX文件数',0,'/',2],
             ['local_storage_used_length','local storage 使用量(KiB)',2,':'],
             ['klwiki_submit_failure','KLWiki submit 失败次数',0,':'],
+            ['without_digest_count','无摘要文件数',0,'/'],
             ];
             
             var old_code_list=statistics_old_code_b();

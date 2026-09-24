@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css'],[],[],['letter_paper_code.js']);
+</script>
+<title>✉️ 褶皱信纸</title>
+<style>
+body {min-height: 100vh; display: flex; align-items: center; justify-content: center;}
+</style>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+</head>
+<body>
+<div id="paper-container"></div>
+<script>
+generate_letter_paper({
+    container: '#paper-container',
+    text: '多年以后，面对行刑队，奥雷里亚诺·布恩迪亚上校将会回想起父亲带他去见识冰块的那个遥远的下午。这封信在路上被揉了好几次，但字还能看清。',
+    color: rndcolor_b(),
+    bgColor: rndcolor_b(),
+    fontFamily: 'HYJinKaiJ',
+    fontWeight: 'normal',
+    fontSize: '46px',
+    padding: '50px',
+    lineHeight: '2',
+    width: '600px',
+    vertical: true,
+    seed: Math.floor(Math.random() * 10000),  //seed的取值本质是 32 位无符号整数，0  ~  4,294,967,295  （即 0 ~ 2³²-1）
+    seal: {
+        text: '百年<br/>孤独',
+        color: rndcolor_b(),    //'#c0392b',
+        size: '56px',
+        position: 'bottom-left',
+        padding:'20px',
+    }
+});
+
+</script>
+
+</body>
+</html>
+
+

@@ -2012,5 +2012,13 @@ zooarchaeological
 zooarchaeology
 Zuma
 pollutant
+co-write
+cowrote
+co-written
+co-wrote
+cowritten
+cowriter
+co-writer
+psychopharmacologic
 
 `.trim().split('\n');
