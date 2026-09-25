@@ -2020,5 +2020,17 @@ cowritten
 cowriter
 co-writer
 psychopharmacologic
+antivirus
+unclad
+bell curve
+broad jump
+cyclic
+feebly
+overslept
+samba
+starless
+detribalise
+detribalisation
+tastebud
 
 `.trim().split('\n');

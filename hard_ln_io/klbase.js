@@ -3923,6 +3923,7 @@ function array_check_b(cslist){
 }
 
 function list_category_count_b(cslist,col_no=-1,return_dict=false,is_sum=false){
+    //统计数组元素出现次数 - 保留注释
     var key_dict={};
     if (col_no===-1){
         if (is_sum){
@@ -4965,7 +4966,7 @@ function code_file_ext_b(){
 
 function text_file_ext_b(){
     return ['.asp','.ass','.conf','.csv','.gpx','.ini','.json','.log',
-            '.m3u','.pac','.prg','.srt','.ssa','.txt','.xml','.yaml',]; //和 KLfuns.py 中的函数对应 - 保留注释
+            '.m3u','.md','.pac','.prg','.srt','.ssa','.txt','.xml','.yaml',]; //和 KLfuns.py 中的函数对应 - 保留注释
 }
 
 function file_is_encoded_b(fname,is_do_decode=true){
@@ -5165,3 +5166,17 @@ function str_insert_delimiter(str, csn, delimiter='-'){
     return result;
 }
 
+function local_storage_rows_occurrence_b(csid,only_get=false,csmax=100,show_concole=false){
+    var list_t=local_storage_get_b(csid,csmax,true);
+    if (only_get){
+        return [list_t,csid];
+    }
+    
+    var dict_t=list_category_count_b(list_t);
+    dict_t.sort(function (a,b){return zh_sort_b(a,b,false,0);});    //拼音排序 - 保留注释
+    dict_t.sort(function (a,b){return a[1]>b[1]?-1:1;});    //出现次数最多排前 - 保留注释
+    if (show_concole){
+        console.log(dict_t);
+    }
+    return array_split_by_col_b(dict_t,[0]);
+}
