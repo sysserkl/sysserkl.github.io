@@ -2032,5 +2032,14 @@ starless
 detribalise
 detribalisation
 tastebud
+Antony
+biogeographic
+impostor
+merchantable
+microtransaction
+multimillionaire
+Turing
+Wellesley
+over-indebtedness
 
 `.trim().split('\n');
