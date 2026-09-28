@@ -2041,5 +2041,19 @@ multimillionaire
 Turing
 Wellesley
 over-indebtedness
+Christmastide
+coheir
+human trafficking
+reconfiguration
+redid
+self-build
+sociobiologic
+sociobiological
+sociobiologically
+sociobiologist
+psychobiologist
+psychobiologic
+psychobiological
+psychobiologically
 
 `.trim().split('\n');
