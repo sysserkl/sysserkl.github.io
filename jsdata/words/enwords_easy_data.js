@@ -93,6 +93,8 @@ antismoking
 antitumor
 anti-union
 antiunion
+antivirus
+Antony
 apple cart
 aptitude test
 aquaphobia
@@ -157,6 +159,7 @@ bejeweled
 bejewelled
 believability
 Belize
+bell curve
 beltlike
 Benjamin
 Benson
@@ -191,6 +194,7 @@ biofeedback
 biofuel
 biogeochemical
 biogeochemistry
+biogeographic
 biologically
 biomedical
 biomolecular
@@ -242,6 +246,7 @@ Bretton Woods
 Brice
 bridezilla
 Brighton
+broad jump
 broken-hearted
 Brooke
 brotherless
@@ -314,6 +319,7 @@ Chinese New Year
 Chinglish
 chipmaker
 Christchurch
+Christmastide
 Chunjie
 churchmen
 churro
@@ -336,6 +342,7 @@ coal black
 coal-black
 coenzyme
 coffee house
+coheir
 cold-hearted
 coldhearted
 collarless
@@ -382,6 +389,13 @@ courtesy car
 courtesy visit
 cowhouse
 cowpox
+co-write
+co-writer
+cowriter
+co-written
+cowritten
+co-wrote
+cowrote
 coyly
 craftsman
 craftsmen
@@ -404,6 +418,7 @@ currently
 curry favour
 customisable
 customizable
+cyclic
 Damascus
 Danny
 dare I suggest
@@ -449,6 +464,8 @@ departure gate
 Derek
 desalt
 destabilize
+detribalisation
+detribalise
 dewax
 deworm
 didn't
@@ -579,6 +596,7 @@ fava bean
 featherless
 featureless
 feces
+feebly
 feelingless
 ferry-house
 ferrymen
@@ -785,6 +803,7 @@ house-warming
 Houthi
 hover-fly
 human capital
+human trafficking
 Humboldt
 Hume
 humorless
@@ -810,6 +829,7 @@ immovable property
 immunosuppression
 immutableness
 imperfectly
+impostor
 imprisonable
 impulsiveness
 inaccurately
@@ -820,6 +840,7 @@ inconsistently
 inconveniently
 incorrectly
 increasingly
+indefinably
 indoor
 indoors
 Indo-Pacific
@@ -998,6 +1019,7 @@ megapixel
 memory card
 men-at-arms
 Menshevik
+merchantable
 merchildren
 merpeople
 merperson
@@ -1017,6 +1039,7 @@ micromanagement
 micromanager
 Micronesian
 microservice
+microtransaction
 middlemen
 middleware
 Midgard
@@ -1060,6 +1083,7 @@ multigenerational
 multihour
 multilingual
 multimillion
+multimillionaire
 multipurpose
 multi-step
 multiuser
@@ -1201,6 +1225,7 @@ overenthusiasm
 overenthusiastically
 overfish
 overharvest
+over-indebtedness
 over-large
 overlarge
 overmix
@@ -1215,8 +1240,10 @@ overreliance
 oversalt
 oversimplification
 oversimplify
+overslept
 oversupply
 overtired
+overtook
 packability
 packable
 paleness
@@ -1261,6 +1288,7 @@ pleasureless
 plowmen
 policemen
 political correctness
+pollutant
 polo-neck
 Polynesia
 pope's nose
@@ -1302,8 +1330,13 @@ provable
 Prussia
 pseudorandom
 psychiatric hospital
+psychobiologic
+psychobiological
+psychobiologically
+psychobiologist
 psychologically
 psychology
+psychopharmacologic
 Pulitzer
 punishable
 purchasing power
@@ -1335,6 +1368,7 @@ recognisable
 recognizable
 recognizably
 reconceptualization
+reconfiguration
 reconnection
 record-breaking
 record holder
@@ -1342,6 +1376,7 @@ redden
 red-haired
 red-headed
 redheaded
+redid
 redness
 red panda
 re-export
@@ -1388,6 +1423,7 @@ salesclerk
 salesgirl
 salesmen
 salespeople
+samba
 Samoa
 Samson
 Sasha
@@ -1418,6 +1454,7 @@ see you around
 see you later
 selectively
 selectmen
+self-build
 self-cleaning
 self-improvement
 self-sealing
@@ -1519,6 +1556,10 @@ snowslide
 snuff movie
 so-called
 social climber
+sociobiologic
+sociobiological
+sociobiologically
+sociobiologist
 soft power
 soft toy
 solar flare
@@ -1545,6 +1586,7 @@ stalker
 stand out a mile
 stand out like a sore thumb
 stane
+starless
 starlit
 star-shaped
 starshaped
@@ -1650,6 +1692,7 @@ Taoism
 tap-dance
 taskbar
 Tasmanian
+tastebud
 Tate
 tau cross
 tax-exempt
@@ -1749,6 +1792,7 @@ trustee investment
 tsar
 Tunguska
 Tupperware
+Turing
 Turing machine
 twenty-eight
 twenty-eighth
@@ -1787,6 +1831,7 @@ unburnable
 unceasing
 unchangeable
 unchanged
+unclad
 Uncle Sam
 unclothed
 uncoil
@@ -1801,6 +1846,9 @@ undamaged
 undebatable
 undefeatable
 undefeated
+undefinability
+undefinableness
+undefinably
 undeniable
 undeniably
 underinvestment
@@ -1944,6 +1992,7 @@ weaponize
 weaponless
 wedding ring
 Welchman
+Wellesley
 well kept
 well-lighted
 well paid
@@ -2011,49 +2060,6 @@ Zipporah
 zooarchaeological
 zooarchaeology
 Zuma
-pollutant
-co-write
-cowrote
-co-written
-co-wrote
-cowritten
-cowriter
-co-writer
-psychopharmacologic
-antivirus
-unclad
-bell curve
-broad jump
-cyclic
-feebly
-overslept
-samba
-starless
-detribalise
-detribalisation
-tastebud
-Antony
-biogeographic
-impostor
-merchantable
-microtransaction
-multimillionaire
-Turing
-Wellesley
-over-indebtedness
-Christmastide
-coheir
-human trafficking
-reconfiguration
-redid
-self-build
-sociobiologic
-sociobiological
-sociobiologically
-sociobiologist
-psychobiologist
-psychobiologic
-psychobiological
-psychobiologically
+
 
 `.trim().split('\n');
