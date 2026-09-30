@@ -2060,6 +2060,16 @@ Zipporah
 zooarchaeological
 zooarchaeology
 Zuma
+Hampshire
+thirty-eight
+Afrocentric
+pre-tax
+harmoniously
+dreamt
+larger
+non-communist
+redone
+zoologist
 
 
 `.trim().split('\n');

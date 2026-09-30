@@ -399,6 +399,9 @@ function books_generate_b(show_type=false,cstype='txt',cstag='all',enforce_refre
             if (item[2].includes('已整理')){   //待完成整理后，删除
                 bljg=bljg+'✔';
             }
+            if (item[2].includes('已读')){
+                bljg=bljg+'🆗';
+            }            
 			if (['txt','eng','wiki'].includes(cstype)){
                 bljg=bljg+'</a> ';
             }
