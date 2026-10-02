@@ -8,48 +8,359 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Thu, 01 Oct 2026 09:48:46 +0800</lastBuildDate>
-<item><title>CNNIC 称中国生成式 AI 用户超 7 亿 - Solidot</title><link>https://www.solidot.org/story?sid=85519</link></item>
-<item><title>新奥声称实现氢硼聚变反应突破 - Solidot</title><link>https://www.solidot.org/story?sid=85518</link></item>
-<item><title>美国佛蒙特州通过家庭电池储能网络应对气候变化 - Solidot</title><link>https://www.solidot.org/story?sid=85517</link></item>
-<item><title>500 光年外的一颗巨行星探测到水、甲烷和氨 - Solidot</title><link>https://www.solidot.org/story?sid=85516</link></item>
-<item><title>Windows 11 原生支持 Linux 容器 - Solidot</title><link>https://www.solidot.org/story?sid=85515</link></item>
-<item><title>日本老龄化达到 29.4%， 一人家庭比例首次超过 4 成 - Solidot</title><link>https://www.solidot.org/story?sid=85513</link></item>
-<item><title>FBI 与荷兰合作逮捕 ShinyHunters 组织领导成员 - Solidot</title><link>https://www.solidot.org/story?sid=85511</link></item>
-<item><title>AMD CEO 苏姿丰成为清华经管学院顾问委员会委员 - Solidot</title><link>https://www.solidot.org/story?sid=85510</link></item>
-<item><title>加州禁止公职人员发行模因币 - Solidot</title><link>https://www.solidot.org/story?sid=85509</link></item>
-<item><title>中国 AI 智能体也会撒谎和欺骗 - Solidot</title><link>https://www.solidot.org/story?sid=85508</link></item>
-<item><title>Podcast: Should We Put AI-Enabled Tech in Our Brains? - Undark</title><link>https://undark.org/2026/09/25/podcast-neural-implants/</link></item>
-<item><title>Engineering Animals to Grow Human Organs — But Not Human Minds - Undark</title><link>https://undark.org/2026/09/25/brain-trust-human-animal-chimeras/</link></item>
-<item><title>AI-Driven Biology Is Only as Good as the Data Beneath It - Undark</title><link>https://undark.org/2026/09/25/opinion-ai-biology-data-gap/</link></item>
-<item><title>In Italy, What Earth Can Tell Us About Extraterrestrial Life - Undark</title><link>https://undark.org/2026/09/25/italy-extraterrestrial-life/</link></item>
-<item><title>The Evolving Quest to Build Life in a Lab - Undark</title><link>https://undark.org/2026/09/25/brain-trust-life-in-a-lab/</link></item>
-<item><title>The Embryos That Don’t Come From Eggs and Sperm - Undark</title><link>https://undark.org/2026/09/25/brain-trust-model-embryos/</link></item>
-<item><title>Book Review: A Contrarian View of How Consciousness Evolved - Undark</title><link>https://undark.org/2026/09/25/book-review-natural-intelligence/</link></item>
-<item><title>AI Presents Science with a ‘Ship of Theseus’ Problem - Undark</title><link>https://undark.org/2026/09/25/opinion-ai-ship-of-theseus/</link></item>
-<item><title>Interview: What Does the ‘I’ in AI Really Mean? - Undark</title><link>https://undark.org/2026/09/25/interview-artificial-intelligence/</link></item>
-<item><title>Book Excerpt: Why the Brain Isn’t the Self - Undark</title><link>https://undark.org/2026/09/25/excerpt-challenger-alive/</link></item>
-<item><title>Insects are essential to vertebrate life — as food, shelter and medicineBINGHAMTON UNIVERSITY - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1145790</link></item>
-<item><title>Giant fluctuations of focused light reveal hidden correlations in complex mediaSAINT LOUIS UNIVERSITY - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1145940</link></item>
-<item><title>Stratospheric observatory Sunrise-III reveals intricate solar magnetic structuresNATIONAL INSTITUTES OF NATURAL SCIENCES - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1145991</link></item>
-<item><title>Researchers find benzodiazepine prescriptions drop sharply in the U.S. over the past decadeRUTGERS UNIVERSITY - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1145228</link></item>
-<item><title>New simulations connect the first stars to cosmic fingerprints still visible todayUNIVERSITY OF BATH - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1144816</link></item>
-<item><title>Study suggests skipping sweets during antibiotic treatment may help protect the gut microbiomeCITY OF HOPE - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1145587</link></item>
-<item><title>Overall diet quality key to heart healthAMERICAN COLLEGE OF CARDIOLOGY - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1145413</link></item>
-<item><title>Butterflies use optical illusions to dodge predatorsUNIVERSITY OF EXETER - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1145531</link></item>
-<item><title>Heatwave effects can linger overnight in older adults, uOttawa study findsUNIVERSITY OF OTTAWA - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1146097</link></item>
-<item><title>Prussian blue regulates ion dynamics in perovskite solar cellsCHINESE ACADEMY OF SCIENCES HEADQUARTERS - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1145992</link></item>
-<item><title>Sugar amplifies damage done to gut health by antibioticsNYU LANGONE HEALTH / NYU GROSSMAN SCHOOL OF MEDICINE - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1145452</link></item>
-<item><title>Global groundwater drought recovery patternsUTRECHT UNIVERSITY - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1145863</link></item>
-<item><title>Caro Claire Burke has bought you (yes you) a ticket to see NAZA. - Literary  Hub</title><link>https://lithub.com/caro-claire-burke-has-bought-you-yes-you-a-ticket-to-see-naza/</link></item>
-<item><title>Here’s the Center for Fiction’s 2026 First Novel Prize shortlist. - Literary  Hub</title><link>https://lithub.com/heres-the-center-for-fictions-2026-first-novel-prize-shortlist/</link></item>
-<item><title>Celebrate the first ever #LitMagWeek with these three journals. - Literary  Hub</title><link>https://lithub.com/celebrate-the-first-ever-litmagweek-with-these-three-journals/</link></item>
-<item><title>Why We are Suing the City of Los Angeles to Save Libraries - Literary  Hub</title><link>https://lithub.com/why-we-are-suing-the-city-of-los-angeles-to-save-libraries/</link></item>
-<item><title>Thomas McGuane is Writing the Most Vital Literature of the Trump Era - Literary  Hub</title><link>https://lithub.com/thomas-mcguane-is-writing-the-most-vital-literature-of-the-trump-era/</link></item>
-<item><title>Lit Hub Daily: September 30, 2026 - Literary  Hub</title><link>https://lithub.com/lit-hub-daily-september-30-2026/</link></item>
-<item><title>The Real Technofascists of Silicon Valley: Why Big Tech Oligarchs Hate Democracy - Literary  Hub</title><link>https://lithub.com/the-real-technofascists-of-silicon-valley-why-big-tech-oligarchs-hate-democracy/</link></item>
-<item><title>The 12 Best Book Covers of September - Literary  Hub</title><link>https://lithub.com/the-12-best-book-covers-of-september-2/</link></item>
-<item><title>September’s Best Reviewed Nonfiction - Literary  Hub</title><link>https://lithub.com/septembers-best-reviewed-nonfiction-2/</link></item>
-<item><title>September’s Best Reviewed Fiction - Literary  Hub</title><link>https://lithub.com/septembers-best-reviewed-fiction-2/</link></item>
-<item><title>Mathematicians Build Long-Awaited Graph Sandwich - Quanta Magazine</title><link>https://www.quantamagazine.org/mathematicians-build-long-awaited-graph-sandwich-20260918/</link></item>
+<lastBuildDate>Fri, 02 Oct 2026 10:27:03 +0800</lastBuildDate>
+<item><title>Don’t Miss Saturn in All its Glory This Weekend - Nautilus</title><link>https://nautil.us/dont-miss-saturn-in-all-its-glory-this-weekend-1285461/</link></item>
+<item><title>Ancient Pocket Change Reveals Special Status of Rome’s “Little Englanders” - Nautilus</title><link>https://nautil.us/ancient-pocket-change-reveals-special-status-of-romes-little-englanders-1285457/</link></item>
+<item><title>A Look at How Many Cancers Are Caused by Infections Worldwide - Nautilus</title><link>https://nautil.us/a-look-at-how-many-cancers-are-caused-by-infections-worldwide-1285454/</link></item>
+<item><title>Where Did the “Social Magic” Go? - Nautilus</title><link>https://nautil.us/where-did-the-social-magic-go-1285451/</link></item>
+<item><title>This Real-Life Sea Monster is Controlled by Joysticks - Nautilus</title><link>https://nautil.us/this-real-life-sea-monster-is-controlled-by-joysticks-1285439/</link></item>
+<item><title>This Nebula Looks Like a Shark - Nautilus</title><link>https://nautil.us/this-nebula-looks-like-a-shark-1285445/</link></item>
+<item><title>This Cool Lava Planet Has an Atmosphere - Nautilus</title><link>https://nautil.us/this-cool-lava-planet-has-an-atmosphere-1285436/</link></item>
+<item><title>Your Speech May Contain Hidden Information About How Fast You’re Aging - Nautilus</title><link>https://nautil.us/your-speech-may-contain-hidden-information-about-how-fast-youre-aging-1285433/</link></item>
+<item><title>“Morally Binding” AI Safety Pledge Mocked - Nautilus</title><link>https://nautil.us/morally-binding-ai-safety-pledge-mocked-1285430/</link></item>
+<item><title>A Photographic Look at Sputnik 1, the Satellite That Launched the Space Age 69 Years Ago - Nautilus</title><link>https://nautil.us/a-photographic-look-at-sputnik-1-the-satellite-that-launched-the-space-age-69-years-ago-1285418/</link></item>
+<item><title>剑鱼行动/Swordfish (2001)/剑鱼/旗鱼行动/极速爆劫/Swordfish.2001.UHD.BluRay.2160p.x265.DV.HDR.DTS-HD.MA.5.1-SSDSSE.chs - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669565.xml</link></item>
+<item><title>ゾンビランドサガ ゆめぎんがパラダイス/Zombie Land Saga Yumeginga Paradise sc&amp;jp - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669564.xml</link></item>
+<item><title>ネオ・ウルトラQ/新·奥特Q/Neo.Ultra.Q.简中字幕 - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669563.xml</link></item>
+<item><title>起义/The Uprising.The Rage (2026) [1080p] [WEBRip] [5.1] - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669562.xml</link></item>
+<item><title>Ambush At Abbey Gate the Afghanistan Withdrawal 2026/Ambush.at.Abbey.Gate.The.Afghanistan.Withdrawal.2026.1080p.WEBRip.x264-BAE - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801933.xml</link></item>
+<item><title>巴黎陷落/Paris Has Fallen S02E04 1080p AMZN WEB-DL DDP5 1 H 264-playWEB - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801932.xml</link></item>
+<item><title>All American S08E13/未来全明星/all.american.s08e13.1080p.web.h264-glhf[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801931.xml</link></item>
+<item><title>行尸走肉：死亡之城 第三季 The Walking Dead: Dead City (2026)/行尸走肉：死亡之城 第三季 The Walking Dead: Dead City (2026) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732054.xml</link></item>
+<item><title>再见，朱莉娅 وداعا جوليا (2023)/再见，朱莉娅 وداعا جوليا (2023) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732053.xml</link></item>
+<item><title>林肯律师 The Lincoln Lawyer (2011)/林肯律师 The Lincoln Lawyer (2011) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732052.xml</link></item>
+<item><title>单格屠龙 Ride Lonesome (1959)/单格屠龙 Ride Lonesome (1959) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732051.xml</link></item>
+<item><title>放荡的女皇 The Scarlet Empress (1934)/放荡的女皇 The Scarlet Empress (1934) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732050.xml</link></item>
+<item><title>美国朋友 Der amerikanische Freund (1977)/美国朋友 Der amerikanische Freund (1977) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732049.xml</link></item>
+<item><title>审判 Le procès (1962)/审判 Le procès (1962) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732048.xml</link></item>
+<item><title>浅坟 Shallow Grave (1994)/浅坟 Shallow Grave (1994) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732047.xml</link></item>
+<item><title>明日之歌 Make Way for Tomorrow (1937)/明日之歌 Make Way for Tomorrow (1937) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732046.xml</link></item>
+<item><title>教师休息室 Das Lehrerzimmer (2023)/教师休息室 Das Lehrerzimmer (2023) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732045.xml</link></item>
+<item><title>爵士春秋 All That Jazz (1979)/爵士春秋 All That Jazz (1979) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732044.xml</link></item>
+<item><title>麻衣的日常 まいちゃんの日常 (2014)/麻衣的日常 まいちゃんの日常 (2014) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732043.xml</link></item>
+<item><title>活死人黎明 Dawn of the Dead (1978)/活死人黎明 Dawn of the Dead (1978) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732042.xml</link></item>
+<item><title>飞狗巴迪 Air Bud (1997)/飞狗巴迪 Air Bud (1997) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732041.xml</link></item>
+<item><title>大侦探福尔摩斯2：诡影游戏 Sherlock Holmes: A Game of Shadows (2011)/大侦探福尔摩斯2：诡影游戏 Sherlock Holmes: A Game of Shadows (2011) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732040.xml</link></item>
+<item><title>白痴们 Idiots (2026)/白痴们 Idiots (2026) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732039.xml</link></item>
+<item><title>猫鼬 The Mongoose (2026)/猫鼬 The Mongoose (2026) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732038.xml</link></item>
+<item><title>异形地带 Alien Zone (1978)/异形地带 Alien Zone (1978) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732037.xml</link></item>
+<item><title>脑波猎场 The Wrong Girls (2026)/脑波猎场 The Wrong Girls (2026) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732036.xml</link></item>
+<item><title>我要你的性 I Want Your Sex (2026)/我要你的性 I Want Your Sex (2026) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732035.xml</link></item>
+<item><title>不夜城 The Naked City (1948)/不夜城 The Naked City (1948) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732034.xml</link></item>
+<item><title>南特的雅克·德米 Jacquôt de Nantes (1991)/南特的雅克·德米 Jacquôt de Nantes (1991) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732033.xml</link></item>
+<item><title>Maskeler Dustugunde 2025 1080p GAiN WEB-DL AAC2 0 H 264-TURG - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801930.xml</link></item>
+<item><title>大河之歌 অপরাজিত (1956)/大河之歌 অপরাজিত (1956) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732032.xml</link></item>
+<item><title>成功的滋味 Sweet Smell of Success (1957)/成功的滋味 Sweet Smell of Success (1957) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732031.xml</link></item>
+<item><title>家乡的消息 News from Home (1976)/家乡的消息 News from Home (1976) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732030.xml</link></item>
+<item><title>吉他蒙古人 Gitarrmongot (2004)/吉他蒙古人 Gitarrmongot (2004) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732029.xml</link></item>
+<item><title>无熊之境 خرس نیست (2022)/无熊之境 خرس نیست (2022) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732028.xml</link></item>
+<item><title>天堂之日 Days of Heaven (1978)/天堂之日 Days of Heaven (1978) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732027.xml</link></item>
+<item><title>歪心狼对阵ACME Coyote v. Acme (2026)/歪心狼对阵ACME Coyote v. Acme (2026) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732026.xml</link></item>
+<item><title>黑寡妇 Black Widow (1987)/黑寡妇 Black Widow (1987) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732025.xml</link></item>
+<item><title>the Hooters Murders Deadly Shift 2026/The.Hooters.Murders.Deadly.Shift.2026.1080p.WEB.H264-CBFM - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801929.xml</link></item>
+<item><title>Lucy Letby Scapegoat 2026 1080p MY5 WEB-DL AAC2 0 H 264-HiNGS - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801928.xml</link></item>
+<item><title>Top of the World 2026/Top.of.the.World.2026.1080p.WEB.h264-BAE - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801927.xml</link></item>
+<item><title>Son of a Critch S05E02/疯子之子/Son.of.a.Critch.S05E02.1080p.WEBRip.x264-BAE - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801926.xml</link></item>
+<item><title>The Blame S01E04/嫌疑爱人/The.Blame.S01E04.1080p.HDTV.H264-DARKFLiX - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801925.xml</link></item>
+<item><title>鬼的新娘/[MagicStar] Oni no Hanayome 2026 [WEBDL] [1080p] [DSNP] [JPN.SUB] - 射手网(伪)</title><link>http://assrt.net/xml/sub/801/801924.xml</link></item>
+<item><title>投敌者 Der Überläufer (2020)/投敌者 Der Überläufer (2020) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732023.xml</link></item>
+<item><title>惊声尖叫7 Scream 7 (2026)/惊声尖叫7 Scream 7 (2026) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732022.xml</link></item>
+<item><title>柯蒂斯总统 第一季 President Curtis (2026)/柯蒂斯总统 第一季 President Curtis (2026) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732021.xml</link></item>
+<item><title>诈死游戏 Just Play Dead (2026)/诈死游戏 Just Play Dead (2026) - 射手网(伪)</title><link>http://assrt.net/xml/sub/732/732019.xml</link></item>
+<item><title>‘Playing a dangerous game’: Putin threatens using ‘all its arsenal’ if there is a ‘direct attack on the Russian Federation’ - Fortune</title><link>https://fortune.com/2026/10/01/putin-threatens-retaliation-direct-attack-russia/</link></item>
+<item><title>AI in regulated industries: BofA and S&amp;P on the huge gains to be had, and the risks of rushing in - Fortune</title><link>https://fortune.com/2026/10/01/ai-regulated-industries-bank-of-america-sp-global/</link></item>
+<item><title>Fortune 500 Chief People Officers say AI has killed org charts, and employees who will thrive need to ‘unlearn’ - Fortune</title><link>https://fortune.com/2026/10/01/fortune-aiq-summit-executives-hpe-palo-alto-networks-lennar-workforce-org-charts/</link></item>
+<item><title>Citigroup raises one-year Bitcoin forecast to $113,000 - Fortune</title><link>https://fortune.com/2026/10/01/citigroup-one-year-bitcoin-forecast-113000/</link></item>
+<item><title>Paramount promised 30 movies a year to win Warner Bros. Losing Miramax if it fails may not scare it - Fortune</title><link>https://fortune.com/2026/10/01/paramount-warner-brothers-miramax-merger-penalty/</link></item>
+<item><title>Ford’s Jim Farley: many jobs ‘are definitely going to be changed and eliminated’ but blue-collar trades will use AI as a ‘companion’ - Fortune</title><link>https://fortune.com/2026/09/30/ford-ceo-jim-farley-ai-impact-jobs-blue-collar-companion/</link></item>
+<item><title>Thieves stole an Nvidia-branded truck filled with just 20,000 pounds of sand—and it points to Big Tech’s $150 million AI hardware theft headache - Fortune</title><link>https://fortune.com/2026/10/01/nvidia-branded-truck-20000-pounds-sand-stolen-ai-cargo-theft-plusai/</link></item>
+<item><title>‘It’s crazy they invented it’: Nate Bargatze on the bright future of skilled trades, the urgency of live experience, and the coming of AI - Fortune</title><link>https://fortune.com/2026/09/30/nate-bargatze-ai-skilled-trades/</link></item>
+<item><title>SpaceX sends 4 astronauts to the International Space Station on a record-fast 8-hour trip - Fortune</title><link>https://fortune.com/2026/10/01/spacex-crew-13-fastest-iss-flight/</link></item>
+<item><title>‘They’ll be hit very hard’: Trump sends roughly 9,000 troops and a third aircraft carrier to the Middle East after warning strikes on Iran - Fortune</title><link>https://fortune.com/2026/10/01/trump-9000-troops-third-aircraft-carrier-middle-east-iran-strike/</link></item>
+<item><title>新加坡推出面向公务员的约会软件 FirstDate - Solidot</title><link>https://www.solidot.org/story?sid=85522</link></item>
+<item><title>二手 CPU 导致玩家被 Riot 封禁 - Solidot</title><link>https://www.solidot.org/story?sid=85523</link></item>
+<item><title>PS5 模拟器的开发取得突破 - Solidot</title><link>https://www.solidot.org/story?sid=85524</link></item>
+<item><title>God, Man, and Academic Freedom - Law &amp; Liberty</title><link>https://lawliberty.org/forum/god-man-and-academic-freedom/</link></item>
+<item><title>A New (Fiscal) Year’s Resolution - Law &amp; Liberty</title><link>https://lawliberty.org/a-new-fiscal-years-resolution/</link></item>
+<item><title>The Patron Saint of Freedom - Law &amp; Liberty</title><link>https://lawliberty.org/the-patron-saint-of-freedom/</link></item>
+<item><title>Zoning and the American Way - Law &amp; Liberty</title><link>https://lawliberty.org/forum/zoning-and-the-american-way/</link></item>
+<item><title>US Navy awards RTX’s Raytheon $24.4B for SM-6 missiles amid stockpile concerns - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/10/01/us-navy-awards-rtxs-raytheon-244b-for-sm-6-missiles-amid-stockpile-concerns/</link></item>
+<item><title>Ukraine deploys FP-7 tactical ballistic missile in combat for first time, Zelenskyy says - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/10/01/ukraine-deploys-fp-7-tactical-ballistic-missile-in-combat-for-first-time-zelenskyy-says/</link></item>
+<item><title>Boeing adds to big week with first full-rate Grey Wolf helicopter order - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/10/01/boeing-adds-to-big-week-with-first-full-rate-grey-wolf-helicopter-order/</link></item>
+<item><title>Dutch say ASW frigate talks ongoing amid reports Belgium may quit project - Defense News</title><link>https://www.defensenews.com/global/europe/2026/10/01/dutch-say-asw-frigate-talks-ongoing-amid-reports-belgium-may-quit-project/</link></item>
+<item><title>Taiwan takes a page from Ukraine’s playbook in steeling society for an invasion - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/10/01/taiwan-takes-a-page-from-ukraines-playbook-in-steeling-society-for-an-invasion/</link></item>
+<item><title>UAE turns to Russian shadow airline for missions in Africa: Investigation - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2026/09/30/uae-turns-to-russian-shadow-airline-for-missions-in-africa-investigation/</link></item>
+<item><title>Aircraft carrier USS Harry S. Truman to undergo $5.1B mid-life overhaul - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/09/30/aircraft-carrier-uss-harry-s-truman-to-undergo-51b-mid-life-overhaul/</link></item>
+<item><title>US Air Force awards $2.38B contract to Boeing for 22 F-15EX - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/09/30/us-air-force-awards-238b-contract-to-boeing-for-22-f-15ex/</link></item>
+<item><title>White House nominates next general to helm US Space Command - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2026/09/30/white-house-nominates-next-general-to-helm-us-space-command/</link></item>
+<item><title>Why the Pentagon just dropped $450M on tungsten mining - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2026/09/30/why-the-pentagon-just-dropped-450m-on-tungsten-mining/</link></item>
+<item><title>Neros, Perennial Autonomy lead in Pentagon’s drone competition - Defense News</title><link>https://www.defensenews.com/unmanned/2026/10/01/neros-perennial-autonomy-lead-in-pentagons-drone-competition/</link></item>
+<item><title>Space Force picks two companies to build new ‘space-to-space’ satellites by 2028 - Defense News</title><link>https://www.defensenews.com/space/2026/10/01/space-force-picks-two-companies-to-build-new-space-to-space-satellites-by-2028/</link></item>
+<item><title>Pentagon launches Office of Religious Affairs, will report directly to Hegseth - Defense News</title><link>https://www.defensenews.com/video/2026/10/01/pentagon-launches-office-of-religious-affairs-will-report-directly-to-hegseth/</link></item>
+<item><title>Hegseth announces new four-star command for autonomous warfare - Defense News</title><link>https://www.defensenews.com/video/2026/10/01/hegseth-announces-new-four-star-command-for-autonomous-warfare/</link></item>
+<item><title>Interview: Former Ukraine defense minister launches &amp;#39;Army of Robots&amp;#39; initiative - Defense News</title><link>https://www.defensenews.com/video/2026/09/30/interview-former-ukraine-defense-minister-launches-army-of-robots-initiative/</link></item>
+<item><title>Ukraine has struck Russian factory vital for Moscow’s missiles, private intelligence firm says - Defense News</title><link>https://www.defensenews.com/global/europe/2026/10/01/ukraine-has-struck-russian-factory-vital-for-moscows-missiles-private-intelligence-firm-says/</link></item>
+<item><title>Operation Atlantic City ushers Marines on rare trip to ... remote Arctic island - Defense News</title><link>https://www.defensenews.com/news/your-military/2026/09/30/operation-atlantic-city-ushers-marines-on-rare-trip-to-remote-arctic-island/</link></item>
+<item><title>US Army selects five companies for PrSM development - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/09/30/us-army-selects-five-companies-for-prsm-development/</link></item>
+<item><title>Amazon&amp;#39;s New Kindle Accessories Bring Back Physical Controls - Slashdot</title><link>https://news.slashdot.org/story/26/10/01/2149250/amazons-new-kindle-accessories-bring-back-physical-controls</link></item>
+<item><title>Russian-Owned Snooping Software Used By US Secret Service - Slashdot</title><link>https://yro.slashdot.org/story/26/10/01/2124230/russian-owned-snooping-software-used-by-us-secret-service</link></item>
+<item><title>Cloudflare Tries to Outplay Jev With Open-Weight Clef Models - Slashdot</title><link>https://tech.slashdot.org/story/26/10/01/2110250/cloudflare-tries-to-outplay-jev-with-open-weight-clef-models</link></item>
+<item><title>Ryan Roslansky Is Leaving After Nearly 18 Years At LinkedIn and Microsoft - Slashdot</title><link>https://slashdot.org/story/26/10/01/1832232/ryan-roslansky-is-leaving-after-nearly-18-years-at-linkedin-and-microsoft</link></item>
+<item><title>Micron Projects Tightening RAM Shortages Through 2028 As It Generates Record Profit - Slashdot</title><link>https://hardware.slashdot.org/story/26/10/01/1822222/micron-projects-tightening-ram-shortages-through-2028-as-it-generates-record-profit</link></item>
+<item><title>Cops Can Bypass iPhone&amp;#39;s Automatic Reboot To Get Into Locked Phones - Slashdot</title><link>https://yro.slashdot.org/story/26/10/01/1813207/cops-can-bypass-iphones-automatic-reboot-to-get-into-locked-phones</link></item>
+<item><title>Pentagon Creates &amp;#39;Autowarcom&amp;#39; to Expand AI and Drone Capabilities - Slashdot</title><link>https://news.slashdot.org/story/26/10/01/1728203/pentagon-creates-autowarcom-to-expand-ai-and-drone-capabilities</link></item>
+<item><title>FTC Is Investigating OpenAI, Anthropic and Other AI Companies Over Product Risks - Slashdot</title><link>https://yro.slashdot.org/story/26/10/01/1720206/ftc-is-investigating-openai-anthropic-and-other-ai-companies-over-product-risks</link></item>
+<item><title>HP&amp;#39;s Answer to the MacBook Neo Is Thinner, Lighter, and Comes With OLED - Slashdot</title><link>https://hardware.slashdot.org/story/26/10/01/1514239/hps-answer-to-the-macbook-neo-is-thinner-lighter-and-comes-with-oled</link></item>
+<item><title>PS5 Emulation Is Suddenly Making Big Strides On PC - Slashdot</title><link>https://games.slashdot.org/story/26/10/01/1510234/ps5-emulation-is-suddenly-making-big-strides-on-pc</link></item>
+<item><title>Google Unveils Gemini 4 Argon, Retaking Benchmark Lead Over OpenAI and Anthropic - Slashdot</title><link>https://tech.slashdot.org/story/26/09/30/2244216/google-unveils-gemini-4-argon-retaking-benchmark-lead-over-openai-and-anthropic</link></item>
+<item><title>&amp;#39;Xbox Is Not For Sale,&amp;#39; Says Microsoft&amp;#39;s Gaming Chief - Slashdot</title><link>https://games.slashdot.org/story/26/09/30/1954253/xbox-is-not-for-sale-says-microsofts-gaming-chief</link></item>
+<item><title>Hackers Stole Millions of US Military Personnel Records During Months-Long Data Breach - Slashdot</title><link>https://yro.slashdot.org/story/26/09/30/1947216/hackers-stole-millions-of-us-military-personnel-records-during-months-long-data-breach</link></item>
+<item><title>Google Reportedly Tests Paying Publishers For AI Search Results - Slashdot</title><link>https://tech.slashdot.org/story/26/09/30/1851246/google-reportedly-tests-paying-publishers-for-ai-search-results</link></item>
+<item><title>Reddit Is Killing RSS Feeds, Ending Public API Access - Slashdot</title><link>https://tech.slashdot.org/story/26/09/30/1841213/reddit-is-killing-rss-feeds-ending-public-api-access</link></item>
+<item><title>How to Query and Compare Multiple LLMs on Linux - OSTechNix</title><link>https://ostechnix.com/query-compare-multiple-llms-linux/</link></item>
+<item><title>Linux Kernel 7.3 RC5 is Officially Released: Here’s What’s New - OSTechNix</title><link>https://ostechnix.com/linux-kernel-7-3-rc5-released/</link></item>
+<item><title>Google Introduces Googlebook, the New AI Laptop Built for Your Android Phone - OSTechNix</title><link>https://ostechnix.com/googlebook-ai-laptop-android-phone/</link></item>
+<item><title>Why Linux Commands Don’t Always Work on macOS - OSTechNix</title><link>https://ostechnix.com/linux-commands-on-macos/</link></item>
+<item><title>5 Android Data Recovery Tools to Consider When Important Files Go Missing - OSTechNix</title><link>https://ostechnix.com/android-data-recovery-tools/</link></item>
+<item><title>山姆开始“非本人不让结账”：十一逛店前，100块的副卡搭子还得想清楚 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/awwzvwnk/</link></item>
+<item><title>堵5小时续航纹丝不动、堵26小时才烧掉1/5箱油？拆完国庆堵车这三笔油钱账：怠速一小时4-14元、油表灯亮还有70-80公里、返程加油看刻度不看续航，三条油位线各对应一个动作 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/anv30dz7/</link></item>
+<item><title>国庆睡车里开空调：油车党怕一氧化碳，电车党怕亏电，而最大的盲区在增程&amp;quot;亏电自启&amp;quot;——三类车的空调风险矩阵我替你盘好了 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/axkzq629/</link></item>
+<item><title>9种肉片腌制方法！炒肉嫩滑入味一次学会 - 什么值得买（社区）</title><link>https://post.smzdm.com/talk/p/aom9n767/</link></item>
+<item><title>汇报一下，最后入的黑色Mate 90 ProMax 16+512 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/awwzvo92/</link></item>
+<item><title>华为一次发布24款新品，从59元到64999全都有，你喜欢哪款？ - 什么值得买（社区）</title><link>https://post.smzdm.com/p/az862690/</link></item>
+<item><title>印象笔记iOS下架10天：页面写着「开发人员已从App Store中移除此App」，官方三连回复「笔记资料不会丢」却给不出恢复期限，评论区已经在追问会员退费——对iPhone用户来说最危险的不是下架，是系统可能悄悄「卸载」你的App：先分清事件、背景、迁移三层，再算清数据、维权、迁移三笔账，四类印象笔记用户对号入座，先别按删除键 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/a260v5m7/</link></item>
+<item><title>山姆首席采购官换成美国人，热搜都炸了：续卡之前，先把这三个月的&amp;quot;采购账本&amp;quot;翻清楚 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/anv30500/</link></item>
+<item><title>5万token费、30万行AI代码、上架半个月卖出200份：&amp;quot;单人搓原神&amp;quot;被全网群嘲，但拆开账单，token是最便宜的一项 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/avgx3754/</link></item>
+<item><title>Mate 90 Pro Max对比80 Pro Max，提升有多大？这四点变化最实在 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/a260v5e7/</link></item>
+<item><title>新手闭眼入！5种几乎不咬人的神仙狗狗 - 什么值得买（社区）</title><link>https://post.smzdm.com/talk/p/a3m0q2lr/</link></item>
+<item><title>华为赛力斯问界签新五年协议，半月内两度反转终复合 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/a82x48k6/</link></item>
+<item><title>47.2元起，小米这次的换电池服务，太爽了 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/axkzqn32/</link></item>
+<item><title>合资电车降价求生，9.99万艾尼氪V只是开始，现在出手还是再等等 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/ak8k9qmr/</link></item>
+<item><title>金鹰节给短剧设荣誉单元：从被骂“电子泔水”，到名字被写进名单 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/aom9zd67/</link></item>
+<item><title>请3休13？假期旅行生成中·分享双节出游攻略 - 什么值得买（社区）</title><link>https://post.m.smzdm.com/ajax_m/activity/100815</link></item>
+<item><title>推荐内容功能重磅上线！速来体验 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/akk9lr89/</link></item>
+<item><title>什么值得买创作者体系全面改版，「创作星级」重磅上线！ - 什么值得买（社区）</title><link>https://post.smzdm.com/p/adon8o0p/</link></item>
+<item><title>社区违规合集更新！这些红线你踩过没有？ - 什么值得买（社区）</title><link>https://post.m.smzdm.com/shequ_center/index?tab=3</link></item>
+<item><title>【创作者征集令】兴趣合伙人限时招募啦，加入扶持计划得硬核资源扶持和专属成长权益！ - 什么值得买（社区）</title><link>https://post.smzdm.com/p/a65q6wen/</link></item>
+<item><title>【有奖征稿】聊聊你换手机的故事，赢现金奖励！ - 什么值得买（社区）</title><link>https://post.m.smzdm.com/ajax_m/activity/100744</link></item>
+<item><title>用腾讯ima搭一套 AI 数学陪练系统 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/am9n72k4/</link></item>
+<item><title>QLC颗粒混用别难受，国行iPhone 18用不了原生苹果AI才是真的坑？ - 什么值得买（社区）</title><link>https://post.smzdm.com/p/ad79e0wd/</link></item>
+<item><title>虎扑女神大赛，豆包和DeepSeek进了前30：选的是女神，还是陪伴？ - 什么值得买（社区）</title><link>https://post.smzdm.com/p/arzqxmdw/</link></item>
+<item><title>值友喜提蔚来，装能效7kw小直流93米铝线损耗能有多低？ - 什么值得买（社区）</title><link>https://post.smzdm.com/p/ak8km7g8/</link></item>
+<item><title>2000流明远射磁吸全能！菲尼克斯C5 Pro手电体验 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/apqvd9vw/</link></item>
+<item><title>被骂背叛穷鬼一年后，迪卡侬凭什么翻身了？ - 什么值得买（社区）</title><link>https://post.smzdm.com/p/aggqpemd/</link></item>
+<item><title>男人过了35岁别乱买衣服了，这件夹克我穿了8年，比啥都抗造 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/ad79ekvd/</link></item>
+<item><title>i3 默秒全？从 G4560 升级到 i3-7100 有哪些提升？ - 什么值得买（社区）</title><link>https://post.smzdm.com/p/aggqpvpd/</link></item>
+<item><title>这个国庆米粉有福了！老机还能再战小米14系列官方电池升级太香了 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/a260vzwn/</link></item>
+<item><title>好消息：是飞存闪拓，国产崛起，好消息：大家都在扶持国产 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/a03ql3d0/</link></item>
+<item><title>饭局上总有人吹嘘光瓶茅台镇定制酒，我把这里面的门道给你扒透 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/al3lm350/</link></item>
+<item><title>让家里电脑随叫随到：飞牛NAS+Lucky实现远程睡眠与唤醒 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/aggqpg0w/</link></item>
+<item><title>“四卡三待”首发：华为在通信上的又一次“非芯片”创新 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/ad79e2qd/</link></item>
+<item><title>大扫除黄金顺序曝光！先软化后清除，越干越轻松👇 - 什么值得买（社区）</title><link>http://post.smzdm.com/talk/p/a6z0e52z/</link></item>
+<item><title>出二手 iPhone，查出屏幕边缘脱胶，平台判我赔验货费和运费 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/apqvdr32/</link></item>
+<item><title>老吃家的盒马美食大实话测评（附热量） - 什么值得买（社区）</title><link>https://post.smzdm.com/p/aggqd4km/</link></item>
+<item><title>Jennifer爱生活 - 什么值得买（社区）</title><link>https://zhiyou.smzdm.com/member/9583489873</link></item>
+<item><title>游点好玩 vlg2：新游先玩为敬——《新世界：暗影成双》篇 - 什么值得买（社区）</title><link>https://test.smzdm.com/p/14489/</link></item>
+<item><title>半年瘦25斤，脂肪肝逆转！每月伙食费仅300元，这进阶之路硬核 - 什么值得买（社区）</title><link>http://post.smzdm.com/talk/p/aqrmov9k/</link></item>
+<item><title>尼康发布全画幅微单数码相机Z5ⅡC,融便捷操作和卓越画质于全画幅机身 助力初学者“随手出片轻松拍” - 什么值得买（社区）</title><link>https://post.smzdm.com/p/a03qnkm9/</link></item>
+<item><title>华为睿影Z10外挂镜头曝光：一英寸底10倍光变，10月1日随Mate90发布 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/apqv3gd7/</link></item>
+<item><title>大疆Osmo 360 II推送新固件：夜景增强，素材能直传网盘了 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/axkz2ke4/</link></item>
+<item><title>米家智能意式半自动咖啡机 Pro 开售，双泵双加热 + 称重研磨，国补价2 3395.84 元 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/arzq8vnq/</link></item>
+<item><title>20多块八合一拓展坞！4K 60Hz输出、无线充、氛围灯、铝合金外壳 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/aom9wg09/</link></item>
+<item><title>鼠标滚轮坏了不用扔：更换顶配TTC金轮编码器仅需4元，保姆级教程 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/aggqr7pd/</link></item>
+<item><title>为什么你的软壳裤第二年就不防水了，原因不在裤子本身 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/a260kzlq/</link></item>
+<item><title>全新升级真·RGB Stripe排列！Tandem WOLED叠曜屏深度解析与实测 - 什么值得买（社区）</title><link>https://post.smzdm.com/p/a26zpvln/</link></item>
+<item><title>5 Things to Eat This Weekend - Grub Street</title><link>https://www.grubstreet.com/2026/10/5-new-foods-to-eat-in-nyc.html</link></item>
+<item><title>The Case for Cooking (Almost) Everything From Scratch - Grub Street</title><link>https://www.grubstreet.com/article/the-joy-of-cooking-in-the-golden-age-of-convenience-eating.html</link></item>
+<item><title>What If You Never Cooked Again? - Grub Street</title><link>https://www.grubstreet.com/article/prepared-food-delivery-dinner-butterfield-citarella-hvalley-grocery.html</link></item>
+<item><title>Min Jin Lee Will Order Everything on the Menu - Grub Street</title><link>https://www.grubstreet.com/article/min-jin-lee-grub-street-diet.html</link></item>
+<item><title>Welcome to Little Ritaly! - Grub Street</title><link>https://www.grubstreet.com/article/first-taste-arrigos-and-salvos-dinner-in-ridgewood.html</link></item>
+<item><title>The Ultimate Grub Street Diet - Grub Street</title><link>https://www.grubstreet.com/article/grub-street-diet-20th-anniversary.html</link></item>
+<item><title>Why Is Daniel Humm Selling Boxed Pasta? - Grub Street</title><link>https://www.grubstreet.com/article/daniel-humm-riff-pasta-taste-test-review.html</link></item>
+<item><title>Danny Meyer Drops Into Wu’s Wonton King - Grub Street</title><link>https://www.grubstreet.com/article/danny-meyer-grub-street-diet.html</link></item>
+<item><title>Chef Mark Ladner Is Out at Babbo - Grub Street</title><link>https://www.grubstreet.com/article/mark-ladner-leaves-babbo.html</link></item>
+<item><title>A Food-Court Star Moves on From the Mall - Grub Street</title><link>https://www.grubstreet.com/article/burmese-bites-nyc-restaurant-review.html</link></item>
+<item><title>James Caputo, Carroll Gardens Royalty, Gets Into the Bagel Game - Grub Street</title><link>https://www.grubstreet.com/article/caputo-bagels-opens-in-brooklyn-on-october-5.html</link></item>
+<item><title>A Tasting Menu in Central Park - Grub Street</title><link>https://www.grubstreet.com/article/russell-jackson-central-park-tasting-menu-reverence-phoenix.html</link></item>
+<item><title>PDF 编辑器也有 Agent 了：一句话，让 AI 直接改文档 - 小众软件</title><link>https://www.appinn.com/updf-ai-agent/</link></item>
+<item><title>福利：复旦「学术版 Codex」客户端上线,下载登录就送1 万积分，还可享会员 8 折 - 小众软件</title><link>https://www.appinn.com/qiewenpaper-codex-2/</link></item>
+<item><title>IvyCraft：把 PDF、论文和网页变成 PPT、信息图、播客和视频 - 小众软件</title><link>https://www.appinn.com/ivycraft/</link></item>
+<item><title>Windows 11 原生 Linux 容器正式发布，不再需要 Docker Desktop - 小众软件</title><link>https://www.appinn.com/windows-wsl-container-generally-available/</link></item>
+<item><title>还记得奔腾、赛扬、Voodoo 吗？用 86Box 重新组一台老电脑｜硬件级 x86 模拟器 - 小众软件</title><link>https://www.appinn.com/86box/</link></item>
+<item><title>Windows 11 26H2 正式发布，174KB，2分钟完成升级 - 小众软件</title><link>https://www.appinn.com/windows-11-26h2-released-2-minute-upgrade/</link></item>
+<item><title>Cloudflare 发布新命令行工具 cf：可让 AI Agent 操作 3000+ 个 Cloudflare API - 小众软件</title><link>https://www.appinn.com/cloudflare-cf-agentic-cli/</link></item>
+<item><title>《百分浏览器》年度更新：Chromium 150 内核，继续支持 Win7、MV2、GDI｜测试版 5.3.1184.2 - 小众软件</title><link>https://www.appinn.com/cent-browser-5-3-1184-2/</link></item>
+<item><title>ylih 耳机里程表：用了多久、续航掉多少，记录蓝牙耳机的一生[安卓开源] - 小众软件</title><link>https://www.appinn.com/ylih-headphones-records-android/</link></item>
+<item><title>AI 编程卷起来了：OpenCode、Command Code 都在 $10 套餐里送 6 倍 DeepSeek V4.1 Flash 额度 - 小众软件</title><link>https://www.appinn.com/opencode-vs-command-code-ai-coding-plans/</link></item>
+<item><title>发现频道：10款大家发现的好评软件[2026年第39期] - 小众软件</title><link>https://www.appinn.com/faxian-top10-2639/</link></item>
+<item><title>微软官方开源：一键把全新 Windows 11 变成干净、清爽的开发机 - 小众软件</title><link>https://www.appinn.com/microsoft-windows-developer-config/</link></item>
+<item><title>美国服务器 VMRack 选购指南：洛杉矶机房的优势 - 小众软件</title><link>https://www.appinn.com/vmrack-vps-us/</link></item>
+<item><title>Cleanshot X 5.0 大更新：屏幕录制工作室模式（Studio Mode） - 小众软件</title><link>https://www.appinn.com/cleanshot-5/</link></item>
+<item><title>PowerToys v0.101.2432.0 新增 4 个小功能，可以预览 SQLite 了 - 小众软件</title><link>https://www.appinn.com/powertoys-v0-101-2432-0/</link></item>
+<item><title>Windows 11 任务栏位置终于移动到屏幕四周了，开始菜单大小也可以更改 - 小众软件</title><link>https://www.appinn.com/windows-11-taskbar-position-start-menu-resize/</link></item>
+<item><title>Radicle – 免费去中心化代码托管，GitHub、GitLab 的替代品 - 小众软件</title><link>https://www.appinn.com/radicle/</link></item>
+<item><title>本周赛博领鸡蛋（9.4~9.10）：《与你独处》《寻找埃文》 - 小众软件</title><link>https://www.appinn.com/eggs-2694/</link></item>
+<item><title>uBlock Origin 回来了！第三方开发者将其完整功能移植到 Manifest V3 - 小众软件</title><link>https://www.appinn.com/ublock-origin-mv3/</link></item>
+<item><title>WinToastRelay：将 Windows 系统通知转发到手机｜Codex 跑完，手机会叫你 - 小众软件</title><link>https://www.appinn.com/wintoastrelay/</link></item>
+<item><title>发现频道：10款大家发现的好评软件[2026年第36期] - 小众软件</title><link>https://www.appinn.com/faxian-top10-2636/</link></item>
+<item><title>Bug Bounty: Beijing Park Recruits Visitors Against Invasive Moth - Sixth Tone</title><link>https://www.sixthtone.com/news/1019092/bug-bounty%3A-beijing-park-recruits-visitors-against-invasive-moth?source=channel_home</link></item>
+<item><title>In Photos: China Begins Its Weeklong National Day Holiday - Sixth Tone</title><link>https://www.sixthtone.com/news/1019091/in-photos%3A-china-begins-its-weeklong-national-day-holiday?source=channel_home</link></item>
+<item><title>The Enduring Appeal of China’s Eight Immortals - Sixth Tone</title><link>https://www.sixthtone.com/news/1019065/the-enduring-appeal-of-china%E2%80%99s-eight-immortals?source=channel_home</link></item>
+<item><title>Chinese Olympic Diver’s Mother in Hot Water Over Toxic Parenting - Sixth Tone</title><link>https://www.sixthtone.com/news/1019083/chinese-olympic-diver%E2%80%99s-mother-in-hot-water-over-toxic-parenting?source=channel_home</link></item>
+<item><title>Chinese Village to Spend Millions on NPCs to Boost Tourism - Sixth Tone</title><link>https://www.sixthtone.com/news/1019076/chinese-village-to-spend-millions-on-npcs-to-boost-tourism</link></item>
+<item><title>17,000 Shipwrecked Relics Given to Chinese Research Centers - Sixth Tone</title><link>https://www.sixthtone.com/news/1019075/17%2C000-shipwrecked-relics-given-to-chinese-research-centers</link></item>
+<item><title>Beijing Court Lets Widow Use Embryos Created With Late Husband - Sixth Tone</title><link>https://www.sixthtone.com/news/1019073/beijing-court-lets-widow-use-embryos-created-with-late-husband</link></item>
+<item><title>Three Sisters Cross China to See What Keeps Their Family Apart - Sixth Tone</title><link>https://www.sixthtone.com/news/1019040/three-sisters-cross-china-to-see-what-keeps-their-family-apart</link></item>
+<item><title>Did AI Find Murakami’s Voice? Student’s $2 Experiment Divides China’s Literati - Sixth Tone</title><link>https://www.sixthtone.com/news/1018966/did-ai-find-murakami%E2%80%99s-voice%3F-student%E2%80%99s-%242-experiment-divides-china%E2%80%99s-literati</link></item>
+<item><title>A Crab Farmer and His Uninvited Guests - Sixth Tone</title><link>https://www.sixthtone.com/news/1019019/a-crab-farmer-and-his-uninvited-guests</link></item>
+<item><title>Inside China’s Shift From Short-Drama Sets to AI Factories - Sixth Tone</title><link>https://www.sixthtone.com/news/1018927/inside-china%E2%80%99s-shift-from-short-drama-sets-to-ai-factories</link></item>
+<item><title>Between Two Needles: The Chinese Garment Factory Built Around Dialysis - Sixth Tone</title><link>https://www.sixthtone.com/news/1018794/between-two-needles%3A-the-chinese-garment-factory-built-around-dialysis</link></item>
+<item><title>A Dying Tradition? The Haunting Beauty of China’s ‘Day of the Dead’ - Sixth Tone</title><link>https://www.sixthtone.com/news/1019051/a-dying-tradition%3F-the-haunting-beauty-of-china%E2%80%99s-%E2%80%98day-of-the-dead%E2%80%99?source=channel_home</link></item>
+<item><title>When Surgery Isn’t Enough for China’s MRKH Patients - Sixth Tone</title><link>https://www.sixthtone.com/news/1019064/when-surgery-isn%E2%80%99t-enough-for-china%E2%80%99s-mrkh-patients?source=channel_home</link></item>
+<item><title>She Sold 192 Porsches in a Year. Then Came an AI-Fueled Smear Campaign. - Sixth Tone</title><link>https://www.sixthtone.com/news/1019071/she-sold-192-porsches-in-a-year.-then-came-an-ai-fueled-smear-campaign.</link></item>
+<item><title>Weaving History: China’s ‘Wig Capital’ Fights to Keep Its Crown - Sixth Tone</title><link>https://www.sixthtone.com/news/1019070/weaving-history%3A-china%E2%80%99s-%E2%80%98wig-capital%E2%80%99-fights-to-keep-its-crown</link></item>
+<item><title>In the Rubber Forests, ‘Shanghai Daughter’ Traces a Father’s Past - Sixth Tone</title><link>https://www.sixthtone.com/news/1019060/in-the-rubber-forests%2C-%E2%80%98shanghai-daughter%E2%80%99-traces-a-father%E2%80%99s-past</link></item>
+<item><title>Chinese Cinema Turns Its Lens Outward - Sixth Tone</title><link>https://www.sixthtone.com/news/1018970/chinese-cinema-turns-its-lens-outward</link></item>
+<item><title>Remembering Gyirong: The Bustling Port That Vanished in a Flash - Sixth Tone</title><link>https://www.sixthtone.com/news/1018971/remembering-gyirong%3A-the-bustling-port-that-vanished-in-a-flash</link></item>
+<item><title>When China’s Star Intellectuals Fly Too Close to the Sun - Sixth Tone</title><link>https://www.sixthtone.com/news/1018996/when-china%E2%80%99s-star-intellectuals-fly-too-close-to-the-sun</link></item>
+<item><title>Can VR Capture the Power of China’s Ancient Caves? - Sixth Tone</title><link>https://www.sixthtone.com/news/1018985/can-vr-capture-the-power-of-china%E2%80%99s-ancient-caves%3F</link></item>
+<item><title>Bedazzled campus surveillance - FlowingData</title><link>https://flowingdata.com/2026/10/01/bedazzled-campus-surveillance/</link></item>
+<item><title>✚ Charts we made along the way - FlowingData</title><link>https://flowingdata.com/2026/10/01/process-408-along-way/</link></item>
+<item><title>Jagged intelligence demonstrated with a puzzle - FlowingData</title><link>https://flowingdata.com/2026/09/30/jagged-intelligence-demonstrated-with-a-puzzle/</link></item>
+<item><title>Ukraine’s former defense minister launches ‘Manhattan Project’ for killer robots - Defense News</title><link>https://www.defensenews.com/unmanned/2026/09/30/ukraines-former-defense-minister-launches-manhattan-project-for-killer-robots/</link></item>
+<item><title>LaLiga Wants Major VPNs on EU Piracy Watch List Over Affiliate Marketing - TorrentFreak</title><link>https://torrentfreak.com/laliga-wants-major-vpns-on-eu-piracy-watch-list-over-affiliate-marketing/</link></item>
+<item><title>ThurstonMoore - Slashdot</title><link>https://slashdot.org/~ThurstonMoore</link></item>
+<item><title>path to being closed - Slashdot</title><link>https://games.slashdot.org/story/24/05/09/1414219/microsofts-xbox-is-planning-more-cuts-after-studio-closings</link></item>
+<item><title>Singapore Pilots a Government-Built Dating Service - Slashdot</title><link>https://yro.slashdot.org/story/26/09/30/1620208/singapore-pilots-a-government-built-dating-service?sbsrc=md</link></item>
+<item><title>Trump Administration Launches New AI-Powered &amp;#39;America.gov&amp;#39; Website - Slashdot</title><link>https://tech.slashdot.org/story/26/09/30/1612221/trump-administration-launches-new-ai-powered-americagov-website?sbsrc=md</link></item>
+<item><title>The Night Sky Is Getting 10% Brighter Every Year - Slashdot</title><link>https://science.slashdot.org/story/26/09/30/0452204/the-night-sky-is-getting-10-brighter-every-year?sbsrc=md</link></item>
+<item><title>Scientists Develop Local Anesthetic That Lasts Weeks Instead of Hours - SciTechDaily</title><link>https://scitechdaily.com/scientists-develop-local-anesthetic-that-lasts-weeks-instead-of-hours/</link></item>
+<item><title>The Strongest Dementia Risk Signal May Be Hiding in Your Muscles - SciTechDaily</title><link>https://scitechdaily.com/the-strongest-dementia-risk-signal-may-be-hiding-in-your-muscles/</link></item>
+<item><title>Just 7 Days of Strength Training Triggered Fat-Burning Changes in Mice - SciTechDaily</title><link>https://scitechdaily.com/just-7-days-of-strength-training-triggered-fat-burning-changes-in-mice/</link></item>
+<item><title>A Century-Old Archaeological Mystery in Florida May Finally Be Solved - SciTechDaily</title><link>https://scitechdaily.com/a-century-old-archaeological-mystery-in-florida-may-finally-be-solved/</link></item>
+<item><title>These Feline Brothers Are the First Cats Ever Documented With Marfan Syndrome - SciTechDaily</title><link>https://scitechdaily.com/these-feline-brothers-are-the-first-cats-ever-documented-with-marfan-syndrome/</link></item>
+<item><title>Spinosaurus May Have Spent Most of Its Life Underwater, New Study Finds - SciTechDaily</title><link>https://scitechdaily.com/spinosaurus-may-have-spent-most-of-its-life-underwater-new-study-finds/</link></item>
+<item><title>The Secret to Better Magnetic Memory May Be the Light, Not the Material - SciTechDaily</title><link>https://scitechdaily.com/the-secret-to-better-magnetic-memory-may-be-the-light-not-the-material/</link></item>
+<item><title>Einstein Probe Discovers a Secret Phase of Neutron Star Collisions - SciTechDaily</title><link>https://scitechdaily.com/einstein-probe-discovers-a-secret-phase-of-neutron-star-collisions/</link></item>
+<item><title>Scientists Watch New Particles “Pop Into Existence” on a Quantum Computer - SciTechDaily</title><link>https://scitechdaily.com/scientists-watch-new-particles-pop-into-existence-on-a-quantum-computer/</link></item>
+<item><title>The Hidden Mathematics of Alzheimer’s Plaques Could Reveal New Treatment Strategies - SciTechDaily</title><link>https://scitechdaily.com/the-hidden-mathematics-of-alzheimers-plaques-could-reveal-new-treatment-strategies/</link></item>
+<item><title>Copper Could Be a Secret Weapon Against Antibiotic-Resistant UTIs - SciTechDaily</title><link>https://scitechdaily.com/copper-could-be-a-secret-weapon-against-antibiotic-resistant-utis/</link></item>
+<item><title>The More Ultra-Processed Food People Ate, the Higher Their Risk of Disease and Death - SciTechDaily</title><link>https://scitechdaily.com/the-more-ultra-processed-food-people-ate-the-higher-their-risk-of-disease-and-death/</link></item>
+<item><title>NASA’s SpaceX Crew-13 Could Reach the ISS in Record Time – Watch Live - SciTechDaily</title><link>https://scitechdaily.com/nasas-spacex-crew-13-could-reach-the-iss-in-record-time-watch-live/</link></item>
+<item><title>Researchers Uncover a Hidden Molecular Machine Parasites Need To Survive - SciTechDaily</title><link>https://scitechdaily.com/researchers-uncover-a-hidden-molecular-machine-parasites-need-to-survive/</link></item>
+<item><title>When Your Eyes Mislead You, the Brain Finds Common Ground - SciTechDaily</title><link>https://scitechdaily.com/when-your-eyes-mislead-you-the-brain-finds-common-ground/</link></item>
+<item><title>Could Earth’s Magnetic Field Be Secretly Influencing How We Age? - SciTechDaily</title><link>https://scitechdaily.com/could-earths-magnetic-field-be-secretly-influencing-how-we-age/</link></item>
+<item><title>Memory Decline May Start Much Earlier Than Scientists Once Thought - SciTechDaily</title><link>https://scitechdaily.com/memory-decline-may-start-much-earlier-than-scientists-once-thought/</link></item>
+<item><title>Nearly 1 in 6 Children Taking GLP-1 Drugs Develop Nutritional Deficiencies - SciTechDaily</title><link>https://scitechdaily.com/nearly-1-in-6-children-taking-glp-1-drugs-develop-nutritional-deficiencies/</link></item>
+<item><title>Study Finds Time-Restricted Eating Helped People Lose Weight Without Cutting Calories - SciTechDaily</title><link>https://scitechdaily.com/study-finds-time-restricted-eating-helped-people-lose-weight-without-cutting-calories/</link></item>
+<item><title>NASA, SpaceX Crew-13 Could Reach the Space Station in Less Than 9 Hours - SciTechDaily</title><link>https://scitechdaily.com/nasa-spacex-crew-13-could-reach-the-space-station-in-less-than-9-hours/</link></item>
+<item><title>NASA’s Curiosity Celebrates 5,000 Days on Mars With a Stunning New View - SciTechDaily</title><link>https://scitechdaily.com/nasas-curiosity-celebrates-5000-days-on-mars-with-a-stunning-new-view/</link></item>
+<item><title>Could Advanced Aliens Be Living Nearby? Scientists Say It’s Unlikely - SciTechDaily</title><link>https://scitechdaily.com/could-advanced-aliens-be-living-nearby-scientists-say-its-unlikely/</link></item>
+<item><title>A Disturbing New Kind of Coral Pollution Is Forming on Japan’s Beaches - SciTechDaily</title><link>https://scitechdaily.com/a-disturbing-new-kind-of-coral-pollution-is-forming-on-japans-beaches/</link></item>
+<item><title>The Eruption That Froze Pompeii Is Helping Scientists Measure Time Itself - SciTechDaily</title><link>https://scitechdaily.com/the-eruption-that-froze-pompeii-is-helping-scientists-measure-time-itself/</link></item>
+<item><title>Managed Agents - DigitalOcean</title><link>https://www.digitalocean.com/products/managed-agents</link></item>
+<item><title>海信发布双 7 旗舰电视，U7T Pro 和 E7S Pro+ 双双首销 9999 元起 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/aggq27pm/</link></item>
+<item><title>米家冰箱 425L 十字·全域离子净化开售，超薄零嵌 + 银离子抗菌，国补价 1999.2 元 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/ak8k7gve/</link></item>
+<item><title>小米 REDMI X 系列 RGB-Mini LED 2027 竞技版上架，年轻人的第一台 RGB 游戏电视 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/a260g997/</link></item>
+<item><title>米家智能洗碗机嵌入式 20 套开售，115℃ 蒸腾热烘，首发 3999 元 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/ae6v2dlz/</link></item>
+<item><title>米家智能洗碗机台式 5 套上架，80℃ 热风烘干 + 240 小时 UV 存储，到手1699元 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/ae6vlq0m/</link></item>
+<item><title>vivo X500 系列影像旗舰发布：5499 元起，把动态范围堆到 17EV - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/ak8kzqw9/</link></item>
+<item><title>vivo WATCH 6 轻户外手表发布：999 元起，蓝宝石表镜 + 钛合金表体 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/ad798k7d/</link></item>
+<item><title>电视面板三大厂集体发函涨价，国庆前买电视比国庆后便宜 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/am98on9v/</link></item>
+<item><title>大疆运动相机系列携手张雪机车亮相CIMA2026重庆摩博会：首发车机联动功能，内外双展备受关注 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/aom9xr26/</link></item>
+<item><title>机顶盒要成历史了，广电总局今年制定标准把它内置进电视 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/aggqxlg6/</link></item>
+<item><title>米家空气净化器 6C 预售 999 元，甲醛千分位显示，68m² 适用面积 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/ak8k4vr4/</link></item>
+<item><title>搭载豆包手机助手，努比亚NaviX Ultra 5499元起售 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/awwz5nx2/</link></item>
+<item><title>尼康发布全画幅微单数码相机Z5ⅡC,融便捷操作和卓越画质于全画幅机身 助力初学者“随手出片轻松拍” - 什么值得买（资讯）</title><link>https://news.smzdm.com/p/123393485/</link></item>
+<item><title>堵5小时续航纹丝不动、堵26小时才烧掉1/5箱油？拆完国庆堵车这三笔油钱账：怠速一小时4-14元、油表灯亮还有70-80公里、返程加油看刻度不看续航，三条油位线各对应一个动作 - 什么值得买（资讯）</title><link>https://news.smzdm.com/p/123411463/p2/#li_comment_384953655</link></item>
+<item><title>山姆开始“非本人不让结账”：十一逛店前，100块的副卡搭子还得想清楚 - 什么值得买（资讯）</title><link>https://news.smzdm.com/p/123415498/p4/#li_comment_384972891</link></item>
+<item><title>“建议把内裤袜子丢洗衣机洗”成热搜！网友：信，但就是接受不了 - 什么值得买（资讯）</title><link>https://news.smzdm.com/p/123406883/p2/#li_comment_384939242</link></item>
+<item><title>演唱会总导演回应侯浪救场：骑共享单车连唱两小时，系专业歌手 - 什么值得买（资讯）</title><link>https://news.smzdm.com/p/123410777/p2/#li_comment_384936328</link></item>
+<item><title>电动车充电起火2死，家属索赔230万为啥被法院全驳回？——把天津二中院终审判决、南宁车棚“七三开”担责、三省2026罚款清单和朝阳法院退一赔一的199元保单对了一遍：国庆出门前，先算清罚款、坐牢、赔偿这三笔钱 - 什么值得买（资讯）</title><link>https://news.smzdm.com/p/123410757/p2/#li_comment_384950569</link></item>
+<item><title>张本智和的“风评翻转”：中国这边骂声停了一拍，日本那边账已开算——真正的账单在十月 - 什么值得买（资讯）</title><link>https://news.smzdm.com/p/123403154/#li_comment_384941176</link></item>
+<item><title>从DN33到T80S PLUS的“无限进步”：科沃斯T80S PLUS扫地机体验 - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/a70nr74l/</link></item>
+<item><title>2K价位旗舰级清洁体验？科沃斯T80S PLUS拒绝无效家务！ - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/aom922dr/</link></item>
+<item><title>洗地机别乱买，先把云鲸S3 Steam的「热、大、稳」搞明白！ - 什么值得买（资讯）</title><link>https://post.smzdm.com/p/avgx95q4/</link></item>
+<item><title>哈尔斯 316不锈钢 保温杯樱花粉350ml - 什么值得买（资讯）</title><link>https://www.smzdm.com/p/183297998/</link></item>
+<item><title>爱沃克 猫咪用体内外驱虫药滴剂内外同驱 8kg猫用0.8ml（3支整盒） - 什么值得买（资讯）</title><link>https://www.smzdm.com/p/183279090/</link></item>
+<item><title>网易严选 宠物除臭香氛香薰除臭神器 250ml×1瓶 - 什么值得买（资讯）</title><link>https://www.smzdm.com/p/183293268/</link></item>
+<item><title>雷蛇 Orochi V2 无线游戏鼠标 轻量60g 便携 - 什么值得买（资讯）</title><link>https://www.smzdm.com/p/183099659/</link></item>
+<item><title>Apple AirPods Pro 3 无线降噪耳机 - 什么值得买（资讯）</title><link>https://www.smzdm.com/p/182751339/</link></item>
+<item><title>ACEMAGIC S3A 迷你游戏主机 - 什么值得买（资讯）</title><link>https://www.smzdm.com/p/182473669/</link></item>
+<item><title>Microsoft Ends Snapdragon 850 Support in Windows 11 After Version 26H2 - gHacks</title><link>https://www.ghacks.net/2026/10/01/microsoft-ends-snapdragon-850-support-in-windows-11-after-version-26h2/</link></item>
+<item><title>Samsung Launches Galaxy Tab S12 Ultra and Tab S12 Plus From $1,200, With Sales Starting October 7 - gHacks</title><link>https://www.ghacks.net/2026/10/01/samsung-launches-galaxy-tab-s12-ultra-and-tab-s12-plus-from-1200-with-sales-starting-october-7/</link></item>
+<item><title>Microsoft Opens Xbox Disc-to-Digital to All Players, Turning Physical Discs Into Digital Licenses - gHacks</title><link>https://www.ghacks.net/2026/10/01/microsoft-opens-xbox-disc-to-digital-to-all-players-turning-physical-discs-into-digital-licenses/</link></item>
+<item><title>New Mexico Jury Finds Facebook Violated Consumer Protection Law More Than 43 Million Times - gHacks</title><link>https://www.ghacks.net/2026/10/01/new-mexico-jury-finds-facebook-violated-consumer-protection-law-more-than-43-million-times/</link></item>
+<item><title>Rockstar Confirms GTA 6 Hurricanes, 170 Animal Species, and Six Map Regions Ahead of November 19 Launch - gHacks</title><link>https://www.ghacks.net/2026/09/30/rockstar-confirms-gta-6-hurricanes-170-animal-species-and-six-map-regions-ahead-of-november-19-launch/</link></item>
+<item><title>Firefox 157 Rolls Out Mozilla&amp;#39;s New Design, Brings Back Compact Mode, and Drops Amazon Search - gHacks</title><link>https://www.ghacks.net/2026/09/30/firefox-157-rolls-out-mozillas-new-design-brings-back-compact-mode-and-drops-amazon-search/</link></item>
+<item><title>Signal 8.30 Brings Encrypted On-Device Backups to iOS and Desktop Apps - gHacks</title><link>https://www.ghacks.net/2026/09/30/signal-8-30-brings-encrypted-on-device-backups-to-ios-and-desktop-apps/</link></item>
+<item><title>Microsoft Releases the Windows 11 2026 Update, Version 26H2, as a Small Enablement Package - gHacks</title><link>https://www.ghacks.net/2026/09/30/microsoft-releases-the-windows-11-2026-update-version-26h2-as-a-small-enablement-package/</link></item>
+<item><title>OpenAI Is Preparing an Always-On ChatGPT Assistant Called &amp;quot;o&amp;quot; for the $100 Pro Plan - gHacks</title><link>https://www.ghacks.net/2026/09/29/openai-is-preparing-an-always-on-chatgpt-assistant-called-o-for-the-100-pro-plan/</link></item>
+<item><title>Microsoft Tests Multiple Values per Cell in 21 With New Lists and Arrays - gHacks</title><link>https://www.ghacks.net/2026/09/29/microsoft-tests-multiple-values-per-cell-in-21-with-new-lists-and-arrays/</link></item>
+<item><title>Samsung Rolls Out Stable One UI 9 to the Galaxy S25, Z Fold 7, and Z Flip 7 - gHacks</title><link>https://www.ghacks.net/2026/09/29/samsung-rolls-out-stable-one-ui-9-to-the-galaxy-s25-z-fold-7-and-z-flip-7/</link></item>
+<item><title>The Witcher 3 Remastered Launches September 29 as a Free 45GB Update With Path Tracing and Transmog - gHacks</title><link>https://www.ghacks.net/2026/09/29/the-witcher-3-remastered-launches-september-29-as-a-free-45gb-update-with-path-tracing-and-transmog/</link></item>
+<item><title>Rockstar Reportedly Tells GTA 6 Voice Actors They Cannot Reveal Their Roles Before November 19 - gHacks</title><link>https://www.ghacks.net/2026/09/28/rockstar-reportedly-tells-gta-6-voice-actors-they-cannot-reveal-their-roles-before-november-19/</link></item>
+<item><title>Anthropic Launches Claude Marketplace With More Than 2,000 Connectors and Plugins - gHacks</title><link>https://www.ghacks.net/2026/09/27/anthropic-launches-claude-marketplace-with-more-than-2000-connectors-and-plugins/</link></item>
+<item><title>Opera Now Turns On Its Free Built-In VPN Automatically on Public Wi-Fi Networks - gHacks</title><link>https://www.ghacks.net/2026/09/27/opera-now-turns-on-its-free-built-in-vpn-automatically-on-public-wi-fi-networks/</link></item>
+<item><title>Steam&amp;#39;s Age Verification in Australia Only Accepts Credit Cards, Excluding Half of Consumers - gHacks</title><link>https://www.ghacks.net/2026/09/10/steams-age-verification-in-australia-only-accepts-credit-cards-excluding-half-of-consumers/</link></item>
+<item><title>Manifest V2 Is Dead as Chrome Web Store Permanently Purges Legacy Extensions - gHacks</title><link>https://www.ghacks.net/2026/09/01/manifest-v2-is-dead-as-chrome-web-store-permanently-purges-legacy-extensions/</link></item>
+<item><title>Google Says It Will &amp;quot;Degrade the User Experience for Europeans&amp;quot; to Comply With EU Search Rules - gHacks</title><link>https://www.ghacks.net/2026/09/14/google-says-it-will-degrade-the-user-experience-for-europeans-to-comply-with-eu-search-rules/</link></item>
+<item><title>Microsoft Confirms Windows 11 Updates Cause Black Screens After Sign-In on Some Devices - gHacks</title><link>https://www.ghacks.net/2026/09/27/microsoft-confirms-windows-11-updates-cause-black-screens-after-sign-in-on-some-devices/</link></item>
+<item><title>Uber CEO Says 3,300 Layoffs Will Fund Lower Prices for Customers - gHacks</title><link>https://www.ghacks.net/2026/09/13/uber-ceo-says-3300-layoffs-will-fund-lower-prices-for-customers/</link></item>
+<item><title>Tesla Launches Cybercab Robotaxi Rides in Austin With a 45-Vehicle Fleet - gHacks</title><link>https://www.ghacks.net/2026/09/05/tesla-launches-cybercab-robotaxi-rides-in-austin-with-a-45-vehicle-fleet/</link></item>
+<item><title>Disney’s Dana Walden on Jimmy Kimmel’s Late Night Future: “It’s Challenging” - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/disney-dana-walden-jimmy-kimmel-late-night-future-1236719998/</link></item>
+<item><title>Chase Infiniti to Star in Dylan Clark Horror Movie ‘Portrait of God’ for Lionsgate - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-news/chase-infiniti-dylan-clark-horror-movie-portrait-of-god-1236708008/</link></item>
+<item><title>Fox News and Warner Bros. Trade Barbs Over Chris Harrison’s New Dating Show ‘The Vow’ (Exclusive) - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/business/business-news/warner-bros-fox-news-legal-fight-chris-harrison-dating-show-1236718978/</link></item>
+<item><title>Bradley Cooper to Star in New G.I. Joe Movie for Paramount - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-news/bradley-cooper-g-i-joe-movie-paramount-danny-mcbride-1236720404/</link></item>
+<item><title>‘Big Brother’ Reveals Season 28 Winner: See Who Won the Game (and America’s Favorite Houseguest) - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/big-brother-season-28-winner-america-favorite-houseguest-1236720612/</link></item>
+<item><title>‘Fast &amp; Furious’ TV Series Gets Official Green Light at Peacock - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/news/general-news/fast-furious-tv-show-peacock-series-order-1236720664/</link></item>
+<item><title>Eddie Murphy to Star in First Scripted Series ‘The Chairman’ at Peacock - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/eddie-murphy-star-the-chairman-peacock-1236720659/</link></item>
+<item><title>‘Kill Jackie’ Review: Catherine Zeta-Jones Leads AMC+’s Drab Misfire of a Thriller - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-reviews/kill-jackie-review-catherine-zeta-jones-amc-plus-1236714573/</link></item>
+<item><title>Jamie Lee Curtis to Receive Inaugural Award Inspired by Rob and Michele Reiner at Children’s Institute Gala; John Mayer to Perform - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/lifestyle/lifestyle-news/rob-reiner-jamie-lee-curtis-childrens-institute-john-mayer-1236720576/</link></item>
+<item><title>Ynon Kreiz Gets $31.5 Million Signing Bonus In Five-Year Paramount-Warner Bros. Deal - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/business/business-news/ynon-kreiz-paramount-warner-bros-pay-1236720588/</link></item>
+<item><title>Streaming Ratings: ‘Neagley’ Outmuscles ‘Monster’ and ‘Reacher’ for Top Spot - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/streaming-ratings-sept-14-20-2026-1236720517/</link></item>
+<item><title>Nithya Raman Promises She’ll Be a “Relentless Advocate” for Hollywood - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/news/politics-news/nithya-raman-hollywood-position-karen-bass-polls-1236720525/</link></item>
+<item><title>Google Wins Dismissal of PMC Lawsuit Over AI Search Snippets - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/business/business-news/google-wins-dismissal-of-pmc-lawsuit-over-ai-search-snippets-1236720513/</link></item>
+<item><title>‘Landman’ Ups 4 Actors to Series Regulars as Season 3 Begins Filming - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/landman-season-3-production-start-texas-1236720485/</link></item>
+<item><title>Proceeds From Parke’s New Pink Sweatshirt Support Breast Cancer Patients and Their Families - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/lifestyle/shopping/parke-sweatshirt-breast-cancer-awareness-collection-2026-1236720406/</link></item>
+<item><title>Anonymous Content, Higher Ground to Produce Feature Film Adaptation of ‘Baldwin: A Love Story’ - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-news/anonymous-content-to-produce-feature-film-adaptation-of-baldwin-a-love-story-1236720456/</link></item>
+<item><title>PMK Entertainment Names Erik Bright Executive VP of Content and Strategic Communications - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/news/general-news/pmk-entertainment-erik-bright-content-strategic-communications-1236717284/</link></item>
+<item><title>Naomi Bulochnikov-Paul to Lead Series Comms at Netflix - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/naomi-bulochnikov-paul-new-job-series-pr-lead-netflix-1236718254/</link></item>
+<item><title>The Record-Breaking ‘Celebrity Traitors’ U.K. Is Back for Season 2: Where to Watch Online From the States - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/where-to-watch-celebrity-traitors-uk-season-2-online-2026-1236717306/</link></item>
+<item><title>Nicolas Cage Says the MCU &amp;quot;Is Becoming a Well-Funded and Glorified WWE&amp;quot; - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-news/nicolas-cage-mcu-well-funded-glorified-wwe-1236717966/</link></item>
+<item><title>Belmont Cameli and NHL Phenom Macklin Celebrini Get Together for THR’s Game Recognize Game - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/video/belmont-cameli-macklin-celebrini-game-recognize-game-video/</link></item>
+<item><title>Harry Smith (Will’s Brother) and Former Netflix Executive Siddhi Sundar Team to Launch ‘Creative Executive’… - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/business/digital/harry-will-smith-siddhi-sundar-creative-executive-youtube-1236717699/</link></item>
+<item><title>‘East of Eden’ Review: A Terrifying Florence Pugh Towers Over Zoe Kazan’s Accomplished Netflix Adaptation of… - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-reviews/east-of-eden-review-florence-pugh-netflix-mike-faist-1236717464/</link></item>
+<item><title>‘Carrie’ Review: Mike Flanagan Capably Expands Stephen King’s Horror Classic for Amazon, but Did It Really… - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-reviews/carrie-review-mike-flanagan-amazon-stephen-king-1236717805/</link></item>
+<item><title>Kathleen Kennedy Admits to “a Bit of Relief” in Stepping Down From Lucasfilm After 14 Years - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/business/business-news/kathleen-kennedy-on-leaving-lucasfilm-1236717903/</link></item>
+<item><title>Ben Affleck Used AI “For Lots of Things” in His New Netflix Movie ‘Animals’ - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-news/ben-affleck-ai-netflix-movie-animals-1236717919/</link></item>
+<item><title>Why Is Tom Cruise’s ‘Digger’ Facing Such a Bumpy Box Office Road? - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-news/tom-cruise-digger-box-office-opening-verity-1236717257/</link></item>
+<item><title>Taylor Hanson Signs With WME (Exclusive) - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/music/music-news/taylor-hanson-signs-wme-1236714727/</link></item>
+<item><title>Mr. Belding Was Everyone’s Principal - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-features/mr-belding-americas-principal-dennis-haskins-tribute-1236714337/</link></item>
+<item><title>Toronto: 5 Things the Fest Told Us About the Oscar Race - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-news/5-things-2026-toronto-film-fest-revealed-oscar-race-1236704656/</link></item>
+<item><title>Jimmy Kimmel Might Stick Around, but the End of Late Night TV Is Getting Closer - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/end-of-late-night-tv-nears-kimmel-lorne-michaels-1236700515/</link></item>
+<item><title>Spike Lee, Chance the Rapper and Jenny Slate Sport J.Crew’s Barn Jacket in Starry Anniversary Campaign - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/lifestyle/shopping/j-crew-barn-jacket-40th-anniversary-celebrity-campaign-2026-1236707844/</link></item>
+<item><title>LeBron James, Jack Nicholson Among Essayists in Official Lakers Coffee Table Book - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/lifestyle/shopping/lakers-official-history-book-taschen-2026-release-price-buy-1236708020/</link></item>
+<item><title>Boasting Record-Breaking Sales and a ‘Spider-Man’ Spot, Samsung’s Galaxy Z Fold8 Gets Limited-Time Discount - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/lifestyle/shopping/samsung-galaxy-z-fold-8-buy-spider-man-2026-foldable-phone-1236704175/</link></item>
+<item><title>Lego’s 2026 Advent Calendars Count Star Wars, Disney and Marvel Among Lineup - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/lifestyle/shopping/lego-advent-calendar-2026-star-wars-disney-marvel-city-buy-1236690439/</link></item>
+<item><title>Halsey Unpacks Her New Hollywood Chapter and Betting on Subversive Art With ‘Our Hero, Balthazar’ - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-features/halsey-producing-new-chapter-our-hero-balthazar-interview-1236714676/</link></item>
+<item><title>VMAS: The Night’s Most Talked-About Style - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/lifestyle/style/2026-vmas-nights-most-talked-about-style-1236713059/</link></item>
+<item><title>Dolly Parton Honored by Kacey Musgraves During Tribute Performance at 2026 MTV VMAs - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/music/music-news/dolly-parton-tribute-2026-mtv-vmas-1236713153/</link></item>
+<item><title>Mariel Turner - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/author/mariel-turner/</link></item>
+<item><title>Viral Lesbian Bar Article From Boston Globe Is Piquing Hollywood’s Interest - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/business/business-news/viral-lesbian-bar-article-from-boston-globe-1236710331/</link></item>
+<item><title>Belmont Cameli and NHL Phenom Macklin Celebrini Talk ‘Off Campus,’ Olympic Heartbreak and Handling the Hype - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/business/business-news/off-campus-belmont-cameli-nhl-macklin-celebrini-interview-1236678553/</link></item>
+<item><title>Counsel of Champions: Hollywood’s Top Sports Lawyers - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/lists/top-sports-lawyers/</link></item>
+<item><title>Green tree ants are famous in the tropics - Aeon</title><link>https://aeon.co/videos/green-tree-ants-have-been-successful-for-ages-enter-the-imposters</link></item>
+<item><title>Reason is more than a tool - Aeon</title><link>https://aeon.co/essays/why-real-intelligence-is-something-more-than-optimisation</link></item>
+<item><title>Passportless mess - Aeon</title><link>https://aeon.co/videos/searching-for-a-local-legend-a-filmmaker-stumbles-into-a-tragicomedy</link></item>
+<item><title>Ukraine’s Air Defenses Have No Answer for Russia’s New Jet Drones - IEEE Spectrum</title><link>https://spectrum.ieee.org/jet-powered-shahed-drone</link></item>
+<item><title>Atlas Robot’s New Hand May Outperform Humanlike Designs - IEEE Spectrum</title><link>https://spectrum.ieee.org/robust-robot-hand</link></item>
+<item><title>Can These EEG Headphones Sense When Your Brain Needs a Break? - IEEE Spectrum</title><link>https://spectrum.ieee.org/eeg-headphones-neurable-one</link></item>
+<item><title>Electricity Theft Is Rampant, but Delhi Found a Fix - IEEE Spectrum</title><link>https://spectrum.ieee.org/electricity-theft</link></item>
+<item><title>World’s First Fully Implanted Cochlear Implant Reaches Patients - IEEE Spectrum</title><link>https://spectrum.ieee.org/fully-implantable-cochlear-implant</link></item>
+<item><title>A Brief History of the Bloomberg Terminal - IEEE Spectrum</title><link>https://spectrum.ieee.org/bloomberg-terminal</link></item>
+<item><title>How to Stop AI Agents From Secretly Collaborating - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-agent-security</link></item>
+<item><title>Generative AI Gives Spacecraft the Autonomy Engineers Once Feared - IEEE Spectrum</title><link>https://spectrum.ieee.org/generative-ai-in-space-exploration</link></item>
+<item><title>Tiny Flaws in Glass Fiber Can Help Reveal Undersea Cable Threats - IEEE Spectrum</title><link>https://spectrum.ieee.org/undersea-cables-acoustic-sensing</link></item>
+<item><title>Video Friday: Life’s Better With a Little Robot Goose - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-goose-household-robots</link></item>
 </channel></rss>
