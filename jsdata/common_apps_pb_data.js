@@ -49,11 +49,13 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/js_data_file_common_search.htm?d=../jsdata/words/cn_bullshit_data.js&i=💩&t=CN BS Search&v=cn_bullshit_global","CN BS Search","💩","5","database"],
 ["{{selenium_news}}/html/kleditor.htm","KLEditor","📝","5","txteditor"],
 ["{{selenium_news}}/html/klsearch.htm","KL Search","klsearch512.png","1"],
+["{{selenium_news}}/html/letter_paper.htm","letter paper","✉️","5","share"],
 ["{{selenium_news}}/html/link_game.htm","link game","link_game512.png","5","game"],
 ["{{selenium_news}}/html/long_term_plans.htm","Long Term Plans","⛳ ️","5","PIM"],
 ["{{selenium_news}}/html/lsm.htm","LSM","☁","1"],
 ["{{selenium_news}}/html/maze.htm","maze","🌀","5","game"],
 ["{{selenium_news}}/html/memo.htm","Memo","🧷","5","PIM"],
+["{{selenium_news}}/html/metaprompt_generator.htm","metaprompt generator","🤖","2",""],
 ["{{selenium_news}}/html/mine.htm","Mine","💣","5","game"],
 ["{{selenium_news}}/html/money_plan.htm","Money Plan","💵","5","PIM"],
 ["{{selenium_news}}/html/notepad.htm","notepad","🗐","5","txteditor"],
@@ -104,6 +106,5 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/zj_college_search.htm","ZJ College","💯","5","database|education"],
 ["{{selenium_news}}/html/zj_company.htm","ZJ Company","🏭","5","database"],
 ["{{selenium_news}}/module/pdfjs/web/viewer.html","PDF.js","🔖","5","txtbook"],
-["{{selenium_news}}/html/letter_paper.htm","letter paper","✉️","5","share"],
 
 ];

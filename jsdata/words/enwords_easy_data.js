@@ -2085,5 +2085,8 @@ photobiology
 photobiological
 photobiologic
 photobiologist
+electrophysiological
+sociobiology
+acidly
 
 `.trim().split('\n');

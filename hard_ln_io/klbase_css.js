@@ -134,6 +134,7 @@ function css_root_style_b(pcsize='16',mobilesize='30',cssname=[''],usercss=[],ch
         'body {font-size:1rem; margin:0px; padding:0px;color:'+scheme_global['color']+';background-color:'+scheme_global['background']+';}',
         'p {word-break:normal;word-wrap:normal;font-size:0.85rem;margin:0;margin-bottom:0.2rem;color:'+scheme_global['color']+';}',
         'label {cursor:pointer;}',
+        'code, kbd {background-color:'+scheme_global['button']+';}',
         'p.mini {font-size:0.75rem;margin:0px;padding:1px 0px 1px 0px;}',
         'ol,ul,li {font-size:0.9rem;color:'+scheme_global['color']+';}',
         'ol,ul {padding:0;list-style-position: inside;}',

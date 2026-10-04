@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>🤖 元提示词生成器</title>
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+//-----------------------
+//history
+//0.0.1-20261003 腾讯元宝
+//-----------------------
+klbase_addons_import_js_b([],[],[],['metaprompt_generator_code.js']);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<style>
+body { font-family: sans-serif; max-width: 900px; margin: 2em auto; padding: 0 1em; line-height: 1.7; color: #222; }
+h1 { font-size: 1.6em; }
+.p_desc_mpg { color: #666; }
+fieldset { border: 1px solid #ccc; padding: 1em; margin: 1em 0; }
+legend { font-weight: bold; }
+label { display: block; margin: 0.6em 0 0.2em; }
+input, select, textarea, button { font: inherit; padding: 0.4em; }
+input[type=text], textarea, select { width: 100%; box-sizing: border-box; }
+textarea { height: 5em; }
+.div_chips_mpg span { display: inline-block; border: 1px solid #999; padding: 0.2em 0.6em; margin: 0.2em; cursor: pointer; user-select: none; }
+.div_chips_mpg span:hover { background: #eef; }
+.div_chips_mpg .on { background: #cfe8ff; border-color: #37f; }
+button { margin: 0.5em 0.3em 0 0; padding: 0.5em 1em; }
+pre { background: #f4f4f4; padding: 1em; white-space: pre-wrap; border: 1px solid #ddd; }
+.ul_examples_mpg li { margin: 0.3em 0; color: #06c; cursor: pointer; }
+footer { color: #888; font-size: 0.9em; margin-top: 2em; border-top: 1px solid #ddd; padding-top: 1em; }
+</style>
+</head>
+<body>
+
+<h1>🤖 元提示词生成器</h1>
+<p class="p_desc_mpg">输入一句话需求 → 自动补全角色、约束、输出格式与负面约束，产出可直接使用的规范提示词。</p>
+
+<form onsubmit="return false">
+  <fieldset>
+    <legend>1. 描述需求</legend>
+    <label for="textarea_goal_mpg">我想让 AI 做什么（必填）</label>
+    <textarea id="textarea_goal_mpg" placeholder="例：帮我写一份新产品上线后的用户调研问卷"></textarea>
+
+    <label for="input_domain_mpg">领域 / 场景</label>
+    <input type="text" id="input_domain_mpg" placeholder="例：SaaS 产品、电商运营、编程、学术">
+
+    <label for="input_role_mpg">期望 AI 扮演的角色（留空则自动推断）</label>
+    <input type="text" id="input_role_mpg" placeholder="例：资深用户研究员">
+
+    <label for="input_audience_mpg">目标受众</label>
+    <input type="text" id="input_audience_mpg" placeholder="例：25-40 岁职场人群">
+
+    <label for="select_tone_mpg">语气风格</label>
+    <select id="select_tone_mpg">
+      <option>专业严谨</option>
+      <option>通俗易懂</option>
+      <option>简洁干练</option>
+      <option>生动有趣</option>
+      <option>学术规范</option>
+    </select>
+
+    <label for="select_format_mpg">输出结构</label>
+    <select id="select_format_mpg">
+      <option>分条要点</option>
+      <option>Markdown 报告</option>
+      <option>表格对比</option>
+      <option>步骤清单</option>
+      <option>邮件 / 公文</option>
+      <option>代码</option>
+    </select>
+
+    <label for="select_len_mpg">篇幅</label>
+    <select id="select_len_mpg">
+      <option>精简（200 字内）</option>
+      <option selected>适中（500 字左右）</option>
+      <option>详尽（1000 字以上）</option>
+    </select>
+
+    <label>补充约束（点击添加）</label>
+    <div class="div_chips_mpg" id="div_chips_mpg">
+      <span class="div_chips_mpg" data-v="给出可落地的具体建议，不空谈">要具体建议</span>
+      <span class="div_chips_mpg" data-v="先给结论，再给理由">结论先行</span>
+      <span class="div_chips_mpg" data-v="附带示例或模板">附示例</span>
+      <span class="div_chips_mpg" data-v="标注引用来源与数据出处">标来源</span>
+      <span class="div_chips_mpg" data-v="使用中文回答">中文输出</span>
+    </div>
+
+    <label for="input_extra_mpg">其他约束</label>
+    <input type="text" id="input_extra_mpg" placeholder="例：不超过 3 条、用第一人称">
+  </fieldset>
+
+  <button onclick="render_mpg()">生成提示词</button>
+  <button onclick="reset_mpg()">重置</button>
+  <button onclick="copy_mpg()">复制结果</button>
+</form>
+
+<h2>2. 生成的规范提示词</h2>
+<pre id="pre_out_mpg">（填写上方需求后点击「生成提示词」）</pre>
+
+<h2>3. 试试这些示例</h2>
+<ul class="ul_examples_mpg">
+  <li onclick="ex_mpg(this)">写一份面向跨境电商卖家的 2026 年 Q4 选品策略分析</li>
+  <li onclick="ex_mpg(this)">把这段 Python 爬虫代码改成异步，并解释改了什么</li>
+  <li onclick="ex_mpg(this)">给 5 岁孩子讲清楚为什么天会下雨</li>
+  <li onclick="ex_mpg(this)">为一款冥想 App 写 7 天新手引导文案</li>
+  <li onclick="ex_mpg(this)">审阅这篇论文摘要，指出逻辑漏洞并给出修改建议</li>
+</ul>
+
+<footer>
+  原理：本页本身就是一个「提示词的提示词（Meta Prompt）」的实现。核心是
+  <b>角色 + 任务 + 上下文 + 约束 + 输出格式 + 负面约束</b> 六段式结构，
+  并对用户给出的模糊短句做自动补全与歧义消解。生成过程在浏览器本地完成。
+</footer>
+
+<script>
+document.querySelectorAll('.div_chips_mpg').forEach(function (c){
+    c.onclick = function () { c.classList.toggle('on'); };
+});
+
+document.getElementById('textarea_goal_mpg').addEventListener('keydown', function (e){
+    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)){
+        render_mpg();
+    }
+});
+</script>
+</body>
+</html>

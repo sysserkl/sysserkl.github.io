@@ -364,10 +364,10 @@ function markdown2html_klr2(is_reverse=false){
     var ostatus=document.getElementById('textarea_status');
     var blstr=otextarea.value;
     if (is_reverse){
-        const turndownService = new TurndownService({
-            headingStyle: 'atx' //或 setext - 保留注释
-        });
-  
+        const turndownService = new TurndownService({headingStyle: 'atx'});
+        //或 setext。 HTML 的 <h1> ~ <h6> 标题，转成 Markdown 时用哪种语法。atx（默认，推荐）​ —— 用 # 号。setext​ —— 用"下划线"。 - 保留注释
+        //setext 只有两级，h3–h6 会自动"叛变"成 atx
+        turndownService.use(turndownPluginGfm.gfm);
         const markdown = turndownService.turndown(blstr);
         ostatus.value = markdown;    
     } else {

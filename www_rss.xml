@@ -8,55 +8,272 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Sat, 03 Oct 2026 08:33:04 +0800</lastBuildDate>
-<item><title>OpenAI’s Dot agent is enterprise software that can also order your dinner - The Verge</title><link>https://www.theverge.com/ai-artificial-intelligence/1004096/openai-chatgpt-dots-hands-on-agent</link></item>
-<item><title>If a data center is camouflaged in the woods, will anyone hate it? - The Verge</title><link>https://www.theverge.com/tech/1003681/microsoft-data-centers-ai-environment-biomimicry</link></item>
-<item><title>The People of Utah vs. Kevin O’Leary - The Verge</title><link>https://www.theverge.com/cs/features/993343/stratos-utah-kevin-oleary-data-center-backlash</link></item>
-<item><title>Home Assistant says ‘Big tech ruined the cloud, so we’re out’ - The Verge</title><link>https://www.theverge.com/tech/1003936/home-assistant-says-big-tech-ruined-the-cloud-so-were-out</link></item>
-<item><title>AI hallucinations are making entitled customers even worse - The Verge</title><link>https://www.theverge.com/report/1002963/ai-hallucinations-customer-service-jobs-agents</link></item>
-<item><title>Amazon is launching colorful new Kindles — and a case with physical page-turn buttons - The Verge</title><link>https://www.theverge.com/tech/1002811/amazon-kindle-paperwhite-colorsoft-accessory-refresh</link></item>
-<item><title>HP’s answer to the MacBook Neo is thinner, lighter, and comes with OLED - The Verge</title><link>https://www.theverge.com/gadgets/1003107/hp-omnibook-5-14-intel-wildcat-lake-8gb-macbook-neo-price-specs</link></item>
-<item><title>Bose’s first wired earbuds in 11 years add noise canceling - The Verge</title><link>https://www.theverge.com/tech/1001326/bose-wired-earbuds-noise-canceling-headphones-preorder</link></item>
-<item><title>Vivo’s X Fold 6 accidentally feels like a throwback - The Verge</title><link>https://www.theverge.com/tech/1002680/vivo-x-fold-6-global-release-specs-cameras</link></item>
-<item><title>Can VR glasses save VR? - The Verge</title><link>https://www.theverge.com/tech/1003034/meta-vr-glasses-vs-augmented-reality</link></item>
-<item><title>Potato by air - The Verge</title><link>https://www.theverge.com/report/1002172/potato-by-air-wing-drone-delivery</link></item>
-<item><title>The smart home graveyard is getting crowded - The Verge</title><link>https://www.theverge.com/column/1000778/smart-home-june-oven-graveyard</link></item>
-<item><title>Steam Deck 2: Is AMD Gainsborough the chip Valve’s been waiting for? - The Verge</title><link>https://www.theverge.com/games/1003593/steam-deck-2-is-amd-gainsborough-the-chip-valves-been-waiting-for</link></item>
-<item><title>OpenAI’s new agent is a shot at Meta — but can it compete with free? - The Verge</title><link>https://www.theverge.com/ai-artificial-intelligence/1003399/meta-openai-ai-agents-muse-dots-battle</link></item>
-<item><title>The AI Tamagotchis are coming - The Verge</title><link>https://www.theverge.com/ai-artificial-intelligence/1002779/openai-dots-meta-muse-ai-agents-hardware-devices</link></item>
-<item><title>OpenAI launches Dots, its Muse competitor - The Verge</title><link>https://www.theverge.com/ai-artificial-intelligence/1002033/openai-dots-launch-muse-competitor</link></item>
-<item><title>It’s sinister that Meta’s Muse AI mascot is so cute - The Verge</title><link>https://www.theverge.com/column/999999/optimizer-meta-muse-ai-cute</link></item>
-<item><title>Is this the future of America? - The Verge</title><link>https://www.theverge.com/cs/features/975597/loudoun-county-virginia-data-center-backlash</link></item>
-<item><title>AI and data centers are incredibly unpopular in every poll - The Verge</title><link>https://www.theverge.com/ai-artificial-intelligence/995917/data-center-nyt-midterm-poll-september</link></item>
-<item><title>California tightens rules on AI data center energy and water use - The Verge</title><link>https://www.theverge.com/ai-artificial-intelligence/998453/california-ai-data-center-bills</link></item>
-<item><title>The AI data center e-waste problem is huge — and getting bigger - The Verge</title><link>https://www.theverge.com/ai-artificial-intelligence/996470/ai-data-center-e-waste-ban</link></item>
-<item><title>All roads lead to cable - The Verge</title><link>https://www.theverge.com/column/997843/streamers-cable-fast-channels</link></item>
-<item><title>Meta open sources code to let you make Muse AI gadgets - The Verge</title><link>https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link</link></item>
-<item><title>Netflix is pivoting away from prestige - The Verge</title><link>https://www.theverge.com/streaming/1004323/netflix-david-fincher-shawn-levy-mike-flanagan-duffer-brothers-greta-gerwig</link></item>
-<item><title>export-controlled Nvidia GPUs - The Verge</title><link>https://www.theverge.com/news/840557/nvidia-h200-ai-chips-china-exports-us</link></item>
-<item><title>similar Nvidia smuggling allegations - The Verge</title><link>https://www.theverge.com/news/825510/nvidia-china-smuggling-ai-chips-h200</link></item>
-<item><title>Apple will limit Mac disk access as AI agents ‘substantially’ increase risk - The Verge</title><link>https://www.theverge.com/tech/1004295/apple-limit-mac-disk-access-ai-agents</link></item>
-<item><title>Sling TV drops its one-day cable passes - The Verge</title><link>https://www.theverge.com/streaming/1004300/sling-tv-pass-cable-drops</link></item>
-<item><title>like my ThinkPad - The Verge</title><link>https://www.theverge.com/tech/905946/windows-11-forced-obsolescence-linux-thinkpad</link></item>
-<item><title>Breaking up (with Elon Musk) is hard to do - The Verge</title><link>https://www.theverge.com/tech/1004177/elon-musk-unfollows-shivon-zilis</link></item>
-<item><title>Rivian’s sales pop as the company’s big R2 bet starts to pay off - The Verge</title><link>https://www.theverge.com/transportation/1004127/rivian-q3-2026-production-delivery-r2</link></item>
-<item><title>Beehiiv creators are buzzing about a new price increase - The Verge</title><link>https://www.theverge.com/tech/1004133/beehiiv-price-increase-reactions</link></item>
-<item><title>Nacon’s new PS5 controller can mix audio from your phone and console - The Verge</title><link>https://www.theverge.com/tech/1004053/nacon-sony-playstation-licensed-revolution-5-unlimited-wireless-controller</link></item>
-<item><title>Dots get up in Muse’s business - The Verge</title><link>https://www.theverge.com/podcast/1004059/openai-dots-kindle-homepad-cybercab-vergecast</link></item>
-<item><title>Galaxy S26 phones also got a $100 price hike - The Verge</title><link>https://www.theverge.com/tech/1003328/samsung-s26-price-hikes-us</link></item>
-<item><title>of his children - The Verge</title><link>https://www.theverge.com/2022/7/8/23200141/elon-musk-shivon-zilis-twins-twitter</link></item>
-<item><title>Tesla will now let you drive off mid-charge if there’s an emergency - The Verge</title><link>https://www.theverge.com/transportation/1003967/tesla-charging-breakaway-emergency-shooting</link></item>
-<item><title>Keurig’s new machine uses plastic-free compressed coffee pucks - The Verge</title><link>https://www.theverge.com/tech/1003956/keurig-alta-coffee-machine-altarounds-pucks-appliance-preorder</link></item>
-<item><title>A/B test multiple cuts of the same video - The Verge</title><link>https://www.theverge.com/tech/999140/made-on-youtube-creator-tools-ai-thumbnails-tests</link></item>
-<item><title>Paramount’s Warner Bros. megamerger will just be called Skydance - The Verge</title><link>https://www.theverge.com/entertainment/1004016/paramount-warner-bros-skydance-megamerger-name</link></item>
-<item><title>have had to do themselves - The Verge</title><link>https://www.theverge.com/transportation/900857/in-a-pinch-waymo-relies-on-cops-and-firefighters-to-move-its-robotaxis</link></item>
-<item><title>Tesla’s recovery hits a speed bump - The Verge</title><link>https://www.theverge.com/transportation/1003601/teslas-recovery-hits-a-speed-bump</link></item>
-<item><title>The Pocket Advance nearly perfects my favorite Nintendo handheld - The Verge</title><link>https://www.theverge.com/tech/993521/ayaneo-konkr-pocket-advance-nintendo-game-boy-advance-handheld</link></item>
-<item><title>Star Wars: Galactic Racer is my childhood podracing dream come true - The Verge</title><link>https://www.theverge.com/entertainment/1002887/star-wars-galactic-racer-review</link></item>
-<item><title>Amazon writes scary blog warning communities not to block data centers - The Verge</title><link>https://www.theverge.com/tech/1003929/amazon-ai-data-center-blog-warning</link></item>
-<item><title>AI music maker Suno now generates spoken words - The Verge</title><link>https://www.theverge.com/ai-artificial-intelligence/1003925/suno-speech-ai-voice-feature-beta-availability</link></item>
-<item><title>Google’s verification - The Verge</title><link>https://www.theverge.com/news/765881/google-android-apps-side-loading-developer-verification</link></item>
-<item><title>Apple’s reportedly developing a smart home camera that doesn’t record video - The Verge</title><link>https://www.theverge.com/tech/1003877/apple-security-camera-no-video</link></item>
-<item><title>satellite equipped - The Verge</title><link>https://www.theverge.com/tech/1000015/google-ai-satellite-space-project-suncatcher</link></item>
-<item><title>is part of Google’s Project Suncatcher - The Verge</title><link>https://www.theverge.com/news/813894/google-project-suncatcher-ai-datacenter-satellites</link></item>
+<lastBuildDate>Sun, 04 Oct 2026 08:52:04 +0800</lastBuildDate>
+<item><title>Saudis plan assault on Houthis to break Red Sea chokehold - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2026/10/02/saudis-plan-assault-on-houthis-to-break-red-sea-chokehold/</link></item>
+<item><title>Ukraine war fatigue fuels defense-spending downgrade plan in Italy - Defense News</title><link>https://www.defensenews.com/global/europe/2026/10/02/ukraine-war-fatigue-fuels-defense-spending-downgrade-plan-in-italy/</link></item>
+<item><title>Taiwan’s first two F-16V fighter jets arrive to bolster defenses against China - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/10/02/taiwans-first-two-f-16v-fighter-jets-arrive-to-bolster-defenses-against-china/</link></item>
+<item><title>French Air Force plans loyal wingman flight in 2028 in sovereign AI push - Defense News</title><link>https://www.defensenews.com/global/europe/2026/10/02/french-air-force-plans-loyal-wingman-flight-in-2028-in-sovereign-ai-push/</link></item>
+<item><title>US leaders send mixed messages to Indo-Pacific nations - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/10/02/us-leaders-send-mixed-messages-to-indo-pacific-nations/</link></item>
+<item><title>Color gradients that are accessible and perceptually steady - FlowingData</title><link>https://flowingdata.com/2026/10/02/color-gradients-that-are-accessible-and-perceptually-steady/</link></item>
+<item><title>Extract color palettes from images - FlowingData</title><link>https://flowingdata.com/2026/10/02/extract-color-palettes-from-images/</link></item>
+<item><title>Introducing Team Authorizations - Heroku Blog</title><link>https://www.heroku.com/blog/introducing-team-authorizations/</link></item>
+<item><title>OpenAI connects the Dots - Platformer</title><link>https://www.platformer.news/openai-dots-agents-devday-2026/</link></item>
+<item><title>Following: OpenAI taps the brakes - Platformer</title><link>https://www.platformer.news/open-ai-model-release-canceled/</link></item>
+<item><title>Can Muse make us forget the metaverse? - Platformer</title><link>https://www.platformer.news/meta-connect-2026-muse-vr-glasses/</link></item>
+<item><title>Muse is having a moment - Platformer</title><link>https://www.platformer.news/meta-muse-consumer-agents/</link></item>
+<item><title>What was Hard Fork? - Platformer</title><link>https://www.platformer.news/hard-fork-machine-gods/</link></item>
+<item><title>Following: The government doesn&amp;#39;t want to regulate AI - Platformer</title><link>https://www.platformer.news/trump-johnson-ai-safety-regulation/</link></item>
+<item><title>The AI  safety vibe shift - Platformer</title><link>https://www.platformer.news/ai-safety-vibe-shift-coxon-anthropic/</link></item>
+<item><title>The AI warnings are coming from inside the lab - Platformer</title><link>https://www.platformer.news/openai-astra-warning-alignment-monitoring-pachocki/</link></item>
+<item><title>Google gets away with it - Platformer</title><link>https://www.platformer.news/google-ad-tech-antitrust-futility/</link></item>
+<item><title>The Hugging Face attack was worse than we thought - Platformer</title><link>https://www.platformer.news/openai-huggingface-metr-report-slowdown/</link></item>
+<item><title>How AI agents &amp;quot;radicalized&amp;quot; a top Meta exec into quitting her job - Platformer</title><link>https://www.platformer.news/clara-shih-new-work-dear-cc-interview-meta-salesforce/</link></item>
+<item><title>Meta settles with the states over child safety failures - Platformer</title><link>https://www.platformer.news/meta-child-safety-settlement-instagram-facebook-youtube-tiktok/</link></item>
+<item><title>The website that created an AI clone of its editor in chief - Platformer</title><link>https://www.platformer.news/every-dan-shipper-interview-ai-writing/</link></item>
+<item><title>An LLM wiki changed how I work - Platformer</title><link>https://www.platformer.news/karpathy-llm-wiki-journalism-productivity/</link></item>
+<item><title>Town&amp;#39;s CEO on the self-organizing company - Platformer</title><link>https://www.platformer.news/town-interview-jean-denis-greze-assistants/</link></item>
+<item><title>Adriana Lima Owns Victoria’s Secret’s Icon Shoppe - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/adriana-lima-victorias-secret-icon-shoppe/</link></item>
+<item><title>Ariana Grande’s r.e.m. Beauty Holiday Look Is a Ballet Dream - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/ariana-grande-rem-beauty-holiday-2026/</link></item>
+<item><title>Zara’s Re{form} by John Galliano Is Fashion at Full Volume - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/zara-john-galliano-collaboration/</link></item>
+<item><title>PinkPantheress Brings Cool-Girl Energy for Coach Fall 2026 - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/pinkpantheress-coach-fall-2026-campaign/</link></item>
+<item><title>Victoria Beckham Goes Full Glam for Fall 2026 Eyewear - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/victoria-beckham-eyewear-fall-2026/</link></item>
+<item><title>Vince Fall 2026 Makes Layering Seriously Chic - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/vince-fall-2026-campaign/</link></item>
+<item><title>Kate Moss Takes Hunter Boots to the Countryside for Fall - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/kate-moss-hunter-fall-2026-campaign/</link></item>
+<item><title>Zara Gets Cinematic With Luca Guadagnino - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/zara-luca-guadagnino-collab/</link></item>
+<item><title>Cartier Tank to Rolex Datejust: Classic Dress Watches for Women - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/classic-dress-watches/</link></item>
+<item><title>Birkenstock x Etro Is the Boho Shoe Collab to Know - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/etro-birkenstock-collaboration/</link></item>
+<item><title>Massimo Dutti Goes Into the Wild for Fall - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/massimo-dutti-untamed-fall-2026/</link></item>
+<item><title>Life on a hair trigger - Aeon</title><link>https://aeon.co/essays/early-violence-is-a-bad-teacher-but-the-mind-can-learn-anew</link></item>
+<item><title>I got targeted: Trying to get your credentials via a git post-checkout hook - Lobsters</title><link>https://frankwiles.com/posts/i-got-targeted/</link></item>
+<item><title>The Era of Software Quality, or the Era of Ostriches? - Lobsters</title><link>https://blogs.gnome.org/mcatanzaro/2026/10/02/the-era-of-software-quality-or-the-era-of-ostriches/</link></item>
+<item><title>Why don’t more developers &amp;quot;use the platform&amp;quot;? - Lobsters</title><link>https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/</link></item>
+<item><title>Zig 0.17.0 Release Notes - Lobsters</title><link>https://ziglang.org/download/0.17.0/release-notes.html</link></item>
+<item><title>How to Hack Time, With C2PA - Lobsters</title><link>https://www.da.vidbuchanan.co.uk/blog/hacking-time.html</link></item>
+<item><title>System-level ad-blocking in Android - Lobsters</title><link>https://kevinboone.me/adblock.html</link></item>
+<item><title>Two-Stack Sliding-Window Aggregation - Lobsters</title><link>https://orlp.net/blog/two-stack-sliding-window-aggregation/</link></item>
+<item><title>An Update on Orion for Linux and Windows - Lobsters</title><link>https://blog.kagi.com/update-orion-linux-windows</link></item>
+<item><title>Lobsters Interview with Sjamaan - Lobsters</title><link>https://alexalejandre.com/interviews/peter-bex/</link></item>
+<item><title>gVisor is being donated to CNCF - Lobsters</title><link>https://gvisor.dev/blog/2026/10/02/gvisor-cncf/</link></item>
+<item><title>Rust, In Sickness &amp; In Health - Lobsters</title><link>https://www.youtube.com/watch?v=3kbPyuAtk7g</link></item>
+<item><title>Rust for CPython (Python Language Summit 2026) - Lobsters</title><link>https://blog.python.org/2026/09/language-summit-2026-rust-for-cpython/</link></item>
+<item><title>Actual RFC1149 packet being auctioned - Lobsters</title><link>https://onlineonly.christies.com/s/fine-printed-books-manuscripts-science/carrier-pigeon-internet-protocol-150/325216</link></item>
+<item><title>The Four Horsemen of Agentic Coding - Lobsters</title><link>https://distantprovince.substack.com/p/the-four-horsemen-of-agentic-coding</link></item>
+<item><title>Customization: Optimizing Compiler Technology for SELF, a Dynamically-Typed Object-Oriented Programming Language (1989) - Lobsters</title><link>https://dl.acm.org/doi/epdf/10.1145/74818.74831</link></item>
+<item><title>Why I recommend Renovate over any other dependency update tools (2024) - Lobsters</title><link>https://www.jvt.me/posts/2024/04/12/use-renovate/</link></item>
+<item><title>Writing the Cyclone Scheme Compiler (2017) - Lobsters</title><link>https://justinethier.github.io/cyclone/docs/Writing-the-Cyclone-Scheme-Compiler-Revised-2017</link></item>
+<item><title>Security in the LLM Age - Lobsters</title><link>https://www.youtube.com/watch?v=NnV_cWeoo5Q</link></item>
+<item><title>Problems and solutions to the modern desktop (Make tmux the OS) - Lobsters</title><link>https://matduggan.com/what-does-my-dream-os-ui-look-like/</link></item>
+<item><title>The Era of Programming Languages Exploration is upon Us - Lobsters</title><link>https://kirancodes.me/posts/log-end-of-pl.html</link></item>
+<item><title>Updates to Full Disk Access in macOS - Lobsters</title><link>https://developer.apple.com/news/?id=p6zjojqw</link></item>
+<item><title>The forgetful CPU (Linux on M4) - Lobsters</title><link>https://yuka.dev/blog-2026-10-02-linux-m4.html</link></item>
+<item><title>BSides Orlando 2026 Badge - Lobsters</title><link>https://github.com/bsidesorlando/2026-badge</link></item>
+<item><title>Keeping Futhark off the GPU - Lobsters</title><link>https://futhark-lang.org/blog/2026-10-02-cpu_function.html</link></item>
+<item><title>The hidden design compromises of Docker layers - Lobsters</title><link>https://loige.co/hidden-design-compromises-of-docker-layers/</link></item>
+<item><title>Surveillance Company Tells Cops It Wants to Add Facial Recognition to Flock Cameras - Slashdot</title><link>https://yro.slashdot.org/story/26/10/03/0545254/surveillance-company-tells-cops-it-wants-to-add-facial-recognition-to-flock-cameras</link></item>
+<item><title>As &amp;#39;Falcon Heavy&amp;#39; Launches, SpaceX Plans Dragon and Falcon 9 Phase Out As Starship Ramps Up - Slashdot</title><link>https://science.slashdot.org/story/26/10/03/2317251/as-falcon-heavy-launches-spacex-plans-dragon-and-falcon-9-phase-out-as-starship-ramps-up</link></item>
+<item><title>President Trump Doxxes Senator&amp;#39;s Cellphone in Push For Permanent Daylight Saving Time - Slashdot</title><link>https://yro.slashdot.org/story/26/10/03/2211236/president-trump-doxxes-senators-cellphone-in-push-for-permanent-daylight-saving-time</link></item>
+<item><title>Steam On Linux - Down To 3.05% For September? - Slashdot</title><link>https://linux.slashdot.org/story/26/10/03/2056206/steam-on-linux---down-to-305-for-september</link></item>
+<item><title>Researcher, Dartmouth Professor and Provost Face Accusations of Secretly Using AI - Slashdot</title><link>https://science.slashdot.org/story/26/10/03/1948230/researcher-dartmouth-professor-and-provost-face-accusations-of-secretly-using-ai</link></item>
+<item><title>California&amp;#39;s Governor Wants Worker Protections from AI. But FSF Thinks Kill Switches are &amp;#39;Dangerous Precedent&amp;#39; - Slashdot</title><link>https://news.slashdot.org/story/26/10/03/077236/californias-governor-wants-worker-protections-from-ai-but-fsf-thinks-kill-switches-are-dangerous-precedent</link></item>
+<item><title>Someone Got Doom In an SQL Database - Slashdot</title><link>https://developers.slashdot.org/story/26/10/03/0125235/someone-got-doom-in-an-sql-database</link></item>
+<item><title>US Judge Rules Flock Search Was Mass Surveillance.  Bernie Sanders Proposes &amp;#39;Ban Flock Act&amp;#39; - Slashdot</title><link>https://yro.slashdot.org/story/26/10/03/0532218/us-judge-rules-flock-search-was-mass-surveillance-bernie-sanders-proposes-ban-flock-act</link></item>
+<item><title>1 In 8 Cancer Cases Worldwide Are Due to Infections - Slashdot</title><link>https://science.slashdot.org/story/26/10/03/0120218/1-in-8-cancer-cases-worldwide-are-due-to-infections</link></item>
+<item><title>Google Tests AI Data Center In Space - Slashdot</title><link>https://science.slashdot.org/story/26/10/03/0113206/google-tests-ai-data-center-in-space</link></item>
+<item><title>New Mexico Wants Meta To Pay $40 Billion In Penalties For Cambridge Analytica Scandal - Slashdot</title><link>https://yro.slashdot.org/story/26/10/02/2152218/new-mexico-wants-meta-to-pay-40-billion-in-penalties-for-cambridge-analytica-scandal</link></item>
+<item><title>AI Has Finally Learned To Play Stratego - Slashdot</title><link>https://games.slashdot.org/story/26/10/02/2129251/ai-has-finally-learned-to-play-stratego</link></item>
+<item><title>The University of Washington Is Moving a Graduate Program to Microsoft&amp;#39;s Campus - Slashdot</title><link>https://news.slashdot.org/story/26/10/02/215238/the-university-of-washington-is-moving-a-graduate-program-to-microsofts-campus</link></item>
+<item><title>Apple Tightens macOS &amp;#39;Full Disk Access&amp;#39; Controls As AI Agents &amp;#39;Substantially&amp;#39; Increase Risk - Slashdot</title><link>https://hardware.slashdot.org/story/26/10/02/2056223/apple-tightens-macos-full-disk-access-controls-as-ai-agents-substantially-increase-risk</link></item>
+<item><title>Paramount and Warner Bros. Discovery to Become Skydance - Slashdot</title><link>https://entertainment.slashdot.org/story/26/10/02/1836216/paramount-and-warner-bros-discovery-to-become-skydance</link></item>
+<item><title>she rocks that dress (Lily James) - Listal</title><link>https://www.listal.com/list/she-rocks-that-dress-9954</link></item>
+<item><title>Phoebe Tonkin -  Harper&amp;#39;s Bazaar, July 2019 - Listal</title><link>https://www.listal.com/list/phoebe-tonkin-summer-2019</link></item>
+<item><title>Kochany duet - Listal</title><link>https://www.listal.com/list/kochany-duet</link></item>
+<item><title>The Evolution of Annika Hansen - Listal</title><link>https://www.listal.com/list/evolution-annika-hansen</link></item>
+<item><title>40 Albums That Built Black Music — The Complete CT - Listal</title><link>https://www.listal.com/list/40-albums-built-black-music</link></item>
+<item><title>The golden age of Turkish cinema - Yeşilçam - Listal</title><link>https://www.listal.com/list/our-yesilcam</link></item>
+<item><title>Art &amp; Design...Zodiac Month Rank - Listal</title><link>https://www.listal.com/list/zodiac-rank</link></item>
+<item><title>Where is Gotham City? - Listal</title><link>https://www.listal.com/list/where-is-gotham-city</link></item>
+<item><title>Matalaan Leikattu - Listal</title><link>https://www.listal.com/list/matalaan-leikattu</link></item>
+<item><title>British Songbirds - Listal</title><link>https://www.listal.com/list/british-songbirds</link></item>
+<item><title>anime I would unironically recommend - Listal</title><link>https://www.listal.com/list/seen-it-iveseenenough</link></item>
+<item><title>India Is In Vogue (भारत के प्रचलन में है) - Listal</title><link>https://www.listal.com/list/india-is-in-vogue</link></item>
+<item><title>Favorite images n°3 - Listal</title><link>https://www.listal.com/list/favorite-images-n3</link></item>
+<item><title>Beautiful-Faced Actresses #2 - Listal</title><link>https://www.listal.com/list/beautifulfaced-actresses-2</link></item>
+<item><title>Amiga♥Tolerante - Listal</title><link>https://www.listal.com/list/amigatolerante</link></item>
+<item><title>Coffee Break? - Listal</title><link>https://www.listal.com/list/coffee-break-montpel</link></item>
+<item><title>Best Dutch Models - Listal</title><link>https://www.listal.com/list/best-dutch-models</link></item>
+<item><title>Thoughtful #6 - Listal</title><link>https://www.listal.com/list/thoughtful-6</link></item>
+<item><title>Actresses ~ Bicycles - Listal</title><link>https://www.listal.com/list/1-bicycles</link></item>
+<item><title>french women - Listal</title><link>https://www.listal.com/list/french-women-ginofavara</link></item>
+<item><title>Spillerinner født på 90-tallet - Listal</title><link>https://www.listal.com/list/spillerinner-fodt-pa-90tallet</link></item>
+<item><title>Sangere på 90-tallet - Listal</title><link>https://www.listal.com/list/sangere-pa-90tallet</link></item>
+<item><title>Glimlach nr.9 - Listal</title><link>https://www.listal.com/list/glimlach-9</link></item>
+<item><title>Dames in het wit #08 - Listal</title><link>https://www.listal.com/list/dames-in-het-wit-08</link></item>
+<item><title>Prachtige anatomie - Listal</title><link>https://www.listal.com/list/prachtige-anatomie</link></item>
+<item><title>Women in Listal: - Listal</title><link>https://www.listal.com/list/female-brains-rather-than-butts</link></item>
+<item><title>Bus Scenes in Movies Part II - Listal</title><link>https://www.listal.com/list/bus-scenes-ii-movies</link></item>
+<item><title>Backdrop Positano, Italy - Listal</title><link>https://www.listal.com/list/picture-spot-montalfino-italy</link></item>
+<item><title>Brace for Impact: Moments Caught Just Before Disaster - theCHIVE</title><link>https://thechive.com/funny/brace-for-impact-moments-caught-just-before-disaster/?utm_postid=5311416&amp;utm_editor=5311416_luka</link></item>
+<item><title>DANK Memes Keep The Internet STANK - theCHIVE</title><link>https://thechive.com/funny/dank-memes-keep-the-internet-stank/?utm_postid=5310496&amp;utm_editor=5310496_hendy</link></item>
+<item><title>Inspirational Memes to Fill You With Whimsy - theCHIVE</title><link>https://thechive.com/funny/whimsical-inspirational-memes/?utm_postid=5307745&amp;utm_editor=5307745_aaron</link></item>
+<item><title>Awful Taste, But Great Execution! - theCHIVE</title><link>https://thechive.com/funny/awful-taste-but-great-execution/?utm_postid=5311365&amp;utm_editor=5311365_luka</link></item>
+<item><title>I Like A Bit Of Hunnies &amp; Funnies - theCHIVE</title><link>https://thechive.com/funny/i-like-a-bit-of-hunnies-funnies/?utm_postid=5310468&amp;utm_editor=5310468_hendy</link></item>
+<item><title>Tulip Mania: The Dutch 17th Century Bitcoin - theCHIVE</title><link>https://thechive.com/humanity/history-random/crazy-dutch-tulip-mania/?utm_postid=5305367&amp;utm_editor=5305367_aaron</link></item>
+<item><title>Put Me In, Coach. It’s Cat Saturday - theCHIVE</title><link>https://thechive.com/funny/cat-saturday-october-3-2026/?utm_postid=5311079&amp;utm_editor=5311079_alex</link></item>
+<item><title>These Internet Mysteries Got Me Hooked! - theCHIVE</title><link>https://thechive.com/humanity/facts-random/mysteries-stories/?utm_postid=5310896&amp;utm_editor=5310896_jake</link></item>
+<item><title>If You Have Bad News, At Least Make It Kinda Funny - theCHIVE</title><link>https://thechive.com/funny/bad-news-good-news-memes/?utm_postid=5309694&amp;utm_editor=5309694_jake</link></item>
+<item><title>BEER-a-FULL memes b/c it’s Friday - theCHIVE</title><link>https://thechive.com/funny/beer-a-full-memes-b-c-its-friday/?utm_postid=5310954&amp;utm_editor=5310954_rick</link></item>
+<item><title>Fun Household Items That Make Too Much Sense - theCHIVE</title><link>https://thechive.com/humanity/life-hacks-random/household-items-lifestyle-life-hacks-thechive/?utm_postid=5310895&amp;utm_editor=5310895_ryder</link></item>
+<item><title>Long Live the BlackBerry - theCHIVE</title><link>https://thechive.com/uncategorized/blackberry-phone-facts/?utm_postid=5310540&amp;utm_editor=5310540_ty</link></item>
+<item><title>Space, Man. How Can You Even Comprehend It? - theCHIVE</title><link>https://thechive.com/humanity/beautiful/how-can-you-comprehend-space/?utm_postid=5307994&amp;utm_editor=5307994_aaron</link></item>
+<item><title>Let’s Kick Off the Weekend With Some Wholesome, Ya? - theCHIVE</title><link>https://thechive.com/uncategorized/wholesome-friday-things/?utm_postid=5310814&amp;utm_editor=5310814_ty</link></item>
+<item><title>Deep-Sea WTFs - theCHIVE</title><link>https://thechive.com/uncategorized/deep-sea-wtfs/?utm_postid=5305781&amp;utm_editor=5305781_melissa</link></item>
+<item><title>Unusual S*x Advice As Shared By The Internet - theCHIVE</title><link>https://thechive.com/lifestyle/unusual-sx-advice-as-shared-by-the-internet/?utm_postid=5310107&amp;utm_editor=5310107_hendy</link></item>
+<item><title>Who Named These Cars? - theCHIVE</title><link>https://thechive.com/funny/car-names-cars/?utm_postid=5309549&amp;utm_editor=5309549_alex</link></item>
+<item><title>Random Memes I Refuse to Delete From My Computer (Part 35) - theCHIVE</title><link>https://thechive.com/funny/random-memes-refuse-to-delete-part-35/?utm_postid=5310401&amp;utm_editor=5310401_ty</link></item>
+<item><title>Your Favorite Childhood Cartoons Have Some Explaining To Do - theCHIVE</title><link>https://thechive.com/humanity/nostalgia/cartoons-have-explaining-to-do/?utm_postid=5304673&amp;utm_editor=5304673_melissa</link></item>
+<item><title>We Gotta Abolish Hostile Architecture - theCHIVE</title><link>https://thechive.com/funny/abolish-hostile-architecture/?utm_postid=5309052&amp;utm_editor=5309052_aaron</link></item>
+<item><title>October? I Hardly Know Her… - theCHIVE</title><link>https://thechive.com/funny/october-i-hardly-know-her/?utm_postid=5310025&amp;utm_editor=5310025_hendy</link></item>
+<item><title>Actors With Very Punchable Faces - theCHIVE</title><link>https://thechive.com/entertainment/celebrity/actors-with-most-punchable-faces/?utm_postid=5310286&amp;utm_editor=5310286_ty</link></item>
+<item><title>Before And After Cleaning Pics To Help De-clutter Your Mind - theCHIVE</title><link>https://thechive.com/humanity/inspirational/before-and-after-cleaning-pics-to-help-de-clutter-your-mind/?utm_postid=5310029&amp;utm_editor=5310029_luka</link></item>
+<item><title>Don’t Dead, Open Inside FAILS - theCHIVE</title><link>https://thechive.com/funny/dont-dead-open-inside-fails/?utm_postid=5307634&amp;utm_editor=5307634_aaron</link></item>
+<item><title>17 Facts That Are Both Useless AND Random! - theCHIVE</title><link>https://thechive.com/humanity/facts-random/17-facts-that-are-both-useless-and-random/?utm_postid=5309809&amp;utm_editor=5309809_hendy</link></item>
+<item><title>Expect The Unexpected - theCHIVE</title><link>https://thechive.com/funny/expect-unexpected-fails-memes-thechive/?utm_postid=5309457&amp;utm_editor=5309457_ryder</link></item>
+<item><title>This One’s For The LOTR Fans - theCHIVE</title><link>https://thechive.com/lifestyle/this-ones-for-the-lotr-fans/?utm_postid=5309318&amp;utm_editor=5309318_hendy</link></item>
+<item><title>Kids Are Chaos Incarnate - theCHIVE</title><link>https://thechive.com/funny/kids-chaos-funny/?utm_postid=5305410&amp;utm_editor=5305410_spencer</link></item>
+<item><title>Ferocious Foliage - theCHIVE</title><link>https://thechive.com/funny/i-do-what-i-want/ferocious-folliage/?utm_postid=5309617&amp;utm_editor=5309617_melissa</link></item>
+<item><title>Shrinkflation Is Real and It’s Getting Out of Hand - theCHIVE</title><link>https://thechive.com/humanity/adulting/shrinkflation-is-real-and-its-getting-out-of-hand/?utm_postid=5309994&amp;utm_editor=5309994_luka</link></item>
+<item><title>Unintentional Creepy Is Creepier Than Regular Creepy - theCHIVE</title><link>https://thechive.com/lifestyle/creepy/unintentional-creepy/?utm_postid=5309635&amp;utm_editor=5309635_jake</link></item>
+<item><title>Forget Smartphones… Let’s Go Back to NOVELTY LANDLINES - theCHIVE</title><link>https://thechive.com/humanity/nostalgia/retro-novelty-landline-phones/?utm_postid=5309952&amp;utm_editor=5309952_ty</link></item>
+<item><title>Bank Robber Fashion Trends From the 70s- 90s - theCHIVE</title><link>https://thechive.com/humanity/interesting-random/bank-robber-fashion-trends-thechive/?utm_postid=5309425&amp;utm_editor=5309425_ryder</link></item>
+<item><title>41 Photos, One Word: NOPE! - theCHIVE</title><link>https://thechive.com/funny/25-photos-one-word-nope/?utm_postid=5309884&amp;utm_editor=5309884_hendy</link></item>
+<item><title>Memes see the pitch…BooooM… “NAILed IT” - theCHIVE</title><link>https://thechive.com/funny/memes-see-the-pitchboooom-nailed-it/?utm_postid=5309825&amp;utm_editor=5309825_rick</link></item>
+<item><title>Taco Bell Is Love, Taco Bell Is Life - theCHIVE</title><link>https://thechive.com/funny/meme/taco-bell-memes/?utm_postid=5309724&amp;utm_editor=5309724_jake</link></item>
+<item><title>How Much Does A Voice Cost? - theCHIVE</title><link>https://thechive.com/chive-charities/how-much-does-a-voice-cost/?utm_postid=5309933&amp;utm_editor=5309933_brittany</link></item>
+<item><title>Harvard at 11, Dead at 46: The Sad Story of the World’s Smartest Person - theCHIVE</title><link>https://thechive.com/humanity/history-random/william-james-sidis-smartest-person-ever/?utm_postid=5309658&amp;utm_editor=5309658_ty</link></item>
+<item><title>Stand-Up Jokes the Internet Never Wants to Forget - theCHIVE</title><link>https://thechive.com/funny/best-stand-up-comedian-jokes/?utm_postid=5309575&amp;utm_editor=5309575_ty</link></item>
+<item><title>WTF Wednesday Keeps The WTF Alive! - theCHIVE</title><link>https://thechive.com/funny/wtf-wednesday-keeps-the-wtf-alive/?utm_postid=5309211&amp;utm_editor=5309211_hendy</link></item>
+<item><title>Everyday Objects With Features You Never Knew Had a Purpose - theCHIVE</title><link>https://thechive.com/humanity/interesting-random/everyday-objects-features/?utm_postid=5308842&amp;utm_editor=5308842_alex</link></item>
+<item><title>failed to do what they were supposed to do - Slashdot</title><link>https://news.slashdot.org/story/17/09/24/2327228/chicago-school-official-us-it-jobs-offshored-because-we-werent-making-our-own-coders</link></item>
+<item><title>20% of Swiss Glaciers Lost In Five Years - Slashdot</title><link>https://news.slashdot.org/story/26/10/02/0220226/20-of-swiss-glaciers-lost-in-five-years?sbsrc=md</link></item>
+<item><title>Used Processor Leads To Game Ban - Slashdot</title><link>https://hardware.slashdot.org/story/26/10/02/1750242/used-processor-leads-to-game-ban?sbsrc=md</link></item>
+<item><title>Social Media Harms Democracy By Spreading Rumors, Survey Shows - Slashdot</title><link>https://tech.slashdot.org/story/26/10/02/0632243/social-media-harms-democracy-by-spreading-rumors-survey-shows?sbsrc=md</link></item>
+<item><title>California Rushes To Prepare For Massive &amp;#39;Kelvin&amp;#39; Wave, Predicted Sea Level Rise - Slashdot</title><link>https://news.slashdot.org/story/26/10/01/2159252/california-rushes-to-prepare-for-massive-kelvin-wave-predicted-sea-level-rise?sbsrc=md</link></item>
+<item><title>Why Do We Say “Steal Someone’s Thunder”? - Mental Floss</title><link>https://www.mentalfloss.com/language/why-do-we-say-steal-someones-thunder?utm_source=RSS</link></item>
+<item><title>&amp;#39;East of Eden&amp;#39; Was an Instant Bestseller in 1952—But Critics Were Divided for These Reasons - Mental Floss</title><link>https://www.mentalfloss.com/literature/books/east-of-eden-instant-bestseller-1952-critics-divided-these-reasons?utm_source=RSS</link></item>
+<item><title>The Real-Life Connecticut Fall Trip That Gave Us &amp;#39;Gilmore Girls&amp;#39; - Mental Floss</title><link>https://www.mentalfloss.com/geography/wanderlust/connecticut-trip-inspired-gilmore-girls?utm_source=RSS</link></item>
+<item><title>What Was Halloween Like 100 Years Ago? - Mental Floss</title><link>https://www.mentalfloss.com/holidays/halloween/what-halloween-like-100-years-ago?utm_source=RSS</link></item>
+<item><title>The Lost BBC Horror Anthology Pulled From the Air For Being &amp;quot;Too Scary&amp;quot; - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/tv/lost-bbc-anthology-late-night-horror?utm_source=RSS</link></item>
+<item><title>The Best Cities in America for Family Fall Activities, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/geography/cities/best-cities-america-family-fall-activities-ranked?utm_source=RSS</link></item>
+<item><title>7 Meals That Survived Famines, Wars, and Empires - Mental Floss</title><link>https://www.mentalfloss.com/food/meals-that-survived-wars-familes-empires?utm_source=RSS</link></item>
+<item><title>Edgar Allan Poe&amp;#39;s Most Unsettling Opening Lines that Send Chills Down Our Spines - Mental Floss</title><link>https://www.mentalfloss.com/literature/poetry/edgar-allan-poe-most-unsettling-opening-lines-send-chills-down-our-spines?utm_source=RSS</link></item>
+<item><title>The Most Popular Band the Year You Were Born - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/most-popular-band-year-you-were-born?utm_source=RSS</link></item>
+<item><title>The States That Produce the Most Apples, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/geography/states/states-produce-most-apples-ranked?utm_source=RSS</link></item>
+<item><title>20 Worst Discontinued Fast Food Items We Can&amp;#39;t Believe Were Served - Mental Floss</title><link>https://www.mentalfloss.com/food/worst-discontinued-fast-food-items?utm_source=RSS</link></item>
+<item><title>6 Groovy Facts About The Beatles’ ‘Rubber Soul’ Album - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/facts-about-beatles-rubber-soul?utm_source=RSS</link></item>
+<item><title>The Strange Encounter With a Carnival Magician That Inspired Ray Bradbury to Write - Mental Floss</title><link>https://www.mentalfloss.com/literature/authors/carnival-magician-that-inspired-ray-bradbury?utm_source=RSS</link></item>
+<item><title>The Real-Life Censorship Battle That Helped Create &amp;#39;The Twilight Zone&amp;#39; - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/tv/real-life-censorship-battle-helped-create-twilight-zone?utm_source=RSS</link></item>
+<item><title>John Steinbeck&amp;#39;s Favorite John Steinbeck Novel Was Also His Most Personal - Mental Floss</title><link>https://www.mentalfloss.com/literature/books/john-steinbeck-favorite-novel-most-personal?utm_source=RSS</link></item>
+<item><title>10 Best &amp;#39;Gilmore Girls&amp;#39; Episodes to Rewatch for a Cozy Night In - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/tv/best-gilmore-girls-episodes-rewatch-cozy-night-in?utm_source=RSS</link></item>
+<item><title>The Most Popular Halloween Candy the Year You Were Born - Mental Floss</title><link>https://www.mentalfloss.com/food/candy/most-popular-halloween-candy-year-born?utm_source=RSS</link></item>
+<item><title>20 Things You Might Not Know About ‘The Shawshank Redemption’ - Mental Floss</title><link>https://www.mentalfloss.com/article/57589/20-things-you-might-not-know-shawshank-redemption?utm_source=RSS</link></item>
+<item><title>Why We Call It the &amp;quot;Butterfly Effect&amp;quot;—and What You Might Be Getting Wrong - Mental Floss</title><link>https://www.mentalfloss.com/language/why-we-call-it-butterfly-effect?utm_source=RSS</link></item>
+<item><title>The Controversial Meaning of &amp;#39;Timshel,&amp;#39; the Word at the Core of &amp;#39;East of Eden&amp;#39; - Mental Floss</title><link>https://www.mentalfloss.com/language/words/timshel-east-of-eden-meaning?utm_source=RSS</link></item>
+<item><title>Even Stephen King Gets Scared: His Biggest Fears and the Books That Terrified Him - Mental Floss</title><link>https://www.mentalfloss.com/literature/authors/stephen-king-scared-biggest-fears-books-terrified-him?utm_source=RSS</link></item>
+<item><title>The Best U.S. Cities for Vegans and Vegetarians, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/geography/cities/best-cities-vegans-vegetarians-ranked?utm_source=RSS</link></item>
+<item><title>200 Truth or Dare Ideas For Revealing and Hilarious Game Nights - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/truth-or-dare-question-ideas?utm_source=RSS</link></item>
+<item><title>Why &amp;#39;Blue’s Clues&amp;#39; Showed Kids the Same Episode 5 Days in a Row - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/tv/why-blues-clues-repeated-same-episode-five-days?utm_source=RSS</link></item>
+<item><title>Jimmy Carter’s Favorite President and the Reason He Admired Him - Mental Floss</title><link>https://www.mentalfloss.com/history/presidents/jimmy-carter-favorite-president-reason-he-admired-him?utm_source=RSS</link></item>
+<item><title>When Will Your State See Its First Snow in 2026? This Map Shows When to Expect It - Mental Floss</title><link>https://www.mentalfloss.com/science/weather/when-state-see-first-snow-2026-map-shows-when-expect?utm_source=RSS</link></item>
+<item><title>The States That Produce the Most Pumpkins, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/geography/states/most-pumpkin-producing-states-ranked?utm_source=RSS</link></item>
+<item><title>5 Words for Pirates (And Why They’re Not Actually All The Same) - Mental Floss</title><link>https://www.mentalfloss.com/language/words/words-pirates-why-not-all-same?utm_source=RSS</link></item>
+<item><title>20 Defunct Chain Restaurants You Used to See Everywhere - Mental Floss</title><link>https://www.mentalfloss.com/food/defunct-chain-restaurants-used-to-be-everywhere?utm_source=RSS</link></item>
+<item><title>The 10 States With the Worst Weather in America, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/science/weather/states-worst-weather-america-ranked?utm_source=RSS</link></item>
+<item><title>The Top Song From Every Year in the 1970s - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/top-song-every-year-1970s?utm_source=RSS</link></item>
+<item><title>The Lunchtime Meeting That Inspired Four Beloved Pixar Movies - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/lunchtime-meeting-four-pixar-movies?utm_source=RSS</link></item>
+<item><title>The Most—And Least—Expensive Countries to Eat Out - Mental Floss</title><link>https://www.mentalfloss.com/geography/most-least-expensive-countries-eat-out?utm_source=RSS</link></item>
+<item><title>20 Gilmore Girls Quotes That Are Still So Relatable - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/tv/most-relatable-gilmore-girls-quotes-fans-still-love?utm_source=RSS</link></item>
+<item><title>The Best Halloween Trivia Questions to Trick-or-Treat Your Brain - Mental Floss</title><link>https://www.mentalfloss.com/holidays/halloween/best-halloween-trivia-questions?utm_source=RSS</link></item>
+<item><title>24 Surprising Facts About ‘Pretty Woman’ - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/20-things-you-might-not-know-about-pretty-woman?utm_source=RSS</link></item>
+<item><title>Why English Law Hanged Witches and Scottish Law Burned Them - Mental Floss</title><link>https://www.mentalfloss.com/why-english-law-hanged-witches-scottish-law-burned?utm_source=RSS</link></item>
+<item><title>8 School Supplies Children Used in Medieval Times - Mental Floss</title><link>https://www.mentalfloss.com/history/school-supplies-children-used-medieval-times?utm_source=RSS</link></item>
+<item><title>10 Classic Novels Perfect For an Autumn Read - Mental Floss</title><link>https://www.mentalfloss.com/literature/books/classic-novels-perfect-autumn-read?utm_source=RSS</link></item>
+<item><title>Every State&amp;#39;s Favorite Children&amp;#39;s Book, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/literature/books/every-state-favorite-children-book-ranked?utm_source=RSS</link></item>
+<item><title>The Most (and Least) Expensive States for Groceries, Mapped - Mental Floss</title><link>https://www.mentalfloss.com/geography/maps/most-least-expensive-states-groceries-map?utm_source=RSS</link></item>
+<item><title>The Best-Smelling Cities in America, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/geography/cities/best-smelling-cities-america-ranked?utm_source=RSS</link></item>
+<item><title>Matthew Perry’s Favorite Matthew Perry Film—and What Made It So Special - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/matthew-perry-favorite-matthew-perry-film-what-made-special?utm_source=RSS</link></item>
+<item><title>8 School Rules Victorian Children Had to Follow - Mental Floss</title><link>https://www.mentalfloss.com/history/school-rules-victorian-children-had-follow?utm_source=RSS</link></item>
+<item><title>The Daily Writing Practice That Helped John Steinbeck Finish &amp;#39;East of Eden&amp;#39; - Mental Floss</title><link>https://www.mentalfloss.com/literature/books/writing-practice-helped-john-steinbeck-finish-east-of-eden?utm_source=RSS</link></item>
+<item><title>Could You Pass 4th Grade Science Today? Take This 5-Question Quiz - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/pass-4th-grade-science-today-take-quiz?utm_source=RSS</link></item>
+<item><title>7 Social Rules the Family Landline Forced Everyone to Learn - Mental Floss</title><link>https://www.mentalfloss.com/nostalgia/80s/social-rules-family-landline-forced-everyone-learn?utm_source=RSS</link></item>
+<item><title>6 Cryptids That Turned Out to Be Real - Mental Floss</title><link>https://www.mentalfloss.com/animals/cryptids-that-turned-out-to-be-real?utm_source=RSS</link></item>
+<item><title>17 Spanish Words You Use Every Day Without Realizing - Mental Floss</title><link>https://www.mentalfloss.com/language/words/spanish-words-you-use-every-day?utm_source=RSS</link></item>
+<item><title>Every &amp;#39;The Great Gatsby&amp;#39; Movie Adaptation, Ranked By Rotten Tomatoes - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/great-gatsby-movies-ranked-rotten-tomatoes?utm_source=RSS</link></item>
+<item><title>The Most Popular Halloween Candy in Every State for 2026, Mapped - Mental Floss</title><link>https://www.mentalfloss.com/geography/maps/most-popular-halloween-candy-in-each-state-2026-map?utm_source=RSS</link></item>
+<item><title>The Spiritual Meaning of the Harvest Moon - Mental Floss</title><link>https://www.mentalfloss.com/culture/folklore-mythology/spiritual-meaning-harvest-moon?utm_source=RSS</link></item>
+<item><title>6 of the Most Unusual Borders Around the World - Mental Floss</title><link>https://www.mentalfloss.com/geography/wanderlust/most-unusual-borders-around-the-world?utm_source=RSS</link></item>
+<item><title>The Shocking 2007 Magazine Story Behind Robert Pattinson&amp;#39;s &amp;#39;Primetime&amp;#39; - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/magazine-story-behind-robert-pattinson-primetime?utm_source=RSS</link></item>
+<item><title>12 Explosive Facts About The Unabomber - Mental Floss</title><link>https://www.mentalfloss.com/crime/unabomber-facts?utm_source=RSS</link></item>
+<item><title>How Much Did a Movie Ticket Cost the Year You Were Born? - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/how-much-movie-ticket-cost-year-you-were-born?utm_source=RSS</link></item>
+<item><title>Bruce Springsteen Considers This Stripped-Down &amp;#39;80s Album His Best - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/bruce-springsteen-considers-80s-album-his-best?utm_source=RSS</link></item>
+<item><title>The 25 Best Horror Movies of All Time - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/best-horror-movies-of-all-time?utm_source=RSS</link></item>
+<item><title>10 Moving Hacks That Make the Whole Process Less Chaotic - Mental Floss</title><link>https://www.mentalfloss.com/live-smarter/home/moving-hacks-make-process-less-chaotic?utm_source=RSS</link></item>
+<item><title>The Surprising Movie That Resulted in Jim Henson’s Only Oscar Nomination - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/jim-henson-only-oscar-nomination-movie?utm_source=RSS</link></item>
+<item><title>6 Real Places That Inspired F. Scott Fitzgerald - Mental Floss</title><link>https://www.mentalfloss.com/literature/authors/real-places-inspired-f-scott-fitzgerald?utm_source=RSS</link></item>
+<item><title>Jimi Hendrix&amp;#39;s Favorite Books Explore UFOs and More - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/jimi-hendrix-favorite-books?utm_source=RSS</link></item>
+<item><title>The Book F. Scott Fitzgerald Considered His Greatest Work—But Readers Disagreed - Mental Floss</title><link>https://www.mentalfloss.com/literature/books/f-scott-fitzgerald-greatest-work-readers-disagreed?utm_source=RSS</link></item>
+<item><title>22 Most Memorable One-Hit Wonders We Still Love - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/memorable-one-hit-wonders?utm_source=RSS</link></item>
+<item><title>The 10 Best Ghost Tours in America, According to Actual Visitors - Mental Floss</title><link>https://www.mentalfloss.com/geography/wanderlust/best-ghost-tours-america-actual-visitors?utm_source=RSS</link></item>
+<item><title>The Hidden Meaning Behind Winged Skulls on Old Gravestones - Mental Floss</title><link>https://www.mentalfloss.com/culture/weird/hidden-meaning-winged-skulls-old-gravestones?utm_source=RSS</link></item>
+<item><title>6 Beloved Fall Dishes You Rarely See Anymore - Mental Floss</title><link>https://www.mentalfloss.com/food/recipes/beloved-fall-dishes-rarely-see-anymore?utm_source=RSS</link></item>
+<item><title>The Best States for School Lunches, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/geography/states/best-states-school-lunches?utm_source=RSS</link></item>
+<item><title>The Blunt Letter Ernest Hemingway Wrote to F. Scott Fitzgerald About Self-Doubt - Mental Floss</title><link>https://www.mentalfloss.com/literature/authors/letter-ernest-hemingway-f-scott-fitzgerald-self-doubt?utm_source=RSS</link></item>
+<item><title>The Cost of College the Year You Were Born - Mental Floss</title><link>https://www.mentalfloss.com/live-smarter/money/how-much-college-cost-year-born?utm_source=RSS</link></item>
+<item><title>The Fan Gift That Inspired an Entire Bruce Springsteen Album - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/fan-gift-that-inspired-springsteen-album?utm_source=RSS</link></item>
+<item><title>The Top Song From Every Year in the 1990s - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/top-song-every-year-1990s?utm_source=RSS</link></item>
+<item><title>Why Do We Say &amp;quot;Eye on the Ball&amp;quot;? - Mental Floss</title><link>https://www.mentalfloss.com/language/eye-on-the-ball-origin?utm_source=RSS</link></item>
+<item><title>7 Fall Traditions Kids Today Barely Experience Anymore - Mental Floss</title><link>https://www.mentalfloss.com/nostalgia/fall-traditions-kids-barely-experience-anymore?utm_source=RSS</link></item>
+<item><title>Andreas Kronthaler on Vivienne Westwood’s Legacy - ELLE</title><link>https://www.elle.com/runway/a74007898/andreas-kronthaler-vivienne-westwood-spring-2027-interview/</link></item>
+<item><title>Elizabeth Debicki’s Night With Christian Louboutin - ELLE</title><link>https://www.elle.com/fashion/celebrity-style/a74005205/elizabeth-debicki-christian-louboutin-spring-2027/</link></item>
+<item><title>Why Anne Hathaway Is ‘Disappearing’ - ELLE</title><link>https://www.elle.com/culture/celebrities/a74005462/anne-hathaway-disappears-break-after-verity/</link></item>
+<item><title>Celine Summer 2027 Embraces Unfussy Dressing - ELLE</title><link>https://www.elle.com/runway/a74003910/celine-spring-2027-review/</link></item>
+<item><title>Why SJP Rarely Wears Carrie’s Clothes - ELLE</title><link>https://www.elle.com/fashion/celebrity-style/a74004438/sarah-jessica-parker-carrie-bradshaw-wardrobe-comment/</link></item>
+<item><title>Hermès Brings an Airy Ease to Fashion - ELLE</title><link>https://www.elle.com/runway/a74004875/hermes-spring-2027-review/</link></item>
+<item><title>Gustavo Dudamel’s Playful Approach Is Transforming the New York Philharmonic - ELLE</title><link>https://www.elle.com/culture/music/a73983151/gustavo-dudamel-music-interview/</link></item>
+<item><title>Yohji Yamamoto on Fashion, Creativity, and What Keeps Him Inspired - ELLE</title><link>https://www.elle.com/fashion/a73999864/yohji-yamamoto-interview-spring-2027/</link></item>
+<item><title>5 Cool Bob Haircuts Taking Over This Autumn - ELLE</title><link>https://www.elle.com/beauty/hair/a73944988/bob-haircuts-london-trends-fall-2026/</link></item>
+<item><title>Could a Breast Cancer Blood Test Be the Future? - ELLE</title><link>https://www.elle.com/beauty/health-fitness/a73917657/circulating-tumor-dna-breast-cancer-test/</link></item>
+<item><title>Shop Early Prime Day Hair Care and Hot Tool Deals - ELLE</title><link>https://www.elle.com/beauty/makeup-skin-care/a73929402/best-hair-care-hair-tool-deals-october-prime-day-2026/</link></item>
+<item><title>Tate McRae Just Launched Her First-Ever Fragrance - ELLE</title><link>https://www.elle.com/beauty/makeup-skin-care/a73943993/tate-mcrae-tate-01-interview-2026/</link></item>
+<item><title>Mexican Beauty Brands Are Having a Global Moment - ELLE</title><link>https://www.elle.com/beauty/makeup-skin-care/a73837417/mexico-city-beauty-brands-aora-xinu-nopalera-sarelly-interview-2026/</link></item>
+<item><title>How Diego Boneta Became Fidel Castro - ELLE</title><link>https://www.elle.com/culture/movies-tv/a73663694/diego-boneta-killing-castro-interview-2026/</link></item>
+<item><title>How to Wear Zebra Print in 2026 - ELLE</title><link>https://www.elle.com/fashion/shopping/a73927044/how-to-wear-zebra-print-trend-2026/</link></item>
+<item><title>Airport Cardigans to Travel in Style - ELLE</title><link>https://www.elle.com/fashion/shopping/a73857002/best-airport-cardigans/</link></item>
+<item><title>Our Guide to Shopping Amazon’s Home Deals - ELLE</title><link>https://www.elle.com/fashion/shopping/g73983355/best-amazon-prime-big-deal-days-home-sales-october-2026/</link></item>
+<item><title>8 Foolproof Ways to Style Black Boots This Fall - ELLE</title><link>https://www.elle.com/fashion/shopping/a73889191/how-to-style-black-boots-outits/</link></item>
+<item><title>Cornell Didn’t Just Fail One Woman. It Failed Everyone Watching. - ELLE</title><link>https://www.elle.com/culture/career-politics/a73928670/cornell-university-sexual-assault-lawsuit-essay-2026/</link></item>
+<item><title>Martine Gutierrez Is Rethinking Beauty - ELLE</title><link>https://www.elle.com/beauty/makeup-skin-care/a73835997/martine-gutierrez-indigenous-woman-interview-2026/</link></item>
+<item><title>MAZ Is Putting Colombian Craft on the World Stage - ELLE</title><link>https://www.elle.com/fashion/a73644624/maz-fashion-brand-profile-manuela-alvarez-interview-2026/</link></item>
+<item><title>Why This Design Studio Swears by ‘Serious Playing’ - ELLE</title><link>https://www.elle.com/culture/art-design/a73596189/batlle-sig-architecture-ana-batlle-cabral-signe-ferguson-interview-2026/</link></item>
+<item><title>Gabriela Cámara Brought Contramar to Las Vegas - ELLE</title><link>https://www.elle.com/culture/travel-food/a73760182/cantina-contramar-las-vegas-gabriela-camara-interview-2026/</link></item>
+<item><title>Sombr Talks Vintage Shopping, His Dream Date, and What’s Next in Music - ELLE</title><link>https://www.elle.com/culture/celebrities/a73833366/sombr-ask-me-anything-video/</link></item>
+<item><title>Everyone Is Clamoring for Vintage Marc Jacobs - ELLE</title><link>https://www.elle.com/fashion/a73727006/vintage-marc-jacobs-fashion-trend/</link></item>
+<item><title>Why Dolls Are a Perennial Fashion Inspiration - ELLE</title><link>https://www.elle.com/fashion/a73571742/doll-dressing-fashion-exhibit-2026/</link></item>
+<item><title>The Insider Demystifying the Paris Flea Market - ELLE</title><link>https://www.elle.com/fashion/a73369235/paris-flea-market-fashion-kate-van-den-boogert-interview/</link></item>
+<item><title>How Trish Wescoat Pound Made TWP a Fashion Go-To - ELLE</title><link>https://www.elle.com/fashion/personal-style/a73485784/trish-wescoat-pound-twp-career-interview/</link></item>
+<item><title>How Isabel Alysa Started a Tanning Empire - ELLE</title><link>https://www.elle.com/beauty/makeup-skin-care/a73524997/isabel-alysa-dolce-glow-founder-interview-2026/</link></item>
+<item><title>Givenchy Spring 2027 Takes Up Space - ELLE</title><link>https://www.elle.com/runway/a73995739/givenchy-spring-2027-review/</link></item>
+<item><title>Dree Hemingway Takes Us to the Chloé Show - ELLE</title><link>https://www.elle.com/fashion/celebrity-style/a73993481/dree-hemingway-chloe-spring-2027/</link></item>
+<item><title>SJP Has a Very Carrie Bradshaw Take on Balletcore - ELLE</title><link>https://www.elle.com/fashion/celebrity-style/a73995501/sarah-jessica-parker-simone-rocha-ballet-look-2026-details-photos/</link></item>
+<item><title>The Launch: October’s Must-Know Fashion News - ELLE</title><link>https://www.elle.com/fashion/a73993035/best-fashion-launches-october-2026/</link></item>
+<item><title>The Best Coach Bags From the Fall Collection - ELLE</title><link>https://www.elle.com/fashion/a73416449/coach-fall-2026-collection-best-bags/</link></item>
+<item><title>Anna Van Patten Gets Ready for Balenciaga - ELLE</title><link>https://www.elle.com/fashion/celebrity-style/a73988770/anna-van-patten-balenciaga-spring-2027/</link></item>
+<item><title>Balletcore’s Easy New Era Is Here - ELLE</title><link>https://www.elle.com/fashion/trend-reports/a73989096/balletcore-trend-2026/</link></item>
+<item><title>The Biggest Fashion News and Drops of September - ELLE</title><link>https://www.elle.com/fashion/a73580840/best-fashion-launches-september-2026/</link></item>
+<item><title>The Best Pony Hair Bags - ELLE</title><link>https://www.elle.com/fashion/shopping/a73946641/best-ponyhair-bags-trend/</link></item>
+<item><title>Anne Hathaway’s Sheer Take on Maternity Dressing - ELLE</title><link>https://www.elle.com/culture/celebrities/a73978965/anne-hathaway-sheer-maternity-look-drew-barrymore-show-details-photos-2026/</link></item>
+<item><title>That Company That Buys Struggling News Sites and Turns Them Into AI-Powered Content Mills Has Halted Publishing After a Futurism Investigation - Futurism</title><link>https://futurism.com/artificial-intelligence/brown-brothers-media-halts-publishing</link></item>
+<item><title>The Tech Industry’s Aggressive Push to Integrate AI Into Schools Is Turning Into a Disaster - Futurism</title><link>https://futurism.com/future-society/tech-industry-aggressive-google-ai-schools-disaster</link></item>
+<item><title>The Only Thing Dumber Than Someone Creating an “AI Torture Chamber” Is the Meltdown That the AI Welfare Crowd Is Having Over It - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-torture-chamber-meltdown</link></item>
+<item><title>Why Is Instagram Running Ads for a “Pet Incinerator”? - Futurism</title><link>https://futurism.com/artificial-intelligence/instagram-pet-incinerator</link></item>
+<item><title>AI Now Writing Code That Humans Can’t Even Understand - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-writing-code-humans-cant-understand</link></item>
 </channel></rss>
