@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['md','css'],[],['ai_prompt_md_data.js'],['ai_prompt_handbook_code.js']);
+</script>
+<script>
+//-----------------------
+//history
+//0.0.1-20261004 腾讯元宝+千问
+//-----------------------
+css_root_style_b('15','11',['base'],[],1);
+</script>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<title>👾 智能体提示词手册</title>
+<style>
+:root{
+--bg:#f5f6f8;
+--panel:#ffffff;
+--line:#e3e6ea;
+--text:#1f2329;
+--sub:#6b7280;
+--brand:#2f5fd0;
+--brand-soft:#eaf0fd;
+--hover:#f0f4ff;
+--hot:#f59e0b;
+--radius:10px;
+--shadow:0 1px 3px rgba(20,30,60,.08), 0 6px 18px rgba(20,30,60,.06);
+}
+*{box-sizing:border-box;}
+html,body{height:100%;}
+body{
+margin:0;
+font-family:"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",-apple-system,Segoe UI,sans-serif;
+background:var(--bg);
+color:var(--text);
+font-size:14px;
+line-height:1.65;
+}
+header{
+padding:12px 20px;
+background:var(--panel);
+border-bottom:1px solid var(--line);
+display:flex;align-items:center;gap:16px;flex-wrap:wrap;
+position:sticky;top:0;z-index:20;
+}
+header h1{font-size:16px;margin:0;font-weight:600;white-space:nowrap;}
+.search{flex:1;min-width:220px;position:relative;}
+.search input{
+width:100%;padding:8px 12px 8px 32px;
+border:1px solid var(--line);border-radius:20px;
+font-size:13px;outline:none;background:#fafbfc;
+}
+.search input:focus{border-color:var(--brand);background:#fff;box-shadow:0 0 0 3px var(--brand-soft);}
+.search::before{content:"🔍";position:absolute;left:11px;top:7px;font-size:12px;opacity:.6;}
+.layout{display:flex;height:calc(100% - 53px);overflow:hidden;}
+/* 侧栏 */
+aside{
+width:300px;flex:0 0 300px;background:var(--panel);
+border-right:1px solid var(--line);display:flex;flex-direction:column;
+overflow:hidden;
+}
+.tabs{display:flex;border-bottom:1px solid var(--line);}
+.tab{
+flex:1;text-align:center;padding:9px 0;font-size:13px;color:var(--sub);
+cursor:pointer;border-bottom:2px solid transparent;user-select:none;
+}
+.tab.active{color:var(--brand);border-bottom-color:var(--brand);font-weight:600;}
+.list-wrap{overflow-y:auto;flex:1;}
+.group-title{
+padding:8px 14px;font-size:12px;color:var(--sub);
+background:#fafbfc;border-bottom:1px solid var(--line);
+position:sticky;top:0;z-index:2;
+}
+.cat-block{padding:4px 0 8px;}
+.cat{
+padding:6px 14px 6px 16px;cursor:pointer;
+display:flex;align-items:center;gap:6px;
+border-left:3px solid transparent;
+}
+.cat:hover{background:var(--hover);}
+.cat.on{background:var(--brand-soft);border-left-color:var(--brand);color:var(--brand);font-weight:600;}
+.cat .name{flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.cat .num{font-size:11px;color:var(--sub);background:#eef1f5;padding:1px 6px;border-radius:9px;flex:0 0 auto;}
+.cat.on .num{background:#fff;color:var(--brand);}
+.leaf{
+padding:7px 14px 7px 26px;cursor:pointer;
+border-left:3px solid transparent;position:relative;
+}
+.leaf:hover{background:var(--hover);}
+.leaf.on{background:var(--brand-soft);border-left-color:var(--brand);}
+.leaf .t{font-weight:500;}
+.empty{padding:30px 14px;text-align:center;color:var(--sub);font-size:13px;}
+.recent-item{padding:8px 14px;cursor:pointer;border-bottom:1px solid #f0f2f5;}
+.recent-item:hover{background:var(--hover);}
+.recent-item .t{font-weight:500;}
+.recent-item .path{font-size:11px;color:var(--sub);margin-top:2px;}
+.recent-item .hot{color:var(--hot);font-size:10px;margin-left:4px;}
+/* 主区 */
+main{flex:1;overflow-y:auto;padding:20px 26px;background:var(--bg);}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;box-shadow:var(--shadow);}
+.welcome{text-align:center;color:var(--sub);padding:60px 20px;}
+.welcome h2{color:var(--text);font-weight:600;margin-bottom:8px;}
+.title-bar{display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap;margin-bottom:6px;}
+.title-bar h2{font-size:18px;margin:0;line-height:1.4;}
+.copy{
+margin-left:auto;flex:0 0 auto;
+padding:6px 14px;font-size:12px;cursor:pointer;
+background:var(--brand);color:#fff;border:none;border-radius:6px;
+}
+.copy:hover{opacity:.9;}
+.copy.done{background:#16a34a;}
+.tags{margin:10px 0 16px;display:flex;gap:6px;flex-wrap:wrap;font-size:12px;color:var(--sub);}
+.tags span{background:#f0f2f5;padding:2px 8px;border-radius:4px;}
+
+.path-line{font-size:12px;color:var(--sub);margin-bottom:12px;}
+@media (max-width:860px){
+aside{width:100%;flex:1;}
+.layout{flex-direction:column;}
+main{display:none;}
+body.split main{display:block;flex:1;}
+body.split aside{flex:0 0 42%;}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>👾 智能体提示词手册</h1>
+  <div class="search">
+    <input id="q" type="search" placeholder="全文搜索：输入关键词（名称、单位、领域、岗位、提示词正文…）" autocomplete="off">
+  </div>
+</header>
+<div class="layout">
+  <aside>
+    <div class="tabs">
+      <div class="tab active" data-tab="tree">分类</div>
+      <div class="tab" data-tab="recent">最近</div>
+    </div>
+    <div class="list-wrap" id="list"></div>
+  </aside>
+  <main id="main"></main>
+</div>
+<script>
+/* ================= 数据与渲染 ================= */
+const RECENT_KEY = 'sifa_agent_recent';
+const MAX_RECENT = 12;
+let state = {
+    tab: 'tree',
+    kw: '',
+    sel: null,
+    openCats: new Set()
+};
+
+const TOKEN_FREQ = buildTokenFreq_aips();
+const SORTED_TOKENS = getSortedTokens_aips(TOKEN_FREQ);
+const ITEMS = ai_prompt_md_global.map((x, i) => parseItem_aips(x, i));
+handleDuplicateNames(ITEMS);
+const TREE = buildTree_aips();
+moveSingleItemToMatchingUnit_aips(TREE);
+
+/* 动态计算 UNITS：按条目数量降序排列，不再写死排序 */
+const UNITS = Object.keys(TREE).sort((a, b) => {return a.localeCompare(b, 'zh');});
+
+/* 事件 */
+document.getElementById('q').addEventListener('input', e => {
+    state.kw = e.target.value;
+    if (state.kw.trim()) {
+        state.openCats = new Set(UNITS); // 筛选时展开全部
+    }
+    renderList_aips();
+});
+document.querySelectorAll('.tab').forEach(t => {
+    t.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+        t.classList.add('active');
+        state.tab = t.dataset.tab;
+        renderList_aips();
+    });
+});
+document.getElementById('list').addEventListener('click', e => {
+    const leaf = e.target.closest('.leaf');
+    if (leaf) {
+        show_aips(parseInt(leaf.dataset.idx));
+        return;
+    }
+    // 只处理 unit 级别的 cat（不再有 field 级别的 cat）
+    const cat = e.target.closest('.cat');
+    if (cat && cat.dataset.unit) {
+        const u = cat.dataset.unit;
+        if (state.openCats.has(u)) {
+            state.openCats.delete(u);
+        } else {
+            state.openCats.add(u);
+        }
+        renderList_aips();
+        return;
+    }
+    const recent = e.target.closest('.recent-item');
+    if (recent) {
+        show_aips(parseInt(recent.dataset.idx));
+    }
+});
+// 支持 URL hash 直达
+window.addEventListener('hashchange', () => {
+    const idx = location.hash.replace('#', '');
+    if (idx && ITEMS.find(x => x._idx == parseInt(idx))) {
+        show_aips(parseInt(idx));
+    }
+});
+
+/* 初始化 */
+UNITS.forEach(u => state.openCats.add(u));
+if (location.hash) {
+    const idx = location.hash.replace('#', '');
+    if (ITEMS.find(x => x._idx == parseInt(idx))) {
+        show_aips(parseInt(idx));
+    }
+}
+// 首次进入默认选中第一项，避免右侧空白
+if (!state.sel) {
+    const first = flattened_aips()[0]?.it;
+    if (first) {
+        show_aips(first._idx);
+    }
+}
+renderList_aips();
+</script>
+</body>
+</html>

@@ -2158,6 +2158,75 @@ function highlight_color_b(csxl){
     return scheme_global[blcolor];
 }
 
+/* 关键词高亮：仅高亮正文文本节点，避免破坏 HTML 标签与属性 */
+function highlight_simple_b(html, keywords) {
+    //keywords 形如：bash 脚本 - 保留注释
+    var t0 = performance.now();
+
+    const keys = new Set((keywords || '').trim().split(/\s+/).filter(Boolean));
+    if (!keys.size){
+        return html;
+    }
+    //keys 形如：Set [ "能够", "bash" ] - 保留注释
+    
+    const sub_highlight_simple_b_mark = (text) => {
+        //const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        // 逐字符构建，避免跨标签匹配；先按原样切分再转义
+        let out = '',
+            last = 0,
+            lower = text.toLowerCase();
+        const ranges = [];
+        keys.forEach(k => {
+            const kl = k.toLowerCase();
+            let i = 0;
+            while ((i = lower.indexOf(kl, i)) >= 0) {
+                ranges.push([i, i + k.length]);
+                i++;
+            }
+        });
+        if (!ranges.length){
+            return specialstr_lt_gt_j(text,true);
+        }
+        // 合并重叠区间
+        ranges.sort((a, b) => a[0] - b[0]);
+        const merged = [];
+        ranges.forEach(r => {
+            if (merged.length && r[0] <= merged[merged.length - 1][1]){
+                merged[merged.length - 1][1] = Math.max(merged[merged.length - 1][1], r[1]);
+            } else {
+                merged.push(r.slice());
+            }
+        });
+        merged.forEach(([s, e]) => {
+            out += specialstr_lt_gt_j(text.slice(last, s),true) + '<mark>' + specialstr_lt_gt_j(text.slice(s, e),true) + '</mark>';
+            last = e;
+        });
+        out += specialstr_lt_gt_j(text.slice(last),true);
+        return out;
+    };
+    
+    // 只处理文本节点：用临时容器遍历
+    const tmp = document.createElement('div');
+    tmp.innerHTML = html;
+    const walker = document.createTreeWalker(tmp, NodeFilter.SHOW_TEXT, null);
+    const nodes = [];
+    while (walker.nextNode()){
+        nodes.push(walker.currentNode);
+    }
+    
+    nodes.forEach(node => {
+        const hl = sub_highlight_simple_b_mark(node.nodeValue);
+        if (hl !== specialstr_lt_gt_j(node.nodeValue,true)) {
+            const span = document.createElement('span');
+            span.innerHTML = hl;
+            node.parentNode.replaceChild(span, node);
+        }
+    });
+    
+    performance_b('highlight_simple_b()',t0);
+    return tmp.innerHTML;
+}
+
 function select_prev_or_next_b(oselect,cstype,filter_visible=false){
     var bldone=false;
     while (true){

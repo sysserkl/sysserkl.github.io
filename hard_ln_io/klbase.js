@@ -3751,20 +3751,53 @@ function window_list_init_b(max_result){
     return window_list;
 }
     
-function copy_2_clipboard_b(csstr,nav_mode=false){
+function copy_2_clipboard_b(csstr,nav_mode=false,odom=false,ok_class='',normal_caption='复制',ok_caption='已复制 ✓',fail_caption='复制失败',cstimeout=2000){
     //str2clipboard - 保留注释
-    if (nav_mode==false){
-        var otextarea=document.createElement('textarea');
-        otextarea.value=csstr;
-        document.body.appendChild(otextarea);
-        otextarea.select();
-        document.execCommand('copy');
-        otextarea.parentNode.removeChild(otextarea);
-    } else {
-        navigator.clipboard.writeText(csstr)
-        .then(() => {console.log('文本已成功复制到剪贴板');})
-        .catch((error) => {console.log(error);});
+    function sub_copy_2_clipboard_b_ok(){
+        if (odom){
+            odom.textContent = ok_caption;
+            if (ok_class!==''){
+                odom.classList.add(ok_class);
+            }
+            setTimeout(() => {
+                odom.textContent = normal_caption;
+                if (ok_class!==''){
+                    odom.classList.remove(ok_class);
+                }
+            }, cstimeout);    
+        }       
     }
+    
+    function sub_copy_2_clipboard_b_error(){
+        if (odom){
+            odom.textContent = fail_caption;
+            setTimeout(() => {odom.textContent = normal_caption;}, cstimeout);
+        }
+    }
+    
+    try {    
+        if (nav_mode==false){
+            var otextarea=document.createElement('textarea');
+            otextarea.value=csstr;
+            document.body.appendChild(otextarea);
+            otextarea.select();
+            document.execCommand('copy');
+            otextarea.parentNode.removeChild(otextarea);
+            sub_copy_2_clipboard_b_ok();
+        } else {
+            navigator.clipboard.writeText(csstr)
+            .then(() => {
+                console.log('文本已成功复制到剪贴板');
+                sub_copy_2_clipboard_b_ok();
+            })
+            .catch(
+                (error) => {console.log(error);
+                sub_copy_2_clipboard_b_error();
+            });
+        }
+    } catch (e) {
+        sub_copy_2_clipboard_b_error();
+    }        
 }
 
 function split_dom_vertical_or_horizontal_b(odom,cscount,split_type,adjust_by_p=false){

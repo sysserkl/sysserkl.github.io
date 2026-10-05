@@ -79,11 +79,11 @@ footer { color: #888; font-size: 0.9em; margin-top: 2em; border-top: 1px solid #
 
     <label>补充约束（点击添加）</label>
     <div class="div_chips_mpg" id="div_chips_mpg">
-      <span class="div_chips_mpg" data-v="给出可落地的具体建议，不空谈">要具体建议</span>
-      <span class="div_chips_mpg" data-v="先给结论，再给理由">结论先行</span>
-      <span class="div_chips_mpg" data-v="附带示例或模板">附示例</span>
-      <span class="div_chips_mpg" data-v="标注引用来源与数据出处">标来源</span>
-      <span class="div_chips_mpg" data-v="使用中文回答">中文输出</span>
+      <span class="span_chips_mpg" data-v="给出可落地的具体建议，不空谈">要具体建议</span>
+      <span class="span_chips_mpg" data-v="先给结论，再给理由">结论先行</span>
+      <span class="span_chips_mpg" data-v="附带示例或模板">附示例</span>
+      <span class="span_chips_mpg" data-v="标注引用来源与数据出处">标来源</span>
+      <span class="span_chips_mpg" data-v="使用中文回答">中文输出</span>
     </div>
 
     <label for="input_extra_mpg">其他约束</label>
@@ -114,7 +114,7 @@ footer { color: #888; font-size: 0.9em; margin-top: 2em; border-top: 1px solid #
 </footer>
 
 <script>
-document.querySelectorAll('.div_chips_mpg').forEach(function (c){
+document.querySelectorAll('.span_chips_mpg').forEach(function (c){
     c.onclick = function () { c.classList.toggle('on'); };
 });
 

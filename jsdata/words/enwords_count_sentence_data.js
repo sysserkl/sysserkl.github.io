@@ -2475,6 +2475,7 @@ var en_sentence_count_global=[
 "urolithiasis",
 "urology",
 "ux.",
+"vaccinology",
 "vectorize",
 "verbosely",
 "verboseness",

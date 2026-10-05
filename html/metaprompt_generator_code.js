@@ -1,4 +1,4 @@
-function infer_role_mpg(goal, domain){
+function infer_role_mpg(goal){
     var r = document.getElementById('input_role_mpg').value.trim();
     if (r){
         return r;
@@ -46,14 +46,14 @@ function render_mpg(){
     }
 
     var domain = val_mpg('input_domain_mpg');
-    var role = infer_role_mpg(goal, domain);
+    var role = infer_role_mpg(goal);
     var aud = val_mpg('input_audience_mpg') || '目标读者';
     var tone = document.getElementById('select_tone_mpg').value;
     var format = document.getElementById('select_format_mpg').value;
     var len = document.getElementById('select_len_mpg').value;
 
     var constr = [];
-    document.querySelectorAll('.div_chips_mpg.on').forEach(function (c){
+    document.querySelectorAll('.span_chips_mpg.on').forEach(function (c){
         if (c.dataset.v !== undefined){
             constr.push(c.dataset.v); 
         }
@@ -117,12 +117,14 @@ function reset_mpg(){
     document.getElementById('select_tone_mpg').value = '专业严谨';
     document.getElementById('select_format_mpg').value = '分条要点';
     document.getElementById('select_len_mpg').value = '适中（500 字左右）';
-    document.querySelectorAll('.div_chips_mpg').forEach(function (c) { c.classList.remove('on'); });
+    document.querySelectorAll('.span_chips_mpg').forEach(function (c) { c.classList.remove('on'); });
     document.getElementById('pre_out_mpg').textContent = '（填写上方需求后点击「生成提示词」）';
 }
 
 // 示例被点击时，随机化语气、输出结构、篇幅与补充约束，再生成
 function ex_mpg(el){
+    reset_mpg();
+    
     var tones = ['专业严谨', '通俗易懂', '简洁干练', '生动有趣', '学术规范'];
     var fmts = ['分条要点', 'Markdown 报告', '表格对比', '步骤清单', '邮件 / 公文', '代码'];
     var lens = ['精简（200 字内）', '适中（500 字左右）', '详尽（1000 字以上）'];
@@ -131,7 +133,7 @@ function ex_mpg(el){
     document.getElementById('select_format_mpg').value = pick_mpg(fmts);
     document.getElementById('select_len_mpg').value = pick_mpg(lens);
 
-    document.querySelectorAll('.div_chips_mpg').forEach(function (c){
+    document.querySelectorAll('.span_chips_mpg').forEach(function (c){
         c.classList.toggle('on', Math.random() < 0.4);
     });
 
