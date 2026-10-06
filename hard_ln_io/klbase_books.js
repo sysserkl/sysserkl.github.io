@@ -1,12 +1,13 @@
-function book_makelist_b(cstag='all',reg_mark='_reg'){
+function book_makelist_b(cstag='all',reg_mark='_reg',init_no=false){
     //cstag 支持如：“历史 幻想” 等表达式 - 保留注释
-    var list_t=[];
     var blreg=false;
     [cstag,blreg]=str_reg_check_b(cstag,blreg,true,reg_mark);
     
+    var list_t=[];
     if (csbookno_global>=0){
-        var list_t=csbooklist_sub_global[csbookno_global];
+        list_t=csbooklist_sub_global[csbookno_global];
     }
+    
     var list2_t=[];
     if (csbookno2_global>=0){
         var list2_t=csbooklist_sub_global[csbookno2_global];
@@ -25,6 +26,11 @@ function book_makelist_b(cstag='all',reg_mark='_reg'){
                 csbooklist_sub_global.push(item);
             }
         }
+    }
+    
+    //以下3行代码不能放在前面 - 保留注释
+    if (init_no){
+        csbookno_global=0;
     }
     
     if (list_t.length>0){
@@ -187,7 +193,10 @@ function import_book_js_b(){
         document.write('\n<script>\n');
         document.write('\nvar filelist2=[].concat(filelist);\n');
         document.write('</script>\n');
+    } else {
+        console.log('csbookno2_global',csbookno2_global);
     }
+    
     txtbook_js_code_file_global=''; //全局变量 - 保留注释
     //---
     [jsdoc_num,book_type,jsdoc_path,bookid]=num_type_path_id_get_book_b(book_no);
@@ -211,6 +220,8 @@ function import_book_js_b(){
                 txtbook_js_code_file_global=bookid;
             }
         }
+    } else {
+        console.log('csbooklist_sub_global',csbooklist_sub_global);
     }
 }
 

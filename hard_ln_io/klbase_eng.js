@@ -1720,7 +1720,7 @@ function enwords_lines_2_js_array_b(aword,emoji_list,three_lines=false){
 function enwords_different_types_div_b(cswlist,add_form=false,textarea_id='',textarea_name='',button_type='',more_buttons='',csheight=''){
     var blstr='<p>';
     blstr=blstr+'<select onchange="enwords_different_types_textarea_b(this);">';
-    var type_names=['','(o)asterisk','cut','(o)js','count','(o)temp','(o)wiki','reg','space','rare_words','filter','group','random_sort','switch with the first textarea','移除行无非字母字符','移除短单词','含有短单词的长单词'];
+    var type_names=['','(o)asterisk','cut','(o)js','count','(o)temp','(o)wiki','reg','space','rare_words','filter','group','random_sort','switch with the first textarea','移除行无非字母字符','移除短单词','含有短单词的长单词','不在例句中的单词或词组'];
     type_names.sort();
     for (let item of type_names){
         blstr=blstr+'<option>'+item+'</option>\n';
@@ -1818,9 +1818,67 @@ function enwords_list_2_reg_b(cslist,delimiter='b'){
     return bljg;
 }
 
+function words_in_sentence_b(wordlist,run_fn=false){
+    function sub_words_in_sentence_b_one(){
+        if (blxl>=bllen){
+            document.title=old_title;
+            console.log('in_set:',in_set.size,'not_set:',not_set.size);
+            console.log('words_in_sentence_b() 费时：'+(performance.now() - t0) + ' milliseconds');
+            if (typeof run_fn == 'function'){
+                run_fn(in_set,not_set);
+            }
+            return;
+        }
+
+        let one_word=wordset[blxl];
+        let blreg=new RegExp('\\b'+one_word+'\\b','i');
+        let blfound=false;
+        for (let arow of en_sentence_global){
+            try {
+                if (arow[0].toString().match(blreg)){
+                    blfound=true;
+                    break;
+                }
+            } catch (error){
+                console.log(error);
+            }
+        }
+        
+        if (blfound){
+            in_set.add(one_word);
+        } else {
+            not_set.add(one_word);
+        }        
+                
+        blxl=blxl+1;
+        if (blxl % 50 == 0){
+            document.title=blxl+'/'+bllen+' - '+old_title;
+        }
+        setTimeout(sub_words_in_sentence_b_one,1);
+    }
+    
+    if (typeof en_sentence_global == 'undefined'){
+        return 'en_sentence_global 未定义';
+    }
+    
+    var t0 = performance.now();    
+    var in_set=new Set();
+    var not_set=new Set();
+    var wordset=array_unique_b(wordlist);
+    var blxl=0;
+    var bllen=wordset.length;
+    var old_title=document.title;
+    
+    sub_words_in_sentence_b_one();
+}
+
 function enwords_different_types_textarea_b(oselect){
     function sub_enwords_different_types_textarea_b_bljg(csstr){
         return textarea_with_form_generate_b('textarea_enwords_different_types_all_in_one','height:10rem;','<p>','清空,复制,发送到临时记事本','</p>','','',false,csstr);
+    }
+    
+    function sub_enwords_different_types_textarea_b_not_in_sentence(in_set,no_set){
+        odiv.innerHTML=sub_enwords_different_types_textarea_b_bljg(Array.from(no_set).join('\n'));    
     }
     
     var ocontainer=oselect.parentNode.parentNode;
@@ -1884,6 +1942,9 @@ function enwords_different_types_textarea_b(oselect){
         case '移除行无非字母字符':
             bljg=raw_str.replace(/[^a-z]+$/img,'');
             bljg=sub_enwords_different_types_textarea_b_bljg(bljg);
+            break;
+        case '不在例句中的单词或词组':
+            words_in_sentence_b(raw_list,sub_enwords_different_types_textarea_b_not_in_sentence);
             break;
         case 'rare_words':
             result_t=[];

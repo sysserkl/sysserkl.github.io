@@ -173,7 +173,9 @@ function pushRecent_aips(it) {
 /* 渲染侧栏 */
 function renderList_aips() {
     const box = document.getElementById('list');
-    if (state.tab === 'recent') return renderRecent_aips(box);
+    if (state.tab === 'recent'){
+        return renderRecent_aips(box);
+    }
     const q = state.kw.trim();
     let html = '';
     if (!q) {
@@ -190,18 +192,12 @@ function renderList_aips() {
             }
         });
     } else {
-        const hits = flattened_aips().filter(({
-            it
-        }) => kwMatch_aips(it));
+        const hits = flattened_aips().filter(({it}) => kwMatch_aips(it));
         html += `<div class="group-title">关键词筛选：${hits.length} 条匹配</div>`;
         if (hits.length === 0) {
             html += `<div class="empty">未找到匹配的提示词<br><br>试试更短的关键词，如"公益诉讼""起诉书""检察建议"</div>`;
         } else {
-            hits.forEach(({
-                it
-            }) => {
-                html += leafHTML_aips(it);
-            });
+            hits.forEach(({it}) => {html += leafHTML_aips(it);});
         }
     }
     box.innerHTML = html;
