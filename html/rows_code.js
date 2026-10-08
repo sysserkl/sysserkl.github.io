@@ -365,13 +365,25 @@ function markdown2html_klr2(is_reverse=false){
     var blstr=otextarea.value;
     if (is_reverse){
         const turndownService = new TurndownService({headingStyle: 'atx'});
+        turndownService.addRule('preserve-b', {
+          filter: ['b', 'strong'],
+          replacement: function (content, node) {
+            // 原样输出 HTML
+            return `<${node.nodeName.toLowerCase()}>${content}</${node.nodeName.toLowerCase()}>`;
+          }
+        });
         //或 setext。 HTML 的 <h1> ~ <h6> 标题，转成 Markdown 时用哪种语法。atx（默认，推荐）​ —— 用 # 号。setext​ —— 用"下划线"。 - 保留注释
         //setext 只有两级，h3–h6 会自动"叛变"成 atx
-        turndownService.use(turndownPluginGfm.gfm);
+        turndownService.use(turndownPluginGfm.gfm); //给 Turndown 装上 GFM 扩展包，让它能把 HTML 里的 表格、任务列表、删除线​ 正确还原成 GitHub 风格的 Markdown 语法。
         const markdown = turndownService.turndown(blstr);
         ostatus.value = markdown;    
     } else {
         var blhtml = marked.parse(blstr);
+        
+        //以下2行保留 - 保留注释
+        //const md = new window.markdownit();
+        //var blhtml = md.render(blstr);
+        
         ostatus.value=blhtml;
         var odiv=document.getElementById('divhtml');
         odiv.innerHTML=blhtml;

@@ -2105,5 +2105,11 @@ Anglify
 competitively
 microwavable
 photoshoot
+payee
+toxicity
+Gaullist
+computerize
+environmentally
+
 
 `.trim().split('\n');
