@@ -133,6 +133,10 @@ function menu_ensentence(){
     '<a href="../jsdata/words/enwords_sentence_data.js'+file_date_parameter_b()+'" onclick="'+str_t+'" target=_blank>enwords_sentence_data.js</a>',    
     '<a href="'+location.origin+'/wiki/index.php/%E7%89%B9%E6%AE%8A:%E6%9C%80%E8%BF%91%E6%9B%B4%E6%94%B9" onclick="'+str_t+'" target=_blank>KLWiki最近更改</a>',
     '<a href="https://en.ger101.ru/" onclick="'+str_t+'" target=_blank>Z-Library</a>',
+    '<a href="http://www.amazon.com/" onclick="'+str_t+'" target=_blank>Amazon.com</a>',
+    '<a href="http://www.virustotal.com/" onclick="'+str_t+'" target=_blank>VirusTotal</a>',
+    '<a href="http://www.virscan.org/language/en/" onclick="'+str_t+'" target=_blank>VirSCAN.org</a>',
+
     ];
 
     document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗨','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_fill,'✏','29rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','33rem','1rem','1rem','60rem'),'','0rem')+' ');

@@ -8,291 +8,101 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Thu, 08 Oct 2026 09:00:37 +0800</lastBuildDate>
-<item><title>Rubio says US, Greece to jointly combat security threats - Defense News</title><link>https://www.defensenews.com/global/europe/2026/10/07/rubio-says-us-greece-to-jointly-combat-security-threats/</link></item>
-<item><title>Embraer, Lockheed Martin vie for India’s $10.5B military transport aircraft deal - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/10/07/embraer-lockheed-martin-vie-for-indias-105b-military-transport-aircraft-deal/</link></item>
-<item><title>It’s official: US Army’s improved M8 rifle to begin fielding in December - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/10/06/its-official-us-armys-improved-m8-rifle-to-begin-fielding-in-december/</link></item>
-<item><title>Pentagon names 4 directed-energy weapons for counter-drone program at US bases - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/10/06/pentagon-names-4-directed-energy-weapons-for-counter-drone-program-at-us-bases/</link></item>
-<item><title>France fires upgraded nuclear-capable missile from submarine for first time - Defense News</title><link>https://www.defensenews.com/global/europe/2026/10/06/france-fires-upgraded-nuclear-capable-missile-from-submarine-for-first-time/</link></item>
-<item><title>Northrop Grumman’s YFQ-48A CCA completes first fully autonomous flight - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/10/06/northrop-grummans-yfq-48a-cca-completes-first-fully-autonomous-flight/</link></item>
-<item><title>Anduril, US Navy invest $6.6 billion to boost submarine parts production - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/10/06/anduril-us-navy-invest-66-billion-to-boost-submarine-parts-production/</link></item>
-<item><title>Lithuania says it would pay the cost if US establishes military base - Defense News</title><link>https://www.defensenews.com/global/europe/2026/10/06/lithuania-says-it-would-pay-the-cost-if-us-establishes-military-base/</link></item>
-<item><title>Integrating Electronics With Human Cells - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/07/integrating-electronics-with-human-cells/</link></item>
-<item><title>The Hexa-Bouncer ball juggling robot - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/07/the-hexa-bouncer-ball-juggling-robot/</link></item>
-<item><title>Easy Flash: Flash your ESP32 from the browser - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/07/easy-flash-flash-your-esp32-from-the-browser/</link></item>
-<item><title>🛸Stand By As We Beam Into Another… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/01/%f0%9f%9b%b8stand-by-as-we-beam-into-another-electronichalloween/</link></item>
-<item><title>Shipping Alert: Indigenous Peoples’ Day – Monday, October 12 - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/07/shipping-alert-indigenous-peoples-day-monday-october-12/</link></item>
-<item><title>scientific research - Adafruit Industries</title><link>https://blog.adafruit.com/tag/scientific-research/</link></item>
-<item><title>ball juggler - Adafruit Industries</title><link>https://blog.adafruit.com/tag/ball-juggler/</link></item>
-<item><title>Enigma: the machine and its history - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/07/enigma-the-machine-and-its-history/</link></item>
-<item><title>A Pi-hole-class DNS ad-blocker on an ESP32-C3 (no PSRAM) - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/07/a-pi-hole-class-dns-ad-blocker-on-an-esp32-c3-no-psram/</link></item>
-<item><title>Watch Vectrex Doom via the UVMC2 Multicart - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/07/watch-vectrex-doom-via-the-uvmc2-multicart/</link></item>
-<item><title>OFFgrid-SDR: make your own RTL USB HTML SDR radio - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/07/offgrid-sdr-make-your-own-rtl-usb-html-sdr-radio/</link></item>
-<item><title>I hired an illustrator to draw my house. Now it’s my Home Assistant dashboard - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/07/i-hired-an-illustrator-to-draw-my-house-now-its-my-home-assistant-dashboard/</link></item>
-<item><title>Automating a 35mm film scanning pipeline - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/07/automating-a-35mm-film-scanning-pipeline/</link></item>
-<item><title>A terminal monitor for SDR hardware – written in Rust - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/07/a-terminal-monitor-for-sdr-hardware-written-in-rust/</link></item>
-<item><title>Niklas Roy – the Glashütte Trash Clock  #ArtTuesday - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/07/niklas-roy-the-glashutte-trash-clock-arttuesday/</link></item>
-<item><title>velo-emu: a not-so-faithful emulation of the Philips Velo 1 - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/07/velo-emu-a-not-so-faithful-emulation-of-the-philips-velo-1/</link></item>
-<item><title>DOOM on a plotter and a YouTube forgery machine - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/07/doom-on-a-plotter-and-a-youtube-forgery-machine/</link></item>
-<item><title>handwriting - Adafruit Industries</title><link>https://blog.adafruit.com/tag/handwriting/</link></item>
-<item><title>pen plotters - Adafruit Industries</title><link>https://blog.adafruit.com/tag/pen-plotters/</link></item>
-<item><title>Windows 95 running on an ESP32-P4, a tiny386 port - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/07/windows-95-running-on-an-esp32-p4-a-tiny386-port/</link></item>
-<item><title>When data shows that everything causes cancer - FlowingData</title><link>https://flowingdata.com/2026/10/07/when-data-shows-that-everything-causes-cancer/</link></item>
-<item><title>Breakthrough Institute - FlowingData</title><link>https://flowingdata.com/tag/breakthrough-institute/</link></item>
-<item><title>Beliefs in life after death - FlowingData</title><link>https://flowingdata.com/2026/10/06/beliefs-in-life-after-death/</link></item>
-<item><title>teenage adversity - FlowingData</title><link>https://flowingdata.com/2024/04/15/teenage-adversity-that-carries-into-adulthood/</link></item>
-<item><title>Exposure to tariffs in Canada - FlowingData</title><link>https://flowingdata.com/2026/10/06/exposure-to-tariffs-in-canada/</link></item>
-<item><title>School of Cities - FlowingData</title><link>https://flowingdata.com/tag/school-of-cities/</link></item>
-<item><title>troubleshooting documentation - Gizmodo</title><link>https://gizmodo.com/cdn-cgi/challenge-platform/help</link></item>
-<item><title>The Skydance Era - Variety</title><link>https://variety.com/t/skydance/</link></item>
-<item><title>Ben Affleck Explains It All - Variety</title><link>https://variety.com/2026/film/features/ben-affleck-interview-animals-batman-movie-stars-damon-1236899199/</link></item>
-<item><title>‘The Social Reckoning’ Review - Variety</title><link>https://variety.com/2026/film/reviews/the-social-reckoning-review-1236904146/</link></item>
-<item><title>Wall Street Skittish on Skydance as Stock Drops Further Post-Merger - Variety</title><link>https://variety.com/2026/biz/news/wall-street-skittish-skydance-stock-drops-1236904389/</link></item>
-<item><title>By Corbin Bolies - Variety</title><link>https://variety.com/author/corbin-bolies/</link></item>
-<item><title>Disney+ Will Stream 2027 Super Bowl - Variety</title><link>https://variety.com/2026/tv/news/disney-plus-streaming-super-bowl-lxi-2027-1236904265/</link></item>
-<item><title>‘Michael’ Sequel to Get $31 Million in California Tax Credits - Variety</title><link>https://variety.com/2026/film/news/michael-2-california-tax-credits-1236903912/</link></item>
-<item><title>‘Carrie’ Review - Variety</title><link>https://variety.com/2026/tv/reviews/carrie-review-prime-video-1236897690/</link></item>
-<item><title>Jessica Biel to Play Hugh Hefner’s Wife in ‘Playmates’ Movie for Searchlight - Variety</title><link>https://variety.com/2026/film/news/jessica-biel-playmates-movie-hugh-hefner-wife-1236902521/</link></item>
-<item><title>AI Film &amp;#39;Gods Don&amp;#39;t Give Gifts&amp;#39; Sets First Trailer for December Theatrical Run, Plans Oscar Bid for Best Animated Feature - Variety</title><link>https://variety.com/2026/film/news/ai-film-gods-dont-give-gifts-sets-trailer-plans-oscar-bid-1236897843/</link></item>
-<item><title>Glen Powell Is Staying Quiet on Politics Because ‘I Do Not Like the Discourse,’ Says ‘Running Man’ Flopped After Paramount Laid Off ‘Entire Marketing… - Variety</title><link>https://variety.com/2026/film/news/glen-powell-politics-interviews-running-man-flop-1236904266/</link></item>
-<item><title>Skeet Ulrich Says His &amp;#39;Scream&amp;#39; Arc Couldn&amp;#39;t Be Completed After Melissa Barrera’s Firing: &amp;#39;There&amp;#39;s No Billy Loomis&amp;#39; Without Her - Variety</title><link>https://variety.com/2026/film/news/skeet-ulrich-scream-melissa-barrera-1236903923/</link></item>
-<item><title>Ben Affleck and Matt Damon’s Artists Equity Launches New Indie Banner: Artists Equity Independent Pictures (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/news/ben-affleck-matt-damons-artists-equity-independent-pictures-1236903388/</link></item>
-<item><title>Eva Marie Saint, ‘North by Northwest’ Star, Dies at 102 - Variety</title><link>https://variety.com/2026/film/news/eva-marie-saint-dead-north-by-northwest-1236903677/</link></item>
-<item><title>Jay-Z, Megan Thee Stallion, Keke Palmer, Gina Prince-Bythewood and NY Knicks Champs Named to Ebony Power 100 List (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/scene/news/ebony-power-100-jay-z-keke-palmer-ny-knicks-1236894919/</link></item>
-<item><title>Megyn Kelly Tells Olivia Rodrigo to &amp;#39;Stick to Singing&amp;#39; After Speaking Out About Cornell 7 Case: &amp;#39;You Don&amp;#39;t Know What the F— You&amp;#39;re Talking… - Variety</title><link>https://variety.com/2026/music/news/megyn-kelly-slams-olivia-rodrigo-cornell-7-1236903939/</link></item>
-<item><title>‘Rose’ Producer Rolls With Psychological Family Drama ‘The Shame of the Borbély Family,’ Directed by Kálmán Nagy (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/global/the-shame-of-the-borbely-family-kalman-nagy-1236904460/</link></item>
-<item><title>‘All’s Fair’ Sets Season 2 Release Date, Drops Decadent First Trailer - Variety</title><link>https://variety.com/2026/tv/news/alls-fair-season-2-release-date-trailer-1236904415/</link></item>
-<item><title>Sundance-Winning Producer Neeraj Churi Boards Awedacious Originals’ Busan Title ‘About an Intimate Matter’ (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/festivals/sundance-cactus-pears-producer-bengali-queer-drama-busan-1236904999/</link></item>
-<item><title>‘Star Wars: Galactic Racer’ Debuts on Amazon Luna Day and Date With Wide Release (Gaming News Roundup) - Variety</title><link>https://variety.com/2026/gaming/news/gaming-news-roundup-october-5-1236899234/</link></item>
-<item><title>Toby Emmerich to Consult for FilmNation’s Production Label Infrared - Variety</title><link>https://variety.com/2026/film/news/toby-emmerich-consult-filmnation-infrared-1236904481/</link></item>
-<item><title>Disney Cruise Ship Believe to Debut ‘Encanto’ Musical, ‘Frozen’ Family Feast and More - Variety</title><link>https://variety.com/2026/biz/news/disney-ship-believe-encanto-musical-frozen-1236905011/</link></item>
-<item><title>Payal Kapadia, Anurag Kashyap Joined by Kavita Gupta’s Cineroost as Producer on Prateek Vats’ ‘Chronicles of a Confession’ (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/markets-festivals/payal-kapadia-anurag-kashyap-kavita-gupta-prateek-vats-chronicles-of-a-confession-1236905094/</link></item>
-<item><title>‘Marshals’ Star Luke Grimes Says He Hasn’t Spoken to ‘Yellowstone’ Co-Star Kevin Costner ‘Since We Stopped Working Together’ - Variety</title><link>https://variety.com/2026/tv/news/marshals-luke-grimes-kevin-costner-yellowstone-1236905016/</link></item>
-<item><title>Charlamagne tha God on Mental Health, Social Media and Prioritizing Real-Life Connection: ‘You Got to Constantly Weed Out Your Garden’ - Variety</title><link>https://variety.com/2026/biz/news/charlamagne-tha-god-mental-health-real-life-connection-1236904652/</link></item>
-<item><title>Miles Teller to Be Honored by Newport Beach Film Festival (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/awards/miles-teller-honored-newport-beach-film-festival-paper-tiger-1236904354/</link></item>
-<item><title>‘Carrie’ Star Samantha Sloyan on Modernizing an Iconic Evil Mom, Playing a Character Who ‘Chooses Violence’ and Being Mike Flanagan’s Secret Weapon - Variety</title><link>https://variety.com/2026/tv/features/carrie-mom-samantha-sloyan-evil-mike-flanagan-series-1236899761/</link></item>
-<item><title>‘Ted Lasso’ Star and EP Brendan Hunt on the Season 4 Finale’s Surprise Job Changes, and Whether There Will Be a Season 5 - Variety</title><link>https://variety.com/2026/tv/news/ted-lasso-finale-explained-brendan-hunt-season-5-1236904697/</link></item>
-<item><title>Early Oscar Predictions - Variety</title><link>https://variety.com/lists/2027-oscars-predictions/</link></item>
-<item><title>Mike Leigh&amp;#39;s &amp;#39;Tender Loving Care&amp;#39; to Compete as Comedy at Golden Globes (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/awards/tender-loving-care-golden-globes-comedy-mike-leigh-1236899279/</link></item>
-<item><title>Tom Cruise Is the Last Great Movie Star Still Chasing His Oscar. Can He Overcome ‘Digger’ Reviews to Get There? - Variety</title><link>https://variety.com/2026/film/awards/tom-cruise-digger-oscars-chances-best-actor-1236872532/</link></item>
-<item><title>5 Things the Fall Festivals Told Us About the Oscar Race, From Julianne Moore and John Malkovich to ‘La Bola Negra’ and ‘I Play Rocky… - Variety</title><link>https://variety.com/2026/film/awards/fall-festivals-oscars-2027-takeaways-moore-malkovich-1236870575/</link></item>
-<item><title>PlayStation to Launch New Crunchyroll Anime Hub for PS5 - Variety</title><link>https://variety.com/2026/gaming/news/playstation-ps5-new-crunchyroll-anime-hub-1236904550/</link></item>
-<item><title>Vancouver Builds in Sophistication, Breadth as World-Class Animation Hub, as Netflix Animation Studios Launch and Leah Nelson Dazzles With &amp;#39;Tangles&amp;#39; - Variety</title><link>https://variety.com/2026/artisans/global/vancouver-animation-hub-netflix-leah-nelson-tangles-1236904665/</link></item>
-<item><title>London Film Festival Hails the ‘Great Andrew Scott’ as ‘Elsinore’ Opens 70th Edition With Tears, Cheers and ‘The Ethel Merman Disco Album… - Variety</title><link>https://variety.com/2026/film/global/andrew-scott-elsinore-opens-london-film-festival-1236904258/</link></item>
-<item><title>Olivia vs. Olivia: Predicting the Grammys’ Album of the Year Contenders… and Why Rodrigo and Dean Are at the Front of the Race - Variety</title><link>https://variety.com/2026/music/news/grammy-album-of-year-2027-nominations-predictions-olivia-1236904555/</link></item>
-<item><title>Aerosmith Returns With Two Concerts at the Hollywood Bowl — Two Years After Announcing Retirement From Touring - Variety</title><link>https://variety.com/2026/music/news/aerosmith-returns-two-shows-hollywood-bowl-retirement-1236904642/</link></item>
-<item><title>‘Dick Clark’s New Year’s Rockin’ Eve With Ryan Seacrest’ to Simulcast on Both ABC and Disney+ for the First Time - Variety</title><link>https://variety.com/2026/tv/news/dick-clark-new-years-rockin-eve-simulcast-disney-plus-abc-1236904595/</link></item>
-<item><title>‘Ted Lasso’ Theme Song Switch: Why Brandi Carlile Took Over for Marcus Mumford in Season 4 Finale — and Is It a Permanent Change? - Variety</title><link>https://variety.com/2026/tv/news/ted-lasso-theme-song-brandi-carlile-marcus-mumford-finale-1236904456/</link></item>
-<item><title>Joan Jett and the Blackhearts Announce &amp;#39;I Love Rock &amp;#39;N Roll&amp;#39; Anniversary Edition, Including Previously Unreleased &amp;#39;Shadow Album&amp;#39; - Variety</title><link>https://variety.com/2026/music/news/joan-jett-i-love-rock-n-roll-anniversary-edition-1236904351/</link></item>
-<item><title>‘Dirty Dancing: The Musical’ Sets 2027 Broadway Run - Variety</title><link>https://variety.com/2026/legit/news/dirty-dancing-the-musical-broadway-run-1236899887/</link></item>
-<item><title>André DeShields, Brandon Dirden, Jasmine Cephas Jones and Cheryl Wills Named AAFCA Goes to Broadway Honorees (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/legit/news/aafca-broadway-luncheon-andre-deshields-brandon-dirden-jasmine-cephas-jones-cheryl-wills-1236899466/</link></item>
-<item><title>Rachel Zegler Recalls Her ‘Evita’ Audition While Starring on Broadway in ‘Romeo + Juliet’: ‘I Sang 40 Pages of Material… - Variety</title><link>https://variety.com/2026/legit/news/rachel-zegler-evita-broadway-audition-1236899263/</link></item>
-<item><title>&amp;#39;A Few Good Men&amp;#39; on Broadway: Aaron Sorkin, Bradley Whitford and Team Behind Revival on Why It&amp;#39;s &amp;#39;So Fucking Relevant&amp;#39; in Trump Era - Variety</title><link>https://variety.com/2026/legit/news/a-few-good-men-aaron-sorkin-bradley-whitford-broadway-1236878406/</link></item>
-<item><title>Live Entertainment Technology Company Esk Targets North American Growth With Two New Execs (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/global/news/live-entertainment-technology-esk-1236897229/</link></item>
-<item><title>‘Heated Rivalry,’ ‘The Pitt’ and ‘The Diplomat’ Lead Artios Awards Nominations - Variety</title><link>https://variety.com/2026/artisans/news/casting-socitey-artios-awards-nominations-2027-1236903909/</link></item>
-<item><title>‘Behemoth!’: Why Tony Gilroy Needed Nine Composers to Score His Latest Film, and a Guide to Who Did What in the Film (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/artisans/news/behemoth-who-are-nine-composers-tony-gilroy-1236893524/</link></item>
-<item><title>‘The Social Reckoning’ Soundtrack Features New Music From Composer Alexandre Desplat - Variety</title><link>https://variety.com/2026/artisans/news/social-reckoning-soundtrack-alexandre-desplat-1236894173/</link></item>
-<item><title>Searchlight Submits Original Song From &amp;#39;Behemoth!&amp;#39; for Oscars, ‘Your God Is Sleeping’ Written by Lukas Frank (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/artisans/news/oscars-song-behemoth-your-god-is-sleeping-lukas-frank-1236893978/</link></item>
-<item><title>Dewayne Perkins to Launch ‘I Swear We’re Friends,’ New Digital ‘Skitcom’ on YouTube (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/digital/news/dewayne-perkins-youtube-series-i-swear-were-friends-1236902523/</link></item>
-<item><title>Movie Theaters Add New York Times Games to Pre-Show Experience (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/gaming/news/nyt-games-movie-theaters-screenvision-deal-1236904581/</link></item>
-<item><title>As New York Comic Con Turns 20, Organizer Teases Coney Island Team-Up, After 3 p.m. Ticket and Possibility of Expanding to Five Days Next Year - Variety</title><link>https://variety.com/2026/tv/news/new-york-comic-con-20th-anniversary-schedule-panels-events-1236903255/</link></item>
-<item><title>Andrew Garfield Stopped Using ChatGPT as a ‘Fancy Google’ After Playing Sam Altman in &amp;#39;Artificial&amp;#39;: &amp;#39;I Got a Bit Scared&amp;#39; and &amp;#39;Mistrusting of the… - Variety</title><link>https://variety.com/2026/film/news/andrew-garfield-chatgpt-sam-altman-artificial-1236904494/</link></item>
-<item><title>Crunchyroll&amp;#39;s Inaugural Anime Future Forum Brings Anime Together for Day of Thought Leadership - Variety</title><link>https://variety.com/2026/biz/news/crunchyroll-anime-future-forum-1236897800/</link></item>
-<item><title>Marisa Tomei and Rosanna Arquette to Star in ‘This Is Crazy’ NAMI Benefit in Memory of Chris Huvane - Variety</title><link>https://variety.com/2026/film/columns/marisa-tomei-rosanna-arquette-this-is-crazy-nami-chris-huvane-1236899152/</link></item>
-<item><title>Sebastian Stan Challenges Audiences to Question Their Own &amp;#39;Belief Systems&amp;#39; at &amp;#39;Fjord&amp;#39; Premiere: &amp;#39;There&amp;#39;s More to Just Simply Being Right&amp;#39; - Variety</title><link>https://variety.com/2026/film/news/sebastian-stan-fjord-question-belief-systems-nyff-1236899165/</link></item>
-<item><title>Donald Trump Praises Newly Merged Paramount-Warner Bros.: ‘They’re Terrific People, and It’s Gonna Be a Great Company’ - Variety</title><link>https://variety.com/2026/tv/news/trump-praises-paramount-warner-bros-skydance-merger-terrific-people-1236903643/</link></item>
-<item><title>Mark Ruffalo Tells Trump ‘Hands Off Our F—ing Vote’ or ‘I’m Gonna Hulk Out’: ‘You Won’t Like Me When I’m Angry… - Variety</title><link>https://variety.com/2026/film/news/mark-ruffalo-slams-trump-voting-rights-hulk-out-1236898975/</link></item>
-<item><title>Tony Gilroy Says Paramount-Warner Bros. Merger Will &amp;#39;Destroy&amp;#39; a &amp;#39;Healthy and Beautiful Business&amp;#39; in &amp;#39;The Name of Venture Capital&amp;#39;: &amp;#39;It&amp;#39;s Tragic&amp;#39; - Variety</title><link>https://variety.com/2026/film/news/tony-gilroy-paramount-warner-bros-merger-behemoth-nyff-1236898132/</link></item>
-<item><title>Ben Affleck’s ‘Animals’ Cast Wants Him to Run for Office: ‘Maybe They Hate Me’ - Variety</title><link>https://variety.com/2026/politics/columns/ben-afflecks-why-wont-run-poiltical-office-animals-1236897296/</link></item>
-<item><title>White House’s New AI Website Confirms Trump Lost the 2020 Presidential Election - Variety</title><link>https://variety.com/2026/digital/news/trump-new-ai-website-lost-2020-presidential-election-1236878291/</link></item>
-<item><title>Pete Davidson Grows Up: On Leaving ‘SNL,’ Famous Exes, the Joys of Fatherhood and Why He’s Keeping His Hillary Clinton Tattoo - Variety</title><link>https://variety.com/2026/film/features/pete-davidson-interview-ariana-grande-kim-kardashian-fatherhood-1236877622/</link></item>
-<item><title>‘It’s Time for My Voice’: Jennifer Hudson on Reviving ‘Dreamgirls,’ Booking Tom Cruise for Her Talk Show and Writing Original Music Again - Variety</title><link>https://variety.com/2026/music/features/jennifer-hudson-dreamgirls-tom-cruise-interview-new-music-1236860402/</link></item>
-<item><title>Pirate App MovieBox Passes 300 Million Downloads as Rightsholders Alert EU - TorrentFreak</title><link>https://torrentfreak.com/pirate-app-moviebox-passes-300-million-downloads-as-rightsholders-alert-eu/</link></item>
-<item><title>Denuvo Asks Court to Unmask Game Cracker ‘voices38’, Reveals Crypto Transactions - TorrentFreak</title><link>https://torrentfreak.com/denuvo-asks-court-to-unmask-game-cracker-voices38-reveals-crypto-transactions/</link></item>
-<item><title>Anthropic 举报了与 Claude 聊天中发出威胁的佛罗里达女子 - Solidot</title><link>https://www.solidot.org/story?sid=85542</link></item>
-<item><title>2026 年诺贝尔物理奖授予了冰立方中微子天文台提出者 Francis Halzen - Solidot</title><link>https://www.solidot.org/story?sid=85541</link></item>
-<item><title>俄罗斯女研究员因感染肺鼠疫死亡 - Solidot</title><link>https://www.solidot.org/story?sid=85540</link></item>
-<item><title>韩喜平 王斯羽：毛泽东对东北的战 - 爱思想</title><link>https://www.aisixiang.com/data/183547.html</link></item>
-<item><title>黄道炫：关山初度：七十年来的中共 - 爱思想</title><link>https://www.aisixiang.com/data/183578.html</link></item>
-<item><title>王勇：我国当前的宏观经济形势与四 - 爱思想</title><link>https://www.aisixiang.com/data/183592.html</link></item>
-<item><title>习近平：加强普惠性、基础性、兜底 - 爱思想</title><link>https://www.aisixiang.com/data/183557.html</link></item>
-<item><title>黄宗智：武侠小说和我的人生 - 爱思想</title><link>https://www.aisixiang.com/data/183548.html</link></item>
-<item><title>巫新华：天山也是昆仑 —— 从名 - 爱思想</title><link>https://www.aisixiang.com/data/183556.html</link></item>
-<item><title>顾正龙：俄乌冲突出现新的转折 - 爱思想</title><link>https://www.aisixiang.com/data/183577.html</link></item>
-<item><title>陈剑：民本社会主义，十个为什么？ - 爱思想</title><link>https://www.aisixiang.com/data/183544.html</link></item>
-<item><title>杨光斌 李欢：组织化程度与国家兴 - 爱思想</title><link>https://www.aisixiang.com/data/183549.html</link></item>
-<item><title>湛中乐：中国教育法学理论体系和学 - 爱思想</title><link>https://www.aisixiang.com/data/183582.html</link></item>
-<item><title>田飞龙：中国式现代化的变局背景与 - 爱思想</title><link>https://www.aisixiang.com/data/183574.html</link></item>
-<item><title>陈刚：激活向海经济新引擎 - 爱思想</title><link>https://www.aisixiang.com/data/183567.html</link></item>
-<item><title>蓝佛安：精准有效实施更加积极的财 - 爱思想</title><link>https://www.aisixiang.com/data/183566.html</link></item>
-<item><title>李斌：新中国成立以来的文化遗产保 - 爱思想</title><link>https://www.aisixiang.com/data/183765.html</link></item>
-<item><title>廖茂林：协同推进首都都市圈生态文 - 爱思想</title><link>https://www.aisixiang.com/data/183683.html</link></item>
-<item><title>冯学钢：文化遗产的系统性保护 - 爱思想</title><link>https://www.aisixiang.com/data/183674.html</link></item>
-<item><title>卢琦：中国荒漠化治理成效与展望 - 爱思想</title><link>https://www.aisixiang.com/data/183657.html</link></item>
-<item><title>王琦 郭刚：中医原创思维的方法论 - 爱思想</title><link>https://www.aisixiang.com/data/183593.html</link></item>
-<item><title>张岂之：关于中华文化走向的思考 - 爱思想</title><link>https://www.aisixiang.com/data/183585.html</link></item>
-<item><title>楼宇烈：中国哲学与中医 - 爱思想</title><link>https://www.aisixiang.com/data/183572.html</link></item>
-<item><title>崔唯航：以文化赋能经济社会发展的 - 爱思想</title><link>https://www.aisixiang.com/data/183494.html</link></item>
-<item><title>方世南：全面推进美丽中国建设的根 - 爱思想</title><link>https://www.aisixiang.com/data/183460.html</link></item>
-<item><title>付朝霞：健全美丽中国建设全民行动 - 爱思想</title><link>https://www.aisixiang.com/data/183454.html</link></item>
-<item><title>张志强：文化必须有自己的主体性 - 爱思想</title><link>https://www.aisixiang.com/data/183387.html</link></item>
-<item><title>刘晓哲：思想伟力激发文化创新创造 - 爱思想</title><link>https://www.aisixiang.com/data/183372.html</link></item>
-<item><title>王枫：“两山”理念引领美丽中国建 - 爱思想</title><link>https://www.aisixiang.com/data/183369.html</link></item>
-<item><title>刘丹：确立正确琉球史观紧迫性凸显 - 爱思想</title><link>https://www.aisixiang.com/data/183196.html</link></item>
-<item><title>商志晓：新时代中国特色社会主义文 - 爱思想</title><link>https://www.aisixiang.com/data/183118.html</link></item>
-<item><title>李莹：守护长空精灵最美的模样 - 爱思想</title><link>https://www.aisixiang.com/data/183111.html</link></item>
-<item><title>意娜：以积极的文化经济政策激发文 - 爱思想</title><link>https://www.aisixiang.com/data/183087.html</link></item>
-<item><title>巢清尘：气候变化趋势下我国灾害防 - 爱思想</title><link>https://www.aisixiang.com/data/183702.html</link></item>
-<item><title>汤涛院士：让年轻人成为中国数学发 - 爱思想</title><link>https://www.aisixiang.com/data/183595.html</link></item>
-<item><title>胡明艳：让科学家精神照亮科技强国 - 爱思想</title><link>https://www.aisixiang.com/data/183589.html</link></item>
-<item><title>褚洪斌：科学应对地下水位快速回升 - 爱思想</title><link>https://www.aisixiang.com/data/183530.html</link></item>
-<item><title>曾毅：防范前沿人工智能技术失控风 - 爱思想</title><link>https://www.aisixiang.com/data/183529.html</link></item>
-<item><title>韩军徽：怎样加强基础研究这个创新 - 爱思想</title><link>https://www.aisixiang.com/data/183493.html</link></item>
-<item><title>加快建设新时代高水平工程科学技术 - 爱思想</title><link>https://www.aisixiang.com/data/183430.html</link></item>
-<item><title>朱培蕾：做好科技管理的“加法”与 - 爱思想</title><link>https://www.aisixiang.com/data/183414.html</link></item>
-<item><title>时俊杰：阻力伞与拦阻网：战机起降 - 爱思想</title><link>https://www.aisixiang.com/data/183394.html</link></item>
-<item><title>钟华：为人民出政绩 以实干出政绩 - 爱思想</title><link>https://www.aisixiang.com/data/183374.html</link></item>
-<item><title>当AI拥有“肉身”：具身智能的发 - 爱思想</title><link>https://www.aisixiang.com/data/183219.html</link></item>
-<item><title>王小理：人工智能与生命科学的交叉 - 爱思想</title><link>https://www.aisixiang.com/data/183186.html</link></item>
-<item><title>刘尊敬：脑出血不是“老年病”，这 - 爱思想</title><link>https://www.aisixiang.com/data/183113.html</link></item>
-<item><title>胡晓鹏：深化拓展“人工智能+”的 - 爱思想</title><link>https://www.aisixiang.com/data/183053.html</link></item>
-<item><title>韩钢 侯昂妤：中国工农红军长征的经过及意义 - 爱思想</title><link>https://www.aisixiang.com/data/183761.html</link></item>
-<item><title>田轩：金融赋能新质生产力培育的作用机制 - 爱思想</title><link>https://www.aisixiang.com/data/183754.html</link></item>
-<item><title>余永定：“投资于人”与宏观经济调控的协同路径探析 - 爱思想</title><link>https://www.aisixiang.com/data/183736.html</link></item>
-<item><title>徐秀军 田旭：世界现代化的开放逻辑及关系转向 - 爱思想</title><link>https://www.aisixiang.com/data/183734.html</link></item>
-<item><title>巫新华：中国中央造山带与昆仑山系的地理与历史逻辑耦合 - 爱思想</title><link>https://www.aisixiang.com/data/183711.html</link></item>
-<item><title>崔建远：三论违约损害赔偿的范围及计算——以土地增值的归属为题 - 爱思想</title><link>https://www.aisixiang.com/data/183739.html</link></item>
-<item><title>夏沁：承包地调整的权利配置与规范展开——以第二轮承包到期后再延长三十年的延包政策为视角 - 爱思想</title><link>https://www.aisixiang.com/data/183738.html</link></item>
-<item><title>钱叶六：不法原因给付与财产犯罪的认定——基于刑民关系的思考 - 爱思想</title><link>https://www.aisixiang.com/data/183737.html</link></item>
-<item><title>梁根林：防卫过当类型的教义学建构 - 爱思想</title><link>https://www.aisixiang.com/data/183735.html</link></item>
-<item><title>孙国祥：斡旋受贿实行行为研究——以贪污贿赂司法解释（二）第13条为视角 - 爱思想</title><link>https://www.aisixiang.com/data/183733.html</link></item>
-<item><title>曹林：用足数智红利发展现代服务业 - 爱思想</title><link>https://www.aisixiang.com/data/183763.html</link></item>
-<item><title>陈剑：民本社会主义国有企业理论：超越传统范式的全新探索 - 爱思想</title><link>https://www.aisixiang.com/data/183728.html</link></item>
-<item><title>张立：持续做大做强先进制造业 - 爱思想</title><link>https://www.aisixiang.com/data/183710.html</link></item>
-<item><title>张晓萌：用系统思维科学方法推进管党治党 - 爱思想</title><link>https://www.aisixiang.com/data/183766.html</link></item>
-<item><title>李红权：廉洁基因蕴含的政治智慧及其转化 - 爱思想</title><link>https://www.aisixiang.com/data/183750.html</link></item>
-<item><title>陈立夫 张长东：从革命传统到当代治理：中国共产党治理传统的当代转化 - 爱思想</title><link>https://www.aisixiang.com/data/183726.html</link></item>
-<item><title>虞昊 吴冠军：数智时代的全过程人民民主： 一个技术政治学视角 - 爱思想</title><link>https://www.aisixiang.com/data/183717.html</link></item>
-<item><title>海洋命运共同体视域下的全球海洋治理 - 爱思想</title><link>https://www.aisixiang.com/data/183764.html</link></item>
-<item><title>张梦婷：“欧盟制造”边界之争折射欧洲产业政策难题 - 爱思想</title><link>https://www.aisixiang.com/data/183758.html</link></item>
-<item><title>徐瑞珂：英国试探“重返欧盟” - 爱思想</title><link>https://www.aisixiang.com/data/183757.html</link></item>
-<item><title>田飞龙：中菲海洋斗争与南海地缘法律战的升级 - 爱思想</title><link>https://www.aisixiang.com/data/183756.html</link></item>
-<item><title>贺文萍 杨玉鑫：从尼罗河到红海，纷争因何而起 - 爱思想</title><link>https://www.aisixiang.com/data/183755.html</link></item>
-<item><title>董磊明：间质型社会：中国乡村社会转型的类型学阐释与理论建构 - 爱思想</title><link>https://www.aisixiang.com/data/183623.html</link></item>
-<item><title>郑功成：社会保障如何更好保障民生 - 爱思想</title><link>https://www.aisixiang.com/data/183579.html</link></item>
-<item><title>李常官：办好关系民生连着民心的好事实事 - 爱思想</title><link>https://www.aisixiang.com/data/183564.html</link></item>
-<item><title>夯实中国式现代化的民生根基 - 爱思想</title><link>https://www.aisixiang.com/data/183563.html</link></item>
-<item><title>周锐：记录“赛考斯”：探索以人为桥的国际传播 - 爱思想</title><link>https://www.aisixiang.com/data/183725.html</link></item>
-<item><title>孙剑：媒介即观念：趋势研究与治理革新 - 爱思想</title><link>https://www.aisixiang.com/data/183720.html</link></item>
-<item><title>王伟：流量何以重塑主流价值叙事：短视频价值表达的结构性偏移 - 爱思想</title><link>https://www.aisixiang.com/data/183719.html</link></item>
-<item><title>万安伦 王剑飞：论中国雕版印刷术的三源头 - 爱思想</title><link>https://www.aisixiang.com/data/183662.html</link></item>
-<item><title>李琦 陈重黎：主体自塑、现代改造与可见性突围：中国乡土数字叙事的跨文化传播机制 - 爱思想</title><link>https://www.aisixiang.com/data/183632.html</link></item>
-<item><title>李海鹏：跨学科推进大中小学国家安全教育的思考 - 爱思想</title><link>https://www.aisixiang.com/data/183760.html</link></item>
-<item><title>李晓强：提升学生科学素养 夯实教育强国建设人才根基 - 爱思想</title><link>https://www.aisixiang.com/data/183747.html</link></item>
-<item><title>吴毅：锚定育人实效，做“活”高校理论宣讲 - 爱思想</title><link>https://www.aisixiang.com/data/183746.html</link></item>
-<item><title>高潇怡 刘天伟：推动高校科技通识课从“有”到“优” - 爱思想</title><link>https://www.aisixiang.com/data/183745.html</link></item>
-<item><title>蒋钦 王文静：构建协同成长机制，提升思政教师数智素养 - 爱思想</title><link>https://www.aisixiang.com/data/183744.html</link></item>
-<item><title>徐雁平：古代文学研究的“家本位” - 爱思想</title><link>https://www.aisixiang.com/data/183753.html</link></item>
-<item><title>尧育飞：家族旧物与明清文学扩容 - 爱思想</title><link>https://www.aisixiang.com/data/183752.html</link></item>
-<item><title>卢坡：桐城麻溪姚氏文学家族的建构 - 爱思想</title><link>https://www.aisixiang.com/data/183751.html</link></item>
-<item><title>吴泰松：非遗题材书写的有效路径 - 爱思想</title><link>https://www.aisixiang.com/data/183743.html</link></item>
-<item><title>张陵：探寻乡村文化振兴的“门道” - 爱思想</title><link>https://www.aisixiang.com/data/183742.html</link></item>
-<item><title>张世贵：长征时期党的廉洁纪律建设及启示 - 爱思想</title><link>https://www.aisixiang.com/data/183759.html</link></item>
-<item><title>陈剑：文革半个世纪十条教训总结 - 爱思想</title><link>https://www.aisixiang.com/data/183727.html</link></item>
-<item><title>王锐：将“历史属性”与“思想属性”有机结合——关于推进中国近代思想史研究的思考 - 爱思想</title><link>https://www.aisixiang.com/data/183723.html</link></item>
-<item><title>葛四友：一个成都出生的哲学家，如何改写了我们谈论自我与未来的方式 - 爱思想</title><link>https://www.aisixiang.com/data/183762.html</link></item>
-<item><title>张广保：续《六经》与河汾道统：文中子王通的新经学 - 爱思想</title><link>https://www.aisixiang.com/data/183749.html</link></item>
-<item><title>邵佳德：中国哲学中的“变”与“化” - 爱思想</title><link>https://www.aisixiang.com/data/183748.html</link></item>
-<item><title>王博：如何读《庄子》之一般读书之法 - 爱思想</title><link>https://www.aisixiang.com/data/183731.html</link></item>
-<item><title>郑治文：荀子对儒家之“礼”的转化与创新 - 爱思想</title><link>https://www.aisixiang.com/data/183721.html</link></item>
-<item><title>凌海成：五石斋余旧梦痕——邓之诚先生书斋琐忆 - 爱思想</title><link>https://www.aisixiang.com/data/183730.html</link></item>
-<item><title>白奚：怀念刘笑敢教授兼及其学术贡献二三例 - 爱思想</title><link>https://www.aisixiang.com/data/183699.html</link></item>
-<item><title>陈寅恪：徐高阮重刊洛阳伽蓝记序 - 爱思想</title><link>https://www.aisixiang.com/data/183670.html</link></item>
-<item><title>王曙光：谦尊而光：我眼中的胡代光先生 - 爱思想</title><link>https://www.aisixiang.com/data/183649.html</link></item>
-<item><title>劲挺：红尘赋（下卷）第44章 - 爱思想</title><link>https://www.aisixiang.com/data/183716.html</link></item>
-<item><title>劲挺：红尘赋（下卷）第43章 - 爱思想</title><link>https://www.aisixiang.com/data/183715.html</link></item>
-<item><title>劲挺：红尘赋（下卷）第42章 - 爱思想</title><link>https://www.aisixiang.com/data/183714.html</link></item>
-<item><title>劲挺：红尘赋（下卷）第41章 - 爱思想</title><link>https://www.aisixiang.com/data/183713.html</link></item>
-<item><title>劲挺：红尘赋（下卷）第40章 - 爱思想</title><link>https://www.aisixiang.com/data/183712.html</link></item>
-<item><title>申卫星，1970年4月生，山东日照人。吉林大学法学学士（1992），硕士（1997），中国政法..... - 爱思想</title><link>https://www.aisixiang.com/thinktank/ShenWeixing.html</link></item>
-<item><title>Try Ubuntu&amp;#39;s first AI-powered feature, Myna - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/09/ubuntu-myna-ai-install</link></item>
-<item><title>A pair of flashy-looking weather extensions for GNOME Shell - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/10/modern-gnome-weather-extensions</link></item>
-<item><title>Ubuntu 26.10 drops Btrfs, XFS &amp; ZFS /boot with Secure Boot - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/10/ubuntu-2610-secure-boot-grub-change</link></item>
-<item><title>Scrcpy 5.0 adds hardware decoding for Android mirroring - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/10/scrcpy-hardware-decoding-added</link></item>
-<item><title>Firefox GNOME theme updated to work with Nova - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/10/firefox-gnome-theme-nova-update</link></item>
-<item><title>Hylki is a modern, Rust-based email client for GNOME - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/10/hylki-email-client-for-gnome</link></item>
-<item><title>Play Roblox on Linux without Wine, using Sober - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/10/play-roblox-linux-sober</link></item>
-<item><title>Orion browser for Linux axed months after beta launch - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/10/orion-linux-browser-development-ended</link></item>
-<item><title>A 2GB Raspberry Pi 4 now costs 50% more than it did at launch - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/10/raspberry-pi-2gb-costs-how-much-now</link></item>
-<item><title>Linux App Release Roundup (September 2026) - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/10/linux-app-release-roundup-september-2026</link></item>
-<item><title>Ubuntu 26.10 Beta released with Linux 7.3 &amp; GNOME 51 - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/10/ubuntu-2610-beta-released</link></item>
-<item><title>Ubuntu 26.10 ships with Rust-based OpenPGP tooling - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/10/ubuntu-rust-pgp-sq</link></item>
-<item><title>Ubuntu 26.10 adds early support for Snapdragon X2 laptops - OMG! Ubuntu!</title><link>https://www.omgubuntu.co.uk/2026/09/ubuntu-2610-snapdragon-x2</link></item>
-<item><title>I won’t remain alone - Aeon</title><link>https://aeon.co/videos/an-iranian-couple-seek-out-the-recipient-of-their-late-sons-heart</link></item>
-<item><title>How to assemble science - Aeon</title><link>https://aeon.co/essays/the-life-saving-scientific-knowledge-hiding-in-plain-sight</link></item>
-<item><title>派拉蒙与华纳兄弟探索合并后使用 Skydance 名字 - Solidot</title><link>https://www.solidot.org/story?sid=85531</link></item>
-<item><title>苹果将收紧 Full Disk Access 访问权限 - Solidot</title><link>https://www.solidot.org/story?sid=85530</link></item>
-<item><title>America.gov 的 cookie 有效期长达 20 年 - Solidot</title><link>https://www.solidot.org/story?sid=85529</link></item>
-<item><title>亚马逊为 Kindle 提供 35 美元的蓝牙实体按键 - Solidot</title><link>https://www.solidot.org/story?sid=85528</link></item>
-<item><title>Windows 11 26H2 默认启用设置云端备份功能 - Solidot</title><link>https://www.solidot.org/story?sid=85527</link></item>
-<item><title>瑞士冰川过去五年损失五分之一的冰 - Solidot</title><link>https://www.solidot.org/story?sid=85526</link></item>
-<item><title>John Galliano for Zara - Wallpaper*</title><link>https://www.wallpaper.com/fashion-beauty/john-galliano-zara-collaboration-first-collection</link></item>
-<item><title>Ottolenghi Edinburgh - Wallpaper*</title><link>https://www.wallpaper.com/travel/restaurants/ottolenghi-edinburgh-review</link></item>
-<item><title>New over-ear headphones - Wallpaper*</title><link>https://www.wallpaper.com/tech/new-over-ear-headphones-autumn-2026</link></item>
-<item><title>deepacquire - 阮一峰的网络日志</title><link>https://www.ruanyifeng.com/blog/2013/05/Knuth–Morris–Pratt_algorithm.html#comment-451681</link></item>
-<item><title>Google, Unity Launch Platform To Create Video Games From Prompts - Slashdot</title><link>https://games.slashdot.org/story/26/10/07/1640219/google-unity-launch-platform-to-create-video-games-from-prompts</link></item>
-<item><title>Microsoft and Nvidia Unveil Surface Laptop Ultra For $2,599 - Slashdot</title><link>https://hardware.slashdot.org/story/26/10/07/1812223/microsoft-and-nvidia-unveil-surface-laptop-ultra-for-2599</link></item>
-<item><title>Xbox Secures Exclusive GTA 6 Streaming Rights - Slashdot</title><link>https://games.slashdot.org/story/26/10/07/0321232/xbox-secures-exclusive-gta-6-streaming-rights</link></item>
-<item><title>Francis Halzen Wins Nobel Physics Prize For Antarctic &amp;#39;Ghost Particle&amp;#39; Hunt - Slashdot</title><link>https://slashdot.org/story/26/10/07/0336250/francis-halzen-wins-nobel-physics-prize-for-antarctic-ghost-particle-hunt</link></item>
-<item><title>Google Enters Massive 3.6-GW Power Deal With Constellation Energy - Slashdot</title><link>https://hardware.slashdot.org/story/26/10/06/219233/google-enters-massive-36-gw-power-deal-with-constellation-energy</link></item>
-<item><title>South Korea Says AI Agents May Have Been Used to Hack the Country&amp;#39;s Banks - Slashdot</title><link>https://news.slashdot.org/story/26/10/07/0313242/south-korea-says-ai-agents-may-have-been-used-to-hack-the-countrys-banks</link></item>
-<item><title>Canadian Analysis: Permanent Daylight Saving Harms Sleep and Mental Health - Slashdot</title><link>https://science.slashdot.org/story/26/10/06/2120211/canadian-analysis-permanent-daylight-saving-harms-sleep-and-mental-health</link></item>
-<item><title>HubSpot Cuts 660 Jobs In AI Restructuring - Slashdot</title><link>https://slashdot.org/story/26/10/06/2055209/hubspot-cuts-660-jobs-in-ai-restructuring</link></item>
-<item><title>Alexa Can&amp;#39;t Control the AUX Input On Amazon Echo Speakers Anymore - Slashdot</title><link>https://entertainment.slashdot.org/story/26/10/06/2045230/alexa-cant-control-the-aux-input-on-amazon-echo-speakers-anymore</link></item>
-<item><title>Asos Confirms Hackers Sent &amp;#39;Unauthorized&amp;#39; Notification to App Users - Slashdot</title><link>https://it.slashdot.org/story/26/10/06/195201/asos-confirms-hackers-sent-unauthorized-notification-to-app-users</link></item>
-<item><title>IBM and Red Hat Find More Than 400 New Vulnerabilities In Popular Java Code - Slashdot</title><link>https://it.slashdot.org/story/26/10/06/1854244/ibm-and-red-hat-find-more-than-400-new-vulnerabilities-in-popular-java-code</link></item>
-<item><title>Licensing Costs Driving 90% of VMware Users To Explore Options, Survey Finds - Slashdot</title><link>https://slashdot.org/story/26/10/06/1649245/licensing-costs-driving-90-of-vmware-users-to-explore-options-survey-finds</link></item>
-<item><title>Mistral Unveils New &amp;#39;Le Chonk&amp;#39; AI Model It Says Rivals Best Open Systems From China - Slashdot</title><link>https://news.slashdot.org/story/26/10/06/1614205/mistral-unveils-new-le-chonk-ai-model-it-says-rivals-best-open-systems-from-china</link></item>
-<item><title>Researchers Are Tracking a Chinese AI &amp;#39;Agent Fleet&amp;#39; - Slashdot</title><link>https://tech.slashdot.org/story/26/10/06/0459247/researchers-are-tracking-a-chinese-ai-agent-fleet</link></item>
-<item><title>Cable Lobby To Sue Trump FCC Over Repeal of National TV Ownership Cap - Slashdot</title><link>https://yro.slashdot.org/story/26/10/06/0452228/cable-lobby-to-sue-trump-fcc-over-repeal-of-national-tv-ownership-cap</link></item>
-<item><title>beneath the Antarctic ice - Slashdot</title><link>https://science.slashdot.org/story/22/11/07/0223235/could-ghost-particle-neutrinos-crashing-into-antarctica-change-astronomy-forever</link></item>
-<item><title>such as supermassive black holes - Slashdot</title><link>https://science.slashdot.org/story/23/06/30/061203/scientists-find-ghost-particles-spewing-from-our-milky-way-galaxy</link></item>
-<item><title>restart its Three Mile Island reactor - Slashdot</title><link>https://slashdot.org/story/24/09/20/156206/microsoft-taps-three-mile-island-nuclear-plant-to-power-ai</link></item>
-<item><title>restart NextEra Energy&amp;#39;s nuclear power plant - Slashdot</title><link>https://hardware.slashdot.org/story/25/10/27/2312225/nextera-energy-partners-with-google-to-restart-iowa-nuclear-plant</link></item>
-<item><title>its controversial repeal - Slashdot</title><link>https://yro.slashdot.org/story/26/08/06/1728210/fcc-kills-tv-ownership-cap-claiming-authority-over-limit-set-by-congress</link></item>
-<item><title>OpenAI Is Adding Text Watermarking In ChatGPT and Codex - Slashdot</title><link>https://slashdot.org/story/26/10/06/0443237/openai-is-adding-text-watermarking-in-chatgpt-and-codex?sbsrc=md</link></item>
-<item><title>Old Hearts Become Biologically Younger When Transplanted Into Younger People - Slashdot</title><link>https://science.slashdot.org/story/26/10/06/0419213/old-hearts-become-biologically-younger-when-transplanted-into-younger-people?sbsrc=md</link></item>
-<item><title>First Nuclear Clocks Start Ticking in Vienna and Beijing - Slashdot</title><link>https://slashdot.org/submission/17351308/first-nuclear-clocks-start-ticking-in-vienna-and-beijing</link></item>
-<item><title>UK vegetables 20-50% less nutritious than in the 1960s - Slashdot</title><link>https://slashdot.org/submission/17351292/uk-vegetables-20-50-less-nutritious-than-in-the-1960s</link></item>
-<item><title>Wisconsin U–Madison Prof Francis Halzen named 2026 Nobel laureate in physi - Slashdot</title><link>https://slashdot.org/submission/17351276/wisconsin-umadison-prof-francis-halzen-named-2026-nobel-laureate-in-physi</link></item>
-<item><title>Trump Accounts Put 70 Million Kids on the Path to Financial Freedom - The White House</title><link>https://www.whitehouse.gov/releases/2026/10/a-financial-stake-in-the-future-for-nearly-70-million-american-children-trump-accounts-made-it-possible/</link></item>
-<item><title>National Energy Dominance Month, 2026 - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2026/10/national-energy-dominance-month-2026/</link></item>
-<item><title>Congressional Bills H.R. 5345 and S. 766 Signed into Law - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2026/10/congressional-bills-h-r-5345-and-s-766-signed-into-law/</link></item>
-<item><title>Columbus Day, 2026 - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2026/10/columbus-day-2026/</link></item>
-<item><title>Lower Taxes, Safer Streets, Stronger Border: President Trump’s Texas Record - The White House</title><link>https://www.whitehouse.gov/releases/2026/10/lower-taxes-safer-streets-stronger-border-president-trumps-texas-record/</link></item>
-<item><title>Presidential Message on German American Day - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2026/10/presidential-message-on-german-american-day/</link></item>
-<item><title>WHAT THEY ARE SAYING: President Trump Delivers Immediate Diesel Relief, Saving Americans Up to $100 Per Fill - The White House</title><link>https://www.whitehouse.gov/releases/2026/10/what-they-are-saying-president-trump-delivers-immediate-diesel-relief-saving-americans-up-to-100-per-fill/</link></item>
-<item><title>Emergency Tax Relief on Diesel Fuel - The White House</title><link>https://www.whitehouse.gov/presidential-actions/2026/10/emergency-tax-relief-on-diesel-fuel/</link></item>
-<item><title>Presidential Message on Fire Prevention Week - The White House</title><link>https://www.whitehouse.gov/briefings-statements/2026/10/presidential-message-on-fire-prevention-week/</link></item>
-<item><title>Meet the Winners of the 2026 Honey &amp; Wax Book Collecting Prize - The Millions</title><link>https://themillions.com/2026/09/meet-the-winners-of-the-2026-honey-wax-book-collecting-prize.html</link></item>
-<item><title>Ukrainian drone attack kills father of 13 children, 15-year-old daughter in Kherson Region - TASS</title><link>https://tass.com/politics/2198957</link></item>
-<item><title>Russia&amp;#39;s defense industry - TASS</title><link>https://tass.com/military-defense</link></item>
-<item><title>A Prefabricated Timber House Designed Around Steep Terrain - CONTEMPORIST</title><link>https://www.contemporist.com/a-prefabricated-timber-house-designed-around-steep-terrain/</link></item>
-<item><title>A Small Czech House Grows Again With a Red Metal Extension - CONTEMPORIST</title><link>https://www.contemporist.com/a-small-czech-house-grows-again-with-a-red-metal-extension/</link></item>
-<item><title>A House That Survived Hurricane Sandy Gets a New Chapter on Fire Island - CONTEMPORIST</title><link>https://www.contemporist.com/a-house-that-survived-hurricane-sandy-gets-a-new-chapter-on-fire-island/</link></item>
-<item><title>This L-Shaped House in Spain Opens Up to a Sheltered Garden - CONTEMPORIST</title><link>https://www.contemporist.com/this-l-shaped-house-in-spain-opens-up-to-a-sheltered-garden/</link></item>
-<item><title>This Ecuadorian House Has Gardens On Its Roof And A Tree At Its Center - CONTEMPORIST</title><link>https://www.contemporist.com/this-ecuadorian-house-has-gardens-on-its-roof-and-a-tree-at-its-center/</link></item>
-<item><title>A Galápagos Hotel Adds Guest Rooms Among Trees and Volcanic Rock - CONTEMPORIST</title><link>https://www.contemporist.com/a-galapagos-hotel-adds-guest-rooms-among-trees-and-volcanic-rock/</link></item>
-<item><title>Power of Women 2026 - The Mail &amp; Guardian</title><link>https://mg.co.za/power-of-women-2026/</link></item>
-<item><title>Court Agrees with EFF: Utah’s VPN Law Demands a Technical Impossibility - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility</link></item>
-<item><title>Happy Opt Out October! Let’s Find Real Alternatives to the Tech Giants - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/10/happy-opt-out-october-lets-find-real-alternatives-tech-giants</link></item>
-<item><title>We Demand More Information on How Marin Cops Illegally Shared Flock ALPR Data - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/10/we-demand-more-information-how-marin-cops-illegally-shared-flock-alpr-data</link></item>
-<item><title>Site-Blocking Will Not Defend IP, No Matter the Bill’s Name - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/10/site-blocking-will-not-defend-ip-no-matter-bills-name</link></item>
-<item><title>Congress Has Another Site-Blocking Bill, And This One Targets VPNs - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/10/congress-has-another-site-blocking-bill-and-one-targets-vpns</link></item>
-<item><title>Victory! Court Rejects Government Effort to Dismiss Social Media Surveillance Lawsuit - Electronic Frontier Foundation</title><link>https://www.eff.org/press/releases/victory-court-rejects-government-effort-dismiss-social-media-surveillance-lawsuit</link></item>
-<item><title>Ola Bini Ordered to Leave Ecuador Under Obscure Accusations - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/10/ola-bini-ordered-leave-ecuador-under-obscure-accusations</link></item>
-<item><title>Challengers Approach: Third Party App Stores Arrive to Google Play - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/10/challengers-approach-third-party-app-stores-arrive-google-play</link></item>
-<item><title>Victory! California Appeals Court Refuses to Revive Surveillance Tech CEO’s Meritless Lawsuit Against Journalist - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/09/victory-california-appeals-court-refuses-revive-surveillance-tech-ceos-meritless</link></item>
-<item><title>📱 Hey Siri, How Do I Limit AI Data Access? | EFFector 38.17 - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/09/hey-siri-how-do-i-limit-ai-data-access-effector-3817</link></item>
-<item><title>the privacy complications - Electronic Frontier Foundation</title><link>https://www.eff.org/deeplinks/2026/09/how-limit-what-apples-new-siri-ai-can-access-ios-27?utm_source=effector</link></item>
+<lastBuildDate>Fri, 09 Oct 2026 08:19:57 +0800</lastBuildDate>
+<item><title>Manus 成功融资逾 5 亿美元 - Solidot</title><link>https://www.solidot.org/story?sid=85554</link></item>
+<item><title>已知最早的游泳哺乳动物 - Solidot</title><link>https://www.solidot.org/story?sid=85552</link></item>
+<item><title>美国男子因利用 AI 生成音乐和机器人账号欺诈播放被判 18 个月 - Solidot</title><link>https://www.solidot.org/story?sid=85551</link></item>
+<item><title>加拿大诗人 Anne Carson 赢得诺贝尔文学奖 - Solidot</title><link>https://www.solidot.org/story?sid=85550</link></item>
+<item><title>Google 多个国家顶级域名被劫持 - Solidot</title><link>https://www.solidot.org/story?sid=85549</link></item>
+<item><title>美国计划限制留学生毕业后在美就业 - Solidot</title><link>https://www.solidot.org/story?sid=85548</link></item>
+<item><title>世界各地的民调认为社交媒体伤害民主 - Solidot</title><link>https://www.solidot.org/story?sid=85547</link></item>
+<item><title>黑客利用 AI 攻击韩国银行 - Solidot</title><link>https://www.solidot.org/story?sid=85546</link></item>
+<item><title>陶哲轩认为数学 2.0 时代应降低解决难题的核心地位 - Solidot</title><link>https://www.solidot.org/story?sid=85545</link></item>
+<item><title>OpenAI 针对欧洲用户在 ChatGPT 和 Codex 嵌入水印 - Solidot</title><link>https://www.solidot.org/story?sid=85544</link></item>
+<item><title>2026 年诺贝尔化学奖授予了日法科学家 - Solidot</title><link>https://www.solidot.org/story?sid=85543</link></item>
+<item><title>Permits, Not Power, Halt Google’s Finland Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/regulations/permits-not-power-halt-google-s-finland-data-centers</link></item>
+<item><title>How Carbon-Aware Scheduling Can Cut Data Center Emissions - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/sustainability/how-carbon-aware-scheduling-can-cut-data-center-emissions</link></item>
+<item><title>HPE’s Gen13 Signals Enterprise AI Shift to CPU-GPU Balance - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/servers/hpe-s-gen13-signals-enterprise-ai-shift-to-cpu-gpu-balance</link></item>
+<item><title>EMEA Data Center Expansion Faces a Delivery Test - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/emea-data-center-expansion-faces-a-delivery-test</link></item>
+<item><title>Data Center Power Demand to Grow 24% Annually by 2030: McKinsey - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/data-center-power-demand-to-grow-24-annually-by-2030-mckinsey</link></item>
+<item><title>AI Power Spikes Demand Chip-to-Grid Design Changes - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/ai-power-spikes-demand-chip-to-grid-design-changes</link></item>
+<item><title>The UPS Is Uninterruptible by Design. Its Future Is Not. - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/uptime/the-ups-is-uninterruptible-by-design-its-future-is-not-</link></item>
+<item><title>Beyond the Megawatt: Why Data Center Site Selection Is Now a Three-Front Battle - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/beyond-the-megawatt-why-data-center-site-selection-is-now-a-three-front-battle</link></item>
+<item><title>Vertical Data Centers Face Cost-Proximity Trade-Offs - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/vertical-data-centers-face-cost-proximity-trade-offs</link></item>
+<item><title>Five Ways to Assess Your AI Infrastructure Readiness - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/five-ways-to-assess-your-ai-infrastructure-readiness</link></item>
+<item><title>From Opposition to Buy-In: Tactics for Data Center Developers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/from-opposition-to-buy-in-tactics-for-data-center-developers</link></item>
+<item><title>The Hidden Failure Domain in N+1 Data Center Cooling - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cooling/the-hidden-failure-domain-in-n-1-data-center-cooling</link></item>
+<item><title>Zinc Whiskers: The Hidden Contamination Risk Beneath Data Center Floors - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/management/zinc-whiskers-the-hidden-contamination-risk-beneath-data-center-floors</link></item>
+<item><title>Can Data Center Design Choices Change Public Acceptance? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/sustainability/can-data-center-design-choices-change-public-acceptance-</link></item>
+<item><title>Data Center On-Site Power Brings Pollution Risks Closer to Home - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/compliance/data-center-on-site-power-brings-pollution-risks-closer-to-home</link></item>
+<item><title>CoreWeave Targets Enterprises with Forge Platform - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/coreweave-targets-enterprises-with-forge-platform</link></item>
+<item><title>Digital Realty Plans Cable Landing Station at Los Angeles Data Center - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cables/digital-realty-plans-cable-landing-station-at-los-angeles-data-center</link></item>
+<item><title>AMD to Acquire World Labs for $8.2B to Advance AI Models and Robotics - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-chips/amd-to-acquire-world-labs-for-8-2b-to-advance-ai-models-and-robotics</link></item>
+<item><title>The 200 GW Moment: Reinventing the Grid for the AI Economy - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/the-200-gw-moment-reinventing-the-grid-for-the-ai-economy</link></item>
+<item><title>The Next Generation of AI Infrastructure Design Starts with Efficiency - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/the-next-generation-of-ai-infrastructure-design-starts-with-efficiency</link></item>
+<item><title>Can Supercapacitors Smooth AI’s Power Swings? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/can-supercapacitors-smooth-ai-s-power-swings-</link></item>
+<item><title>Efforts to Curb Data Center Speculation Gain Ground Across the US - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/efforts-to-curb-data-center-speculation-gain-ground-across-the-us</link></item>
+<item><title>Google’s Grid-Interactive AI Data Centers: From Backup to Grid Partner - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/google-s-grid-interactive-ai-data-centers-from-backup-to-grid-partner</link></item>
+<item><title>Low-Frequency Noise and Data Centers: What to Know - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/low-frequency-noise-and-data-centers-what-to-know</link></item>
+<item><title>The Role of Optical Frequency Comb Generators in AI Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/networking/the-role-of-optical-frequency-comb-generators-in-ai-data-centers</link></item>
+<item><title>Data Center Water Use: From Efficiency Metrics to Real-World Resilience - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cooling/data-center-water-use-from-efficiency-metrics-to-real-world-resilience</link></item>
+<item><title>Centralized AI vs. Distributed AI vs. Edge AI: What’s the Difference? - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/ai-data-centers/centralized-ai-vs-distributed-ai-vs-edge-ai-what-s-the-difference-</link></item>
+<item><title>Same Roof, 10 Different Gases: What a Data Center Is Quietly Holding - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/outages/same-roof-10-different-gases-what-a-data-center-is-quietly-holding</link></item>
+<item><title>Designing Layered Drone Defenses for Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/physical-security/designing-layered-drone-defenses-for-data-centers</link></item>
+<item><title>Enterprises Adopt Colocation for AI and Hybrid Cloud Initiatives - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/colocation/enterprises-adopt-colocation-for-ai-and-hybrid-cloud-initiatives</link></item>
+<item><title>Grid Constraints Steer Dutch Data Centers Beyond Amsterdam - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-site-selection/grid-constraints-steer-dutch-data-centers-beyond-amsterdam</link></item>
+<item><title>Space Data Centers Inch Toward Reality, With Caveats - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/next-gen-data-centers/space-data-centers-inch-toward-reality-with-caveats</link></item>
+<item><title>Rack Power Is Rising Fast. Here’s What It Means for Data Centers - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-hardware/rack-power-is-rising-fast-here-s-what-it-means-for-data-centers</link></item>
+<item><title>Delivery Certainty Will Define the Next Phase of Data Center Growth - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-construction/delivery-certainty-will-define-the-next-phase-of-data-center-growth</link></item>
+<item><title>Zombie Workloads Haunt Data Center Efficiency Efforts - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/cloud/zombie-workloads-haunt-data-center-efficiency-efforts</link></item>
+<item><title>OpenAI Astra’s ‘Critical’ Rating and the AI Governability Gap - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/security-and-risk-management/openai-astra-s-critical-rating-and-the-ai-governability-gap</link></item>
+<item><title>Data Center Pay Is Rising, but Turnover Remains High, Survey Finds - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/data-center-career-development/raises-are-up-turnover-high-in-data-centers-survey-finds</link></item>
+<item><title>The Ripple Effect of Data Center Project Cancellations and Delays - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/the-ripple-effect-of-data-center-project-cancellations-and-delays</link></item>
+<item><title>Speed Is the New Capacity: Why AI Infrastructure Needs a New Power Strategy - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/energy-power-supply/speed-is-the-new-capacity-why-ai-infrastructure-needs-a-new-power-strategy</link></item>
+<item><title>Increase Data Center Density Without New Construction - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/servers/increase-data-center-density-without-new-construction</link></item>
+<item><title>How AI Is Reshaping Subsea and Terrestrial Networks - Data Center Knowledge</title><link>https://www.datacenterknowledge.com/networking/how-ai-is-reshaping-subsea-and-terrestrial-networks</link></item>
+<item><title>Python 3.15.0 candidate 3 is here! - Python</title><link>https://blog.python.org/2026/10/python-3150-rc3/</link></item>
+<item><title>Python 3.10.22, 3.11.17, 3.12.15, 3.13.16 and 3.14.8 are now available! - Python</title><link>https://blog.python.org/2026/10/python-31022-31117/</link></item>
+<item><title>Python Language Summit 2026 - Python</title><link>https://blog.python.org/2026/09/language-summit-2026/</link></item>
+<item><title>Lightning Talks (Python Language Summit 2026) - Python</title><link>https://blog.python.org/2026/09/language-summit-2026-lightning-talks/</link></item>
+<item><title>PEP 827: Type Manipulation (Python Language Summit 2026) - Python</title><link>https://blog.python.org/2026/09/language-summit-2026-pep-827-type-manipulation/</link></item>
+<item><title>Free-Threaded Python Post-Era (Python Language Summit 2026) - Python</title><link>https://blog.python.org/2026/09/language-summit-2026-free-threading-post-era/</link></item>
+<item><title>Developer-in-Residence Update &amp; Future (Python Language Summit 2026) - Python</title><link>https://blog.python.org/2026/09/language-summit-2026-developer-in-residence-update-and-future/</link></item>
+<item><title>Spicycrab (Python Language Summit 2026) - Python</title><link>https://blog.python.org/2026/09/language-summit-2026-spicycrab/</link></item>
+<item><title>Memory Snapshots for CPython (Python Language Summit 2026) - Python</title><link>https://blog.python.org/2026/09/language-summit-2026-memory-snapshots/</link></item>
+<item><title>Memory Buffer Protocol (Python Language Summit 2026) - Python</title><link>https://blog.python.org/2026/09/language-summit-2026-memory-buffer-protocol/</link></item>
+<item><title>Garbage Collection: Generational? Incremental? Both! (Python Language Summit 2026) - Python</title><link>https://blog.python.org/2026/09/language-summit-2026-garbage-collection-generational-incremental-both/</link></item>
+<item><title>macOS and Python (Python Language Summit 2026) - Python</title><link>https://blog.python.org/2026/09/language-summit-2026-macos-python/</link></item>
+<item><title>One namespace to namespace them all (Python Language Summit 2026) - Python</title><link>https://blog.python.org/2026/09/language-summit-2026-namespaces/</link></item>
+<item><title>The Python documentation is now available in German - Python</title><link>https://blog.python.org/2026/09/python-docs-in-german/</link></item>
+<item><title>The Python documentation is now available in Persian - Python</title><link>https://blog.python.org/2026/09/the-python-documentation-is-now-available-in-persian/</link></item>
+<item><title>Newport Beach Film Fest: ‘Social Reckoning’ Filmmaker Aaron Sorkin Set for Maverick Award, Live Episode of ‘Awards Chatter’ Podcast - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-news/aaron-sorkin-newport-beach-film-fest-maverick-award-podcast-1236725383/</link></item>
+<item><title>‘Animals’ Review: Ben Affleck Directs and Stars Opposite Kerry Washington in a Thriller Full of Juicy Elements That Should Be a Lot Tastier - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-reviews/animals-review-ben-affleck-kerry-washington-netflix-1236725125/</link></item>
+<item><title>‘The Social Reckoning’ Filmmaker Aaron Sorkin Isn’t Ruling Out a Zuckerberg Trilogy - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-features/the-social-reckoning-aaron-sorkin-zuckerberg-trilogy-1236725711/</link></item>
+<item><title>Streaming Ratings: ‘Toy Story 5’ Reaches No. 1 With Disney+ Premiere - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/streaming-ratings-sept-21-27-2026-1236725686/</link></item>
+<item><title>Swiss Queer Film Fest Drops Israeli Film After Boycott Threats: “We’re Not Sundance, Right?” - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/movies/movie-news/queer-film-fest-drops-israeli-film-tell-me-everything-1236725708/</link></item>
+<item><title>Sebastian Maniscalco Distances Himself From SiriusXM’s Raw Comedy Cancellation After Outcry - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/news/general-news/sebastian-maniscalco-responds-siriusxm-raw-comedy-cancellation-1236725754/</link></item>
+<item><title>David Zaslav Cashed Out More Than $600 Million in Warner Bros. Stock in Connection With Sale to Paramount - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/business/business-news/david-zaslav-skydance-sale-wbd-payout-1236725569/</link></item>
+<item><title>Marvel Sets ‘Zodiac’ Live-Action Series for 2028, Adds ‘Marvel Zombies’ Specials - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/marvel-sets-zodiac-live-action-series-for-2028-1236725743/</link></item>
+<item><title>‘Crazy Rich Asians’ Series Greenlit at HBO With Film’s Stars, Creative Team Returning - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-news/crazy-rich-asians-hbo-series-order-1236725707/</link></item>
+<item><title>‘Eternally Yours’ Review: CBS’ Vampire Comedy From ‘Ghosts’ Creators Is Severely Anemic - Hollywood Reporter</title><link>https://www.hollywoodreporter.com/tv/tv-reviews/eternally-yours-review-cbs-vampires-1236725129/</link></item>
+<item><title>Woo Jin Joo Conjures Mythic Tales from Uncanny Sculptures of Fiber and Found Objects - Colossal</title><link>https://www.thisiscolossal.com/2026/10/woo-jin-joo-mixed-media-sculptures/</link></item>
+<item><title>Psychedelic Paintings by Rafael Silveira Explore a World of ‘Visual Synonymies’ - Colossal</title><link>https://www.thisiscolossal.com/2026/10/rafael-silveira-paintings-surreal-popsicledelic-trip/</link></item>
+<item><title>More Than 18,000 Wildlife Species Populate Joel Sartore’s Ambitious ‘Photo Ark’ (So Far!) - Colossal</title><link>https://www.thisiscolossal.com/2026/10/joel-sartore-photo-ark-national-geographic-animals-portraits-photography/</link></item>
+<item><title>Precarious Dwellings Perch Atop Rocks in Simon Laveuve’s 1/35-Scale Miniatures - Colossal</title><link>https://www.thisiscolossal.com/2026/10/simon-laveuve-miniature-dwellings-anchored-in-rock/</link></item>
+<item><title>Hannah Lim Draws on Her British-Singaporean Heritage in Sculptural Snuff Bottles - Colossal</title><link>https://www.thisiscolossal.com/2026/10/hannah-lim-sculptures-snuff-bottles/</link></item>
+<item><title>Photographer Elizaveta Porodina Turns Her Luminous Lens to Insects - Colossal</title><link>https://www.thisiscolossal.com/2026/10/elizaveta-porodina-photos-found-dreams/</link></item>
+<item><title>Amok Island’s Geometric Murals Teem with Vibrant Local Flora and Fauna - Colossal</title><link>https://www.thisiscolossal.com/2026/10/amok-island-geometric-nature-murals/</link></item>
+<item><title>A Peculiar Character From a Hieronymus Bosch Painting Comes to Life on the New York City Subway - Colossal</title><link>https://www.thisiscolossal.com/2018/09/hieronymus-bosch-costume/</link></item>
+<item><title>Across Rural Europe, Ashley Suszczynski Photographs Remarkable and Ancient Masked Traditions - Colossal</title><link>https://www.thisiscolossal.com/2024/08/ashley-suszczynski-masked-traditions/</link></item>
+<item><title>Pre-Columbian Archaeology Meets Science Fiction in Max Lehman’s Quirky Sculptures - Colossal</title><link>https://www.thisiscolossal.com/2026/10/max-lehman-ceramic-sculptures/</link></item>
+<item><title>Through Fictional Self-Portraits, Tang Shuo Visualizes an Ancestral Archive - Colossal</title><link>https://www.thisiscolossal.com/2026/10/tang-shuo-borrowed-history-paintings/</link></item>
+<item><title>Monumental Sculptures by Sharif Bey Meditate on Identity and Objecthood in ‘Homecoming’ - Colossal</title><link>https://www.thisiscolossal.com/2026/10/sharif-bey-homecoming-ceramic-sculptures/</link></item>
+<item><title>Gaia Alari’s Lilting Animations are Drawn Frame by Frame - Colossal</title><link>https://www.thisiscolossal.com/2026/10/gaia-alari-animation/</link></item>
+<item><title>Tomás Saraceno Returns to the Past to Envision a More Just Future - Colossal</title><link>https://www.thisiscolossal.com/2026/10/tomas-saraceno-ancestral-futures-salinas-grandes/</link></item>
+<item><title>Wild Hijinx and Hilarious Happenstance Reign in the 2026 Comedy Wildlife Awards - Colossal</title><link>https://www.thisiscolossal.com/2026/10/comedy-wildlife-awards-2026-finalists/</link></item>
+<item><title>World of WearableArt’s ‘GLO!’ Is a Celebration of Culture, Nature, and Whimsy - Colossal</title><link>https://www.thisiscolossal.com/2026/10/world-of-wearableart-2026-glo-fashion-performance/</link></item>
+<item><title>In Chicago, teamLab Expands Our Perceptions Through Boundary-Breaking Installations - Colossal</title><link>https://www.thisiscolossal.com/2026/10/teamlab-smart-museum-chicago-exhibition-digital-installations/</link></item>
+<item><title>Eddy Firmin Interrogates History and Colonizing Forces in Provocative Sculptures - Colossal</title><link>https://www.thisiscolossal.com/2026/09/eddy-firmin-sculptures-installation-colonization-knowledge/</link></item>
+<item><title>A Workforce of Creatures Chugs Along in Kate Renshaw-Lewis’ Hand-Drawn Film ‘Busy Bodies’ - Colossal</title><link>https://www.thisiscolossal.com/2026/09/busy-bodies-kate-renshaw-lewis/</link></item>
 </channel></rss>
