@@ -2113,6 +2113,15 @@ environmentally
 deplorably
 deplorableness
 otherization
+affordability
+decriminalize
+gentlemanlike
+geographical determinism
+gynecological
+hatbox
+sun-filled
+Japanophobe
+Japanophobic
 
 
 `.trim().split('\n');
