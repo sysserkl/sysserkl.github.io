@@ -2122,6 +2122,12 @@ hatbox
 sun-filled
 Japanophobe
 Japanophobic
+microwaveable
+okey-doke
+rustproof
+soft drink
+tin opener
+
 
 
 `.trim().split('\n');

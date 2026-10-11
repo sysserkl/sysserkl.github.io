@@ -1819,6 +1819,12 @@ function enwords_list_2_reg_b(cslist,delimiter='b'){
 }
 
 function words_in_sentence_b(wordlist,run_fn=false){
+    function sub_words_in_sentence_b_load(is_ok=true){
+        if (is_ok){
+            words_in_sentence_b(wordlist,run_fn);
+        }
+    }
+    
     function sub_words_in_sentence_b_one(){
         if (blxl>=bllen){
             document.title=old_title;
@@ -1857,9 +1863,12 @@ function words_in_sentence_b(wordlist,run_fn=false){
         setTimeout(sub_words_in_sentence_b_one,1);
     }
     
+    //-----------------------
     if (typeof en_sentence_global == 'undefined'){
-        return 'en_sentence_global 未定义';
+        load_enword_file_b('en_sentence_global','enwords_sentence',sub_words_in_sentence_b_load);
+        return;
     }
+    //-----------------------
     
     var t0 = performance.now();    
     var in_set=new Set();
