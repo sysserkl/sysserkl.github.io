@@ -5039,7 +5039,10 @@ function ensentence_in_textarea_group_b(just_sort=false){
     var rare_dict={};
     for (let arow of list_t){
         var word=arow.match(rare_reg);  //形如：[ "free-spirited", "free-spirited" ] - 保留注释
-        if (word==null){continue;}
+        if (word==null){
+            word=['others'];
+        }
+        
         var blkey='w_'+word[0];
         if (rare_dict[blkey]==undefined){
             rare_dict[blkey]=[];
@@ -5050,7 +5053,7 @@ function ensentence_in_textarea_group_b(just_sort=false){
     rare_dict=object2array_b(rare_dict,true,2);
     rare_dict.sort();
     rare_dict.sort(function (a,b){return a.length>b.length?-1:1;});
-    
+
     if (just_sort){
         for (let blxl=0,lent=rare_dict.length;blxl<lent;blxl++){
             rare_dict[blxl]=rare_dict[blxl].slice(1,).join('\n\n');
@@ -5058,8 +5061,6 @@ function ensentence_in_textarea_group_b(just_sort=false){
         otextarea.value=rare_dict.join('\n\n');
         return;
     }
-    
-    
     
     var blminor=parseInt(document.getElementById('input_sentences_from_kltxt_minor_merge_b').value.trim());
     var right_part_list=[];

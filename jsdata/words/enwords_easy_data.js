@@ -2133,6 +2133,8 @@ tsarist
 tzarist
 Angela
 unconstitutionally
+non-racist
+anti-poverty
 
 
 `.trim().split('\n');

@@ -8,326 +8,51 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Mon, 12 Oct 2026 09:16:21 +0800</lastBuildDate>
-<item><title>OpenAI “rogue” agent activities found on Wikimedia projects - Wikimedia Foundation</title><link>https://wikimediafoundation.org/news/2026/10/05/openai-rogue-agent-activities-found-on-wikimedia-projects/</link></item>
-<item><title>Human knowledge at stake: Wikimedia Foundation makes its case at the United Nations General Assembly - Wikimedia Foundation</title><link>https://wikimediafoundation.org/news/2026/09/30/un-general-assembly-wikipedia-human-knowledge/</link></item>
-<item><title>使用 AI 十分钟就会削弱你挑战难题的意志力 - Solidot</title><link>https://www.solidot.org/story?sid=85575</link></item>
-<item><title>能访问丹麦 CPR 系统的一个管理员账号密码是 123456 - Solidot</title><link>https://www.solidot.org/story?sid=85576</link></item>
-<item><title>曾濒临灭绝的象龟数量超过了塞舌尔人口总数 - Solidot</title><link>https://www.solidot.org/story?sid=85577</link></item>
-<item><title>《Squadron 42》上架 Steam 平台，预计 2027 年二季度发售 - Solidot</title><link>https://www.solidot.org/story?sid=85578</link></item>
-<item><title>LineageOS 24 释出 - Solidot</title><link>https://www.solidot.org/story?sid=85579</link></item>
-<item><title>英国水果蔬菜营养价值下降最高五成 - Solidot</title><link>https://www.solidot.org/story?sid=85580</link></item>
-<item><title>A surprisingly simple way to relieve knee arthritis pain without pills or surgery - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261009025434.htm</link></item>
-<item><title>NASA astronauts splash down after 100 million miles in space - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261008232629.htm</link></item>
-<item><title>A plastic once thought harmless may be fueling fatty liver disease - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261008102718.htm</link></item>
-<item><title>October’s night sky is full of cosmic tricks and treats - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261008102704.htm</link></item>
-<item><title>Scientists build a nuclear clock that could make atomic clocks obsolete - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261008102701.htm</link></item>
-<item><title>Eating olive oil before carbs has a surprising effect on blood sugar - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261008102700.htm</link></item>
-<item><title>Neanderthals may have used prehistoric glue as an ancient antibiotic - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261008005256.htm</link></item>
-<item><title>The eye has a hidden cleanup system scientists never knew existed - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261008005254.htm</link></item>
-<item><title>Scientists created a tiny device that can control your nerves to treat chronic pain - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261008005253.htm</link></item>
-<item><title>Scientists discover 5 hidden brain patterns behind depression - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261008005251.htm</link></item>
-<item><title>NASA is searching for hidden caves to build its first Moon base - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261008005247.htm</link></item>
-<item><title>Scientists may have found a shortcut to fusion energy - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261008005242.htm</link></item>
-<item><title>MIT astronomers catch a star in a feast that could last billions of years - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261008005240.htm</link></item>
-<item><title>Scientists create a lightsaber-like laser antenna that transmits radio waves - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261008005239.htm</link></item>
-<item><title>Only one workout helped older adults lose fat and keep muscle - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261007233348.htm</link></item>
-<item><title>Scientists accidentally discover a genetic code that breaks the rules of life - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261007233136.htm</link></item>
-<item><title>Scientists warn a popular vitamin D supplement may have a hidden downside - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261007232940.htm</link></item>
-<item><title>Scientists find hidden materials that could improve batteries and solar fuels - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261007042118.htm</link></item>
-<item><title>This “golden tree” coral was too strange for any known family - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261007042116.htm</link></item>
-<item><title>Bowel cancer “melted away” after immunotherapy, then stayed away - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261007042115.htm</link></item>
-<item><title>Scientists found Homo erectus 200,000 years earlier than expected - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261007042113.htm</link></item>
-<item><title>NASA’s Webb finds signs of Mars-sized worlds smashing together - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261007042108.htm</link></item>
-<item><title>Hubble Space Telescope may have found a planet born after its star died - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261007042106.htm</link></item>
-<item><title>A 9-billion-year-old signal could help explain dark energy - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261007042102.htm</link></item>
-<item><title>Bacteria turn a virus’ own weapon against it - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261007042100.htm</link></item>
-<item><title>Taking antibiotics? Sugar may be making the damage worse - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261007042059.htm</link></item>
-<item><title>Scientists may have found why diabetic wounds refuse to heal - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261006234534.htm</link></item>
-<item><title>Scientists tested 5 natural compounds on cancer cells. One stood out - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261006234531.htm</link></item>
-<item><title>FDA-approved epilepsy drug may help reverse osteoarthritis damage - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261006234528.htm</link></item>
-<item><title>Nearly 30,000 people tested quit-smoking methods. One stood out - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261006234524.htm</link></item>
-<item><title>A famous quantum effect can finally be predicted in real materials - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261006234520.htm</link></item>
-<item><title>A quantum prediction from 1931 just came to life - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261006234517.htm</link></item>
-<item><title>Loneliness may steal nearly 6 years of good health - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261006234514.htm</link></item>
-<item><title>Einstein Probe reveals a hidden phase of neutron star collisions - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261006234511.htm</link></item>
-<item><title>Just 7 days of strength training started shrinking fat cells in mice - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261006234509.htm</link></item>
-<item><title>Not all trans fats are bad, major review finds - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261006234505.htm</link></item>
-<item><title>Dads are dying after their kids are born, and almost no one is tracking it - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261005071537.htm</link></item>
-<item><title>Scientists changed how zoo lions eat. Their wild side came out - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261005071535.htm</link></item>
-<item><title>Stanford scientists turn a cancer driver into a kill switch - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261005071533.htm</link></item>
-<item><title>Scientists reprogram immune cells inside the body to fight cancer - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261005071532.htm</link></item>
-<item><title>Humans may not be as hardwired for violence as we thought - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261005071529.htm</link></item>
-<item><title>Webb finds a surprising atmosphere on a scorching lava world - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261005071526.htm</link></item>
-<item><title>Don&amp;#39;t miss: Watch Saturn shine and Halley’s Comet debris streak across the sky - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261005071523.htm</link></item>
-<item><title>Earth’s center is moving, and NASA just measured it - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261005071520.htm</link></item>
-<item><title>Physicists just found the ‘ghost’ of superconductivity - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261005071517.htm</link></item>
-<item><title>Drug target could block brain inflammation linked to Alzheimer’s and Parkinson’s - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261005071515.htm</link></item>
-<item><title>Scientists reveal what seven days of fasting does to the human body - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261005012444.htm</link></item>
-<item><title>A new way to fight gum disease without wiping out good bacteria - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261005012230.htm</link></item>
-<item><title>Goodbye joint replacements? Stanford scientists found a way to regrow cartilage and stop arthritis - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261005011249.htm</link></item>
-<item><title>Physicists just saw quarks make waves in the Big Bang’s primordial soup - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261004002556.htm</link></item>
-<item><title>Scientists say this simple habit could strengthen your marriage - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261004001843.htm</link></item>
-<item><title>Scientists finally see how nature moves energy so efficiently - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261004001841.htm</link></item>
-<item><title>Archaeologists may have finally solved a 100-year-old Florida mystery - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261004001835.htm</link></item>
-<item><title>Tropical trees built homes for ants. Wasps are taking them over - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261004001832.htm</link></item>
-<item><title>Animals may have evolved 200 million years earlier than we thought - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261003234023.htm</link></item>
-<item><title>What happens in the brain when cannabis makes you anxious? - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261003234021.htm</link></item>
-<item><title>Colorectal cancer is rising in young people and often found too late - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261003234019.htm</link></item>
-<item><title>One simple addition to postpartum care made a major difference - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261003234017.htm</link></item>
-<item><title>This mysterious hole on the Moon may open into a giant cave - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261003234013.htm</link></item>
-<item><title>MIT scientists find a hidden cancer risk of the keto diet - ScienceDaily</title><link>https://www.sciencedaily.com/releases/2026/10/261002080037.htm</link></item>
-<item><title>BACARDÍ &amp; UPROXX’s ‘Good Spirits’ Kicks Off With ‘Terrifier’ Scream Queen Lauren LaVera - UPROXX</title><link>https://uproxx.com/life/bacardi-good-spirits-lauren-lavera/</link></item>
-<item><title>Watch This Exclusive BTS Content From Kashus Culpepper’s Honda Stage Performance - UPROXX</title><link>https://uproxx.com/music/kashus-culpepper-honda-stage-bts/</link></item>
-<item><title>The Best Physical Media Releases Of September 2026 - UPROXX</title><link>https://uproxx.com/music/best-physical-media-releases-september-2026/</link></item>
-<item><title>Lily Seabird’s Music Is The Sweet Spot Between Ween, the Velvet Underground and (A Bit Of) Twangy Indie Rock - UPROXX</title><link>https://uproxx.com/indie/lily-seabird-interview-lightspheres-on-their-way/</link></item>
-<item><title>Watch Kashus Culpepper Bring “Til The Sun Goes Down,” To Honda Stage - UPROXX</title><link>https://uproxx.com/music/kashus-culpepper-honda-stage-2026/</link></item>
-<item><title>FX’s ‘The Drop: A Snowfall Saga’ &amp; UPROXX Threw A Block Party At World Famous VIP Records - UPROXX</title><link>https://uproxx.com/life/the-drop-uproxx-vip-records/</link></item>
-<item><title>Chelley Bissainthe And Alex Warren Bond Over The Music They Love In ‘Love, Songs’ - UPROXX</title><link>https://uproxx.com/music/love-songs-alex-warren-chelley-watch/</link></item>
-<item><title>MILEY Debuts On UPROXX | Originals With will.i.am | JISOO + K-Pop Dominate - UPROXX</title><link>https://uproxx.com/insights/miley-debuts-on-uproxx-originals-with-will-i-am-jisoo-k-pop-dominate/</link></item>
-<item><title>The Legacy Of LA Hip-Hop - UPROXX</title><link>https://uproxx.com/music/the-legacy-of-la-hip-hop/</link></item>
-<item><title>Ranking Every Bottle In The New Eagle Rare Bourbon Lineup - UPROXX</title><link>https://uproxx.com/life/eagle-rare-bourbon-lineup-ranked-2026/</link></item>
-<item><title>Watch Kalan.FrFr Explore The Streets Of LA In Our Documentary, ‘How LA Found Its Sound,’ Sponsored by FX’s ‘The Drop: A Snowfall Saga’ - UPROXX</title><link>https://uproxx.com/music/kalan-frfr-how-la-found-its-sound/</link></item>
-<item><title>Becky G Shares How Embracing Failure Fueled Her Success For ‘Visionaries Moments’ - UPROXX</title><link>https://uproxx.com/music/becky-g-visionaries-moments-video/</link></item>
-<item><title>The Game Has To Pick Between Hip-Hop Legends On ‘Sound Check’ - UPROXX</title><link>https://uproxx.com/music/the-game-sound-check/</link></item>
-<item><title>Lucky Daye Takes “Nowhere Fast” To Another Level For Uproxx Visionaries - UPROXX</title><link>https://uproxx.com/music/lucky-daye-nowhere-fast-uproxx-visionaries/</link></item>
-<item><title>Olivia Rodrigo’s Daisy Chain Fields Is The Music Festival We Need - UPROXX</title><link>https://uproxx.com/music/olivia-rodrigo-daisy-chain-fields-music-festival-we-need/</link></item>
-<item><title>The Best Physical Media Releases Of August 2026 - UPROXX</title><link>https://uproxx.com/music/best-physical-media-releases-august-2026/</link></item>
-<item><title>The Two Lips Settle Which One Of Them Is The More Mischievous One - UPROXX</title><link>https://uproxx.com/life/two-lips-sour-patch-kids-sour-interview/</link></item>
-<item><title>Ari Lennox Brings “Horoscope” To Life In A Stunning Performance For Uproxx Visionaries - UPROXX</title><link>https://uproxx.com/music/ari-lennox-performance-uproxx-visionaries/</link></item>
-<item><title>The 2026 VMAs Are Loaded With UPROXX Artists - UPROXX</title><link>https://uproxx.com/insights/the-2026-vmas-are-loaded-with-uproxx-artists/</link></item>
-<item><title>Westside Cowboy Signals A New Era For British Indie Rock - UPROXX</title><link>https://uproxx.com/indie/westside-cowboy-signals-a-new-era-for-british-indie-rock/</link></item>
-<item><title>De La Rose On The Inspiration Behind Her Latest Album, What Baja Blast Means To Her, And What Keeps Her Fueled - UPROXX</title><link>https://uproxx.com/life/de-la-rose-baja-blast/</link></item>
-<item><title>Becky G Sits Down With will.i.am For UPROXX’s ‘Visionaries’ - UPROXX</title><link>https://uproxx.com/music/becky-g-visionaries-will-i-am-interview/</link></item>
-<item><title>Watch De La Rose Take Over Los Angeles For The Baja Blast Summer Series Finale - UPROXX</title><link>https://uproxx.com/life/watch-de-la-rose-take-over-los-angeles-for-the-baja-blast-summer-series-finale/</link></item>
-<item><title>Sour Patch Kids &amp; UPROXX Turned Chicago Into A Tropical Escape For Festival Weekend - UPROXX</title><link>https://uproxx.com/life/sour-patch-kids-uproxx-turned-chicago-into-a-tropical-escape/</link></item>
-<item><title>FX Has Just Dropped A New Trailer For The ‘Snowfall’ Spinoff Series, ‘The Drop,” And We’re Hyped! - UPROXX</title><link>https://uproxx.com/life/the-drop-trailer-release/</link></item>
-<item><title>will.i.am. Explains How MC Hammer Got Him Into Tech For ‘Visionaries Moments’ - UPROXX</title><link>https://uproxx.com/music/will-i-am-mc-hammer-visionaires-moments/</link></item>
-<item><title>Lollapalooza 2026: Household Names And The Ones About To Be - UPROXX</title><link>https://uproxx.com/insights/lollapalooza-2026-household-names-and-the-ones-about-to-be/</link></item>
-<item><title>Alex Warren Chooses His Lifetime Anthem On ‘Sound Check’ - UPROXX</title><link>https://uproxx.com/music/alex-warren-sound-check/</link></item>
-<item><title>We Asked Jane Schoenbrun Why They Set A Murder Scene To A Counting Crows Classic In Their New Horror Film - UPROXX</title><link>https://uproxx.com/indie/jane-schoenbrun-interview-a-long-december-camp-miasma/</link></item>
-<item><title>Hard Summer 2026 Is What Peak Dance Music Festivals Should Look Like - UPROXX</title><link>https://uproxx.com/music/hard-summer-2026-recap-photos/</link></item>
-<item><title>Bella Kay Takes On The Ultimate ‘Sound Check’ Challenge With Her Favorite Songs - UPROXX</title><link>https://uproxx.com/music/bella-kay-sound-check/</link></item>
-<item><title>The Best Strokes Songs, Ranked - UPROXX</title><link>https://uproxx.com/indie/the-best-strokes-songs-ranked/</link></item>
-<item><title>How T-Mobile’s MLB Partnership Became Essential - UPROXX</title><link>https://uproxx.com/sports/t-mobile-mlb-partnership-home-run-derby-magenta-lounge/</link></item>
-<item><title>Hotels We Love: This Jackson Hole Stay Is Members-Only And That’s the Point - UPROXX</title><link>https://uproxx.com/life/jackson-hole-hoback-club-review/</link></item>
-<item><title>The World Cup United Sports With Music - UPROXX</title><link>https://uproxx.com/insights/the-world-cup-united-sports-with-music/</link></item>
-<item><title>Dei V On Baja Blast, Beach Life, And The Influences That Made Him - UPROXX</title><link>https://uproxx.com/life/dei-v-baja-blast-interview/</link></item>
-<item><title>The Best Physical Media Releases Of July 2026 - UPROXX</title><link>https://uproxx.com/music/best-physical-media-releases-july-2026/</link></item>
-<item><title>Christian, Be a Gardener - TGC</title><link>https://www.thegospelcoalition.org/article/christian-be-gardener/</link></item>
-<item><title>Editor’s Pick: 7 Theology Books That Encourage Devotion - TGC</title><link>https://www.thegospelcoalition.org/reviews/editors-pick-systematic-theology/</link></item>
-<item><title>In a World of More, We Need a Theology of Enough - TGC</title><link>https://www.thegospelcoalition.org/article/world-more-theology-enough/</link></item>
-<item><title>One Nation Under God? Responding to Christian Nationalism - TGC</title><link>https://www.thegospelcoalition.org/podcasts/tgc-podcast/one-nation-under-god/</link></item>
-<item><title>Caleb Flynn and the Deadly Sin of Greed - TGC</title><link>https://www.thegospelcoalition.org/article/caleb-flynn-greed/</link></item>
-<item><title>How to Make Racism Sound Christian - TGC</title><link>https://www.thegospelcoalition.org/article/make-racism-sound-christian/</link></item>
-<item><title>From TGC ‘National Conference’ to ‘Church Conference’: Behind the Name Change - TGC</title><link>https://www.thegospelcoalition.org/article/tgc-church-conference-name-change/</link></item>
-<item><title>On My Shelf: Life and Books with Alex Fogleman - TGC</title><link>https://www.thegospelcoalition.org/article/on-my-shelf-alex-fogleman/</link></item>
-<item><title>‘The Social Reckoning’ Doesn’t Fully Reckon with the Problem - TGC</title><link>https://www.thegospelcoalition.org/article/social-reckoning-christian-movie-review/</link></item>
-<item><title>Bridging the Gap Between the Pulpit and the Workplace - TGC</title><link>https://www.thegospelcoalition.org/podcasts/your-corner-of-the-world/bridging-gap-pulpit-workplace/</link></item>
-<item><title>Why Churchgoers Escaped the ‘Sex Recession’ - TGC</title><link>https://www.thegospelcoalition.org/article/churchgoers-escaped-sex-recession/</link></item>
-<item><title>Why We Need History More than Ever Before - TGC</title><link>https://www.thegospelcoalition.org/article/need-history-more-before/</link></item>
-<item><title>How North Korea Became the Most Religious Place on Earth (with Jonathan Cheng) - TGC</title><link>https://www.thegospelcoalition.org/podcasts/gospelbound/north-korea-most-religious-place/</link></item>
-<item><title>Why Jen Wilkin Wants Kids to Understand Genesis 2 - TGC</title><link>https://www.thegospelcoalition.org/reviews/why-jen-wilkin-wants-kids-to-understand-genesis-2/</link></item>
-<item><title>How to Be Happy at Work - TGC</title><link>https://www.thegospelcoalition.org/article/be-happy-work/</link></item>
-<item><title>New Tools for Translation Present Opportunities - TGC</title><link>https://www.thegospelcoalition.org/article/tools-ai-translation-opportunities/</link></item>
-<item><title>Why Translation Must Have Fingerprints - TGC</title><link>https://www.thegospelcoalition.org/article/translation-fingerprints/</link></item>
-<item><title>Plant Churches to the Ends of the Earth - TGC</title><link>https://www.thegospelcoalition.org/article/plant-churches-ends-earth/</link></item>
-<item><title>What I’ve Learned in the Cancer School of Wisdom - TGC</title><link>https://www.thegospelcoalition.org/article/learned-cancer-school-wisdom/</link></item>
-<item><title>What’s the Right Amount of Rest? - TGC</title><link>https://www.thegospelcoalition.org/article/rest-each-day/</link></item>
-<item><title>Turn to God in Suffering - TGC</title><link>https://www.thegospelcoalition.org/podcasts/tgc-podcast/turn-god-suffering/</link></item>
-<item><title>Retrieve the Past. Retain the Truth. - TGC</title><link>https://www.thegospelcoalition.org/article/retrieve-past-retain-truth/</link></item>
-<item><title>The Deep Dish Live: Endurance in the Faith (with Nancy Guthrie and Jen Wilkin) - TGC</title><link>https://www.thegospelcoalition.org/podcasts/deep-dish/live-endurance-faith/</link></item>
-<item><title>‘Primetime’ Is a Morally Murky Mess - TGC</title><link>https://www.thegospelcoalition.org/article/primetime-christian-movie-review/</link></item>
-<item><title>AI Promises Intimacy but Delivers Isolation - TGC</title><link>https://www.thegospelcoalition.org/reviews/artificial-intimacy/</link></item>
-<item><title>Introducing ‘Your Corner of the World’ - TGC</title><link>https://www.thegospelcoalition.org/podcasts/your-corner-of-the-world/introducing-your-corner-world/</link></item>
-<item><title>Life Is a Canvas: Create Something Beautiful - TGC</title><link>https://www.thegospelcoalition.org/article/life-canvas-create-beautiful/</link></item>
-<item><title>How Can Disciples Walk Faithfully in a Postliterate Era? - TGC</title><link>https://www.thegospelcoalition.org/article/disciples-postliterate-era/</link></item>
-<item><title>12 Books to Help You Think Wisely About AI - TGC</title><link>https://www.thegospelcoalition.org/reviews/twelve-ai-book-recommendations/</link></item>
-<item><title>Before Your Church Plants, Ask How - TGC</title><link>https://www.thegospelcoalition.org/article/church-plants-ask-how/</link></item>
-<item><title>The Pastor and Discouragement - TGC</title><link>https://www.thegospelcoalition.org/podcasts/everyday-pastor/pastor-discouragement/</link></item>
-<item><title>On My Shelf: Life and Books with Chris Watkin - TGC</title><link>https://www.thegospelcoalition.org/article/on-my-shelf-chris-watkin/</link></item>
-<item><title>Should We Say ‘Please’ and ‘Thank You’ to AI Chatbots? - TGC</title><link>https://www.thegospelcoalition.org/article/please-thank-you-ai-chatbots/</link></item>
-<item><title>The Case for (Sometimes) Wordless Evangelism - TGC</title><link>https://www.thegospelcoalition.org/article/use-words-necessary/</link></item>
-<item><title>Looksmaxxing Is a Crisis of Modern Masculinity. The Church Has a Cure. - TGC</title><link>https://www.thegospelcoalition.org/article/looksmaxxing-modern-masculinity-church/</link></item>
-<item><title>‘Heart of the Beast’ Shows Why Man Should Not Be Alone - TGC</title><link>https://www.thegospelcoalition.org/article/heart-beast-christian-movie-review/</link></item>
-<item><title>Better Together: Men and Women in the Church - TGC</title><link>https://www.thegospelcoalition.org/podcasts/tgc-podcast/better-together-men-women-church/</link></item>
-<item><title>Criticize like a Christian - TGC</title><link>https://www.thegospelcoalition.org/article/criticize-like-christian/</link></item>
-<item><title>Tim Keller’s Final Exhortation: Notice the Stories that Shape You - TGC</title><link>https://www.thegospelcoalition.org/reviews/stories-we-live-by/</link></item>
-<item><title>Impossible for Apostates to Return? The True Meaning of Hebrews 6:4–6 - TGC</title><link>https://www.thegospelcoalition.org/article/impossible-apostates-return/</link></item>
-<item><title>Pastor Roundup: How to Prepare a Preaching Calendar - TGC</title><link>https://www.thegospelcoalition.org/article/roundup-preaching-calendar/</link></item>
-<item><title>4 Missionary Insights for Workplace Evangelism - TGC</title><link>https://www.thegospelcoalition.org/article/missionary-insights-workplace-evangelism/</link></item>
-<item><title>How Do You Want Your Children to Remember You? (with Michael Keller) - TGC</title><link>https://www.thegospelcoalition.org/podcasts/gospelbound/how-children-remember-you/</link></item>
-<item><title>Editor’s Pick: Children’s Discipleship Resources - TGC</title><link>https://www.thegospelcoalition.org/reviews/editors-pick-childrens-discipleship-resources/</link></item>
-<item><title>Before Your Church Plants, Ask Why - TGC</title><link>https://www.thegospelcoalition.org/article/before-plant-ask-why/</link></item>
-<item><title>When Your Christian Workplace Isn’t Very Christian - TGC</title><link>https://www.thegospelcoalition.org/article/christian-workplace-not-christian/</link></item>
-<item><title>How Your Story of Sorrow Fits into the Gospel Story - TGC</title><link>https://www.thegospelcoalition.org/article/sorrow-fits-gospel-story/</link></item>
-<item><title>The Parable of the Cancer Cell - TGC</title><link>https://www.thegospelcoalition.org/article/parable-cancer-cell/</link></item>
-<item><title>The Subversive Gospel in a Polarized World (Part 2) - TGC</title><link>https://www.thegospelcoalition.org/podcasts/tgc-podcast/subversive-gospel-polarized-world-2/</link></item>
-<item><title>Why Kids’ Books Matter (with Jen Wilkin) - TGC</title><link>https://www.thegospelcoalition.org/podcasts/deep-dish/kids-books-matter/</link></item>
-<item><title>Live, Laugh, Love, and Blame Christian Women - TGC</title><link>https://www.thegospelcoalition.org/reviews/live-laugh-love-influencer/</link></item>
-<item><title>AI: Empire or Infinity Machine? - TGC</title><link>https://www.thegospelcoalition.org/reviews/empire-infinity-machine/</link></item>
-<item><title>On My Shelf: Life and Books with Timothy Larsen - TGC</title><link>https://www.thegospelcoalition.org/article/on-my-shelf-timothy-larsen/</link></item>
-<item><title>As AI Leaves You Behind, What Will You Live For? - TGC</title><link>https://www.thegospelcoalition.org/article/ai-behind-still-living/</link></item>
-<item><title>Everything I Tried Let Me Down. But Jesus Didn’t. - TGC</title><link>https://www.thegospelcoalition.org/article/sex-cocaine-crystals-jesus/</link></item>
-<item><title>Cancel Culture Has Forgotten How to Forgive - TGC</title><link>https://www.thegospelcoalition.org/reviews/forgiveness-culture-outrage/</link></item>
-<item><title>What AI’s ‘Confessions’ Teach Us About Us - TGC</title><link>https://www.thegospelcoalition.org/article/ais-confessions-teach-us/</link></item>
-<item><title>The Subversive Gospel in a Polarized World (Part 1) - TGC</title><link>https://www.thegospelcoalition.org/podcasts/tgc-podcast/subversive-gospel-polarized-world/</link></item>
-<item><title>Should the Bible Be Taught in Public Schools? Yes. - TGC</title><link>https://www.thegospelcoalition.org/article/bible-public-schools-yes/</link></item>
-<item><title>Should the Bible Be Taught in Public Schools? No. - TGC</title><link>https://www.thegospelcoalition.org/article/bible-public-schools-no/</link></item>
-<item><title>Collin Hansen: I Don’t Understand 9/11. But I Praise God Anyway. - TGC</title><link>https://www.thegospelcoalition.org/article/hansen-911-praise-god/</link></item>
-<item><title>Why ‘The Uprising’ Is a Fitting September 11 Release - TGC</title><link>https://www.thegospelcoalition.org/article/uprising-september-11/</link></item>
-<item><title>C. S. Lewis on Why God Seems Silent - TGC</title><link>https://www.thegospelcoalition.org/article/lewis-till-we-have-faces/</link></item>
-<item><title>AI Can Assist Your Work. But Should It? - TGC</title><link>https://www.thegospelcoalition.org/article/ai-tools-work-demands/</link></item>
-<item><title>4 Misconceptions About the 4 Senses - TGC</title><link>https://www.thegospelcoalition.org/article/four-misconceptions-four-senses/</link></item>
-<item><title>Let’s Reclaim ‘Evangelical’ for the Sake of the Global Church - TGC</title><link>https://www.thegospelcoalition.org/article/retain-evangelical-global-church/</link></item>
-<item><title>Why AI Will Write Your Next Sermon - TGC</title><link>https://www.thegospelcoalition.org/podcasts/gospelbound/ai-write-next-sermon/</link></item>
-<item><title>Why Adult Children Are Cutting Off Their Parents - TGC</title><link>https://www.thegospelcoalition.org/reviews/no-contact-break-family/</link></item>
-<item><title>Young Adult Sorrows Need an Ancient Remedy - TGC</title><link>https://www.thegospelcoalition.org/article/young-adult-sorrows-remedy/</link></item>
-<item><title>Planning a Preaching Calendar - TGC</title><link>https://www.thegospelcoalition.org/podcasts/everyday-pastor/planning-preaching-calendar/</link></item>
-<item><title>Hire Wisely from a Stack of AI Résumés - TGC</title><link>https://www.thegospelcoalition.org/article/wisely-hire-ai-resumes/</link></item>
-<item><title>Happy 25th Birthday, ESV: Reflections from John Piper - TGC</title><link>https://www.thegospelcoalition.org/article/birthday-esv-john-piper/</link></item>
-<item><title>Update on Our Content and Editorial Standards - TGC</title><link>https://www.thegospelcoalition.org/article/update-content-editorial-standards/</link></item>
-<item><title>Christianity: Good, True, and Beautiful? - TGC</title><link>https://www.thegospelcoalition.org/podcasts/tgc-podcast/christianity-good-true-beautiful/</link></item>
-<item><title>When Christian Nationalism Becomes a Catchall - TGC</title><link>https://www.thegospelcoalition.org/reviews/no-prophets-huffman/</link></item>
-<item><title>God-Given Tools for Fighting Anxiety (with Blair Linne) - TGC</title><link>https://www.thegospelcoalition.org/podcasts/deep-dish/tools-fighting-anxiety/</link></item>
-<item><title>Little Patch of Ground, Little Patch of Time: Lessons from Wendell Berry - TGC</title><link>https://www.thegospelcoalition.org/article/patch-ground-time-wendell-berry/</link></item>
-<item><title>Glorify God When You Quit Your Job - TGC</title><link>https://www.thegospelcoalition.org/article/glorify-god-quit-job/</link></item>
-<item><title>How to Defend Evangelicalism Faithfully - TGC</title><link>https://www.thegospelcoalition.org/reviews/defense-evangelicalism/</link></item>
-<item><title>Sister, Bring Your Sexual Sin to Light - TGC</title><link>https://www.thegospelcoalition.org/article/bring-sexual-sin-light/</link></item>
-<item><title>Embrace Your Humanity by Digging in the Dirt - TGC</title><link>https://www.thegospelcoalition.org/article/embrace-humanity-dig-dirt/</link></item>
-<item><title>I Blocked My Search Engine So I Could Wait on God - TGC</title><link>https://www.thegospelcoalition.org/article/blocked-search-wait-god/</link></item>
-<item><title>AI and Everyday: What Are Some Practical Frameworks for Christians? - TGC</title><link>https://www.thegospelcoalition.org/podcasts/silicon-spiritualities/ai-everyday-practical-frameworks/</link></item>
-<item><title>What to Expect When Your Church Finally Gets a Building - TGC</title><link>https://www.thegospelcoalition.org/article/church-finally-building/</link></item>
-<item><title>Mission Partnerships Need Deeper Relationships - TGC</title><link>https://www.thegospelcoalition.org/article/mission-partnerships-need-relationships/</link></item>
-<item><title>6 Ways to Support Families of Children with Disabilities - TGC</title><link>https://www.thegospelcoalition.org/article/ways-support-families-disabilities/</link></item>
-<item><title>Moses Models Family Worship for Tired Parents - TGC</title><link>https://www.thegospelcoalition.org/article/moses-family-worship-parents/</link></item>
-<item><title>Master AI Chip Principles With New IEEE Design Program - IEEE Spectrum</title><link>https://spectrum.ieee.org/master-ai-chip-principles-ieee</link></item>
-<item><title>We Need to Embed Ethics Into Our Engineering Courses - IEEE Spectrum</title><link>https://spectrum.ieee.org/integrating-engineering-ethics-education</link></item>
-<item><title>IEEE Report Predicts Tech That Will Transform Lives - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-report-predicts-tech</link></item>
-<item><title>Changing Your Career Isn’t Easy - IEEE Spectrum</title><link>https://spectrum.ieee.org/career-pivots-for-software-engineers</link></item>
-<item><title>HiPHI: A Large-Scale Benchmark for High-Precision Human Motion and Object Interaction - IEEE Spectrum</title><link>https://content.knowledgehub.wiley.com/hiphi-a-large-scale-benchmark-for-high-precision-human-motion-and-object-interaction/</link></item>
-<item><title>6 Guidelines for Governing AI - IEEE Spectrum</title><link>https://spectrum.ieee.org/6-guidelines-governing-ai</link></item>
-<item><title>Smart Car Researcher Wants to Eliminate Stoplights - IEEE Spectrum</title><link>https://spectrum.ieee.org/smart-car-researcher-eliminate-stoplights</link></item>
-<item><title>Engineering Multipole Resonances in Dielectric Metasurfaces for Transmission, Reflection, and Absorption Control - IEEE Spectrum</title><link>https://event.on24.com/wcc/r/5510255/64A1C3695631E727E756BFCA0490437A?utm_source=IEEE</link></item>
-<item><title>IEEE Celebrates Innovators Shaping the Future - IEEE Spectrum</title><link>https://spectrum.ieee.org/ieee-technical-field-awards-2027</link></item>
-<item><title>Research Firm Calls Anthropic&amp;#39;s Upcoming IPO &amp;#39;Unprecedented Test of Investor Gullibity&amp;#39; - Slashdot</title><link>https://slashdot.org/story/26/10/11/2355238/research-firm-calls-anthropics-upcoming-ipo-unprecedented-test-of-investor-gullibity</link></item>
-<item><title>Gas Cars Fall Below 50% of Global New Car Sales for the First Time - Slashdot</title><link>https://tech.slashdot.org/story/26/10/11/2033201/gas-cars-fall-below-50-of-global-new-car-sales-for-the-first-time</link></item>
-<item><title>&amp;#39;The Social Reckoning&amp;#39; Bombs with $5.5 Million Opening - Slashdot</title><link>https://entertainment.slashdot.org/story/26/10/11/207258/the-social-reckoning-bombs-with-55-million-opening</link></item>
-<item><title>Blade Runner, Star Trek, Godzilla, Star Wars + Marvel (and Legos): News From New York Comic-Con - Slashdot</title><link>https://entertainment.slashdot.org/story/26/10/11/1839216/blade-runner-star-trek-godzilla-star-wars--marvel-and-legos-news-from-new-york-comic-con</link></item>
-<item><title>Godzilla Minus One - Slashdot</title><link>https://entertainment.slashdot.org/story/23/12/12/1913243/could-godzilla-minus-one-win-an-oscar</link></item>
-<item><title>A College Told Flock to Remove Its Cameras. The Company Refused. - Slashdot</title><link>https://news.slashdot.org/story/26/10/09/2340244/a-college-told-flock-to-remove-its-cameras-the-company-refused</link></item>
-<item><title>Original RFC1149 Packet Up For Auction At Christies - Slashdot</title><link>https://entertainment.slashdot.org/story/26/10/11/0050222/original-rfc1149-packet-up-for-auction-at-christies</link></item>
-<item><title>RFC1149 (TCP/IP over carrier pigeon) was implemented - Slashdot</title><link>https://slashdot.org/story/01/04/30/0555218/first-rfc1149-implementation</link></item>
-<item><title>US Agency To Rewrite Rules To Finally Address Vehicle Headlight Glare - Slashdot</title><link>https://news.slashdot.org/story/26/10/11/0014241/us-agency-to-rewrite-rules-to-finally-address-vehicle-headlight-glare</link></item>
-<item><title>NASA Releases Data from Artemis II Moon Mission, Calls It &amp;#39;Sights and Sounds of Science&amp;#39; - Slashdot</title><link>https://science.slashdot.org/story/26/10/11/0221200/nasa-releases-data-from-artemis-ii-moon-mission-calls-it-sights-and-sounds-of-science</link></item>
-<item><title>FBI Arrests Cybersecurity Executive Over Data Breach After Contractor Fails to Update Oracle HR Platform - Slashdot</title><link>https://it.slashdot.org/story/26/10/11/0157259/fbi-arrests-cybersecurity-executive-over-data-breach-after-contractor-fails-to-update-oracle-hr-platform</link></item>
-<item><title>Ubuntu Confirms Thursday&amp;#39;s Distributed Denial of Service Attack Against Its Web Infrastructure - Slashdot</title><link>https://news.slashdot.org/story/26/10/11/0142235/ubuntu-confirms-thursdays-distributed-denial-of-service-attack-against-its-web-infrastructure</link></item>
-<item><title>UK Vegetables 20-50% Less Nutritious Than In the 1960s - Slashdot</title><link>https://science.slashdot.org/story/26/10/11/0124231/uk-vegetables-20-50-less-nutritious-than-in-the-1960s</link></item>
-<item><title>AI Execs Game Out &amp;#39;Political Revolt&amp;#39; after a Catastrophic AI Event - Slashdot</title><link>https://yro.slashdot.org/story/26/10/10/2253228/ai-execs-game-out-political-revolt-after-a-catastrophic-ai-event</link></item>
-<item><title>Nicolas Cage Didn&amp;#39;t Sign Amazon&amp;#39;s AI Waiver For &amp;#39;Spider-Noir&amp;#39;. Series Cancelled. - Slashdot</title><link>https://entertainment.slashdot.org/story/26/10/10/2221212/nicolas-cage-didnt-sign-amazons-ai-waiver-for-spider-noir-series-cancelled</link></item>
-<item><title>Ubuntu 26.10 Will Offer a Rust-based GnuPG Replacement Option - Slashdot</title><link>https://linux.slashdot.org/story/26/10/10/2155227/ubuntu-2610-will-offer-a-rust-based-gnupg-replacement-option</link></item>
-<item><title>Claude Sent Police a Fake Murder Tip. White House Mandates AI Companies Report Security Incidents - Slashdot</title><link>https://slashdot.org/story/26/10/10/1951219/claude-sent-police-a-fake-murder-tip-white-house-mandates-ai-companies-report-security-incidents</link></item>
-<item><title>Meta Developing Compressed RAM &amp;#39;CRAM&amp;#39; For Linux: Better Than ZRAM and Zswap? - Slashdot</title><link>https://hardware.slashdot.org/story/26/10/10/0631257/meta-developing-compressed-ram-cram-for-linux-better-than-zram-and-zswap?sbsrc=md</link></item>
-<item><title>First Thorium Nuclear Clocks Begin to Tick - Slashdot</title><link>https://science.slashdot.org/story/26/10/08/1913209/first-thorium-nuclear-clocks-begin-to-tick?sbsrc=md</link></item>
-<item><title>AI卷王们，从窄路走向宽阔？ - 博客园</title><link>https://www.cnblogs.com/cicada-smile/p/23266064</link></item>
-<item><title>理解帆软报表 SSO 的集成 - 博客园</title><link>https://www.cnblogs.com/jyzhao/p/23265936</link></item>
-<item><title>NuGet 周下载量悄悄破了 80 亿：.NET 这波增长，比我们自己预测的还猛 - 博客园</title><link>https://www.cnblogs.com/shanyou/p/23265924</link></item>
-<item><title>技术思考问题7：AI应用越多，人均产出为何不涨？ - 博客园</title><link>https://www.cnblogs.com/snidget/p/23263956</link></item>
-<item><title>开源小工具 Who Arrives：看看你的公网 IP、地区、时区和网络 - 博客园</title><link>https://www.cnblogs.com/myvin/p/23263612</link></item>
-<item><title>ManimCE v0.22.0 发布：输出配置大一统与渲染流程重构 - 博客园</title><link>https://www.cnblogs.com/wang_yb/p/23263451</link></item>
-<item><title>来在网页上用threejs画个蛋白质吧 - 博客园</title><link>https://www.cnblogs.com/ZiLongZiLong/p/23263411</link></item>
-<item><title>并发编程（1.5）：操作系统层——Thread、Scheduler 与 Runtime 调度 - 博客园</title><link>https://www.cnblogs.com/ThinkerQAQ/p/23251859</link></item>
-<item><title>不用 Python 也能跑 YOLO？这个 .NET 库让我扔掉了 OpenCV - 博客园</title><link>https://www.cnblogs.com/shanyou/p/23259541</link></item>
-<item><title>GitHub Actions 工作流 CI/CD 的“发布” - 博客园</title><link>https://www.cnblogs.com/chenby/p/23262361</link></item>
-<item><title>4. ArkTS凭什么是鸿蒙开发首选？对比 JS/TS 详解语言特性 - 博客园</title><link>https://www.cnblogs.com/halfcode/p/23262290</link></item>
-<item><title>[最优化技术] 3-6 修正牛顿法 - 博客园</title><link>https://www.cnblogs.com/h-elden/p/23260689</link></item>
-<item><title>嫌桌面 Agent 太重，我“自己”写了一个 - 博客园</title><link>https://www.cnblogs.com/donpangpang/p/23261629</link></item>
-<item><title>传感器模块都在交出什么：从模拟电压到数字协议 - 博客园</title><link>https://www.cnblogs.com/zw-awa/p/23261573</link></item>
-<item><title>10个 Github 贼火火的、又实用的工具.Net开源项目 - 博客园</title><link>https://www.cnblogs.com/chingho/p/23261099</link></item>
-<item><title>LLM | OpenAI 兼容模式 与 Anthropic 协议的区别 - 博客园</title><link>https://www.cnblogs.com/moonout/p/23260875</link></item>
-<item><title>[数据库系统] 数据库系统的设计原理研究 - 博客园</title><link>https://www.cnblogs.com/johnnyzen/p/23260444</link></item>
-<item><title>AgentScope第11式·定式输出 - 博客园</title><link>https://www.cnblogs.com/snidget/p/23260326</link></item>
-<item><title>Literary Estate Rental Reviews - Wrong Hands</title><link>https://wronghands1.com/2026/10/09/literary-estate-rental-reviews/</link></item>
-<item><title>Charlotte Brontë - Wrong Hands</title><link>https://wronghands1.com/tag/charlotte-bronte-2/</link></item>
-<item><title>Daphne du Maurier - Wrong Hands</title><link>https://wronghands1.com/tag/daphne-du-maurier/</link></item>
-<item><title>Emily Brontë - Wrong Hands</title><link>https://wronghands1.com/tag/emily-bronte-2/</link></item>
-<item><title>pumpkin spice Ophelia - Wrong Hands</title><link>https://wronghands1.com/2026/10/06/pumpkin-spice-ophelia/</link></item>
-<item><title>as gourd as it gets - Wrong Hands</title><link>https://wronghands1.com/2026/10/02/as-gourd-as-it-gets/</link></item>
-<item><title>Jack o Lantern - Wrong Hands</title><link>https://wronghands1.com/tag/jack-o-lantern/</link></item>
-<item><title>a matter of time - Wrong Hands</title><link>https://wronghands1.com/2026/09/29/a-matter-of-time/</link></item>
-<item><title>Finalists in the Nikon Comedy Wildlife Awards 2026 Show the Sillier Side of Animals - My Modern Met</title><link>https://mymodernmet.com/nikon-comedy-wildlife-awards-2026-finalists/</link></item>
-<item><title>Put Your Paws Together for the Winners of the 2026 Dog Photography Awards - My Modern Met</title><link>https://mymodernmet.com/2026-dog-photography-awards/</link></item>
-<item><title>Queen Guitarist Brian May Turned 157 Acres of Farmland Into a Home for Wildlife - My Modern Met</title><link>https://mymodernmet.com/mays-wood-brian-may/</link></item>
-<item><title>RM of K-Pop Boy Band ‘BTS’ Co-Curates First Ever Museum Exhibition in San Francisco - My Modern Met</title><link>https://mymodernmet.com/bts-rm-sfmoma-exhibition/</link></item>
-<item><title>Hundreds of Floating Porcelain Bowls Turn Water Into Music in Outdoor Athens Installation - My Modern Met</title><link>https://mymodernmet.com/celeste-boursier-mougenot-clinamen-athens/</link></item>
-<item><title>Leandro Erlich Celebrates 10 Years of His Iconic Swimming Pool Installation With an Underwater Selfie - My Modern Met</title><link>https://mymodernmet.com/leandro-elrich-swimming-pool-selfie/</link></item>
-<item><title>Ha Chong-Hyun Painting Retrospective Spans 60 Years of Material Experimentation - My Modern Met</title><link>https://mymodernmet.com/ha-chong-hyun-retrospective-asian-art-museum/</link></item>
-<item><title>Groundbreaking Exhibition Returns After 50 Years for a New Generation of Artisans - My Modern Met</title><link>https://mymodernmet.com/objects-usa-exhibition/</link></item>
-<item><title>RIP Margaret Hamilton: Software Pioneer Who Guided Apollo 11 to the Moon Dies at 90 - My Modern Met</title><link>https://mymodernmet.com/rip-margaret-hamilton/</link></item>
-<item><title>Watch GENER8ION and Yung Lean Recreate Their Viral Music Video Live on Stage - My Modern Met</title><link>https://mymodernmet.com/gener8ion-yung-lean-vmas/</link></item>
-<item><title>Singer Lisa of BLACKPINK Gives Electrifying Performance of Thai-Inspired Single “SaWaDiKa” - My Modern Met</title><link>https://mymodernmet.com/lisa-sawadika-vma/</link></item>
-<item><title>This Purrfect Tech Accessory Helps Get Your Paws off Your Phone - My Modern Met</title><link>https://mymodernmet.com/cat-beechwood-phone-stand-kikkerland/</link></item>
-<item><title>Lionel Messi Gives Emotional Farewell to the Argentina National Soccer Team After His Final Game - My Modern Met</title><link>https://mymodernmet.com/lionel-messi-retires-argentina-team/</link></item>
-<item><title>Scientists Discover World’s Largest Underwater Garden Home to 20,000 Octopuses - My Modern Met</title><link>https://mymodernmet.com/random-octopus-garden-off-california-coast/</link></item>
-<item><title>19 Quick systemd-networkd Config Hacks to Speed Up Your Linux Server - Tecmint</title><link>https://www.tecmint.com/systemd-networkd-performance-tuning/</link></item>
-<item><title>10 Tips to Harden SSH Access on Production Ubuntu Servers - Tecmint</title><link>https://www.tecmint.com/ssh-hardening-tips-on-ubuntu-servers/</link></item>
-<item><title>7 Advanced Docker Compose Tricks to Clean Up Multi-Container Stacks in Linux - Tecmint</title><link>https://www.tecmint.com/docker-compose-tricks-linux/</link></item>
-<item><title>12 Docker Tips to Save Disk Space, Limit Resources, and Secure Containers on Linux - Tecmint</title><link>https://www.tecmint.com/docker-tips-tricks/</link></item>
-<item><title>Top 5 Podman Alternatives to Run Containers on Low-Resource Edge Linux Servers - Tecmint</title><link>https://www.tecmint.com/podman-alternatives-lightweight-edge-servers/</link></item>
-<item><title>科技爱好者周刊（第 414 期）：Jev 决策模型有什么用 - 阮一峰的网络日志</title><link>http://www.ruanyifeng.com/blog/2026/10/weekly-issue-414.html</link></item>
-<item><title>Ambassador Greer to Tour Utah’s Advanced Manufacturing Plants - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/ambassador-greer-tour-utahs-advanced-manufacturing-plants</link></item>
-<item><title>United States Seeks Mexico’s Review of Alleged Denial of Workers’ Rights at GLM Components Mexico - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-seeks-mexicos-review-alleged-denial-workers-rights-glm-components-mexico</link></item>
-<item><title>Fourteen Economies Join the United States in Signing a Joint Ministerial Statement to Address Global Excess Capacity and Production in Key Manufacturing Sectors - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/fourteen-economies-join-united-states-signing-joint-ministerial-statement-address-global-excess</link></item>
-<item><title>Ambassador Greer Hosts G20 Trade Ministers in Milwaukee to Showcase the History and Strength of American Manufacturing - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/ambassador-greer-hosts-g20-trade-ministers-milwaukee-showcase-history-and-strength-american</link></item>
-<item><title>USTR Seeks Public Comment on the 2027 Joint Review of USMCA - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/ustr-seeks-public-comment-2027-joint-review-usmca</link></item>
-<item><title>Ambassador Greer Commends Trade Ministers Signing on to Statement Eliminating Forced Labor in Global Supply Chains - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/ambassador-greer-commends-trade-ministers-signing-statement-eliminating-forced-labor-global-supply</link></item>
-<item><title>Ambassador Greer Issues a Statement on G20 Trade Ministers Reaching Consensus on Condemning the Weaponization of Food through Coercive Trade Actions - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/ambassador-greer-issues-statement-g20-trade-ministers-reaching-consensus-condemning-weaponization</link></item>
-<item><title>Chair’s Statement of the G20 Trade Ministerial - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/chairs-statement-g20-trade-ministerial</link></item>
-<item><title>United States and Mexico Announce Course of Remediation at Corporación de Occidente Facility - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/october/united-states-and-mexico-announce-course-remediation-corporacion-de-occidente-facility</link></item>
-<item><title>Ambassador Greer Delivers Opening Remarks at the 2026 G20 Trade Ministerial - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ambassador-greer-delivers-opening-remarks-2026-g20-trade-ministerial</link></item>
-<item><title>Ambassador Greer Issues Statement Following the Ministerial Meeting of the Global Forum on Steel Excess Capacity - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ambassador-greer-issues-statement-following-ministerial-meeting-global-forum-steel-excess-capacity</link></item>
-<item><title>United States and Mexico Announce Successful Resolution of Rapid Response Labor Mechanism Matter at Akwel Juárez México Facility - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/united-states-and-mexico-announce-successful-resolution-rapid-response-labor-mechanism-matter-akwel</link></item>
-<item><title>Ambassador Greer Issues a Statement on Announcement of Recommendations from the U.S.-China Board of Trade - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ambassador-greer-issues-statement-announcement-recommendations-us-china-board-trade</link></item>
-<item><title>United States Seeks Mexico’s Review of Alleged Denial of Workers’ Rights at Yokohama Tire Manufacturing Mexico, S.A. de C.V. - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/united-states-seeks-mexicos-review-alleged-denial-workers-rights-yokohama-tire-manufacturing-mexico</link></item>
-<item><title>Ambassador Greer to Travel to Milwaukee, Wisconsin to Host the G20 Trade Ministerial - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ambassador-greer-travel-milwaukee-wisconsin-host-g20-trade-ministerial</link></item>
-<item><title>USTR Announces Fiscal Year 2027 WTO Tariff-Rate Quota Allocations for Raw Cane Sugar - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/ustr-announces-fiscal-year-2027-wto-tariff-rate-quota-allocations-raw-cane-sugar</link></item>
-<item><title>Public Hearing Regarding Section 301 Investigation of Germany’s Persistent Underpayment for Innovative Pharmaceutical Products - United States Trade Representative</title><link>https://ustr.gov/about/policy-offices/press-office/press-releases/2026/september/public-hearing-regarding-section-301-investigation-germanys-persistent-underpayment-innovative</link></item>
-<item><title>US Army, Kaizen Laboratories to establish common software platform for classified material - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/10/10/us-army-kaizen-laboratories-to-establish-common-software-platform-for-classified-material/</link></item>
-<item><title>Lockheed Martin unveils PAC-3 Edge interceptor designed to counter hypersonic threats - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/10/10/lockheed-martin-unveils-pac-3-edge-interceptor-designed-to-counter-hypersonic-threats/</link></item>
-<item><title>Turkey’s foreign minister says Ankara weighing Saudi defense support, rules out offensive role - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2026/10/08/turkeys-foreign-minister-says-ankara-weighing-saudi-defense-support-rules-out-offensive-role/</link></item>
-<item><title>troubleshooting documentation - Design Milk</title><link>https://design-milk.com/cdn-cgi/challenge-platform/help</link></item>
-<item><title>Daily Pictures. Part 1 (82 pics) - AcidCow.com</title><link>https://acidcow.com/picdump/175978-daily-pictures-part-1-82-pics.html</link></item>
-<item><title>Daily Pictures. Part 2 (81 pics) - AcidCow.com</title><link>https://acidcow.com/picdump/175979-daily-pictures-part-2-81-pics.html</link></item>
-<item><title>Acid GIFs, October 12 (25 gifs) - AcidCow.com</title><link>https://acidcow.com/gif/175980-acid-gifs-october-12-25-gifs.html</link></item>
-<item><title>Funny Memes (21 pics) - AcidCow.com</title><link>https://acidcow.com/pics/175964-funny-memes-21-pics.html</link></item>
-<item><title>Historical Memes (17 pics) - AcidCow.com</title><link>https://acidcow.com/pics/175965-historical-memes-17-pics.html</link></item>
-<item><title>Resourceful People (42 pics) - AcidCow.com</title><link>https://acidcow.com/pics/175962-resourceful-people-42-pics.html</link></item>
-<item><title>Matching Halloween Costumes (21 pics) - AcidCow.com</title><link>https://acidcow.com/pics/175966-matching-halloween-costumes-21-pics.html</link></item>
-<item><title>Random Facts (16 pics) - AcidCow.com</title><link>https://acidcow.com/pics/175967-random-facts-16-pics.html</link></item>
-<item><title>Failed Designs And Constructions (42 pics) - AcidCow.com</title><link>https://acidcow.com/pics/175961-failed-designs-and-constructions-42-pics.html</link></item>
-<item><title>Artemis Fowl Animated TV Show Greenlit With Eoin Colfer as Executive Producer - IGN</title><link>https://www.ign.com/articles/artemis-fowl-animated-tv-show-greenlit-with-eoin-colfer-as-executive-producer</link></item>
-<item><title>Resident Evil Overtakes Weapons as Zach Cregger&amp;#39;s Highest-Grossing Film, The Social Reckoning Bombs - IGN</title><link>https://www.ign.com/articles/resident-evil-overtakes-weapons-as-zach-creggers-highest-grossing-film-the-social-reckoning-bombs</link></item>
-<item><title>The Best Deals Today: Doom: The Dark Ages, Star Wars Zero Company, 007 4K Blu-ray, and More - IGN</title><link>https://www.ign.com/articles/best-deals-for-october-11-2026</link></item>
-<item><title>New NetEase FPS Sparks Warzone &amp;#39;Rip-Off&amp;#39; Claims, But Some Call of Duty Fans Are Happy to See It - IGN</title><link>https://www.ign.com/articles/new-netease-fps-sparks-warzone-rip-off-claims-but-some-call-of-duty-fans-are-happy-to-see-it</link></item>
-<item><title>Tekken 8 Yujiro Teaser Reveals Baki Rep&amp;#39;s In-Game Render Is Just as Uncanny as Fans Expected - IGN</title><link>https://www.ign.com/articles/tekken-8-yujiro-teaser-reveals-baki-reps-in-game-render-is-just-as-uncanny-as-fans-expected</link></item>
-<item><title>‘I’m Shocked That People Are Still Playing’ – How GTA 5 Took Over the World - IGN</title><link>https://www.ign.com/articles/im-shocked-that-people-are-still-playing-how-gta-5-took-over-the-world</link></item>
-<item><title>Marvel Tokon DLC Roadmap Reveals First Look at Jane Foster Thor, Venom and Jubilee Coming in 2027 - IGN</title><link>https://www.ign.com/articles/marvel-tokon-dlc-roadmap-reveals-first-look-at-jane-foster-thor-venom-and-jubilee-coming-in-2027</link></item>
-<item><title>Wildwood Review - IGN</title><link>https://www.ign.com/articles/wildwood-review</link></item>
-<item><title>Godzilla Minus Zero Trailer Reveals Sneak Peek at King Ghidorah&amp;#39;s Gravity Beams - IGN</title><link>https://www.ign.com/articles/godzilla-minus-zero-trailer-reveals-sneak-peek-at-king-ghidorahs-gravity-beams</link></item>
-<item><title>Naruto Teasers Reveal New Shadow Rising Manga and Anime Crossover Series - IGN</title><link>https://www.ign.com/articles/naruto-teasers-reveal-new-shadow-rising-manga-and-anime-crossover-series</link></item>
-<item><title>Blade Runner 2099 Trailer Teases Replicant Mystery With Hunter Schafer and Michelle Yeoh - IGN</title><link>https://www.ign.com/articles/blade-runner-2099-trailer-teases-replicant-mystery-with-hunter-schafer-and-michelle-yeoh</link></item>
-<item><title>Arc Raiders&amp;#39; 2.0 Update and &amp;#39;Spider-Man&amp;#39; Grappling Hook Drive Player Count to Reach 7-Month High - IGN</title><link>https://www.ign.com/articles/arc-raiders-20-update-and-spider-man-grappling-hook-drive-player-count-to-reach-7-month-high</link></item>
-<item><title>Image Comics&amp;#39; Roam Reunites Paper Girls Creators Brian K. Vaughan and Cliff Chiang - IGN</title><link>https://www.ign.com/articles/image-comics-roam-reunites-paper-girls-creators-brian-k-vaughan-and-cliff-chiang</link></item>
-<item><title>Crystal Lake Showrunner on Retelling the Friday the 13th Story: ‘It&amp;#39;s Always Ripe for Reinterpretation’ - IGN</title><link>https://www.ign.com/articles/crystal-lake-showrunner-on-retelling-the-friday-the-13th-story-its-always-ripe-for-reinterpretation</link></item>
-<item><title>DC Legend Grant Morrison Criticizes &amp;#39;Morally and Legally Incoherent&amp;#39; Lanterns Finale - IGN</title><link>https://www.ign.com/articles/dc-legend-grant-morrison-criticizes-morally-and-legally-incoherent-lanterns-finale</link></item>
-<item><title>Nicolas Cage Says He&amp;#39;ll &amp;#39;Probably Not Work With&amp;#39; Amazon Again After Declining Spider-Noir AI Waiver - IGN</title><link>https://www.ign.com/articles/nicolas-cage-says-hell-probably-never-work-with-amazon-again-after-declining-spider-noir-ai-waiver</link></item>
-<item><title>GTA 6 Leaker Threatens to Release Build With Full Story Mode Played to the End, Ties Lucia&amp;#39;s Clothing to Crypto Scheme - IGN</title><link>https://www.ign.com/articles/gta-6-leaker-threatens-to-release-build-with-full-story-mode-played-to-the-end-ties-lucias-clothing-to-crypto-scheme</link></item>
-<item><title>Blumhouse Gives Updates on Paranormal Activity 8, Saw 11, River, Something Is Killing the Children, and More | NYCC 2026 - IGN</title><link>https://www.ign.com/articles/blumhouse-atomic-monster-nycc-2026</link></item>
-<item><title>Hands-on Impressions of Hoid&amp;#39;s Storybook Collection by Brandon Sanderson - IGN</title><link>https://www.ign.com/articles/hands-on-impressions-of-hoids-storybook-cosmere-collection-by-brandon-sanderson</link></item>
-<item><title>Star Citizen Single-Player Spinoff Squadron 42 Reemerges With Flashy New Trailer, Steam Wishlists, and Cast Confirmation - IGN</title><link>https://www.ign.com/articles/star-citizen-single-player-spinoff-squadron-42-reemerges-with-flashy-new-trailer-steam-wishlists-and-cast-confirmation</link></item>
-<item><title>Chambers&amp;#39;s Twentieth Century Dictionary (part 1 of 4: A-D) 96271 downloads - Project Gutenberg</title><link>https://www.gutenberg.org/ebooks/37683</link></item>
-<item><title>The Works of William Shakespeare [Cambridge Edition] [Vol. 5 of 9] William Shakespeare 63241 downloads - Project Gutenberg</title><link>https://www.gutenberg.org/ebooks/49297</link></item>
-<item><title>The Odyssey Homer 53967 downloads - Project Gutenberg</title><link>https://www.gutenberg.org/ebooks/1727</link></item>
-<item><title>Meditations Emperor of Rome Marcus Aurelius 51032 downloads - Project Gutenberg</title><link>https://www.gutenberg.org/ebooks/2680</link></item>
-<item><title>AI-Built Torrent Site Looks Inside Downloads to Catch Fakes and Malware - TorrentFreak</title><link>https://torrentfreak.com/ai-built-torrent-site-looks-inside-downloads-to-catch-fakes-and-malware/</link></item>
+<lastBuildDate>Tue, 13 Oct 2026 08:32:04 +0800</lastBuildDate>
+<item><title>Who Owns ChatGPT? OpenAI&amp;#39;s Ownership Structure Explained - HowStuffWorks</title><link>https://money.howstuffworks.com/who-owns-chatgpt.htm</link></item>
+<item><title>Sun Gods: 12 Solar Traditions From Around the World - HowStuffWorks</title><link>https://people.howstuffworks.com/sun-gods.htm</link></item>
+<item><title>Who&amp;#39;s the Richest Singer in the World Right Now? - HowStuffWorks</title><link>https://money.howstuffworks.com/richest-singer-in-the-world.htm</link></item>
+<item><title>15 Famous Cowboys and Cowgirls of the Wild West - HowStuffWorks</title><link>https://history.howstuffworks.com/historical-figures/famous-cowboys.htm</link></item>
+<item><title>See the latest news - Intel Newsroom</title><link>https://www.intel.com/content/www/us/en/newsroom/home.html</link></item>
+<item><title>FAST 发现一个脉冲星三星系统 - Solidot</title><link>https://www.solidot.org/story?sid=85583</link></item>
+<item><title>微软在 Qwen 模型基础上推出决策模型 Microsoft-Decision-1 - Solidot</title><link>https://www.solidot.org/story?sid=85584</link></item>
+<item><title>全球汽油汽车销量首次低于五成 - Solidot</title><link>https://www.solidot.org/story?sid=85585</link></item>
+<item><title>固态硬盘价格一年翻了两番 - Solidot</title><link>https://www.solidot.org/story?sid=85586</link></item>
+<item><title>日本 BitTorrent 用户下载成人视频频繁收到罚单 - Solidot</title><link>https://www.solidot.org/story?sid=85587</link></item>
+<item><title>美国畜牧业采用石化行业相同的策略淡化气候暖化 - Solidot</title><link>https://www.solidot.org/story?sid=85588</link></item>
+<item><title>AI 编程智能体生成了更多代码，但并没有生成更多软件 - Solidot</title><link>https://www.solidot.org/story?sid=85589</link></item>
+<item><title>诺贝尔经济学奖授予了两名美国经济学家 - Solidot</title><link>https://www.solidot.org/story?sid=85590</link></item>
+<item><title>亚马逊放弃 Fire 品牌改为推出 Alexa 平板 - Solidot</title><link>https://www.solidot.org/story?sid=85591</link></item>
+<item><title>美国核反应堆开始整合 AI 助手 - Solidot</title><link>https://www.solidot.org/story?sid=85592</link></item>
+<item><title>Tom the Dancing Bug: Mark Zuckerberg presents &amp;quot;A.I. and U!&amp;quot; - Boing Boing</title><link>https://boingboing.net/2026/10/09/tom-the-dancing-bug-mark-zuckerberg-presents-a-i-and-u.html</link></item>
+<item><title>Wired and Neal.fun team up to spend Elon&amp;#39;s trillion dollars - Boing Boing</title><link>https://boingboing.net/2026/10/08/wired-and-neal-fun-team-up-to-spend-elons-trillion-dollars.html</link></item>
+<item><title>Game Boy becomes Game Man with giant-sized version - Boing Boing</title><link>https://boingboing.net/2026/10/07/game-boy-becomes-game-man-with-giant-sized-version.html</link></item>
+<item><title>New Zealand bank censors racy fan art of sexy new sheep mascot - Boing Boing</title><link>https://boingboing.net/2026/10/12/new-zealand-bank-censors-racy-fan-art-of-sexy-new-sheep-mascot.html</link></item>
+<item><title>Burglar escapes with stack of empty Mac Mini boxes - Boing Boing</title><link>https://boingboing.net/2026/10/12/burglar-escapes-with-stack-of-empty-mac-mini-boxes.html</link></item>
+<item><title>Classic real-time strategy game Total Annihilation is 30 years old—and everyone is remixing it - Boing Boing</title><link>https://boingboing.net/2026/10/12/classic-real-time-strategy-game-total-annihilation-is-30-years-old-and-everyone-is-remixing-it.html</link></item>
+<item><title>Unsurprisingly, gambling apps reward gambling addiction - Boing Boing</title><link>https://boingboing.net/2026/10/12/unsurprisingly-gambling-apps-reward-gambling-addiction.html</link></item>
+<item><title>Minesweeper as a triple-A game - Boing Boing</title><link>https://boingboing.net/2026/10/12/minesweeper-as-a-triple-a-game.html</link></item>
+<item><title>Messing with AI interviewers is cathartic - Boing Boing</title><link>https://boingboing.net/2026/10/12/messing-with-ai-interviewers-is-cathartic.html</link></item>
+<item><title>&amp;quot;Terrible games&amp;quot; made with AI - Boing Boing</title><link>https://boingboing.net/2026/10/12/terrible-games-made-with-ai.html</link></item>
+<item><title>A used PS5 Pro will now run you twice its original launch price - Boing Boing</title><link>https://boingboing.net/2026/10/12/a-used-ps5-pro-will-now-run-you-twice-its-original-launch-price.html</link></item>
+<item><title>Anthropic wants people to stop being mean to Claude - Boing Boing</title><link>https://boingboing.net/2026/10/12/anthropic-wants-people-to-stop-being-mean-to-claude.html</link></item>
+<item><title>For the next 3 days, this $360 VPN is only $35 - Boing Boing</title><link>https://boingboing.net/2026/10/12/for-the-next-3-days-this-360-vpn-is-only-35.html</link></item>
+<item><title>New FDA loophole would allow toxic chemicals into food - Boing Boing</title><link>https://boingboing.net/2026/10/12/new-fda-loophole-would-allow-toxic-chemicals-into-food.html</link></item>
+<item><title>Today only: Get Microsoft Office and Windows 11 Pro for life for $35 - Boing Boing</title><link>https://boingboing.net/2026/10/11/today-only-get-microsoft-office-and-windows-11-pro-for-life-for-35.html</link></item>
+<item><title>Windows 11 Pro: Access advanced professional tools for $8 - Boing Boing</title><link>https://boingboing.net/2026/10/10/windows-11-pro-access-advanced-professional-tools-for-8.html</link></item>
+<item><title>This Loom alternative lets you record and share your screen instantly for $25 - Boing Boing</title><link>https://boingboing.net/2026/10/10/this-loom-alternative-lets-you-record-and-share-your-screen-instantly-for-25.html</link></item>
+<item><title>Vectrex Doom - Boing Boing</title><link>https://boingboing.net/2026/10/09/vectrex-doom.html</link></item>
+<item><title>Get lifetime access to all Babbel language lessons with this exclusive offer - Boing Boing</title><link>https://boingboing.net/2026/10/09/get-lifetime-access-to-all-babbel-language-lessons-with-this-exclusive-offer.html</link></item>
+<item><title>The splootin&amp;#39; squirrels of SoCal are keepin&amp;#39; cool - Boing Boing</title><link>https://boingboing.net/2026/10/09/southern-california-squirrels-splooting.html</link></item>
+<item><title>Sunny, 80 degrees, and Newport Beach is flooding - Boing Boing</title><link>https://boingboing.net/2026/10/09/newport-beach-flooding-sunny-day.html</link></item>
+<item><title>Maybe Trump&amp;#39;s taxpayer-funded ads are a public service after all - Boing Boing</title><link>https://boingboing.net/2026/10/09/trump-taxpayer-ads-backfire.html</link></item>
+<item><title>New Mexico pipeline explodes, launches 100-foot flames and starts a wildfire - Boing Boing</title><link>https://boingboing.net/2026/10/09/new-mexico-pipeline-explodes-launches-100-foot-flames-and-starts-a-wildfire.html</link></item>
+<item><title>Stolen Renoirs recovered in France; six suspects in custody - Boing Boing</title><link>https://boingboing.net/2026/10/09/stolen-renoirs-recovered-in-france-six-suspects-in-custody.html</link></item>
+<item><title>Trump admits he deliberately misnames Michigan&amp;#39;s Abdul El-Sayed - Boing Boing</title><link>https://boingboing.net/2026/10/09/trump-admits-he-deliberately-misnames-michigans-abdul-el-sayed.html</link></item>
+<item><title>A theatrical morning with Nancy&amp;#39;s Ernie Bushmiller - Boing Boing</title><link>https://boingboing.net/2026/10/09/a-theatrical-morning-with-nancys-ernie-bushmiller.html</link></item>
+<item><title>Cyberpunk 2077 to get a live-action adaptation - Boing Boing</title><link>https://boingboing.net/2026/10/09/cyberpunk-2077-to-get-a-live-action-adaptation.html</link></item>
+<item><title>Classic puzzle game Machinarium is getting a surprise sequel - Boing Boing</title><link>https://boingboing.net/2026/10/09/classic-puzzle-game-machinarium-is-getting-a-surprise-sequel.html</link></item>
+<item><title>Save up to $500 per flight with Matt&amp;#39;s Flights Premium Plan for $40 for life - Boing Boing</title><link>https://boingboing.net/2026/10/09/save-up-to-500-per-flight-with-matts-flights-premium-plan-for-40-for-life.html</link></item>
+<item><title>An atlas of periodic solutions to the three-body problem - Boing Boing</title><link>https://boingboing.net/2026/10/09/an-atlas-of-periodic-solutions-to-the-three-body-problem.html</link></item>
+<item><title>Pentagon to publicly livestream execution of Fort Hood shooter Nidal Malik Hasan - Boing Boing</title><link>https://boingboing.net/2026/10/09/pentagon-to-publicly-livestream-execution-of-fort-hood-shooter-nidal-malik-hasan.html</link></item>
 </channel></rss>
