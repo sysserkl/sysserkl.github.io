@@ -2135,6 +2135,13 @@ Angela
 unconstitutionally
 non-racist
 anti-poverty
+JavaScript
+nervously
+ultraleftist
+giftee
+hellscape
+short-range
+full-flavoured
 
 
 `.trim().split('\n');
