@@ -196,6 +196,18 @@ function reading_mode_kltxt_b(){
     location.href='#content';
 }
 
+function duplicate_id_kltxt_b(){
+    var ids=new Set();
+    var duplicate_ids=[];
+    for (let item of csbooklist_source_global){
+        if (ids.has(item[0])){
+            duplicate_ids.push(item[0]);
+        }
+        ids.add(item[0]);
+    }
+    alert(duplicate_ids);
+}
+
 function float_bookname_kltxt_b(){
     var odiv=document.getElementById('div_float_bookname');
     if (!odiv){
@@ -573,6 +585,7 @@ function txtmenus_kltxt_b(cstype=''){
     menu_config=menu_config.concat([
     enwords_mini_menu_item_b(str_t),
     '<span class="span_menu" onclick="'+str_t+'float_bookname_kltxt_b();">浮动书名</span>',
+    '<span class="span_menu" onclick="'+str_t+'duplicate_id_kltxt_b();">相同id检查</span>',
     fpara_menu_b(str_t,true),
     ]);
 

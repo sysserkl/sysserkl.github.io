@@ -2142,6 +2142,13 @@ giftee
 hellscape
 short-range
 full-flavoured
-
+econometrical
+Ebbinghaus
+environmentalist
+ungrammatical
+paleogeography
+palaeogeographic
+paleogeographic
+paleogeographical
 
 `.trim().split('\n');

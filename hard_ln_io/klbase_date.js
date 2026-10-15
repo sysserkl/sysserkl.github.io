@@ -155,6 +155,7 @@ function day_2_week_b(csstr='',cstype=''){
 }
 
 function days_between_two_dates_b(csday_start='',csday_end='',return_type='d',invalid_return_false=false){
+    //minus - 保留注释
     if (csday_start==''){
         csday_start=new Date();
     }
