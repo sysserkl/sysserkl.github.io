@@ -2150,5 +2150,17 @@ paleogeography
 palaeogeographic
 paleogeographic
 paleogeographical
+mailclad
+palaeobiologic
+palaeobiological
+paleobiologic
+paleobiology
+paleobiological
+paleoclimatology
+palaeobiology
+palaeoclimatology
+detectability
+
+
 
 `.trim().split('\n');

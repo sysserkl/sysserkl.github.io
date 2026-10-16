@@ -5213,3 +5213,27 @@ function local_storage_rows_occurrence_b(csid,only_get=false,csmax=100,show_conc
     }
     return array_split_by_col_b(dict_t,[0]);
 }
+
+function rows_cols_all_equal_b(matrix, startRow, endRow, cols, target, strict = false){
+    // 1. 基本合法性
+    if (!Array.isArray(matrix) || matrix.length === 0){return false;}
+
+    const colSet = new Set(Array.isArray(cols) ? cols : [cols]);
+    if (colSet.size === 0){return false;}
+
+    // 2. 行范围归一化（允许 startRow > endRow）
+    const lo = Math.min(startRow, endRow);
+    const hi = Math.max(startRow, endRow);
+    if (lo < 0 || hi >= matrix.length){return false;}
+
+    const eq = strict ? (a, b) => a === b : (a, b) => Object.is(a, b); // 唯一能正确比较 NaN 的写法
+
+    // 3. 核心判断
+    return matrix.slice(lo, hi + 1).every(row => {
+        if (!Array.isArray(row)){return false;}
+        return [...colSet].every(c => {
+            if (c < 0 || c >= row.length){return false;} // 列越界 → 不成立
+            return eq(row[c], target);
+        });
+    });
+}
