@@ -229,7 +229,7 @@ function menu_klr2(){
     ['title_href2js','名称 网址 =&gt; JavaScript 数组'],
     ['title_href2csv','名称 网址 =&gt; csv网址格式'],
     ['enword2enlink','单词名称 =&gt; 词典链接 JavaScript 数组'],
-
+    ['txt2js','文本 =&gt; JavaScript 数组'],
     ];
     for (let arow of group_list){
         klmenu_convert.push('<span class="span_menu" onclick="'+str_t+'strquick_klr_b(\''+arow[0]+'\');">'+arow[1]+'</span>');

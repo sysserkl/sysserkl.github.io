@@ -785,12 +785,23 @@ function radio_value_set_b(radio_name,csvalue){
     return blfound;
 }
 
-function specialstr_j(csstr,ignore_single_quote=false){
+function specialstr_j(csstr,ignore_single_quote=false,remove_r=false,add_quote=false){
     //var www='"do\\gl\\\\h\'ello';
-    var bljg=csstr.toString().replace(/\\/g,'\\\\');
-    bljg=bljg.replace(new RegExp('"','g'),'\\"');
+    //txt2jsarray_b
+    var bljg=csstr.toString();
+    
+    if (remove_r){
+        bljg=bljg.replace(/\r/g,'');
+    }
+    
+    bljg=bljg.replace(/\\/g,'\\\\');
+    bljg=bljg.replace(/"/g,'\\"');
     if (ignore_single_quote==false){
         bljg=bljg.replace(new RegExp("'",'g'),"\\'");
+    }
+
+    if (add_quote){
+        return '"'+bljg+'"';
     }
     return bljg;
 }

@@ -793,6 +793,13 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             var blstr=document.getElementById(csid).value;        
             document.getElementById(csid).value=ul_ol_2_list_b(blstr);
             break;
+        case 'txt2js':
+            var list_t=document.getElementById(csid).value.trimRight().split('\n');
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
+                list_t[blxl]=specialstr_j(list_t[blxl],true,false,true);
+            }
+            document.getElementById(csid).value='[\n'+list_t.join(',\n')+'\n]';
+            break;
 	}
 
     show_line_count_in_status_klr_b(csid,status_id,' 处理后行数：',false);
