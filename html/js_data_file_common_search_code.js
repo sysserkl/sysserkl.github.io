@@ -287,6 +287,7 @@ function menu_common(){
     '<span class="span_menu" onclick="'+str_t+'upload_data_files_form_common();">上传数据文件或从bigfile导入</span>',
     '<span class="span_menu" onclick="'+str_t+'split_current_arr_common();">当前结果数组分割</span>',
     '<span class="span_menu" onclick="'+str_t+'sort_by_key_count_common();">当前条件按输入的关键词出现次数排序</span>',    
+    '<span class="span_menu" onclick="'+str_t+'txt_export_common();">当前结果导出为纯文本</span>',
     ]);
     
     if (!is_standalone_html_file_global){
@@ -410,6 +411,19 @@ function th_set_common(){
     }
     
     table_th_jscm_global=new_dict;
+}
+
+function txt_export_common(){
+    var bltitle=prompt('输入保存文件名');
+    if (bltitle==null){return;}
+    if (bltitle.trim()==''){
+        bltitle='Common Search';
+    }
+    var result_t=[];
+    for (let arow of js_data_current_common_search_global){
+        result_t.push(arow[0].toString());
+    }
+    string_2_txt_file_b(result_t.join('\n'),bltitle+'.txt','txt');
 }
 
 function standalone_search_common(){

@@ -4998,6 +4998,7 @@ function current_page_2_ensentence_b(cstype=''){
 <span class="aclick" onclick="ensentence_in_textarea_group_b(true);">按稀有单词排序</span>
 小于<input type="number" id="input_sentences_from_kltxt_minor_merge_b" style="width:2rem;" value=2 />时不分割
 <span class="aclick" onclick="ensentence_in_textarea_group_b();">按稀有单词分割</span>
+<span class="aclick" onclick="ensentence_in_textarea_blank_rows_b();">空白行/切换</span>
 <span class="aclick" onclick="ensentence_in_textarea_remove_open_end_b();">剔除开放结尾行</span>
 <input type="number" id="input_sentences_from_kltxt_row_len_b" style="width:3rem;" value=600 />
 <span class="aclick" onclick="ensentence_in_textarea_remove_lengthy_rows_b();">剔除超长行</span>`;
@@ -5007,6 +5008,23 @@ function current_page_2_ensentence_b(cstype=''){
     odiv.innerHTML='<div style="margin:0.5rem;">'+bljg+'<div id="div_sentences_from_kltxt_result_b"></div></div>';
     ensentence_in_textarea_len_b(result_t);
     odiv.scrollIntoView();
+}
+
+function ensentence_in_textarea_blank_rows_b(){
+    var osubs=document.querySelectorAll('#div_sentences_from_kltxt_result_b textarea');
+    if (osubs.length==0){
+        var osubs=[document.getElementById('textarea_sentences_from_kltxt_b')];
+    }
+    
+    for (let one_textarea of osubs){
+        var blstr=one_textarea.value.trim();
+        if (blstr.match(/\n\n/)){
+            blstr=blstr.replace(/\n\n/g,'\n');
+        } else {
+            blstr=blstr.replace(/\n/g,'\n\n');
+        }
+        one_textarea.value=blstr;
+    }
 }
 
 function ensentence_in_textarea_len_b(csarr){

@@ -192,6 +192,8 @@ function menu_klr2(){
     var group_list=[
     ['md->HTML','markdown2html_klr2();',true],
     ['HTML->md','markdown2html_klr2(true);',true],
+    ['h23->h45','markdown_h_change_klr2();',true],
+    ['h45->h23','markdown_h_change_klr2(true);',true],
     ];    
     klmenu_fn.push(menu_container_b(str_t,group_list,'markdown: '));
     
@@ -274,7 +276,28 @@ function menu_klr2(){
     '<span class="span_menu" onclick="'+str_t+'title_change_b();">修改页面标题</span>',    
     ]);
     
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_ende,'🛡️','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','28rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','20rem','1rem','1rem','60rem'),'','0rem','','menus_klr2')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_fn,'','28rem','1rem','1rem','60rem')+klmenu_b(klmenu_ende,'🛡️','17rem','1rem','1rem','60rem')+klmenu_b(klmenu_sort,'↕','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_convert,'↔','20rem','1rem','1rem','60rem')+klmenu_b(klmenu_batch,'🗂','28rem','1rem','1rem','60rem')+klmenu_b(klmenu_links,'L','12rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','20rem','1rem','1rem','60rem'),'','0rem','','menus_klr2')+' ');
+}
+
+function markdown_h_change_klr2(is_revert=false){
+    var otextarea=document.getElementById('textarea_rows_content');
+    var blstr=otextarea.value;
+    
+    if (is_revert){
+        if (blstr.match(/^## /m)){
+            alert('存在 ^## ');
+            return;
+        }
+        blstr=blstr.replace(/^#### /mg,'## ').replace(/^##### /mg,'### ');
+    } else {
+        if (blstr.match(/^##### /m)){
+            alert('存在 ^##### ');
+            return;
+        }
+        blstr=blstr.replace(/^### /mg,'##### ').replace(/^## /mg,'#### ');
+    }
+    
+    document.getElementById('textarea_status').value=blstr;
 }
 
 function mermaid_done_import_klr2(){
