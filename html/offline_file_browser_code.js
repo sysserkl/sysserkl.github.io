@@ -298,7 +298,9 @@ function search_offline_file_browser(csstr='',isreg=-1,csmax=-1,csunique=-1,show
     if (csunique==-1){
         csunique=klmenu_check_b('span_unique_ofb',false);
     }
-
+    
+    var same_dir_len=parseInt(document.getElementById('input_same_dir_ofb').value.trim());
+    
     var check_path_name=klmenu_check_b('span_path_name_ofb',false);
     var blxl=1;
     
@@ -314,13 +316,24 @@ function search_offline_file_browser(csstr='',isreg=-1,csmax=-1,csunique=-1,show
         }
         if (csunique){
             if (dir_list.includes(item[1])){continue;}
-            dir_list.push(item[1]);
+            if (same_dir_len>0){
+                if ((item[1].match(/\//g) || []).length>=same_dir_len){
+                    dir_list.push(item[1]);
+                }
+            } else {
+                dir_list.push(item[1]);
+            }
         }
         offline_file_data_current_global.push(item);
 
         blxl=blxl+1;
         if (blxl>csmax){break;}
     }
+    
+    dir_list.sort();
+    dir_list.sort(function (a,b){return a.length<b.length?-1:1;});
+    console.log(dir_list);
+    
     if (showhtml){
         current_2_html_offline_file_browser();
         keys_offline_file_browser(csstr+(isreg?'(:r)':''));
@@ -1232,7 +1245,7 @@ function menu_offline_file_browser(){
     '<span id="span_saved_disk_path_ofb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ save movie 显示 Disk & Path</span>',    
     '<span id="span_path_name_ofb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 搜索目录+文件名</span>',    
     '<span id="span_unique_ofb" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id,true);">⚪ 不重复显示相同目录的记录</span>',    
-    
+    '<span class="span_menu">相同目录起算<input id="input_same_dir_ofb" type="number" value=4 style="width:3rem" />级</span>',
     ];
     
     var group_list=[
@@ -1404,7 +1417,34 @@ function import_bigfile_offline_file_browser(){
     load_js_var_file_b('offline_file_data_raw_global',[],fname,sub_bigfile_offline_file_browser_load,true,true);
 }
 
-function filelist_2_virtual_path_offline_file_browser(){
+function filelist_2_movie_name_offline_file_browser(){
+    var blstr=filelist_2_virtual_path_offline_file_browser(true).join('\n');
+    blstr=blstr.replace(/^(.*\/.*\/.*\/.*\/.*)\/.*$/mg,'$1');
+    blstr=blstr.replace(/^.*\/(.*)$/mg,'$1');
+    blstr=blstr.replace(/^(.*\b[0-9]{4}\b).*$/mg,'$1');
+    blstr=blstr.replace(/{(.*)}/g,'$1');
+    blstr=blstr.replace(/\b(720p|1080p|BDRip|BD|BT5156|Webrip|WEB-HR|HR-HDTV|HDTVrip|HR-BluRay|DVDRip|VCB-Studio|1280X[0-9]+|1024X[0-9]+|YYDM-11FANS)\b.*$/img,'');
+
+    var result_t=array_unique_b(blstr.split('\n'));
+    bllen=result_t.length;
+    end_list=['.','[','.无极','.帝国','.飞鸟','.圣城','.1024','.rmvb'];
+    while (true){
+        var blfound=false;
+        for (let blxl=0;blxl<bllen;blxl++){
+            for (let item of end_list){
+                if (result_t[blxl].endsWith(item)){
+                    result_t[blxl]=result_t[blxl].slice(0,-1*item.length);
+                    blfound=true;
+                }
+            }
+        }
+        if (!blfound){break;}
+    }
+    result_t=array_unique_b(result_t);
+    document.getElementById('div_sub_statistics').innerHTML='<textarea>'+result_t.join('\n')+'</textarea>';
+}
+
+function filelist_2_virtual_path_offline_file_browser(only_list=false){
     var ool=document.getElementById('ol_flist_ofb');
     var olis=ool.querySelectorAll('li');
     var result_t=[];
@@ -1412,6 +1452,10 @@ function filelist_2_virtual_path_offline_file_browser(){
         if (one_li.style.display=='none'){continue;}
         result_t.push(one_li.textContent);
     }
+    if (only_list){
+        return result_t;
+    }
+    
     document.getElementById('div_sub_statistics').innerHTML='<textarea>'+result_t.join('\n').replace(/^wikiuploads\//mg,'{{wikiuploads}}')+'</textarea>';
 }
 
@@ -1475,6 +1519,7 @@ function file_list_offline_file_browser(){
     bljg=bljg+'<span class="aclick" onclick="document.getElementById(\'input_flist_filter_ofb\').scrollIntoView();">head</span>';
     bljg=bljg+'<span class="aclick" onclick="filelist_disk_count_offline_file_browser();">磁盘数</span>';    
     bljg=bljg+'<span class="aclick" onclick="filelist_2_virtual_path_offline_file_browser();">转换当前可见结果的wikiuploads/为虚拟路径</span>';    
+    bljg=bljg+'<span class="aclick" onclick="filelist_2_movie_name_offline_file_browser();">缩减当前可见结果文件名为影视名称</span>';    
     bljg=bljg+close_button_b('div_statistics','none')+'</p>';
     bljg=bljg+'<div id="div_sub_statistics"></div>';
     bljg=bljg+'<p>&nbsp;</p><p>&nbsp;</p>';

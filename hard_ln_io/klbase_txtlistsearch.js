@@ -605,8 +605,13 @@ function txtmenus_kltxt_b(cstype=''){
         menu_config=menu_config.concat([
         '<a href="'+book_list_file+'" onclick="'+str_t+'" target=_blank>booklist_current_data.js</a>',    
         '<a href="'+digest_file+'" onclick="'+str_t+'" target=_blank>_digest.js</a>',
-        '<span class="span_menu" onclick="'+str_t+'innerHTML_2_arr_kltxt_b();">当前内容保存为js arr</span>',            
         ]);
+
+        var group_list=[
+        ['js arr','innerHTML_2_arr_kltxt_b();',true],
+        ['txt','innerHTML_2_arr_kltxt_b(true);',true],
+        ];
+        menu_config.push(menu_container_b(str_t,group_list,'当前可见内容保存：'));
         
         var group_list=[
         ['Help','help_kltxt_b();',true],
@@ -916,15 +921,21 @@ function name_search_kltxt_b(){
     sub_name_search_kltxt_b_one_row();
 }
 
-function innerHTML_2_arr_kltxt_b(){
+function innerHTML_2_arr_kltxt_b(is_txt=false){
     var ospans=document.querySelectorAll('div#divhtml span.txt_content');
     var result_t=[];
-    for (let one_span of ospans){
-        result_t.push('"'+specialstr_j(one_span.innerHTML)+'",');
+    if (is_txt){
+        for (let one_span of ospans){
+            result_t.push(one_span.innerText);
+        }
+    } else {
+        for (let one_span of ospans){
+            result_t.push('"'+specialstr_j(one_span.innerHTML)+'",');
+        }
     }
     
     var left_strings='<p>'+close_button_b('divhtml2','');
-    var blstr=textarea_with_form_generate_b('textarea_innerhtml_arr_kltxt','height:15rem;',left_strings,'全选,复制,save as js file,发送到临时记事本,发送地址','</p>','','',false,'var filelist=[\n'+result_t.join('\n')+'\n];\n',false,'','aclick',true,'margin:0.5rem');
+    var blstr=textarea_with_form_generate_b('textarea_innerhtml_arr_kltxt','height:15rem;',left_strings,'全选,复制,save as '+(is_txt?'txt':'js')+' file,发送到临时记事本,发送地址','</p>','','',false,(is_txt?result_t.join('\n'):'var filelist=[\n'+result_t.join('\n')+'\n];\n'),false,'','aclick',true,'margin:0.5rem');
 
     var odiv=document.getElementById('divhtml2');
     odiv.innerHTML=blstr;

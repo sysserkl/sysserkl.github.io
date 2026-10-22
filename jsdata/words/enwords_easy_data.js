@@ -2179,7 +2179,23 @@ electric bike
 oxcart
 sadomasochism
 unlink
-
+half-truth
+helicopter parent
+infallibility
+interoperable
+mojito
+phonon
+single-sex
+telemarketing
+microcontroller
+algebrist
+prenatally
+one-woman
+meta-ethical
+ultra-left
+box cutter
+rezidentura
+undernourishment
 
 
 `.trim().split('\n');
