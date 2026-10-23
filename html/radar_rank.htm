@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b([],['mermaid.min.js'],['radar_rank_data.js'],['radar_rank_code.js']);
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>通用量表引擎 · 可配置的多维评分工具</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+[hidden]{display:none !important}
+:root{
+--bg:#f5f6f7; --panel:#ffffff; --panel2:#fbfbfc; --line:#dcdfe3; --line2:#e9ebee;
+--txt:#1f2328; --dim:#5c6670; --dim2:#8b949e;
+--a:#0b6bcb; --a2:#0b6bcb; --warn:#b45309; --bad:#b91c1c; --ok:#15803d;
+}
+html,body{margin:0;padding:0}
+body{
+background:var(--bg); color:var(--txt); font-size:15px; line-height:1.7;
+font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:820px;margin:0 auto;padding:20px 16px 64px}
+
+.screen{display:none}
+.screen.on{display:block}
+
+h1{font-size:22px;line-height:1.4;margin:0 0 8px;font-weight:600}
+.lead{font-size:14px;color:var(--dim);line-height:1.8;margin:0 0 22px;max-width:640px}
+
+.field{display:block;margin:0 0 18px}
+.field > span{display:block;font-size:13px;color:var(--dim);margin-bottom:7px}
+.field em{font-style:normal;color:var(--dim2);font-size:12px}
+input[type=text]{
+width:100%;padding:8px 10px;border:1px solid var(--line);border-radius:4px;
+background:#fff;color:var(--txt);font-size:14px;outline:none;font-family:inherit;
+}
+input[type=text]:focus{border-color:var(--a)}
+input::placeholder{color:#a8b0b9}
+
+.people{display:flex;flex-direction:column;gap:6px;margin-bottom:8px}
+.prow{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:4px;padding:5px 10px}
+.pdot{width:9px;height:9px;border-radius:2px;flex:none}
+.prow input{flex:1;min-width:0;border:none;background:transparent;padding:5px 0;font-size:14px;outline:none}
+.prow input:focus{border-color:transparent;box-shadow:none}
+.pstat{font-size:12px;color:var(--dim2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.mini-btn{font-size:12px;padding:4px 10px;border:1px solid var(--line);border-radius:4px;background:#fff;
+color:var(--dim);cursor:pointer;font-family:inherit;white-space:nowrap}
+.mini-btn:hover{border-color:var(--a);color:var(--a)}
+.mini-btn.del:hover{border-color:var(--bad);color:var(--bad)}
+.addrow{display:flex;gap:8px}
+
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{padding:6px 12px;border:1px solid var(--line);border-radius:4px;background:#fff;
+color:var(--dim);font-size:13px;cursor:pointer;user-select:none}
+.chip:hover{border-color:#b9bfc6;color:var(--txt)}
+.chip.on{border-color:var(--a);color:var(--a);background:#f0f6fd;font-weight:600}
+.chip small{display:block;font-size:11px;color:var(--dim2);font-weight:400;line-height:1.5}
+.chip.on small{color:#5b8fc9}
+
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.btn{padding:8px 16px;border:1px solid var(--line);border-radius:4px;background:#fff;
+color:var(--txt);font-size:14px;cursor:pointer;font-family:inherit}
+.btn:hover{border-color:#b9bfc6}
+.btn.primary{background:var(--a);border-color:var(--a);color:#fff;font-weight:600}
+.btn.primary:hover{background:#0959ab;border-color:#0959ab}
+.btn.ghost{background:transparent;color:var(--dim)}
+.btn.ghost:hover{color:var(--txt);border-color:#b9bfc6}
+.fine{font-size:12px;color:var(--dim2);margin-top:14px;line-height:1.7}
+
+/* 答题 */
+.quizbar{display:flex;align-items:center;gap:12px;margin:0 0 14px}
+.who{font-size:12px;color:var(--dim);white-space:nowrap;max-width:46%;overflow:hidden;text-overflow:ellipsis}
+.pbar{flex:1;height:4px;border-radius:2px;background:#e6e8eb;overflow:hidden}
+.pbar i{display:block;height:100%;width:0;background:var(--a)}
+.pnum{font-size:12px;color:var(--dim2);font-variant-numeric:tabular-nums}
+.pnum b{color:var(--txt);font-size:14px}
+
+.qcard{background:#fff;border:1px solid var(--line);border-radius:6px;padding:22px 22px 20px}
+.qhead{display:flex;align-items:baseline;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.qdim{font-size:12px;font-weight:600;color:var(--a)}
+.qsub{font-size:12px;color:var(--dim2)}
+.qtxt{font-size:19px;line-height:1.65;font-weight:500;min-height:62px}
+.qhint{font-size:12px;color:var(--dim2);margin-top:8px;line-height:1.7}
+.opts{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:20px}
+.opt{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+padding:10px 4px;border:1px solid var(--line);border-radius:4px;background:#fff;
+cursor:pointer;user-select:none}
+.opt b{font-size:16px;font-weight:600;line-height:1;color:#3c4650}
+.opt small{font-size:10.5px;color:var(--dim2);white-space:nowrap}
+.opt:hover{border-color:#a8b0b9;background:#fafbfc}
+.opt.on{background:var(--a);border-color:var(--a)}
+.opt.on b,.opt.on small{color:#fff}
+.qnav{display:flex;align-items:center;gap:8px;margin-top:12px}
+.spacer{flex:1}
+.kbd{font-size:11.5px;color:var(--dim2);text-align:center;margin-top:16px}
+
+/* 结果 */
+.ptabs{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 16px}
+.ptab{display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid var(--line);
+border-radius:4px;background:#fff;color:var(--dim);font-size:13px;cursor:pointer;user-select:none}
+.ptab:hover{border-color:#b9bfc6;color:var(--txt)}
+.ptab.on{border-color:var(--a);color:var(--a);background:#f0f6fd;font-weight:600}
+.ptab i{width:8px;height:8px;border-radius:2px;display:inline-block}
+
+.hero{display:flex;align-items:center;gap:22px;flex-wrap:wrap;
+background:#fff;border:1px solid var(--line);border-radius:6px;padding:18px 20px}
+.score{font-size:44px;font-weight:700;line-height:1;letter-spacing:-1px;color:var(--txt)}
+.score small{font-size:13px;color:var(--dim2);font-weight:400;letter-spacing:0}
+.lv{font-size:17px;font-weight:600;margin-bottom:2px}
+.lv span{font-size:11px;color:var(--a);border:1px solid var(--a);border-radius:3px;
+padding:0 5px;margin-right:6px;font-weight:600;vertical-align:1px}
+.herotxt{flex:1;min-width:200px}
+.herotxt p{color:var(--dim);font-size:13px;line-height:1.7;margin:6px 0 0}
+.herotxt p.muted{color:var(--dim2);font-size:12px;margin-top:2px}
+
+.sec-title{font-size:13px;font-weight:600;color:var(--dim);margin:26px 0 10px;
+padding-bottom:6px;border-bottom:1px solid var(--line2)}
+
+.chart{background:#fff;border:1px solid var(--line);border-radius:4px;padding:10px;overflow:auto}
+.chart svg{max-width:100%;height:auto;display:block;margin:0 auto}
+.chart .loading{color:var(--dim2);font-size:13px;text-align:center;padding:36px 0}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.dcard{background:#fff;border:1px solid var(--line);border-radius:4px;padding:10px 12px}
+.dcard .n{font-size:12px;color:var(--dim)}
+.dcard .v{font-size:20px;font-weight:700;margin-top:4px;font-variant-numeric:tabular-nums}
+.dcard .mini{height:4px;border-radius:2px;background:#eceef0;margin-top:7px;overflow:hidden}
+.dcard .mini i{display:block;height:100%;background:#0b6bcb}
+.dcard.top .v{color:var(--ok)}
+.dcard.low .v{color:var(--warn)}
+
+.note{border:1px solid var(--line);border-left:3px solid var(--line);border-radius:3px;
+padding:11px 13px;font-size:13.5px;line-height:1.75;margin:8px 0;background:#fff;color:var(--dim)}
+.note.info{border-left-color:var(--a);background:#fafcfe}
+.note.warn{border-left-color:var(--warn);background:#fffdf8}
+.note.bad{border-left-color:var(--bad);background:#fffafa}
+.note.ok{border-left-color:var(--ok);background:#fafffc}
+.note b{color:var(--txt)}
+
+table.diff,table.mtx{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px;background:#fff}
+table.diff th,table.diff td,table.mtx th,table.mtx td{padding:7px 9px;border-bottom:1px solid var(--line2);text-align:center}
+table.diff th,table.mtx th{color:var(--dim);font-weight:600;font-size:12px;background:#fafbfc;white-space:nowrap}
+table.diff th:first-child,table.diff td:first-child,
+table.mtx th:first-child,table.mtx td:first-child{text-align:left}
+table.mtx td.rng{font-weight:650}
+.scrollx{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.pill{display:inline-block;padding:0 6px;border-radius:3px;font-size:11.5px}
+.pill.up{background:#edf4fd;color:#1a5fa8}
+.pill.dn{background:#fdf4e6;color:#8a5a08}
+.pill.eq{background:#f1f2f4;color:var(--dim2)}
+
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--dim);margin-top:8px}
+.legend i{width:8px;height:8px;border-radius:2px;display:inline-block;margin-right:4px}
+
+/* 分歧榜 · 逐题对照 */
+.gapitem{cursor:pointer}
+.gapitem:hover{border-color:#c6ccd3}
+.gaphead{position:relative;padding-right:104px}
+.gaptoggle{position:absolute;right:0;top:0;font-size:12px;color:var(--a);white-space:nowrap}
+.gaptoggle i{display:inline-block;font-style:normal;margin-left:2px}
+.gapitem.open .gaptoggle i{transform:rotate(180deg)}
+.gapdetail{margin-top:10px;padding-top:10px;border-top:1px dashed var(--line);cursor:default;color:var(--dim)}
+table.qcmp td{font-size:13px;color:var(--txt)}
+table.qcmp td.qt{text-align:left;font-size:12.5px;line-height:1.55;max-width:430px}
+table.qcmp td.qt em{font-style:normal;color:var(--warn);font-size:11px;margin-left:3px}
+table.qcmp tr.hi td{background:#fffdf5;color:var(--txt)}
+table.qcmp tr.hi td.rng{color:var(--warn);font-weight:700}
+.qnote{font-size:12px;color:var(--dim2);margin-top:8px;line-height:1.75}
+
+/* 说明弹层 */
+.modal{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;padding:18px}
+.modal[hidden]{display:none}
+.modal-mask{position:absolute;inset:0;background:rgba(24,28,32,.42)}
+.modal-box{position:relative;background:#fff;border:1px solid var(--line);border-radius:6px;
+width:100%;max-width:760px;max-height:86vh;display:flex;flex-direction:column}
+.modal-head{display:flex;align-items:center;justify-content:space-between;gap:10px;
+padding:11px 16px;border-bottom:1px solid var(--line2);font-size:14px}
+.modal-body{padding:16px 18px;overflow:auto;font-size:13px;line-height:1.8;color:var(--dim)}
+.modal-body h4{font-size:13px;color:var(--txt);margin:18px 0 6px}
+.modal-body h4:first-child{margin-top:0}
+.modal-body p{margin:6px 0}
+.modal-body ul{margin:6px 0;padding-left:20px}
+.modal-body li{margin:3px 0}
+.modal-body code{background:#f4f5f6;padding:1px 4px;border-radius:2px;
+font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:#1f2328}
+.modal-body pre{background:#f7f8f9;border:1px solid var(--line2);border-radius:4px;
+padding:10px 12px;overflow:auto;font-size:12px;line-height:1.65;
+font-family:ui-monospace,Menlo,Consolas,monospace;color:#1f2328;margin:8px 0}
+.modal-body table{width:100%;border-collapse:collapse;margin:8px 0}
+.modal-body th,.modal-body td{border-bottom:1px solid var(--line2);padding:5px 8px;text-align:left;font-size:12.5px}
+.modal-body th{color:var(--dim2);font-weight:600}
+
+@media (max-width:560px){
+h1{font-size:20px}
+.qcard{padding:18px 16px}
+.qtxt{font-size:17px;min-height:56px}
+.opts{grid-template-columns:repeat(3,1fr)}
+.score{font-size:38px}
+.hero{padding:16px}
+.prow{flex-wrap:wrap}
+.gaphead{padding-right:0}
+.gaptoggle{position:static;display:inline-block;margin-left:6px}
+}
+@media print{
+body{background:#fff;color:#000}
+.actions,.kbd,.qnav,.ptabs,.screen:not(.on){display:none}
+.chart,.qcard,.hero,.dcard,.note{border:1px solid #ccc}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <!-- ============ 屏 1：设置 ============ -->
+  <section id="scr-setup" class="screen on">
+    <h1 id="pageTitle">量表评估</h1>
+    <p class="lead" id="pageLead"></p>
+
+    <div class="field" id="scaleField">
+      <span>量表 <em>同一套引擎，换数据即换量表</em></span>
+      <div class="chips" id="scaleChips"></div>
+    </div>
+
+    <div class="field">
+      <span id="peopleLabel">参与评估的人 <em>两人对比，或三到六人横向对比</em></span>
+      <div class="people" id="people"></div>
+      <div class="addrow">
+        <input type="text" id="inNewName" placeholder="输入名字后回车添加" maxlength="12">
+        <button class="btn ghost" id="btnAddPerson">添加</button>
+      </div>
+    </div>
+
+    <div class="actions">
+      <button class="btn primary" id="btnStart">开始答题</button>
+      <button class="btn ghost" id="btnGuide">查看数据格式与注意事项</button>
+      <button class="btn ghost" id="btnView" hidden>查看结果</button>
+      <button class="btn ghost" id="btnReset" hidden>清空重来</button>
+    </div>
+    <p class="fine">共 <b id="qTotal">–</b> 题，约 <b id="qMin">–</b> 分钟。答案只存在本机浏览器，不上传。</p>
+  </section>
+
+  <!-- ============ 屏 2：答题 ============ -->
+  <section id="scr-quiz" class="screen">
+    <div class="quizbar">
+      <div class="who" id="quizWho"></div>
+      <div class="pbar"><i id="pbar"></i></div>
+      <div class="pnum"><b id="pCur">1</b>/<span id="pAll">50</span></div>
+    </div>
+    <div class="qcard">
+      <div class="qhead"><span class="qdim" id="qDim">D1</span><span class="qsub" id="qSub"></span></div>
+      <div class="qtxt" id="qTxt"></div>
+      <div class="qhint" id="qHint"></div>
+      <div class="opts" id="opts"></div>
+    </div>
+    <div class="qnav">
+      <button class="btn ghost" id="btnPrev">← 上一题</button>
+      <button class="btn ghost" id="btnSkip">跳过</button>
+      <span class="spacer"></span>
+      <button class="btn primary" id="btnDone">看结果</button>
+    </div>
+    <p class="kbd">键盘 0–5 直接选择 · ← → 切换 · Enter 下一题</p>
+    <div style="text-align:center;margin-top:16px">
+      <button class="btn ghost" id="btnQuit" style="font-size:13px">返回设置（进度已保存）</button>
+    </div>
+  </section>
+
+  <!-- ============ 屏 3：结果 ============ -->
+  <section id="scr-result" class="screen">
+    <div class="ptabs" id="resTabs"></div>
+    <div id="resBody"></div>
+    <div class="actions">
+      <button class="btn ghost" id="btnImg">导出分享长图</button>
+      <button class="btn ghost" id="btnAgain">返回设置</button>
+    </div>
+  </section>
+</div>
+
+<!-- ============ 数据格式说明 ============ -->
+<div class="modal" id="guideModal" hidden>
+  <div class="modal-mask" id="guideMask"></div>
+  <div class="modal-box">
+    <div class="modal-head">
+      <b>数据格式与注意事项</b>
+      <button class="mini-btn" id="btnGuideClose">关闭</button>
+    </div>
+    <div class="modal-body"></div>
+  </div>
+</div>
+
+<script>
+const UTIL_rdrank = {
+  esc_rdrank: s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])),
+  avg_rdrank: a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : 0,
+  clamp_rdrank: (v, a, b) => Math.max(a, Math.min(b, v)),
+  mm_safe_rdrank: s => (String(s).replace(/["\[\]{}()<>|`]/g, '').trim().slice(0, 16) || '匿名'),
+  pid_rdrank: () => 'p' + Math.random().toString(36).slice(2, 8),
+  num_rdrank: (v, d) => (v == null || isNaN(v)) ? (d == null ? '—' : d) : Number(v).toFixed(0)
+};
+
+const APP_rdrank = new Scale_engine_rdrank();
+document.addEventListener('DOMContentLoaded', () => APP_rdrank.init_rdrank());
+</script>
+</body>
+</html>

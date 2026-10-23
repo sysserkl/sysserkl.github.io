@@ -72,6 +72,7 @@ var common_apps_pb_global=[
 ["{{selenium_news}}/html/qrcode.htm","qrcode","𖣯","1"],
 ["{{selenium_news}}/html/qrimg.htm","qrimg","𖡗","1"],
 ["{{selenium_news}}/html/qs_university.htm","QS University","🏛","5","database|education"],
+["{{selenium_news}}/html/radar_rank.htm","radar rank","📐","5","PIM"],
 ["{{selenium_news}}/html/reader_card.htm","reader card","🗂","5","txtbook"],
 ["{{selenium_news}}/html/reader.htm?_tagNONE","reader(NONE)","⛔","5","txtbook"],
 ["{{selenium_news}}/html/reader.htm?_tag🔖","reader","📕","5","txtbook"],

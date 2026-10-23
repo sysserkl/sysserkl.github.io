@@ -2196,6 +2196,12 @@ ultra-left
 box cutter
 rezidentura
 undernourishment
-
+Bradley
+Cunningham
+Effie
+measurableness
+Handel
+gross margin
+supportively
 
 `.trim().split('\n');
