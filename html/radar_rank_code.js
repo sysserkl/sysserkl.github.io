@@ -198,7 +198,7 @@ class Scale_engine_rdrank {
             const done = this.answered_count_rdrank(p);
             const label = done === 0 ? '作答' : (done >= total ? '重答' : '继续');
             return '<div class="prow">' +
-                '<span class="pdot" style="background:' + this.color_of_rdrank(i) + '"></span>' +
+                //'<span class="pdot" style="background:' + this.color_of_rdrank(i) + '"></span>' +
                 '<input type="text" data-i="' + i + '" class="pname" value="' + UTIL_rdrank.esc_rdrank(p.name_rdrank) + '" placeholder="' + (i === 0 ? '我' : i === 1 ? 'TA' : '第 ' + (i + 1) + ' 人') + '" maxlength="12">' +
                 '<span class="pstat">' + done + '/' + total + '</span>' +
                 '<button class="mini-btn" data-act="go" data-i="' + i + '">' + label + '</button>' +
@@ -207,7 +207,10 @@ class Scale_engine_rdrank {
         }).join('');
 
         this.qa_rdrank('.pname', box).forEach(el => {
-            el.oninput = e => { people[+el.dataset.i].name_rdrank = e.target.value; this.save_rdrank(); };
+            el.oninput = e => {
+                people[+el.dataset.i].name_rdrank = e.target.value; 
+                this.save_rdrank();
+            };
             el.onkeydown = e => { if (e.key === 'Enter') e.target.blur(); };
         });
         this.qa_rdrank('[data-act="go"]', box).forEach(el => {
@@ -340,7 +343,8 @@ class Scale_engine_rdrank {
             const sc = this.compute_rdrank(p);
             const ok = this.answered_count_rdrank(p) > 0;
             return '<div class="ptab' + (cur === 'p' + i ? ' on' : '') + '" data-v="p' + i + '">' +
-                '<i style="background:' + this.color_of_rdrank(i) + '"></i>' + UTIL_rdrank.esc_rdrank(this.name_of_rdrank(i)) +
+                //'<i style="background:' + this.color_of_rdrank(i) + '"></i>' + 
+                UTIL_rdrank.esc_rdrank(this.name_of_rdrank(i)) +
                 '<span style="opacity:.65;font-weight:400">' + (ok ? sc.total.toFixed(0) : '—') + '</span></div>';
         });
         if (people.length >= 2){
@@ -374,7 +378,9 @@ class Scale_engine_rdrank {
     }
 
     render_body_rdrank() {
-        if (this.state_rdrank.view_rdrank === 'all') return this.render_all_rdrank();
+        if (this.state_rdrank.view_rdrank === 'all'){
+            return this.render_all_rdrank();
+        }
         return this.render_one_rdrank(+this.state_rdrank.view_rdrank.slice(1));
     }
 
@@ -421,8 +427,7 @@ class Scale_engine_rdrank {
 
         const series = [{ name_rdrank: nm, vals_rdrank: sc.dims.map(d => d.pct == null ? 0 : d.pct), color_rdrank: this.color_of_rdrank(i) }];
         this.draw_chart_rdrank(this.q_rdrank('#chartRadar'),
-            this.radar_code_rdrank(series, nm + ' · ' + (scale.total_label || '得分')),
-            () => this.fallback_radar_rdrank(this.q_rdrank('#chartRadar'), sc.dims, series));
+            this.radar_code_rdrank(series, nm + ' · ' + (scale.total_label || '得分')));
     }
 
     render_all_rdrank() {
@@ -463,7 +468,8 @@ class Scale_engine_rdrank {
         if (spread <= 8) verdict = '几个人给出的总体评分几乎一致（极差 ' + spread.toFixed(1) + ' 分），说明对这个对象的判断有共识。';
         else if (spread <= 20) verdict = '总分极差 ' + spread.toFixed(1) + ' 分，存在轻度错位：' + UTIL_rdrank.esc_rdrank(highest.name) + ' 给分最高，' + UTIL_rdrank.esc_rdrank(lowest.name) + ' 相对保守。';
         else verdict = '总分极差 ' + spread.toFixed(1) + ' 分，分歧明显：' + UTIL_rdrank.esc_rdrank(highest.name) + ' ' + highest.sc.total.toFixed(0) + ' 分，' + UTIL_rdrank.esc_rdrank(lowest.name) + ' ' + lowest.sc.total.toFixed(0) + ' 分。';
-
+        
+       
         body.innerHTML =
             '<div class="hero">' +
                 '<div class="score">' + avg_total.toFixed(1) + '<small> /100</small></div>' +
@@ -474,11 +480,11 @@ class Scale_engine_rdrank {
                         lowest.sc.total.toFixed(1) + '（' + UTIL_rdrank.esc_rdrank(lowest.name) + '）· ' + UTIL_rdrank.esc_rdrank(scale.name) + '</p>' +
                 '</div>' +
             '</div>' +
-            '<div class="sec-title">总分</div>' +
+            '<h2>'+this.scale_rdrank().title+'</h2>' +
             '<div class="chart" id="chartPeople"><div class="loading">渲染中…</div></div>' +
             '<div class="sec-title">雷达</div>' +
             '<div class="chart" id="chartRadar"><div class="loading">渲染中…</div></div>' +
-            '<div class="legend">' + ready.map(x => '<span><i style="background:' + this.color_of_rdrank(x.i) + '"></i>' + UTIL_rdrank.esc_rdrank(x.name) + '</span>').join('') + '</div>' +
+            //'<div class="legend">' + ready.map(x => '<span><i style="background:' + this.color_of_rdrank(x.i) + '"></i>' + UTIL_rdrank.esc_rdrank(x.name) + '</span>').join('') + '</div>' +
             '<div class="sec-title">维度矩阵</div>' +
             '<div class="scrollx"><table class="mtx"><thead><tr><th>维度</th>' +
                 all.map(x => '<th>' + UTIL_rdrank.esc_rdrank(x.name) + '</th>').join('') + '<th>极差</th></tr></thead><tbody>' +
@@ -497,7 +503,7 @@ class Scale_engine_rdrank {
                     '<div class="gaphead" data-dim="' + r.id + '">' +
                         '<b>' + (k + 1) + '. ' + r.id + ' ' + UTIL_rdrank.esc_rdrank(r.name) + '</b>　极差 ' + r.gap.toFixed(0) + ' 分<br>' +
                         vals_txt + '<br>' +
-                        '<span style="opacity:.8">' + (k === 0 ? '这是看法最不一致的一维——分歧常常不是"感受不同"，而是"看到的事实不同"。' : '同一件事在不同人眼里的重量不一样，值得单独核对一次。') + '</span>' +
+                        //'<span style="opacity:.8">' + (k === 0 ? '这是看法最不一致的一维——分歧常常不是"感受不同"，而是"看到的事实不同"。' : '同一件事在不同人眼里的重量不一样，值得单独核对一次。') + '</span>' +
                         '<span class="gaptoggle">逐题对照 <i>▾</i></span>' +
                     '</div>' +
                     '<div class="gapdetail" hidden>' + this.render_dim_compare_rdrank(r.id) + '</div>' +
@@ -520,14 +526,7 @@ class Scale_engine_rdrank {
 
         // 各人总分
         this.draw_chart_rdrank(this.q_rdrank('#chartPeople'),
-            this.people_bar_code_rdrank(ready.map(x => x.name), totals),
-            () => {
-                this.q_rdrank('#chartPeople').innerHTML = '<div style="padding:14px 8px">' + ready.map(x =>
-                    '<div style="display:flex;align-items:center;gap:10px;margin:9px 0;font:13px system-ui">' +
-                    '<span style="width:64px;color:#5c6670">' + UTIL_rdrank.esc_rdrank(x.name) + '</span>' +
-                    '<span style="flex:1;height:9px;background:#eceef0;border-radius:2px;overflow:hidden"><i style="display:block;height:100%;width:' + x.sc.total + '%;background:' + this.color_of_rdrank(x.i) + '"></i></span>' +
-                    '<span style="width:38px;text-align:right;color:#1f2328;font-weight:600">' + x.sc.total.toFixed(0) + '</span></div>').join('') + '</div>';
-            });
+            this.people_bar_code_rdrank(ready.map(x => x.name), totals));
 
         // 多人雷达
         const series = ready.map(x => ({
@@ -539,19 +538,12 @@ class Scale_engine_rdrank {
             color_rdrank: this.color_of_rdrank(x.i)
         }));
         this.draw_chart_rdrank(this.q_rdrank('#chartRadar'),
-            this.radar_code_rdrank(series, '对比'), //ready.length
-            () => this.fallback_radar_rdrank(this.q_rdrank('#chartRadar'), this.dims_rdrank(), series));
-
+            this.radar_code_rdrank(series, '对比'));
         // 象限（仅两人）
         if (ready.length === 2) {
             const A = ready[0], B = ready[1];
             this.draw_chart_rdrank(this.q_rdrank('#chartQuad'),
-                this.quadrant_code_rdrank((A.sc.total + B.sc.total) / 2, A.sc.total - B.sc.total, A.name, B.name),
-                () => {
-                    this.q_rdrank('#chartQuad').innerHTML = '<div style="padding:20px;text-align:center;color:#5c6670;font:13px system-ui">' +
-                        '<b style="font-size:15px;color:#1f2328">' + UTIL_rdrank.esc_rdrank(A.name) + ' × ' + UTIL_rdrank.esc_rdrank(B.name) + '</b><br><br>' +
-                        '平均 ' + ((A.sc.total + B.sc.total) / 2).toFixed(1) + '　|　差值 ' + (A.sc.total - B.sc.total).toFixed(1) + '</div>';
-                });
+                this.quadrant_code_rdrank((A.sc.total + B.sc.total) / 2, A.sc.total - B.sc.total, A.name, B.name));
         }
 
         // 分歧榜展开
@@ -625,324 +617,27 @@ class Scale_engine_rdrank {
             '    "' + UTIL_rdrank.mm_safe_rdrank(na) + '×' + UTIL_rdrank.mm_safe_rdrank(nb) + '": [' + x.toFixed(2) + ', ' + y.toFixed(2) + ']';
     }
 
-    /* ================= 绘图（含降级） ================= */
-    draw_chart_rdrank(el, code, fb) {
+
+    /* ================= 绘图 ================= */
+    draw_chart_rdrank(el, code) {
         const self = this;
-        const fallback = () => {
-            try { el.innerHTML = ''; if (fb) fb(); }
-            catch (e) { el.innerHTML = '<div class="loading">图形不可用（缺少绘图环境）</div>'; }
-        };
         if (!el) return;
-        if (!window.mermaid) {
-            fallback(); 
-            return;
-        }
+
         const id = 'mm_' + self.cfg_rdrank.ls_key + '_' + (++self.mm_seq_rdrank);
         window.mermaid.render(id, code).then(out => {
             el.innerHTML = out.svg || out;
-        }).catch(e => {
-            console.warn('[mermaid] 渲染失败，使用降级绘图', e);
-            fallback();
+            // 强制去掉雷达图填充色，只保留边框线
+            setTimeout(() => {
+                const svg = el.querySelector('svg');
+                if (svg) {
+                    svg.querySelectorAll('path, polygon').forEach(elem => {
+                        elem.style.fill = 'none';
+                        elem.setAttribute('fill', 'none');
+                    });
+                }
+            }, 100);
         });
     }
-
-    fallback_radar_rdrank(el, dims, series) {
-        const S = 400, R = S * 0.30, cx = S / 2, cy = S / 2, n = dims.length;
-        const dpr = Math.min(2, window.devicePixelRatio || 1);
-        const cv = document.createElement('canvas');
-        cv.width = S * dpr; cv.height = S * dpr;
-        cv.style.cssText = 'width:100%;max-width:430px;height:auto;display:block;margin:0 auto';
-        el.innerHTML = ''; el.appendChild(cv);
-        const g = cv.getContext('2d');
-        if (!g) return;
-        g.scale(dpr, dpr);
-        const pt = (i, r) => { const a = -Math.PI / 2 + i * 2 * Math.PI / n; return [cx + Math.cos(a) * r, cy + Math.sin(a) * r]; };
-        for (let k = 1; k <= 4; k++) {
-            g.beginPath();
-            for (let i = 0; i < n; i++) { const p = pt(i, R * k / 4); i ? g.lineTo(p[0], p[1]) : g.moveTo(p[0], p[1]); }
-            g.closePath(); g.strokeStyle = '#e6e8eb'; g.lineWidth = 1; g.stroke();
-        }
-        g.strokeStyle = '#f0f1f3';
-        for (let i = 0; i < n; i++) { const p = pt(i, R); g.beginPath(); g.moveTo(cx, cy); g.lineTo(p[0], p[1]); g.stroke(); }
-        series.forEach(s => {
-            g.beginPath();
-            dims.forEach((d, i) => {
-                const v = UTIL_rdrank.clamp_rdrank(s.vals_rdrank[i] || 0, 0, 100);
-                const p = pt(i, R * v / 100);
-                i ? g.lineTo(p[0], p[1]) : g.moveTo(p[0], p[1]);
-            });
-            g.closePath();
-            g.fillStyle = s.color_rdrank + '22';
-            g.strokeStyle = s.color_rdrank;
-            g.lineWidth = 2; g.fill(); g.stroke();
-        });
-        g.font = '11px system-ui,-apple-system,sans-serif';
-        g.fillStyle = '#5c6670'; g.textAlign = 'center'; g.textBaseline = 'middle';
-        dims.forEach((d, i) => { const p = pt(i, R * 1.20); g.fillText(d.id + ' ' + d.short, p[0], p[1]); });
-    }
-
-    fallback_bar_rdrank(el, dims, series) {
-        el.innerHTML = '<div style="padding:8px 6px">' + dims.map(d => {
-            const v = d.pct == null ? 0 : d.pct;
-            return '<div style="display:flex;align-items:center;gap:10px;margin:9px 0;font:12px system-ui">' +
-                '<span style="width:70px;color:#5c6670;flex:none">' + d.id + ' ' + d.short + '</span>' +
-                '<span style="flex:1;height:9px;background:#eceef0;border-radius:2px;overflow:hidden">' +
-                '<i style="display:block;height:100%;width:' + v + '%;background:' + (series[0] ? series[0].color_rdrank : '#0b6bcb') + '"></i></span>' +
-                '<span style="width:34px;text-align:right;color:#1f2328;font-weight:600;flex:none">' + v.toFixed(0) + '</span></div>';
-        }).join('') + '</div>';
-    }
-    /* ================= 分享长图（白底黑字） ================= */
-    card_font_rdrank() {
-        return 'system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif';
-    }
-
-    round_rect_rdrank(g, x, y, w, h, r) {
-        r = Math.min(r, h / 2, Math.max(1, w / 2));
-        g.beginPath();
-        g.moveTo(x + r, y);
-        g.lineTo(x + w - r, y); g.arcTo(x + w, y, x + w, y + r, r);
-        g.lineTo(x + w, y + h - r); g.arcTo(x + w, y + h, x + w - r, y + h, r);
-        g.lineTo(x + r, y + h); g.arcTo(x, y + h, x, y + h - r, r);
-        g.lineTo(x, y + r); g.arcTo(x, y, x + r, y, r);
-        g.closePath();
-    }
-
-    wrap_text_rdrank(g, text, max_w) {
-        const lines = [];
-        let cur = '';
-        for (const ch of String(text)) {
-            if (g.measureText(cur + ch).width > max_w && cur) { lines.push(cur); cur = ch; }
-            else cur += ch;
-        }
-        if (cur) lines.push(cur);
-        return lines;
-    }
-
-    draw_radar_rdrank(g, cx, cy, R, dims, series) {
-        const n = dims.length;
-        const pt = (i, r) => { const a = -Math.PI / 2 + i * 2 * Math.PI / n; return [cx + Math.cos(a) * r, cy + Math.sin(a) * r]; };
-        for (let k = 1; k <= 4; k++) {
-            g.beginPath();
-            for (let i = 0; i < n; i++) { const p = pt(i, R * k / 4); i ? g.lineTo(p[0], p[1]) : g.moveTo(p[0], p[1]); }
-            g.closePath(); g.strokeStyle = '#e9ebee'; g.lineWidth = 1; g.stroke();
-        }
-        g.strokeStyle = '#f2f3f5';
-        for (let i = 0; i < n; i++) { const p = pt(i, R); g.beginPath(); g.moveTo(cx, cy); g.lineTo(p[0], p[1]); g.stroke(); }
-
-        series.forEach(s => {
-            g.beginPath();
-            dims.forEach((d, i) => {
-                const v = UTIL_rdrank.clamp_rdrank(s.vals_rdrank[i] || 0, 0, 100);
-                const p = pt(i, R * v / 100);
-                i ? g.lineTo(p[0], p[1]) : g.moveTo(p[0], p[1]);
-            });
-            g.closePath();
-            g.fillStyle = s.color_rdrank + '20';
-            g.strokeStyle = s.color_rdrank;
-            g.lineWidth = 2.5; g.fill(); g.stroke();
-            dims.forEach((d, i) => {
-                const v = UTIL_rdrank.clamp_rdrank(s.vals_rdrank[i] || 0, 0, 100);
-                const p = pt(i, R * v / 100);
-                g.beginPath(); g.arc(p[0], p[1], 3.2, 0, Math.PI * 2); g.fillStyle = s.color_rdrank; g.fill();
-            });
-        });
-
-        g.font = '500 19px ' + this.card_font_rdrank();
-        g.fillStyle = '#666f78'; g.textAlign = 'center'; g.textBaseline = 'middle';
-        dims.forEach((d, i) => { const p = pt(i, R * 1.19); g.fillText(d.id + ' ' + d.short, p[0], p[1]); });
-    }
-
-    build_card_rdrank() {
-        const self = this;
-        const is_all = this.state_rdrank.view_rdrank === 'all';
-        const scale = this.scale_rdrank();
-        const dims = this.dims_rdrank();
-        const all = this.state_rdrank.people_rdrank.map((p, i) => ({
-            i: i, p: p, sc: this.compute_rdrank(p), name: this.name_of_rdrank(i), ok: this.answered_count_rdrank(p) > 0,
-            color: this.color_of_rdrank(i)
-        }));
-        const self_idx = is_all ? -1 : +this.state_rdrank.view_rdrank.slice(1);
-        const ready = is_all ? all.filter(x => x.ok) : all.filter(x => x.ok && x.i === self_idx);
-        if (!ready.length) return null;
-
-        const W = 1080;
-        const n_dim = dims.length;
-        const H = is_all
-            ? (236 + ready.length * 74 + 30 + 520 + 60 + 3 * 46 + 40 + 110)
-            : (1031 + 34 + n_dim * 56 + 130);
-
-        return {
-            W_rdrank: W, H_rdrank: H, is_all_rdrank: is_all, ready_rdrank: ready,
-            draw_rdrank: function (g) { self.draw_card_rdrank(g, W, H, is_all, ready, dims, scale); }
-        };
-    }
-
-    draw_card_rdrank(g, W, H, is_all, ready, dims, scale) {
-        const PAD = 66;
-        const dstr = new Date().toLocaleDateString('zh-CN');
-
-        g.fillStyle = '#ffffff';
-        g.fillRect(0, 0, W, H);
-
-        g.fillStyle = '#111111';
-        g.fillRect(PAD, 46, W - PAD * 2, 3);
-
-        g.textAlign = 'left'; g.textBaseline = 'alphabetic';
-        g.font = '600 19px ' + this.card_font_rdrank(); g.fillStyle = '#999999';
-        g.fillText((scale.title || scale.name || '量表') + '  ·  REPORT', PAD, 88);
-
-        g.font = '700 44px ' + this.card_font_rdrank(); g.fillStyle = '#111111';
-        g.fillText(is_all ? '对比' : (ready[0].name + ' · ' + (scale.self_label || '自评')), PAD, 150);   //ready.length
-
-        g.font = '400 20px ' + this.card_font_rdrank(); g.fillStyle = '#888888';
-        g.fillText((scale.name || '') + ' · ' + this.questions_rdrank().length + ' 题 · ' + dims.length + ' 维 · ' + dstr, PAD, 188);
-
-        if (is_all) this.draw_card_all_rdrank(g, W, H, ready, dims);
-        else this.draw_card_one_rdrank(g, W, H, ready[0], dims, scale);
-
-        g.strokeStyle = '#e5e7ea'; g.lineWidth = 1;
-        g.beginPath(); g.moveTo(PAD, H - 78); g.lineTo(W - PAD, H - 78); g.stroke();
-        g.font = '400 19px ' + this.card_font_rdrank(); g.fillStyle = '#aaaaaa'; g.textAlign = 'left';
-        g.fillText('通用量表引擎 · ' + (scale.name || ''), PAD, H - 38);
-        g.textAlign = 'right';
-        g.fillText('分数不代表好坏，只说明位置', W - PAD, H - 38);
-        g.textAlign = 'left';
-    }
-
-    draw_card_one_rdrank(g, W, H, x, dims, scale) {
-        const PAD = 66;
-        let y = 236;
-
-        g.textAlign = 'left'; g.textBaseline = 'alphabetic';
-        g.font = '700 128px ' + this.card_font_rdrank();
-        g.fillStyle = '#111111';
-        const score_txt = x.sc.total.toFixed(1);
-        g.fillText(score_txt, PAD, y + 104);
-        const tw = g.measureText(score_txt).width;
-        g.font = '400 26px ' + this.card_font_rdrank(); g.fillStyle = '#999999';
-        g.fillText('/ 100', PAD + tw + 14, y + 96);
-
-        g.font = '600 25px ' + this.card_font_rdrank();
-        const badge = (x.sc.level.code || '') + '  ' + (x.sc.level.name || '');
-        const bw = g.measureText(badge).width + 40;
-        g.fillStyle = '#f4f5f6';
-        this.round_rect_rdrank(g, PAD, y + 134, bw, 50, 4); g.fill();
-        g.strokeStyle = '#dddddd'; g.lineWidth = 1; g.stroke();
-        g.fillStyle = '#333333';
-        g.fillText(badge, PAD + 20, y + 168);
-
-        g.font = '400 23px ' + this.card_font_rdrank(); g.fillStyle = '#555555';
-        const lines = this.wrap_text_rdrank(g, x.sc.level.line || '', W - PAD * 2).slice(0, 2);
-        lines.forEach((ln, i) => g.fillText(ln, PAD, y + 234 + i * 36));
-
-        this.draw_radar_rdrank(g, W / 2, y + 234 + 90 + 268, 230, dims,
-            [{ vals_rdrank: x.sc.dims.map(d => d.pct == null ? 0 : d.pct), color_rdrank: '#111111' }]);
-
-        g.textBaseline = 'alphabetic';
-        let by = 1031 + 34;
-        dims.forEach((d, i) => {
-            const item = x.sc.dims.find(k => k.id === d.id);
-            const v = item && item.pct != null ? item.pct : 0;
-            const yy = by + i * 56;
-            g.font = '500 22px ' + this.card_font_rdrank(); g.fillStyle = '#333333'; g.textAlign = 'left';
-            g.fillText(d.id + ' ' + d.name, PAD, yy + 8);
-
-            const bx = PAD + 360, bw2 = 480, bh = 12;
-            g.fillStyle = '#eef0f2';
-            this.round_rect_rdrank(g, bx, yy - 6, bw2, bh, 2); g.fill();
-            g.fillStyle = '#111111';
-            if (v > 0) { this.round_rect_rdrank(g, bx, yy - 6, Math.max(4, bw2 * v / 100), bh, 2); g.fill(); }
-
-            g.font = '700 24px ' + this.card_font_rdrank(); g.fillStyle = '#111111'; g.textAlign = 'right';
-            g.fillText(v.toFixed(0), W - PAD, yy + 9);
-        });
-
-    }
-
-    draw_card_all_rdrank(g, W, H, ready, dims) {
-        const PAD = 66;
-        let y = 236;
-        g.textAlign = 'left'; g.textBaseline = 'alphabetic';
-
-        ready.forEach((x, k) => {
-            const yy = y + k * 74;
-            g.beginPath(); g.arc(PAD + 4, yy - 8, 6, 0, Math.PI * 2);
-            g.fillStyle = x.color; g.fill();
-            g.font = '600 23px ' + this.card_font_rdrank(); g.fillStyle = '#111111';
-            g.fillText(x.name, PAD + 22, yy);
-            const bx = PAD + 220, bw2 = 620;
-            g.fillStyle = '#eef0f2';
-            this.round_rect_rdrank(g, bx, yy - 16, bw2, 14, 2); g.fill();
-            g.fillStyle = x.color;
-            this.round_rect_rdrank(g, bx, yy - 16, Math.max(4, bw2 * x.sc.total / 100), 14, 2); g.fill();
-            g.font = '700 25px ' + this.card_font_rdrank(); g.fillStyle = '#111111'; g.textAlign = 'right';
-            g.fillText(x.sc.total.toFixed(1), W - PAD, yy + 2); g.textAlign = 'left';
-        });
-
-        const ry = y + ready.length * 74 + 30;
-        this.draw_radar_rdrank(g, W / 2, ry + 250, 220, dims,
-            ready.map(x => ({
-                vals_rdrank: dims.map(d => { const f = x.sc.dims.find(k => k.id === d.id); return f && f.pct != null ? f.pct : 0; }),
-                color_rdrank: x.color
-            })));
-
-        const gaps = dims.map(d => {
-            const vals = ready.map(x => { const f = x.sc.dims.find(k => k.id === d.id); return f && f.pct != null ? f.pct : null; }).filter(v => v != null);
-            return { id: d.id, name: d.name, gap: vals.length > 1 ? Math.max.apply(null, vals) - Math.min.apply(null, vals) : null };
-        }).filter(x => x.gap != null).sort((a, b) => b.gap - a.gap);
-
-        //let ty = ry + 520;
-        //g.textBaseline = 'alphabetic';
-        //g.font = '700 25px ' + this.card_font_rdrank(); 
-        //g.fillStyle = '#111111';
-        //g.fillText('看法最不一致的三处', PAD, ty); 
-        //ty += 44;
-        //gaps.slice(0, 3).forEach((r, k) => {
-            //g.font = '500 21px ' + this.card_font_rdrank(); 
-            //g.fillStyle = '#333333';
-            //g.fillText((k + 1) + '. ' + r.id + ' ' + r.name, PAD, ty);
-            //g.textAlign = 'right'; 
-            //g.font = '700 21px ' + this.card_font_rdrank();
-            //g.fillText('极差 ' + r.gap.toFixed(0), W - PAD, ty); 
-            //g.textAlign = 'left';
-            //ty += 46;
-        //});
-    }
-
-    export_image_rdrank() {
-        const self = this;
-        const card = this.build_card_rdrank();
-        if (!card) {
-            alert('还没有可导出的结果'); 
-            return;
-        }
-        const scale = 2;
-        const cv = document.createElement('canvas');
-        cv.width = card.W_rdrank * scale;
-        cv.height = card.H_rdrank * scale;
-        const g = cv.getContext('2d');
-        if (!g) {
-            alert('当前环境不支持绘图');
-            return;
-        }
-        g.scale(scale, scale);
-        card.draw_rdrank(g);
-
-        const nm = card.is_all_rdrank ?  '对比' : this.name_of_rdrank(+this.state_rdrank.view_rdrank.slice(1));
-        // //this.state_rdrank.people_rdrank.length
-        cv.toBlob(b => {
-            if (!b) {
-                alert('导出失败，请换用 Chrome / Safari 打开');
-                return;
-            }
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(b);
-            a.download = (self.scale_name_rdrank() || '量表') + '_' + nm + '_' + new Date().toISOString().slice(0, 10) + '.png';
-            a.click();
-            setTimeout(() => URL.revokeObjectURL(a.href), 4000);
-        }, 'image/png');
-    }
-
     /* ================= 绑定 / 启动 ================= */
     bind_rdrank() {
         const self = this;
@@ -950,7 +645,10 @@ class Scale_engine_rdrank {
         self.q_rdrank('#btnStart').onclick = () => {
             const total = self.questions_rdrank().length;
             const next = self.state_rdrank.people_rdrank.findIndex(p => self.answered_count_rdrank(p) < total);
-            if (next < 0) { self.show_result_rdrank(self.state_rdrank.people_rdrank.length >= 2 ? 'all' : 'p0'); return; }
+            if (next < 0) {
+                self.show_result_rdrank(self.state_rdrank.people_rdrank.length >= 2 ? 'all' : 'p0'); 
+                return;
+            }
             self.start_quiz_rdrank(next);
         };
 
@@ -982,10 +680,11 @@ class Scale_engine_rdrank {
             self.state_rdrank.idx_rdrank = Math.min(qs.length - 1, self.state_rdrank.idx_rdrank + 1);
             self.render_question_rdrank();
         };
-        self.q_rdrank('#btnQuit').onclick = () => { self.refresh_setup_rdrank(); self.show_screen_rdrank('setup'); };
+        self.q_rdrank('#btnQuit').onclick = () => {
+            self.refresh_setup_rdrank(); 
+            self.show_screen_rdrank('setup');
+        };
         self.q_rdrank('#btnDone').onclick = () => self.show_result_rdrank('p' + self.state_rdrank.cur_rdrank);
-
-        self.q_rdrank('#btnImg').onclick = () => self.export_image_rdrank();
 
         const open_guide = () => { self.q_rdrank('#guideModal').hidden = false; };
         const close_guide = () => { self.q_rdrank('#guideModal').hidden = true; };
@@ -996,14 +695,25 @@ class Scale_engine_rdrank {
             if (e.key === 'Escape' && self.q_rdrank('#guideModal') && !self.q_rdrank('#guideModal').hidden) close_guide();
         });
         self.q_rdrank('#btnAgain').onclick = () => { self.refresh_setup_rdrank(); self.show_screen_rdrank('setup'); };
+        self.q_rdrank('#btnScreenshot').onclick = () => { screenshot_rdrank(self.q_rdrank('#btnScreenshot')); };
+        self.q_rdrank('#btnmermaidlegend').onclick = () => { legend_move_mermaid_b(document.getElementById('chartRadar'),'ASK','ASK'); };
 
         document.addEventListener('keydown', e => {
-            if (!self.q_rdrank('#scr-quiz').classList.contains('on')) return;
-            if (e.target.tagName === 'INPUT') return;
+            if (!self.q_rdrank('#scr-quiz').classList.contains('on')){return;}
+            if (e.target.tagName === 'INPUT'){return;}
             const anchor = self.cfg_rdrank.full_score;
-            if (/^[0-9]$/.test(e.key) && +e.key <= anchor) { e.preventDefault(); self.answer_rdrank(+e.key); }
-            else if (e.key === 'ArrowRight' || e.key === 'Enter') { e.preventDefault(); self.next_question_rdrank(); }
-            else if (e.key === 'ArrowLeft') { e.preventDefault(); self.prev_question_rdrank(); }
+            if (/^[0-9]$/.test(e.key) && +e.key <= anchor) {
+                e.preventDefault(); 
+                self.answer_rdrank(+e.key);
+            }
+            else if (e.key === 'ArrowRight' || e.key === 'Enter') {
+                e.preventDefault(); 
+                self.next_question_rdrank();
+            }
+            else if (e.key === 'ArrowLeft') {
+                e.preventDefault(); 
+                self.prev_question_rdrank();
+            }
         });
     }
 
@@ -1022,8 +732,19 @@ class Scale_engine_rdrank {
         }
         if (window.mermaid) {
             window.mermaid.initialize({
-                startOnLoad: false, theme: 'default', securityLevel: 'loose',
-                fontFamily: 'system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif'
+                startOnLoad: false, 
+                theme: 'base', 
+                securityLevel: 'loose',
+                fontFamily: 'FZDocHei, sans-serif',
+                themeVariables: {
+                    cScale0: '#0f9d76',
+                    cScale1: '#2f6fd0',
+                    cScale2: '#c98a00',
+                    cScale3: '#c8483f',
+                    cScale4: '#7c5cd6',
+                    cScale5: '#0e8f9e',
+                    // ... 最多到 cScale11
+                }
             });
         }
         this.load_rdrank();
@@ -1190,3 +911,10 @@ function scale_md_rdrank(scaleKey, show_weight = false) {
     return lines.join('\n');
 }
 
+function screenshot_rdrank(obutton){
+    for (let item of ['div.hero','#resTabs']){
+        let odom=document.querySelector(item);
+        odom.parentNode.removeChild(odom);
+    }
+    obutton.parentNode.parentNode.removeChild(obutton.parentNode);
+}

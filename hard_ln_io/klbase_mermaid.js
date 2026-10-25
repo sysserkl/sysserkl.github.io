@@ -397,3 +397,27 @@ function mermaid_2_str_b(csstr, return_str = true, show_console = true){
     }
     return result;
 }
+
+function legend_move_mermaid_b(odom, csvalueY=0, csvalueX = 0){
+    if (csvalueY=='ASK'){
+        csvalueY=parseInt((prompt('输入上下移动数值','50') || '0').trim());
+    }
+    if (csvalueX=='ASK'){
+        csvalueX=parseInt((prompt('输入左右移动数值','50') || '0').trim());
+    }
+    if (csvalueX==0 && csvalueY==0){return;}
+    
+    odom.querySelectorAll('[class^="radarLegendBox"]').forEach(el => {
+        const parent = el.parentElement;
+        const currentTransform = parent.getAttribute('transform');
+        
+        if (!currentTransform){return;}
+
+        const newTransform = currentTransform.replace(
+            /translate\(([-\d.]+),\s*([-\d.]+)\)/,
+            (match, x, y) => `translate(${parseFloat(x) + csvalueX}, ${parseFloat(y) + csvalueY})`
+        );
+
+        parent.setAttribute('transform', newTransform);
+    });
+}
