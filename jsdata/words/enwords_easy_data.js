@@ -2212,11 +2212,13 @@ unicolour
 unicoloured
 unicolourous
 Anglophile
-Beoing
+Boeing
 kindergartener
 neuroplasticity
 semi-sweet
-
-
+nonredeemable
+astrophotography
+repairability
+upgradability
 
 `.trim().split('\n');
