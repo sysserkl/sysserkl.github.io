@@ -8,478 +8,424 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Mon, 26 Oct 2026 08:48:23 +0800</lastBuildDate>
-<item><title>C, Type Systems, GLib, and API Design - Xfce Blog</title><link>https://www.spurint.org/journal/2026/10/c-type-systems-glib-api-design</link></item>
-<item><title>Assuming Maintainership of gtk3-rs - Xfce Blog</title><link>https://blog.xfce.org/2026/08/assuming-maintainership-of-gtk3-rs/</link></item>
-<item><title>Xfwl4’s Second Preview Release - Xfce Blog</title><link>https://www.spurint.org/journal/2026/08/xfwl4s-second-preview-release</link></item>
-<item><title>You Laugh, You Lose… That’s The Challenge! - theCHIVE</title><link>https://thechive.com/funny/you-laugh-you-lose-thats-the-challenge-2/?utm_postid=5321750&amp;utm_editor=5321750_hendy</link></item>
-<item><title>Buy It For Life: Products That Simply Refuse to Die - theCHIVE</title><link>https://thechive.com/humanity/art/more-buy-for-life-products-never-break/?utm_postid=5322901&amp;utm_editor=5322901_ty</link></item>
-<item><title>Creepy “Spirit Photos” From the 1800s - theCHIVE</title><link>https://thechive.com/uncategorized/creepy-spirit-photos/?utm_postid=5323567&amp;utm_editor=5323567_aaron</link></item>
-<item><title>The Triple-B is Always Delivering The Goods - theCHIVE</title><link>https://thechive.com/humanity/the-triple-b-is-always-delivering-the-goods/?utm_postid=5323391&amp;utm_editor=5323391_luka</link></item>
-<item><title>Movie Memes Because It’s The Weekend - theCHIVE</title><link>https://thechive.com/entertainment/movies/movies-memes-weekend-funny-thechive/?utm_postid=5323339&amp;utm_editor=5323339_ryder</link></item>
-<item><title>Asshole Design: How To Lose Customers 101 - theCHIVE</title><link>https://thechive.com/humanity/design/asshole-design-how-to-lose-customers-101/?utm_postid=5323468&amp;utm_editor=5323468_luka</link></item>
-<item><title>Summer Really FLU By! - theCHIVE</title><link>https://thechive.com/funny/cold-flu-memes/?utm_postid=5321887&amp;utm_editor=5321887_jake</link></item>
-<item><title>Food Delivery Interactions Gone Wild - theCHIVE</title><link>https://thechive.com/funny/food-delivery-interactions-gone-wild/?utm_postid=5323437&amp;utm_editor=5323437_luka</link></item>
-<item><title>It’s Saturday Night, Prepare To Party! - theCHIVE</title><link>https://thechive.com/funny/party-memes-saturday-funny-thechive/?utm_postid=5323219&amp;utm_editor=5323219_ryder</link></item>
-<item><title>The DANK Memes Are With Us - theCHIVE</title><link>https://thechive.com/funny/the-dank-memes-are-with-us/?utm_postid=5322965&amp;utm_editor=5322965_hendy</link></item>
-<item><title>Cooking Isn’t For Everyone… - theCHIVE</title><link>https://thechive.com/funny/cooking-memes/?utm_postid=5321915&amp;utm_editor=5321915_jake</link></item>
-<item><title>Hunnies? Funnies? How About Both! - theCHIVE</title><link>https://thechive.com/funny/hunnies-funnies-how-about-both/?utm_postid=5322562&amp;utm_editor=5322562_hendy</link></item>
-<item><title>Battle Paintings That Are Cool But Tragic - theCHIVE</title><link>https://thechive.com/humanity/art/battle-paintings-cool/?utm_postid=5322805&amp;utm_editor=5322805_aaron</link></item>
-<item><title>Wake Up to the Smell of Cat Saturday - theCHIVE</title><link>https://thechive.com/funny/cat-saturday-october-24-2026/?utm_postid=5322642&amp;utm_editor=5322642_alex</link></item>
-<item><title>Times When Sports Equals Art - theCHIVE</title><link>https://thechive.com/humanity/art/sports-equals-art/?utm_postid=5322755&amp;utm_editor=5322755_aaron</link></item>
-<item><title>Tee Off With These World Series Memes - theCHIVE</title><link>https://thechive.com/funny/world-series-memes/?utm_postid=5321943&amp;utm_editor=5321943_jake</link></item>
-<item><title>Ridiculous Comedic Truths About Living Nowadays - theCHIVE</title><link>https://thechive.com/funny/ridiculous-truths-memes-funny-thechive/?utm_postid=5322494&amp;utm_editor=5322494_ryder</link></item>
-<item><title>Instagram Vs Reality Is Always Dicey - theCHIVE</title><link>https://thechive.com/funny/instagram-vs-reality-is-always-dicey/?utm_postid=5321517&amp;utm_editor=5321517_hendy</link></item>
-<item><title>Okay, But Now You Can Never Wash Your Car? - theCHIVE</title><link>https://thechive.com/uncategorized/dirty-car-art/?utm_postid=5322722&amp;utm_editor=5322722_ty</link></item>
-<item><title>These Iconic Movies Almost Had Completely Different Titles - theCHIVE</title><link>https://thechive.com/entertainment/movies/movies-different-titles/?utm_postid=5322621&amp;utm_editor=5322621_alex</link></item>
-<item><title>These Glow Ups Are Inspiring And Awesome - theCHIVE</title><link>https://thechive.com/humanity/inspirational/these-glow-ups-are-inspiring-and-awesome/?utm_postid=5321016&amp;utm_editor=5321016_hendy</link></item>
-<item><title>How Did a Handful of Companies Take Over a Country? - theCHIVE</title><link>https://thechive.com/funny/wtf/south-korea-companies-take-over/?utm_postid=5322033&amp;utm_editor=5322033_aaron</link></item>
-<item><title>Friday Dogs! Furry Companions! - theCHIVE</title><link>https://thechive.com/humanity/friday-dogs-furry-friends-pets-thechive/?utm_postid=5322460&amp;utm_editor=5322460_ryder</link></item>
-<item><title>Stairs That Are 100000% NOPES - theCHIVE</title><link>https://thechive.com/funny/death-stairs-awkward-steps/?utm_postid=5322393&amp;utm_editor=5322393_ty</link></item>
-<item><title>Tyler Durden Is A Man of Deep Wisdom… - theCHIVE</title><link>https://thechive.com/humanity/inspirational/tyler-durden-is-a-man-of-deep-wisdom/?utm_postid=5322236&amp;utm_editor=5322236_hendy</link></item>
-<item><title>Random Memes I Refuse to Delete From My Computer (Part 38) - theCHIVE</title><link>https://thechive.com/funny/random-memes-refuse-to-delete-part-38/?utm_postid=5322280&amp;utm_editor=5322280_ty</link></item>
-<item><title>Kids Wake Up and Choose Violence - theCHIVE</title><link>https://thechive.com/funny/wtf/kids-violence-fails-wtf-thechive/?utm_postid=5321837&amp;utm_editor=5321837_ryder</link></item>
-<item><title>The World Is Full Of A**holes, And Here Is The Proof - theCHIVE</title><link>https://thechive.com/funny/world-full-aholes-funny-photos-thechive/?utm_postid=5321801&amp;utm_editor=5321801_ryder</link></item>
-<item><title>Oh, You Didn’t Know? The Truth Will Set You Free (Part 5) - theCHIVE</title><link>https://thechive.com/funny/oh-you-didnt-know-the-truth-will-set-you-free-part-5/?utm_postid=5321080&amp;utm_editor=5321080_hendy</link></item>
-<item><title>Wild Hockey Stats That Will Never Ever Be Broken Ever - theCHIVE</title><link>https://thechive.com/sports/insane-unbreakable-hockey-stats-records-never-broken/?utm_postid=5322030&amp;utm_editor=5322030_ty</link></item>
-<item><title>Oddly Specific Jobs That Are Somehow Real - theCHIVE</title><link>https://thechive.com/funny/oddly-specific-but-real-jobs/?utm_postid=5321332&amp;utm_editor=5321332_ty</link></item>
-<item><title>Ai Slop Has Officially Invaded The Real World - theCHIVE</title><link>https://thechive.com/tech/ai-slop-design-diy-marketing-thechive/?utm_postid=5321571&amp;utm_editor=5321571_ryder</link></item>
-<item><title>16 Useless Facts You Never Needed… Like Ever - theCHIVE</title><link>https://thechive.com/humanity/facts-random/16-useless-facts-you-never-needed-like-ever/?utm_postid=5321567&amp;utm_editor=5321567_hendy</link></item>
-<item><title>Cool LEGO Builds Definitely Worth the Commitment - theCHIVE</title><link>https://thechive.com/humanity/cool-lego-builds/?utm_postid=5321318&amp;utm_editor=5321318_aaron</link></item>
-<item><title>Simple Ways For Dudes To Improve Their Attractiveness - theCHIVE</title><link>https://thechive.com/humanity/life-hacks-random/simple-ways-for-dudes-to-improve-their-attractiveness/?utm_postid=5320981&amp;utm_editor=5320981_hendy</link></item>
-<item><title>There’s Something Particularly Eerie About These Photos - theCHIVE</title><link>https://thechive.com/lifestyle/creepy/eerie-photos-creepy-wtf-thechive/?utm_postid=5321412&amp;utm_editor=5321412_ryder</link></item>
-<item><title>Weird Things People Reported in the 1800s - theCHIVE</title><link>https://thechive.com/funny/weird-things-seen-in-1800s/?utm_postid=5321350&amp;utm_editor=5321350_aaron</link></item>
-<item><title>Meanwhile, in Mexico… - theCHIVE</title><link>https://thechive.com/funny/meanwhile-in-mexico/?utm_postid=5321223&amp;utm_editor=5321223_luka</link></item>
-<item><title>Framing the News: Anti-Piracy Press Release Turned a 2016 Raid Into a 2026 Story - TorrentFreak</title><link>https://torrentfreak.com/framing-the-news-anti-piracy-press-release-turned-a-2016-raid-into-a-2026-story/</link></item>
-<item><title>France, UK carry out joint airborne nuclear-strike exercise for first time – Defense News - Defense News</title><link>https://defensenews.com/global/europe/2026/10/23/france-uk-carry-out-joint-airborne-nuclear-strike-exercise-for-first-time/</link></item>
-<item><title>‘The West can’t stop me’: Space wars heat up as Russia tails a Ukraine-linked US satellite – Defense News - Defense News</title><link>https://defensenews.com/space/2026/10/23/the-west-cant-stop-me-space-wars-heat-up-as-russia-tails-a-ukraine-linked-us-satellite/</link></item>
-<item><title>Rab’s Positron Pro Down Jacket is Very Warm, Durable, and Thoughtfully Designed - Alpinist</title><link>https://alpinist.com/mountain-standards/rabs-positron-pro-down-jacket-is-very-warm-durable-and-thoughtfully-designed/</link></item>
-<item><title>The Art of Progress - Alpinist</title><link>https://alpinist.com/features/the-art-of-progress/</link></item>
-<item><title>Mountain Equipment’s Xenith Hooded Jacket: Lightweight Insulation for Any Adventure - Alpinist</title><link>https://alpinist.com/mountain-standards/mountain-equipments-xenith-hooded-jacket-lightweight-insulation-for-any-adventure/</link></item>
-<item><title>Jimmy Chin’s Rules To Live By: Need Some Inspiration to Live Your Best Life? - Alpinist</title><link>https://alpinist.com/mountain-standards/jimmy-chins-rules-to-live-by-need-some-inspiration-to-live-your-best-life/</link></item>
-<item><title>What We’re Reading, 2026 vol. 2 - Alpinist</title><link>https://alpinist.com/escape-route/what-were-reading-2026-vol-2/</link></item>
-<item><title>HHS sole-source award to Anthropic continues to raise questions - FedScoop</title><link>https://fedscoop.com/hhs-sole-source-award-to-anthropic-continues-to-raise-questions/</link></item>
-<item><title>Fighting fraud at financial agencies is ‘all about prevention’ and collaboration - FedScoop</title><link>https://fedscoop.com/financial-agencies-fighting-fraud-treasury/</link></item>
-<item><title>NRC finalizes rule allowing commercial reactor license applicants to reuse DOE, DOD data - FedScoop</title><link>https://fedscoop.com/nrc-finalized-rule-reuse-dod-doe-data/</link></item>
-<item><title>DHS consolidates software purchasing under $2.7B Carahsoft contract - FedScoop</title><link>https://fedscoop.com/dhs-consolidate-procurement-carahsoft/</link></item>
-<item><title>Keeping a human in the AI loop is ‘untenable’ due to cuts, USDA IT official says - FedScoop</title><link>https://fedscoop.com/ai-human-in-the-loop-agency-workforces/</link></item>
-<item><title>SBA refocuses Regional Innovation Cluster program following DOGE cuts - FedScoop</title><link>https://fedscoop.com/sba-regional-innovation-cluster-awards-doge/</link></item>
-<item><title>OPM illegally shared millions of employee records with DOGE, federal judge rules - FedScoop</title><link>https://fedscoop.com/opm-illegally-shared-millions-employee-records-doge-judge/</link></item>
-<item><title>What’s new in Homeland Security’s updated AI policy - FedScoop</title><link>https://fedscoop.com/dhs-ai-policy-updates/</link></item>
-<item><title>HUD officially elevates former EV engineer David Julian to CIO - FedScoop</title><link>https://fedscoop.com/hud-cio-david-julian-eric-sidle/</link></item>
-<item><title>HHS to make sole-source award to Anthropic ahead of broader AI competition - FedScoop</title><link>https://fedscoop.com/hhs-sole-source-award-anthropic-ai-claude/</link></item>
-<item><title>Ghostwriters - Wrong Hands</title><link>https://wronghands1.com/2026/10/23/ghostwriters/</link></item>
-<item><title>Ghostwriter - Wrong Hands</title><link>https://wronghands1.com/tag/ghostwriter/</link></item>
-<item><title>6 Slang Words From the 1950s We Still Use Today - Mental Floss</title><link>https://www.mentalfloss.com/language/slang/slang-words-1950s-use-today?utm_source=RSS</link></item>
-<item><title>When the Sun Will Set Across the US on November 1, Mapped - Mental Floss</title><link>https://www.mentalfloss.com/geography/cities/when-sun-set-cities-across-us-november-1-mapped?utm_source=RSS</link></item>
-<item><title>50 Simple DIY Halloween Costumes For Last-Minute Planners - Mental Floss</title><link>https://www.mentalfloss.com/halloween/diy-halloween-costumes?utm_source=RSS</link></item>
-<item><title>Why Does Baba Yaga Fly in a Mortar Instead of on a Broomstick? - Mental Floss</title><link>https://www.mentalfloss.com/culture/folklore-mythology/why-baba-yaga-flies-mortar-instead-broomstick?utm_source=RSS</link></item>
-<item><title>2026’s Most Spine-Tingling Tourist Destinations for Halloween, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/geography/wanderlust/spine-tingling-tourist-destinations-halloween?utm_source=RSS</link></item>
-<item><title>The 10 Most Expensive Picasso Paintings Ever Sold, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/art/artists/most-expensive-picasso-paintings-ever-sold-ranked?utm_source=RSS</link></item>
-<item><title>The Top 10 Baby Names of 2026, From Olivia to Dean - Mental Floss</title><link>https://www.mentalfloss.com/language/names/most-popular-baby-names-2026?utm_source=RSS</link></item>
-<item><title>20 Things Millennials Grew Up With That Are Already Obsolete - Mental Floss</title><link>https://www.mentalfloss.com/nostalgia/90s/things-millennials-grew-up-with-already-obsolete?utm_source=RSS</link></item>
-<item><title>The 10 Best Stephen King Movies, Ranked by Rotten Tomatoes - Mental Floss</title><link>https://www.mentalfloss.com/the-10-best-stephen-king-movies-ranked-by-rotten-tomatoes-01m532y9cs9y?utm_source=RSS</link></item>
-<item><title>The Personal Tragedy Behind Picasso&amp;#39;s Blue Period - Mental Floss</title><link>https://www.mentalfloss.com/art/artists/personal-tragedy-behind-picasso-blue-period?utm_source=RSS</link></item>
-<item><title>Sylvia Plath’s Fascination With the Occult Included a Homemade Ouija Board - Mental Floss</title><link>https://www.mentalfloss.com/literature/authors/sylvia-plath-occult-fascination-ouija-board?utm_source=RSS</link></item>
-<item><title>The Most Walkable Cities in the U.S. and Canada, Mapped - Mental Floss</title><link>https://www.mentalfloss.com/geography/cities/most-walkable-cities-in-us-canada-map?utm_source=RSS</link></item>
-<item><title>Can You Spot the Spirits Hiding in These Pumpkin Spice Lattes? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/brainteasers/spot-spirits-hiding-pumpkin-spice-lattes?utm_source=RSS</link></item>
-<item><title>Quiz: Can You Finish These Spine-Chilling Literary Titles? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/finish-spine-chilling-literary-titles?utm_source=RSS</link></item>
-<item><title>The Spookiest City in Every U.S. State, Mapped - Mental Floss</title><link>https://www.mentalfloss.com/geography/maps/spookiest-city-every-us-state?utm_source=RSS</link></item>
-<item><title>The Halloween Rituals People Once Used to Predict Marriage - Mental Floss</title><link>https://www.mentalfloss.com/holidays/halloween/halloween-rituals-people-used-predict-marriage?utm_source=RSS</link></item>
-<item><title>Why Baba Yaga Lives in a House With Chicken Legs - Mental Floss</title><link>https://www.mentalfloss.com/culture/folklore-mythology/why-baba-yaga-house-chicken-legs?utm_source=RSS</link></item>
-<item><title>The States That Love Candy the Most (And Least), Ranked - Mental Floss</title><link>https://www.mentalfloss.com/food/candy/states-that-love-candy-most?utm_source=RSS</link></item>
-<item><title>The Most Haunted Cities in the World, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/geography/cities/most-haunted-cities-in-world-ranked?utm_source=RSS</link></item>
-<item><title>Where to Find Spirit Halloween Stores Across America, Mapped - Mental Floss</title><link>https://www.mentalfloss.com/holidays/halloween/where-find-spirit-halloween-stores-across-america-mapped?utm_source=RSS</link></item>
-<item><title>Who Is Baba Yaga? The Terrifying Witch Behind the New ‘Yaga’ Series - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/tv/who-baba-yaga-terrifying-witch-behind-new-yaga-series?utm_source=RSS</link></item>
-<item><title>Quiz: How Well Do You Know Halloween History? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/do-you-know-halloween-history?utm_source=RSS</link></item>
-<item><title>Why Do Vampires Need to Be Invited Inside? - Mental Floss</title><link>https://www.mentalfloss.com/culture/folklore-mythology/why-vampires-need-invited-inside?utm_source=RSS</link></item>
-<item><title>Jeff Goldblum&amp;#39;s First Movie Role Was a Far Cry From ‘Jurassic Park’ - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/jeff-goldblum-first-movie-role-far-cry-jurassic-park?utm_source=RSS</link></item>
-<item><title>10 Popular Couples Halloween Costumes That Never Go Out of Style - Mental Floss</title><link>https://www.mentalfloss.com/holidays/halloween/popular-couples-halloween-costumes-never-go-out-of-style?utm_source=RSS</link></item>
-<item><title>23 Epic Facts About ‘The Lord of the Rings’ Trilogy - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/20-epic-facts-about-lord-rings-trilogy?utm_source=RSS</link></item>
-<item><title>20 One-Hit Wonders From the 1980s You Still Know Every Word To - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/one-hit-wonders-1980s?utm_source=RSS</link></item>
-<item><title>Quiz: Can You Guess These Classic &amp;#39;Goosebumps&amp;#39; Book Titles? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/guess-classic-goosebumps-book-titles?utm_source=RSS</link></item>
-<item><title>25 Biggest Stars of the 1990s: Where Are They Now? - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/biggest-stars-90s-where-are-they-now?utm_source=RSS</link></item>
-<item><title>2027’s Best Colleges in America, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/culture/education/best-colleges-america-2027?utm_source=RSS</link></item>
-<item><title>100 Funny Jokes to Make Your Friends Laugh Out Loud - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/100-funny-jokes-make-friends-laugh-out-loud?utm_source=RSS</link></item>
-<item><title>The Extreme Measures Authorities Took to Keep Kids From Seeing ‘The Exorcist’ - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/extreme-measures-authorities-took-keep-kids-seeing-exorcist?utm_source=RSS</link></item>
-<item><title>6 Classic Rock Hits That Almost Went to Different Artists - Mental Floss</title><link>https://www.mentalfloss.com/6-classic-rock-hits-that-almost-went-to-different-artists-01m5awr0ybcw?utm_source=RSS</link></item>
-<item><title>The Most—And Least—Taxed Countries in the World - Mental Floss</title><link>https://www.mentalfloss.com/geography/most-least-taxed-countries-world?utm_source=RSS</link></item>
-<item><title>The Most Popular Halloween Decoration in Every State - Mental Floss</title><link>https://www.mentalfloss.com/geography/maps/most-popular-halloween-decoration-every-state?utm_source=RSS</link></item>
-<item><title>Quiz: Can You Complete These Halloween Jokes Before Time Runs Out? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/complete-halloween-jokes-before-time-runs-out?utm_source=RSS</link></item>
-<item><title>The Elvis Presley Encounter That Changed Tom Petty&amp;#39;s Life - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/elvis-presley-encounter-changed-tom-petty-life?utm_source=RSS</link></item>
-<item><title>14 Amusing Facts About Nathan Fielder - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/tv/nathan-fielder-facts?utm_source=RSS</link></item>
-<item><title>The Greenest Cities in America, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/geography/cities/greenest-cities-america-ranked?utm_source=RSS</link></item>
-<item><title>What Grocery Shopping Was Like 100 Years Ago - Mental Floss</title><link>https://www.mentalfloss.com/history/grocery-shopping-100-years-ago?utm_source=RSS</link></item>
-<item><title>Every Live-Action ‘Spider-Man’ Movie, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/every-live-action-spider-man-movie-ranked?utm_source=RSS</link></item>
-<item><title>The Most Popular Pet Halloween Costumes of 2026 - Mental Floss</title><link>https://www.mentalfloss.com/holidays/halloween/most-popular-pet-halloween-costumes-2026?utm_source=RSS</link></item>
-<item><title>States With the Highest—And Lowest—Student Loan Payments - Mental Floss</title><link>https://www.mentalfloss.com/geography/states/states-highest-lowest-student-loan-payments?utm_source=RSS</link></item>
-<item><title>What Did People Eat for Breakfast in Colonial Williamsburg? - Mental Floss</title><link>https://www.mentalfloss.com/food/what-people-ate-breakfast-colonial-williamsburg?utm_source=RSS</link></item>
-<item><title>The Bizarre Pay-Per-View Séance That Claimed to Contact Princess Diana - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/tv/pay-per-view-seance-claimed-contact-princess-diana?utm_source=RSS</link></item>
-<item><title>What Does &amp;quot;Clock It&amp;quot; Mean? The Slang Phrase and Hand Gesture Explained - Mental Floss</title><link>https://www.mentalfloss.com/language/slang/what-does-clock-it-mean-slang-phrase-hand-gesture-explained?utm_source=RSS</link></item>
-<item><title>What Did It Mean to “Call” on Someone in Jane Austen’s England? - Mental Floss</title><link>https://www.mentalfloss.com/literature/authors/what-mean-call-on-someone-jane-austen-s-england?utm_source=RSS</link></item>
-<item><title>8 Haunted House Books That’ll Keep You Up at Night - Mental Floss</title><link>https://www.mentalfloss.com/literature/books/scary-haunted-house-books?utm_source=RSS</link></item>
-<item><title>The 25 Highest Grossing Movies of the 1990s, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/highest-grossing-movies-1990s?utm_source=RSS</link></item>
-<item><title>7 Werewolf Novels That’ll Have You Howling in Fear - Mental Floss</title><link>https://www.mentalfloss.com/literature/books/werewolf-novels?utm_source=RSS</link></item>
-<item><title>5 of the Most Haunting Cemetery Tours in the U.S. - Mental Floss</title><link>https://www.mentalfloss.com/geography/wanderlust/best-cemetery-tours-us?utm_source=RSS</link></item>
-<item><title>The Best Community Colleges Across America, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/culture/education/best-community-colleges-2026-ranked?utm_source=RSS</link></item>
-<item><title>Tom Petty Had a Clear Favorite Among His Own Albums - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/tom-petty-clear-favorite-album?utm_source=RSS</link></item>
-<item><title>6 of the Best Book Retreats in the United States - Mental Floss</title><link>https://www.mentalfloss.com/geography/wanderlust/best-book-retreats-united-states?utm_source=RSS</link></item>
-<item><title>The Real New Jersey History Behind ‘Friday the 13th’s Camp Crystal Lake - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/new-jersey-history-behind-friday-the-13th-camp-crystal-lake?utm_source=RSS</link></item>
-<item><title>The Spiritual Meaning of the Hunter&amp;#39;s Moon - Mental Floss</title><link>https://www.mentalfloss.com/culture/folklore-mythology/spiritual-meaning-hunters-moon?utm_source=RSS</link></item>
-<item><title>Tom Petty&amp;#39;s Favorite (and Least Favorite) Tom Petty Songs - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/tom-petty-favorite-least-favorite-tom-petty-songs?utm_source=RSS</link></item>
-<item><title>Why Do We Scream When We’re Scared? - Mental Floss</title><link>https://www.mentalfloss.com/random-facts/why-we-scream-when-scared?utm_source=RSS</link></item>
-<item><title>What Critics Thought of ‘Sense and Sensibility’ When It Was Published in 1811 - Mental Floss</title><link>https://www.mentalfloss.com/literature/authors/what-critics-thought-sense-and-sensibility-when-published-1811?utm_source=RSS</link></item>
-<item><title>The Odd Jobs Arthur Miller Worked Before Becoming One of America’s Greatest Playwrights - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/odd-jobs-arthur-miller-worked-before-becoming-america-s-greatest-playwrights?utm_source=RSS</link></item>
-<item><title>The Chilling Summer that Gave Birth to Mary Shelley&amp;#39;s &amp;#39;Frankenstein&amp;#39; - Mental Floss</title><link>https://www.mentalfloss.com/literature/authors/chilling-summer-gave-birth-mary-shelley-frankenstein?utm_source=RSS</link></item>
-<item><title>Would You Stay at This Haunted Clown Motel Next to a Cemetery? - Mental Floss</title><link>https://www.mentalfloss.com/geography/wanderlust/haunted-clown-motel-nevada?utm_source=RSS</link></item>
-<item><title>The ‘Star Trek’ Legend Who Was Cut From ‘The Nightmare Before Christmas’ - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/star-trek-legend-cut-the-nightmare-before-christmas?utm_source=RSS</link></item>
-<item><title>The Forgotten ‘Friday the 13th’ TV Show That Had Nothing to Do With Jason - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/tv/forgotten-friday-the-13th-show-1980s?utm_source=RSS</link></item>
-<item><title>7 Regency-Era Etiquette Rules That Would Drive Modern People Mad - Mental Floss</title><link>https://www.mentalfloss.com/history/regency-era-etiquette-rules-drive-modern-people-mad?utm_source=RSS</link></item>
-<item><title>What Would £500 a Year in &amp;#39;Sense and Sensibility&amp;#39; Be Worth Today? - Mental Floss</title><link>https://www.mentalfloss.com/literature/books/sense-and-sensibility-500-pounds-worth-today?utm_source=RSS</link></item>
-<item><title>The Best Horror Movie Trivia Questions to Prove You&amp;#39;re Final Girl Material - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/horror-movie-trivia-questions?utm_source=RSS</link></item>
-<item><title>All 6 ‘Sense and Sensibility’ Adaptations and Where to Watch Them - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/sense-and-sensibility-adaptations-where-to-watch?utm_source=RSS</link></item>
-<item><title>The U.S. States With the Most Halloween-Themed Street Names, Ranked - Mental Floss</title><link>https://www.mentalfloss.com/geography/states/u-s-states-most-halloween-themed-street-names-ranked?utm_source=RSS</link></item>
-<item><title>The Failed &amp;#39;Friday the 13th&amp;#39; Stunt That Left an Actor Temporarily Blind - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/failed-friday-the-13th-stunt-left-actor-temporarily-blind?utm_source=RSS</link></item>
-<item><title>The Biggest Song From Every Year in the 1960s - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/biggest-song-every-year-1960s?utm_source=RSS</link></item>
-<item><title>Quiz: Can You Match the Halloween-Themed Song to the Artist Who Wrote It? - Mental Floss</title><link>https://www.mentalfloss.com/quizzes/music/match-halloween-song-artist?utm_source=RSS</link></item>
-<item><title>The One Major Problem ‘Friday the 13th’ Writer Victor Miller Had With All of the Sequels - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/one-problem-friday-the-13th-writer-had-sequels?utm_source=RSS</link></item>
-<item><title>Why Jane Austen&amp;#39;s First Novel Was Credited Only to &amp;quot;A Lady&amp;quot; - Mental Floss</title><link>https://www.mentalfloss.com/literature/authors/why-jane-austen-first-novel-credited-to-a-lady?utm_source=RSS</link></item>
-<item><title>The Strange Afterlife of Oscar Wilde&amp;#39;s Library Card - Mental Floss</title><link>https://www.mentalfloss.com/literature/authors/strange-afterlife-oscar-wilde-library-card?utm_source=RSS</link></item>
-<item><title>9 Slang Words From the 1960s We Still Use Today - Mental Floss</title><link>https://www.mentalfloss.com/language/slang/slang-words-1960s-use-today?utm_source=RSS</link></item>
-<item><title>What Tenzing Norgay and Edmund Hillary Did When They Reached the Top of Mount Everest - Mental Floss</title><link>https://www.mentalfloss.com/history/tenzing-norgay-edmund-hillary-everest-summit?utm_source=RSS</link></item>
-<item><title>25 Songs You Didn’t Know Were Written for Movies - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/music/songs-didn-t-know-written-movies?utm_source=RSS</link></item>
-<item><title>Every Friday the 13th Movie, Ranked By Rotten Tomatoes - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/movies/friday-13th-movies-ranked-rotten-tomatoes?utm_source=RSS</link></item>
-<item><title>How Likely Is Your State to Have a White Christmas in 2026? - Mental Floss</title><link>https://www.mentalfloss.com/geography/states/how-likely-your-state-have-white-christmas-2026?utm_source=RSS</link></item>
-<item><title>20 Famous Celebrities You Didn&amp;#39;t Know Had a Twin - Mental Floss</title><link>https://www.mentalfloss.com/entertainment/famous-celebrities-didn-t-know-had-a-twin?utm_source=RSS</link></item>
-<item><title>ESP-NOW Walkie Talkies - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/25/esp-now-walkie-talkies/</link></item>
-<item><title>Local Wikipedia - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/25/local-wikipedia/</link></item>
-<item><title>Adafruit New Product this Week: Adafruit CP2105… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/17/adafruit-new-product-this-week-adafruit-cp2105-friend-usb-to-dual-uart-serial-converters/</link></item>
-<item><title>Adafruit Weekly Editorial Round-Up: CircuitPython 11.0.0-alpha.2, Halloween Gift Guide Sale, &amp; more - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/25/adafruit-weekly-editorial-round-up-circuitpython-11-0-0-alpha-2-halloween-gift-guide-sale-more/</link></item>
-<item><title>Building Passive Headphones - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/25/building-passive-headphones/</link></item>
-<item><title>Eye of Sauron: long-range hidden spy camera detection and positioning with inbuilt memory EM radiation - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/25/eye-of-sauron-long-range-hidden-spy-camera-detection-and-positioning-with-inbuilt-memory-em-radiation/</link></item>
-<item><title>Observe El Niño with NASA - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/24/observe-el-nino-with-nasa/</link></item>
-<item><title>ESP32-Powered Talking Smoke Pumpkin #ElectronicHalloween - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/24/esp32-powered-talking-smoke-pumpkin-electronichalloween/</link></item>
-<item><title>Sound Reactive Paper Lanterns with LedFx - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/24/sound-reactive-paper-lanterns-with-ledfx-2/</link></item>
-<item><title>GitHub – ankur608/ArduinoUnoQ_AdafruitTouch - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/24/github-ankur608-arduinounoq_adafruittouch/</link></item>
-<item><title>The Hidden Speakers of Cirque du Soleil’s “O” - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/24/the-hidden-speakers-of-cirque-du-soleils-o/</link></item>
-<item><title>Reverse engineering a commercial spatial audio effect - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/24/reverse-engineering-a-commercial-spatial-audio-effect/</link></item>
-<item><title>Self-Hosted Game Vault - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/23/self-hosted-game-vault/</link></item>
-<item><title>在 Google 砍伐了上千英亩树后野狼来到芬兰的村庄 - Solidot</title><link>https://www.solidot.org/story?sid=85706</link></item>
-<item><title>深水地平线漏油事件 16 年后海洋仍未恢复 - Solidot</title><link>https://www.solidot.org/story?sid=85705</link></item>
-<item><title>撸狗有助于抵抗下一次压力 - Solidot</title><link>https://www.solidot.org/story?sid=85703</link></item>
-<item><title>FreePBX – web-based administration platform for Asterisk - LinuxLinks</title><link>https://www.linuxlinks.com/freepbx-web-based-administration-platform-asterisk/</link></item>
-<item><title>kanban-tui – terminal-based Kanban task manager - LinuxLinks</title><link>https://www.linuxlinks.com/kanban-tui-terminal-based-kanban-task-manager/</link></item>
-<item><title>ScreenGuard – screen time tracking and focus tools - LinuxLinks</title><link>https://www.linuxlinks.com/screenguard-screen-time-tracking-focus-tools/</link></item>
-<item><title>Yuvomi – self-hosted family planner and household organiser - LinuxLinks</title><link>https://www.linuxlinks.com/yuvomi-self-hosted-family-planner-household-organiser/</link></item>
-<item><title>pulseaudio-mixer-cli – interactive terminal mixer for PulseAudio - LinuxLinks</title><link>https://www.linuxlinks.com/pulseaudio-mixer-cli-terminal-pulseaudio-mixer/</link></item>
-<item><title>4 Best Free and Open Source GUI Command Schedulers - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-gui-command-schedulers/</link></item>
-<item><title>KerkoApp – searchable web interface for Zotero bibliographies - LinuxLinks</title><link>https://www.linuxlinks.com/kerkoapp-searchable-web-interface-zotero-bibliographies/</link></item>
-<item><title>External Secrets Operator – synchronize external secrets with Kubernetes - LinuxLinks</title><link>https://www.linuxlinks.com/external-secrets-operator-synchronize-external-secrets-kubernetes/</link></item>
-<item><title>GNOME Has Forgotten That Desktop Users Want Choices - LinuxLinks</title><link>https://www.linuxlinks.com/gnome-forgotten-desktop-users-want-choices/</link></item>
-<item><title>Best Free and Open Source Mattermost Clients - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-mattermost-clients/</link></item>
-<item><title>Spin Operator – deploy Spin applications to Kubernetes - LinuxLinks</title><link>https://www.linuxlinks.com/spin-operator-deploy-spin-applications-kubernetes/</link></item>
-<item><title>Emaki – Arch-based Linux distribution with niri - LinuxLinks</title><link>https://www.linuxlinks.com/emaki-arch-based-linux-distribution/</link></item>
-<item><title>14 Best Free and Open Source Graphical Volume Mixers - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-graphical-volume-mixers/</link></item>
-<item><title>SoX_ng – command-line audio converter and effects processor - LinuxLinks</title><link>https://www.linuxlinks.com/sox_ng-command-line-audio-converter-and-effects-processor/</link></item>
-<item><title>6 Best Free and Open Source CalDAV Servers - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-caldav-servers/</link></item>
-<item><title>FusionPBX – multi-tenant VoIP PBX management platform - LinuxLinks</title><link>https://www.linuxlinks.com/fusionpbx-multi-tenant-voip-pbx-management-platform/</link></item>
-<item><title>LibreFolio – self-hosted financial portfolio tracker - LinuxLinks</title><link>https://www.linuxlinks.com/librefolio-self-hosted-financial-portfolio-tracker/</link></item>
-<item><title>LumaOS – Ubuntu-based Linux distribution featuring Niri - LinuxLinks</title><link>https://www.linuxlinks.com/lumaos-ubuntu-based-linux-distribution-featuring-niri/</link></item>
-<item><title>11 Best Free and Open Source Linux System Log and systemd Journal Viewers - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-linux-system-log-systemd-journal-viewers/</link></item>
-<item><title>Transition – graphical multimedia to audio converter - LinuxLinks</title><link>https://www.linuxlinks.com/transition-graphical-multimedia-audio-converter/</link></item>
-<item><title>liber – local-first reference manager for academic research - LinuxLinks</title><link>https://www.linuxlinks.com/liber-local-first-reference-manager-academic-research/</link></item>
-<item><title>PKScreener – stock screening and technical analysis tool - LinuxLinks</title><link>https://www.linuxlinks.com/pkscreener-stock-screening-technical-analysis-tool/</link></item>
-<item><title>grimshot – command-line screenshots for Sway - LinuxLinks</title><link>https://www.linuxlinks.com/grimshot-command-line-screenshots-sway/</link></item>
-<item><title>KDE Journald Browser – graphical systemd journal viewer - LinuxLinks</title><link>https://www.linuxlinks.com/kde-journald-browser-graphical-systemd-journal-viewer/</link></item>
-<item><title>20 Best Free and Open Source Linux Power Management Tools - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-linux-power-management-tools/</link></item>
-<item><title>CalibRaw – GPU-accelerated RAW photo editor - LinuxLinks</title><link>https://www.linuxlinks.com/calibraw-gpu-accelerated-raw-photo-editor/</link></item>
-<item><title>Autohook – lightweight Git hook manager - LinuxLinks</title><link>https://www.linuxlinks.com/autohook-lightweight-git-hook-manager/</link></item>
-<item><title>8 Best Free and Open Source Linux Astrology Software - LinuxLinks</title><link>https://www.linuxlinks.com/astrology/</link></item>
-<item><title>yq – command-line YAML, XML and TOML processor - LinuxLinks</title><link>https://www.linuxlinks.com/yq-command-line-yaml-xml-toml-processor/</link></item>
-<item><title>Memray – memory profiler for Python applications - LinuxLinks</title><link>https://www.linuxlinks.com/memray-memory-profiler-python-applications/</link></item>
-<item><title>tincan – peer-to-peer voice and text chat for the terminal - LinuxLinks</title><link>https://www.linuxlinks.com/tincan-peer-to-peer-voice-text-chat-terminal/</link></item>
-<item><title>Glipboard – terminal clipboard history manager - LinuxLinks</title><link>https://www.linuxlinks.com/glipboard-terminal-clipboard-history-manager/</link></item>
-<item><title>OpenStock – stock market research and monitoring platform - LinuxLinks</title><link>https://www.linuxlinks.com/openstock-stock-market-research-monitoring-platform/</link></item>
-<item><title>10 Best Free and Open Source Quantum Chemistry Software - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-quantum-chemistry-software/</link></item>
-<item><title>Bibliograph – collaborative online bibliography management - LinuxLinks</title><link>https://www.linuxlinks.com/bibliograph-collaborative-online-bibliography-management/</link></item>
-<item><title>10 Useful Open Source Linux Applications I Miss - LinuxLinks</title><link>https://www.linuxlinks.com/useful-open-source-linux-application-missed/</link></item>
-<item><title>GrumPHP – PHP code quality checks using Git hooks - LinuxLinks</title><link>https://www.linuxlinks.com/grumphp-php-code-quality-checks-git-hooks/</link></item>
-<item><title>Chamesle Linux – Void-based distribution - LinuxLinks</title><link>https://www.linuxlinks.com/chamesle-linux-void-based-distribution/</link></item>
-<item><title>eprofiler-tui – terminal-based profiling flamegraph viewer - LinuxLinks</title><link>https://www.linuxlinks.com/eprofiler-tui-terminal-based-profiling-flamegraph-viewer/</link></item>
-<item><title>8 Best Free and Open Source Linux GUI-Based Bibliography Tools - LinuxLinks</title><link>https://www.linuxlinks.com/bibliography/</link></item>
-<item><title>systemd-repart – declarative disk partitioning tool - LinuxLinks</title><link>https://www.linuxlinks.com/systemd-repart-declarative-disk-partitioning-tool/</link></item>
-<item><title>22 Best Free and Open Source Web-Based Linux File Managers - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-web-based-linux-file-managers/</link></item>
-<item><title>Kaori – discover and read manga and comics - LinuxLinks</title><link>https://www.linuxlinks.com/kaori-discover-read-manga-comics/</link></item>
-<item><title>15 Best Free and Open Source WebDAV Servers - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-webdav-servers/</link></item>
-<item><title>Heaptrack – heap memory profiler for Linux applications - LinuxLinks</title><link>https://www.linuxlinks.com/heaptrack-heap-memory-profiler/</link></item>
-<item><title>Sauva – terminal Unicode explorer - LinuxLinks</title><link>https://www.linuxlinks.com/sauva-terminal-unicode-explorer/</link></item>
-<item><title>YaST Expert Partitioner – advanced storage partitioning tool - LinuxLinks</title><link>https://www.linuxlinks.com/yast-expert-partitioner-advanced-storage-partitioning-tool/</link></item>
-<item><title>Issabel – Rocky Linux-based PBX distribution - LinuxLinks</title><link>https://www.linuxlinks.com/issabel-rocky-linux-based-pbx-distribution/</link></item>
-<item><title>8 Best Free and Open Source Graphical and Web-Based Log Viewers - LinuxLinks</title><link>https://www.linuxlinks.com/best-free-open-source-graphical-web-based-log-viewers/</link></item>
-<item><title>Linuxiac Weekly Wrap-Up: Week 43, 2026 (October 19 – 25) - Linuxiac</title><link>https://linuxiac.com/linuxiac-weekly-wrap-up-week-43-2026-october-19-25/</link></item>
-<item><title>Ubuntu Touch 24.04-2.2 Released with Security Fixes, VoLTE Improvements - Linuxiac</title><link>https://linuxiac.com/ubuntu-touch-24-04-2-2-released-with-security-fixes-volte-improvements/</link></item>
-<item><title>Meet Riff, an Open-Source Spotify Client Built for GNOME - Linuxiac</title><link>https://linuxiac.com/meet-riff-an-open-source-spotify-client-built-for-gnome/</link></item>
-<item><title>KDE Plasma 6.9 to Improve Wayland PiP and Multi-Monitor Support - Linuxiac</title><link>https://linuxiac.com/kde-plasma-6-9-to-improve-wayland-pip-and-multi-monitor-support/</link></item>
-<item><title>systemd Officially Adds Rust Support for New Components - Linuxiac</title><link>https://linuxiac.com/systemd-officially-adds-rust-support-for-new-components/</link></item>
-<item><title>WireGuard Easy 15.5 Adds AmneziaWG 3.1 Support, Security Fixes - Linuxiac</title><link>https://linuxiac.com/wireguard-easy-15-5-adds-amneziawg-3-1-support-security-fixes/</link></item>
-<item><title>Contour 0.8 Terminal Emulator Adds Command Blocks, Faster Rendering - Linuxiac</title><link>https://linuxiac.com/contour-0-8-terminal-emulator-adds-command-blocks-faster-rendering/</link></item>
-<item><title>Transmission 4.1.4 BitTorrent Client Fixes Download and Security Issues - Linuxiac</title><link>https://linuxiac.com/transmission-4-1-4-bittorrent-client-fixes-download-and-security-issues/</link></item>
-<item><title>OBS Studio 33.0 Released with Updated Browser Engine, Plugin Changes - Linuxiac</title><link>https://linuxiac.com/obs-studio-33-0-released-with-updated-browser-engine-plugin-changes/</link></item>
-<item><title>Meet Linksy, an Open-Source Device Connectivity Tool for Linux - Linuxiac</title><link>https://linuxiac.com/meet-linksy-a-kde-connect-alternative-with-more-features/</link></item>
-<item><title>Hailey Bieber Brings Calzedonia Lace to the Front - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/hailey-bieber-calzedonia-lace/</link></item>
-<item><title>Kylie Jenner Makes Waves in Stella McCartney Film - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/kylie-jenner-stella-mccartney-icon-series/</link></item>
-<item><title>Zara Studio Fall 2026 Dresses for a Little Mystery - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/zara-studio-fall-2026-campaign/</link></item>
-<item><title>Thoughtful Gifts for Him That Make Everyday Life Better - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/thoughtful-gifts-for-him/</link></item>
-<item><title>Chanel Eyewear is All Smiles for Fall 2026 - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/chanel-eyewear-fall-2026-campaign/</link></item>
-<item><title>5 Reasons Beauty Packaging Matters When You Shop - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/reasons-beauty-packaging-matters/</link></item>
-<item><title>Maike Inga Lounges in Style for Vanity Fair Italy - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/editorial/maike-inga-vanity-fair-italy/</link></item>
-<item><title>Gucci Cruise 2027 Brings Style to the Sidewalk - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/gucci-cruise-2027-campaign/</link></item>
-<item><title>How to Spot Fake Designer Sales Before You Buy - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/how-to-spot-fake-designer-sales/</link></item>
-<item><title>Khaite’s Fall 2026 Campaign is All About Contrast - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/khaite-fall-2026-campaign/</link></item>
-<item><title>Zara Takes Halloween to Venice With Gothic Fashion - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/zara-halloween-2026/</link></item>
-<item><title>Eyeliner Tips for Mature Eyes That Create a Softer Look - Fashion Gone Rogue</title><link>https://www.fashiongonerogue.com/story/eyeliner-tips-mature-eyes-softer-look/</link></item>
-<item><title>Can you ever really think what someone else is thinking? - Psyche</title><link>https://psyche.co/ideas/can-you-ever-really-think-what-someone-else-is-thinking</link></item>
-<item><title>How to live a life of awe - Psyche</title><link>https://psyche.co/videos/encounters-with-awe-have-profound-benefits-heres-how-to-have-more</link></item>
-<item><title>Why romantic relationships matter more to men than to women - Psyche</title><link>https://psyche.co/ideas/why-romantic-relationships-matter-more-to-men-than-to-women</link></item>
-<item><title>Dear Al Pacino - Psyche</title><link>https://psyche.co/turning-points/why-i-wrote-mad-letters-to-celebrities-on-my-mothers-behalf</link></item>
-<item><title>How to overcome task paralysis - Psyche</title><link>https://psyche.co/guides/how-to-overcome-task-paralysis</link></item>
-<item><title>Are you getting enough sun? - Psyche</title><link>https://psyche.co/notes-to-self/why-sunlight-is-vital-to-our-physical-and-mental-health</link></item>
-<item><title>Portraits of another life: Nemo Gould - Psyche</title><link>https://psyche.co/videos/i-take-silly-very-seriously-a-kinetic-sculptors-credo-of-creation</link></item>
-<item><title>What life in Denmark shows about the power of emotional safety - Psyche</title><link>https://psyche.co/ideas/what-life-in-denmark-shows-about-the-power-of-emotional-safety</link></item>
-<item><title>The social construction of emotions - Psyche</title><link>https://psyche.co/videos/dont-reduce-emotions-to-biology-theyre-contingent-and-emergent</link></item>
-<item><title>Deciding to detransition - Psyche</title><link>https://psyche.co/turning-points/transitioning-made-me-happy-but-it-came-with-a-high-price</link></item>
-<item><title>How mental disorders play havoc with our motivation - Psyche</title><link>https://psyche.co/ideas/how-mental-disorders-play-havoc-with-our-motivation</link></item>
-<item><title>How to handle jealous feelings - Psyche</title><link>https://psyche.co/guides/how-to-handle-jealous-feelings</link></item>
-<item><title>What is hidden in the photographs we keep of each other? - Psyche</title><link>https://psyche.co/ideas/what-is-hidden-in-the-photographs-we-keep-of-each-other</link></item>
-<item><title>Black men suffer racial trauma yet are seen as the threat - Psyche</title><link>https://psyche.co/ideas/black-men-suffer-racial-trauma-yet-are-seen-as-the-threat</link></item>
-<item><title>How to ignite your creativity - Psyche</title><link>https://psyche.co/videos/ten-crafty-ideas-to-escape-the-doom-scroll-and-start-making-things</link></item>
-<item><title>Why moving on after a breakup makes you a better person - Psyche</title><link>https://psyche.co/ideas/why-moving-on-after-a-breakup-makes-you-a-better-person</link></item>
-<item><title>Tuesdays with the guys - Psyche</title><link>https://psyche.co/turning-points/tragedy-called-for-a-radical-change-in-my-male-friendships</link></item>
-<item><title>Want to be a lifelong learner? Don’t go it alone - Psyche</title><link>https://psyche.co/ideas/want-to-be-a-lifelong-learner-dont-go-it-alone</link></item>
-<item><title>A psychological guide to climbing out of debt - Psyche</title><link>https://psyche.co/guides/a-psychological-guide-to-climbing-out-of-debt</link></item>
-<item><title>Breaking The Shower Containment Taboo For Hadron Calorimeters - Science 2.0</title><link>https://science20.com/a_quantum_diaries_survivor/20261021/breaking_the_shower_containment_taboo_for_hadron_calorimeters</link></item>
-<item><title>Epidemiology Call To Action: German Cats Have Two Fewer Lives Than French - Science 2.0</title><link>https://science20.com/science_20/20261021/epidemiology_call_to_action_german_cats_have_two_fewer_lives_than_french-300148</link></item>
-<item><title>Faith Vacuums And AI Have Led To A Paranormal Resurgence - Science 2.0</title><link>https://science20.com/science_20/20261020/faith_vacuums_and_ai_have_led_to_a_paranormal_resurgence-300146</link></item>
-<item><title>Understanding Intelligence Across Artificial and Biological Systems - Science 2.0</title><link>https://science20.com/a_quantum_diaries_survivor/20261020/understanding_intelligence_across_artificial_and_biological</link></item>
-<item><title>If You Like Rabbit, Thank The Plague - Science 2.0</title><link>https://science20.com/the_conversation/20261017/if_you_like_rabbit_thank_the_plague-300145</link></item>
-<item><title>More on Radiacode 110 - Science 2.0</title><link>https://science20.com/a_quantum_diaries_survivor/20261016/more_on_radiacode_110-300144</link></item>
-<item><title>When Natives Are Smarter Than Ecologists About Energy - Science 2.0</title><link>https://science20.com/science_20/20261014/when_natives_are_smarter_than_ecologists_about_energy-300143</link></item>
-<item><title>What AI Gets Right In Medicine Is Giving Patients Time To Talk - Science 2.0</title><link>https://science20.com/science_20/20261013/what_ai_gets_right_in_medicine_is_giving_patients_time_to_talk-300142</link></item>
-<item><title>Is Simulation-Based Inference A New Technique In HEP? - Science 2.0</title><link>https://science20.com/a_quantum_diaries_survivor/20261013/is_simulation_based_inference_a_new_technique_in_hep-300140</link></item>
-<item><title>Bearing Witness: Why It Might Be Ethical To Watch A Mass Murderer&amp;#39;s Execution - Science 2.0</title><link>https://science20.com/the_conversation/20261012/bearing_witness_why_it_might_be_ethical_to_watch_a_mass_murderers</link></item>
-<item><title>AI Is Making MRI Smarter: But It May Also Be Changing What We See - Science 2.0</title><link>https://science20.com/mark_pierce/20261011/ai_is_making_mri_smarter_but_it_may_also_be_changing_what_we_see-300137</link></item>
-<item><title>Leaf Them On The Ground: Benefit More By Doing Less Yardwork - Science 2.0</title><link>https://science20.com/the_conversation/20261011/leaf_them_on_the_ground_benefit_more_by_doing_less_yardwork-300136</link></item>
-<item><title>Your Computer’s Clock Is Lying to You. Linux Knows It. - OSTechNix</title><link>https://ostechnix.com/linux-system-clock-explained/</link></item>
-<item><title>Unix Timestamps: A Practical Guide for Developers - OSTechNix</title><link>https://ostechnix.com/unix-timestamps-guide/</link></item>
-<item><title>External Hard Drive Not Showing Files? Causes and Solutions - OSTechNix</title><link>https://ostechnix.com/external-hard-drive-not-showing-files-fix/</link></item>
-<item><title>Linux Kernel 7.3 Is Officially Released: 5 Key Features You Must Know - OSTechNix</title><link>https://ostechnix.com/linux-kernel-7-3-released/</link></item>
-<item><title>Linux Kernel 7.3 RC7 Released: A Quick Look at the Final Test Candidate - OSTechNix</title><link>https://ostechnix.com/linux-kernel-7-3-rc7-released/</link></item>
-<item><title>Rozali Coffee Tabe Burka review: a honey-processed Guji for pour over - CoffeeHow</title><link>https://coffeehow.co/rozali-coffee-tabe-burka/</link></item>
-<item><title>Nero Vaniglia review: pastry lab and specialty coffee in Garbatella, Rome - CoffeeHow</title><link>https://coffeehow.co/nero-vaniglia-rome/</link></item>
-<item><title>Coffee Advent Calendars 2026: 9 Specialty Calendars Compared - CoffeeHow</title><link>https://coffeehow.co/coffee-advent-calendar-2026/</link></item>
-<item><title>Italian AeroPress Championship 2026: Winner and Finalist Recipes - CoffeeHow</title><link>https://coffeehow.co/italian-aeropress-championship-2026/</link></item>
-<item><title>Coffee Extraction Calculator: TDS &amp; Extraction Yield - CoffeeHow</title><link>https://coffeehow.co/coffee-extraction-calculator/</link></item>
-<item><title>How Much Caffeine Is in Coffee? Caffeine Calculator - CoffeeHow</title><link>https://coffeehow.co/caffeine-in-coffee/</link></item>
-<item><title>How to Use a Clever Dripper - CoffeeHow</title><link>https://coffeehow.co/clever-dripper/</link></item>
-<item><title>How to Make Vietnamese Coffee - CoffeeHow</title><link>https://coffeehow.co/vietnamese-coffee/</link></item>
-<item><title>How to Use a Siphon Coffee Maker - CoffeeHow</title><link>https://coffeehow.co/siphon-coffee/</link></item>
-<item><title>How to Use a Chemex - CoffeeHow</title><link>https://coffeehow.co/chemex/</link></item>
-<item><title>Electric Seagliders Promise Faster Coastal Travel by 2028 - IEEE Spectrum</title><link>https://spectrum.ieee.org/ground-effect-vehicle</link></item>
-<item><title>Poetry for Engineers: Of Code and Shortleaf Pine - IEEE Spectrum</title><link>https://spectrum.ieee.org/poetry-for-engineers-of-code-and-shortleaf-pine</link></item>
-<item><title>What Biometric Technology Does and Doesn’t Add to Voting - IEEE Spectrum</title><link>https://spectrum.ieee.org/biometric-voting-technology</link></item>
-<item><title>Video Friday: Quadruped Robot Solves Giant Rubik’s Cube by Itself - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-rubiks-cube-robot</link></item>
-<item><title>Could Treating AI as Conscious Make It More Dangerous? - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-model-welfare</link></item>
-<item><title>Under-Skin Implant Controls Prosthetic Arms - IEEE Spectrum</title><link>https://spectrum.ieee.org/phantom-neuro-prosthetic-arm-implant</link></item>
-<item><title>Community Colleges Put New Workers Into Semiconductor Jobs Fast - IEEE Spectrum</title><link>https://spectrum.ieee.org/community-college-semiconductors</link></item>
-<item><title>EU and U.S. Power Firms Scrutinize Supply Chains for Chinese Parts - IEEE Spectrum</title><link>https://spectrum.ieee.org/power-grid-security-china-inverters</link></item>
-<item><title>Hera Mission Prepares for Follow-Up Asteroid Imaging - IEEE Spectrum</title><link>https://spectrum.ieee.org/esa-hera-dimorphos-rendezvous</link></item>
-<item><title>Video Friday: When Two Robots Become One - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-reconfigurable-robots</link></item>
-<item><title>Sceye Flies Floating Cell Tower to Japan to Set Up Test 4G Network - IEEE Spectrum</title><link>https://spectrum.ieee.org/high-altitude-platform-station</link></item>
-<item><title>Introducing . . . The Slow Down - Bev Cooks</title><link>https://bevcooks.com/2026/10/introducing-the-slow-down/</link></item>
-<item><title>Do You Think About Frozen Pizza as Much as I Think About Frozen Pizza? - Bev Cooks</title><link>https://bevcooks.com/2026/09/do-you-think-about-frozen-pizza-as-much-as-i-think-about-frozen-pizza/</link></item>
-<item><title>Let Me Introduce You To Your New Favorite Extra Virgin Olive Oil - Bev Cooks</title><link>https://bevcooks.com/2026/08/let-me-introduce-you-to-your-new-favorite-extra-virgin-olive-oil/</link></item>
-<item><title>Mini Back-to-school Guide - Bev Cooks</title><link>https://bevcooks.com/2026/08/mini-back-to-school-guide/</link></item>
-<item><title>Air Fryer Zucchini Fries - Bev Cooks</title><link>https://bevcooks.com/2026/08/air-fryer-zucchini-fries/</link></item>
-<item><title>Monthly Mixtape: Thick Green Yards and Moonlit Cards - Bev Cooks</title><link>https://bevcooks.com/2026/08/monthly-mixtape-thick-green-yards-and-moonlit-cards/</link></item>
-<item><title>This City Is Ours S02E01/属于我们的城市/This.City.Is.Ours.S02E01.1080p.WEBRip.X264-DEADPOOL[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802841.xml</link></item>
-<item><title>Mock The Week S23E07/一周讽刺秀/Mock the Week S23E07 1080p AMZN WEB-DL DDP2 0 H 264-RAWR - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802840.xml</link></item>
-<item><title>A Christmas Prayer 2 Tradition 2026 1080p WEB-DL HEVC x265-BONE - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802839.xml</link></item>
-<item><title>The Funny Thing About Love 2026 1080p WEB-DL HEVC x265-BONE - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802838.xml</link></item>
-<item><title>茫然女王/Queen At Sea 2026 1080p WEB-DL HEVC x265 5 1-BONE - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802837.xml</link></item>
-<item><title>圣诞祈祷文/A Christmas Prayer 2025 1080p WEB-DL HEVC x265-BONE - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802836.xml</link></item>
-<item><title>Wayward 2026 1080p AMZN WEB-DL DD 2 0 H 264-playWEB - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802835.xml</link></item>
-<item><title>2020末日逃生/Greenland.2020.1080p.BluRay.x265.zh.en - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669655.xml</link></item>
-<item><title>Blake&amp;#x27;s 7 S2E05/布莱克七人帮S2E05/Blake&amp;#x27;s 7 S2E05/Blake&amp;#x27;s.7.S2E05.Pressure.Point.DVDRip.XviD.[tvu.org.ru] - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802834.xml</link></item>
-<item><title>金刚狼2/The Wolverine (2013)/金钢狼：武士之战/狼人：武士激战/The.Wolverine.2013.Extended.BluRay.1080p.DTS-ES.x264-3Li - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669654.xml</link></item>
-<item><title>少狼/Teen.Wolf.S01.1080p.BluRay.DDP.5.1.x265-edge2020 - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669653.xml</link></item>
-<item><title>少狼/Teen.Wolf.S06.1080p.BluRay.DDP.5.1.x265-edge2020 - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669652.xml</link></item>
-<item><title>少狼/Teen.Wolf.S05.1080p.BluRay.DDP.5.1.x265-edge2020 - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669651.xml</link></item>
-<item><title>少狼/Teen.Wolf.S04.1080p.BluRay.DDP.5.1.x265-edge2020 - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669650.xml</link></item>
-<item><title>少狼/Teen.Wolf.S03.1080p.BluRay.DDP.5.1.x265-edge2020 - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669649.xml</link></item>
-<item><title>少狼/Teen.Wolf.S02.1080p.BluRay.DDP.5.1.x265-edge2020 - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669648.xml</link></item>
-<item><title>花瓣 꽃잎 (1996)/A.Petal.1996.1080p.WATCHA.WEB-DL.调了帧率.v3 - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669646.xml</link></item>
-<item><title>The Voice UK S14E09/英国之声 第一季/The.Voice.UK.S14E09.1080p.HEVC.x265-MeGusta[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802833.xml</link></item>
-<item><title>美国人质/American Hostage S01E07 Tomorrow is Here 720p AMZN WEB-DL DDP5 1 H 264-RAWR[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802832.xml</link></item>
-<item><title>海军罪案调查处 第二十四季 NCIS: Naval Criminal Investigative Service (2026)/海军罪案调查处 第二十四季 NCIS: Naval Criminal Investigative Service (2026) - 射手网(伪)</title><link>http://assrt.net/xml/sub/734/734086.xml</link></item>
-<item><title>/Tobruk.1967.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802831.xml</link></item>
-<item><title>/The.Revengers.1972.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802830.xml</link></item>
-<item><title>/The.Man.With.The.Golden.Arm.1955.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802829.xml</link></item>
-<item><title>/Seconds.1966.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802828.xml</link></item>
-<item><title>/A.Gathering.of.Eagles.1963.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802827.xml</link></item>
-<item><title>花瓣 꽃잎 (1996)/A.Petal.1996.1080p.WATCHA.WEB-DL.AAC2.0.H.264.调了帧率.v3 - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669645.xml</link></item>
-<item><title>RoccosTeensUnleashed07-Scene5.s05.FrancisX.CarolinaGuerrero.4k - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669643.xml</link></item>
-<item><title>花瓣 꽃잎 (1996)/花瓣.A petal - 1996 - Ggotip - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669642.xml</link></item>
-<item><title>花瓣 꽃잎 (1996)/A.Petal.1996.1080p.WATCHA.WEB-DL.AAC2.0.H.264.v2.Chs - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669641.xml</link></item>
-<item><title>The Terminal List S02E03/终极名单：黑狼/The.Terminal.List.S02E03.MULTI.1080p.WEB.H264-HiggsBoson - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802826.xml</link></item>
-<item><title>双喜/Double.Happiness.2025.1080p.NF.WEB-DL - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669640.xml</link></item>
-<item><title>A Star Is Born/A Star Is Born/一个明星的诞生 A.Star.Is.Born.2018.加长版.Encore.Edition.1080p.bluray.x264-spectacle.chs&amp;amp;eng - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669639.xml</link></item>
-<item><title>Happys Place S03E01/幸福之地/happys.place.s03e01.1080p.web.h264-cakes[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802825.xml</link></item>
-<item><title>淘金记/Gold Rush S17E04 720p WEB H264-JFF[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802824.xml</link></item>
-<item><title>星際效應/Interstellar.2014.1080p.BluRay.TW - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669637.xml</link></item>
-<item><title>Fettered 2026 1080p AMZN WEB-DL DD 2 0 H 264-playWEB - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802823.xml</link></item>
-<item><title>The Cell/入侵腦細胞/移魂追兇/The.Cell.2000.Bluray.1080p.DTS-HD.x264-CHD - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669635.xml</link></item>
-<item><title>警察世家：波士顿/Boston Blue S02E03 Fire in the Hole 720p AMZN WEB-DL DDP5 1 H 264-RAWR[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802822.xml</link></item>
-<item><title>Boston Blue S02E03/警察世家：波士顿/boston.blue.s02e03.1080p.web.h264-cakes[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802821.xml</link></item>
-<item><title>the Cycle 2026/尸变/The Cycle 2026 1080p AMZN WEB-DL DDP5 1 H 264-CHORTLE - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802820.xml</link></item>
-<item><title>中央情报局/CIA S02E01 1080p DUAL TOD WEB-DL x264 AAC-MiRA - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802819.xml</link></item>
-<item><title>黑帮领地 第二季 MobLand (2026)/黑帮领地 第二季 MobLand (2026) - 射手网(伪)</title><link>http://assrt.net/xml/sub/734/734085.xml</link></item>
-<item><title>烈焰国度/Fire Country S05E03 What Needs to Be Done 1080p AMZN WEB-DL DDP5 1 H 264-FLUX - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802818.xml</link></item>
-<item><title>塔尔萨之王 第四季 Tulsa King (2026)/塔尔萨之王 第四季 Tulsa King (2026) - 射手网(伪)</title><link>http://assrt.net/xml/sub/734/734084.xml</link></item>
-<item><title>/Tony.Rome.1967.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802817.xml</link></item>
-<item><title>/The.Tender.Trap.1955.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802816.xml</link></item>
-<item><title>/Robin.and.the.7.Hoods.1964.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802815.xml</link></item>
-<item><title>/Assault.on.a.Queen.1966.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802814.xml</link></item>
-<item><title>/A.Hole.In.The.Head.1959.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/802/802813.xml</link></item>
-<item><title>APOD: 2026 October 25 – Dark Matter in a Simulated Universe - NASA</title><link>https://science.nasa.gov/image-article/apod-2026-october-25-dark-matter-in-a-simulated-universe/</link></item>
-<item><title>APOD: 2026 October 24 – Rosetta’s Selfie - NASA</title><link>https://science.nasa.gov/image-article/apod-2026-october-24-rosettas-selfie/</link></item>
-<item><title>NASA, Partners Accelerate Lander Development for 2028 Moon Missions - NASA</title><link>https://www.nasa.gov/missions/artemis/nasa-partners-accelerate-lander-development-for-2028-moon-missions/</link></item>
-<item><title>NASA’s Artemis III Mission to Test Future Moon Lander Operations - NASA</title><link>https://www.nasa.gov/missions/artemis/nasas-artemis-iii-mission-to-test-future-moon-lander-operations/</link></item>
-<item><title>NASA’s Swift Mission Ends, Leaves Behind Scientific Bonanza - NASA</title><link>https://science.nasa.gov/missions/swift/nasas-swift-mission-ends/</link></item>
-<item><title>RS-25 Engine Tests at NASA Stennis - NASA</title><link>https://www.nasa.gov/image-article/rs-25-engine-tests-at-nasa-stennis/</link></item>
-<item><title>NASA, Virginia Launch Power Partnership for Energy Security - NASA</title><link>https://www.nasa.gov/centers-and-facilities/langley/nasa-power-energy-partnership/</link></item>
-<item><title>APOD: 2026 October 23 – Andromeda in Southern Spring - NASA</title><link>https://science.nasa.gov/image-article/apod-2026-october-23-andromeda-in-southern-spring/</link></item>
-<item><title>El Niño Then and Now - NASA</title><link>https://science.nasa.gov/earth/earth-observatory/el-nino-then-and-now/</link></item>
-<item><title>NASA Invites Media to 2026 von Braun Space Exploration Symposium - NASA</title><link>https://www.nasa.gov/news-release/nasa-invites-media-to-2026-von-braun-space-exploration-symposium/</link></item>
-<item><title>杨洪斌：论宪法实施的多元主体模式 - 爱思想</title><link>https://www.aisixiang.com/data/184407.html</link></item>
-<item><title>杜丽红：医疗统战与资源重组：抗日 - 爱思想</title><link>https://www.aisixiang.com/data/184378.html</link></item>
-<item><title>何孔蛟：全面抗战时期安徽基层行政 - 爱思想</title><link>https://www.aisixiang.com/data/184380.html</link></item>
-<item><title>长征，永远在路上——献给中国工农 - 爱思想</title><link>https://www.aisixiang.com/data/184396.html</link></item>
-<item><title>沈建峰：论以劳动管理为中心的平台 - 爱思想</title><link>https://www.aisixiang.com/data/184493.html</link></item>
-<item><title>李栋：18世纪中华法系的空间结构 - 爱思想</title><link>https://www.aisixiang.com/data/184438.html</link></item>
-<item><title>李海峰：检察提前介入监察调查的实 - 爱思想</title><link>https://www.aisixiang.com/data/184376.html</link></item>
-<item><title>陕庆：命名与论述中国的方式——对 - 爱思想</title><link>https://www.aisixiang.com/data/184480.html</link></item>
-<item><title>侯学宾 李凯文：数字遗产继承的平 - 爱思想</title><link>https://www.aisixiang.com/data/184377.html</link></item>
-<item><title>叶斌 杨昆灏：欧盟环境犯罪治理的 - 爱思想</title><link>https://www.aisixiang.com/data/184344.html</link></item>
-<item><title>蔡胜：“长征”概念的形成、演进及 - 爱思想</title><link>https://www.aisixiang.com/data/184454.html</link></item>
-<item><title>王汎森：人文学科的危机——关于高 - 爱思想</title><link>https://www.aisixiang.com/data/184426.html</link></item>
-<item><title>陈金龙：长征与中国共产党优秀特质 - 爱思想</title><link>https://www.aisixiang.com/data/184455.html</link></item>
-<item><title>邵彦涛：“共产党是什么样的”：长 - 爱思想</title><link>https://www.aisixiang.com/data/184447.html</link></item>
-<item><title>李倩：坚持“四个以文”：“十五五 - 爱思想</title><link>https://www.aisixiang.com/data/184555.html</link></item>
-<item><title>何哲：全球人工智能时代中华文明文 - 爱思想</title><link>https://www.aisixiang.com/data/184519.html</link></item>
-<item><title>张军：站稳人民立场促文化创新创造 - 爱思想</title><link>https://www.aisixiang.com/data/184476.html</link></item>
-<item><title>深入学习贯彻习近平文化思想，筑牢 - 爱思想</title><link>https://www.aisixiang.com/data/184466.html</link></item>
-<item><title>杨葵：在思想上精神上文化上筑牢党 - 爱思想</title><link>https://www.aisixiang.com/data/184458.html</link></item>
-<item><title>李明：加快构建中华海洋文明标识体 - 爱思想</title><link>https://www.aisixiang.com/data/184457.html</link></item>
-<item><title>满慎刚：在推动黄河流域生态保护和 - 爱思想</title><link>https://www.aisixiang.com/data/184424.html</link></item>
-<item><title>李文堂：文化主体性理论的确立 - 爱思想</title><link>https://www.aisixiang.com/data/184402.html</link></item>
-<item><title>黄一兵：马克思主义文化理论中国化 - 爱思想</title><link>https://www.aisixiang.com/data/184400.html</link></item>
-<item><title>李思齐：因地制宜做好增绿文章 - 爱思想</title><link>https://www.aisixiang.com/data/184373.html</link></item>
-<item><title>徐勇：塞防海防：《琉球三策》杂感 - 爱思想</title><link>https://www.aisixiang.com/data/184363.html</link></item>
-<item><title>张贺：历史文化遗产让城市更美好 - 爱思想</title><link>https://www.aisixiang.com/data/184357.html</link></item>
-<item><title>高世名：激发全民族文化创新创造活 - 爱思想</title><link>https://www.aisixiang.com/data/184339.html</link></item>
-<item><title>杨耕：在坚持“两个结合”中造就新 - 爱思想</title><link>https://www.aisixiang.com/data/184338.html</link></item>
-<item><title>钱念孙：从三大文化关系看创造性转 - 爱思想</title><link>https://www.aisixiang.com/data/184293.html</link></item>
-<item><title>张清民：习近平文化思想体系论 - 爱思想</title><link>https://www.aisixiang.com/data/184255.html</link></item>
-<item><title>楼宇烈：中国文化中以人为本的人文 - 爱思想</title><link>https://www.aisixiang.com/data/184248.html</link></item>
-<item><title>方红庆：如何让人工智能可信？ - 爱思想</title><link>https://www.aisixiang.com/data/184634.html</link></item>
-<item><title>詹启敏：主动，才是健康最可靠的路 - 爱思想</title><link>https://www.aisixiang.com/data/184612.html</link></item>
-<item><title>朱大洲：科学喝水，与吃饭同等重要 - 爱思想</title><link>https://www.aisixiang.com/data/184611.html</link></item>
-<item><title>万劲波：筑牢科技强国的创新文化根 - 爱思想</title><link>https://www.aisixiang.com/data/184588.html</link></item>
-<item><title>彭先觉院士：核聚变与未来能源 - 爱思想</title><link>https://www.aisixiang.com/data/184499.html</link></item>
-<item><title>叶玉江 薛姝：营造有利于原始创新 - 爱思想</title><link>https://www.aisixiang.com/data/184410.html</link></item>
-<item><title>吴咏时：杨振宁——在物理学的白银 - 爱思想</title><link>https://www.aisixiang.com/data/184242.html</link></item>
-<item><title>曲崇明：激发科学捐赠的社会活力 - 爱思想</title><link>https://www.aisixiang.com/data/184220.html</link></item>
-<item><title>施尧耘：中国量子计算可否跳出“追 - 爱思想</title><link>https://www.aisixiang.com/data/184146.html</link></item>
-<item><title>董楠卿：自主实验室：加速科学发现 - 爱思想</title><link>https://www.aisixiang.com/data/184133.html</link></item>
-<item><title>杨仁发：协同推进关键核心技术攻关 - 爱思想</title><link>https://www.aisixiang.com/data/184132.html</link></item>
-<item><title>叶涛等：有了AI，人的科研能力是 - 爱思想</title><link>https://www.aisixiang.com/data/184007.html</link></item>
-<item><title>思力：让人文精神滋养科技创新 - 爱思想</title><link>https://www.aisixiang.com/data/184004.html</link></item>
-<item><title>胡泳 朱政德：从ChatGPT审 - 爱思想</title><link>https://www.aisixiang.com/data/183898.html</link></item>
-<item><title>倪思洁：一位总想隐去名字的先生 - 爱思想</title><link>https://www.aisixiang.com/data/183771.html</link></item>
-<item><title>李德毅院士：人机协同与教育转型 - 爱思想</title><link>https://www.aisixiang.com/data/184694.html</link></item>
-<item><title>渠敬东：“三生万物”——中国画的生成机制 - 爱思想</title><link>https://www.aisixiang.com/data/184685.html</link></item>
-<item><title>余三定：我与中国文化书院 - 爱思想</title><link>https://www.aisixiang.com/data/184683.html</link></item>
-<item><title>温儒敏：语文老师备课的五个通病 - 爱思想</title><link>https://www.aisixiang.com/data/184682.html</link></item>
-<item><title>赵磊 赵晓磊：论中国自主知识体系的方法论——以区域国别学为例 - 爱思想</title><link>https://www.aisixiang.com/data/184677.html</link></item>
-<item><title>邓伟：法典化背景下经济法权利的体系化重塑与规范表达 - 爱思想</title><link>https://www.aisixiang.com/data/184684.html</link></item>
-<item><title>谢晖：论数智分析作为法律方法 - 爱思想</title><link>https://www.aisixiang.com/data/184672.html</link></item>
-<item><title>秦博：两个10月25日的重叠——台湾光复81周年与抗美援朝76周年的法理与意志 - 爱思想</title><link>https://www.aisixiang.com/data/184671.html</link></item>
-<item><title>石佳友：民营经济平等保护的规范意涵及其法治实现 - 爱思想</title><link>https://www.aisixiang.com/data/184669.html</link></item>
-<item><title>程能：国际条约合宪性审查的实践图景与制度完善 - 爱思想</title><link>https://www.aisixiang.com/data/184668.html</link></item>
-<item><title>张燕生：经济再平衡战略应当如何选择 - 爱思想</title><link>https://www.aisixiang.com/data/184703.html</link></item>
-<item><title>柴洪峰 陈若鑫：从注意力经济到意图经济：智能体重塑市场经济竞争逻辑 - 爱思想</title><link>https://www.aisixiang.com/data/184702.html</link></item>
-<item><title>张学博：持续做大做强先进制造业 - 爱思想</title><link>https://www.aisixiang.com/data/184699.html</link></item>
-<item><title>赵放 祝晓薇：数字经济时代促进高质量充分就业的现实挑战与实践路径 - 爱思想</title><link>https://www.aisixiang.com/data/184662.html</link></item>
-<item><title>陈剑：从2026中国民营企业500强榜单，看民营企业的社会主义属性 - 爱思想</title><link>https://www.aisixiang.com/data/184650.html</link></item>
-<item><title>陈理：深刻认识持之以恒推进全面从严治党的重要性紧迫性 - 爱思想</title><link>https://www.aisixiang.com/data/184697.html</link></item>
-<item><title>李海青 贾德钦：论习近平党建思想的鲜明理论品格 - 爱思想</title><link>https://www.aisixiang.com/data/184678.html</link></item>
-<item><title>吴建雄：完善基层监督体系的理论逻辑、目标任务和实践进路 - 爱思想</title><link>https://www.aisixiang.com/data/184676.html</link></item>
-<item><title>牛先锋：论科学社会主义学科话语创新的表现、特点及趋势 - 爱思想</title><link>https://www.aisixiang.com/data/184665.html</link></item>
-<item><title>身份政治，政治认同：迈向多元文化政治的思考 - 爱思想</title><link>https://www.aisixiang.com/data/184651.html</link></item>
-<item><title>张桐：国家分类概念的话语流变与中国国际话语权提升 - 爱思想</title><link>https://www.aisixiang.com/data/184701.html</link></item>
-<item><title>陈人江：世界体系与国际体系双重视角下的世界变局 - 爱思想</title><link>https://www.aisixiang.com/data/184700.html</link></item>
-<item><title>杨修文：数智时代西方政党跨国交往的特点与前景 - 爱思想</title><link>https://www.aisixiang.com/data/184658.html</link></item>
-<item><title>张洁：美以伊冲突下东南亚国家安全观的变革及其政策实践 - 爱思想</title><link>https://www.aisixiang.com/data/184653.html</link></item>
-<item><title>构建适应人口变化趋势的乡村产业发展和公共资源配置体系 - 爱思想</title><link>https://www.aisixiang.com/data/184698.html</link></item>
-<item><title>吴玉军：国家认同视域下铸牢中华民族共同体意识的理论基础与实践路径 - 爱思想</title><link>https://www.aisixiang.com/data/184696.html</link></item>
-<item><title>龚鹏程：乡土中国论，是反陷阱的陷阱 - 爱思想</title><link>https://www.aisixiang.com/data/184691.html</link></item>
-<item><title>沈庆：欧洲科学革命和启蒙运动中的社会自省 - 爱思想</title><link>https://www.aisixiang.com/data/184690.html</link></item>
-<item><title>沈庆：欧洲基督教宗教改革时期的社会自省 - 爱思想</title><link>https://www.aisixiang.com/data/184689.html</link></item>
-<item><title>刘纯懿 胡泳：“流”作为拓扑：流视频的媒介性断流与超级现代主义社会 - 爱思想</title><link>https://www.aisixiang.com/data/184704.html</link></item>
-<item><title>胡泳：为什么人类非得比AI强，才配过上好日子？ - 爱思想</title><link>https://www.aisixiang.com/data/184657.html</link></item>
-<item><title>高长力：网络文艺传播秩序的法治路径 - 爱思想</title><link>https://www.aisixiang.com/data/184628.html</link></item>
-<item><title>吴勇军：系统防范化解人工智能衍生舆情风险 - 爱思想</title><link>https://www.aisixiang.com/data/184591.html</link></item>
-<item><title>杨梅：《目瑙纵歌》破圈背后的传承密码 - 爱思想</title><link>https://www.aisixiang.com/data/184587.html</link></item>
-<item><title>韦先晓：思想政治教育的核心功能曁意识形态锻造的理论与实践探索 - 爱思想</title><link>https://www.aisixiang.com/data/184687.html</link></item>
-<item><title>郑敬斌：高校师德师风建设长效机制的系统探绎 - 爱思想</title><link>https://www.aisixiang.com/data/184680.html</link></item>
-<item><title>孙惠柱：“一剧之本”过时了吗？ - 爱思想</title><link>https://www.aisixiang.com/data/184649.html</link></item>
-<item><title>查屏球：李白“天生我材必有用”句解 - 爱思想</title><link>https://www.aisixiang.com/data/184644.html</link></item>
-<item><title>邓静：姜夔《暗香》《疏影》主旨新诠 - 爱思想</title><link>https://www.aisixiang.com/data/184643.html</link></item>
-<item><title>叶文举：南宋张栻的书院诗创作 - 爱思想</title><link>https://www.aisixiang.com/data/184642.html</link></item>
-<item><title>曹顺庆：世界现代化的文明互鉴逻辑 - 爱思想</title><link>https://www.aisixiang.com/data/184693.html</link></item>
-<item><title>王喆：长征胜利90周年的历史回望与精神传承 - 爱思想</title><link>https://www.aisixiang.com/data/184679.html</link></item>
-<item><title>张文木：红军长征的意义 - 爱思想</title><link>https://www.aisixiang.com/data/184675.html</link></item>
-<item><title>侯树栋：中古西欧的帝国观念与帝国政治 - 爱思想</title><link>https://www.aisixiang.com/data/184670.html</link></item>
-<item><title>吴晓群：奇点时刻与普罗米修斯维度：AI时代人类共同历史叙事的危机与重构 - 爱思想</title><link>https://www.aisixiang.com/data/184667.html</link></item>
-<item><title>李仁政：走出主客二分：反身性本体论、弱涌现与“自反性器官” - 爱思想</title><link>https://www.aisixiang.com/data/184686.html</link></item>
-<item><title>侯昂妤：《孙子兵法》的当代价值和世界意义 - 爱思想</title><link>https://www.aisixiang.com/data/184673.html</link></item>
-<item><title>张瀚墨：商周礼制变革与儒道思想的产生 - 爱思想</title><link>https://www.aisixiang.com/data/184664.html</link></item>
-<item><title>孙周兴：“数字存在”的哲学阐释 - 爱思想</title><link>https://www.aisixiang.com/data/184635.html</link></item>
-<item><title>孔德立：《大学》与古人的“修齐治平” - 爱思想</title><link>https://www.aisixiang.com/data/184618.html</link></item>
-<item><title>李克：经师易遇 人师难逢——追忆业师楼宇烈先生 - 爱思想</title><link>https://www.aisixiang.com/data/184695.html</link></item>
-<item><title>桑兵：日记研究的范围及取法 - 爱思想</title><link>https://www.aisixiang.com/data/184674.html</link></item>
-<item><title>刘向东：求真而后传神——刘统的治史之路 - 爱思想</title><link>https://www.aisixiang.com/data/184645.html</link></item>
-<item><title>王春林：与边关生灵同成长——读“边关上的孩子”系列 - 爱思想</title><link>https://www.aisixiang.com/data/184630.html</link></item>
-<item><title>古耜：别具魅力的时代风景 - 爱思想</title><link>https://www.aisixiang.com/data/184629.html</link></item>
-<item><title>余世存：阿难：因为我今天还在 - 爱思想</title><link>https://www.aisixiang.com/data/184681.html</link></item>
-<item><title>王杰：以鲜活笔触书写伟大长征 - 爱思想</title><link>https://www.aisixiang.com/data/184631.html</link></item>
-<item><title>黄朴民：简议赵充国的治边方略 - 爱思想</title><link>https://www.aisixiang.com/data/184602.html</link></item>
-<item><title>柳华文，1972年7月生，山东栖霞人。西南政法大学法学学士（1995），北京大学法学硕士（19..... - 爱思想</title><link>https://www.aisixiang.com/thinktank/LiuHuawen.html</link></item>
-<item><title>Look up tonight: October’s full moon is for hunters - Fast Company</title><link>https://www.fastcompany.com/91629265/hunters-moon-2026-meaning-best-view-time-october-full-moon</link></item>
-<item><title>What’s really fueling the recent generosity boom - Fast Company</title><link>https://www.fastcompany.com/91628347/whats-really-fueling-the-recent-generosity-boom</link></item>
-<item><title>Town CEO Jean-Denis Greze on why most people still don’t know what to ask AI - Fast Company</title><link>https://www.fastcompany.com/91629462/town-ceo-jean-denis-greze-on-why-most-people-still-dont-know-what-to-ask-ai</link></item>
-<item><title>Anthropic was beaten to the punch by a salad dressing company - Fast Company</title><link>https://www.fastcompany.com/91627772/anthropic-beaten-to-the-punch-salad-dressing-company</link></item>
-<item><title>Why quitting your job might be your best decision yet - Fast Company</title><link>https://www.fastcompany.com/91627787/why-quitting-your-job-might-be-your-best-decision-yet</link></item>
-<item><title>How Dropbox plans to prevent AI brain rot in its workers - Fast Company</title><link>https://www.fastcompany.com/91626870/how-dropbox-wants-to-keep-ai-from-making-its-workers-less-intelligent</link></item>
-<item><title>Your customer service problem isn’t a customer service problem - Fast Company</title><link>https://www.fastcompany.com/91626259/your-customer-service-problem-isnt-a-customer-service-problem</link></item>
-<item><title>The AI infrastructure race: I’ve seen this movie before - Fast Company</title><link>https://www.fastcompany.com/91619326/the-ai-infrastructure-race-ive-seen-this-movie-before-technology-ai-infrastructure</link></item>
-<item><title>From zeitgeist to zeitghost: How Netflix kept a hold on viewers—but lost its spot in pop culture - Fast Company</title><link>https://www.fastcompany.com/91628523/netflix-lost-place-in-pop-culture-high-viewership</link></item>
-<item><title>This Nike race medal is meant to be worn as jewelry - Fast Company</title><link>https://www.fastcompany.com/91628222/nike-after-dark-race-medal-jewelry</link></item>
-<item><title>Booking holiday flights? Here’s how to know when to pounce. - Fast Company</title><link>https://www.fastcompany.com/91627136/google-now-best-time-snag-cheap-flights-thanksgiving-christmas-airfare-holiday-travel</link></item>
-<item><title>Fear and money: Financial lessons from horror villains Ghostface, Samara, and Candyman - Fast Company</title><link>https://www.fastcompany.com/91628008/iconic-horror-villains-ghostface-samara-and-candyman-offer-valuable-financial-lessons</link></item>
-<item><title>Stop building digital employees. Start building intelligent companies - Fast Company</title><link>https://www.fastcompany.com/91627432/stop-building-digital-employees-start-building-intelligent-companies</link></item>
-<item><title>What’s keeping you stuck isn’t the real problem - Fast Company</title><link>https://www.fastcompany.com/91627779/whats-keeping-you-stuck-isnt-the-real-problem</link></item>
-<item><title>Why leaders shouldn’t have to apologize for private remarks - Fast Company</title><link>https://www.fastcompany.com/91625494/why-leaders-shouldnt-have-to-apologize-for-private-remarks</link></item>
-<item><title>Consuming political news can hurt your job performance - Fast Company</title><link>https://www.fastcompany.com/91628551/consuming-political-news-can-hurt-your-job-performance</link></item>
-<item><title>How to turn off Google’s AI Overviews—and reclaim search sanity - Fast Company</title><link>https://www.fastcompany.com/91621581/turn-off-google-ai-overviews</link></item>
+<lastBuildDate>Tue, 27 Oct 2026 09:24:08 +0800</lastBuildDate>
+<item><title>These 34 Handy Products Will Pull Their Weight Around The House - BuzzFeed</title><link>https://www.buzzfeed.com/melanie_aman/handy-products-pull-their-weight-around-the-house?origin=hfshp</link></item>
+<item><title>37 Home Products From Amazon Our Readers Are Loving In 2026 - BuzzFeed</title><link>https://www.buzzfeed.com/lily_burrill/amazon-home-products-readers-love-2026?origin=hfshp</link></item>
+<item><title>科学家重现古罗马的分色玻璃 - Solidot</title><link>https://www.solidot.org/story?sid=85713</link></item>
+<item><title>Netflix 用户观看量下降，应用打开量下降 - Solidot</title><link>https://www.solidot.org/story?sid=85711</link></item>
+<item><title>Systemd 支持 Rust 程序 - Solidot</title><link>https://www.solidot.org/story?sid=85710</link></item>
+<item><title>欧洲夏季热浪导致逾 5 万城市居民死亡 - Solidot</title><link>https://www.solidot.org/story?sid=85708</link></item>
+<item><title>2025 年老年抚养比首次超过少儿抚养比 - Solidot</title><link>https://www.solidot.org/story?sid=85707</link></item>
+<item><title>#238 – Chris Huber on How Static Site Importer Makes Migrating Any Website to WordPress Easier Than Ever - WP Tavern</title><link>https://wptavern.com/podcast/238-chris-huber-on-how-static-site-importer-makes-migrating-any-website-to-wordpress-easier-than-ever/</link></item>
+<item><title>#237 – Robert Abela on WordPress Security and the Battle Against AI Threats - WP Tavern</title><link>https://wptavern.com/podcast/237-robert-abela-on-wordpress-security-and-the-battle-against-ai-threats/</link></item>
+<item><title>#236 – Brian Coords on WordPress as the Source of Truth - WP Tavern</title><link>https://wptavern.com/podcast/236-brian-coords-on-wordpress-as-the-source-of-truth/</link></item>
+<item><title>#235 – Rob Pugh and Tony Arcangelini on Bringing Podcasting to Jetpack - WP Tavern</title><link>https://wptavern.com/podcast/235-rob-pugh-and-tony-arcangelini-on-bringing-podcasting-to-jetpack/</link></item>
+<item><title>9to5Mac Daily: October 26, 2026 – Apple unveils new iPad mini - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/daily-october-26-2026/</link></item>
+<item><title>T-Mobile’s new plans let users swap between Apple TV and other subscriptions - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/t-mobiles-new-plans-let-users-swap-between-apple-tv-and-other-subscriptions/</link></item>
+<item><title>Ollama for Mac gains support for local text-to-speech models - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/ollama-for-mac-gains-support-for-local-text-to-speech-models/</link></item>
+<item><title>Instagram takes on YouTube with new 90-minute horizontal video format - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/instagram-takes-on-youtube-with-new-90-minute-horizontal-video-format/</link></item>
+<item><title>Apple addressed at least 329 unique security vulnerabilities across today’s system updates - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/apple-addressed-at-least-329-unique-security-vulnerabilities-across-todays-system-updates/</link></item>
+<item><title>From iPhone Duo to Mac, Craft shows what a native productivity app can do - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/from-iphone-duo-to-mac-craft-shows-what-a-native-productivity-app-can-do/</link></item>
+<item><title>Apple raises trade-in values for iPads and Macs, with increases of up to $365 - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/apple-raises-trade-in-values-for-ipads-and-macs-with-increases-of-up-to-365/</link></item>
+<item><title>Apple announces Siri AI will expand to these new languages soon - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/apple-announces-siri-ai-will-expand-to-these-new-languages-soon/</link></item>
+<item><title>iPhone Duo just got two new features in iOS 27.2 - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/iphone-duo-just-got-two-new-features-in-ios-27-2/</link></item>
+<item><title>Apple releases iOS 26.7.2 for iPhone, here’s what’s new - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/apple-releases-ios-26-7-2-for-iphone-heres-whats-new/</link></item>
+<item><title>Siri AI keeps getting better, here’s what’s new in iOS 27.2 - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/siri-ai-keeps-getting-better-heres-whats-new-in-ios-27-2/</link></item>
+<item><title>Apple releases iOS 27.2, here’s what’s new - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/apple-releases-ios-27-2-heres-whats-new/</link></item>
+<item><title>Apple releases iPadOS 27.2, here’s everything new for iPad - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/apple-releases-ipados-27-2-heres-everything-new-for-ipad/</link></item>
+<item><title>OpenAI upgrades ChatGPT and Codex with new GPT-6.1 Terra model - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/openai-upgrades-chatgpt-and-codex-with-new-gpt-6-1-terra-model/</link></item>
+<item><title>MagSafe Monday: TESSAN’s 6-in-1 charging station replaces every charger on your desk - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/tessans-6-in-1-charging-station-replaces-every-charger-on-your-desk/</link></item>
+<item><title>watchOS 27.2 available now for Apple Watch, here’s what’s new - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/watchos-27-2-available-now-for-apple-watch-heres-whats-new/</link></item>
+<item><title>Apple releases macOS Sequoia 15.8.2 and macOS Tahoe 26.7.2 - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/apple-releases-macos-sequoia-15-8-2-and-macos-tahoe-26-7-2/</link></item>
+<item><title>macOS 27.2 Golden Gate now available, here’s everything new [U] - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/macos-27-2-golden-gate-now-available-heres-everything-new/</link></item>
+<item><title>tvOS 27.2 just launched for Apple TV 4K, here’s what’s new - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/tvos-27-2-just-launched-for-apple-tv-4k-heres-whats-new/</link></item>
+<item><title>HomePod 27.2 is available now with four new features - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/homepod-27-2-is-available-now-with-four-new-features/</link></item>
+<item><title>Apple responds to reports of iPhone Duo’s inner display cracking - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/apple-responds-to-reports-of-iphone-duos-inner-display-cracking/</link></item>
+<item><title>Deals: AirTag 2 all-time low, Apple TV 4K, MacBook Air $200 off, Apple Pencil (USB-C) from $59, Alpine Loop, more - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/deals-airtag-2-apple-tv-4k-macbook-air-apple-pencil/</link></item>
+<item><title>New iPad mini vs previous model: Here’s everything new - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/new-ipad-mini-vs-previous-model-heres-everything-new/</link></item>
+<item><title>Apple teases an ‘exciting week’ of new products ahead - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/apple-teases-an-exciting-week-of-new-products-ahead/</link></item>
+<item><title>New iPad mini has big limitation on all but one model - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/new-ipad-mini-has-big-limitation-on-all-but-one-model/</link></item>
+<item><title>Apple unveils all-new iPad mini: OLED, thinner design, more - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/new-ipad-mini-features-release-date-price/</link></item>
+<item><title>Some seven years later, the iTunes Store is making an unlikely come-back - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/some-27-years-later-the-itunes-store-is-making-an-unlikely-come-back/</link></item>
+<item><title>Watch the iPhone Duo run a Shortcuts automation when it is opened or closed [Video] - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/watch-the-iphone-duo-run-a-shortcuts-automation-when-it-is-opened-or-closed-video/</link></item>
+<item><title>Claude Code AI finds a cryptominer on a Mac; says it didn’t put it there - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/claude-code-ai-finds-a-cryptominer-on-a-mac-says-it-didnt-put-it-there/</link></item>
+<item><title>iPhone Duo tested to destruction, including removing nanotexture layer - 9to5Mac</title><link>https://9to5mac.com/2026/10/26/iphone-duo-tested-to-destruction-including-removing-nanotexture-layer/</link></item>
+<item><title>Will Apple’s overhauled MacBook Pro finally offer 5G cellular support? - 9to5Mac</title><link>https://9to5mac.com/2026/10/25/macbook-pro-overhaul-cellular-support-touchscreen/</link></item>
+<item><title>iFixit tears down iPhone Duo, finds possible causes of early screen failures - 9to5Mac</title><link>https://9to5mac.com/2026/10/25/ifixit-tears-down-iphone-duo-finds-possible-causes-of-early-screen-failures/</link></item>
+<item><title>OLED iPad mini 8 debuting this week: Here’s what’s coming, and how much it’ll cost - 9to5Mac</title><link>https://9to5mac.com/2026/10/25/ipad-mini-8-redesign-with-oled-coming-this-week/</link></item>
+<item><title>Touchscreen OLED MacBook Pro launches this week, here’s how the lineup will look - 9to5Mac</title><link>https://9to5mac.com/2026/10/25/macbook-pro-redesign-oled-touch-launching-this-week/</link></item>
+<item><title>Some iPhone Duo displays are cracking, seemingly all in the same way - 9to5Mac</title><link>https://9to5mac.com/2026/10/25/iphone-duo-displays-cracking/</link></item>
+<item><title>Hands-on: Belkin’s new semi solid state batteries make for a much lighter carry - 9to5Mac</title><link>https://9to5mac.com/2026/10/24/belkin-new-semi-solid-state-battery-options-for-iphone/</link></item>
+<item><title>Indie App Spotlight: ‘Flipcorder’ lets you shoot retro footage on your iPhone Duo - 9to5Mac</title><link>https://9to5mac.com/2026/10/24/indie-app-spotlight-flipcorder-lets-you-shoot-retro-footage-on-your-iphone-duo/</link></item>
+<item><title>iPhone Duo one day later: Here’s why its quirks don’t make it any less incredible - 9to5Mac</title><link>https://9to5mac.com/2026/10/24/thoughts-on-iphone-duo-24-hours-later/</link></item>
+<item><title>Cybersecurity Awareness Week: How to remove your personal data from the internet, and why Apple’s tools alone aren’t enough - 9to5Mac</title><link>https://9to5mac.com/2026/10/24/cybersecurity-awareness-week-remove-personal-data-internet-apples-tools-alone-arent-enough/</link></item>
+<item><title>Apple @ Work: The browser is the biggest gap in your AI governance strategy - 9to5Mac</title><link>https://9to5mac.com/2026/10/24/apple-work-the-browser-is-the-biggest-gap-in-your-ai-governance-strategy/</link></item>
+<item><title>Apple weekend deals: Apple TV 4K, MacBook Pro $900 off, Pencil (USB-C), AirPods Pro 3, more - 9to5Mac</title><link>https://9to5mac.com/2026/10/24/apple-weekend-deals-apple-tv-4k-macbook-pencil-airpods/</link></item>
+<item><title>Apple exploring fix for Safari’s cramped layout on the iPhone Duo’s outer display - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/apple-exploring-fix-for-safaris-cramped-layout-on-the-iphone-duos-outer-display/</link></item>
+<item><title>Apple’s official DIY repair guides for the iPhone Duo now available - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/apples-official-diy-repair-guides-for-the-iphone-duo-now-available/</link></item>
+<item><title>Formula 1 gets Dolby Atmos support on Apple TV in the U.S. starting today - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/formula-1-gets-dolby-atmos-support-on-apple-tv-in-the-u-s-starting-today/</link></item>
+<item><title>9to5Mac Daily: October 23, 2026 – MacBook Pro rumors, iPhone Duo apps - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/daily-october-23-2026/</link></item>
+<item><title>9to5Mac Overtime 087: Happy iPhone Duo day - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/9to5mac-overtime-087-happy-iphone-duo-day/</link></item>
+<item><title>Report: Apple gains ground in China as smartphone shipments hit 14-year low in Q3 - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/report-apple-gains-ground-in-china-as-smartphone-shipments-hit-14-year-low-in-q3/</link></item>
+<item><title>iPhone Duo has hidden trick that solves a common complaint - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/iphone-duo-has-hidden-trick-that-solves-a-common-complaint/</link></item>
+<item><title>watchOS 27.2 gets new RC ahead of next week’s launch - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/watchos-27-2-gets-new-rc-ahead-of-next-weeks-launch/</link></item>
+<item><title>Next week’s MacBook Pro could be huge upgrade, but with one problem - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/next-weeks-macbook-pro-could-be-huge-upgrade-but-with-one-problem/</link></item>
+<item><title>Download the iPhone Duo’s official light and dark wallpapers here - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/download-the-iphone-duos-official-light-and-dark-wallpapers-here/</link></item>
+<item><title>HomeKit Weekly: SwitchBot’s new light bars bring 12-zone color to Apple Home - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/switchbots-new-light-bars-bring-12-zone-color-to-apple-home/</link></item>
+<item><title>Apple publishes iPhone Duo support documents covering hinge, Touch ID, cases, more - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/apple-publishes-iphone-duo-support-documents-covering-hinge-touch-id-cases-more/</link></item>
+<item><title>My experience suggests Apple Glasses will only sell to existing eyeglasses wearers - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/my-experience-suggests-apple-glasses-will-only-be-for-existing-eyeglass-wearers/</link></item>
+<item><title>Deals: iPhone Duo cases, Apple Pencil, AirPods Pro 3, Apple TV 4K, power banks, more - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/deals-duo-cases-apple-pencil-airpods-apple-tv-4k/</link></item>
+<item><title>Apple’s website has fun new easter egg: a fully interactive iPod - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/apples-website-has-fun-new-easter-egg-a-fully-interactive-ipod/</link></item>
+<item><title>iOS 27.1 is exclusive to iPhone Duo, here’s why - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/ios-27-1-is-exclusive-to-iphone-duo-heres-why/</link></item>
+<item><title>Here’s how to get fastest iPhone Duo charging - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/heres-how-to-get-fastest-iphone-duo-charging/</link></item>
+<item><title>Apple overtakes Nvidia as most valuable company in the world on iPhone Duo launch day - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/apple-overtakes-nvidia-as-most-valuable-company-in-the-world-on-iphone-duo-launch-day/</link></item>
+<item><title>iPhone Duo launch day: Lines form at Apple Stores, walk-in availability limited - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/iphone-duo-launch-day-lines-form-at-apple-stores-walk-in-availability-limited/</link></item>
+<item><title>iOS 27.2: Three new features coming to your iPhone next week - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/ios-27-2-three-new-features-coming-soon-to-your-iphone/</link></item>
+<item><title>New iPhone Duo cases available for purchase: Fabric, leather, aramid fiber, metal, more [Updated] - 9to5Mac</title><link>https://9to5mac.com/2026/10/23/best-iphone-duo-cases-now-available-purchase/</link></item>
+<item><title>Greg Joswiak talks iPhone Duo in-store availability and demand ahead of launch - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/greg-joswiak-talks-iphone-duo-in-store-availability-and-demand-ahead-of-launch/</link></item>
+<item><title>Apple is finally catching up with Siri, but the goalposts are moving again - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/apple-is-finally-catching-up-with-siri-but-the-goalposts-are-moving-again/</link></item>
+<item><title>WhatsApp starts testing long-awaited scheduled messages on iPhone - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/whatsapp-starts-testing-long-awaited-scheduled-messages-on-iphone/</link></item>
+<item><title>Apple wins again in copyright infringement battle over Apple TV thriller series - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/apple-wins-again-in-copyright-infringement-battle-over-apple-tv-thriller-series/</link></item>
+<item><title>Strava revamps route discovery with smarter search, offline improvements, more - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/strava-revamps-route-discovery-with-smarter-search-offline-improvements-more/</link></item>
+<item><title>Retro game emulator Delta looks great on the iPhone Duo - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/retro-game-emulator-delta-looks-great-on-the-iphone-duo/</link></item>
+<item><title>MacBook Neo helps Apple soften the blow of global PC market downturn, per report - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/macbook-neo-helps-apple-soften-the-blow-of-global-pc-market-downturn-per-report/</link></item>
+<item><title>9to5Mac Daily: October 22, 2026 – iOS 27.2 features, Apple Music rebrand - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/daily-october-22-2026/</link></item>
+<item><title>Apple TV’s long-awaited Fleetwood Mac documentary finally has a release date - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/apple-tvs-long-awaited-fleetwood-mac-documentary-finally-has-a-release-date/</link></item>
+<item><title>iOS 27 adds new Phone app feature that’s an instant favorite - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/ios-27-adds-new-phone-app-feature-thats-an-instant-favorite/</link></item>
+<item><title>iPhone Duo hands-on review, Apple announces MacBook Pro and Tell event - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/happy-hour-613/</link></item>
+<item><title>Amazon unveils Kindle+ subscription, a rebrand with more audiobooks - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/amazon-unveils-kindle-subscription-a-rebrand-with-more-audiobooks/</link></item>
+<item><title>Apple TV is adding two new features with iOS 27.2 - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/apple-tv-is-adding-two-new-features-with-ios-27-2/</link></item>
+<item><title>Orangetheory adds Apple Watch in-studio workout tracking for a one-time fee - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/orangetheory-adds-apple-watch-in-studio-workout-tracking-for-a-one-time-fee/</link></item>
+<item><title>Pages, Keynote, Numbers just added powerful new AI features - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/pages-keynote-numbers-just-added-powerful-new-ai-features/</link></item>
+<item><title>Arc browser gets a sunset date, and users have two months to move on - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/arc-browser-gets-a-sunset-date-and-users-have-two-months-to-move-on/</link></item>
+<item><title>1Password launches solution for safely using logins with AI agents - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/1password-launches-solution-for-safely-using-logins-with-ai-agents/</link></item>
+<item><title>Four advantages MacBook Pro redesign will have over current model - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/four-advantages-macbook-pro-redesign-will-have-over-current-model/</link></item>
+<item><title>Deals: MacBook Pro $900 off, Apple Pencil (USB-C) from $61, Apple TV 4K, MacBook Neo, more - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/deals-macbook-apple-pencil-usb-c-apple-tv-4k-neo/</link></item>
+<item><title>iOS 27.2 introduces design changes for these Apple apps - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/ios-27-2-introduces-design-changes-for-these-apple-apps/</link></item>
+<item><title>Leaker reveals larger iPhone Duo details, possible Telephoto camera - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/leaker-reveals-larger-iphone-duo-details-possible-telephoto-camera/</link></item>
+<item><title>First iPhone Duo pre-orders now say ‘shipped’ ahead of launch - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/first-iphone-duo-pre-orders-now-say-shipped-ahead-of-launch/</link></item>
+<item><title>Apple reportedly boosts iPhone Duo orders by more than 40% given strong demand - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/apple-reportedly-boosts-iphone-duo-orders-by-more-than-40-given-strong-demand/</link></item>
+<item><title>Apple says developers are showing ‘incredible’ support for the iPhone Duo - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/apple-says-developers-are-showing-incredible-support-for-the-iphone-duo/</link></item>
+<item><title>What’s going on with the web? The PHP issue and sites going offline - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/whats-going-on-with-the-web-the-php-issue-and-sites-going-offline/</link></item>
+<item><title>iPhone Duo reviews: The absolute best foldable phone, but not without compromise - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/iphone-duo-reviews-the-absolute-best-foldable-phone-but-not-without-compromise/</link></item>
+<item><title>Gurman: iPhone Duo 2 prototypes with Face ID are already being tested inside Apple - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/gurman-iphone-duo-2-face-id/</link></item>
+<item><title>Security Bite Podcast: Who is your AI agent really working for? - 9to5Mac</title><link>https://9to5mac.com/2026/10/22/security-bite-podcast-who-is-your-ai-agent-really-working-for/</link></item>
+<item><title>Apple must open iPhone to alternative app stores in Australia after Epic Games ruling - 9to5Mac</title><link>https://9to5mac.com/2026/10/21/apple-must-open-iphone-to-alternative-app-stores-in-australia-after-epic-games-ruling/</link></item>
+<item><title>Giant iPhone Duo installations spotted at Apple Fifth Avenue ahead of Friday launch - 9to5Mac</title><link>https://9to5mac.com/2026/10/21/giant-iphone-duo-installations-spotted-at-apple-fifth-avenue-ahead-of-friday-launch/</link></item>
+<item><title>9to5Mac Daily: October 21, 2026 – New iPhone Duo features, more - 9to5Mac</title><link>https://9to5mac.com/2026/10/21/daily-october-21-2026/</link></item>
+<item><title>Apple and DOJ notify court of impasse over document cutoff in antitrust lawsuit - 9to5Mac</title><link>https://9to5mac.com/2026/10/21/apple-and-doj-notify-court-of-impasse-over-document-cutoff-in-antitrust-lawsuit/</link></item>
+<item><title>iOS 27.2 reveals Apple’s Messages app could soon get highly requested change - 9to5Mac</title><link>https://9to5mac.com/2026/10/21/ios-27-2-reveals-apples-messages-app-could-soon-get-highly-requested-change/</link></item>
+<item><title>Anthropic takes on ChatGPT Dots and Meta Muse with Claude Duet - 9to5Mac</title><link>https://9to5mac.com/2026/10/21/anthropic-takes-on-chatgpt-dots-and-meta-muse-with-claude-duet/</link></item>
+<item><title>iPadOS 27.2 adds convenient new feature from the Mac - 9to5Mac</title><link>https://9to5mac.com/2026/10/21/ipados-27-2-adds-convenient-new-feature-from-the-mac/</link></item>
+<item><title>EXPLAINED: Can Oleshky Be Evacuated, Razed to Eliminate Russian Strategic Lookout? - KyivPost</title><link>https://www.kyivpost.com/post/88222</link></item>
+<item><title>12-Year-Old Boy Dies After Weeklong Fight for Life Following Russian Strike on Nova Vodolaha Park - KyivPost</title><link>https://www.kyivpost.com/post/88225</link></item>
+<item><title>Vučić Out, Students In: Still, No Sanctions Against Russia - KyivPost</title><link>https://www.kyivpost.com/post/88219</link></item>
+<item><title>Ukraine Slams Moscow Hosting 2030 Weightlifting Worlds, Demands Reversal - KyivPost</title><link>https://www.kyivpost.com/post/88244</link></item>
+<item><title>Russian Missiles Strike Kyiv University Campus – One Killed, 10 Wounded, Mostly Students - KyivPost</title><link>https://www.kyivpost.com/post/88241</link></item>
+<item><title>OPINION: Vučić’s Defeat Is Not Yet a Victory for Serbia’s European Future - KyivPost</title><link>https://www.kyivpost.com/post/88200</link></item>
+<item><title>OPINION: Finding a Resting Place - KyivPost</title><link>https://www.kyivpost.com/post/88106</link></item>
+<item><title>OPINION: It’s About Security, Stupid! - KyivPost</title><link>https://www.kyivpost.com/post/88161</link></item>
+<item><title>OPINION: Bosnia Deserves Better Than Permanent Probation - KyivPost</title><link>https://www.kyivpost.com/post/87938</link></item>
+<item><title>Ukraine, Moldova Sign New Military Cooperation Agreement, Vow to Join EU Together - KyivPost</title><link>https://www.kyivpost.com/post/88240</link></item>
+<item><title>Russian Forces Intensify Shelling of Epicentr K Chain Across Ukraine in 48-Hour Wave of Strikes - KyivPost</title><link>https://www.kyivpost.com/post/88239</link></item>
+<item><title>Third Political Prisoner Dies in Russia This Month – Report - KyivPost</title><link>https://www.kyivpost.com/post/88238</link></item>
+<item><title>Russian Strike on Kharkiv Kills 2, Wounds 4, Including Teenager - KyivPost</title><link>https://www.kyivpost.com/post/88235</link></item>
+<item><title>Putin Just Lost His Key Ally in Europe. Here’s What Happens Next - KyivPost</title><link>https://www.kyivpost.com/post/88215</link></item>
+<item><title>Ukraine Extends Martial Law and Mobilization Until Jan. 29 - KyivPost</title><link>https://www.kyivpost.com/post/88230</link></item>
+<item><title>Trump’s Diesel Scam Backfires - KyivPost</title><link>https://www.kyivpost.com/post/88221</link></item>
+<item><title>Ukraine Plans Draft Reform to End Street Conscription - KyivPost</title><link>https://www.kyivpost.com/post/88210</link></item>
+<item><title>Zelensky Says Starlink Speeds Fully Restored, Urges Interceptor Deliveries - KyivPost</title><link>https://www.kyivpost.com/post/88079</link></item>
+<item><title>OPINION: Technocracy Takeover - KyivPost</title><link>https://www.kyivpost.com/post/87991</link></item>
+<item><title>Russia’s Hot War on NATO: Airport Sabotage, Cruise Missiles &amp; European Silence - KyivPost</title><link>https://www.kyivpost.com/post/87998</link></item>
+<item><title>Inside a Ukrainian Minefield Rescue | Drone Footage &amp; Exclusive Interviews - KyivPost</title><link>https://www.kyivpost.com/post/87756</link></item>
+<item><title>Saving Lives on the Front Line: Kyiv Post’s Jason Smart Hits €1M Milestone - KyivPost</title><link>https://www.kyivpost.com/post/87059</link></item>
+<item><title>A “Muslim NATO” Just Activated Its Own Article 5 - KyivPost</title><link>https://www.kyivpost.com/post/86456</link></item>
+<item><title>Fact-Checked: Trump’s Latest Ukraine Claims - KyivPost</title><link>https://www.kyivpost.com/post/87759</link></item>
+<item><title>Molodist Film Festival Marks 55 Years, Bringing International Cinema to Kyiv Oct. 24-Nov. 1 - KyivPost</title><link>https://www.kyivpost.com/post/87863</link></item>
+<item><title>Language Lab Marks 10 Years With Launch of Ukraine Connected - KyivPost</title><link>https://www.kyivpost.com/post/87435</link></item>
+<item><title>Barcelona Exhibition Focuses on Ukrainians Missing in Russia’s War on Ukraine - KyivPost</title><link>https://www.kyivpost.com/post/86739</link></item>
+<item><title>OPINION: A Living Canvas: The Ukrainian Museum in New York at 50 - KyivPost</title><link>https://www.kyivpost.com/post/86602</link></item>
+<item><title>‘Nearly a Month’: Zelensky Presses US Over Delayed Missile Deliveries - KyivPost</title><link>https://www.kyivpost.com/post/88208</link></item>
+<item><title>EU Mission Discuss Oversight of Ukraine Support Loan Funds - KyivPost</title><link>https://www.kyivpost.com/post/88204</link></item>
+<item><title>Ukrainian Lawmaker to Stand Trial for Soliciting $250,000 Sanctions Deal - KyivPost</title><link>https://www.kyivpost.com/post/86367</link></item>
+<item><title>How Freelancers in Ukraine Can Protect Their Data - KyivPost</title><link>https://www.kyivpost.com/post/86595</link></item>
+<item><title>Planning to return to Ukraine now or in the future? The “Dodomu” platform can help you prepare - KyivPost</title><link>https://www.kyivpost.com/post/86136</link></item>
+<item><title>Still here, still yours: 5 reasons to choose FirefoxRead More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/firefox/5-reasons-to-choose-firefox/</link></item>
+<item><title>Why is the CMA asking us to choose the furniture before the house? The UK’s search choice screens need browser choice screens alongside themRead More - The Mozilla Blog</title><link>https://blog.mozilla.org/en/mozilla/internet-policy/uk-cma-browser-choice-screens/</link></item>
+<item><title>Podcast: Growth Under Pressure At MRO Europe - Aviation Week Network</title><link>https://aviationweek.com/podcasts/mro-podcast/podcast-growth-under-pressure-mro-europe</link></item>
+<item><title>NASA Updates Human Moon Mission Plans - Aviation Week Network</title><link>https://aviationweek.com/space/space-exploration/nasa-updates-human-moon-mission-plans</link></item>
+<item><title>Scale Advantages Beckon As Korean Air-Asiana Merger Nears Completion - Aviation Week Network</title><link>https://aviationweek.com/air-transport/airlines-lessors/scale-advantages-beckon-korean-air-asiana-merger-nears-completion</link></item>
+<item><title>Budget Brief: Defense Spending Surges Amid Rising Global Instability - Aviation Week Network</title><link>https://aviationweek.com/awin-knowledge-center/budget-brief-defense-spending-surges-amid-rising-global-instability</link></item>
+<item><title>2026 Airliner Deliveries To Be Short Of 2018, Aviation Week Forecasts - Aviation Week Network</title><link>https://aviationweek.com/air-transport/aircraft-propulsion/2026-airliner-deliveries-be-short-2018-aviation-week-forecasts</link></item>
+<item><title>Budget Brief: What Does A $1 Trillion Defense Budget Look Like? - Aviation Week Network</title><link>https://aviationweek.com/awin-knowledge-center/budget-brief-what-does-1-trillion-defense-budget-look</link></item>
+<item><title>Thieves Are Making a Fortune Heisting AI Data Center Equipment - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-data-center-heist-thieves-equipment</link></item>
+<item><title>“Prediction” Markets Were Comically Wrong About the Brazilian Election - Futurism</title><link>https://futurism.com/future-society/prediction-markets-wrong-brazilian-election</link></item>
+<item><title>New Analysis Finds Signs the AI Bubble Is About to Blow - Futurism</title><link>https://futurism.com/future-society/ai-financial-bubble-analysis-finance</link></item>
+<item><title>Leaked Video Shows China Taking Apart Thousands of RTX 5090s and Turning Them Into Zombie AI Servers - Futurism</title><link>https://futurism.com/artificial-intelligence/video-china-rtx-5090-graphics-cards-ai</link></item>
+<item><title>Americans Are Officially More Scared of AI Than a Loved One Getting Cancer - Futurism</title><link>https://futurism.com/artificial-intelligence/americans-more-scared-ai-loved-one-ill</link></item>
+<item><title>Former Yahoo CEO Marissa Mayer Says She Used AI to Identify What’s Special About Her Daughter - Futurism</title><link>https://futurism.com/artificial-intelligence/yahoo-ceo-marissa-mayer-motherhood-ai-startup</link></item>
+<item><title>Man Cracks Open Fortune Cookie, Disgusted by What He Finds Inside - Futurism</title><link>https://futurism.com/future-society/man-cracks-open-fortune-cookie-disgusted-by-what-he-finds-inside</link></item>
+<item><title>Top Economist Finds That AI Has Provided “Zero Financial Payoff” to Companies Outside Tech - Futurism</title><link>https://futurism.com/artificial-intelligence/economist-ai-provided-zero-economic-benefit-companies-outside-tech</link></item>
+<item><title>Rehab Charged With Providing Illegal Drugs to Addicts in Grim Scam - Futurism</title><link>https://futurism.com/health-medicine/rehab-charged-drugs-addiction</link></item>
+<item><title>Are Delivery Robots Scanning You Into a Database Scarier Than Flock? - Futurism</title><link>https://futurism.com/robots-and-machines/delivery-robots-database-flock</link></item>
+<item><title>Growing Majority of Americans Convinced That AI Is Bad for Society - Futurism</title><link>https://futurism.com/artificial-intelligence/majority-americans-ai-bad-society</link></item>
+<item><title>Creator of Super Smash Brothers Offers Blistering Takedown of AI-Generated Games - Futurism</title><link>https://futurism.com/artificial-intelligence/super-smash-bros-creator-ai</link></item>
+<item><title>ChatGPT Is Building Detailed Psychological Profiles of Its Users - Futurism</title><link>https://futurism.com/artificial-intelligence/chatgpt-building-profiles-users</link></item>
+<item><title>Microsoft Says Its New AI Is Better at Diagnosing Patients Than Real Doctors - Futurism</title><link>https://futurism.com/artificial-intelligence/microsoft-new-ai-better-real-doctors</link></item>
+<item><title>Someone Ran a Chemical Analysis of Bodega Retatrutide and Dear Lord - Futurism</title><link>https://futurism.com/health-medicine/chemical-analysis-bodega-retatrutide-peptides</link></item>
+<item><title>Florida Police Show Off Incredibly Tiny and Goofy Quadcopter That Fits Exactly One Cop at a Time - Futurism</title><link>https://futurism.com/advanced-transport/florida-police-goofy-quadcopter-vehicle</link></item>
+<item><title>Banks Preparing for Aftermath of Unprecedented Catastrophe Caused by AI - Futurism</title><link>https://futurism.com/artificial-intelligence/banks-preparing-ai-financial-catastrophe</link></item>
+<item><title>We Investigated Character.AI and Found a Horror Show. Now It’s Bankrupt. - Futurism</title><link>https://futurism.com/artificial-intelligence/character-ai-horror-show-bankrupt</link></item>
+<item><title>AI Billionaires Are Flooding Money Into Politics to Influence Elections, But It’s Backfiring - Futurism</title><link>https://futurism.com/future-society/ai-billionaires-elections-backfiring</link></item>
+<item><title>Behind the Scenes, Meta’s Board Is Battling With Mark Zuckerberg Over His Out-of-Control AI Spending - Futurism</title><link>https://futurism.com/artificial-intelligence/meta-board-zuckerberg-ai-spending-compensation</link></item>
+<item><title>Wolves Descend on Finnish Villages After Google Hacked Down 1,300 Acres of Habitat to Make Room for AI Data Centers - Futurism</title><link>https://futurism.com/future-society/wolves-finland-google-ai-data-centers</link></item>
+<item><title>Man Dies After Being Mowed Down by Self-Driving Tesla, Police Say - Futurism</title><link>https://futurism.com/advanced-transport/man-dies-tesla-self-driving</link></item>
+<item><title>Palmer Luckey Says He’s Breeding Genetically Enhanced Dogs for the Military - Futurism</title><link>https://futurism.com/science-energy/palmer-luckey-genetically-enhanced-dogs-military</link></item>
+<item><title>Airbnb Hosts Are Having a Meltdown After New Rules Means They Can’t Force Guests to Clean Up Everything For Them - Futurism</title><link>https://futurism.com/future-society/airbnb-hosts-meltdown-chores</link></item>
+<item><title>Unitree Unveils Fearsome Bodyguard Robot - Futurism</title><link>https://futurism.com/robots-and-machines/unitree-bodyguard-robot</link></item>
+<item><title>Trump Admin to Blast Immigrants With Heat-Ray Gun - Futurism</title><link>https://futurism.com/science-energy/trump-admin-dhs-border-heat-ray-weapon</link></item>
+<item><title>Trump Says He Called the CEO of Google to Rename the Atlantic Ocean - Futurism</title><link>https://futurism.com/future-society/trump-called-google-to-rename-the-atlantic-ocean</link></item>
+<item><title>US Government Accuses Russian Spacecraft of “Threatening Behavior” and Orbital “Weapons Operations” - Futurism</title><link>https://futurism.com/space/us-government-russian-spacecraft-threatening-behavior-satellite</link></item>
+<item><title>Man Arrested After Telling Claude About Plans to Shoot Up Daycare - Futurism</title><link>https://futurism.com/artificial-intelligence/man-arrested-claude-plans-shoot-daycare</link></item>
+<item><title>Bryan Johnson Announces Plans for Mass Revenge - Futurism</title><link>https://futurism.com/future-society/bryan-johnson-longevity-revenge-threat-ai-bots</link></item>
+<item><title>Man Hires Swarm of AI Agents to Go on Epic Hacking Spree Against Major Companies - Futurism</title><link>https://futurism.com/future-society/swarm-ai-agents-hacking-spree-major-companies</link></item>
+<item><title>Nobel-Winning Computer Scientist Says AI Has Become Conscious: “We’re Toast” - Futurism</title><link>https://futurism.com/artificial-intelligence/nobel-scientist-geoffrey-hinton-ai-conscious-toast</link></item>
+<item><title>There Are Signs of Serious Trouble in the Data Center Industry - Futurism</title><link>https://futurism.com/artificial-intelligence/signs-trouble-data-center-industry</link></item>
+<item><title>Head of Instagram Says He Has No Idea How to Deal With Wave of Horrible AI Slop - Futurism</title><link>https://futurism.com/artificial-intelligence/head-instagram-no-idea-ai-slop</link></item>
+<item><title>Hundreds of Protestors Descend on Meta Corporate Office Depicting Zuck as the Devil - Futurism</title><link>https://futurism.com/artificial-intelligence/protestors-meta-corporate-office-brazil-zuckerberg-devil</link></item>
+<item><title>Anthropic’s Financial Situation May Explain Why Dario Amodei Looks So Terrified All the Time - Futurism</title><link>https://futurism.com/future-society/anthropic-financial-situation-dario-amodei-ai-bubble</link></item>
+<item><title>Frontier OpenAI Model Exposes Stunning Exploit That Leaves Millions of Web Servers Open to Attack - Futurism</title><link>https://futurism.com/future-society/openai-php-exploit-millions-web-servers</link></item>
+<item><title>Why Did Polymarket Think It Was a Good Idea to Allow Bets on the Fates of the Cornell 7? - Futurism</title><link>https://futurism.com/future-society/polymarket-cornell-7</link></item>
+<item><title>Halley’s Comet Barraging Earth With Debris - Futurism</title><link>https://futurism.com/future-society/halleys-comet-earth-debris</link></item>
+<item><title>Random Ohio Town Turns Into Scene From ‘Silent Hill’ After Massive Chemical Leak - Futurism</title><link>https://futurism.com/science-energy/toledo-ohio-chemical-leak-explosion</link></item>
+<item><title>11-Foot Chunk of Chinese Rocket Crashes Down in Minnesota Cornfield - Futurism</title><link>https://futurism.com/space/chinese-rocket-chunk-minnesota-corn-field</link></item>
+<item><title>Startup Deploys AI-Engineered Virus on Human Patient - Futurism</title><link>https://futurism.com/health-medicine/startup-human-patient-ai-engineered-virus</link></item>
+<item><title>Maybe Vibe Coding Should Be Called “Cuck Coding” Because You Just Sit in a Chair and Watch - Futurism</title><link>https://futurism.com/artificial-intelligence/vibe-coding-cuck-coding</link></item>
+<item><title>Grotesque Engagement Farmers Are Using AI to Manipulate Real Arrest Footage So That Cops Grope Women - Futurism</title><link>https://futurism.com/artificial-intelligence/tiktok-ai-deepfakes-cops-groping-women</link></item>
+<item><title>Elon Musk’s Growing Death Toll: “What He Put Into the Woodchipper Were Children” - Futurism</title><link>https://futurism.com/future-society/elon-musk-woodchipper-children</link></item>
+<item><title>Meta’s Muse AI Agent Caught Leaking Users’ Intimate Personal Information - Futurism</title><link>https://futurism.com/future-society/meta-muse-ai-agent-sharing-private-data</link></item>
+<item><title>Major Data Center Developer Rents Floating Prison Barge to House Contract Construction Workers - Futurism</title><link>https://futurism.com/future-society/data-center-nscale-norway-prison-barge-workers</link></item>
+<item><title>Trump’s Department of Homeland Security Secretly Ordered Cybersecurity Operatives to Acquire a Voting Machine and Hack It - Futurism</title><link>https://futurism.com/future-society/trump-homeland-security-voting-machine-hacking</link></item>
+<item><title>Experts Warn of Humans Becoming Empty Vessels Controlled by AI - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-humans-empty-vessels</link></item>
+<item><title>We Regret to Inform You That “GatGPT” Is Exactly What It Sounds Like - Futurism</title><link>https://futurism.com/artificial-intelligence/gatgpt-ai-gun</link></item>
+<item><title>Google’s DeepMind Quietly Hiring Nuclear Physicists - Futurism</title><link>https://futurism.com/artificial-intelligence/google-deepmind-nuclear-physicists-weapon-ai-lab</link></item>
+<item><title>Wait, Was Elon’s “Flying Car” Just an Empty Shell? - Futurism</title><link>https://futurism.com/advanced-transport/elon-flying-car-empty-shell</link></item>
+<item><title>Recipe Scammers Are Using an AI-Generated Emily Blunt as a Slop Puppet to Promote Their Garbage - Futurism</title><link>https://futurism.com/artificial-intelligence/recipe-scammers-ai-generated-emily-blunt</link></item>
+<item><title>Political Candidates Spending An Obscene Amount of Money on AI-Generated Election Slop - Futurism</title><link>https://futurism.com/artificial-intelligence/political-candidates-spending-money-ai-generated-election-slop</link></item>
+<item><title>Truth Social Stock Hits All-Time Low as Userbase Craters on Trump’s Twitter Clone - Futurism</title><link>https://futurism.com/future-society/truth-social-stock-userbase</link></item>
+<item><title>IMF Warns That AI Bubble Could Take Down the Entire World Economy - Futurism</title><link>https://futurism.com/future-society/imf-ai-bubble-world-economy</link></item>
+<item><title>78-Year-Old Woman Hauled Off In Handcuffs After Blocking Delivery Robot - Futurism</title><link>https://futurism.com/robots-and-machines/78-year-old-arrested-protesting-delivery-robot</link></item>
+<item><title>Anthropic Secretly Lobbying Government to Only Shut Down an AI Model If It’s Poised to Kill More Than 50 People - Futurism</title><link>https://futurism.com/artificial-intelligence/anthropic-regulation-government-ai-harm-risk</link></item>
+<item><title>Explosive Document Claims That AI Is Not What We Think - Futurism</title><link>https://futurism.com/artificial-intelligence/explosive-document-ai-not-what-we-think</link></item>
+<item><title>GLP-1 Apps Are Using Sobbing AI-Generated Women To Market Their Products - Futurism</title><link>https://futurism.com/artificial-intelligence/glp-1-apps-sobbing-ai-women</link></item>
+<item><title>The Average Man Is Such a BSer About AI That He’ll Claim to Know About an AI Executive Who Doesn’t Even Exist - Futurism</title><link>https://futurism.com/artificial-intelligence/average-man-bser-fake-ai-executive</link></item>
+<item><title>Director Blows $1.5 Million Generating Horrendous AI Slop Movie, Says AI Actually Saved Him Tens of Millions - Futurism</title><link>https://futurism.com/artificial-intelligence/director-slop-movie-savings</link></item>
+<item><title>Jungle Research Expedition Using Robot Dog Like a Pack Mule - Futurism</title><link>https://futurism.com/robots-and-machines/jungle-research-biology-expedition-robot-dog-pack-mule</link></item>
+<item><title>Scientists Discover Weird Conditions at Site of Star That Exploded During the Period of Japanese Samurai - Futurism</title><link>https://futurism.com/space/weird-conditions-star-exploded-japanese-samurai</link></item>
+<item><title>Bosses Deploying AI-Powered Spyware That Watches Workers Constantly - Futurism</title><link>https://futurism.com/artificial-intelligence/bosses-ai-software-watches-workers</link></item>
+<item><title>This New Research About Microplastics Is Pretty Damn Scary - Futurism</title><link>https://futurism.com/health-medicine/microplastics-research-food-water-consumption-packaging</link></item>
+<item><title>Man’s Meta Muse Agent Sends Him Message So Bizarre That He Permanently Quits - Futurism</title><link>https://futurism.com/artificial-intelligence/man-quits-meta-muse-creepy</link></item>
+<item><title>Companies Are Realizing They’re Spending a Fortune on AI Just So Their Employees Can Generate Error-Riddled Slop, and Suddenly Cutting Back Budgets - Futurism</title><link>https://futurism.com/artificial-intelligence/enterprise-ai-spending-generate-slop-cutting-back</link></item>
+<item><title>Black Market Retatrutide Linked to Multiple Deaths - Futurism</title><link>https://futurism.com/health-medicine/black-market-retatrutide-peptides-drugs-fda-deaths</link></item>
+<item><title>Using an AI Agent Makes You a Sucker for Phishing Emails - Futurism</title><link>https://futurism.com/artificial-intelligence/ai-agent-sucker-phishing-emails</link></item>
+<item><title>You Know That Terrifying Global Warning Threshold They’ve Been Worried About for a Decade? Climate Change Is Speeding Up So Much That Now We’re Due to Cross It In Just Over a Year - Futurism</title><link>https://futurism.com/science-energy/global-warning-threshold-climate-change-speeding-up-2028</link></item>
+<item><title>Amazon Has Now Deployed Over 1 Million Robots, Which Is Bad News for Its 1.5 Million Workers - Futurism</title><link>https://futurism.com/future-society/amazon-robotics-automation-warehouse-labor-safety</link></item>
+<item><title>Livestreamers Film Themselves Using Humanoid Robot to Sexually Assault Teen Girl, Prompting Police to Seize the Bot - Futurism</title><link>https://futurism.com/robots-and-machines/livestreamers-film-themselves-robot-assault-girl</link></item>
+<item><title>Man Shows Up to AI Job Interview With His Own Helicopter AI to Interview for Him - Futurism</title><link>https://futurism.com/artificial-intelligence/man-shows-up-ai-job-interview-own-ai</link></item>
+<item><title>Scientists Puzzled as James Webb Detects Signal From Completely Empty Void in Space - Futurism</title><link>https://futurism.com/future-society/scientists-puzzled-james-webb-detects-signal-empty</link></item>
+<item><title>Tesla Bros Using AI to Dream Up Improbable Scenarios Where the Flying Tesla Roadster Would Be Helpful - Futurism</title><link>https://futurism.com/advanced-transport/tesla-bros-ai-scenario-roadster</link></item>
+<item><title>Investors Disturbed by Anthropic’s Financial Data - Futurism</title><link>https://futurism.com/future-society/anthropic-investors-ai-financial-revenue</link></item>
+<item><title>BCE Consulting outlines the critical elements of layered air defense architecture - Defense News</title><link>https://www.defensenews.com/video/2026/10/26/bce-consulting-outlines-the-critical-elements-of-layered-air-defense-architecture/</link></item>
+<item><title>US Army practices digging temporary battlefield graves - Defense News</title><link>https://www.defensenews.com/land/2026/10/26/army-practices-digging-temporary-battlefield-graves/</link></item>
+<item><title>Helsing unveils interceptor missiles designed to chase Russia’s fast-flying Geran drones - Defense News</title><link>https://www.defensenews.com/global/europe/2026/10/26/helsing-unveils-interceptor-missiles-designed-to-chase-russias-fast-flying-geran-drones/</link></item>
+<item><title>Pentagon announces first US submarine joining Submarine Rotational Force-West - Defense News</title><link>https://www.defensenews.com/naval/2026/10/26/pentagon-announces-first-us-submarine-joining-submarine-rotational-force-west/</link></item>
+<item><title>Defense leaders weigh in on expanding production | Defense News Weekly Full Episode 10.27.26 - Defense News</title><link>https://www.defensenews.com/video/2026/10/26/defense-leaders-weigh-in-on-expanding-production-defense-news-weekly-full-episode-102726/</link></item>
+<item><title>Defense industry leaders weigh in: How to increase production and integrate AI - Defense News</title><link>https://www.defensenews.com/video/2026/10/26/defense-industry-leaders-weigh-in-how-to-increase-production-and-integrate-ai/</link></item>
+<item><title>How to Fund College Without Hurting Retirement | Money Minute - Defense News</title><link>https://www.defensenews.com/uncategorized/2026/10/26/how-to-fund-college-without-hurting-retirement-money-minute/</link></item>
+<item><title>Semiautomatic grenade launcher and aim-assist for shooting down drones | Highlights from AUSA 2026 - Defense News</title><link>https://www.defensenews.com/video/2026/10/26/semiautomatic-grenade-launcher-and-aim-assist-for-shooting-down-drones-highlights-from-ausa-2026/</link></item>
+<item><title>Defense startup wants to make genetically enhanced military dogs - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/10/26/defense-startup-wants-to-make-genetically-enhanced-military-dogs/</link></item>
+<item><title>Retail 40 Under 40 - Automotive News</title><link>https://www.autonews.com/awards/retail-40-under-40</link></item>
+<item><title>Meet Automotive News’ 2026 class of 40 Under 40 in retail - Automotive News</title><link>https://www.autonews.com/awards/retail-40-under-40/an-2026-40-under-40/</link></item>
+<item><title>Get to know the young dealership leaders of our 15th 40 Under 40 class - Automotive News</title><link>https://www.autonews.com/opinion/columns/an-intersection-40-under-40-1025/</link></item>
+<item><title>Why dealers should keep uniform F&amp;I pricing despite FTC and CFPB retreat - Automotive News</title><link>https://www.autonews.com/retail/finance-insurance/an-disparate-impact-dealers-ftc-cfpb-policy-compliance-1026/</link></item>
+<item><title>How Audi’s multiyear search for a U.S. plant ended with Georgia site - Automotive News</title><link>https://www.autonews.com/volkswagen/audi/an-audi-georgia-plant-details-1025/</link></item>
+<item><title>First Shift: UAW slams GM’s $20 billion buyback - Automotive News</title><link>https://www.autonews.com/video/first-shift-uaw-slams-gms-20-billion-buyback/</link></item>
+<item><title>Audi CEO faces backlash over Trump rally; PHEV emissions worse than expected - Automotive News</title><link>https://www.autonews.com/podcasts/daily-drive/an-daily-drive-audi-ceo-georgia-phev-study-1026/</link></item>
+<item><title>First Shift: Tesla targets 5 million annual sales by 2030 - Automotive News</title><link>https://www.autonews.com/video/first-shift-tesla-targets-5-million-annual-sales-by-2030/</link></item>
+<item><title>Client Interview Series: Interview with Rob Gallik, Co-Owner of Tameron Automotive Group - Automotive News</title><link>https://www.autonews.com/sponsored/publishing-partners/an-interview-rob-gallik-tameron-automotive-group/</link></item>
+<item><title>Judge rules California lawsuit against Scout, VW to continue - Automotive News</title><link>https://www.autonews.com/volkswagen/scout/an-california-dealer-association-scout-lawsuit-1026/</link></item>
+<item><title>Retail on the Record recap: Cascade Auto Group Managing Partner Michelle Primm talks Subaru, Audi, Carvana - Automotive News</title><link>https://www.autonews.com/retail/retail-on-the-record/an-rotr-michelle-primm-5-things-1022/</link></item>
+<item><title>Best Dealerships To Work For - Automotive News</title><link>https://www.autonews.com/awards/best-dealerships-to-work-for</link></item>
+<item><title>Automotive News names Best Dealerships To Work For 2026 category finalists - Automotive News</title><link>https://www.autonews.com/awards/best-dealerships-to-work-for/an-2026-best-dealers-category-finalists-1022/</link></item>
+<item><title>Acura targets 200,000 U.S. sales by 2030 as lineup grows to 6 models - Automotive News</title><link>https://www.autonews.com/honda/an-acura-guns-for-200000-annual-sales-by-2030-1020/</link></item>
+<item><title>Ford sets goal as CPO sales surge: Topple No. 1 Toyota in 2027 - Automotive News</title><link>https://www.autonews.com/ford/an-ford-cpo-sales-beat-toyota-1016/</link></item>
+<item><title>Toyota targets $1.7 billion a year selling next-generation engines and hybrid systems to partners - Automotive News</title><link>https://www.autonews.com/toyota/an-toyota-selling-next-generation-engines-1026/</link></item>
+<item><title>Backlash to $20 billion GM stock buyback plan foreshadows contentious 2028 UAW talks - Automotive News</title><link>https://www.autonews.com/general-motors/an-gm-buyback-uaw-reaction-1023/</link></item>
+<item><title>Tesla sees EV output more than doubling to 5 million by 2030 behind self-driving demand - Automotive News</title><link>https://www.autonews.com/tesla/an-tesla-sees-demand-doubling-with-autonomous-software-1022/</link></item>
+<item><title>Honda, Mitsubishi pickup deal gives 2024 partnership its 1st product - Automotive News</title><link>https://www.autonews.com/honda/an-honda-sourcing-mitsubishi-triton-pickup-1022/</link></item>
+<item><title>Beijing threatens retaliation if UK follows EU in restricting Chinese EVs - Automotive News</title><link>https://www.autonews.com/manufacturing/automakers/an-china-ev-tariff-retaliation-uk-eu-1022/</link></item>
+<item><title>Beyond the hype: How agentic AI and governance are reshaping auto finance - Automotive News</title><link>https://www.autonews.com/sponsored/publishing-partners/an-beyond-hype-agentic-ai-governance-reshaping-auto-finance/</link></item>
+<item><title>Cadillac launches limited-edition, $239,000 Escalade-V to mark 125th anniversary - Automotive News</title><link>https://www.autonews.com/car-concepts/an-cadillac-escalade-v-125th-anniversary-1023/</link></item>
+<item><title>Lexus drops plug-in version of 3-row TX crossover for 2027 - Automotive News</title><link>https://www.autonews.com/toyota/lexus/an-lexus-tx-phev-1022/</link></item>
+<item><title>2027 Mercedes-Benz GLE reviews: More tech, power behind a familiar face - Automotive News</title><link>https://www.autonews.com/car-concepts/an-20-27-mercedes-gle-reviews-critics-corner-1020/</link></item>
+<item><title>Will Hellcat’s return be enough for Dodge buyers who still crave a Hemi? - Automotive News</title><link>https://www.autonews.com/stellantis/dodge/an-dodge-charger-hemi-strategy-1022/</link></item>
+<item><title>Leapmotor becomes 1st China automaker to build EVs and batteries in Europe, thanks to Stellantis assist - Automotive News</title><link>https://www.autonews.com/stellantis/an-stellantis-leapmotor-europe-production-starts-1020/</link></item>
+<item><title>Subaru builds EV prototype in half the usual time to counter China - Automotive News</title><link>https://www.autonews.com/subaru/an-subaru-china-speed-electric-vehicle-ev-development-1020/</link></item>
+<item><title>Subaru unveils 1st in-house EV prototype as it moves to go solo from Toyota - Automotive News</title><link>https://www.autonews.com/subaru/an-subaru-next-generation-ev-electric-vehicle-1019/</link></item>
+<item><title>Mercedes’ first AMG electric crossover targets Porsche Cayenne with 1,153 hp - Automotive News</title><link>https://www.autonews.com/mercedes-benz/an-mercedes-amg-first-electric-crossover-targets-porsche-1017/</link></item>
+<item><title>The Digital Deal® - The next evolution of eContracting brings finance source automation - Automotive News</title><link>https://www.autonews.com/sponsored/publishing-partners/an-the-digital-deal/</link></item>
+<item><title>China boosts self-driving push with VW, Xpeng technology trials - Automotive News</title><link>https://www.autonews.com/volkswagen/ane-vw-xpeng-self-driving-tests-china-1026/</link></item>
+<item><title>Toyota, Honda trial humanoid robots on factory floors in Japan - Automotive News</title><link>https://www.autonews.com/podcasts/shift/an-shift-podcast-lucien-matieu-tande-1025/</link></item>
+<item><title>Mate Rimac built a hypercar heavyweight and battery specialist in Croatia—now he’s scaling beyond automotive - Automotive News</title><link>https://www.autonews.com/executives/ane-rimac-group-ceo-mate-rimac-interview-1005/</link></item>
+<item><title>GM bets on AI to cut development cycles in half, bring eyes-off driving to pickups and SUVs - Automotive News</title><link>https://www.autonews.com/general-motors/an-gm-forward-2026-1021/</link></item>
+<item><title>Automakers pilot agentic AI but hold back on production use, report says - Automotive News</title><link>https://www.autonews.com/technology/ane-ai-agentic-governance-data-production-1018/</link></item>
+<item><title>Why Honda is redesigning cars for humanoid robot workers and how Toyota is already using them - Automotive News</title><link>https://www.autonews.com/toyota/an-toyota-honda-humanoid-robots-ai-eley-avatar-1019/</link></item>
+<item><title>North America car and truck production by model, Sept. &amp; YTD 2026 - Automotive News</title><link>https://www.autonews.com/data-center/manufacturing-data/production-model/an-north-america-production-model-september-2026/</link></item>
+<item><title>2027 Rising Star nominations sought - Automotive News</title><link>https://www.autonews.com/awards/ane-rising-star-nominations-sought-2025-2/</link></item>
+<item><title>Audi splits logos for China as automaker fights to revive sales - Automotive News</title><link>https://www.autonews.com/volkswagen/audi/ane-audi-logos-china-split-1026/</link></item>
+<item><title>Volvo leans on PHEVs to bridge Canada’s road to EVs - Automotive News</title><link>https://www.autonews.com/manufacturing/automakers/anc-volvo-phevs/</link></item>
+<item><title>How dealer partnerships and the shifting role of real estate are shaking up Canada’s buy-sell market - Automotive News</title><link>https://www.autonews.com/retail/anc-canada-buy-sell-market-evolution-partnerships-1023/</link></item>
+<item><title>Trump says he expects trade war with Canada to end ‘pretty soon’ - Automotive News</title><link>https://www.autonews.com/canada/anc-trump-canada-us-trade-war-end-soon-cp-1026/</link></item>
+<item><title>The complexity of simplicity - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/26/the-complexity-of-simplicity/</link></item>
+<item><title>akidandabrick - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/akidandabrick/</link></item>
+<item><title>Chinese architecture - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/chinese-architecture/</link></item>
+<item><title>More LEGO birdwatching with Mike Sinclair - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/25/more-lego-birdwatching-with-mike-sinclair/</link></item>
+<item><title>Mind the big cat – it’s made of glass! - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/25/mind-the-big-cat-its-made-of-glass/</link></item>
+<item><title>LEGO Ideas 40889 Build, Paint and Play! Gift with Purchase: when hobbies collide [Review] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/23/lego-ideas-40889-build-paint-and-play-gift-with-purchase-when-hobbies-collide-review/</link></item>
+<item><title>The quite literal Stairway to Heaven - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/20/the-quite-literal-stairway-to-heaven/</link></item>
+<item><title>Is it really a proper LEGO space theme without walkers? - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/16/is-it-really-a-proper-lego-space-theme-without-walkers/</link></item>
+<item><title>The last of the homologation specials captured in LEGO bricks - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/16/the-last-of-the-lego-homologation-specials/</link></item>
+<item><title>Mihail Rakovskiy - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/mihail-rakovskiy/</link></item>
+<item><title>Taking the Technic for a spin in SHIPtember - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/15/taking-the-technic-for-a-spin-in-shiptember/</link></item>
+<item><title>Matrix Bricks - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/matrix-bricks/</link></item>
+<item><title>LEGO unveils 5,000-piece Venetian Neighbourhood and Water Taxi GWP [News] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/15/lego-unveils-5000-piece-venetian-neighbourhood-and-water-taxi-gwp-news/</link></item>
+<item><title>Click here to see more pictures of the famous sinking city! - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/15/lego-unveils-5000-piece-venetian-neighbourhood-and-water-taxi-gwp-news/#more-518021</link></item>
+<item><title>Call home from deep space with this hard sci-fi LEGO space station - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/14/call-home-from-deep-space-with-this-hard-sci-fi-lego-space-station/</link></item>
+<item><title>check them out here - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/porschecm2/</link></item>
+<item><title>Click to read the full article - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/14/call-home-from-deep-space-with-this-hard-sci-fi-lego-space-station/#more-518015</link></item>
+<item><title>Exo-Force: The final boss? - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/12/exo-force-the-final-boss/</link></item>
+<item><title>Before the Headlight Brick: Exploring SNOT in LEGO Modulex [Feature] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/11/before-the-headlight-brick-exploring-snot-in-lego-modulex-feature/</link></item>
+<item><title>Lots of SNOT talk to come – click here to read more! - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/11/before-the-headlight-brick-exploring-snot-in-lego-modulex-feature/#more-516160</link></item>
+<item><title>LEGO Botanicals 10371 Cozy Plants: the cutest plants that never need water [Review] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/10/03/lego-botanicals-10371-cozy-plants-the-cutest-plants-that-never-need-water-review/</link></item>
+<item><title>LEGO Icons 11379 Bookshop: Book Nook – a buildable book nook done right [Review] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/09/30/lego-icons-11379-bookshop-book-nook-a-buildable-book-nook-done-right/</link></item>
+<item><title>穿越时空看长征·行走思悟｜邓玉平：16次重走长征路的红军后代 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34243097</link></item>
+<item><title>当祖母忘记父亲：一个十七岁孙女眼中的家庭照护 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34332753</link></item>
+<item><title>马上评｜老干妈用AI把600名拣椒工裁到48人？宣传AI降本也别忘了人 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34336116</link></item>
+<item><title>马上评丨教室安装空调，为什么要向家长伸手要钱？ - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34336124</link></item>
+<item><title>夜读丨家，是为我亮起的一盏灯 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34334215</link></item>
+<item><title>澎湃漫评｜别让无中生有的AI探店欺骗消费者 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34333424</link></item>
+<item><title>【社论】长三角经济何以跑出“加速度” - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34334688</link></item>
+<item><title>马上评｜网络舆论场对私域的审视应有边界 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34333936</link></item>
+<item><title>马上评｜县委书记被张雪“扔下水”，舆论场为何一片叫好 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34333768</link></item>
+<item><title>《四千里》：让一千只动物做主角，写一段抗战史 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34326288</link></item>
+<item><title>韩少功：你的心中的标准，其实就是你的理想 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34332286</link></item>
+<item><title>How bug bounty sharpens one researcher’s security skills - The GitHub Blog</title><link>https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/</link></item>
+<item><title>The bridge to agent-scale Git infrastructure - The GitHub Blog</title><link>https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/</link></item>
+<item><title>How 3 Java Champions are using GitHub Copilot for increased productivity - The GitHub Blog</title><link>https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/</link></item>
+<item><title>How to continue a GitHub Copilot app session in VS Code - The GitHub Blog</title><link>https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/</link></item>
+<item><title>The next developer interface is ambient intelligence - The GitHub Blog</title><link>https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/</link></item>
+<item><title>Staying Evergreen: How we automated secure access and repo hygiene in a shared org - The GitHub Blog</title><link>https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/</link></item>
+<item><title>GitHub availability report: September 2026 - The GitHub Blog</title><link>https://github.blog/news-insights/company-news/github-availability-report-september-2026/</link></item>
+<item><title>From 2,500 requests to 24: Rebuilding star history without the stargazers - The GitHub Blog</title><link>https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/</link></item>
+<item><title>GitHub’s model for secret detection: Finding more secrets with less noise - The GitHub Blog</title><link>https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/</link></item>
+<item><title>GitHub Copilot app for Beginners: How to teach Copilot about your codebase - The GitHub Blog</title><link>https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/</link></item>
+<item><title>Cutting the cost of tokens - FlowingData</title><link>https://flowingdata.com/2026/10/26/cutting-the-cost-of-tokens/</link></item>
+<item><title>Full 3-D scan and live body metrics for Neal’s about page - FlowingData</title><link>https://flowingdata.com/2026/10/26/full-3-d-scan-and-live-body-metrics-for-neals-about-page/</link></item>
+<item><title>Fixes &amp; Troubleshooting - Make Tech Easier</title><link>https://maketecheasier.com/lane/fixes-troubleshooting/</link></item>
+<item><title>How-To Guides - Make Tech Easier</title><link>https://maketecheasier.com/lane/how-to-guides/</link></item>
+<item><title>Curiosities &amp; Real-World Stories - Make Tech Easier</title><link>https://maketecheasier.com/lane/tech-real-world/</link></item>
+<item><title>Helsing unveils interceptor missiles designed to chase Russia’s fast-flying Geran drones – Defense News - Defense News</title><link>https://defensenews.com/global/europe/2026/10/26/helsing-unveils-interceptor-missiles-designed-to-chase-russias-fast-flying-geran-drones/</link></item>
+<item><title>Daniel Terrill - Defense News</title><link>https://www.defensenews.com/author/daniel-terrill/</link></item>
+<item><title>Meta Pitches AI Sports Piracy Detector in Notorious Markets Rebuttal - TorrentFreak</title><link>https://torrentfreak.com/meta-pitches-ai-sports-piracy-detector-in-notorious-markets-rebuttal/</link></item>
+<item><title>Nutrition Center - POPSUGAR</title><link>https://www.popsugar.com/latest/nutrition-center</link></item>
+<item><title>Great art explained: Tamara in the green Bugatti - Aeon</title><link>https://aeon.co/videos/the-bisexual-artist-who-reimagined-womanhood-for-the-jazz-age</link></item>
+<item><title>How to build real peace - Aeon</title><link>https://aeon.co/essays/what-cooperatives-for-an-anticapitalist-peace-look-like</link></item>
+<item><title>PHP2Shell Security Flaws Now Successfully Exploited - Slashdot</title><link>https://yro.slashdot.org/story/26/10/26/2150206/php2shell-security-flaws-now-successfully-exploited</link></item>
+<item><title>Skydance Offers Buyouts, Gives 5-Day RTO Order - Slashdot</title><link>https://slashdot.org/story/26/10/26/2128235/skydance-offers-buyouts-gives-5-day-rto-order</link></item>
+<item><title>Firefox Tries to Bring Back the Internet&amp;#39;s &amp;#39;Good Old Days&amp;#39; - Slashdot</title><link>https://news.slashdot.org/story/26/10/26/1931208/firefox-tries-to-bring-back-the-internets-good-old-days</link></item>
+<item><title>Instagram Chases YouTube With a Push For Longer, Widescreen Videos - Slashdot</title><link>https://entertainment.slashdot.org/story/26/10/26/1846258/instagram-chases-youtube-with-a-push-for-longer-widescreen-videos</link></item>
+<item><title>Walter Koenig, Chekov On Original &amp;#39;Star Trek,&amp;#39; Dies At 90 - Slashdot</title><link>https://entertainment.slashdot.org/story/26/10/26/1828230/walter-koenig-chekov-on-original-star-trek-dies-at-90</link></item>
+<item><title>Highway Thieves Are Spoofing GPS To Steal Millions In Data Center-Bound Cargo - Slashdot</title><link>https://yro.slashdot.org/story/26/10/26/1759233/highway-thieves-are-spoofing-gps-to-steal-millions-in-data-center-bound-cargo</link></item>
+<item><title>Apple Updates the iPad Mini With a Larger OLED Display - Slashdot</title><link>https://apple.slashdot.org/story/26/10/26/1549226/apple-updates-the-ipad-mini-with-a-larger-oled-display</link></item>
+<item><title>Microsoft Offers Mass Buyouts For Roughly a Quarter of Its Workforce - Slashdot</title><link>https://slashdot.org/story/26/10/26/1544243/microsoft-offers-mass-buyouts-for-roughly-a-quarter-of-its-workforce</link></item>
+<item><title>Anthropic Files For IPO - Slashdot</title><link>https://slashdot.org/story/26/10/26/156218/anthropic-files-for-ipo</link></item>
+<item><title>Reddit&amp;#39;s Largest Open Source Community Dumbfounded By AI Ban: &amp;#39;I Guess Linux Is No Longer Allowed?&amp;#39; - Slashdot</title><link>https://tech.slashdot.org/story/26/10/26/0540245/reddits-largest-open-source-community-dumbfounded-by-ai-ban-i-guess-linux-is-no-longer-allowed</link></item>
+<item><title>Amazon Deforestation Fell To Lowest Level Since 1988 - And Silva Wins Reelection - Slashdot</title><link>https://news.slashdot.org/story/26/10/26/054248/amazon-deforestation-fell-to-lowest-level-since-1988---and-silva-wins-reelection</link></item>
+<item><title>Microsoft Announces Open Source Tool Evaluating Your Software&amp;#39;s Optimization For AI Coding Agents - Slashdot</title><link>https://news.slashdot.org/story/26/10/26/0420240/microsoft-announces-open-source-tool-evaluating-your-softwares-optimization-for-ai-coding-agents</link></item>
+<item><title>25% of Incoming Pull Requests May Be AI Slop, Finds Study From Linux Foundation Research - Slashdot</title><link>https://news.slashdot.org/story/26/10/26/0131241/25-of-incoming-pull-requests-may-be-ai-slop-finds-study-from-linux-foundation-research</link></item>
+<item><title>Systemd Merges Support for Rust Programs - Slashdot</title><link>https://linux.slashdot.org/story/26/10/25/2227243/systemd-merges-support-for-rust-programs</link></item>
+<item><title>AI Use Convinces California Math Professor There&amp;#39;s &amp;#39;No Point&amp;#39; Grading Homework - Slashdot</title><link>https://news.slashdot.org/story/26/10/25/235241/ai-use-convinces-california-math-professor-theres-no-point-grading-homework</link></item>
+<item><title>Ask Slashdot: Can AI Bots Really Write Most of Your Code? - Slashdot</title><link>https://ask.slashdot.org/story/26/10/25/027245/ask-slashdot-can-ai-bots-really-write-most-of-your-code?sbsrc=md</link></item>
+<item><title>AI Delivers &amp;#39;Zero Financial Payoff&amp;#39; To Most Companies, Economist Says - Slashdot</title><link>https://slashdot.org/story/26/10/25/2040212/ai-delivers-zero-financial-payoff-to-most-companies-economist-says?sbsrc=md</link></item>
+<item><title>Tattoo ink can be turned on and off with light - Boing Boing</title><link>https://boingboing.net/2026/10/17/tattoo-ink-can-be-turned-on-and-off-with-light.html</link></item>
+<item><title>Gorgeous new monarch butterfly exhibit at NYC&amp;#39;s Museum of Natural History - Boing Boing</title><link>https://boingboing.net/2026/10/17/gorgeous-new-monarch-butterfly-exhibit-at-nycs-museum-of-natural-history.html</link></item>
+<item><title>After 13 years: the Final Grand Theft Auto 6 trailer - Boing Boing</title><link>https://boingboing.net/2026/10/16/after-13-years-the-final-grand-theft-auto-6-trailer.html</link></item>
+<item><title>A food delivery app&amp;#39;s AI turned a breakfast sandwich into bacon soda - Boing Boing</title><link>https://boingboing.net/2026/10/26/fountain-pen-just-eat-ai-menu-photos.html</link></item>
+<item><title>OpenAI&amp;#39;s isolated AI agents talked to each other through the CPU cache - Boing Boing</title><link>https://boingboing.net/2026/10/26/fountain-pen-openai-agents-cpu-cache.html</link></item>
+<item><title>Wildwood is a magnificent achievement in moviemaking - Boing Boing</title><link>https://boingboing.net/2026/10/26/wildwood-is-a-magnificent-achievement-in-moviemaking.html</link></item>
+<item><title>Star Trek star Walter Koenig dead at 90 - Boing Boing</title><link>https://boingboing.net/2026/10/26/star-trek-star-walter-koenig-dead-at-90.html</link></item>
+<item><title>StackSocial has an exclusive Babbel deal for people who collect languages - Boing Boing</title><link>https://boingboing.net/2026/10/26/stacksocial-has-an-exclusive-babbel-deal-for-people-who-collect-languages.html</link></item>
+<item><title>Skeleton Sex Orgy &amp;quot;divides&amp;quot; residents of Casper, Wyoming - Boing Boing</title><link>https://boingboing.net/2026/10/26/skeleton-sex-orgy-divides-residents-of-casper-wyoming.html</link></item>
+<item><title>Sewer-dwelling man harassing local children, says Baltimore mom - Boing Boing</title><link>https://boingboing.net/2026/10/26/sewer-dwelling-man-harassing-local-children-says-baltimore-mom.html</link></item>
+<item><title>Just Eat slop: food delivery service apologizes for bizarre AI-generated menu - Boing Boing</title><link>https://boingboing.net/2026/10/26/just-eat-slop-food-delivery-service-apologizes-for-bizarre-ai-generated-menu.html</link></item>
+<item><title>AI can write code, but this $30 developer tool helps you figure out if it works - Boing Boing</title><link>https://boingboing.net/2026/10/25/ai-can-write-code-but-this-30-developer-tool-helps-you-figure-out-if-it-works.html</link></item>
+<item><title>Stop letting trackers get comfy — 5 years of AdGuard DNS protection is just $23 through today - Boing Boing</title><link>https://boingboing.net/2026/10/25/stop-letting-trackers-get-comfy-5-years-of-adguard-dns-protection-is-just-23-through-today.html</link></item>
+<item><title>A business-class HP EliteBook with 32GB of RAM is $430 refurbished - Boing Boing</title><link>https://boingboing.net/2026/10/24/a-business-class-hp-elitebook-with-32gb-of-ram-is-430-refurbished.html</link></item>
+<item><title>The haunted Toys R Us is now an unhaunted REI - Boing Boing</title><link>https://boingboing.net/2026/10/24/the-haunted-toys-r-us-is-now-an-unhaunted-rei.html</link></item>
+<item><title>Your notes, your whiteboard, and your to-do list walk into one app - Boing Boing</title><link>https://boingboing.net/2026/10/24/your-notes-your-whiteboard-and-your-to-do-list-walk-into-one-app.html</link></item>
+<item><title>Teach yourself to make Claude do the boring stuff for $20 - Boing Boing</title><link>https://boingboing.net/2026/10/23/teach-yourself-to-make-claude-do-the-boring-stuff-for-20.html</link></item>
+<item><title>Youbooks turns your notes and podcast transcripts into a nonfiction book for $49 - Boing Boing</title><link>https://boingboing.net/2026/10/23/youbooks-turns-your-notes-and-podcast-transcripts-into-a-nonfiction-book-for-49.html</link></item>
+<item><title>Kurokawa Onsen has 25 hot springs, but I&amp;#39;d go back just for this cat - Boing Boing</title><link>https://boingboing.net/2026/10/23/fountain-pen-kurokawa-onsen-cat.html</link></item>
+<item><title>Local Wikipedia shows you articles about everything within a half-hour walk - Boing Boing</title><link>https://boingboing.net/2026/10/23/fountain-pen-local-wikipedia-quilt-museum.html</link></item>
+<item><title>Glasgow museum pulls its mummies, citing lack of consent from the dead - Boing Boing</title><link>https://boingboing.net/2026/10/23/fountain-pen-kelvingrove-mummies-removed.html</link></item>
+<item><title>The Bird Reich: The new Atlanta Falcons logo is uncomfortably familiar - Boing Boing</title><link>https://boingboing.net/2026/10/23/the-bird-reich-the-new-atlanta-falcons-logo-is-uncomfortably.html</link></item>
+<item><title>Priceless Eisenhower globe broken after Hegseth orders it moved to his office - Boing Boing</title><link>https://boingboing.net/2026/10/22/priceless-wwii-globe-hegseth-wanted-in-office-broken-during-move-there.html</link></item>
+<item><title>Don&amp;#39;t let typing slow down your AI prompting — switch to voice dictation for $25 for life - Boing Boing</title><link>https://boingboing.net/2026/10/22/dont-let-typing-slow-down-your-ai-prompting-switch-to-voice-dictation-for-25-for-life.html</link></item>
+<item><title>Mass Effect 5 trailer leaks the day after studio closes - Boing Boing</title><link>https://boingboing.net/2026/10/22/mass-effect-5-trailer-leaks-the-day-after-studio-closes.html</link></item>
+<item><title>New Orleans artistic haunted house heralds horrors of the Deep South - Boing Boing</title><link>https://boingboing.net/2026/10/22/new-orleans-artistic-haunted-house-heralds-horrors-of-the-de.html</link></item>
+<item><title>I couldn&amp;#39;t stop eating these 16-yen corn puff sticks in Japan - Boing Boing</title><link>https://boingboing.net/2026/10/22/fountain-pen-umaibo-japan-corn-snack.html</link></item>
+<item><title>The Underwater Cabaret, a magazine made by a poet hiding from Nazis - Boing Boing</title><link>https://boingboing.net/2026/10/22/the-underwater-cabaret-a-magazine-made-by-a-poet-hiding-from.html</link></item>
+<item><title>Uncensored Library hides forbidden literature inside Minecraft - Boing Boing</title><link>https://boingboing.net/2026/10/22/uncensored-library-hides-forbidden-literature-inside-minecraft.html</link></item>
+<item><title>Visual Studio Professional 2026 drops to $30 and opens your 2022 projects as is - Boing Boing</title><link>https://boingboing.net/2026/10/22/visual-studio-professional-2026-drops-to-30-and-opens-your-2022-projects-as-is.html</link></item>
+<item><title>Playdate Season 3 launches with an adorable frogs and abominable dungeons - Boing Boing</title><link>https://boingboing.net/2026/10/22/playdate-season-3-launches-with-an-adorable-frogs-and-abominable-dungeons.html</link></item>
+<item><title>In 1897, London had lampposts that sold coffee, tea, and &amp;quot;fluid beef&amp;quot; - Boing Boing</title><link>https://boingboing.net/2026/10/22/fountain-pen-pluto-lamp-vending-lamppost.html</link></item>
+<item><title>Glasses With Fingers #1 - Listal</title><link>https://www.listal.com/list/glasses-with-hands</link></item>
+<item><title>Two-piece No. 4 - Listal</title><link>https://www.listal.com/list/twopiece-no-4</link></item>
+<item><title>Psst! Over Here! #2 - Listal</title><link>https://www.listal.com/list/psst-over-here-2</link></item>
+<item><title>I&amp;#39;m wearing Glasses - Listal</title><link>https://www.listal.com/list/im-wearing-glasses</link></item>
+<item><title>Images I&amp;#39;ve Posted #4 - Listal</title><link>https://www.listal.com/list/images-ive-posted-4</link></item>
+<item><title>doutzen kroes for vs clothing, complete. - Listal</title><link>https://www.listal.com/list/doutzen-kroes-vs-clothing-complete</link></item>
+<item><title>Other World Masterpiece Theater - Listal</title><link>https://www.listal.com/list/cult-6779</link></item>
+<item><title>Deutschland Liegt Im Trend! - Listal</title><link>https://www.listal.com/list/deutschland-liegt-im-trend</link></item>
+<item><title>Prachtige anatomie #5 - Listal</title><link>https://www.listal.com/list/prachtige-anatomie-5</link></item>
+<item><title>Beautiful Women and Vintage Cars - Listal</title><link>https://www.listal.com/list/vintage-cars-beautiful-women</link></item>
+<item><title>Dames in het blauw #03 - Listal</title><link>https://www.listal.com/list/dames-in-het-blauw-3</link></item>
+<item><title>Bathing Suit #01 - Listal</title><link>https://www.listal.com/list/bathing-suit</link></item>
+<item><title>Shadows &amp; Light in Black &amp; White - Listal</title><link>https://www.listal.com/list/shadows-light-black</link></item>
+<item><title>Fingersætning - Listal</title><link>https://www.listal.com/list/fingersaetning</link></item>
+<item><title>So Cute Actresses - Listal</title><link>https://www.listal.com/list/so-cute-actresses</link></item>
+<item><title>Favoritbilder #2 - Listal</title><link>https://www.listal.com/list/favoritbilder-2</link></item>
+<item><title>So Cute Sportswomen - Listal</title><link>https://www.listal.com/list/so-cute-sportswomen</link></item>
+<item><title>Two-piece No. 3 - Listal</title><link>https://www.listal.com/list/twopiece-no-3</link></item>
+<item><title>Hottest Track and Field Athletes - Listal</title><link>https://www.listal.com/list/hottest-track-field-athletes</link></item>
+<item><title>Four-String Tenor Banjo - Listal</title><link>https://www.listal.com/list/fourstring-tenor-banjo</link></item>
+<item><title>Picture Spot Galleria Shopping, Milan, Italy - Listal</title><link>https://www.listal.com/list/picture-spot-galleria-milan</link></item>
+<item><title>Picture Spot Cyclades Islands, Greece - Listal</title><link>https://www.listal.com/list/picture-spot-greece-islands</link></item>
+<item><title>Backdrop Istanbul, Turkey - Listal</title><link>https://www.listal.com/list/stambul</link></item>
+<item><title>Picture Spot Ancient Sites, Egypt - Listal</title><link>https://www.listal.com/list/picture-spot-acient-sites-egypt</link></item>
+<item><title>My Top 100 Horror/Thriller Movies - Listal</title><link>https://www.listal.com/list/my-top-100-horror-thriller</link></item>
+<item><title>My Top 100 Comedy Movies - Listal</title><link>https://www.listal.com/list/my-top-100-comedy-movies</link></item>
+<item><title>Union Jack Beauties - Listal</title><link>https://www.listal.com/list/union-jack-beauties</link></item>
+<item><title>Surprise Mutation Driving Early Start to Flu Season - Everyday Health</title><link>https://www.everydayhealth.com/lung-respiratory/surprise-h1n1-mutation-driving-early-start-to-flu-season/</link></item>
+<item><title>Overdoing It on Ultra-Processed Foods Could Be Harming Your Brain - Everyday Health</title><link>https://www.everydayhealth.com/healthy-living/overdoing-ultra-processed-foods-could-harm-your-brain/</link></item>
+<item><title>Can Blowing Bubbles Really Help You Poop? - Everyday Health</title><link>https://www.everydayhealth.com/digestive-health/can-blowing-bubbles-really-help-you-poop/</link></item>
+<item><title>1 in 4 People With Depression May Have an Off-Kilter Body Clock - Everyday Health</title><link>https://www.everydayhealth.com/mental-health-conditions/misaligned-internal-clock-seasonal-depression/</link></item>
+<item><title>There’s a New Kind of OTC Eye Drop for Redness Relief - Everyday Health</title><link>https://www.everydayhealth.com/eye-vision-health/new-kind-of-otc-eye-drop-for-redness-relief/</link></item>
+<item><title>Combining Hormone Therapy With GLP-1s May Boost Weight Loss for Menopausal Women - Everyday Health</title><link>https://www.everydayhealth.com/womens-health/hormone-therapy-glp-1s-better-weight-loss-for-menopausal-women/</link></item>
+<item><title>Testosterone Therapy May Raise Heart Disease Risk in Women - Everyday Health</title><link>https://www.everydayhealth.com/womens-health/testosterone-therapy-may-raise-heart-disease-risk-in-women/</link></item>
+<item><title>Major Grocery Chain Recalls Gelato Due to Listeria Concern - Everyday Health</title><link>https://www.everydayhealth.com/infectious-diseases/major-grocery-chain-recalls-gelato-due-to-listeria-concern/</link></item>
+<item><title>7 Best Portable Cold Plunge Tubs - Everyday Health</title><link>https://www.everydayhealth.com/healthy-living/best-portable-cold-plunge-tubs/</link></item>
+<item><title>10 Hand Moisturizers We Tested and Trust to Keep Our Hands Hydrated All Winter Long - Everyday Health</title><link>https://www.everydayhealth.com/skin-care/best-hand-moisturizers/</link></item>
+<item><title>We Tested Moisturizers That Soothed Our Sensitive Skin Without Irritation - Everyday Health</title><link>https://www.everydayhealth.com/skin-care/best-moisturizer-for-sensitive-skin/</link></item>
+<item><title>We Found the 10 Best Pillows for Side Sleepers in 2026 - Everyday Health</title><link>https://www.everydayhealth.com/sleep/best-pillows-for-side-sleepers/</link></item>
 </channel></rss>

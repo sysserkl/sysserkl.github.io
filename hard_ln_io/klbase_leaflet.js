@@ -1322,3 +1322,145 @@ function navigator_geolocation_getCurrentPosition_ok_b(position,omap){
     lat_lon_status_b(lat,lon,'div_status',omap);
     return [lon,lat];
 }
+
+
+/**
+ * 【切线朝向版】弯曲燕尾箭身 + 等腰三角箭头（箭头朝向顺着箭身弯曲方向）
+ */
+function create_march_arrow_leaflet_b(start, end, cfg = {}){
+    //千问，20261026
+    /**
+     * 完整参数示例：弯曲燕尾行军箭头
+     * 单位说明：所有带 HalfWidth / Length / Depth / Bend 的参数都是「度」，
+     *          在该经纬度范围（杭州附近）1° 约 111km，0.01° 约 1.1km
+     */
+    //arrow = create_march_arrow_leaflet_b(
+        //// ===== 起点、终点（[lat, lng]）=====
+        //[30.307899660656787, 120.19180297851564],   // start：箭尾
+        //[30.163353056036065, 120.58319091796876],   // end：箭头尖端（精确落点）
+
+        //// ===== 配置项 =====
+        //{
+            //// ---- 箭身（燕尾 + 变细弯曲管道）----
+            //tailHalfWidth: 0.015,        // 箭尾根部半宽，全宽 0.04（约 4.4km）
+            //taperRatio: 0.15,           // 末端/根部宽度比，末端全宽 0.014，全程持续变细
+            //curveBend: 0.02,            // 弯曲偏移量，正值向一侧弯；改负值反向弯；0 = 直箭
+            //notchRatio: 0.55,           // 燕尾凹口深度（相对 tailHalfWidth），仅在 swallowDepth 为 null 时生效
+            //swallowDepth: 0.015,        // 燕尾凹口绝对深度，传入即覆盖 notchRatio
+
+            //// ---- 箭头头部（等腰三角形）----
+            //headHalfWidth: 0.012,       // 箭头根部半宽（绝对），全宽 0.024；优先级高于 headWidthRatio
+            //headWidthRatio: 0.8,        // 箭头根部/箭身末端宽度比，headHalfWidth 传了就不生效
+            //headLength: 0.04,           // 箭头长度（绝对），约占全程 19%；优先级高于 headLengthRatio
+            //headLengthRatio: 0.2,       // 箭头长度占比，headLength 传了就不生效
+            //headAlign: 'tangent',       // 'tangent'=顺箭身切线朝向（默认，随弯曲方向）；'chord'=关于起终点连线对称
+
+            //// ---- 样式 ----
+            //fillColor: '#d62828',       // 填充色
+            //fillOpacity: 0.65,          // 填充透明度
+            //stroke: false,              // 是否描边（false 可避免出现黑边）
+            //color: '#220000',           // 描边色（stroke=true 时生效）
+            //weight: 1,                  // 描边线宽（stroke=true 时生效）
+
+            //// ---- 渲染精度 ----
+            //segments: 16                // 每条曲线采样段数，越大越平滑（默认 14）
+        //}
+    //);
+    //arrow.addTo(navigation_layer_gps_global);
+
+    const {
+        tailHalfWidth = 0.015,       // 燕尾根部半宽（度）
+        taperRatio = 0.15,          // 箭身末端/根部 宽度比，<1 持续变细
+        curveBend = 0.02,           // 箭身弯曲偏移量（度）
+        notchRatio = 0.55,          // 箭尾凹口深度（相对根部半宽）
+        swallowDepth = 0.015,   //null,        // 箭尾凹口绝对深度（度），传入则覆盖 notchRatio
+
+        // ===== 箭头头部参数 =====
+        headHalfWidth = 0.012,  //null,       // 箭头根部半宽（度），绝对值，优先于 headWidthRatio
+        headWidthRatio = 0.8,       // 箭头根部/箭身末端 宽度比（headHalfWidth 未传时生效）
+        headLength = 0.04,   //null,          // 箭头长度（度），绝对值，优先于 headLengthRatio
+        headLengthRatio = 0.2,      // 箭头长度占全程比例（headLength 未传时生效）
+        headAlign = 'tangent',      // 'tangent'=顺箭身切线(默认) | 'chord'=关于起终点连线对称
+
+        fillColor = '#d62828',
+        fillOpacity = 0.65,
+        stroke = false,
+        color = '#220000',
+        weight = 1,
+        segments = 14
+    } = cfg;
+        
+    const [sLat, sLng] = start;
+    const [eLat, eLng] = end;
+    const dx = eLng - sLng;
+    const dy = eLat - sLat;
+    const len = Math.hypot(dx, dy);
+    if (len < 1e-7) {
+        console.warn('起点终点距离过近'); 
+        return null;
+    }
+
+    const dirLat = dy / len, dirLng = dx / len;
+    const perpLat = dx / len, perpLng = -dy / len;
+
+    function sampleEdge(p0, p1, bend) {
+        const cLat = (p0[0] + p1[0]) / 2 + perpLat * bend;
+        const cLng = (p0[1] + p1[1]) / 2 + perpLng * bend;
+        const pts = [];
+        for (let i = 0; i <= segments; i++) {
+            const t = i / segments, a = (1 - t) ** 2, b = 2 * (1 - t) * t, c = t ** 2;
+            pts.push([a * p0[0] + b * cLat + c * p1[0], a * p0[1] + b * cLng + c * p1[1]]);
+        }
+        return pts;
+    }
+
+    // 箭身：带燕尾的变细弯曲管道
+    function makeShaft(p0, p1, w0, w1) {
+        const L0 = [p0[0] + perpLat * w0, p0[1] + perpLng * w0];
+        const R0 = [p0[0] - perpLat * w0, p0[1] - perpLng * w0];
+        const L1 = [p1[0] + perpLat * w1, p1[1] + perpLng * w1];
+        const R1 = [p1[0] - perpLat * w1, p1[1] - perpLng * w1];
+
+        const ring = sampleEdge(L0, L1, curveBend).concat(sampleEdge(R0, R1, curveBend).reverse());
+
+        const depth = (swallowDepth != null) ? swallowDepth : w0 * notchRatio;
+        ring.push([p0[0] + dirLat * depth, p0[1] + dirLng * depth]); // 箭尾 ">" 凹口
+        return ring;
+    }
+
+    // 箭头尺寸
+    const hLen = (headLength != null) ? headLength : len * headLengthRatio;
+    const baseDist = Math.max(len - hLen, 0);
+    const wEnd = tailHalfWidth * taperRatio;
+    const wHead = (headHalfWidth != null) ? headHalfWidth : wEnd * headWidthRatio;
+
+    // 箭头底边中心：tangent 模式下沿法向平移，使箭身切线正好指向终点
+    let headBase = [sLat + dirLat * baseDist, sLng + dirLng * baseDist];
+    let axLat = dirLat, axLng = dirLng;
+
+    if (headAlign === 'tangent') {
+        const shift = 2 * curveBend * (len - baseDist) / len;   // 关键：法向平移量
+        headBase = [headBase[0] + perpLat * shift, headBase[1] + perpLng * shift];
+        // 箭身中心线在 headBase 处的切线（二次贝塞尔 t=1 切线 = P1 - 控制点）
+        const cLat = (start[0] + headBase[0]) / 2 + perpLat * curveBend;
+        const cLng = (start[1] + headBase[1]) / 2 + perpLng * curveBend;
+        const tLat = headBase[0] - cLat, tLng = headBase[1] - cLng;
+        const tl = Math.hypot(tLat, tLng);
+        axLat = tLat / tl; axLng = tLng / tl;
+    }
+
+    // 等腰三角形：底边垂直于对称轴，尖端 = 终点
+    const hpLat = axLng, hpLng = -axLat;
+    const headRing = [
+        [headBase[0] + hpLat * wHead, headBase[1] + hpLng * wHead],
+        [eLat, eLng],
+        [headBase[0] - hpLat * wHead, headBase[1] - hpLng * wHead]
+    ];
+
+    const style = { fillColor, fillOpacity, stroke, color, weight, fill: true };
+
+    return L.layerGroup([
+        L.polygon(makeShaft(start, headBase, tailHalfWidth, wEnd), style),
+        L.polygon(headRing, style)
+    ]);
+}
