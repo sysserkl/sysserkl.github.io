@@ -1327,7 +1327,7 @@ function navigator_geolocation_getCurrentPosition_ok_b(position,omap){
 /**
  * 【切线朝向版】弯曲燕尾箭身 + 等腰三角箭头（箭头朝向顺着箭身弯曲方向）
  */
-function create_march_arrow_leaflet_b(start, end, cfg = {}){
+function create_march_arrow_leaflet_b(start, end, cstype='', csfillcolor=false, csopacity=false,cscolor=false, cfg = {}){
     //千问，20261026
     /**
      * 完整参数示例：弯曲燕尾行军箭头
@@ -1338,37 +1338,90 @@ function create_march_arrow_leaflet_b(start, end, cfg = {}){
         //// ===== 起点、终点（[lat, lng]）=====
         //[30.307899660656787, 120.19180297851564],   // start：箭尾
         //[30.163353056036065, 120.58319091796876],   // end：箭头尖端（精确落点）
-
         //// ===== 配置项 =====
-        //{
-            //// ---- 箭身（燕尾 + 变细弯曲管道）----
-            //tailHalfWidth: 0.015,        // 箭尾根部半宽，全宽 0.04（约 4.4km）
-            //taperRatio: 0.15,           // 末端/根部宽度比，末端全宽 0.014，全程持续变细
-            //curveBend: 0.02,            // 弯曲偏移量，正值向一侧弯；改负值反向弯；0 = 直箭
-            //notchRatio: 0.55,           // 燕尾凹口深度（相对 tailHalfWidth），仅在 swallowDepth 为 null 时生效
-            //swallowDepth: 0.015,        // 燕尾凹口绝对深度，传入即覆盖 notchRatio
-
-            //// ---- 箭头头部（等腰三角形）----
-            //headHalfWidth: 0.012,       // 箭头根部半宽（绝对），全宽 0.024；优先级高于 headWidthRatio
-            //headWidthRatio: 0.8,        // 箭头根部/箭身末端宽度比，headHalfWidth 传了就不生效
-            //headLength: 0.04,           // 箭头长度（绝对），约占全程 19%；优先级高于 headLengthRatio
-            //headLengthRatio: 0.2,       // 箭头长度占比，headLength 传了就不生效
-            //headAlign: 'tangent',       // 'tangent'=顺箭身切线朝向（默认，随弯曲方向）；'chord'=关于起终点连线对称
-
-            //// ---- 样式 ----
-            //fillColor: '#d62828',       // 填充色
-            //fillOpacity: 0.65,          // 填充透明度
-            //stroke: false,              // 是否描边（false 可避免出现黑边）
-            //color: '#220000',           // 描边色（stroke=true 时生效）
-            //weight: 1,                  // 描边线宽（stroke=true 时生效）
-
-            //// ---- 渲染精度 ----
-            //segments: 16                // 每条曲线采样段数，越大越平滑（默认 14）
-        //}
+        //{}
     //);
     //arrow.addTo(navigation_layer_gps_global);
+    switch (cstype){
+        case 'tiny':
+            cfg = {
+                // ---- 箭身极细 ----
+                tailHalfWidth: 0.0004,       // 约 44米，非常细的箭身
+                //taperRatio: 0.15,             // 0.2 稍微增加一点末端比例，防止太细看不清
+                curveBend: 0.0006,           // 弯曲度同步大幅缩小
 
-    const {
+                // ---- 燕尾极浅 ----
+                swallowDepth: 0.0004,        // 燕尾凹口非常浅
+
+                // ---- 箭头极小 ----
+                headHalfWidth: 0.0006,       // 箭头根部半宽约 66米
+                headLength: 0.001,           // 箭头长度约 110米
+            };        
+            break;
+        case 'small':
+            cfg = {
+                // ---- 箭身变细 ----
+                tailHalfWidth: 0.002,       // 原 0.015，大幅减小半宽
+                //taperRatio: 0.15,           // 保持不变，保持锥形比例
+                curveBend: 0.003,           // 原 0.02，减小弯曲度以适应小尺寸
+                
+                // ---- 燕尾变小 ----
+                swallowDepth: 0.002,        // 显式设置绝对深度，变小
+                
+                // ---- 箭头变小 ----
+                headHalfWidth: 0.002,       // 原 0.012，减小箭头宽度
+                headLength: 0.003,          // 原 0.8，大幅减小箭头长度（原值可能是个笔误或用于超长箭头）
+            };
+            break;
+        case 'medium':
+            cfg = {
+                // ---- 箭身中等偏细 ----
+                tailHalfWidth: 0.005,        // 约 555米，比微型大很多，但比默认小很多
+                //taperRatio: 0.15,            // 保持锥形比例
+                curveBend: 0.008,            // 弯曲度适中
+
+                // ---- 燕尾中等深度 ----
+                swallowDepth: 0.005,         // 燕尾凹口深度适中
+
+                // ---- 箭头中等大小 ----
+                headHalfWidth: 0.004,        // 箭头根部半宽约 666米
+                headLength: 0.007,            // 箭头长度约 2.2km
+            };        
+            break;
+        case 'huge':
+            cfig = {
+                // ---- 箭身粗壮 ----
+                tailHalfWidth: 0.04,         // 约 4.4km，箭尾全宽约 8.8km
+                //taperRatio: 0.15,            // 保持锥形比例，末端全宽约 1.3km
+                curveBend: 0.05,             // 弯曲偏移量增大，大箭头需要更明显的弧度才好看
+
+                // ---- 燕尾深凹 ----
+                swallowDepth: 0.035,         // 燕尾凹口更深，视觉冲击力更强
+
+                // ---- 箭头巨大 ----
+                headHalfWidth: 0.035,        // 箭头根部半宽约 3.9km，全宽约 7.8km
+                headLength: 0.12,            // 箭头长度约 13.3km，约占全程较大比例
+            };        
+            break;
+        case 'enormous':
+            cfg = {
+                // ---- 箭身极粗壮 ----
+                tailHalfWidth: 0.12,         // 约 13.3km，箭尾全宽约 26.6km
+                //taperRatio: 0.15,            // 保持锥形比例，末端全宽约 4km
+                curveBend: 0.15,             // 大跨度下需要更明显的弯曲弧度
+
+                // ---- 燕尾极深 ----
+                swallowDepth: 0.1,           // 燕尾凹口深度 11km+，视觉冲击力强
+
+                // ---- 箭头超大 ----
+                headHalfWidth: 0.1,          // 箭头根部半宽约 11.1km，全宽约 22.2km
+                headLength: 0.2,            // 箭头长度约 38.9km
+            };        
+            break;
+    }
+
+    //默认 large - 保留注释
+    let {
         tailHalfWidth = 0.015,       // 燕尾根部半宽（度）
         taperRatio = 0.15,          // 箭身末端/根部 宽度比，<1 持续变细
         curveBend = 0.02,           // 箭身弯曲偏移量（度）
@@ -1378,7 +1431,7 @@ function create_march_arrow_leaflet_b(start, end, cfg = {}){
         // ===== 箭头头部参数 =====
         headHalfWidth = 0.012,  //null,       // 箭头根部半宽（度），绝对值，优先于 headWidthRatio
         headWidthRatio = 0.8,       // 箭头根部/箭身末端 宽度比（headHalfWidth 未传时生效）
-        headLength = 0.04,   //null,          // 箭头长度（度），绝对值，优先于 headLengthRatio
+        headLength = 0.025,   //null,          // 箭头长度（度），绝对值，优先于 headLengthRatio
         headLengthRatio = 0.2,      // 箭头长度占全程比例（headLength 未传时生效）
         headAlign = 'tangent',      // 'tangent'=顺箭身切线(默认) | 'chord'=关于起终点连线对称
 
@@ -1389,6 +1442,18 @@ function create_march_arrow_leaflet_b(start, end, cfg = {}){
         weight = 1,
         segments = 14
     } = cfg;
+
+    if (csfillcolor!==false){
+        fillColor=csfillcolor;
+    }
+
+    if (csopacity!==false){
+        fillOpacity=csopacity;
+    }
+    
+    if (cscolor!==false){
+        color=cscolor;
+    }
         
     const [sLat, sLng] = start;
     const [eLat, eLng] = end;
