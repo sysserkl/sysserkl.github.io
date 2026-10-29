@@ -191,6 +191,8 @@ function getlines_enwc_b(csno,cslines){
 	document.getElementById('input_lineno').value=csno;
 	document.getElementById('input_lines').value=cslines;
 	
+    if (!enwords_exist_check_b()){return;}
+    
 	var bllength=enwords.length;
 
 	if (csno==0){

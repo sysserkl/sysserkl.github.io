@@ -1099,20 +1099,23 @@ function enwords_sort_b(cstype=''){
     }
 }
 
-function en_words_temp_list_b(add_date_line=true,return_dead_words=false){
+function en_words_temp_list_b(add_date_line=true,return_dead_words=false,return_count=false){
     en_word_temp_get_b();
     var list_t=[];
     var list_simple_t=[];
     var bllen=enwords.length;
+    var important_count=0;
     for (let blxl=0;blxl<bllen;blxl++){
         var item=enwords[blxl];
         if (en_words_temp_global.includes(item[0])){
             if (blxl<=100){
                 //将 最新的100个单词 排在前头 - 保留注释
                 list_t.push([item,bllen-blxl]);
+                important_count=important_count+1;
             } else if (en_words_temp_important_global.includes(item[0])){
                 //将 重要临时单词 排在前头 - 保留注释            
                 list_t.push([item,bllen-101]);
+                important_count=important_count+1;
             } else {
                 list_t.push([item,en_words_temp_global.indexOf(item[0])]); //单词数组 和 序号 - 保留注释
             }            
@@ -1139,10 +1142,18 @@ function en_words_temp_list_b(add_date_line=true,return_dead_words=false){
     //显示不包含的单词 - 保留注释
     var dead_list=array_difference_b(en_words_temp_global,list_simple_t);
     if (return_dead_words){
-        return dead_list;
+        if (return_count){
+            return [dead_list,important_count];
+        } else {
+            return dead_list;                
+        }
     } else {
         console.log('en_words_temp_list_b()',dead_list);
-        return list2_t;
+        if (return_count){
+            return [list2_t,important_count];
+        } else {
+            return list2_t;            
+        }
     }
 }
 
@@ -2238,6 +2249,16 @@ function enwords_search_arr_init_b(){
     return [[],[],[],[],[],[]];
 }
 
+function enwords_exist_check_b(){
+    if (typeof enwords == 'undefined'){
+        if (local_storage_get_b('first_source_bigfile')=='1'){
+            alert('未发现 enwords 且 bigfile 作为第一数据源');
+            return false;
+        }
+    }
+    return true;
+}
+
 function enwords_search_old_b(cs_w_p_d,csword,csreg,csmax=500){
     var blcount=0;
     var words_temp_equal_arr=enwords_search_arr_init_b();
@@ -2248,6 +2269,10 @@ function enwords_search_old_b(cs_w_p_d,csword,csreg,csmax=500){
 
     var blnumber=-1;
     
+    if (!enwords_exist_check_b()){
+        return words_temp_equal_arr;
+    }
+
     for (let blitem_t of enwords){
         [blcount,blnumber]=enwords_search_one_b(blitem_t,cswordlist,csreg,csword_filter,csword_filter_set,cs_w_p_d,blcount,csmax);
         if (blcount==-1){break;}
@@ -2973,7 +2998,8 @@ function day_no_enwords_b(csinterval=30,csdate=false,do_test=false){
 }
 
 function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,israndom=false,show_html=true,add_date_line=true){
-    words_searched_arr_global=en_words_temp_list_b(add_date_line);
+    var important_count;
+    [words_searched_arr_global,important_count]=en_words_temp_list_b(add_date_line,false,true);
     var bllen=words_searched_arr_global.length;
     var pages_count=Math.ceil(words_searched_arr_global.length/words_count_per_page);
     //cspageno 是记录序号 从 1 开始，0表示当前书签单词所在页，-1表示全部 - 保留注释
@@ -3022,7 +3048,7 @@ function recent_words_list_enwords_b(cspageno=0,words_count_per_page=100,isrando
     var cached_no=local_storage_get_b('enwords_recent_no');
     var rand_page_no_list=[day_no_enwords_b()[0]];
     
-    var important_no=Math.ceil(en_words_temp_important_global.length/words_count_per_page);
+    var important_no=Math.ceil(important_count/words_count_per_page);  //en_words_temp_important_global.length
     if (important_no>date_2_ymd_b(false,'d')){
         rand_page_no_list.push(important_no);
     }

@@ -1062,7 +1062,79 @@ function gpx_name_get_leaftlet_b(csstr,csname=''){
     return [blname,bltime,ele_list];
 }
 
+function trkpt2points_leaft_b(cslist,cstype,cscolors,line_color_list){
+    var result_list=[];
+    var trkpts=cslist.split('<trkpt ');
+    //trkpts 的元素形如：
+    //0: "\n<trkseg>\n"
+    //1: 'lon="121.471574" lat="28.810572"><ele>134.719184</ele><time>2024-02-12T03:26:31Z</time><speed>1.8835790498978044</speed></trkpt>\n'
+    //455: 'lon="121.493255" lat="28.803515"><ele>70.963688</ele><time>2024-02-12T07:01:56Z</time><speed>1.0287360272521981</speed></trkpt>\n</trkseg>\n</trk>\n</gpx>\n'
+
+    for (let lonlat of trkpts){
+        lonlat=lonlat.split('>')[0];
+        if (lonlat.includes('lon=') && lonlat.includes('lat=')){
+            var bllat=lonlat.split('lat=')[1].trim().split(' ')[0].replace(/['"]/g,'');
+            var bllon=lonlat.split('lon=')[1].split(' ')[0].replace(/['"]/g,'');
+            bllat=parseFloat(bllat);
+            bllon=parseFloat(bllon);
+            [bllon,bllat]=transform_lon_lat_one_dot_b(cstype,bllon,bllat);
+            result_list.push([bllat,bllon]);
+        }
+    }
+    //result_list 的元素形如：[ 30.295529, 120.094982 ] - 保留注释
+    
+    cscolors[0]=line_color_list[gpx_line_color_no_global % line_color_list.length];
+    gpx_line_color_no_global=gpx_line_color_no_global+1;
+    return [result_list,cscolors];
+}
+
+function points2arrows_aline_leaflet_b(onavigation,omap,cslist,interval=5000,fillcolor='blue',csopacity='0.5',dopanto=true){
+    var result_t=[];
+    for (let blxl=0,lent=cslist.length;blxl<lent;blxl=blxl+interval){
+        result_t.push(cslist.slice(blxl,blxl+interval));
+    }
+    
+    if (result_t.length>1){
+        if (result_t[result_t.length-1].length<interval){
+            result_t[result_t.length-2]=result_t[result_t.length-2].concat(result_t[result_t.length-1]);
+            result_t=result_t.slice(0,-1);
+        }
+    }
+    
+    for (let item of result_t){
+        if (item.length<2){continue;}
+
+        let latlng1 = L.latLng(item[0][0], item[0][1]);
+        let latlng2 = L.latLng(item[item.length-1][0], item[item.length-1][1]);
+        let bllen=latlng1.distanceTo(latlng2);    //线条长度计算 - 保留注释
+                
+        let arrow_type=get_march_arrow_type_by_distance_leaflet_b(bllen);
+        console.log(arrow_type);
+        let odom=create_march_arrow_leaflet_b(item[0],item[item.length-1],arrow_type,fillcolor,csopacity);
+        if (odom){
+            odom.addTo(onavigation);
+            
+            if (dopanto){
+                omap.panTo(new L.LatLng(item[item.length-1][0],item[item.length-1][1]));
+            }
+        }
+    }
+}
+
+function points2arrows_batch_leaflet_b(onavigation,omap,csstr,cstype,cscolors=[],interval=500){
+    var list_t=csstr.split('<trk>');    //有几条线路就有几个 trk - 保留注释
+
+    var line_color_list=cscolors[0].split(':');
+    
+    var result_list;
+    for (let blxl=1,lent=list_t.length;blxl<lent;blxl++){ //忽略第1个元素 - 保留注释
+        [result_list,cscolors]=trkpt2points_leaft_b(list_t[blxl],cstype,cscolors,line_color_list);
+        points2arrows_aline_leaflet_b(onavigation,omap,result_list,interval,cscolors[0]);
+    }
+}
+
 function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolors=[],part_len=-1,is_line_no_style=true,csfillcolor='',csfillopacity=0){
+    //cscolors 形如：[ "blue:red:green:brown:greenyellow:cyan:black:tomato:dodgerblue:hotpink:indianred:purple", "cyan", "red" ] - 保留注释
     //is_line_no_style 数字编号 - 保留注释
     var all_points=[];
     var list_t=csstr.split('<trk>');    //有几条线路就有几个 trk - 保留注释
@@ -1072,32 +1144,12 @@ function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolor
     var point_size=point_size_get_leaflet_b((is_line_no_style?'1':''));
     
     lte_list_leaflet_global=[]; //全局变量
-    
+    var result_list;
     for (let blxl=1,lent=list_t.length;blxl<lent;blxl++){ //忽略第1个元素 - 保留注释
         [blname,bltime,blele]=gpx_name_get_leaftlet_b(list_t[blxl],csname);   //time_list - 保留注释
 
-        var result_list=[];
-        var trkpts=list_t[blxl].split('<trkpt ');
-        //trkpts 的元素形如：
-        //0: "\n<trkseg>\n"
-        //1: 'lon="121.471574" lat="28.810572"><ele>134.719184</ele><time>2024-02-12T03:26:31Z</time><speed>1.8835790498978044</speed></trkpt>\n'
-        //455: 'lon="121.493255" lat="28.803515"><ele>70.963688</ele><time>2024-02-12T07:01:56Z</time><speed>1.0287360272521981</speed></trkpt>\n</trkseg>\n</trk>\n</gpx>\n'
-
-        for (let lonlat of trkpts){
-            lonlat=lonlat.split('>')[0];
-            if (lonlat.includes('lon=') && lonlat.includes('lat=')){
-                var bllat=lonlat.split('lat=')[1].trim().split(' ')[0].replace(/['"]/g,'');
-                var bllon=lonlat.split('lon=')[1].split(' ')[0].replace(/['"]/g,'');
-                bllat=parseFloat(bllat);
-                bllon=parseFloat(bllon);
-                [bllon,bllat]=transform_lon_lat_one_dot_b(cstype,bllon,bllat);
-                result_list.push([bllat,bllon]);
-            }
-        }
+        [result_list,cscolors]=trkpt2points_leaft_b(list_t[blxl],cstype,cscolors,line_color_list);
         all_points=all_points.concat(result_list);
-        
-        cscolors[0]=line_color_list[gpx_line_color_no_global % line_color_list.length];
-        gpx_line_color_no_global=gpx_line_color_no_global+1;
         
         draw_gpx_lines_simple_leaflet_b(onavigation,omap,result_list,blname,cscolors,'',true,[bltime,blele],part_len,(is_line_no_style?blxl.toString():''),point_size,csfillcolor,csfillopacity);  
     }
@@ -1323,6 +1375,15 @@ function navigator_geolocation_getCurrentPosition_ok_b(position,omap){
     return [lon,lat];
 }
 
+function get_march_arrow_type_by_distance_leaflet_b(distanceMeters){
+    //根据距离（米）获取行军箭头的样式类型
+    if (distanceMeters < 1500) return 'tiny';
+    if (distanceMeters < 10000) return 'small';
+    if (distanceMeters < 15000) return 'medium';
+    if (distanceMeters < 80000) return 'large';
+    if (distanceMeters < 150000) return 'huge';
+    return 'enormous';
+}
 
 /**
  * 【切线朝向版】弯曲燕尾箭身 + 等腰三角箭头（箭头朝向顺着箭身弯曲方向）
@@ -1342,6 +1403,31 @@ function create_march_arrow_leaflet_b(start, end, cstype='', csfillcolor=false, 
         //{}
     //);
     //arrow.addTo(navigation_layer_gps_global);
+
+    function sub_create_march_arrow_leaflet_b_sample_edge(p0, p1, bend) {
+        const cLat = (p0[0] + p1[0]) / 2 + perpLat * bend;
+        const cLng = (p0[1] + p1[1]) / 2 + perpLng * bend;
+        const pts = [];
+        for (let i = 0; i <= segments; i++) {
+            const t = i / segments, a = (1 - t) ** 2, b = 2 * (1 - t) * t, c = t ** 2;
+            pts.push([a * p0[0] + b * cLat + c * p1[0], a * p0[1] + b * cLng + c * p1[1]]);
+        }
+        return pts;
+    }
+
+    // 箭身：带燕尾的变细弯曲管道
+    function sub_create_march_arrow_leaflet_b_make_shaft(p0, p1, w0, w1) {
+        const L0 = [p0[0] + perpLat * w0, p0[1] + perpLng * w0];
+        const R0 = [p0[0] - perpLat * w0, p0[1] - perpLng * w0];
+        const L1 = [p1[0] + perpLat * w1, p1[1] + perpLng * w1];
+        const R1 = [p1[0] - perpLat * w1, p1[1] - perpLng * w1];
+
+        const ring = sub_create_march_arrow_leaflet_b_sample_edge(L0, L1, curveBend).concat(sub_create_march_arrow_leaflet_b_sample_edge(R0, R1, curveBend).reverse());
+        const depth = (swallowDepth != null) ? swallowDepth : w0 * notchRatio;
+        ring.push([p0[0] + dirLat * depth, p0[1] + dirLng * depth]); // 箭尾 ">" 凹口
+        return ring;
+    }
+    
     switch (cstype){
         case 'tiny':
             cfg = {
@@ -1468,31 +1554,6 @@ function create_march_arrow_leaflet_b(start, end, cstype='', csfillcolor=false, 
     const dirLat = dy / len, dirLng = dx / len;
     const perpLat = dx / len, perpLng = -dy / len;
 
-    function sampleEdge(p0, p1, bend) {
-        const cLat = (p0[0] + p1[0]) / 2 + perpLat * bend;
-        const cLng = (p0[1] + p1[1]) / 2 + perpLng * bend;
-        const pts = [];
-        for (let i = 0; i <= segments; i++) {
-            const t = i / segments, a = (1 - t) ** 2, b = 2 * (1 - t) * t, c = t ** 2;
-            pts.push([a * p0[0] + b * cLat + c * p1[0], a * p0[1] + b * cLng + c * p1[1]]);
-        }
-        return pts;
-    }
-
-    // 箭身：带燕尾的变细弯曲管道
-    function makeShaft(p0, p1, w0, w1) {
-        const L0 = [p0[0] + perpLat * w0, p0[1] + perpLng * w0];
-        const R0 = [p0[0] - perpLat * w0, p0[1] - perpLng * w0];
-        const L1 = [p1[0] + perpLat * w1, p1[1] + perpLng * w1];
-        const R1 = [p1[0] - perpLat * w1, p1[1] - perpLng * w1];
-
-        const ring = sampleEdge(L0, L1, curveBend).concat(sampleEdge(R0, R1, curveBend).reverse());
-
-        const depth = (swallowDepth != null) ? swallowDepth : w0 * notchRatio;
-        ring.push([p0[0] + dirLat * depth, p0[1] + dirLng * depth]); // 箭尾 ">" 凹口
-        return ring;
-    }
-
     // 箭头尺寸
     const hLen = (headLength != null) ? headLength : len * headLengthRatio;
     const baseDist = Math.max(len - hLen, 0);
@@ -1511,9 +1572,12 @@ function create_march_arrow_leaflet_b(start, end, cstype='', csfillcolor=false, 
         const cLng = (start[1] + headBase[1]) / 2 + perpLng * curveBend;
         const tLat = headBase[0] - cLat, tLng = headBase[1] - cLng;
         const tl = Math.hypot(tLat, tLng);
-        axLat = tLat / tl; axLng = tLng / tl;
+        axLat = tLat / tl; 
+        axLng = tLng / tl;
     }
-
+    
+    if (isNaN(axLat) || isNaN(axLng)){return null;}
+    
     // 等腰三角形：底边垂直于对称轴，尖端 = 终点
     const hpLat = axLng, hpLng = -axLat;
     const headRing = [
@@ -1525,7 +1589,7 @@ function create_march_arrow_leaflet_b(start, end, cstype='', csfillcolor=false, 
     const style = { fillColor, fillOpacity, stroke, color, weight, fill: true };
 
     return L.layerGroup([
-        L.polygon(makeShaft(start, headBase, tailHalfWidth, wEnd), style),
+        L.polygon(sub_create_march_arrow_leaflet_b_make_shaft(start, headBase, tailHalfWidth, wEnd), style),
         L.polygon(headRing, style)
     ]);
 }

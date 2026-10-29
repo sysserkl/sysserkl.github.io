@@ -296,12 +296,16 @@ function read_gpx_gps_points(csstr,csname='',cscolors=false,part_len=false){
         //cscolors 形似 [ "blue:red:green:brown:cyan:black:purple", "cyan", "red" ] - 保留注释
     }
 
-    var is_no_style=klmenu_check_b('span_line_no_gps',false);   //数字编号
+    if (klmenu_check_b('span_march_arrow',false)){
+        var group=parseInt(document.getElementById('input_march_arow_group').value.trim());
+        points2arrows_batch_leaflet_b(navigation_layer_gps_global,omap_gps_points_global,csstr,bltype,cscolors,group);
+    } else {
+        var is_no_style=klmenu_check_b('span_line_no_gps',false);   //数字编号
+        var all_points=gpx_file_draw_leaflet_b(navigation_layer_gps_global,omap_gps_points_global,csstr,bltype,csname,cscolors,part_len,is_no_style);
 
-    var all_points=gpx_file_draw_leaflet_b(navigation_layer_gps_global,omap_gps_points_global,csstr,bltype,csname,cscolors,part_len,is_no_style);
-
-    if (klmenu_check_b('span_gpx_2_latlon',false)){
-        document.getElementById('textarea_gps_points').value = all_points.join('\n');
+        if (klmenu_check_b('span_gpx_2_latlon',false)){
+            document.getElementById('textarea_gps_points').value = all_points.join('\n');
+        }
     }
 }
 
@@ -1727,8 +1731,14 @@ function menu_gps_points(){
     idb_menu_generate_bigfile_b('gpx','select_big_file_gpx_gps_points',blparent,'import_bigfile_gps_points'),
     '<span class="span_menu" onclick="'+str_t+'gpx_from_textarea_gps_points();">从编辑框显示GPX图形</span>',
     '<span class="span_menu" onclick="'+str_t+'latlon_2_gpx_gps_points();">lat,lon to GPX file format</span>',
-    '<span id="span_gpx_2_latlon" class="span_menu" onclick="'+str_t+'klmenu_check_b(this.id);">⚪ 转换gpx为纬度,经度点</span>',    
     ]);
+
+    var group_list=[
+    ['⚪ 转换gpx为纬度,经度点','klmenu_check_b(this.id);',true,'span_gpx_2_latlon'],   
+    ['⚪ 行军箭头','klmenu_check_b(this.id);',false,'span_march_arrow'],   
+    ['<input type="number" id="input_march_arow_group" value=500 title="点数分组" style="width:4rem;" />','',false],    
+    ];    
+    klmenu_gpx.push(menu_container_b(str_t,group_list,''));    
     
     var klmenu_dots=[];
     
@@ -1856,7 +1866,7 @@ function menu_gps_points(){
     
     klmenu_config=klmenu_config.concat(root_font_size_menu_b(str_t,false,true,false,true,'textarea_gps_points'));
         
-    document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','22rem','1rem','1rem','60rem')+klmenu_b(klmenu_dots,'','39rem','1rem','1rem','60rem')+klmenu_b(klmenu_district,'📍','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','38rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','26rem','1rem','1rem','60rem')+klmenu_b(klmenu_dots,'','39rem','1rem','1rem','60rem')+klmenu_b(klmenu_district,'📍','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','38rem','1rem','1rem','60rem'),'','0rem')+' ');
     
     klmenu_check_b('span_line_no_gps',true);        
 

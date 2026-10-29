@@ -2222,5 +2222,12 @@ repairability
 upgradability
 Dickinson
 toilet-paper
+Blackstone
+coffee grinder
+Geiger counter
+hyperglycemia
+informational
+Isabel
+
 
 `.trim().split('\n');
