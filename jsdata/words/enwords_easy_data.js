@@ -2228,6 +2228,18 @@ Geiger counter
 hyperglycemia
 informational
 Isabel
+counterintuitive
+neuroelectric
+Northrup
+Webb
+Baghdad
+best-known
+cameraman
+Cannes
+Chittagong
+Paddington
+photoelectric
+
 
 
 `.trim().split('\n');
