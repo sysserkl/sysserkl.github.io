@@ -8,80 +8,147 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Sat, 31 Oct 2026 20:06:14 +0800</lastBuildDate>
-<item><title>Supersonic Airliner In Doubt As Company Shifts to Powering AI Data Centers - Slashdot</title><link>https://hardware.slashdot.org/story/26/10/30/2355244/supersonic-airliner-in-doubt-as-company-shifts-to-powering-ai-data-centers</link></item>
-<item><title>Google&amp;#39;s First Data Center Satellite Is Online and Writing Poetry - Slashdot</title><link>https://science.slashdot.org/story/26/10/30/2344228/googles-first-data-center-satellite-is-online-and-writing-poetry</link></item>
-<item><title>Cisco Gives Engineer Unlimited AI Tokens To Rewrite Legacy Code - Slashdot</title><link>https://developers.slashdot.org/story/26/10/30/2339234/cisco-gives-engineer-unlimited-ai-tokens-to-rewrite-legacy-code</link></item>
-<item><title>Apple Is Entering Its Slop Era - Slashdot</title><link>https://apple.slashdot.org/story/26/10/30/216221/apple-is-entering-its-slop-era</link></item>
-<item><title>Meta Settles Another Social Media Addiction Case Just Before Trial - Slashdot</title><link>https://yro.slashdot.org/story/26/10/30/213231/meta-settles-another-social-media-addiction-case-just-before-trial</link></item>
-<item><title>Sam Altman Thinks Your PC Is Wasting Precious RAM - Slashdot</title><link>https://hardware.slashdot.org/story/26/10/30/2017206/sam-altman-thinks-your-pc-is-wasting-precious-ram</link></item>
-<item><title>Thousands of &amp;#39;Ghost Students&amp;#39; Use AI to Steal Millions In Student Loans, DOJ Says - Slashdot</title><link>https://yro.slashdot.org/story/26/10/30/204230/thousands-of-ghost-students-use-ai-to-steal-millions-in-student-loans-doj-says</link></item>
-<item><title>US Tech Stocks See Sharp Falls As AI Spending Nears $1 Trillion - Slashdot</title><link>https://news.slashdot.org/story/26/10/30/1843213/us-tech-stocks-see-sharp-falls-as-ai-spending-nears-1-trillion</link></item>
-<item><title>GM Reaches $220 Million Settlement Over Selling Drivers&amp;#39; Private Data - Slashdot</title><link>https://yro.slashdot.org/story/26/10/30/168202/gm-reaches-220-million-settlement-over-selling-drivers-private-data</link></item>
-<item><title>UK Social Media Ban May Lock Out More Than 100,000 Teens Without ID - Slashdot</title><link>https://news.slashdot.org/story/26/10/30/160254/uk-social-media-ban-may-lock-out-more-than-100000-teens-without-id</link></item>
-<item><title>Reddit Will Force Everyone to Log In - Slashdot</title><link>https://tech.slashdot.org/story/26/10/30/0155237/reddit-will-force-everyone-to-log-in</link></item>
-<item><title>Binance Suffers Biggest Crypto Hack In History With $6.3 Billion Affected [UPDATE] - Slashdot</title><link>https://slashdot.org/story/26/10/29/2143222/binance-suffers-biggest-crypto-hack-in-history-with-63-billion-affected-update</link></item>
-<item><title>The Tragedy of Losing Your Wikipedia Page - Slashdot</title><link>https://news.slashdot.org/story/26/10/30/0142219/the-tragedy-of-losing-your-wikipedia-page</link></item>
-<item><title>First Wired XR Glasses Powered By Android XR - Slashdot</title><link>https://tech.slashdot.org/story/26/10/29/1839246/first-wired-xr-glasses-powered-by-android-xr</link></item>
-<item><title>Proton CEO Is In &amp;#39;Full AI Psychosis&amp;#39; - Slashdot</title><link>https://slashdot.org/story/26/10/30/0126236/proton-ceo-is-in-full-ai-psychosis</link></item>
-<item><title>Claude Code for VS Code 官方扩展被植入后门 - Solidot</title><link>https://www.solidot.org/story?sid=85756</link></item>
-<item><title>LibreOffice 项目递交的代码发现使用LLM 的明确标记 - Solidot</title><link>https://www.solidot.org/story?sid=85755</link></item>
-<item><title>芬兰对 Google 砍伐 25 万颗树展开调查 - Solidot</title><link>https://www.solidot.org/story?sid=85754</link></item>
-<item><title>Reddit 将强制要求所有用户登录 - Solidot</title><link>https://www.solidot.org/story?sid=85753</link></item>
-<item><title>Google 创上市至今最大跌幅，市值蒸发逾 5000 亿美元 - Solidot</title><link>https://www.solidot.org/story?sid=85752</link></item>
-<item><title>海鸟在长途飞行中会经历时差反应 - Solidot</title><link>https://www.solidot.org/story?sid=85751</link></item>
-<item><title>Patrick Stewart 去世，享年 86 岁 - Solidot</title><link>https://www.solidot.org/story?sid=85750</link></item>
-<item><title>币安多达 30 亿美元数字货币被盗 - Solidot</title><link>https://www.solidot.org/story?sid=85749</link></item>
-<item><title>In praise of the dilettante - Aeon</title><link>https://aeon.co/essays/why-the-dilettante-is-the-anti-hero-of-our-over-optimised-age</link></item>
-<item><title>Vietnam Indicts HiAnime Operators Over $12.85 Million in Pirate Ad Revenue - TorrentFreak</title><link>https://torrentfreak.com/vietnam-indicts-hianime-operators-over-12-85-million-in-pirate-ad-revenue/</link></item>
-<item><title>树莓派 Zero 3W 和 树莓派 4A+ 产品线索露出 - 树莓派实验室</title><link>https://shumeipai.nxez.com/2026/10/29/clues-surface-for-raspberry-pi-zero-3-w-and-raspberry-pi-4a.html</link></item>
-<item><title>On the Bus With Ken Paxton, Trump’s Man in Texas - Vanity Fair</title><link>https://www.vanityfair.com/story/ken-paxton-campaign-texas-senate-trump</link></item>
-<item><title>Drake’s Stylist Juliet Charlotte Has Seen All Your Memes - Vanity Fair</title><link>https://www.vanityfair.com/story/drake-juliet-charlotte-stylist-sessions-interview</link></item>
-<item><title>“Knights Will Be Knights.” At Medieval Times, a Dinner-Theater Kingdom Faces a Reckoning - Vanity Fair</title><link>https://www.vanityfair.com/story/medieval-times</link></item>
-<item><title>The Art of the Deal: Jared Kushner’s Hacked Phone Revealed More Than $700 Million in Transfers - Vanity Fair</title><link>https://www.vanityfair.com/story/jared-kushner-hacked-phone-secret-negotiations</link></item>
-<item><title>The Mamdanis Take Manhattan! - Vanity Fair</title><link>https://www.vanityfair.com/story/mamdani-studio-museum-gala</link></item>
-<item><title>The Political Evolution of Nithya Raman - Vanity Fair</title><link>https://www.vanityfair.com/story/nithya-raman-democratic-socialists-karen-bass-los-angeles-mayors-race</link></item>
-<item><title>The Undoing of Nick Fuentes, the Far-Right Kingmaker Who Wasn’t - Vanity Fair</title><link>https://www.vanityfair.com/story/nick-fuentes-midterms-trump</link></item>
-<item><title>The Short-Form-Video Candidate - Vanity Fair</title><link>https://www.vanityfair.com/story/jon-ossoff-short-form-vertical-video</link></item>
-<item><title>The 2026 Midterm Elections Cheat Sheet - Vanity Fair</title><link>https://www.vanityfair.com/story/2026-midterms-cheat-sheet</link></item>
-<item><title>Will Hollywood Turn Its Back on Karen Bass? - Vanity Fair</title><link>https://www.vanityfair.com/story/karen-bass-fights-nithya-raman-los-angeles-mayor</link></item>
-<item><title>Susan Collins’s Biggest Problem? Donald Trump - Vanity Fair</title><link>https://www.vanityfair.com/story/susan-collins-donald-trump-midterms-2026</link></item>
-<item><title>Fear, Loathing, and Photographs: Ken Paxton&amp;#39;s Campaign Takes a Tour Through Late-Stage Trumpism - Vanity Fair</title><link>https://www.vanityfair.com/photos/ken-paxton-senate-campaign-best-photos</link></item>
-<item><title>Marilyn Monroe and Arthur Miller’s Tragic Love Story - Vanity Fair</title><link>https://www.vanityfair.com/story/marilyn-monroe-arthur-miller-tragic-love-story</link></item>
-<item><title>Darializa Avila Chevalier Explains the DSA - Vanity Fair</title><link>https://www.vanityfair.com/story/darializa-avila-chevalier-dsa</link></item>
-<item><title>Gay People (Mostly) Explain Gay Halloween - Vanity Fair</title><link>https://www.vanityfair.com/story/gay-halloween-explainer</link></item>
-<item><title>As “Black October” Comes to a Close, the Cybersecurity World Is on Edge - Vanity Fair</title><link>https://www.vanityfair.com/story/how-to-survive-a-cyberattack</link></item>
-<item><title>Art Basel Paris Opened—Then Closed Early, Due to Protests. What Happened? - Vanity Fair</title><link>https://www.vanityfair.com/style-art-basel-paris</link></item>
-<item><title>Anthropic’s Pre-IPO Filing Is the Scariest Thing You’ll Read This Halloween Season - Vanity Fair</title><link>https://www.vanityfair.com/story/anthropic-pre-ipo-filing</link></item>
-<item><title>“History Will Judge”: Bret Baier on Donald Trump - Vanity Fair</title><link>https://www.vanityfair.com/story/bret-baier-fox-news-anchor-trump-press-ban</link></item>
-<item><title>Unpacking Nicki Minaj’s MAGA Style Evolution - Vanity Fair</title><link>https://www.vanityfair.com/story/unpacking-nicki-minajs-maga-style-evolution</link></item>
-<item><title>“Wonderful Addition” Katie Zacharia Is Already Out of a Job - Vanity Fair</title><link>https://www.vanityfair.com/story/party-animals-katie-zacharia-pete-hegseth</link></item>
-<item><title>The 13 Best Horror Movies to Stream This Halloween - Vanity Fair</title><link>https://www.vanityfair.com/story/the-13-best-horror-movies-to-stream-this-halloween</link></item>
-<item><title>The Louisiana Pet Cemetery on HBO That Haunts All Who Touch It - Vanity Fair</title><link>https://www.vanityfair.com/story/pet-cemetery-murders-dorothy-thompson-interview</link></item>
-<item><title>The Ghosts of Gracie Mansion, Which Zohran Mamdani and Rama Duwaji Now Call Home - Vanity Fair</title><link>https://www.vanityfair.com/style/story/ghosts-gracie-mansion-zohran-mamdani</link></item>
-<item><title>The True Story of Lizzie Borden’s Girlfriend - Vanity Fair</title><link>https://www.vanityfair.com/story/lizzie-borden-nance-o-neil-girlfriend</link></item>
-<item><title>The Haunting of Elizabeth II and Other Spooky Royal Ghost Stories - Vanity Fair</title><link>https://www.vanityfair.com/style/story/the-haunting-of-elizabeth-ii-and-other-spooky-royal-ghost-stories</link></item>
-<item><title>The 20 Best Stephen King Movies of All Time - Vanity Fair</title><link>https://www.vanityfair.com/hollywood/2021/08/stephen-king-movies</link></item>
-<item><title>The Undying Mystery of Max Schreck—the First Nosferatu - Vanity Fair</title><link>https://www.vanityfair.com/hollywood/story/halloween-2024-max-schreck-nosferatu</link></item>
-<item><title>The MAGA Face That Launched a Thousand Memes - Vanity Fair</title><link>https://www.vanityfair.com/story/is-mar-a-lago-face-botched</link></item>
-<item><title>How Esmé Creed-Miles Went From a Disastrous Audition to Playing Marianne Dashwood - Vanity Fair</title><link>https://www.vanityfair.com/story/sense-and-sensibility-esme-creed-miles</link></item>
-<item><title>Who Is Lula, the Four-Time President of Brazil? - Vanity Fair</title><link>https://www.vanityfair.com/story/lula-wins-brazilian-election</link></item>
-<item><title>A Weird, Wild, Vital, Nasty, Unnervingly Online Election - Vanity Fair</title><link>https://www.vanityfair.com/story/2026-midterms-guide</link></item>
-<item><title>How Jill Biden Concealed the President’s Rapid Deterioration - Vanity Fair</title><link>https://www.vanityfair.com/story/the-east-wing-first-lady-jill-biden</link></item>
-<item><title>The October 17 France Protests: A Philosopher’s Take - Vanity Fair</title><link>https://www.vanityfair.com/story/france-protests-october-17</link></item>
-<item><title>At Gatcombe Park, Princess Anne’s Beloved 730-Acre Country Estate, Her Equestrian Dream Comes to Life - Vanity Fair</title><link>https://www.vanityfair.com/story/princess-anne-gatcombe-park</link></item>
-<item><title>Will King Charles Be the Last Windsor to Lead the Commonwealth? - Vanity Fair</title><link>https://www.vanityfair.com/story/king-charles-last-windsor-to-lead-commonwealth</link></item>
-<item><title>The Queen That Never Was: The Twisted Tale of Lady Arbella Stuart - Vanity Fair</title><link>https://www.vanityfair.com/story/lady-arbella-stuart-royals</link></item>
-<item><title>Kate Middleton Welcomes Prince George Back From Boarding School: “I Can’t Wait to Have Them All Home.” - Vanity Fair</title><link>https://www.vanityfair.com/story/kate-middleton-prince-george-returns</link></item>
-<item><title>Inside Airbnb’s Star-Studded Charity Gala - Vanity Fair</title><link>https://www.vanityfair.com/photos/airbnb-org-gala-jimmy-kimmel-charli-xcx-brian-chesky</link></item>
-<item><title>Is Elizabeth Holmes the Biggest Star of Oscar Season? - Vanity Fair</title><link>https://www.vanityfair.com/story/you-can-see-everything-holmes-oscar-chances</link></item>
-<item><title>‘Open the hives’ — Why France is turning tank gunners into FPV pilots - Defense News</title><link>https://www.defensenews.com/global/europe/2026/10/30/open-the-hives-why-france-is-turning-tank-gunners-into-fpv-pilots/</link></item>
-<item><title>From tanks to space, Norway and Germany forge ahead with ‘Hansa’ defense pact - Defense News</title><link>https://www.defensenews.com/global/europe/2026/10/30/from-tanks-to-space-norway-and-germany-forge-ahead-with-hansa-defense-pact/</link></item>
-<item><title>Ukraine completes work on new missile defense system, awaits European partner components - Defense News</title><link>https://www.defensenews.com/global/europe/2026/10/30/ukraine-completes-work-on-new-missile-defense-system-awaits-european-partner-components/</link></item>
-<item><title>Pentagon tells Europeans to cool their rhetoric on Russia, sources say - Defense News</title><link>https://www.defensenews.com/global/europe/2026/10/30/pentagon-tells-europeans-to-cool-their-rhetoric-on-russia-sources-say/</link></item>
-<item><title>HelloGitHub 第 127 期 - HelloGitHub</title><link>https://hellogithub.com/periodical/volume/127</link></item>
-<item><title>refresh this page - Kotaku</title><link>https://kotaku.com/#</link></item>
-<item><title>troubleshooting documentation - Kotaku</title><link>https://kotaku.com/cdn-cgi/challenge-platform/help</link></item>
-<item><title>Worst Halloween candies, according to the data - FlowingData</title><link>https://flowingdata.com/2026/10/30/worst-halloween-candies-according-to-the-data/</link></item>
-<item><title>Policing protests in India - FlowingData</title><link>https://flowingdata.com/2026/10/30/policing-protests-in-india/</link></item>
+<lastBuildDate>Sun, 01 Nov 2026 08:18:04 +0800</lastBuildDate>
+<item><title>思科给予一名 27 岁工程师无限 tokens 去重写陈旧代码 - Solidot</title><link>https://www.solidot.org/story?sid=85764</link></item>
+<item><title>Sam Altman 认为 PC 内存闲置太糟糕 - Solidot</title><link>https://www.solidot.org/story?sid=85763</link></item>
+<item><title>中国首次载人登月计划由三人组成其中两人将着陆月球表面 - Solidot</title><link>https://www.solidot.org/story?sid=85762</link></item>
+<item><title>黑客仅用 20 分钟就从币安盗取了 63 亿美元加密货币 - Solidot</title><link>https://www.solidot.org/story?sid=85761</link></item>
+<item><title>世界三瀑收官：尼亚加拉隔岸观记 - 科学网博客</title><link>https://blog.sciencenet.cn/blog-616948-1558981.html</link></item>
+<item><title>在这片土地上，仰韶文脉绵延不息，远古地层沉默横卧……邓涛 - 科学网博客</title><link>https://blog.sciencenet.cn/blog-1243751-1558988.html</link></item>
+<item><title>来自细菌的全新分子，具备抗癌研发潜力 - 科学网博客</title><link>https://blog.sciencenet.cn/blog-41174-1558804.html</link></item>
+<item><title>白鱀拜风来（清人倪鸿咏中华白海豚… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-708326-1559061.html</link></item>
+<item><title>治疗2型糖尿病一个出人意料的新靶… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1559058.html</link></item>
+<item><title>运动刺激骨骼可释放延寿的蛋白质《… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1558956.html</link></item>
+<item><title>伍赛特骑行里程已经超过一万公里 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3393151-1559057.html</link></item>
+<item><title>Batteries：对话最佳论文奖… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1558451.html</link></item>
+<item><title>中山大学宋华伟/王成新等：… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3411509-1558967.html</link></item>
+<item><title>审稿回复愁断肠 ——Nature … - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3344631-1558935.html</link></item>
+<item><title>【202610期精选文章】儿童哮… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3574014-1558440.html</link></item>
+<item><title>[转载]第二届机器学习与大模… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3652364-1558895.html</link></item>
+<item><title>Nature Communications 无机… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3432244-1558881.html</link></item>
+<item><title>[转载]第六届算法、微芯片与… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3462448-1558874.html</link></item>
+<item><title>杨应昌、侯红帅团队：Y/F协… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3563286-1558867.html</link></item>
+<item><title>ENCECO | 香港城市大学王文… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3496796-1558854.html</link></item>
+<item><title>从入门到精通！科学网为您量身打造科研绘图课程 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-45-1558538.html</link></item>
+<item><title>科学网2026年9月十佳博文榜单公布！ - 科学网博客</title><link>http://blog.sciencenet.cn/blog-45-1555866.html</link></item>
+<item><title>那年冬天，我们在龙感湖追寻白头鹤 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3645174-1559014.html</link></item>
+<item><title>让论文开口说话，让知识执行任务 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-502444-1559000.html</link></item>
+<item><title>我对学术生态建设的一点认识与思考 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-341292-1558958.html</link></item>
+<item><title>长木花园的意象体系及启示 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-38998-1558931.html</link></item>
+<item><title>科学界最顶级的杠杆：为什么“高价值科学信息”是零边际成本的优质资产 ... - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3380716-1558924.html</link></item>
+<item><title>关于原创性与重复出版，这些“红线”你都避开了吗？ | 干货分享 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1558883.html</link></item>
+<item><title>以沸腾湖著称的岛屿——多米尼克 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3032375-1558860.html</link></item>
+<item><title>番荔枝：一颗“佛头”的环球旅行 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-437607-1558942.html</link></item>
+<item><title>殷商日食：专家可不能忘了孤证存疑 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-275648-1558877.html</link></item>
+<item><title>如何停止频繁夜间小便？ - 科学网博客</title><link>http://blog.sciencenet.cn/blog-39731-1558954.html</link></item>
+<item><title>文化197：戏楼 唱戏和过庙会 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-75458-1558984.html</link></item>
+<item><title>分别被三人拍到的同一头江豚 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-708326-1558999.html</link></item>
+<item><title>山耕谭葛  葛的繁育·葛的虫害及防控  虫害多样性当不… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3638195-1559013.html</link></item>
+<item><title>江豚晚拜风（古今诗词咏江豚续八百三十四） - 科学网博客</title><link>http://blog.sciencenet.cn/blog-708326-1558946.html</link></item>
+<item><title>为中国摘掉“贫油” 帽子，打… - 科学网博客</title><link>https://blog.sciencenet.cn/video.php?mod=vinfo&amp;pid=5941</link></item>
+<item><title>郭华东院士谈月基对地观测的构… - 科学网博客</title><link>https://blog.sciencenet.cn/video.php?mod=vinfo&amp;pid=5934</link></item>
+<item><title>李佩跨时空对话郭永怀，知识分… - 科学网博客</title><link>https://blog.sciencenet.cn/video.php?mod=vinfo&amp;pid=5933</link></item>
+<item><title>180+期刊，超70%为SCI︱Springer数学与… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3432244-1558847.html</link></item>
+<item><title>开启您的学术领导力进阶之路 | 2027 Wi… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3411312-1558834.html</link></item>
+<item><title>“可预报性荒漠”的 AI冲击  ——人工… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1310230-1558781.html</link></item>
+<item><title>相约2026自动化大会，Taylor &amp; Franc… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3574014-1558701.html</link></item>
+<item><title>读懂导师 | 问导师还是问AI？把AI变成… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3383728-1558079.html</link></item>
+<item><title>为什么你的论文会被“秒拒”？ - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1232242-1557930.html</link></item>
+<item><title>岛屿的面积越大物种数量会越多吗？ - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41757-1558807.html</link></item>
+<item><title>AI 时代，如何利用高校图书馆资源与服… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-213646-1558728.html</link></item>
+<item><title>两色金鸡藏奇药，一双蛇目绽妙花 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-437607-1558497.html</link></item>
+<item><title>作者专访 | 浙江省中医院的黄杰烽主任… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3574014-1556758.html</link></item>
+<item><title>走进编辑部｜水泥基材料如何走向可持续… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3574014-1556397.html</link></item>
+<item><title>学术求真的底线：自我纠错的边界与重生 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-341292-1558690.html</link></item>
+<item><title>AI浪潮下的银发治学：守住人的主体性，… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-341292-1558443.html</link></item>
+<item><title>“AI使用声明”何如“作者认知贡献声明… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1251036-1558353.html</link></item>
+<item><title>学术成长之道：在交流与思考的循环中搭… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-341292-1558134.html</link></item>
+<item><title>谈谈工作半年后的感悟：现状、未来与展… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3566240-1559052.html</link></item>
+<item><title>那方水土那方人15 . 七 食在当年（1） - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3622817-1558640.html</link></item>
+<item><title>在纷杂的生活中寻找秩序 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-71964-1558446.html</link></item>
+<item><title>福建师范大学胡自毅/朱双银/陈大钦等：… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3534092-1558840.html</link></item>
+<item><title>科学家开发出一种采用串并联混合结构与… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3650976-1558832.html</link></item>
+<item><title>AMR Account｜长春应化所任劲松研究员… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3529677-1558829.html</link></item>
+<item><title>湖南大学向立、潘安练团队：面向可穿戴… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3411509-1558813.html</link></item>
+<item><title>生物药时代背后的“隐形引擎” ——生… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-563591-1558799.html</link></item>
+<item><title>国家基金申请需要扎实基础 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-729911-1558856.html</link></item>
+<item><title>No.28.AI辅助科研，谁来为科学主张负责… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-829-1559050.html</link></item>
+<item><title>AI写作席卷学术圈，AI检测却陷入困局：… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1232242-1558841.html</link></item>
+<item><title>No.27.数字分身能够预测疾病，但它真的… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-829-1558759.html</link></item>
+<item><title>胆固醇调控“隐秘开关”或将改变心脏病… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1558471.html</link></item>
+<item><title>不止“坏胆固醇”：科学家发现心脏病的… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1558694.html</link></item>
+<item><title>年轻血液对阿尔茨海默病展现出显著保护… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1558475.html</link></item>
+<item><title>蜘蛛也会做梦吗？《美国国家科学院院刊… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1558481.html</link></item>
+<item><title>印度尼西亚-泗水火山（2） - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1432081-1558513.html</link></item>
+<item><title>故人博罗尉，遗我山姜花 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-2724438-1558512.html</link></item>
+<item><title>白浪舞江豚（古今诗词咏江豚续八百三十… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-708326-1557510.html</link></item>
+<item><title>风信江豚还鼓浪（古今诗词咏江豚续八百… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-708326-1556982.html</link></item>
+<item><title>高峰论坛嘉宾阵容公布 | MDPI第三届物… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1558747.html</link></item>
+<item><title>截稿倒计时：8个会议合作期刊正在征稿… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3462448-1558585.html</link></item>
+<item><title>“可持续食品体系与人类健康”食品与营… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3516770-1558452.html</link></item>
+<item><title>纤维素：地球上最沉默的分子… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3380716-1558141.html</link></item>
+<item><title>细胞衰老机制出人意料的新结… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1557909.html</link></item>
+<item><title>新书推介：在人工智能、虚拟… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3574014-1558602.html</link></item>
+<item><title>韩国延世大学Min-gu Kim等: … - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3411509-1558135.html</link></item>
+<item><title>生物进化史上五次宏生境跃迁 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-39359-1556996.html</link></item>
+<item><title>SCI论文润色机构怎么选？AI… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-1232242-1556903.html</link></item>
+<item><title>Frontiers旗舰刊 Frontiers … - 科学网博客</title><link>http://blog.sciencenet.cn/blog-3465500-1556883.html</link></item>
+<item><title>四则振奋人心的科学新闻 - 科学网博客</title><link>http://blog.sciencenet.cn/blog-41174-1556845.html</link></item>
+<item><title>封面文章 | hLife：设计新型… - 科学网博客</title><link>http://blog.sciencenet.cn/blog-45-1556586.html</link></item>
+<item><title>&amp;#39;You Can See Everything&amp;#39; - Variety</title><link>https://variety.com/t/you-can-see-everything</link></item>
+<item><title>‘You Can See Everything’ Lands at No. 1 - Variety</title><link>https://variety.com/2026/film/box-office/box-office-you-can-see-everything-clayface-1236936071/</link></item>
+<item><title>‘Criminal Minds: Evolution’ to End With Season 20 at Paramount+ - Variety</title><link>https://variety.com/2026/tv/news/criminal-minds-evolution-final-season-20-paramount-1236935501/</link></item>
+<item><title>Maya Jama on That Shocking ‘Celebrity Traitors’ Finale, [SPOILER]’s Betrayal and ‘Heated’ Last Roundtable - Variety</title><link>https://variety.com/2026/tv/global/maya-jama-celebrity-traitors-finale-king-kenny-betrayal-1236936270/</link></item>
+<item><title>&amp;#39;It: Welcome to Derry&amp;#39; Surprise Halloween Episode Drops on HBO Max - Variety</title><link>https://variety.com/2026/tv/news/it-welcome-to-derry-halloween-special-hbo-max-1236936137/</link></item>
+<item><title>Reese Witherspoon’s Hello Sunshine Cuts 50% of Employees After Actress Buys Back Company - Variety</title><link>https://variety.com/2026/tv/news/reese-witherspoon-hello-sunshine-layoff-1236935287/</link></item>
+<item><title>Best Celebrity Halloween Costumes: Kim Kardashian as North West, Paris Hilton as Britney Spears and More - Variety</title><link>https://variety.com/lists/best-celebrity-halloween-costumes/</link></item>
+<item><title>Martin Scorsese Says His ‘Cleopatra’ Movie With Angelina Jolie Was ‘Ruined’ by Seth Rogen and the Sony Hack: ‘It Was Gonna Be Really Wild… - Variety</title><link>https://variety.com/2026/film/news/martin-scorsese-cleopatra-angelina-jolie-ruined-sony-hack-1236935596/</link></item>
+<item><title>Bill Maher Fact-Checks Kid Rock After He Compares Abdul El-Sayed to 9/11 Hijackers on &amp;#39;Real Time&amp;#39; - Variety</title><link>https://variety.com/2026/tv/news/kid-rock-abdul-el-sayed-9-11-hijackers-real-time-bill-maher-1236935914/</link></item>
+<item><title>Jack Nicholson Has &amp;#39;Disappeared&amp;#39; but Is &amp;#39;Well,&amp;#39; Says Michael Douglas: &amp;#39;I Still See Him&amp;#39; - Variety</title><link>https://variety.com/2026/film/news/jack-nicholson-retired-michael-douglas-1236936249/</link></item>
+<item><title>Two Arrested in Murder of ‘SNL’ Writer’s Sister - Variety</title><link>https://variety.com/2026/tv/news/arrests-murder-christina-downer-jimmy-fowlie-1236935631/</link></item>
+<item><title>William Shatner and ‘Star Trek’ Family Mourn Patrick Stewart With Picard Tributes: ‘Godspeed, Captain’ - Variety</title><link>https://variety.com/2026/tv/news/william-shatner-star-trek-patrick-stewart-picard-tributes-1236934479/</link></item>
+<item><title>Patrick Stewart Dies: Marvel, Kevin Feige Praise ‘X-Men’ Icon For Bringing ‘Charles Xavier to Life With Grace, Intelligence and Humanity… - Variety</title><link>https://variety.com/2026/film/news/patrick-stewart-death-marvel-kevin-feige-tributes-x-men-1236934424/</link></item>
+<item><title>Ozu Shapes Mishima Yukiko’s Tokyo Competition Title ‘Two Cigarettes, Three Nights’ - Variety</title><link>https://variety.com/2026/film/festivals/ozu-mishima-yukiko-two-cigarettes-three-nights-1236935944/</link></item>
+<item><title>Alex Gibney-Produced ‘Mohabat,’ Directed by James Longley, Wins at Ji.hlava: The Film Is ‘Meticulously Researched and Exquisitely Crafted’ - Variety</title><link>https://variety.com/2026/film/awards/alex-gibney-mohabat-james-longley-winner-jihlava-1236935998/</link></item>
+<item><title>‘Paper Plane,’ ‘Helicopter’ and ‘Old Bogus Massacre’ Among Austin Film Festival Script and Film Competition Award Winners (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/news/austin-film-festival-script-film-award-winners-1236936233/</link></item>
+<item><title>Selma Blair Apologizes for Plane Incident: ‘I Am So Sorry’ - Variety</title><link>https://variety.com/2026/film/news/selma-blair-apologizes-plane-incident-1236935645/</link></item>
+<item><title>Léa Seydoux Getting American Cinematheque Retrospective (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/news/lea-seydoux-american-cinematheque-retrospective-1236935548/</link></item>
+<item><title>Phoebe Bridgers Makes L.A.’s Intuit Dome Into an Intimate Space Full of Love, Grief, Light Shows, ‘Peter Pan’ Cosplay and a Great Billie Eilish Duet: Concert Review - Variety</title><link>https://variety.com/2026/music/concert-reviews/phoebe-bridgers-concert-review-billie-eilish-intuit-dome-1236936235/</link></item>
+<item><title>Judge Dismisses Trump’s Wall Street Journal Defamation Lawsuit Over Published Epstein ‘Birthday Book’ for a Second Time - Variety</title><link>https://variety.com/2026/biz/news/judge-dismisses-trump-wsj-defamation-lawsuit-epstein-1236936423/</link></item>
+<item><title>Tokyo Asian Future Drama ‘Jani Be Good’ Probes Silence and Motherhood in a Chinese-Indonesian Family, Marking Ariani Darmawan’s Return - Variety</title><link>https://variety.com/2026/film/festivals/tokyo-drama-jani-be-good-silence-motherhood-1236936404/</link></item>
+<item><title>‘Green Room’ Director Remembers Patrick Stewart as a ‘F—ing Sweetheart’ and Credits Him for Rescuing the Film: He ‘Swooped Down’ ‘Into Our Cruddy Ass Movie and Saved Us’ - Variety</title><link>https://variety.com/2026/film/news/green-room-director-patrick-stewart-1236936405/</link></item>
+<item><title>Frank Miller on Why He’s Relieved There Are Fewer Comic Book Adaptations Now: They Were ‘Really in Danger of Losing Their Souls’ - Variety</title><link>https://variety.com/2026/film/global/frank-miller-comic-book-movies-lucca-1236936369/</link></item>
+<item><title>‘Before the Rain’ Director Milcho Manchevski on Tokyo Competition Title ‘Sister Brother Manhole Cover,’ Whistleblowing and the ‘Death of Beauty’ in Cinema - Variety</title><link>https://variety.com/2026/film/festivals/before-the-rain-director-manchevski-corruption-death-of-beauty-1236936399/</link></item>
+<item><title>Taika Waititi Slams ‘Klara and the Sun’ Critics as ‘Irrelevant,’ ‘Sad Lost Souls’ and Says He Hasn’t ‘Read a Review’ in 15 Years: ‘But I Do Listen to the People’ - Variety</title><link>https://variety.com/2026/film/news/taika-waititi-defends-klara-and-the-sun-1236936368/</link></item>
+<item><title>Paul Bettany Says He ‘Blew Out’ 10 Blood Vessels in His Eye While Filming ‘VisionQuest’: ‘I Was Just Wildly Overacting’ - Variety</title><link>https://variety.com/2026/tv/news/paul-bettany-visionquest-eye-blood-vessels-1236936359/</link></item>
+<item><title>Amy Poehler: ‘Comedy Has Saved My Life Many Times’ - Variety</title><link>https://variety.com/2026/tv/news/amy-poehler-comedy-has-saved-my-life-1236936332/</link></item>
+<item><title>‘The Devils’ - Variety</title><link>https://variety.com/2026/film/news/blood-blasphemy-and-boning-ken-russells-the-devils-turns-55-at-cannes-1236751045/</link></item>
+<item><title>‘Percy Jackson’ Stars on Learning to Scream and Sob on Set of Season 3: ‘I Love Playing the Dark Type of Scenes’ - Variety</title><link>https://variety.com/2026/tv/global/percy-jackson-season-3-lucca-1236936128/</link></item>
+<item><title>Music Industry Moves: Chris Young Signs With UTA; Kurt Vile Re-Ups With Third Side Publishing - Variety</title><link>https://variety.com/2026/music/news/mary-j-blige-sells-music-catalogs-primary-wave-1236931287/</link></item>
+<item><title>&amp;#39;The Mosquito Bowl&amp;#39; Star Tom Francis on Singing in the Movie Last Minute and the &amp;#39;Visceral and Intense&amp;#39; World War II Scenes - Variety</title><link>https://variety.com/2026/film/columns/mosquito-bowl-tom-francis-singing-visceral-intense-wwii-1236931824/</link></item>
+<item><title>Aerosmith Joined by Dave Grohl and Johnny Depp at Hollywood Bowl for First Show in Three Years, as GNR and Black Crowes Open With Tribute Sets… - Variety</title><link>https://variety.com/2026/music/concert-reviews/aerosmith-hollywood-bowl-dave-grohl-johnny-depp-guns-roses-1236934897/</link></item>
+<item><title>David Bowie’s Immersive ‘Stage’ Concert Experience: Director Brett Morgen on the Show, the Artist and the Archive (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/music/news/david-bowie-stage-concert-documentary-brett-morgen-speaks-1236934780/</link></item>
+<item><title>‘A Few Good Men’ Review: Broadway Revival Breathes New Life Into Aaron Sorkin’s Courtroom Classic - Variety</title><link>https://variety.com/2026/legit/reviews/a-few-good-men-review-broadway-revival-aaron-sorkin-bradley-whitford-1236935521/</link></item>
+<item><title>Patrick Stewart, ‘Star Trek’s’ Captain Picard and ‘X-Men’s’ Charles Xavier, Dies at 86 - Variety</title><link>https://variety.com/2026/tv/news/patrick-stewart-dead-star-trek-picardx-men-xavier-1236934412/</link></item>
+<item><title>Variety Nominated for 62 National Arts &amp; Entertainment Journalism Awards - Variety</title><link>https://variety.com/2026/digital/news/variety-nominated-arts-entertainment-journalism-awards-1236932466/</link></item>
+<item><title>Lisa Rinna, Phaedra Parks, Dolores Catania and More ‘Real Housewives’ to Star in Revival of Neil Simon’s ‘Rumors’ - Variety</title><link>https://variety.com/2026/legit/news/real-housewives-lisa-rinna-phaedra-parks-dolores-catania-neil-simon-rumors-revival-1236932105/</link></item>
+<item><title>‘The Mosquito Bowl’: How a Parrot Proved to Be Peter Berg’s Biggest Challenge - Variety</title><link>https://variety.com/2026/artisans/news/the-mosquito-bowl-peter-berg-parrot-1236935619/</link></item>
+<item><title>‘Shaun the Sheep: The Beast of Mossy Bottom’ Director on Why AI Is Not a Threat: ‘There’s a Desire to See the Craft Behind the Finished Product… - Variety</title><link>https://variety.com/2026/film/global/shaun-the-sheep-mossy-bottom-director-ai-animation-1236933410/</link></item>
+<item><title>How Kazu Hiro Transformed Tom Cruise Into &amp;#39;Digger&amp;#39; With Prosthetics for His Belly, Nose and Chin - Variety</title><link>https://variety.com/2026/artisans/news/tom-cruise-prosthetics-digger-kazu-hiro-1236931707/</link></item>
+<item><title>SCAD Film Studios Expands Backlot With New Soundstages, More Than 50 Backlot Facades - Variety</title><link>https://variety.com/2026/artisans/news/savannah-college-of-art-and-design-backlot-expansion-1236930334/</link></item>
+<item><title>Why Olivia Colman Didn&amp;#39;t Get Splinters From Getting Intimate With Alexander Skarsgård’s ‘Wicker’ Costume - Variety</title><link>https://variety.com/2026/artisans/news/what-alexander-skarsgard-wicker-basket-was-made-from-1236929863/</link></item>
+<item><title>Rom-Com ‘Eavesdropping’ Tests the Future of Scripted Social Video - Variety</title><link>https://variety.com/2026/tv/news/eavesdropping-kaleigh-howland-nicolas-ayalo-sullivan-1236934845/</link></item>
+<item><title>AI Vocal Modifier Voicemod Inks Disney Deal to Add Star Wars, Marvel Soundboards to Platform - Variety</title><link>https://variety.com/2026/digital/news/ai-voicemod-disney-star-wars-marvel-soundboards-1236934834/</link></item>
+<item><title>Amazon Ad Revenue Growth Slows in Q3, Ecommerce Giant Undershoots Earnings Estimates - Variety</title><link>https://variety.com/2026/digital/news/amazon-q3-2026-earnings-1236934415/</link></item>
+<item><title>People Inc. Lays Off 195 Staffers, About 6% of Workforce, With CEO Citing ‘Rapid Changes in Media’ - Variety</title><link>https://variety.com/2026/digital/news/people-inc-layoffs-ceo-memo-1236934389/</link></item>
+<item><title>Joshua Jackson Teases &amp;#39;Sex, Drugs and Rock ‘n’ Roll&amp;#39; in New HBO Max Series &amp;#39;How to Survive Without Me&amp;#39;: &amp;#39;I’m Getting Too Old For This… - Variety</title><link>https://variety.com/2026/tv/columns/joshua-jackson-hbo-max-series-how-to-survive-without-me-1236936000/</link></item>
+<item><title>&amp;#39;Obsession&amp;#39; Director Curry Barker Pitched Nathan Fielder a Collaboration After Watching &amp;#39;You Can See Everything&amp;#39;: &amp;#39;I Put It Out in the Water&amp;#39; - Variety</title><link>https://variety.com/2026/film/news/curry-barker-nathan-fielder-pitch-you-can-see-everything-1236935473/</link></item>
+<item><title>&amp;#39;Harry Potter&amp;#39; Actor Paapa Essiedu &amp;#39;Wouldn&amp;#39;t Have Taken This Job On&amp;#39; If He Couldn&amp;#39;t Handle Snape Casting Backlash: &amp;#39;My Priority Is the Work&amp;#39; - Variety</title><link>https://variety.com/2026/tv/news/harry-potter-paapa-essiedu-snape-casting-backlash-hbo-1236935300/</link></item>
+<item><title>Original ‘Hunger Games’ Star Elizabeth Banks Praises &amp;#39;Sunrise on the Reaping&amp;#39; as ‘Amazing’: Joseph Zada Is a ‘Perfect… - Variety</title><link>https://variety.com/2026/film/columns/hunger-games-elizabeth-banks-sunrise-on-the-reaping-joseph-zada-1236934165/</link></item>
+<item><title>Quentin Tarantino Surprises Fans With 17 Minutes of &amp;#39;The Further Mis-Adventures of Cliff Booth&amp;#39; at AFI Fest - Variety</title><link>https://variety.com/2026/film/news/quentin-tarantino-further-mis-adventures-of-cliff-booth-preview-1236930220/</link></item>
+<item><title>Hotel and Travel Industry Groups Back U.S. Film Incentive as Tourism Draw - Variety</title><link>https://variety.com/2026/film/news/hotel-travel-industry-film-incentive-tourism-1236935564/</link></item>
+<item><title>California Begins Discussion on Unlimited Film Incentives: ‘That Is a Heavy Lift’ - Variety</title><link>https://variety.com/2026/film/news/california-film-incentives-unlimited-1236934661/</link></item>
+<item><title>Hasan Piker Sues Scott Jennings for $72 Million Over Out-of-Context Lynching Quote - Variety</title><link>https://variety.com/2026/politics/news/hasan-piker-scott-jennings-lynching-quote-suit-1236932558/</link></item>
+<item><title>Rick Caruso Stays in the L.A. Conversation With Memoir of a Life Spent Building Businesses and Handling Crises - Variety</title><link>https://variety.com/2026/biz/news/rick-caruso-memoir-breaking-new-ground-karen-bass-1236931601/</link></item>
+<item><title>Sacha Baron Cohen Says Donald Trump Has &amp;#39;Elements of Brilliance&amp;#39; and &amp;#39;We Were Too Easy to Dismiss Him as a Nincompoop&amp;#39; - Variety</title><link>https://variety.com/2026/film/news/sacha-baron-cohen-donald-trump-brilliance-nincompoop-ali-g-1236930008/</link></item>
 </channel></rss>
