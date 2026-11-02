@@ -299,7 +299,7 @@ function search_offline_file_browser(csstr='',isreg=-1,csmax=-1,csunique=-1,show
         csunique=klmenu_check_b('span_unique_ofb',false);
     }
     
-    var same_dir_len=parseInt(document.getElementById('input_same_dir_ofb').value.trim());
+    var same_dir_len=parseInt((document.getElementById('input_same_dir_ofb')?.value || '4').trim());
     
     var check_path_name=klmenu_check_b('span_path_name_ofb',false);
     var blxl=1;
