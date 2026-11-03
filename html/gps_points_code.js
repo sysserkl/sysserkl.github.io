@@ -1589,6 +1589,58 @@ function remove_navigation_gps_points(){
     lte_list_leaflet_global=[]; //全局变量
 }
 
+function gpx2kml_points_gps_points(){
+    var otextarea=document.getElementById('textarea_gps_points');
+    var blstr=otextarea.value;
+    var bltype=document.getElementById('select_transform').value;   
+    var list_t=blstr.split('<trk>');    //有几条线路就有几个 trk - 保留注释
+    var point_list=[];
+    var bldistance=parseInt(document.getElementById('input_kml_distance').value.trim());
+    for (let blxl=1,lent=list_t.length;blxl<lent;blxl++){ //忽略第1个元素 - 保留注释
+        let result_list=trkpt2points_leaft_b(list_t[blxl],bltype);
+        if (result_list.length==0){continue;}
+        point_list.push(result_list[0]);
+        
+        if (result_list.length<2){continue;}
+        
+        let bllen=0;
+        for (let blno=1,lenb=result_list.length-1;blno<lenb;blno++){
+            let latlng1 = L.latLng(result_list[blno-1]);
+            let latlng2 = L.latLng(result_list[blno]);
+            bllen=bllen+latlng1.distanceTo(latlng2);    //线条长度计算 - 保留注释
+            if (bllen>=bldistance){
+                point_list.push(result_list[blno]);
+                bllen=0;
+            }
+        }
+        point_list.push(result_list[result_list.length-1]);
+    }
+    
+    var bllen=point_list.length;
+    if (confirm('获取了 '+bllen+' 个点，是否替换？')==false){return;}
+
+    for (let blxl=0;blxl<bllen;blxl++){
+        let blname=(blxl%100==0?blxl+':'+bldistance:blxl);
+        point_list[blxl]=`<Placemark>
+<name>${blname}</name>
+<Point>
+<coordinates>${point_list[blxl][1]},${point_list[blxl][0]}</coordinates>
+</Point>
+</Placemark>`;
+    }
+    
+    var blname=recent_gpx_file_get_gps_points()[0];
+otextarea.value=
+`<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:gx="http://www.google.com/kml/ext/2.2">
+<Document>
+<name>${blname}</name>
+${point_list.join('\n')}
+</Document>
+</kml>
+`
+}
+
 function gpx_from_textarea_gps_points(){
     var blstr=document.getElementById('textarea_gps_points').value;
     read_gpx_gps_points(blstr,'');
@@ -1729,10 +1781,16 @@ function menu_gps_points(){
     
     klmenu_gpx=klmenu_gpx.concat([
     idb_menu_generate_bigfile_b('gpx','select_big_file_gpx_gps_points',blparent,'import_bigfile_gps_points'),
-    '<span class="span_menu" onclick="'+str_t+'gpx_from_textarea_gps_points();">从编辑框显示GPX图形</span>',
     '<span class="span_menu" onclick="'+str_t+'latlon_2_gpx_gps_points();">lat,lon to GPX file format</span>',
     ]);
 
+    var group_list=[
+    ['显示GPX图形','gpx_from_textarea_gps_points();',true],   
+    ['转换为高德kml点图','gpx2kml_points_gps_points();',true],   
+    ['<input type="number" id="input_kml_distance" value=50 min=1 title="间隔距离(米)" style="width:4rem;" />','',false],    
+    ];    
+    klmenu_gpx.push(menu_container_b(str_t,group_list,'从编辑框：'));    
+    
     var group_list=[
     ['⚪ 转换gpx为纬度,经度点','klmenu_check_b(this.id);',true,'span_gpx_2_latlon'],   
     ['⚪ 行军箭头','klmenu_check_b(this.id);',false,'span_march_arrow'],   
@@ -1866,7 +1924,7 @@ function menu_gps_points(){
     
     klmenu_config=klmenu_config.concat(root_font_size_menu_b(str_t,false,true,false,true,'textarea_gps_points'));
         
-    document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','26rem','1rem','1rem','60rem')+klmenu_b(klmenu_dots,'','39rem','1rem','1rem','60rem')+klmenu_b(klmenu_district,'📍','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','38rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('input_upload_gpx').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu_gpx,'⛰','30rem','1rem','1rem','60rem')+klmenu_b(klmenu_dots,'','39rem','1rem','1rem','60rem')+klmenu_b(klmenu_district,'📍','24rem','1rem','1rem','60rem')+klmenu_b(klmenu_link,'L','18rem','1rem','1rem','60rem')+klmenu_b(klmenu_config,'⚙','38rem','1rem','1rem','60rem'),'','0rem')+' ');
     
     klmenu_check_b('span_line_no_gps',true);        
 

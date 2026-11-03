@@ -1062,7 +1062,7 @@ function gpx_name_get_leaftlet_b(csstr,csname=''){
     return [blname,bltime,ele_list];
 }
 
-function trkpt2points_leaft_b(cslist,cstype,cscolors,line_color_list){
+function trkpt2points_leaft_b(cslist,cstype,cscolors=false,line_color_list=false){
     var result_list=[];
     var trkpts=cslist.split('<trkpt ');
     //trkpts 的元素形如：
@@ -1082,6 +1082,9 @@ function trkpt2points_leaft_b(cslist,cstype,cscolors,line_color_list){
         }
     }
     //result_list 的元素形如：[ 30.295529, 120.094982 ] - 保留注释
+    if (cscolors===false || line_color_list===false){
+        return result_list;
+    }
     
     cscolors[0]=line_color_list[gpx_line_color_no_global % line_color_list.length];
     gpx_line_color_no_global=gpx_line_color_no_global+1;
@@ -1137,7 +1140,6 @@ function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolor
     //cscolors 形如：[ "blue:red:green:brown:greenyellow:cyan:black:tomato:dodgerblue:hotpink:indianred:purple", "cyan", "red" ] - 保留注释
     //is_line_no_style 数字编号 - 保留注释
     var all_points=[];
-    var list_t=csstr.split('<trk>');    //有几条线路就有几个 trk - 保留注释
 
     var line_color_list=cscolors[0].split(':');
     var blname,bltime,blele;
@@ -1145,6 +1147,7 @@ function gpx_file_draw_leaflet_b(onavigation,omap,csstr,cstype,csname='',cscolor
     
     lte_list_leaflet_global=[]; //全局变量
     var result_list;
+    var list_t=csstr.split('<trk>');    //有几条线路就有几个 trk - 保留注释
     for (let blxl=1,lent=list_t.length;blxl<lent;blxl++){ //忽略第1个元素 - 保留注释
         [blname,bltime,blele]=gpx_name_get_leaftlet_b(list_t[blxl],csname);   //time_list - 保留注释
 
