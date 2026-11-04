@@ -8,15 +8,272 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Tue, 03 Nov 2026 08:38:46 +0800</lastBuildDate>
-<item><title>鳄鱼为何免受毁灭恐龙的小行星的影响？ - Solidot</title><link>https://www.solidot.org/story?sid=85777</link></item>
-<item><title>小鼠研究显示阉割有助于长寿 - Solidot</title><link>https://www.solidot.org/story?sid=85776</link></item>
-<item><title>比利时瑞典超市冷冻冷藏设备遭遇网络攻击 - Solidot</title><link>https://www.solidot.org/story?sid=85775</link></item>
-<item><title>鸟类遗传多样性显著下降 - Solidot</title><link>https://www.solidot.org/story?sid=85774</link></item>
-<item><title>Proton 全力推动工程师转向 AI - Solidot</title><link>https://www.solidot.org/story?sid=85773</link></item>
-<item><title>Steam 用户中使用 Linux 比例占 3.95% - Solidot</title><link>https://www.solidot.org/story?sid=85772</link></item>
-<item><title>小鼠研究发现骨骼在运动中会释放延缓衰老和延寿的蛋白质 - Solidot</title><link>https://www.solidot.org/story?sid=85771</link></item>
-<item><title>Linux 7.4-rc1 释出 - Solidot</title><link>https://www.solidot.org/story?sid=85770</link></item>
-<item><title>Stack Overflow 表示它还活着 - Solidot</title><link>https://www.solidot.org/story?sid=85769</link></item>
-<item><title>币安恢复提现后净流出 36.4 亿美元资产 - Solidot</title><link>https://www.solidot.org/story?sid=85768</link></item>
+<lastBuildDate>Wed, 04 Nov 2026 08:54:57 +0800</lastBuildDate>
+<item><title>iOS 27.3 Adds Vertical Tabs, Adaptive Dark Mode to Safari - Slashdot</title><link>https://tech.slashdot.org/story/26/11/03/2347212/ios-273-adds-vertical-tabs-adaptive-dark-mode-to-safari</link></item>
+<item><title>EU Court Advisor Warns Google AI Chatbot May Breach Copyright Rules - Slashdot</title><link>https://yro.slashdot.org/story/26/11/03/2144244/eu-court-advisor-warns-google-ai-chatbot-may-breach-copyright-rules</link></item>
+<item><title>Bethesda Confirms The Elder Scrolls 6 Is Called &amp;#39;Sentinel&amp;#39; - Slashdot</title><link>https://games.slashdot.org/story/26/11/03/2113209/bethesda-confirms-the-elder-scrolls-6-is-called-sentinel</link></item>
+<item><title>Firefox&amp;#39;s New Mini Window Is Every Multitasker&amp;#39;s Dream - Slashdot</title><link>https://news.slashdot.org/story/26/11/03/214205/firefoxs-new-mini-window-is-every-multitaskers-dream</link></item>
+<item><title>Binance Says Hackers Used Fake Job Interviews, AI Tool to Steal $6.3 Billion In Crypto - Slashdot</title><link>https://it.slashdot.org/story/26/11/03/1939254/binance-says-hackers-used-fake-job-interviews-ai-tool-to-steal-63-billion-in-crypto</link></item>
+<item><title>Fujifilm To Boost Tape Production 5x As AI Fuels Archiving Demand - Slashdot</title><link>https://hardware.slashdot.org/story/26/11/03/190206/fujifilm-to-boost-tape-production-5x-as-ai-fuels-archiving-demand</link></item>
+<item><title>Google Will Turn Off Search For Schools That Reject AI - Slashdot</title><link>https://news.slashdot.org/story/26/11/03/1711242/google-will-turn-off-search-for-schools-that-reject-ai</link></item>
+<item><title>SUSE To Cut One In Ten Employees Because of AI - Slashdot</title><link>https://linux.slashdot.org/story/26/11/03/0620205/suse-to-cut-one-in-ten-employees-because-of-ai</link></item>
+<item><title>MIT Researchers Used GPT-6 Astra To Edit Qwen&amp;#39;s Open Weights Directly, Boosting Math Scores - Slashdot</title><link>https://science.slashdot.org/story/26/11/03/0537252/mit-researchers-used-gpt-6-astra-to-edit-qwens-open-weights-directly-boosting-math-scores</link></item>
+<item><title>Cops Bust Botnet of 1.3 Million Android TV Boxes - Slashdot</title><link>https://it.slashdot.org/story/26/11/03/0558219/cops-bust-botnet-of-13-million-android-tv-boxes</link></item>
+<item><title>China Publicly Discloses Plan For a Lunar Landing Within Three Years - Slashdot</title><link>https://science.slashdot.org/story/26/11/03/0550259/china-publicly-discloses-plan-for-a-lunar-landing-within-three-years</link></item>
+<item><title>BYD Sold More EVs Last Month Than the US Did All Quarter - Slashdot</title><link>https://tech.slashdot.org/story/26/11/03/0243238/byd-sold-more-evs-last-month-than-the-us-did-all-quarter</link></item>
+<item><title>Snap Reaches Settlement In Social Media Addiction Lawsuit Ahead of Trial - Slashdot</title><link>https://tech.slashdot.org/story/26/11/02/2047236/snap-reaches-settlement-in-social-media-addiction-lawsuit-ahead-of-trial</link></item>
+<item><title>Study Claims Vizio Simply Ignores &amp;#39;Smart&amp;#39; TV Spying Opt Out Requests - Slashdot</title><link>https://entertainment.slashdot.org/story/26/11/02/2043259/study-claims-vizio-simply-ignores-smart-tv-spying-opt-out-requests</link></item>
+<item><title>Apple HomeView Ultra, Drone and Laundry-Folding Robot Reportedly In Development - Slashdot</title><link>https://hardware.slashdot.org/story/26/11/02/2033238/apple-homeview-ultra-drone-and-laundry-folding-robot-reportedly-in-development</link></item>
+<item><title>Civilizing Markets - Law &amp; Liberty</title><link>https://lawliberty.org/podcast/civilizing-markets/</link></item>
+<item><title>Reflections on a County Election - Law &amp; Liberty</title><link>https://lawliberty.org/reflections-on-a-county-election/</link></item>
+<item><title>Governing Games - Law &amp; Liberty</title><link>https://lawliberty.org/forum/governing-games/</link></item>
+<item><title>Madison’s Toleration - Law &amp; Liberty</title><link>https://lawliberty.org/madisons-toleration/</link></item>
+<item><title>Buckley’s Truth - Law &amp; Liberty</title><link>https://lawliberty.org/forum/buckleys-truth/</link></item>
+<item><title>Washington Irving’s American Ghost - Law &amp; Liberty</title><link>https://lawliberty.org/washington-irvings-american-ghost/</link></item>
+<item><title>Introducing The Short Queue - Law &amp; Liberty</title><link>https://lawliberty.org/the-short-queue/introducing-the-short-queue/</link></item>
+<item><title>纽约时报等起诉 Brave 绕过付费墙抓取内容并提供给 AI 公司 - Solidot</title><link>https://www.solidot.org/story?sid=85788</link></item>
+<item><title>Google 将对拒绝 AI 的美国学校关闭搜索 - Solidot</title><link>https://www.solidot.org/story?sid=85787</link></item>
+<item><title>Fedora Linux 45 释出 - Solidot</title><link>https://www.solidot.org/story?sid=85786</link></item>
+<item><title>科学家发现 1.15 亿年前的恐龙红细胞 - Solidot</title><link>https://www.solidot.org/story?sid=85785</link></item>
+<item><title>Enlightenment 0.28.0 释出，初步支持 BSD - Solidot</title><link>https://www.solidot.org/story?sid=85783</link></item>
+<item><title>Tor Browser 16.0 释出 - Solidot</title><link>https://www.solidot.org/story?sid=85781</link></item>
+<item><title>Swift 天文台将于 11 月 4 日重返大气层 - Solidot</title><link>https://www.solidot.org/story?sid=85780</link></item>
+<item><title>北欧将可能出现 40°C 高温 - Solidot</title><link>https://www.solidot.org/story?sid=85779</link></item>
+<item><title>国际空间站 PrK 模块因漏气被关闭 - Solidot</title><link>https://www.solidot.org/story?sid=85778</link></item>
+<item><title>汪建新：从毛泽东诗词感悟长征精神 - 爱思想</title><link>https://www.aisixiang.com/data/184827.html</link></item>
+<item><title>陶东风：略萨小说与易谬论的思想实 - 爱思想</title><link>https://www.aisixiang.com/data/184922.html</link></item>
+<item><title>赵燕菁：应对收缩的规划 - 爱思想</title><link>https://www.aisixiang.com/data/184897.html</link></item>
+<item><title>薛琳：深刻领悟长征制胜之道的历史 - 爱思想</title><link>https://www.aisixiang.com/data/184861.html</link></item>
+<item><title>邹玉祥：民营经济平等保护的刑法意 - 爱思想</title><link>https://www.aisixiang.com/data/184965.html</link></item>
+<item><title>石仲泉：西路军精神同长征精神一脉 - 爱思想</title><link>https://www.aisixiang.com/data/184941.html</link></item>
+<item><title>王艺洁 王国豫：从“自主”走向“ - 爱思想</title><link>https://www.aisixiang.com/data/184846.html</link></item>
+<item><title>中国共产党第二十届中央委员会第五 - 爱思想</title><link>https://www.aisixiang.com/data/184891.html</link></item>
+<item><title>欧阳淞：从体系化角度全面把握习近 - 爱思想</title><link>https://www.aisixiang.com/data/184850.html</link></item>
+<item><title>张荟：论斯多亚派最好世界中的“非 - 爱思想</title><link>https://www.aisixiang.com/data/184831.html</link></item>
+<item><title>周庆智：现代国家建构中的“乡村问 - 爱思想</title><link>https://www.aisixiang.com/data/184998.html</link></item>
+<item><title>原磊：推动金融更好服务新质生产力 - 爱思想</title><link>https://www.aisixiang.com/data/184852.html</link></item>
+<item><title>胡泳：能力上移：AI时代为什么更 - 爱思想</title><link>https://www.aisixiang.com/data/184848.html</link></item>
+<item><title>魏希楠：长征中党的军事战略指导的 - 爱思想</title><link>https://www.aisixiang.com/data/184925.html</link></item>
+<item><title>董坤：新《监察法》中人权保障原则 - 爱思想</title><link>https://www.aisixiang.com/data/184853.html</link></item>
+<item><title>从“安澜”到“通衢”——党领导人 - 爱思想</title><link>https://www.aisixiang.com/data/185090.html</link></item>
+<item><title>黄文燕：新的文化生命体如何生成 - 爱思想</title><link>https://www.aisixiang.com/data/185036.html</link></item>
+<item><title>代玉启：把文化自信融入全民族的精 - 爱思想</title><link>https://www.aisixiang.com/data/185035.html</link></item>
+<item><title>张云飞：中国生态哲学自主知识体系 - 爱思想</title><link>https://www.aisixiang.com/data/184892.html</link></item>
+<item><title>陈静静：琉球的苦难，背后是日美同 - 爱思想</title><link>https://www.aisixiang.com/data/184873.html</link></item>
+<item><title>杨福泉：加大文化建设力度 推动文 - 爱思想</title><link>https://www.aisixiang.com/data/184803.html</link></item>
+<item><title>刘庆柱：黄河文化的“中华文明突出 - 爱思想</title><link>https://www.aisixiang.com/data/184781.html</link></item>
+<item><title>杨生平：“文化生命体”的文明特质 - 爱思想</title><link>https://www.aisixiang.com/data/184713.html</link></item>
+<item><title>邢晓婧：美军暴行为何在琉球频频发 - 爱思想</title><link>https://www.aisixiang.com/data/184705.html</link></item>
+<item><title>邓曲恒：加快推进高水平科技自立自 - 爱思想</title><link>https://www.aisixiang.com/data/185086.html</link></item>
+<item><title>王国祯：数学家的使命远远不只是做 - 爱思想</title><link>https://www.aisixiang.com/data/185062.html</link></item>
+<item><title>陆园园：统筹多元主体提升基础研究 - 爱思想</title><link>https://www.aisixiang.com/data/184933.html</link></item>
+<item><title>中国工程院院士丁一汇深耕气象科研 - 爱思想</title><link>https://www.aisixiang.com/data/184932.html</link></item>
+<item><title>励建书院士：AI与数学相遇，将把 - 爱思想</title><link>https://www.aisixiang.com/data/184931.html</link></item>
+<item><title>徐龙建：我愿以身许国——走进王淦 - 爱思想</title><link>https://www.aisixiang.com/data/184921.html</link></item>
+<item><title>储峰 游志斌：把制度优势转化为科 - 爱思想</title><link>https://www.aisixiang.com/data/184883.html</link></item>
+<item><title>吴滨：重点提升前沿技术战略预判能 - 爱思想</title><link>https://www.aisixiang.com/data/184865.html</link></item>
+<item><title>平劲松：加快构建月球表面标准时间 - 爱思想</title><link>https://www.aisixiang.com/data/184864.html</link></item>
+<item><title>王扬宗：“十年磨一剑”需制度支撑 - 爱思想</title><link>https://www.aisixiang.com/data/184819.html</link></item>
+<item><title>高嵩 黄晨：机载气象雷达：守护飞 - 爱思想</title><link>https://www.aisixiang.com/data/184750.html</link></item>
+<item><title>杨纲凯：缅怀杨振宁教授 - 爱思想</title><link>https://www.aisixiang.com/data/184707.html</link></item>
+<item><title>王沪宁：深刻认识持之以恒推进全面从严治党的重大意义 - 爱思想</title><link>https://www.aisixiang.com/data/185102.html</link></item>
+<item><title>申卫星：建设面向智能时代的个人信息保护制度 - 爱思想</title><link>https://www.aisixiang.com/data/185101.html</link></item>
+<item><title>王立新：研究水平的提升与世界史学科自主知识体系建设 - 爱思想</title><link>https://www.aisixiang.com/data/185100.html</link></item>
+<item><title>“绿水青山就是金山银山”——中国绿色发展之路 - 爱思想</title><link>https://www.aisixiang.com/data/185088.html</link></item>
+<item><title>陈军亚：新发展理念在县域的实践与成效 - 爱思想</title><link>https://www.aisixiang.com/data/185085.html</link></item>
+<item><title>李政涛：新时代我国教育法治建设与发展成就 - 爱思想</title><link>https://www.aisixiang.com/data/185094.html</link></item>
+<item><title>康有华：相邻纠纷解决的公私法交互支持模式构建 - 爱思想</title><link>https://www.aisixiang.com/data/185083.html</link></item>
+<item><title>谢红星：行政处罚认错认罚从宽的源流、现况与展望 - 爱思想</title><link>https://www.aisixiang.com/data/185080.html</link></item>
+<item><title>胡建淼：行政处罚与刑事处罚——“单罚”与“并罚”的选择 - 爱思想</title><link>https://www.aisixiang.com/data/185079.html</link></item>
+<item><title>唐宜红 符大海：内外联动推进高水平对外开放 - 爱思想</title><link>https://www.aisixiang.com/data/185091.html</link></item>
+<item><title>杨国才：三产融合为乡村全面振兴夯实产业根基 - 爱思想</title><link>https://www.aisixiang.com/data/185087.html</link></item>
+<item><title>叶振宇：因地制宜推动县域经济高质量发展 - 爱思想</title><link>https://www.aisixiang.com/data/185084.html</link></item>
+<item><title>马亮：警惕公共管理学中的“管理主义” - 爱思想</title><link>https://www.aisixiang.com/data/185098.html</link></item>
+<item><title>龚云：抓住“增强党性”就抓住管党治党的根与魂 - 爱思想</title><link>https://www.aisixiang.com/data/185097.html</link></item>
+<item><title>冯俊：在新的长征路上奋力创造新的辉煌 - 爱思想</title><link>https://www.aisixiang.com/data/185092.html</link></item>
+<item><title>彭萍萍：深刻把握和落实新时代党的建设总要求 - 爱思想</title><link>https://www.aisixiang.com/data/185089.html</link></item>
+<item><title>张振克：非洲现代化中的中非合作与中国贡献 - 爱思想</title><link>https://www.aisixiang.com/data/185082.html</link></item>
+<item><title>丁铎：亚太不需要美国算计出的“防务新框架” - 爱思想</title><link>https://www.aisixiang.com/data/185075.html</link></item>
+<item><title>傅聪：维护联合国、激活联合国、壮大联合国 - 爱思想</title><link>https://www.aisixiang.com/data/185069.html</link></item>
+<item><title>余静 张坤珵：为全球海洋生物多样性保护贡献中国方案 - 爱思想</title><link>https://www.aisixiang.com/data/185056.html</link></item>
+<item><title>杨娜 李思琦：新兴国际组织差异化扩员及其影响因素 - 爱思想</title><link>https://www.aisixiang.com/data/185016.html</link></item>
+<item><title>杰夫·斯平纳-哈莱夫等：民族认同与自尊 - 爱思想</title><link>https://www.aisixiang.com/data/184997.html</link></item>
+<item><title>黄凡 伍灿：健康中国视域下的各民族人口健康转变研究 - 爱思想</title><link>https://www.aisixiang.com/data/184995.html</link></item>
+<item><title>罗薇 安波 陈雅弘：认知人类学研究范式演进及转换 - 爱思想</title><link>https://www.aisixiang.com/data/184988.html</link></item>
+<item><title>巫强 卿石松 曾湘泉：被遮蔽的“数字劳作”：平台型数据劳动的价值形成机制与贡献测度 - 爱思想</title><link>https://www.aisixiang.com/data/184970.html</link></item>
+<item><title>刘黎明：增强中华优秀传统文化网上传播穿透力感召力 - 爱思想</title><link>https://www.aisixiang.com/data/185096.html</link></item>
+<item><title>相德宝 向江霖：加强长征精神的国际传播 - 爱思想</title><link>https://www.aisixiang.com/data/185095.html</link></item>
+<item><title>周庆安：新闻传播高层次人才实践教育的支撑和探索 - 爱思想</title><link>https://www.aisixiang.com/data/185000.html</link></item>
+<item><title>张艳红：推动中国故事和中国声音全球化、区域化、分众化表达 - 爱思想</title><link>https://www.aisixiang.com/data/184954.html</link></item>
+<item><title>王晓霞：让人们看到真实的长征——范长江对红军长征的报道 - 爱思想</title><link>https://www.aisixiang.com/data/184935.html</link></item>
+<item><title>张东刚：加强党对教材工作的全面领导 牢牢把握教材建设正确方向 - 爱思想</title><link>https://www.aisixiang.com/data/185099.html</link></item>
+<item><title>林成华：人工智能时代大学的核心使命是培育判断力 - 爱思想</title><link>https://www.aisixiang.com/data/185093.html</link></item>
+<item><title>王健：我国专业学位研究生教育政策话语的演变与创新 - 爱思想</title><link>https://www.aisixiang.com/data/185005.html</link></item>
+<item><title>王波：中国心理学自主知识体系构建的时代逻辑与实践路向 - 爱思想</title><link>https://www.aisixiang.com/data/184934.html</link></item>
+<item><title>陈红娟：分类评价能否重塑高校竞争逻辑 - 爱思想</title><link>https://www.aisixiang.com/data/184930.html</link></item>
+<item><title>陈影：世界文学与全人类共同价值探究 - 爱思想</title><link>https://www.aisixiang.com/data/185081.html</link></item>
+<item><title>王杰 陈玲芬：《诗经》中的廉德智慧 - 爱思想</title><link>https://www.aisixiang.com/data/185077.html</link></item>
+<item><title>郑敏 葛培岭：彩笔佳句　幽意浓情——贺铸《青玉案》 - 爱思想</title><link>https://www.aisixiang.com/data/185074.html</link></item>
+<item><title>袁行霈：千古绝唱——苏轼《念奴娇·赤壁怀古》 - 爱思想</title><link>https://www.aisixiang.com/data/185072.html</link></item>
+<item><title>张甲子：蒙以养正——以《唐诗三百首》为例 - 爱思想</title><link>https://www.aisixiang.com/data/185050.html</link></item>
+<item><title>谢锋：传承中山先生风范 汇聚民族复兴力量 - 爱思想</title><link>https://www.aisixiang.com/data/185070.html</link></item>
+<item><title>罗志田：无所适从的光宣新学：清末民初的清学总结与分期 - 爱思想</title><link>https://www.aisixiang.com/data/185061.html</link></item>
+<item><title>陈昊：文艺复兴时期教廷对罗马的古迹保护 - 爱思想</title><link>https://www.aisixiang.com/data/185052.html</link></item>
+<item><title>宋念申：从地图到空间实践：地图研究的新范式 - 爱思想</title><link>https://www.aisixiang.com/data/185051.html</link></item>
+<item><title>秦际明：论作为中国哲学诠释视域的中国政治哲学 - 爱思想</title><link>https://www.aisixiang.com/data/185065.html</link></item>
+<item><title>杨泽波：我为什么一再大声疾呼心学热该降点温了？ - 爱思想</title><link>https://www.aisixiang.com/data/185063.html</link></item>
+<item><title>韩震：从“第二个结合”看朱熹哲学思想的现代价值 - 爱思想</title><link>https://www.aisixiang.com/data/185054.html</link></item>
+<item><title>姜静：19世纪辩证唯物主义自然观的产生及其特征 - 爱思想</title><link>https://www.aisixiang.com/data/185053.html</link></item>
+<item><title>杨显：以治国平天下为己任——明代理学名臣丘濬的经世情怀 - 爱思想</title><link>https://www.aisixiang.com/data/185044.html</link></item>
+<item><title>张凯 张铭玥：胡玉堂：素心青简探寰瀛 - 爱思想</title><link>https://www.aisixiang.com/data/185047.html</link></item>
+<item><title>王小惠：“五四”思想革命对章太炎思想学术资源的接受与转化 - 爱思想</title><link>https://www.aisixiang.com/data/184960.html</link></item>
+<item><title>叶小沫：怀念我的父亲叶至善 - 爱思想</title><link>https://www.aisixiang.com/data/184870.html</link></item>
+<item><title>桑兵：写得好与写得好看——史学论文的写法 - 爱思想</title><link>https://www.aisixiang.com/data/184869.html</link></item>
+<item><title>齐卫平：学习领会科学的思想方法这一理论品格 - 爱思想</title><link>https://www.aisixiang.com/data/184862.html</link></item>
+<item><title>张丽：在文化荒原上点燃阅读火种——西澳大利亚州立图书馆的百年变迁与文脉守望 - 爱思想</title><link>https://www.aisixiang.com/data/185043.html</link></item>
+<item><title>王华宝：《史记·循吏列传》中的吏治理想 - 爱思想</title><link>https://www.aisixiang.com/data/185042.html</link></item>
+<item><title>劲挺：红尘赋（下卷）第47章 - 爱思想</title><link>https://www.aisixiang.com/data/184858.html</link></item>
+<item><title>劲挺：红尘赋（下卷）第46章 - 爱思想</title><link>https://www.aisixiang.com/data/184857.html</link></item>
+<item><title>孙吉胜，1971年5月生，吉林省人。法学博士。现任外交学院副院长、人类命运共同体研究中心副秘书..... - 爱思想</title><link>https://www.aisixiang.com/thinktank/SunJisheng.html</link></item>
+<item><title>Believing and thinking - Aeon</title><link>https://aeon.co/essays/the-psychology-of-separating-church-and-state</link></item>
+<item><title>Jo Marchant: In search of now - Aeon</title><link>https://aeon.co/videos/always-with-us-yet-ever-elusive-on-the-knottiness-of-now</link></item>
+<item><title>The self-making world - Aeon</title><link>https://aeon.co/essays/the-self-making-world-of-jean-baptiste-lamarck</link></item>
+<item><title>This cholesterol drug promised to be a game-changer. Why did it flop in the clinic — and is there still hope? - Nature</title><link>https://www.nature.com/articles/d41586-026-03504-2</link></item>
+<item><title>US social sciences face existential crisis after NSF cuts - Nature</title><link>https://www.nature.com/articles/d41586-026-03540-y</link></item>
+<item><title>‘A perfect scientist, a perfect mum’: researchers mourn two biologists’ deaths in Spanish train crash - Nature</title><link>https://www.nature.com/articles/d41586-026-03564-4</link></item>
+<item><title>Stone and water governed early human settlement of the desert - Nature</title><link>https://www.nature.com/articles/s41586-026-11180-5</link></item>
+<item><title>Daily briefing: ‘A triumph of scientific self-correction’ - Nature</title><link>https://www.nature.com/articles/d41586-026-03571-5</link></item>
+<item><title>Trump’s executive order on women’s health feels like déjà vu - Nature</title><link>https://www.nature.com/articles/d41586-026-03503-3</link></item>
+<item><title>How democracy depends on science — and must protect it - Nature</title><link>https://www.nature.com/articles/d41586-026-03510-4</link></item>
+<item><title>Chinese doctoral students in clinical medicine can graduate without a thesis — more degrees to follow - Nature</title><link>https://www.nature.com/articles/d41586-026-03480-7</link></item>
+<item><title>Biotech firms are meant to pay to use Earth’s genetic data. They’re not. - Nature</title><link>https://www.nature.com/articles/d41586-026-03554-6</link></item>
+<item><title>Why we’re setting up an institute for radically broad thinking - Nature</title><link>https://www.nature.com/articles/d41586-026-03397-1</link></item>
+<item><title>Whence dragons? - Nature</title><link>https://www.nature.com/articles/d41586-026-03277-8</link></item>
+<item><title>Accounting of Africa’s water reveals a management gap - Nature</title><link>https://www.nature.com/articles/d41586-026-03260-3</link></item>
+<item><title>Tethered to stone: how rock and water availability shaped early desert occupation - Nature</title><link>https://www.nature.com/articles/d41586-026-03263-0</link></item>
+<item><title>Lactate takes a shortcut into mitochondria to power the heart - Nature</title><link>https://www.nature.com/articles/d41586-026-03261-2</link></item>
+<item><title>Clues about complex life come from freshly cultivated archaea - Nature</title><link>https://www.nature.com/articles/d41586-026-03294-7</link></item>
+<item><title>An unexpected function of a cell-cycle enzyme might explain the toxic effects of its inhibitors - Nature</title><link>https://www.nature.com/articles/d41586-026-03288-5</link></item>
+<item><title>Meta-study sparks questions about what it means to be good at regulating emotions - Nature</title><link>https://www.nature.com/articles/d41586-026-03262-1</link></item>
+<item><title>Genetic variants that alter gene regulation in specific cell types are closely tied to disease - Nature</title><link>https://www.nature.com/articles/d41586-026-03067-2</link></item>
+<item><title>Ribbon made of carbon pentagons and heptagons has metallic properties - Nature</title><link>https://www.nature.com/articles/d41586-026-03298-3</link></item>
+<item><title>Switchable Chlorine Atom Transfer Radical Reactions - Nature</title><link>https://www.nature.com/articles/s41586-026-11348-z</link></item>
+<item><title>Back-to-monomer depolymerization of silicones by deoxygenative chlorination - Nature</title><link>https://www.nature.com/articles/s41586-026-11335-4</link></item>
+<item><title>Tandem repeat variation shapes immune cell type-specific gene expression - Nature</title><link>https://www.nature.com/articles/s41586-026-10438-2</link></item>
+<item><title>Biomedical engineering - Nature</title><link>https://www.nature.com/collections/edgdecgfic</link></item>
+<item><title>Associate Professor or Professor - Human Translational Infectious Disease and Immunology - Nature</title><link>https://www.nature.com/naturecareers/job/12866370/associate-professor-or-professor-human-translational-infectious-disease-and-immunology/?TrackID=62&amp;utm_source=widget&amp;utm_medium=referral&amp;utm_campaign=62</link></item>
+<item><title>7 PhD positions in Mechanics and Chemical Engineering - MSCA COFUND PhD@Tec21 doctoral programme UGA - Nature</title><link>https://www.nature.com/naturecareers/job/12866349/7-phd-positions-in-mechanics-and-chemical-engineering-msca-cofund-phd-tec21-doctoral-programme-uga/?TrackID=62&amp;utm_source=widget&amp;utm_medium=referral&amp;utm_campaign=62</link></item>
+<item><title>Early-Career Group Leader Opportunities: Xuemin Investigator Program - Nature</title><link>https://www.nature.com/naturecareers/job/12863165/early-career-group-leader-opportunities-xuemin-investigator-program/?TrackID=62&amp;utm_source=widget&amp;utm_medium=referral&amp;utm_campaign=62</link></item>
+<item><title>Interim Associate or Senior Editor, Reviews Cross-Journal (Physical Sciences) - Nature</title><link>https://www.nature.com/naturecareers/job/12866317/interim-associate-or-senior-editor-reviews-cross-journal-physical-sciences-/?TrackID=62&amp;utm_source=widget&amp;utm_medium=referral&amp;utm_campaign=62</link></item>
+<item><title>Postdoctoral researchers and Junior group leaders - Nature</title><link>https://www.nature.com/naturecareers/job/12866312/postdoctoral-researchers-and-junior-group-leaders-/?TrackID=62&amp;utm_source=widget&amp;utm_medium=referral&amp;utm_campaign=62</link></item>
+<item><title>Funimation Shutdown Fuels Push for DMCA Exemption to Legally Rip Anime Content - TorrentFreak</title><link>https://torrentfreak.com/funimation-shutdown-fuels-push-for-dmca-exemption-to-legally-rip-anime-content/</link></item>
+<item><title>Dutch Court Orders ISP to Block Z-Library and OceanofPDF - TorrentFreak</title><link>https://torrentfreak.com/dutch-court-orders-isp-to-block-z-library-and-oceanofpdf/</link></item>
+<item><title>Do you need a preventative rabies vaccine? Probably not. - Popular Science</title><link>https://www.popsci.com/science/is-there-preventative-rabies-vaccine/</link></item>
+<item><title>Nicole Audrey Spector - Popular Science</title><link>https://www.popsci.com/authors/nicole-audrey-spector/</link></item>
+<item><title>Amazon’s early Black Friday deals have started and these 28 products are at their 2026 lows - Popular Science</title><link>https://www.popsci.com/gear/amazon-early-black-friday-deals-2026-year-lows/</link></item>
+<item><title>Amazon has rare deals on Kiehl’s skincare right now, with most products 25% off - Popular Science</title><link>https://www.popsci.com/gear/amazon-kiehls-skincare-winter-deal/</link></item>
+<item><title>What’s the best sleep position? It depends. - Popular Science</title><link>https://www.popsci.com/science/best-sleep-position-podcast/</link></item>
+<item><title>Matt Simon / Grist - Popular Science</title><link>https://www.popsci.com/authors/matt-simon-grist/</link></item>
+<item><title>Jenny Tang, Xiaoyuan (Owen) Wu / The Conversation - Popular Science</title><link>https://www.popsci.com/authors/xiaoyuan-owen-wu-jenny-tang/</link></item>
+<item><title>John Alexander - Popular Science</title><link>https://www.popsci.com/authors/john-alexander/</link></item>
+<item><title>Katherine Ellison / Knowable Magazine - Popular Science</title><link>https://www.popsci.com/authors/katherine-ellison-knowable-magazine/</link></item>
+<item><title>Villa 2030: Studio Plutarco Reworks the Great Modernist Villas in a Madrid Apartment - Yatzer</title><link>https://www.yatzer.com/villa-2030-studio-plutarco-madrid-spain</link></item>
+<item><title>PAROS: Platon Pays Tribute to the Cycladic Island of His Childhood - Yatzer</title><link>https://www.yatzer.com/platon-paros-mw-editions</link></item>
+<item><title>Potato Head’s New Bali Store by OMA Brings Together Craft, Circularity and Innovation - Yatzer</title><link>https://www.yatzer.com/potato-head-good-times-general-store-by-oma-bali-indonesia</link></item>
+<item><title>Castel Badia Brings Contemporary Alpine Hospitality to a Medieval Landmark in South Tyrol - Yatzer</title><link>https://www.yatzer.com/castel-badia-south-tyrol-italy</link></item>
+<item><title>Thessaloniki City Guide - Yatzer</title><link>https://www.yatzer.com/city-guide-thessaloniki-greece</link></item>
+<item><title>Travel Guides - Yatzer</title><link>https://www.yatzer.com/category/travel-guides</link></item>
+<item><title>Industrial Rigour Meets Organic Expression at WIN Wine Bar in Warsaw - Yatzer</title><link>https://www.yatzer.com/win-wine-bar-warsaw</link></item>
+<item><title>La Réserve Firenze Brings Residential Hospitality to a Renaissance Palazzo in Florence - Yatzer</title><link>https://www.yatzer.com/la-reserve-firenze-by-gillesetboissier</link></item>
+<item><title>Election night mirages - FlowingData</title><link>https://flowingdata.com/2026/11/03/election-night-mirages/</link></item>
+<item><title>Google cherrypicks small data for Gemini ad - FlowingData</title><link>https://flowingdata.com/2026/11/03/google-cherrypicks-small-data-for-gemini-ad/</link></item>
+<item><title>Early voting jumps - FlowingData</title><link>https://flowingdata.com/2026/11/02/early-voting-jumps/</link></item>
+<item><title>Where the Musk money flows - FlowingData</title><link>https://flowingdata.com/2026/11/02/where-the-musk-money-flows/</link></item>
+<item><title>Increasing Trump comments on body appearance - FlowingData</title><link>https://flowingdata.com/2026/11/02/increasing-trump-comments-on-body-appearance/</link></item>
+<item><title>US Air Force asks industry for new cruise missile for Ukraine - Defense News</title><link>https://www.defensenews.com/industry/2026/11/03/us-air-force-asks-industry-for-new-cruise-missile-for-ukraine/</link></item>
+<item><title>Defense contractors to demo cargo drones for US Marine Corps - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/11/03/defense-contractors-to-demo-cargo-drones-for-us-marine-corps/</link></item>
+<item><title>On American destroyers, avoid a self-inflicted wound in Spain - Defense News</title><link>https://www.defensenews.com/opinion/2026/11/03/on-american-destroyers-avoid-a-self-inflicted-wound-in-spain/</link></item>
+<item><title>Tiny Ukrainian receiver intercepts Russian drone feeds in real time - Defense News</title><link>https://defensenews.com/industry/techwatch/2026/11/02/tiny-ukrainian-receiver-intercepts-russian-drone-feeds-in-real-time/</link></item>
+<item><title>Australia unveils secretive Ghost Shark underwater drone payloads - Defense News</title><link>https://defensenews.com/naval/2026/11/02/australia-unveils-secretive-ghost-shark-underwater-drone-payloads/</link></item>
+<item><title>Russia is giving its drones bigger antennas to beat Ukrainian jamming - Defense News</title><link>https://defensenews.com/global/europe/2026/11/02/russia-is-giving-its-drones-bigger-antennas-to-beat-ukrainian-jamming/</link></item>
+<item><title>Oshkosh partners with startup to build military drones - Defense News</title><link>https://defensenews.com/industry/techwatch/2026/11/02/oshkosh-partners-with-startup-to-build-military-drones/</link></item>
+<item><title>On ‘NATO’s lake,’ Nordic allies worry about escalation with Russia - Defense News</title><link>https://www.defensenews.com/global/2026/11/03/on-natos-lake-nordic-allies-worry-about-escalation-with-russia/</link></item>
+<item><title>India orders next-gen corvettes for $5.7b under broad naval modernization push - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/11/03/india-orders-next-gen-corvettes-for-5-7b-under-broad-naval-modernization-push/</link></item>
+<item><title>From No Credit to Good Credit — Start Here | Money Minute - Defense News</title><link>https://www.defensenews.com/video/2026/11/02/from-no-credit-to-good-credit-start-here-money-minute/</link></item>
+<item><title>US approves $2.1 billion Patriot missile sale to Ukraine - Defense News</title><link>https://www.defensenews.com/global/europe/2026/11/02/us-approves-2-1-billion-patriot-missile-sale-to-ukraine/</link></item>
+<item><title>French defense minister kicks off ‘pact’ with industry in rush to field naval drones - Defense News</title><link>https://www.defensenews.com/global/europe/2026/11/03/french-defense-minister-kicks-off-pact-with-industry-in-rush-to-field-naval-drones/</link></item>
+<item><title>Australia preps Bluebottle USV for submarine-hunting role - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/11/03/australia-preps-bluebottle-usv-for-submarine-hunting-role/</link></item>
+<item><title>Rise of the defense industry innovators | Defense News Weekly Full Episode 11.3.26 - Defense News</title><link>https://www.defensenews.com/video/2026/11/03/rise-of-the-defense-industry-innovators-defense-news-weekly-full-episode-11-3-26/</link></item>
+<item><title>What could the Humvee of the future look like? - Defense News</title><link>https://www.defensenews.com/video/2026/11/02/what-could-the-humvee-of-the-future-look-like/</link></item>
+<item><title>High-energy lasers, drones and power: Innovations in defense tech | Business of Defense – Part 1 - Defense News</title><link>https://www.defensenews.com/video/2026/11/02/high-energy-lasers-drones-and-power-innovations-in-defense-tech-business-of-defense-part-1/</link></item>
+<item><title>Big deals in European defense and American fighters | Defense Dollars - Defense News</title><link>https://www.defensenews.com/video/2026/11/02/big-deals-in-european-defense-and-american-fighters-defense-dollars/</link></item>
+<item><title>Gordon Arthur - Defense News</title><link>https://www.defensenews.com/author/gordon-arthur/</link></item>
+<item><title>Anthropic&amp;#39;s Revised IPO Filing Reports $33.2 Billion in Nine-Month Revenue and $895 Billion in Compute Commitments - gHacks</title><link>https://www.ghacks.net/2026/11/03/anthropics-revised-ipo-filing-reports-33-2-billion-in-nine-month-revenue-and-895-billion-in-compute-commitments/</link></item>
+<item><title>Phantom Blade Zero Sells 4 Million Copies in 72 Hours, Peaking at 833,921 Concurrent Steam Players - gHacks</title><link>https://www.ghacks.net/2026/11/03/phantom-blade-zero-sells-4-million-copies-in-72-hours-peaking-at-833921-concurrent-steam-players/</link></item>
+<item><title>Google Says a Fix Is Rolling Out for Android Auto Connection Problems on Samsung Phones With One UI 9 - gHacks</title><link>https://www.ghacks.net/2026/11/03/google-says-a-fix-is-rolling-out-for-android-auto-connection-problems-on-samsung-phones-with-one-ui-9/</link></item>
+<item><title>Microsoft Removes PC-to-PC Migration From Windows 11 and Points Users to OneDrive-Based Windows Backup - gHacks</title><link>https://www.ghacks.net/2026/11/03/microsoft-removes-pc-to-pc-migration-from-windows-11-and-points-users-to-onedrive-based-windows-backup/</link></item>
+<item><title>Oklahoma sweepstakes casino ban takes effect, reaching suppliers and affiliates - gHacks</title><link>https://www.ghacks.net/2026/11/02/oklahoma-sweepstakes-casino-ban-effective</link></item>
+<item><title>Blizzard Plans World of Warcraft: Forever Content Updates Every Four Months After November 4 Launch - gHacks</title><link>https://www.ghacks.net/2026/11/02/blizzard-plans-world-of-warcraft-forever-content-updates-every-four-months-after-november-4-launch/</link></item>
+<item><title>Android SMS of Death Exploit Goes Public, Leaving Android 12 and 13 Phones Without a Fix - gHacks</title><link>https://www.ghacks.net/2026/11/02/android-sms-of-death-exploit-goes-public-leaving-android-12-and-13-phones-without-a-fix/</link></item>
+<item><title>Anthropic Adds a Claude Code Rule on Opus 5.5 That Blocks Recreations of Existing Games - gHacks</title><link>https://www.ghacks.net/2026/11/02/anthropic-adds-a-claude-code-rule-on-opus-5-5-that-blocks-recreations-of-existing-games/</link></item>
+<item><title>Microsoft Confirms Windows 11 Will Not Get Drag-to-Move Taskbar Support - gHacks</title><link>https://www.ghacks.net/2026/11/02/microsoft-confirms-windows-11-will-not-get-drag-to-move-taskbar-support/</link></item>
+<item><title>Activision Will Remove Seoul Crowd Crush Footage From Call of Duty: Modern Warfare 4 on November 12 - gHacks</title><link>https://www.ghacks.net/2026/10/31/activision-will-remove-seoul-crowd-crush-footage-from-call-of-duty-modern-warfare-4-on-november-12/</link></item>
+<item><title>Google Launches Gemini 4 Carbon for Cyber Defenders First, With API Pricing From $2 per Million Tokens - gHacks</title><link>https://www.ghacks.net/2026/10/31/google-launches-gemini-4-carbon-for-cyber-defenders-first-with-api-pricing-from-2-per-million-tokens/</link></item>
+<item><title>Google Confirms a Fix Is Coming for Pixel Watch Battery Drain Reported on Pixel Watch 2 to 5 - gHacks</title><link>https://www.ghacks.net/2026/10/31/google-confirms-a-fix-is-coming-for-pixel-watch-battery-drain-reported-on-pixel-watch-2-to-5/</link></item>
+<item><title>Microsoft Fixes Windows 11 Always On VPN Failures From September Updates in KB5127936 - gHacks</title><link>https://www.ghacks.net/2026/10/31/microsoft-fixes-windows-11-always-on-vpn-failures-from-september-updates-in-kb5127936/</link></item>
+<item><title>VGW, Blitz and Dabble gambling recovery suits stay in federal court - gHacks</title><link>https://www.ghacks.net/2026/10/30/vgw-georgia-gambling-recovery-remand-denied</link></item>
+<item><title>Football Manager 27 Is Free to Play on Steam Until November 3 Ahead of Its November 10 Launch - gHacks</title><link>https://www.ghacks.net/2026/10/30/football-manager-27-is-free-to-play-on-steam-until-november-3-ahead-of-its-november-10-launch/</link></item>
+<item><title>Reddit Moves to a Logged-In Only Experience, With Tests in Select Markets Outside the US - gHacks</title><link>https://www.ghacks.net/2026/10/30/reddit-moves-to-a-logged-in-only-experience-with-tests-in-select-markets-outside-the-us/</link></item>
+<item><title>Apple Launches iPad mini With 8.5-Inch OLED Display, A20 Pro Chip, and IP67 Rating From $699 - gHacks</title><link>https://www.ghacks.net/2026/10/27/apple-launches-ipad-mini-with-8-5-inch-oled-display-a20-pro-chip-and-ip67-rating-from-699/</link></item>
+<item><title>Google Chrome Rolls Out Gemini Autofill That Pulls Order Numbers and Flight Bookings From Gmail - gHacks</title><link>https://www.ghacks.net/2026/10/29/google-chrome-rolls-out-gemini-autofill-that-pulls-order-numbers-and-flight-bookings-from-gmail/</link></item>
+<item><title>Microsoft Releases KB5127936 for Windows 11 With a Faster, Customizable Context Menu - gHacks</title><link>https://www.ghacks.net/2026/10/29/microsoft-releases-kb5127936-for-windows-11-with-a-faster-customizable-context-menu/</link></item>
+<item><title>OpenAI Doubles ChatGPT Pro and Business Premium Usage Limits After Dropping a Planned Pro 200 Cut - gHacks</title><link>https://www.ghacks.net/2026/10/30/openai-doubles-chatgpt-pro-and-business-premium-usage-limits-after-dropping-a-planned-pro-200-cut/</link></item>
+<item><title>Microsoft Offers Voluntary Exit Deal to 60,000 Employees in Four Countries Until December 31 - gHacks</title><link>https://www.ghacks.net/2026/10/27/microsoft-offers-voluntary-exit-deal-to-60000-employees-in-four-countries-until-december-31/</link></item>
+<item><title>Microsoft Confirms Edge 156 Update Broke Attachment Opening in New Outlook and Rolls Out a Fix - gHacks</title><link>https://www.ghacks.net/2026/10/30/microsoft-confirms-edge-156-update-broke-attachment-opening-in-new-outlook-and-rolls-out-a-fix/</link></item>
+<item><title>Google Releases ChromeOS 156 With Gemini Talk to Type Dictation and Video Summaries on Chromebook Plus - gHacks</title><link>https://www.ghacks.net/2026/10/24/google-releases-chromeos-156-with-gemini-talk-to-type-dictation-and-video-summaries-on-chromebook-plus/</link></item>
+<item><title>Marcos Huerta - FlowingData</title><link>https://flowingdata.com/tag/marcos-huerta/</link></item>
+<item><title>Washington Sun - FlowingData</title><link>https://flowingdata.com/tag/washington-sun/</link></item>
+<item><title>Bad Flock Info Leads Police To Tow Wrong Car, Then Towing Company Totals It - Slashdot</title><link>https://yro.slashdot.org/story/26/11/01/1832251/bad-flock-info-leads-police-to-tow-wrong-car-then-towing-company-totals-it?sbsrc=md</link></item>
+<item><title>Microsoft&amp;#39;s Canada Timezone Troubles Leave Admins Fixing Calendars, Pretending They&amp;#39;re In Bogota - Slashdot</title><link>https://news.slashdot.org/story/26/11/02/1538237/microsofts-canada-timezone-troubles-leave-admins-fixing-calendars-pretending-theyre-in-bogota?sbsrc=md</link></item>
+<item><title>Supermarket Freezers Across Europe Hit By Second Suspected Cyberattack - Slashdot</title><link>https://it.slashdot.org/story/26/11/02/1522249/supermarket-freezers-across-europe-hit-by-second-suspected-cyberattack?sbsrc=md</link></item>
+<item><title>The New York Times Sues Brave Web Browser For AI Scraping, Bypassing Paywalls - Slashdot</title><link>https://yro.slashdot.org/story/26/11/02/1829212/the-new-york-times-sues-brave-web-browser-for-ai-scraping-bypassing-paywalls?sbsrc=md</link></item>
+<item><title>You Can See Everything - Vulture</title><link>https://www.vulture.com/tags/you-can-see-everything/</link></item>
+<item><title>Dancing With the Stars - Vulture</title><link>https://www.vulture.com/tv/dancing-with-the-stars/</link></item>
+<item><title>We’re All in This Together - Vulture</title><link>https://www.vulture.com/article/dancing-with-the-stars-recap-disney-night-season-35-episode-9.html</link></item>
+<item><title>Mess With the Bull, Get the Horns - Vulture</title><link>https://www.vulture.com/article/below-deck-recap-season-13-episode-4-bravo.html</link></item>
+<item><title>Love in This Club - Vulture</title><link>https://www.vulture.com/article/the-gilded-age-recap-season-4-episode-1-premiere-hbo.html</link></item>
+<item><title>For Better Or Worse - Vulture</title><link>https://www.vulture.com/article/real-housewives-of-potomac-recap-season-11-episode-4-bravo.html</link></item>
+<item><title>Inde Navarrette Leaves SNL Obsessed - Vulture</title><link>https://www.vulture.com/article/saturday-night-live-recap-snl-season-52-episode-4-inde-navarrette.html</link></item>
+<item><title>Generation Dex - Vulture</title><link>https://www.vulture.com/article/dexter-resurrection-recap-season-2-episode-1-showtime-premiere.html</link></item>
+<item><title>The Homecoming Committee - Vulture</title><link>https://www.vulture.com/article/outlander-blood-of-my-blood-recap-season-2-episode-7-starz.html</link></item>
+<item><title>What I Like About Choux - Vulture</title><link>https://www.vulture.com/article/great-british-baking-show-pastry-week-2026-recap.html</link></item>
+<item><title>Into the Great Unknown - Vulture</title><link>https://www.vulture.com/article/dark-matter-recap-season-2-episode-10-finale-apple-tv.html</link></item>
+<item><title>Claude’s new rules against game cloning… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/03/claudes-new-rules-against-game-cloning-wont-stop-the-ai-copying-boom/</link></item>
+<item><title>Self-Employed? Solopreneur? NIST has a… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/03/self-employed-solopreneur-nist-has-a-cybersecurity-guide-just-for-you/</link></item>
+<item><title>Developing retro-GUIs for Win3.11 and OS/2 - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/03/developing-retro-guis-for-win3-11-and-os-2/</link></item>
+<item><title>Native American Heritage Month 2026 - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/02/native-american-heritage-month-2026/</link></item>
+<item><title>Shipping Alert – Adafruit is Voting Tuesday,… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/10/28/shipping-alert-adafruit-is-voting-tuesday-november-3-vote-shipping/</link></item>
+<item><title>decompilation - Adafruit Industries</title><link>https://blog.adafruit.com/tag/decompilation/</link></item>
+<item><title>game cloning - Adafruit Industries</title><link>https://blog.adafruit.com/tag/game-cloning/</link></item>
+<item><title>small business - Adafruit Industries</title><link>https://blog.adafruit.com/tag/small-business/</link></item>
+<item><title>Arkivism is a search and visual discovery engine for public domain works  #ArtTuesday - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/03/arkivism-is-a-search-and-visual-discovery-engine-for-public-domain-works-arttuesday/</link></item>
+<item><title>public domain - Adafruit Industries</title><link>https://blog.adafruit.com/tag/public-domain/</link></item>
+<item><title>GNUstep Desktop: a NeXT user interface for modern Linux - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/03/gnustep-desktop-a-next-user-interface-for-modern-linux/</link></item>
+<item><title>WindowMaker - Adafruit Industries</title><link>https://blog.adafruit.com/tag/windowmaker/</link></item>
+<item><title>The early history of the UNIX “more” command - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/03/the-early-history-of-the-unix-more-command/</link></item>
+<item><title>The first Unix Programmer’s Manual, released in 1971 (free PDF) - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/03/the-first-unix-programmers-manual-released-in-1971-free-pdf/</link></item>
+<item><title>Pulling on a thread (Using Thread on Ikea Sensors) - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/03/pulling-on-a-thread-using-thread-on-ikea-sensors/</link></item>
+<item><title>DiscImageStudio: burn visible artwork onto CDs, DVDs and Blu-ray discs  #ArtTuesday - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/03/discimagestudio-burn-visible-artwork-onto-cds-dvds-and-blu-ray-discs-arttuesday/</link></item>
+<item><title>DiscImageStudio - Adafruit Industries</title><link>https://blog.adafruit.com/tag/discimagestudio/</link></item>
+<item><title>JP’s Product Pick of the Week —  3pm Eastern TODAY 11/3/26 @adafruit #adafruit #newproductpick - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/03/jps-product-pick-of-the-week-3pm-eastern-today-11-3-26-adafruit-adafruit-newproductpick/</link></item>
+<item><title>Copper wire theft is so bad, Rhode Island’s blocking manholes with 700 pounds of concrete - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/03/copper-wire-theft-is-so-bad-rhode-islands-blocking-manholes-with-700-pounds-of-concrete/</link></item>
+<item><title>copper theft - Adafruit Industries</title><link>https://blog.adafruit.com/tag/copper-theft/</link></item>
+<item><title>infrastructure - Adafruit Industries</title><link>https://blog.adafruit.com/tag/infrastructure/</link></item>
+<item><title>Rhode Island - Adafruit Industries</title><link>https://blog.adafruit.com/tag/rhode-island/</link></item>
+<item><title>Learning-electronics: Every resource you need to learn electronic engineering - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/03/learning-electronics-every-resource-you-need-to-learn-electronic-engineering/</link></item>
+<item><title>EE bookshelf - Adafruit Industries</title><link>https://blog.adafruit.com/category/ee_bookshelf/</link></item>
+<item><title>A cheap FPGA board becomes retro-style computer - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/03/a-cheap-fpga-board-becomes-retro-style-computer/</link></item>
+<item><title>Did Gary Huber and Chris Hanson invent screen-space reflections 16 years before Crytek? - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/03/did-gary-huber-and-chris-hanson-invent-screen-space-reflections-16-years-before-crytek/</link></item>
+<item><title>screen-space reflections - Adafruit Industries</title><link>https://blog.adafruit.com/tag/screen-space-reflections/</link></item>
+<item><title>World Construction Set - Adafruit Industries</title><link>https://blog.adafruit.com/tag/world-construction-set/</link></item>
 </channel></rss>

@@ -2247,6 +2247,11 @@ abiogenically
 retro-rocket
 Christ's thorn
 New South Wales
-
+nitwit
+Sinophobia
+social capital
+sushi
+non-proprietary
+half-finished
 
 `.trim().split('\n');
