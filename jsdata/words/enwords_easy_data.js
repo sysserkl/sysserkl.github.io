@@ -821,7 +821,6 @@ hyena
 hypertext
 icebound
 ice machine
-identity politics
 ill-tempered
 I'm
 imaginary number
@@ -2253,5 +2252,10 @@ social capital
 sushi
 non-proprietary
 half-finished
+Arnold
+Arnaud
+claustrophobe
+climatologist
+
 
 `.trim().split('\n');
