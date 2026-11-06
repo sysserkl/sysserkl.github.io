@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<!--
+  四人麻将 · 单机版（纯前端，单文件，直接双击用浏览器打开即可）
+  ---------------------------------------------------------------
+  · 牌面使用麻将 Unicode 图形字符（🀇🀙🀐🀀…），下方附带"1万/3筒"小字兜底
+  · 音效：若同目录下存在 sounds/click.wav、discard.wav、draw.wav、win.wav
+    会优先播放；文件不存在时自动用 WebAudio 合成音兜底，无需准备素材
+  · 难度：简单（随机出牌）/ 普通（牌效率向听）/ 困难（向听 + 防守避炮）
+  · 顶栏「Aa」可分别调节「牌面大小」与「文字大小」（70%~200%），并切换牌面文字显示；
+    设置在本地保存，桌面端默认 130%
+history
+0.0.1-20261105 ima (copilot)
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b([],[],[],['mahjong_code.js']);
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#0b2f22">
+<title>四人麻将 · 单机版</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+:root{
+  --s: 1;                        /* 牌面缩放倍数（设置里可调） */
+  --fs: var(--s);                /* 界面文字缩放，与牌面同步 */
+  --tw: calc(32px * var(--s));   /* 大牌宽度 */
+  --tsw: calc(20px * var(--s));  /* 副露小牌宽度 */
+}
+html,body{margin:0;height:100%;}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  background:radial-gradient(ellipse at 50% 35%,#17553d 0%,#0b2f22 60%,#061a13 100%);
+  color:#e8f0ea;
+  display:flex;flex-direction:column;
+  height:100dvh;overflow:hidden;
+  user-select:none;-webkit-user-select:none;
+  touch-action:manipulation;
+}
+
+/* ---------- 顶栏 ---------- */
+#topbar{display:flex;align-items:center;gap:5px;padding:6px 8px 2px;font-size:calc(12px * var(--fs));flex:0 0 auto;
+  overflow-x:auto;scrollbar-width:none;}
+#topbar::-webkit-scrollbar{display:none;}
+#topbar .spacer{flex:1;min-width:2px;}
+.pill{background:rgba(255,255,255,.09);border-radius:999px;padding:.34em .75em;white-space:nowrap;border:1px solid rgba(255,255,255,.06);}
+.pill b{color:#ffd77a;font-weight:700;}
+.mini{
+  background:rgba(255,255,255,.1);color:#d9e8df;border:1px solid rgba(255,255,255,.12);
+  border-radius:999px;padding:.34em .75em;font-size:calc(12px * var(--fs));font-family:inherit;cursor:pointer;
+  white-space:nowrap;flex:0 0 auto;
+}
+.mini:active{background:rgba(255,255,255,.22);}
+.mini.on{background:rgba(255,215,122,.2);border-color:rgba(255,215,122,.5);color:#ffd77a;}
+
+#status{height:calc(18px * var(--fs));line-height:calc(18px * var(--fs));text-align:center;
+  font-size:calc(11px * var(--fs));color:#8fd3b0;flex:0 0 auto;
+  opacity:.9;transition:opacity .2s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 10px;}
+
+/* ---------- 桌面 ---------- */
+#table{
+  flex:1;min-height:0;
+  display:grid;
+  grid-template-columns:calc(46px * var(--s)) 1fr calc(46px * var(--s));
+  grid-template-rows:auto 1fr;
+  gap:4px;padding:2px 6px;
+}
+.seat{font-size:calc(10px * var(--fs));color:#9fc4b1;}
+.seat.top{grid-column:2;grid-row:1;display:flex;flex-direction:column;align-items:center;gap:2px;}
+.seat.side{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;}
+#seat3{grid-column:1;grid-row:1/3;}
+#seat1{grid-column:3;grid-row:1/3;}
+.seat .who{display:flex;flex-direction:column;align-items:center;line-height:1.25;gap:1px;}
+.seat.side .who{writing-mode:vertical-rl;}
+.seat .nm{color:#cfe8db;font-weight:600;}
+.seat .sc{color:#ffd77a;font-size:calc(10px * var(--fs));}
+.seat .cnt{color:#6fa98d;font-size:calc(9px * var(--fs));}
+.seat.active .nm{color:#ffd77a;text-shadow:0 0 8px rgba(255,215,122,.7);}
+.seat .melds{display:flex;flex-wrap:wrap;gap:2px;justify-content:center;max-width:100%;}
+.seat.side .melds{flex-direction:column;}
+
+#center{
+  grid-column:2;grid-row:2;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:1fr 1fr 1fr;
+  gap:3px;min-height:0;
+}
+.pool{
+  position:relative;
+  background:rgba(0,0,0,.16);
+  border:1px solid rgba(255,255,255,.05);
+  border-radius:6px;
+  padding:3px;
+  display:flex;flex-wrap:wrap;align-content:flex-start;gap:2px;
+  overflow:hidden;
+}
+/* 弃牌区的牌单独放大，比副露更醒目 */
+.pool .tile.sm{
+  width:calc(26px * var(--s));
+  height:calc(26px * var(--s) * 1.34);
+  font-size:calc(26px * var(--s) * .74);
+  border-radius:4px;
+}
+.pool::after{content:attr(data-name);position:absolute;right:4px;bottom:1px;font-size:calc(8px * var(--fs));color:rgba(255,255,255,.18);}
+#pool2{grid-column:1/3;grid-row:1;}
+#pool3{grid-column:1;grid-row:2;}
+#pool1{grid-column:2;grid-row:2;}
+#pool0{grid-column:1/3;grid-row:3;}
+
+/* ---------- 牌 ---------- */
+.tile{
+  width:var(--tw);height:calc(var(--tw) * 1.38);
+  background:linear-gradient(180deg,#fffdf7 0%,#f4ecdb 65%,#e6dcc6 100%);
+  border-radius:4px;
+  border:1px solid #c9bda2;
+  border-bottom:2px solid #b6a98d;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  color:#1d2a33;font-size:calc(var(--tw) * .54);line-height:1;
+  box-shadow:0 1px 2px rgba(0,0,0,.35);
+  flex:0 0 auto;overflow:hidden;
+}
+.tile .tl{font-size:calc(var(--tw)*.27);color:#8a7c62;margin-top:1px;letter-spacing:-.5px;font-weight:600;}
+/* 纯图形模式：隐藏牌面文字，图形放大居中 */
+body.no-label .tile .tl{display:none;}
+body.no-label .tile:not(.sm):not(.md){font-size:calc(var(--tw)*.78);}
+.tile.sm{width:var(--tsw);height:calc(var(--tsw) * 1.34);font-size:calc(var(--tsw) * .68);
+  border-radius:3px;border-bottom-width:1px;box-shadow:0 1px 1px rgba(0,0,0,.3);}
+.tile.sm .tl{display:none;}
+.tile.md{width:calc(var(--tsw) * 1.35);height:calc(var(--tsw) * 1.8);font-size:calc(var(--tsw) * .92);
+  border-radius:4px;}
+.tile.md .tl{display:none;}
+.tile.back{
+  width:var(--tsw);height:calc(var(--tsw) * 1.34);
+  background:linear-gradient(135deg,#2c7a5a,#1b5740);
+  border:1px solid #0e3226;border-bottom:2px solid #0a241a;
+  border-radius:3px;
+}
+.tile.drawn{outline:2px solid #ffd77a;outline-offset:-1px;transform:translateY(-4px);}
+.tile.dim{opacity:.45;}
+
+/* ---------- 我的区域 ---------- */
+#myarea{flex:0 0 auto;padding:2px 8px 0;display:flex;flex-direction:column;gap:3px;}
+#mymelds{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;min-height:0;}
+#mymelds .grp{display:flex;gap:1px;}
+#myhand{display:flex;gap:2px;justify-content:center;flex-wrap:wrap;padding-bottom:4px;
+  --tw:min(calc(34px * var(--s)), calc((100vw - 26px) / 15));}
+#myhand .tile{cursor:pointer;transition:transform .09s ease;}
+#myhand .tile:active{transform:translateY(-6px);}
+#myhand .tile.sel{transform:translateY(-8px);}
+
+/* ---------- 操作 ---------- */
+#actions{flex:0 0 auto;display:flex;gap:8px;justify-content:center;align-items:center;padding:2px 6px 10px;
+  min-height:calc(46px * var(--fs));flex-wrap:wrap;}
+.act{
+  padding:.62em 1.4em;border-radius:999px;border:none;font-family:inherit;
+  background:linear-gradient(180deg,#f9db84,#dfb03a);
+  color:#3a2b00;font-weight:800;font-size:calc(14px * var(--fs));letter-spacing:1px;
+  box-shadow:0 3px 8px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.6);
+  cursor:pointer;
+}
+.act:active{transform:translateY(1px);}
+.act.pass{background:linear-gradient(180deg,#8d9c94,#5f6f68);color:#eaf3ee;box-shadow:0 3px 8px rgba(0,0,0,.3);}
+.hint{font-size:calc(12px * var(--fs));color:#8fd3b0;opacity:.85;}
+
+/* ---------- 显示设置面板 ---------- */
+#setMask{position:fixed;inset:0;z-index:59;display:none;}
+#setMask.show{display:block;}
+#settings{
+  position:fixed;top:calc(46px * var(--fs));right:calc(max(0px, (100vw - 1180px) / 2) + 8px);z-index:60;
+  background:linear-gradient(180deg,#1b4a39,#113328);
+  border:1px solid #356b53;border-radius:12px;
+  padding:13px;width:calc(216px * var(--fs));max-width:90vw;
+  box-shadow:0 12px 34px rgba(0,0,0,.55);
+  display:none;
+}
+#settings.show{display:block;}
+.set-title{font-size:calc(12px * var(--fs));color:#8fb8a4;margin-bottom:11px;letter-spacing:.5px;}
+.set-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px;
+  font-size:calc(13px * var(--fs));color:#d9e8df;gap:8px;}
+.set-row:last-child{margin-bottom:0;}
+.stepper{display:flex;align-items:center;gap:5px;}
+.stepper button{
+  width:calc(29px * var(--fs));height:calc(29px * var(--fs));border-radius:8px;border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.1);color:#fff;font-size:calc(16px * var(--fs));font-family:inherit;cursor:pointer;
+  line-height:1;padding:0;flex:0 0 auto;
+}
+.stepper button:active{background:rgba(255,255,255,.28);}
+.stepper b{min-width:calc(46px * var(--fs));text-align:center;color:#ffd77a;font-size:calc(13px * var(--fs));font-variant-numeric:tabular-nums;}
+.toggle{
+  padding:.48em 1.2em;border-radius:8px;border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.1);color:#d9e8df;font-size:calc(12px * var(--fs));font-family:inherit;cursor:pointer;
+  white-space:nowrap;
+}
+.toggle.on{background:rgba(255,215,122,.22);color:#ffd77a;border-color:rgba(255,215,122,.5);}
+
+/* ---------- 结算 ---------- */
+#modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;padding:18px;z-index:99;backdrop-filter:blur(3px);}
+#modal.show{display:flex;}
+.card{
+  background:linear-gradient(180deg,#163f30,#0e2f24);
+  border:1px solid #356b53;border-radius:16px;padding:18px;
+  width:100%;max-width:min(calc(380px * var(--fs)), 92vw);max-height:80dvh;overflow:auto;
+  box-shadow:0 12px 40px rgba(0,0,0,.6);
+}
+.card h2{margin:0 0 4px;font-size:calc(20px * var(--fs));color:#ffd77a;}
+.card .sub{font-size:calc(12px * var(--fs));color:#8fb8a4;margin-bottom:12px;}
+.card .fan{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;}
+.card .fan span{background:rgba(255,215,122,.13);border:1px solid rgba(255,215,122,.35);color:#ffd77a;
+  border-radius:6px;padding:.25em .7em;font-size:calc(11px * var(--fs));}
+.card .rows{font-size:calc(13px * var(--fs));line-height:1.9;margin-bottom:14px;}
+.card .rows .r{display:flex;justify-content:space-between;}
+.card .rows .pos{color:#7ce0a8;}
+.card .rows .neg{color:#ff9d9d;}
+.card .winhand{display:flex;flex-wrap:wrap;gap:2px;margin-bottom:12px;}
+.card button{
+  width:100%;padding:.7em;border:none;border-radius:10px;font-family:inherit;
+  font-size:calc(15px * var(--fs));font-weight:700;
+  background:linear-gradient(180deg,#f9db84,#dfb03a);color:#3a2b00;cursor:pointer;
+}
+
+@media (max-width:520px){
+  :root{--tsw:calc(15px * var(--s));}
+  .pool .tile.sm{
+    width:calc(19px * var(--s));
+    height:calc(19px * var(--s) * 1.34);
+    font-size:calc(19px * var(--s) * .74);
+  }
+}
+@media (min-width:900px){
+  :root{--s:1.3;}
+  #table{grid-template-columns:calc(58px * var(--s)) 1fr calc(58px * var(--s));}
+  #topbar,#status,#table,#myarea,#actions{max-width:1180px;margin-left:auto;margin-right:auto;width:100%;}
+}
+</style>
+</head>
+<body>
+
+<header id="topbar">
+  <div class="pill">🀄 <b id="wallCount">0</b></div>
+  <div class="pill">第<b id="roundNo">1</b>局</div>
+  <div class="pill">分 <b id="myScore">0</b></div>
+  <div class="spacer"></div>
+  <button id="btnDiff" class="mini">普通</button>
+  <button id="btnSet" class="mini" title="显示设置">Aa</button>
+  <button id="btnSound" class="mini">🔊</button>
+  <button id="btnHelp" class="mini">?</button>
+  <button id="btnNew" class="mini">新局</button>
+</header>
+
+<div id="setMask"></div>
+<div id="settings">
+  <div class="set-title">显示设置</div>
+  <div class="set-row">
+    <span>牌面大小</span>
+    <div class="stepper">
+      <button id="zoomOut">−</button>
+      <b id="zoomVal">100%</b>
+      <button id="zoomIn">＋</button>
+    </div>
+  </div>
+  <div class="set-row">
+    <span>文字大小</span>
+    <div class="stepper">
+      <button id="fontOut">−</button>
+      <b id="fontVal">100%</b>
+      <button id="fontIn">＋</button>
+    </div>
+  </div>
+  <div class="set-row">
+    <span>牌面文字</span>
+    <button id="btnLabelToggle" class="toggle">显示</button>
+  </div>
+</div>
+
+<div id="status"></div>
+
+<main id="table">
+  <div class="seat top" id="seat2"></div>
+  <div class="seat side" id="seat3"></div>
+  <div class="seat side" id="seat1"></div>
+  <div id="center">
+    <div class="pool" id="pool2" data-name="对家"></div>
+    <div class="pool" id="pool3" data-name="上家"></div>
+    <div class="pool" id="pool1" data-name="下家"></div>
+    <div class="pool" id="pool0" data-name="我"></div>
+  </div>
+</main>
+
+<div id="myarea">
+  <div id="mymelds"></div>
+  <div id="myhand"></div>
+</div>
+
+<div id="actions"></div>
+
+<div id="modal"><div class="card" id="modalCard"></div></div>
+
+<script>
+"use strict";
+/* =========================================================
+1. 基础工具
+========================================================= */
+const $_mj = id => document.getElementById(id);
+const sleep_mj = ms => new Promise(r => setTimeout(r, ms));
+const SUITS = ['万', '筒', '条'];
+const HONORS = ['东', '南', '西', '北', '中', '发', '白'];
+
+const _shCache = new Map();
+
+/* =========================================================
+3. 音效（优先 wav，缺失则用 WebAudio 合成）
+========================================================= */
+let audioCtx = null;
+let soundOn = true;
+let useWav = false;
+let showLabel = true; // true = 图形 + 文字；false = 仅图形
+let zoom = 1; // 牌面缩放倍数
+let fontZoom = 1; // 界面文字缩放倍数
+let zoomAuto = true; // true = 随窗口宽度自动（用户手动调过就固定）
+const WAV = {
+    click: 'sounds/click.wav',
+    discard: 'sounds/discard.wav',
+    draw: 'sounds/draw.wav',
+    win: 'sounds/win.wav'
+};
+
+const wavFailed = {};
+
+(async function probe_wav_mj() {
+    try {
+        const r = await fetch(WAV.discard, {
+            method: 'HEAD'
+        });
+        useWav = r.ok;
+    } catch (e) {
+        useWav = false;
+    }
+})();
+
+/* =========================================================
+4. 游戏状态
+========================================================= */
+const DIFFS = ['easy', 'normal', 'hard'];
+
+const DIFF_CN = {
+    easy: '简单',
+    normal: '普通',
+    hard: '困难'
+};
+
+const G = {
+    wall: [],
+    players: [],
+    scores: [0, 0, 0, 0],
+    dealer: 0,
+    round: 1,
+    turn: 0,
+    running: false,
+    seq: 0,
+    difficulty: 'normal',
+    pendingAsk: null,
+    waitDiscard: null,
+    lastDraw: null,
+    lastDiscard: null,
+    lastDiscardFrom: -1,
+    log: ''
+};
+const NAMES = ['你', '下家', '对家', '上家'];
+
+try {
+    if (localStorage.getItem('mj_label') === '0') {
+        showLabel = false;
+    }
+    const z = parseFloat(localStorage.getItem('mj_zoom'));
+    const f = parseFloat(localStorage.getItem('mj_fs'));
+    if (z && z > 0.5 && z < 2.6) {
+        zoom = z;
+        zoomAuto = false;
+    } else {
+        zoom = auto_zoom_mj();
+    }
+    if (f && f > 0.5 && f < 2.6) {
+        fontZoom = f;
+    } else {
+        fontZoom = auto_zoom_mj();
+    }
+} catch (e) {
+    zoom = auto_zoom_mj();
+    fontZoom = auto_zoom_mj();
+}
+
+apply_label_mode_mj();
+apply_zoom_mj();
+
+try {
+    window.addEventListener('resize', () => {
+        if (!zoomAuto) {
+            return;
+        }
+        const nz = auto_zoom_mj();
+        if (nz !== zoom) {
+            zoom = nz;
+            fontZoom = nz;
+            apply_zoom_mj();
+        }
+    });
+} catch (e) {}
+
+$_mj('btnSet').onclick = e => {
+    e && e.stopPropagation && e.stopPropagation();
+    sfx_mj('click');
+    toggle_settings_mj();
+};
+$_mj('setMask').onclick = () => toggle_settings_mj(false);
+$_mj('zoomIn').onclick = () => {
+    zoomAuto = false;
+    zoom = Math.min(2, Math.round((zoom + 0.1) * 10) / 10);
+    apply_zoom_mj();
+    save_prefs_mj();
+    sfx_mj('click');
+};
+$_mj('zoomOut').onclick = () => {
+    zoomAuto = false;
+    zoom = Math.max(0.7, Math.round((zoom - 0.1) * 10) / 10);
+    apply_zoom_mj();
+    save_prefs_mj();
+    sfx_mj('click');
+};
+$_mj('fontIn').onclick = () => {
+    fontZoom = Math.min(2, Math.round((fontZoom + 0.1) * 10) / 10);
+    apply_zoom_mj();
+    save_prefs_mj();
+    sfx_mj('click');
+};
+$_mj('fontOut').onclick = () => {
+    fontZoom = Math.max(0.7, Math.round((fontZoom - 0.1) * 10) / 10);
+    apply_zoom_mj();
+    save_prefs_mj();
+    sfx_mj('click');
+};
+$_mj('btnLabelToggle').onclick = () => {
+    showLabel = !showLabel;
+    apply_label_mode_mj();
+    save_prefs_mj();
+    sfx_mj('click');
+    render_mj();
+};
+$_mj('btnDiff').onclick = () => {
+    const idx = DIFFS.indexOf(G.difficulty);
+    G.difficulty = DIFFS[(idx + 1) % 3];
+    sfx_mj('click');
+    render_mj();
+    set_status_mj('难度：' + DIFF_CN[G.difficulty] + (G.difficulty === 'easy' ? '（电脑出牌随意）' : G.difficulty === 'hard' ? '（电脑会防守，少点炮）' : '（电脑按牌效率出牌）'));
+};
+$_mj('btnSound').onclick = () => {
+    soundOn = !soundOn;
+    render_mj();
+    if (soundOn) {
+        sfx_mj('click');
+    }
+};
+$_mj('btnHelp').onclick = () => {
+    sfx_mj('click');
+    show_modal_mj('<h2>玩法说明</h2><div class="sub">推倒胡 · 136 张（无花牌）</div>' + '<div class="rows" style="line-height:1.85;font-size:calc(12.5px * var(--fs))">' + '<div>🀄 <b>目标</b>：4 组面子（顺子/刻子）+ 1 对将牌，或七对子</div>' + '<div>➡️ <b>顺序</b>：你 → 下家 → 对家 → 上家，逆时针出牌</div>' + '<div>🍜 <b>吃</b>：只能吃上家打出的牌，组成顺子</div>' + '<div>🀫 <b>碰</b>：任意家打的牌 + 手中 2 张，组成刻子</div>' + '<div>⬛ <b>杠</b>：明杠（手 3 张）、暗杠（手 4 张）、补杠（碰后摸到第 4 张）</div>' + '<div>🎯 <b>胡</b>：自摸或点炮，优先级 胡 &gt; 杠/碰 &gt; 吃</div>' + '<div style="margin-top:8px;color:#ffd77a"><b>番型计分</b></div>' + '<div>平胡 1 · 自摸 +1 · 门清 +1 · 碰碰胡 +1</div>' + '<div>混一色 +1 · 清一色 +3 · 七对 +2 · 杠上开花 +1</div>' + '<div>得分 = 2^(番-1)，封顶 32；自摸三家各付，点炮由放炮者独付</div>' + '<div>杠分：暗杠每家付 2 · 明杠放杠者付 3 · 补杠每家付 1</div>' + '<div style="margin-top:8px;color:#ffd77a"><b>难度</b></div>' + '<div>简单：电脑随意出牌 · 普通：按牌效率 · 困难：会防守避免点炮</div>' + '</div>' + '<button onclick="hide_modal_mj()">知道了</button>');
+};
+$_mj('btnNew').onclick = () => {
+    if (G.running) {
+        G.running = false;
+    }
+    start_game_mj();
+};
+start_game_mj();
+</script>
+</body>
+</html>

@@ -594,6 +594,10 @@ function strquick_klr_b(cstype='',csid='textarea_rows_content',status_id='textar
             var otextarea = document.getElementById(csid);
 			otextarea.value=otextarea.value.trim().replace(/\n/mg,',');
             break;
+        case 'oneline':
+            var otextarea = document.getElementById(csid);
+			otextarea.value=otextarea.value.trim().replace(/\n/mg,'');        
+            break;
         case 'ltrim_rows':
             ltrim_rows_klr_b(csid);
             break;

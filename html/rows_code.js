@@ -429,6 +429,7 @@ function option_generate_klr2(){
     ['blank_rows_remove','remove blank rows'],
     ['ltrim_rows','移除段前空格'],
     ['lines2comma','换行符转换为英文逗号'],    
+    ['oneline','合并为1行'],    
     ['unique_characters','字符无重复'],
     ['js_multilines','js多行内容`{}替换'],
     ['chinese_punctuation','中文标点'],

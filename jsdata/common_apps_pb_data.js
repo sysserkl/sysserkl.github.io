@@ -11,6 +11,7 @@ var common_apps_pb_global=[
 ["popup:txtbook","book","🕮","0"],
 ["popup:txteditor","txteditor","🖺","0"],
 ["{{selenium_news}}/html/2048.htm","2048","🔢","5","game"],
+["{{selenium_news}}/html/mahjong.htm","麻将","🀄","5","game"],
 ["{{selenium_news}}/html/ai_prompt_handbook.htm","ai prompt handbook","👾","5","aritificial intelligence"],
 ["{{selenium_news}}/html/array_analyze.htm","Array Analyze","array_analyze512.png","3"],
 ["{{selenium_news}}/html/benchmark.htm","benchmark","🔩","2"],

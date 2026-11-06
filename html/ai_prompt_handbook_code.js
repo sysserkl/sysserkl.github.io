@@ -234,6 +234,8 @@ function show_aips(idx) {
     state.sel = it._idx;
     pushRecent_aips(it);
     const main = document.getElementById('main');
+    var blhtml = marked.parse(it.lines.join('\n'));
+
     main.innerHTML = `<div class="card">
     <div class="title-bar">
       <h2>${specialstr_lt_gt_j(it.name,true)}</h2>
@@ -245,8 +247,9 @@ function show_aips(idx) {
       ${it.post?`<span>${specialstr_lt_gt_j(it.post, true)}</span>`:''}
     </div>
     <div class="path-line">分类路径：${specialstr_lt_gt_j(it.unit,true)}  ·  来源：${specialstr_lt_gt_j(it.rawName,true)}</div>
-    <div class="markdown">${highlight_simple_b(md2html_light_md_b(it.lines), state.kw)}</div>
+    <div class="markdown">${highlight_simple_b(blhtml, state.kw)}</div>
   </div>`;
+          
     document.getElementById('copyBtn').onclick = () => copy_2_clipboard_b(it.lines.join('\n'),false,document.getElementById('copyBtn'),'done','复制提示词');
     // 移动端：选中后切到详情
     if (window.innerWidth <= 860){
@@ -266,4 +269,88 @@ function timeAgo_aips(ts) {
     return new Date(ts).toLocaleDateString('zh-CN');
 }
 
+function search_aips(csstr=false){
+    if (csstr!==false){
+        var oinput=document.getElementById('q');
+        oinput.value=csstr;
+    }
+    
+    state.kw = csstr;
+    recent_keys_aips(state.kw);
+    if (state.kw.trim()) {
+        state.openCats = new Set(UNITS); // 筛选时展开全部
+    }
+    renderList_aips();
+}
 
+function recent_keys_aips(csstr=''){
+    recent_search_b('recent_search_aips',csstr,'search_aips','div_recent_search',[],25,false);
+}
+
+function init_aips(){
+    /* 事件 */
+    document.getElementById('q').addEventListener('keyup', e => {
+        if (event.key!=='Enter'){return;}
+        search_aips(e.target.value);
+    });
+
+    document.querySelectorAll('.tab').forEach(t => {
+        t.addEventListener('click', () => {
+            document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+            t.classList.add('active');
+            state.tab = t.dataset.tab;
+            renderList_aips();
+        });
+    });
+
+    document.getElementById('list').addEventListener('click', e => {
+        const leaf = e.target.closest('.leaf');
+        if (leaf) {
+            show_aips(parseInt(leaf.dataset.idx));
+            return;
+        }
+        // 只处理 unit 级别的 cat（不再有 field 级别的 cat）
+        const cat = e.target.closest('.cat');
+        if (cat && cat.dataset.unit) {
+            const u = cat.dataset.unit;
+            if (state.openCats.has(u)) {
+                state.openCats.delete(u);
+            } else {
+                state.openCats.add(u);
+            }
+            renderList_aips();
+            return;
+        }
+        const recent = e.target.closest('.recent-item');
+        if (recent) {
+            show_aips(parseInt(recent.dataset.idx));
+        }
+    });
+
+    // 支持 URL hash 直达
+    window.addEventListener('hashchange', () => {
+        const idx = location.hash.replace('#', '');
+        if (idx && ITEMS.find(x => x._idx == parseInt(idx))) {
+            show_aips(parseInt(idx));
+        }
+    });
+
+    /* 初始化 */
+    UNITS.forEach(u => state.openCats.add(u));
+    if (location.hash) {
+        const idx = location.hash.replace('#', ''); //`const` 和 `let` 一样，是块级作用域（block scope），作用范围就是最近一对 { } 包裹的代码块。
+        if (ITEMS.find(x => x._idx == parseInt(idx))) {
+            show_aips(parseInt(idx));
+        }
+    }
+
+    // 首次进入默认选中第一项，避免右侧空白
+    if (!state.sel) {
+        const first = flattened_aips()[0]?.it;
+        if (first) {
+            show_aips(first._idx);
+        }
+    }
+    renderList_aips();
+    recent_keys_aips();
+}
