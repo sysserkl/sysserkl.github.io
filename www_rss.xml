@@ -8,322 +8,130 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Fri, 06 Nov 2026 08:29:13 +0800</lastBuildDate>
-<item><title>Shield AI to acquire radar maker Echodyne to bust drones - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/11/05/shield-ai-to-acquire-radar-maker-echodyne-to-bust-drones/</link></item>
-<item><title>Popular military air show permanently pulled from RAF Fairford after suspected terror threat - Defense News</title><link>https://www.defensenews.com/global/europe/2026/11/05/popular-military-air-show-permanently-pulled-from-raf-fairford-after-suspected-terror-threat/</link></item>
-<item><title>Vector introduces ready-to-go one-way attack drone - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/11/05/vector-introduces-ready-to-go-one-way-attack-drone/</link></item>
-<item><title>MBDA’s high-speed strike missile to have range ‘far’ exceeding Exocet - Defense News</title><link>https://defensenews.com/global/europe/2026/11/04/mbda-high-speed-strike-missile-to-have-range-far-exceeding-exocet/</link></item>
-<item><title>Amid Iran conflict, ‘non-hostile’ deaths of 2 US airmen raise overseas toll - Defense News</title><link>https://defensenews.com/news/pentagon-congress/2026/11/04/amid-iran-conflict-non-hostile-deaths-of-2-us-airmen-raise-overseas-toll-to-23/</link></item>
-<item><title>Germany names Army Chief Freuding as next chief of defense - Defense News</title><link>https://www.defensenews.com/global/europe/2026/11/05/germany-names-army-chief-freuding-as-next-chief-of-defense/</link></item>
-<item><title>MBDA plans to fly ‘fat’ hypersonic interceptor demonstrator before end-2029 - Defense News</title><link>https://www.defensenews.com/global/europe/2026/11/05/mbda-plans-to-fly-fat-hypersonic-interceptor-demonstrator-before-end-2029/</link></item>
-<item><title>The Pentagon needs more ammo for the Iran war. Small communities are paying the price. - Defense News</title><link>https://www.defensenews.com/pentagon/2026/11/04/the-pentagon-needs-more-ammo-for-the-iran-war-small-communities-are-paying-the-price/</link></item>
-<item><title>Saildrone expands its European market reach with manufacturing partner in Norway - Defense News</title><link>https://www.defensenews.com/global/europe/2026/11/04/saildrone-expands-its-european-market-reach-with-manufacturing-partner-in-norway/</link></item>
-<item><title>France tasks Naval Group to develop large oceangoing underwater drone - Defense News</title><link>https://www.defensenews.com/global/europe/2026/11/04/france-tasks-naval-group-to-develop-large-oceangoing-underwater-drone/</link></item>
-<item><title>How General Dynamics Is Modernizing Military Communications Security - Defense News</title><link>https://www.defensenews.com/video/2026/11/05/how-general-dynamics-is-modernizing-military-communications-security/</link></item>
-<item><title>Israeli defense company says this trigger is programmed to shoot drones - Defense News</title><link>https://www.defensenews.com/news/2026/11/05/israeli-defense-company-says-this-trigger-is-programmed-to-shoot-drones/</link></item>
-<item><title>Under threat of air strikes, US looks to bolster base infrastructure with 3D printing - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2026/11/04/under-threat-of-air-strikes-us-looks-to-bolster-base-infrastructure-with-3d-printing/</link></item>
-<item><title>新型牙刷通过产生电对抗牙菌斑病原体 - Solidot</title><link>https://www.solidot.org/story?sid=85800</link></item>
-<item><title>任天堂最大 ROM 芯片供应商准备退出 - Solidot</title><link>https://www.solidot.org/story?sid=85801</link></item>
-<item><title>Swift 天文台从印尼上空重返大气层 - Solidot</title><link>https://www.solidot.org/story?sid=85802</link></item>
-<item><title>富钾盐替换普通盐有助于每年预防数百万人死亡 - Solidot</title><link>https://www.solidot.org/story?sid=85803</link></item>
-<item><title>Google 和 OpenAI 的模型对特定口音有偏见 - Solidot</title><link>https://www.solidot.org/story?sid=85804</link></item>
-<item><title>白宫网络监测到住宅代理活动 - Solidot</title><link>https://www.solidot.org/story?sid=85806</link></item>
-<item><title>越南对足球直播盗版者判刑最高一年 - Solidot</title><link>https://www.solidot.org/story?sid=85807</link></item>
-<item><title>同步导致电网呈现周期为一分钟的震荡 - Solidot</title><link>https://www.solidot.org/story?sid=85808</link></item>
-<item><title>印度金融机构遭黑客利用 AI 工具发动的网络攻击 - Solidot</title><link>https://www.solidot.org/story?sid=85809</link></item>
-<item><title>Getting Technical with Mashable - Mashable</title><link>https://mashable.com/series/getting-technical</link></item>
-<item><title>NYT Connections hints today: Clues, answers for November 5, 2026 - Mashable</title><link>https://mashable.com/entertainment/nyt-connections-hint-answer-today-november-5-2026</link></item>
-<item><title>Jimmy Kimmel has a blunt reaction to Trump &amp;#39;blaming everyone other than him&amp;#39; for midterm results - Mashable</title><link>https://mashable.com/entertainment/jimmy-kimmel-trump-midterm-results-reaction</link></item>
-<item><title>AO3&amp;#39;s outage has exposed a growing divide between fanfiction authors and readers - Mashable</title><link>https://mashable.com/life/ao3-outage-divides-fanfiction-authors-readers</link></item>
-<item><title>Why tech stocks are down today, including Nvidia, SpaceX, AMD, more - Mashable</title><link>https://mashable.com/tech/stock-market-down-today-nvidia-spacex-amd</link></item>
-<item><title>Introducing the TechPulse app: All the internet and tech news you need, without the cost - Mashable</title><link>https://mashable.com/tech/techpulse-app-tech-internet-news-mashable</link></item>
-<item><title>Google, Meta, TikTok sue over social media law - Mashable</title><link>https://mashable.com/tech/google-meta-tiktok-sue-california-over-social-media-law</link></item>
-<item><title>Meta&amp;#39;s AI agent Muse adds voice support, expressive avatars - Mashable</title><link>https://mashable.com/tech/meta-muse-voice-mode</link></item>
-<item><title>TikTok launches standalone TikTok Shop app (in four markets) - Mashable</title><link>https://mashable.com/tech/tiktok-shop-standalone-shopping-app</link></item>
-<item><title>Adam Conover on sex, millennial disillusionment, and &amp;#39;Big Divorce Energy&amp;#39; - Mashable</title><link>https://mashable.com/entertainment/adam-conover-say-more-interview</link></item>
-<item><title>GTA 6 release date: Is there early access? The soonest anyone can play. - Mashable</title><link>https://mashable.com/entertainment/gta-6-early-access-soonest-anyone-can-play</link></item>
-<item><title>Seth Meyers responds to Fox News lamenting the midterm results - Mashable</title><link>https://mashable.com/entertainment/seth-meyers-fox-news-midterms</link></item>
-<item><title>&amp;#39;Daily Show&amp;#39; roasts Elon Musk for wasting $500 million on the midterms - Mashable</title><link>https://mashable.com/entertainment/daily-show-elon-musk-midterms</link></item>
-<item><title>Kai Cenat wants to take his time with &amp;#39;GTA 6&amp;#39; - Mashable</title><link>https://mashable.com/life/kai-cenat-gta-6-stream-plans</link></item>
-<item><title>Campaigns are investing in creators. What does that mean for voters? - Mashable</title><link>https://mashable.com/life/2026-midterm-political-elections-creators-influencers-campaigns</link></item>
-<item><title>Uncle Roger judging fried rice with Mythical Kitchen is the crossover we deserve - Mashable</title><link>https://mashable.com/life/mythical-kitchen-uncle-roger-fried-rice-test</link></item>
-<item><title>Best gifts for digital creators - Mashable</title><link>https://mashable.com/tech/gifts-for-creators</link></item>
-<item><title>Best gifts for your wife: 33 unique ideas for your leading lady - Mashable</title><link>https://mashable.com/gifts/best-gifts-for-wife</link></item>
-<item><title>NYT Connections Sports Edition today: Hints and answers for November 5, 2026 - Mashable</title><link>https://mashable.com/entertainment/nyt-connections-sports-edition-hint-answer-today-november-5-2026</link></item>
-<item><title>Wordle today: Answer, hints for November 5, 2026 - Mashable</title><link>https://mashable.com/entertainment/wordle-today-answer-november-5-2026</link></item>
-<item><title>NYT Strands hints, answers for November 5, 2026 - Mashable</title><link>https://mashable.com/entertainment/strands-nyt-hint-november-5-2026</link></item>
-<item><title>Iowa elected a Democrat who&amp;#39;d dropped out of the U.S. midterms, and the internet has jokes - Mashable</title><link>https://mashable.com/life/us-midterm-election-iowa-reaction-eric-armstrong</link></item>
-<item><title>Tumblr is having a fandom renaissance amid the AO3 outage - Mashable</title><link>https://mashable.com/life/ao3-down-tumblr-boon-among-gen-z</link></item>
-<item><title>Sam Rockwell taking on Parker Posey in &amp;#39;Hot Ones Versus&amp;#39; is a chaotic as you&amp;#39;d expect - Mashable</title><link>https://mashable.com/life/hot-ones-versus-sam-rockwell-parker-posey</link></item>
-<item><title>Trump posted through the U.S. midterm elections, and he wasn&amp;#39;t happy - Mashable</title><link>https://mashable.com/life/us-midterm-elections-trump-reaction-post</link></item>
-<item><title>Jimmy Kimmel reacts to the midterm election results - Mashable</title><link>https://mashable.com/entertainment/jimmy-kimmel-midterm-election-results</link></item>
-<item><title>&amp;#39;The Liberation&amp;#39; trailer sees Carrie Coon joining Lily James&amp;#39; cult - Mashable</title><link>https://mashable.com/entertainment/the-liberation-trailer</link></item>
-<item><title>Jimmy Kimmel roasts Trump&amp;#39;s &amp;#39;last stand&amp;#39; before the midterms - Mashable</title><link>https://mashable.com/entertainment/jimmy-kimmel-donald-trump-midterm-elections-reflecting-pool</link></item>
-<item><title>Jon Stewart roasts Trump&amp;#39;s pre-midterms Reflecting Pool speech - Mashable</title><link>https://mashable.com/entertainment/jon-stewart-donald-trump-reflecting-pool-midterms</link></item>
-<item><title>Pornhub traffic skyrocketed the morning of Election Day - Mashable</title><link>https://mashable.com/life/pornhub-traffic-skyrocketed-election-day-morning-2026</link></item>
-<item><title>Burger King’s viral holiday advent calendar is back: How to buy the internet’s mini obsession - Mashable</title><link>https://mashable.com/life/burger-king-2026-holiday-advent-calendar-how-to-buy</link></item>
-<item><title>Starbucks reveals 2026 holiday cups: How to get new designs and the first-ever holiday pup cup - Mashable</title><link>https://mashable.com/life/starbucks-2026-holiday-cup-designs</link></item>
-<item><title>AI agents are banned on Tinder and Hinge, CEO says - Mashable</title><link>https://mashable.com/life/ai-agents-are-banned-on-tinder-and-hinge-spencer-rascoff-says</link></item>
-<item><title>M6 MacBook Pro review: A quietly excellent laptop - Mashable</title><link>https://mashable.com/tech/apple-macbook-pro-m6-review</link></item>
-<item><title>Touch Macbook Pro OLED review: The first slam dunk of the Ternus era - Mashable</title><link>https://mashable.com/tech/apple-touchscreen-macbook-pro-oled-review</link></item>
-<item><title>Review: &amp;#39;The Legend of Zelda: Ocarina of Time&amp;#39; remake is gorgeous, but plays it a little too safe - Mashable</title><link>https://mashable.com/entertainment/the-legend-of-zelda-ocarina-of-time-remake-nintendo-switch-2</link></item>
-<item><title>Review: I have no complaints about the Fitbit Edge, but I prefer the Fitbit Air - Mashable</title><link>https://mashable.com/tech/fitbit-edge-review</link></item>
-<item><title>A teen used her school Chromebook and Google AI Mode to plan her suicide, lawsuit alleges - Mashable</title><link>https://mashable.com/tech/google-gemini-chromebook-lawsuit-teen-planned-suicide</link></item>
-<item><title>Every historic win in the 2026 U.S. midterm elections - Mashable</title><link>https://mashable.com/life/every-historic-win-out-of-the-us-midterm-elections</link></item>
-<item><title>Voters approved more than 40 measures to slow or ban data center growth - Mashable</title><link>https://mashable.com/tech/ai-data-center-bans-midterm-elections</link></item>
-<item><title>Election Day 2026 results updates: See live election results trackers as polls close - Mashable</title><link>https://mashable.com/life/election-day-2026-results-updates-today-so-far</link></item>
-<item><title>Moon phase today: What the Moon will look like on November 5, 2026 - Mashable</title><link>https://mashable.com/science/moon-phase-today-nov-5-2026</link></item>
-<item><title>Moon phase today: What the Moon will look like on November 4, 2026 - Mashable</title><link>https://mashable.com/science/moon-phase-today-nov-4-2026</link></item>
-<item><title>NASA astronauts voted in the 2026 midterms from space. Here’s how. - Mashable</title><link>https://mashable.com/science/nasa-astronauts-vote-space-midterm-elections-2026</link></item>
-<item><title>Here&amp;#39;s how to track the Swift telescope&amp;#39;s final hours before it crashes - Mashable</title><link>https://mashable.com/science/how-to-track-nasa-swift-space-telescope</link></item>
-<item><title>Sony re-releases &amp;#39;80s Walkman headphones with a modern twist, and I got to try them - Mashable</title><link>https://mashable.com/tech/nov-5-sony-mdr-3r-headphones-release</link></item>
-<item><title>Smart beds that adjust their own temperature: how they work and whether active cooling is worth it - Mashable</title><link>https://mashable.com/life/sleep-number-smart-beds-how-they-work</link></item>
-<item><title>Magic: The Gathering&amp;#39;s Reality Fracture Play Booster Box is down to its lowest-ever price — save over $10 - Mashable</title><link>https://mashable.com/life/nov-5-magic-the-gathering-reality-fracture-play-booster-box</link></item>
-<item><title>Magic: The Gathering&amp;#39;s Marvel Super Heroes Jumpstart Booster Box hits 90-day low price at Amazon - Mashable</title><link>https://mashable.com/life/nov-5-magic-the-gathering-marvel-super-heroes-jumpstart-booster-box-deal</link></item>
-<item><title>What&amp;#39;s new to streaming this week? (Nov. 6, 2026) - Mashable</title><link>https://mashable.com/entertainment/new-to-streaming-november-6-2026</link></item>
-<item><title>What&amp;#39;s new to streaming this week? (Week of Oct. 30, 2026) - Mashable</title><link>https://mashable.com/entertainment/new-to-streaming-oct-30-2026</link></item>
-<item><title>Motorola Signature 27 unveiled: Motorola has a new flagship phone, and it&amp;#39;s a doozy - Mashable</title><link>https://mashable.com/tech/motorola-signature-27-announcement-price-specs-release-date</link></item>
-<item><title>Amazon ditches GrubHub for Uber Eats, effective immediately - Mashable</title><link>https://mashable.com/tech/amazon-ditches-grubhub-for-uber-eats-partnership</link></item>
-<item><title>Starbucks Red Cup Day 2026: How to score a free reusable holiday cup - Mashable</title><link>https://mashable.com/life/starbucks-red-cup-day-2026</link></item>
-<item><title>6 good, bad, and weird changes in &amp;#39;The Legend of Zelda: Ocarina of Time&amp;#39; for Switch 2 - Mashable</title><link>https://mashable.com/entertainment/zelda-remake-ocarina-of-time-switch-2-game-changes</link></item>
-<item><title>Samsung needs the Galaxy Buds 5 to be a home run or it’s officially game over - Mashable</title><link>https://mashable.com/tech/samsung-galaxy-buds-5-what-we-want-to-see</link></item>
-<item><title>Zelda Switch 2 restock: Live restock updates at Walmart, Target, and Best Buy (Nov. 5) - Mashable</title><link>https://mashable.com/tech/zelda-switch-2-restock-retailers-where-to-buy-nov-5</link></item>
-<item><title>Daft Punk and Doctor Doom star in the 2026 Lego holiday ad: Shop our top picks from the ad - Mashable</title><link>https://mashable.com/life/lego-holiday-ad-2026-how-to-buy</link></item>
-<item><title>This rumor about Apple&amp;#39;s &amp;#39;anniversary iPhone&amp;#39;? We tend to believe it. - Mashable</title><link>https://mashable.com/tech/anniversary-iphone-rumor-display</link></item>
-<item><title>Starbucks 2026 holiday merch is now live: Shop Bearista tumblers, Owala bottles, and more - Mashable</title><link>https://mashable.com/life/starbucks-2026-holiday-merch-bearista-owala-how-to-buy</link></item>
-<item><title>Hairy election margins map - FlowingData</title><link>https://flowingdata.com/2026/11/05/hairy-election-margins-map/</link></item>
-<item><title>grown used to - FlowingData</title><link>https://flowingdata.com/charttype/spike-map/</link></item>
-<item><title>Data exploration, manually and intentionally - FlowingData</title><link>https://flowingdata.com/2026/11/05/data-exploration-manually-and-intentionally/</link></item>
-<item><title>Exploratory Data Analysis - FlowingData</title><link>https://flowingdata.com/category/statistics/exploratory-data-analysis/</link></item>
-<item><title>Shifting chart options - FlowingData</title><link>https://flowingdata.com/2026/11/05/process-413-shifting/</link></item>
-<item><title>Mountain peaks to show the shifts - FlowingData</title><link>https://flowingdata.com/2026/11/04/mountain-peaks-to-show-the-shifts/</link></item>
-<item><title>Shift in margins for Midterms 2026, by county - FlowingData</title><link>https://flowingdata.com/2026/11/04/shift-in-margins-for-midterms-2026-by-county/</link></item>
-<item><title>Benchmark chair - FlowingData</title><link>https://flowingdata.com/2026/11/04/benchmark-chair/</link></item>
-<item><title>Emergence Magazine - FlowingData</title><link>https://flowingdata.com/tag/emergence-magazine/</link></item>
-<item><title>James Birdle - FlowingData</title><link>https://flowingdata.com/tag/james-birdle/</link></item>
-<item><title>Percentage of votes counted so far - FlowingData</title><link>https://flowingdata.com/2026/11/03/percentage-of-votes-counted-so-far/</link></item>
-<item><title>Needle of uncertainty is live for Midterms 2026 - FlowingData</title><link>https://flowingdata.com/2026/11/03/needle-of-uncertainty-is-live-for-midterms-2026/</link></item>
-<item><title>Applebee&amp;#39;s Exposed Customers&amp;#39; Personal Data After Leaving Database Password In App - Slashdot</title><link>https://yro.slashdot.org/story/26/11/05/2230215/applebees-exposed-customers-personal-data-after-leaving-database-password-in-app</link></item>
-<item><title>OpenAI Responds to US Midterm Elections With New Commitment to Communities - Slashdot</title><link>https://politics.slashdot.org/story/26/11/05/2150249/openai-responds-to-us-midterm-elections-with-new-commitment-to-communities</link></item>
-<item><title>OpenSSH Flaw Lets Attackers Log Into Password-Disabled Linux Accounts - Slashdot</title><link>https://it.slashdot.org/story/26/11/05/2140208/openssh-flaw-lets-attackers-log-into-password-disabled-linux-accounts</link></item>
-<item><title>Apple Is Putting Employees On an AI Budget - Slashdot</title><link>https://apple.slashdot.org/story/26/11/05/203200/apple-is-putting-employees-on-an-ai-budget</link></item>
-<item><title>Want to Rent an Internet Address at the White House? - Slashdot</title><link>https://it.slashdot.org/story/26/11/05/1924217/want-to-rent-an-internet-address-at-the-white-house</link></item>
-<item><title>Discord Is Ditching Electron For Rust - Slashdot</title><link>https://tech.slashdot.org/story/26/11/05/193239/discord-is-ditching-electron-for-rust</link></item>
-<item><title>Motorola&amp;#39;s Ultra Premium Smartphone Is Its First With GrapheneOS Support - Slashdot</title><link>https://hardware.slashdot.org/story/26/11/05/1732222/motorolas-ultra-premium-smartphone-is-its-first-with-grapheneos-support</link></item>
-<item><title>Major Digital Bank In Paraguay Collapses With Half of Population&amp;#39;s Savings - Slashdot</title><link>https://news.slashdot.org/story/26/11/05/1655231/major-digital-bank-in-paraguay-collapses-with-half-of-populations-savings</link></item>
-<item><title>Microsoft&amp;#39;s Imagine Cup &amp;#39;Evolves&amp;#39; From Student Competition To AI Startup Contest - Slashdot</title><link>https://news.slashdot.org/story/26/11/05/057254/microsofts-imagine-cup-evolves-from-student-competition-to-ai-startup-contest</link></item>
-<item><title>NASA Announces X-70 Experimental Aircraft to Advance Flight Research - Slashdot</title><link>https://science.slashdot.org/story/26/11/05/0527244/nasa-announces-x-70-experimental-aircraft-to-advance-flight-research</link></item>
-<item><title>3M To Pay Over $7 Billion To Settle &amp;#39;Forever Chemical&amp;#39; Groundwater Claims - Slashdot</title><link>https://yro.slashdot.org/story/26/11/05/052220/3m-to-pay-over-7-billion-to-settle-forever-chemical-groundwater-claims</link></item>
-<item><title>Vietnam Jails Pirate Football Streamers For Up To a Year - Slashdot</title><link>https://yro.slashdot.org/story/26/11/05/0322258/vietnam-jails-pirate-football-streamers-for-up-to-a-year</link></item>
-<item><title>Axon Sued Over AI-Powered License Plate Reader Network - Slashdot</title><link>https://yro.slashdot.org/story/26/11/04/2319208/axon-sued-over-ai-powered-license-plate-reader-network</link></item>
-<item><title>OpenAI Says ChatGPT Is Catching Up to Google In Search - Slashdot</title><link>https://tech.slashdot.org/story/26/11/04/207222/openai-says-chatgpt-is-catching-up-to-google-in-search</link></item>
-<item><title>Netflix Launches First AI-Branded Content Recommendations Feature on TVs - Slashdot</title><link>https://entertainment.slashdot.org/story/26/11/04/2034237/netflix-launches-first-ai-branded-content-recommendations-feature-on-tvs</link></item>
-<item><title>You Gotta Drink More Friggin’ Water - theCHIVE</title><link>https://thechive.com/humanity/life-hacks-random/you-gotta-drink-more-friggin-water/?utm_postid=5329603&amp;utm_editor=5329603_hendy</link></item>
-<item><title>The World Is Still Full Of Good; We Have Proof! - theCHIVE</title><link>https://thechive.com/humanity/world-still-good-thechive/?utm_postid=5329053&amp;utm_editor=5329053_ryder</link></item>
-<item><title>Remember, Remember the 5th of November - theCHIVE</title><link>https://thechive.com/humanity/history-random/remember-5th-of-november/?utm_postid=5329378&amp;utm_editor=5329378_aaron</link></item>
-<item><title>Relatable Tweets Summing Up Everything You’ve Ever Gone Through - theCHIVE</title><link>https://thechive.com/funny/relatable-tweets-about-life/?utm_postid=5329428&amp;utm_editor=5329428_ty</link></item>
-<item><title>Buyer Beware: These Fake Products Are Something Else - theCHIVE</title><link>https://thechive.com/funny/buyer-beware-fake-products-thechive/?utm_postid=5327349&amp;utm_editor=5327349_ryder</link></item>
-<item><title>17 Useless Facts I Didn’t Need To Know Whatsoever - theCHIVE</title><link>https://thechive.com/humanity/facts-random/17-useless-facts-i-didnt-need-to-know-whatsoever/?utm_postid=5329518&amp;utm_editor=5329518_hendy</link></item>
-<item><title>The Most Unique Art Styles Throughout History - theCHIVE</title><link>https://thechive.com/humanity/art/unique-art-throughout-history/?utm_postid=5329321&amp;utm_editor=5329321_aaron</link></item>
-<item><title>You don’t have to hold the mic to change the game - theCHIVE</title><link>https://thechive.com/uncategorized/you-dont-have-to-hold-the-mic-to-change-the-game/?utm_postid=5329957&amp;utm_editor=5329957_brian</link></item>
-<item><title>These Movie Plot Holes Aren’t Plot Holes At All! - theCHIVE</title><link>https://thechive.com/entertainment/movies/these-movie-plot-holes-arent-plot-holes-at-all/?utm_postid=5328900&amp;utm_editor=5328900_hendy</link></item>
-<item><title>Sizzling Bacon Facts Worth Every Strip - theCHIVE</title><link>https://thechive.com/uncategorized/bacon-facts/?utm_postid=5329354&amp;utm_editor=5329354_ty</link></item>
-<item><title>German is a Wild Language - theCHIVE</title><link>https://thechive.com/funny/german-funny-words/?utm_postid=5329050&amp;utm_editor=5329050_alex</link></item>
-<item><title>Unfortunate Design Choices That Will Make You Question Everything - theCHIVE</title><link>https://thechive.com/funny/unfortunate-design-choices/?utm_postid=5328463&amp;utm_editor=5328463_luka</link></item>
-<item><title>Late Night Nostalgia Keeps The Heart Warm - theCHIVE</title><link>https://thechive.com/humanity/nostalgia/late-night-nostalgia-hits-hard/?utm_postid=5328920&amp;utm_editor=5328920_hendy</link></item>
-<item><title>Profound and Iconic Book Quotes About Life - theCHIVE</title><link>https://thechive.com/humanity/inspirational/profound-and-iconic-book-quotes-about-life/?utm_postid=5329124&amp;utm_editor=5329124_luka</link></item>
-<item><title>Wednesday Night Just Got Weirder… - theCHIVE</title><link>https://thechive.com/funny/wednesday-night-weird-thechive/?utm_postid=5329011&amp;utm_editor=5329011_ryder</link></item>
-<item><title>Welp… Consider My Mouth Watered - theCHIVE</title><link>https://thechive.com/lifestyle/food-and-drink/welp-consider-my-mouth-watered/?utm_postid=5328837&amp;utm_editor=5328837_hendy</link></item>
-<item><title>More People Making Questionable Life Decisions - theCHIVE</title><link>https://thechive.com/funny/collection-life-decisions-funny-thechive/?utm_postid=5326698&amp;utm_editor=5326698_ryder</link></item>
-<item><title>Damn, That’s Beautiful – Life At A Glance - theCHIVE</title><link>https://thechive.com/humanity/beautiful/beautiful-photos-funny-thechive/?utm_postid=5328979&amp;utm_editor=5328979_ryder</link></item>
-<item><title>This Pig Nearly Started a War - theCHIVE</title><link>https://thechive.com/funny/pig-that-nearly-started-war/?utm_postid=5328279&amp;utm_editor=5328279_trevor</link></item>
-<item><title>History Is a Lesson Best Learned Laughing - theCHIVE</title><link>https://thechive.com/funny/history-best-learned-laughing/?utm_postid=5327934&amp;utm_editor=5327934_aaron</link></item>
-<item><title>Welcome TF Back To WTF Wednesday! - theCHIVE</title><link>https://thechive.com/funny/wtf-wednesday-november-4/?utm_postid=5328785&amp;utm_editor=5328785_hendy</link></item>
-<item><title>Villages: The Older You Get, the More Appealing They Are - theCHIVE</title><link>https://thechive.com/humanity/beautiful/villages-the-older-you-get/?utm_postid=5328605&amp;utm_editor=5328605_aaron</link></item>
-<item><title>Online Marketplaces Are Always A Battlefield - theCHIVE</title><link>https://thechive.com/funny/online-marketplace-battlefield-thechive/?utm_postid=5327316&amp;utm_editor=5327316_ryder</link></item>
-<item><title>Heh… That’s Kind Of Cool - theCHIVE</title><link>https://thechive.com/humanity/interesting-random/things-that-are-pretty-cool/?utm_postid=5328337&amp;utm_editor=5328337_hendy</link></item>
-<item><title>Anything Can Be a Plant Pot If You’re Creative Enough - theCHIVE</title><link>https://thechive.com/funny/creative-plant-pots/?utm_postid=5326322&amp;utm_editor=5326322_jake</link></item>
-<item><title>Scary Movie Memes For Those Who Already Miss Spooky Season - theCHIVE</title><link>https://thechive.com/funny/scary-movie-memes/?utm_postid=5328395&amp;utm_editor=5328395_luka</link></item>
-<item><title>‘Common Phrases’ That Humankind Should Outlaw - theCHIVE</title><link>https://thechive.com/humanity/common-phrases-that-humankind-should-outlaw/?utm_postid=5328839&amp;utm_editor=5328839_spencer</link></item>
-<item><title>Sneaky Details in Movies You Probably Never Even Noticed - theCHIVE</title><link>https://thechive.com/uncategorized/sneaky-details-in-movies-you-missed/?utm_postid=5328602&amp;utm_editor=5328602_ty</link></item>
-<item><title>These People Have Lost The Plot Or Something - theCHIVE</title><link>https://thechive.com/funny/people-lots-plot-funny-thechive/?utm_postid=5326667&amp;utm_editor=5326667_ryder</link></item>
-<item><title>How Has This Not Been Invented Yet? - theCHIVE</title><link>https://thechive.com/humanity/interesting-random/new-inventions-reddit/?utm_postid=5328378&amp;utm_editor=5328378_alex</link></item>
-<item><title>14 Bizarre Wine Facts to Make You Rethink Every Sip - theCHIVE</title><link>https://thechive.com/lifestyle/food-and-drink/18-bizarre-wine-facts-to-make-you-rethink-every-sip/?utm_postid=5328253&amp;utm_editor=5328253_hendy</link></item>
-<item><title>Halloween Costumes, But They Just Get More and More Niche - theCHIVE</title><link>https://thechive.com/lifestyle/niche-weird-halloween-costumes/?utm_postid=5328282&amp;utm_editor=5328282_spencer</link></item>
-<item><title>I Want To Retire In An Old Cottage… - theCHIVE</title><link>https://thechive.com/humanity/travel/who-else-wants-to-live-in-a-cottage/?utm_postid=5328114&amp;utm_editor=5328114_hendy</link></item>
-<item><title>Take These NFL Memes To The House! (Week 8) - theCHIVE</title><link>https://thechive.com/funny/merica-funny/nfl-memes-week-8/?utm_postid=5328677&amp;utm_editor=5328677_jake</link></item>
-<item><title>Did Anybody Order Memes? - theCHIVE</title><link>https://thechive.com/funny/restaurant-memes/?utm_postid=5327884&amp;utm_editor=5327884_jake</link></item>
-<item><title>A Veteran’s Lifetime of Giving Comes Full Circle - theCHIVE</title><link>https://thechive.com/military/a-veterans-lifetime-of-giving-comes-full-circle/?utm_postid=5328657&amp;utm_editor=5328657_brittany</link></item>
-<item><title>Yankee Candle Has Some Explaining To Do - theCHIVE</title><link>https://thechive.com/humanity/design/weird-yankee-candle-scents/?utm_postid=5317718&amp;utm_editor=5317718_melissa</link></item>
-<item><title>Mmm… Pizza Is Life - theCHIVE</title><link>https://thechive.com/lifestyle/food-and-drink/mmm-pizza-is-life/?utm_postid=5327734&amp;utm_editor=5327734_aaron</link></item>
-<item><title>Introvert Memes vs. Extrovert Memes - theCHIVE</title><link>https://thechive.com/funny/introvert-extrovert-memes-thechive/?utm_postid=5326634&amp;utm_editor=5326634_ryder</link></item>
-<item><title>Good Answer! Good Answer! - theCHIVE</title><link>https://thechive.com/funny/good-answer-reality-tv-quiz-show/?utm_postid=5328219&amp;utm_editor=5328219_spencer</link></item>
-<item><title>Dogs + Stick = Happy Doggos - theCHIVE</title><link>https://thechive.com/humanity/animals/dogs-with-stick/?utm_postid=5326812&amp;utm_editor=5326812_jake</link></item>
-<item><title>Everyday Words That Are Actually Acronyms - theCHIVE</title><link>https://thechive.com/humanity/facts-random/everyday-words-that-are-actually-acronyms/?utm_postid=5327882&amp;utm_editor=5327882_ty</link></item>
-<item><title>Extinct Animals That Weren’t What We Thought They Were - theCHIVE</title><link>https://thechive.com/humanity/animals/extinct-animal-facts-we-got-wrong/?utm_postid=5317204&amp;utm_editor=5317204_melissa</link></item>
-<item><title>You’ll Have A Hard Time Not Relating To These Memes! - theCHIVE</title><link>https://thechive.com/funny/relatable-memes-funny-thechive/?utm_postid=5326094&amp;utm_editor=5326094_ryder</link></item>
-<item><title>Hero Shots From Some Extreme Sports Adventures - theCHIVE</title><link>https://thechive.com/humanity/inspirational/extreme-sports-photos-thechive/?utm_postid=5326602&amp;utm_editor=5326602_ryder</link></item>
-<item><title>【活动招募】滇中首届徒步大会 - 户外资料网</title><link>https://hd.8264.com/xianlu-190305</link></item>
-<item><title>小众秘境 |人少景绝！山南环线 - 户外资料网</title><link>https://hd.8264.com/xianlu-190306</link></item>
-<item><title>严选|新疆雷鸟 冬巡伊犁 4980元起 - 户外资料网</title><link>https://hd.8264.com/xianlu-190314</link></item>
-<item><title>白哈巴至禾木徒步漫记：在阿尔泰的秋风里，写一封浪漫的长信 - 户外资料网</title><link>https://www.8264.com/viewnews-160228-page-1.html</link></item>
-<item><title>征战郭喀拉日居念久：进山4道铁门、出山500元摩托 - 户外资料网</title><link>https://www.8264.com/viewnews-160225-page-1.html</link></item>
-<item><title>黄沙漫卷三千里 同心共助塞上行 - 户外资料网</title><link>https://www.8264.com/viewnews-160226-page-1.html</link></item>
-<item><title>骑入秋色画卷 太安山白河堡水库 - 户外资料网</title><link>https://www.8264.com/viewnews-160224-page-1.html</link></item>
-<item><title>汶川干海子徒步记：穿越山林邂逅高山草甸 - 户外资料网</title><link>https://www.8264.com/viewnews-160227-page-1.html</link></item>
-<item><title>尼泊EBC两架直升机相撞，一人死亡 - 户外资料网</title><link>https://www.8264.com/viewnews-160223-page-1.html</link></item>
-<item><title>尼泊尔EBC丁波切的好运酒店起火烧毁 - 户外资料网</title><link>https://www.8264.com/viewnews-160222-page-1.html</link></item>
-<item><title>一名22岁女孩在宁夏贺兰山坠崖遇难 - 户外资料网</title><link>https://www.8264.com/viewnews-160221-page-1.html</link></item>
-<item><title>印度徒步线路上发生雪崩，8人失踪其中2人已经遇难 - 户外资料网</title><link>https://www.8264.com/viewnews-160220-page-1.html</link></item>
-<item><title>中秋国庆伯舒拉岭北线，荒凉的跟月球一样 - 户外资料网</title><link>https://www.8264.com/viewnews-160215-page-1.html</link></item>
-<item><title>平均60岁闯雨崩：领队被队友整崩溃，神瀑上导游不见了 - 户外资料网</title><link>https://www.8264.com/viewnews-160213-page-1.html</link></item>
-<item><title>2027第五届·库拉岗日·元旦徒步大会（6日行程） - 户外资料网</title><link>https://hd.8264.com/xianlu-190310</link></item>
-<item><title>秘境太行 郭亮挂壁 双岭穿越 抱犊沟 最经典路线（5日行程） - 户外资料网</title><link>https://hd.8264.com/xianlu-190050</link></item>
-<item><title>西藏喜马拉雅 巡游西藏喜马拉雅边境线越野车4人小团（8日行程） - 户外资料网</title><link>https://hd.8264.com/xianlu-189803</link></item>
-<item><title>请教下各位前辈关于车架的问题 - 户外资料网</title><link>https://www.8264.com/wenda/81804.html</link></item>
-<item><title>准备长沙骑行到桂林，露营，现在在纠结一个问题 - 户外资料网</title><link>https://www.8264.com/wenda/81766.html</link></item>
-<item><title>求助求助，莫名其妙的爆胎 - 户外资料网</title><link>https://www.8264.com/wenda/81785.html</link></item>
-<item><title>请教LA SPORTIVA-cobra的尺码问题 - 户外资料网</title><link>https://www.8264.com/wenda/81775.html</link></item>
-<item><title>野外攀岩戴不戴头盔的问题 - 户外资料网</title><link>https://www.8264.com/wenda/81777.html</link></item>
-<item><title>milan&amp;#39;s brutalist torre velasca gets interior apartment makeover by matteo thun - designboom</title><link>https://www.designboom.com/architecture/matteo-thun-72-apartments-milan-iconic-brutalist-torre-velasca-interior-residences/</link></item>
-<item><title>fala&amp;#39;s porto house pairs striped marble with playful geometric forms and sculptural interiors - designboom</title><link>https://www.designboom.com/architecture/fala-atelier-striped-marble-house-porto-portugal/</link></item>
-<item><title>what can looking at earth from space teach us about how we live on it? - designboom</title><link>https://www.designboom.com/art/earth-space-inploration-richelle-ellis-lawrence-azerrad-art-science-overview-effect-delmonico-books-interview/</link></item>
-<item><title>desert-inspired sensory playground brings kid’s perspective to downtown el paso - designboom</title><link>https://www.designboom.com/architecture/nomada-desert-playgola-childrens-playground-el-paso/</link></item>
-<item><title>ryue nishizawa places vivid orange peak against turquoise landfill in japan - designboom</title><link>https://www.designboom.com/architecture/ryue-nishizawa-vivid-orange-peak-turquoise-landfill-japan-setouchi-art-industry-2026-sanaa-kazuyo-sejima/</link></item>
-<item><title>OMA turns potato head’s bali store into creative workshop for recycled materials and traditional craft - designboom</title><link>https://www.designboom.com/architecture/oma-potato-head-good-times-general-store-bali-indonesia/</link></item>
-<item><title>SpY installs giant black triangle in madrid square to explore urban surveillance - designboom</title><link>https://www.designboom.com/art/spy-giant-black-triangle-madrid-square-urban-surveillance-panopticon/</link></item>
-<item><title>designboom radar: exhibitions to see around the world this november - designboom</title><link>https://www.designboom.com/art/exhibition-radar-november-2026/</link></item>
-<item><title>sabine marcelis turns light and color into immersive spaces at zurich’s museum für gestaltung - designboom</title><link>https://www.designboom.com/design/sabine-marcelis-light-color-exhibition-museum-gestaltung-zurich/</link></item>
-<item><title>foster + partners&amp;#39; generali stadium references the intricate stonework of milan&amp;#39;s duomo - designboom</title><link>https://www.designboom.com/architecture/foster-partners-generali-stadium-milan-duomo-manica-san-siro-italy/</link></item>
-<item><title>herzog &amp; de meuron to convert former birkenstock warehouse into the eames institute museum - designboom</title><link>https://www.designboom.com/architecture/herzog-de-meuron-eames-institute-museum-birkenstock-warehouse-novato/</link></item>
-<item><title>norman foster discusses his first watch with LEBOND and why good design transcends scale - designboom</title><link>https://www.designboom.com/design/norman-foster-first-watch-lebond-good-design-scale-interview/</link></item>
-<item><title>podcast: architecture that listens through nature and site intelligence - designboom</title><link>https://www.designboom.com/architecture/podcast-room-for-utopias-01-02/</link></item>
-<item><title>PP-2 turntable reads vinyls without tonearm and inspires glass listening room in tokyo - designboom</title><link>https://www.designboom.com/technology/pp-2-turntable-reads-vinyls-without-tonearm-glass-listening-room-tokyo-waiting-for-ideas/</link></item>
-<item><title>live-build documentary captures 1:1 timber pavilions at studio in the woods workshop - designboom</title><link>https://www.designboom.com/architecture/live-build-documentary-11-timber-pavilions-studio-woods-workshop/</link></item>
-<item><title>how ecoLogicStudio uses living organisms to build better spaces for living - designboom</title><link>https://www.designboom.com/architecture/how-ecologicstudio-uses-living-organisms-to-build-better-spaces-for-living/</link></item>
-<item><title>LAUFEN unveils VITREON steel for contemporary washbasin designs - designboom</title><link>https://www.designboom.com/design/laufen-vitreon-steel-contemporary-washbasin/</link></item>
-<item><title>podcast: curing urban isolation through collective care and architectural intuition - designboom</title><link>https://www.designboom.com/architecture/podcast-room-for-utopias-03-04/</link></item>
-<item><title>smart home technology enters the bathroom with VitrA V-Care 3 - designboom</title><link>https://www.designboom.com/design/smart-home-technology-bathroom-vitra-v-care-3/</link></item>
-<item><title>in new delhi, built99 connects 99 architecture and design practices to a wider critical discourse - designboom</title><link>https://www.designboom.com/architecture/built99-connects-99-practices-wider-critical-discourse/</link></item>
-<item><title>how light and materiality shape spaces in EDRA MAGAZINE issue six - designboom</title><link>https://www.designboom.com/design/how-light-and-materiality-shape-spaces-in-edra-magazine-issue-six/</link></item>
-<item><title>architecture that invites nature as a designer, from dissolving walls to insect-built pavilions - designboom</title><link>https://www.designboom.com/architecture/nature-take-over-dissolving-walls-insect-built-pavilions/</link></item>
-<item><title>making room for nature: the urban landscapes of kongjian yu - designboom</title><link>https://www.designboom.com/architecture/room-nature-urban-landscapes-kongjian-yu-turenscape-adaptation-evidence-china-charles-waldheim/</link></item>
-<item><title>andrés jaque questions the politics of utopia in an age of permanent connectivity - designboom</title><link>https://www.designboom.com/architecture/andres-jaque-offpolinn-politics-utopia-age-permanent-connectivity-guest-essay/</link></item>
-<item><title>this installation by jakob kudsk steensen considers the origins and agency of life - designboom</title><link>https://www.designboom.com/art/this-installation-by-jakob-kudsk-steensen-considers-the-origins-and-agency-of-life/</link></item>
-<item><title>mari nagem questions dreams of colonizing mars while earth&amp;#39;s ecosystems struggle to survive - designboom</title><link>https://www.designboom.com/art/humanity-mari-nagem-earth-tropics-moon-mars/</link></item>
-<item><title>temporary pleasure: john leo gillen on growing up in a nightclub - designboom</title><link>https://www.designboom.com/design/temporary-pleasure-john-leo-gillen-nightclub-right-here-right-now/</link></item>
-<item><title>hurricane-proof polycarbonate wraps resilient 24-hour public library in miami - designboom</title><link>https://www.designboom.com/architecture/hurricane-proof-polycarbonate-resilient-24-hour-public-library-miami-89th-studio/</link></item>
-<item><title>gustaf westman gives disney&amp;#39;s mickey &amp; friends his signature chunky, colorful forms - designboom</title><link>https://www.designboom.com/design/gustaf-westman-disney-mickey-mouse-chunky-colorful-furniture/</link></item>
-<item><title>meet the wienermobile, the 1930s quirky pedal car that put hot dogs on wheels - designboom</title><link>https://www.designboom.com/technology/wienermobile-1930s-quirky-pedal-car-hot-dogs-wheels-oscar-mayer-bringatrailer/</link></item>
-<item><title>landmark james turrell exhibition to inaugurate superblue kyoto in early 2027 - designboom</title><link>https://www.designboom.com/art/landmark-james-turrell-exhibition-superblue-kyoto-early-2027-teamlab/</link></item>
-<item><title>angelo renna proposes floating modular island with 39-tree ring on florence&amp;#39;s river - designboom</title><link>https://www.designboom.com/architecture/angelo-renna-floating-modular-island-39-tree-ring-florence-river-firenze-little-island/</link></item>
-<item><title>coperni closes: revisiting the fashion label&amp;#39;s strangest experiments in design and technology - designboom</title><link>https://www.designboom.com/design/coperni-closes-revisiting-fashion-label-strangest-experiments-technology/</link></item>
-<item><title>cantilevered pavilion by APAP extends 1970s woodland house in nicosia - designboom</title><link>https://www.designboom.com/architecture/cantilevered-glass-concrete-pavilion-apap-1970s-woodland-house-nicosia-diagonal/</link></item>
-<item><title>Machine Dreams: Rainforest - designboom</title><link>https://www.designboom.com/events/machine-dreams-rainforest/</link></item>
-<item><title>Global Antiquity - designboom</title><link>https://www.designboom.com/events/global-antiquity/</link></item>
-<item><title>Tadeusz Kantor (1915–1990). Emballage, Cricotage and Madame Jarema - designboom</title><link>https://www.designboom.com/events/tadeusz-kantor-1915-1990-emballage-cricotage-and-madame-jarema/</link></item>
-<item><title>25 Years of Lightology &amp; Moooi: An Evening with Marcel Wanders and Gregory Kay - designboom</title><link>https://www.designboom.com/events/25-years-of-lightology-moooi-an-evening-with-marcel-wanders-and-gregory-kay/</link></item>
-<item><title>Elmgreen &amp; Dragset: Stillleben mit Gemüse - designboom</title><link>https://www.designboom.com/events/elmgreen-dragset-stillleben-mit-gemuse/</link></item>
-<item><title>Álvaro Urbano: Helen - designboom</title><link>https://www.designboom.com/events/alvaro-urbano-helen/</link></item>
-<item><title>Koo Jeong A: Ousssmos - designboom</title><link>https://www.designboom.com/events/koo-jeong-a-ousssmos/</link></item>
-<item><title>pixelated ceramic tiles and folded aluminum compose electrical substation’s facade in virginia - designboom</title><link>https://www.designboom.com/architecture/pixelated-ceramic-tiles-folded-aluminum-electrical-substation-facade-virginia-atelier-manferdini-invisible/</link></item>
-<item><title>hydromechanical forming shapes reflective stainless-steel sculptural objects - designboom</title><link>https://www.designboom.com/design/hydromechanical-forming-reflective-stainless-steel-sculptural-objects-sarah-naghawi-jawf/</link></item>
-<item><title>exposed concrete blocks and red tiles shape garage-turned-apartment in barcelona - designboom</title><link>https://www.designboom.com/architecture/exposed-concrete-blocks-red-tiles-garage-apartment-barcelona-llerona-lablanca/</link></item>
-<item><title>ultramarine drapes and restored 1950s marble anchor cinemazero redesign by alberto caiola - designboom</title><link>https://www.designboom.com/architecture/ultramarine-drapes-restored-1950s-marble-cinemazero-redesign-alberto-caiola/</link></item>
-<item><title>six-sided transparent cube with LED matrix shapes screenless AI companion - designboom</title><link>https://www.designboom.com/technology/six-sided-transparent-cube-led-matrix-screenless-ai-companion-adam-miklosi-glyph-1/</link></item>
-<item><title>aditya mandlik explores how water, worms and bees can reshape architecture - designboom</title><link>https://www.designboom.com/architecture/aditya-mandlik-water-worms-bees-reshape-architecture-guest-essay/</link></item>
-<item><title>these glowing amber sculptures begin with a natural polymer produced by tiny insects - designboom</title><link>https://www.designboom.com/design/glowing-amber-sculptures-polymer-insects-ori-orisun-merhav/</link></item>
-<item><title>step inside pollinator machine, a giant tulip magnolia installation in shanghai - designboom</title><link>https://www.designboom.com/art/pollinator-machine-giant-tulip-magnolia-installation-shanghai-martha-schwartz-partners-msp/</link></item>
-<item><title>nicolas nielsen designs self-driving HYVE beehive to pollinate cities - designboom</title><link>https://www.designboom.com/design/nicolas-nielsen-self-driving-hyve-beehive-pollinate-cities/</link></item>
-<item><title>carsten höller - designboom</title><link>https://www.designboom.com/art/carsten-holler-powerful-architect-collective-dreaming-mit-museum-adam-haar-horowitz-seth-riskin-interview/</link></item>
-<item><title>Iga-yaki Cup – Wabi-Sabi Porcelain with Hydrangea Glaze - designboom</title><link>https://www.designboom.com/shop/design/iga-yaki-cup-asemi-co-08-18-2025/</link></item>
-<item><title>Custom Wall Mural - Ombre - designboom</title><link>https://www.designboom.com/shop/design/custom-wall-mural-kintsugi-martina-banozic-textiles-12-04-2024/</link></item>
-<item><title>Hamilton’s Counter-Revolutionary Republicanism - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/hamiltons-counter-revolutionary-republicanism/</link></item>
-<item><title>The Republic We Inherited - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/the-republic-we-inherited/</link></item>
-<item><title>Renewing the Eternal Contract - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/renewing-the-eternal-contract/</link></item>
-<item><title>Patrick Stewart’s Theatrical Imagination - Law &amp; Liberty</title><link>https://lawliberty.org/patrick-stewarts-theatrical-imagination/</link></item>
-<item><title>Meta Employees ‘Interacted’ With Pirated Copies of Adult Films, Filing Shows - TorrentFreak</title><link>https://torrentfreak.com/meta-employees-interacted-with-pirated-copies-of-adult-films-filing-shows/</link></item>
-<item><title>Vietnam Jails Pirate Football Streamers for Up to a Year, Three Escape Prison - TorrentFreak</title><link>https://torrentfreak.com/vietnam-jails-pirate-football-streamers-for-up-to-a-year-three-escape-prison/</link></item>
-<item><title>The Best Portable Solar Panels for Renewable Power - Popular Mechanics</title><link>https://www.popularmechanics.com/technology/gear/g64945229/best-portable-solar-panels/</link></item>
-<item><title>Can We Build Life From Scratch? - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a74346221/artificial-life-spudcell/</link></item>
-<item><title>Where’s the Fastest Delivery for the iPhone Duo - Popular Mechanics</title><link>https://www.popularmechanics.com/technology/a74349025/iphone-duo-availability-retailers/</link></item>
-<item><title>Weber Genesis E-330 Grill Review - Popular Mechanics</title><link>https://www.popularmechanics.com/home/a74345903/weber-genesis-grill-review/</link></item>
-<item><title>The Popular Mechanics 2026 Drone Still-Fly List - Popular Mechanics</title><link>https://www.popularmechanics.com/technology/gear/a74248262/drones-still-on-sale-2026/</link></item>
-<item><title>Scientists Are Finally Testing the Site Linked to Noah’s Ark - Popular Mechanics</title><link>https://www.popularmechanics.com/video/a74345284/astounding-pop-mech-show-ep-70/</link></item>
-<item><title>Scientists Found the One Thing Stress Is Actually Good For - Popular Mechanics</title><link>https://www.popularmechanics.com/science/health/a74319453/stress-cortisol-memory-connection/</link></item>
-<item><title>An Invisible Enemy Has Haunted Aviation For Years. It May Have Caused the Fatal Learjet Crash. - Popular Mechanics</title><link>https://www.popularmechanics.com/flight/a74329208/ice-learjet-crash/</link></item>
-<item><title>Scientists Cracked the Code on a 400-Year-Old Padlock. What It Was Protecting Is Still a Mystery. - Popular Mechanics</title><link>https://www.popularmechanics.com/science/archaeology/a74335424/scientists-cracked-the-code-on-a-400-year-old-padlock-what-it-was-protecting-is-still-a-mystery/</link></item>
-<item><title>Snapmaker U1 3D Printer Review - Popular Mechanics</title><link>https://www.popularmechanics.com/technology/gear/a74336311/snapmaker-u1-3d-printer-review/</link></item>
-<item><title>Amazon’s New Echo Devices Get Smarter - Popular Mechanics</title><link>https://www.popularmechanics.com/technology/a74346182/amazon-echo-devices-new-2026/</link></item>
-<item><title>This Truck Toolbox Became a Rolling Workshop - Popular Mechanics</title><link>https://www.popularmechanics.com/home/tools/a74286758/weather-guard-pack-rat-review/</link></item>
-<item><title>The Key to a Perfect Pass Isn’t Luck—It’s Physics - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a74336016/quarterback-pass-physics-spiral/</link></item>
-<item><title>3 Archaeological Discoveries That Sound Too Weird to Be Real - Popular Mechanics</title><link>https://www.popularmechanics.com/video/a74286552/astounding-pop-mech-show-ep-69/</link></item>
-<item><title>A New Ice Age Began 2,000 Years Ago—We Ended It - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a74324521/ice-age-began-2000-years-ago/</link></item>
-<item><title>Does All of Time Exist All at Once? - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a74335644/all-of-time-exists-at-once-says-controversial-idea/</link></item>
-<item><title>A Scientist Solved a Roman Cup’s Magic Trick - Popular Mechanics</title><link>https://www.popularmechanics.com/science/archaeology/a74296577/roman-cups-color-changing-magic/</link></item>
-<item><title>A Trapped Positron Could Explain Why We Exist - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a74287708/trapped-positron/</link></item>
-<item><title>Life’s Mysterious Origin Just Got More Mysterious - Popular Mechanics</title><link>https://www.popularmechanics.com/space/solar-system/a74324946/comet-life/</link></item>
-<item><title>A Startup Wants to Sell You Sunlight - Popular Mechanics</title><link>https://www.popularmechanics.com/space/satellites/a74307577/reflect-orbital/</link></item>
-<item><title>Dark Energy Could Be Evidence of a Fifth Dimension - Popular Mechanics</title><link>https://www.popularmechanics.com/space/a74206108/reality-leaking-into-fifth-dimension/</link></item>
-<item><title>‘Baby’ Universes May Exist Inside of Our Own - Popular Mechanics</title><link>https://www.popularmechanics.com/space/a74091778/black-hole-cosmology-baby-universes/</link></item>
-<item><title>A WWII Shipwreck Revives a Nazi Spy Plot - Popular Mechanics</title><link>https://www.popularmechanics.com/science/archaeology/a74313495/wwii-shipwreck-maine-coast/</link></item>
-<item><title>Europe’s Drought Revealed a Lost Roman City - Popular Mechanics</title><link>https://www.popularmechanics.com/science/archaeology/a74285537/drought-roman-city-discovery/</link></item>
-<item><title>A Viking Hoard Hid a Rare St. Olaf Coin - Popular Mechanics</title><link>https://www.popularmechanics.com/science/archaeology/a74264111/1000-year-old-viking-coin/</link></item>
-<item><title>A Mysterious Moai Emerged on Easter Island - Popular Mechanics</title><link>https://www.popularmechanics.com/science/archaeology/a74284324/statue-rapa-nuis-lakebed/</link></item>
-<item><title>The U.S. Secretly Tapped a Soviet Underwater Cable for Years. Then Someone Sold the Secret. - Popular Mechanics</title><link>https://www.popularmechanics.com/military/a74232237/ivy-bells-wire-tapping-sellout/</link></item>
-<item><title>A Former Hitler Hideout Just Went Up in Flames - Popular Mechanics</title><link>https://www.popularmechanics.com/military/a74250172/eagles-nest-hitler-fire/</link></item>
-<item><title>Cheap Drones Are Rattling the Pentagon - Popular Mechanics</title><link>https://www.popularmechanics.com/military/a74193038/b-1-spiders-web-drone-plan/</link></item>
-<item><title>A Pentagon UFO Hunter’s Wildest Mission - Popular Mechanics</title><link>https://www.popularmechanics.com/military/a74173383/alien-hunter-jay-stratton/</link></item>
-<item><title>A Failed Drone Attack Unmasked Russia&amp;#39;s Spy Army - Popular Mechanics</title><link>https://www.popularmechanics.com/military/a74027716/russia-espionage-gig-economy-sabotage/</link></item>
-<item><title>MacBook Pro M6 Laptop Review - Popular Mechanics</title><link>https://www.popularmechanics.com/technology/gear/a74325376/apple-macbook-pro-m6-review/</link></item>
-<item><title>The 8 Best Solar Generators for Backup Power - Popular Mechanics</title><link>https://www.popularmechanics.com/adventure/outdoors/a37295464/best-solar-powered-generators/</link></item>
-<item><title>The Best Emergency Food Kits for Disaster Prep - Popular Mechanics</title><link>https://www.popularmechanics.com/home/g37578091/best-emergency-food-kits/</link></item>
-<item><title>The Best Standing Desk Chairs for Your Home Office - Popular Mechanics</title><link>https://www.popularmechanics.com/home/g39123180/best-standing-desk-chairs/</link></item>
-<item><title>This Bosch Circular Saw Cuts Laser-Straight - Popular Mechanics</title><link>https://www.popularmechanics.com/home/tools/a74325082/bosch-profactor-circular-saw-review/</link></item>
-<item><title>Sun Joe CJ603E Wood Chipper Review - Popular Mechanics</title><link>https://www.popularmechanics.com/home/lawn-garden/a74323079/sun-joe-cj603e-wood-chipper-review/</link></item>
-<item><title>The Best Ergonomic Keyboards for All-Day Comfort - Popular Mechanics</title><link>https://www.popularmechanics.com/technology/gadgets/a39357700/best-ergonomic-keyboards/</link></item>
-<item><title>The 6 Best Laptops for Work and Play in 2026 - Popular Mechanics</title><link>https://www.popularmechanics.com/technology/gadgets/g36702849/best-laptops/</link></item>
-<item><title>The 7 Best Pocket Knives Worth Adding to Your EDC - Popular Mechanics</title><link>https://www.popularmechanics.com/adventure/outdoor-gear/a2975/best-pocket-knives/</link></item>
-<item><title>The Best Car Battery Chargers - Popular Mechanics</title><link>https://www.popularmechanics.com/cars/g42623729/best-car-battery-chargers/</link></item>
-<item><title>The Best Portable Tire Inflators - Popular Mechanics</title><link>https://www.popularmechanics.com/cars/car-technology/g37023639/best-portable-tire-inflators/</link></item>
-<item><title>7 Things You Should Have in Your Car This Winter - Popular Mechanics</title><link>https://www.popularmechanics.com/cars/trucks/a74272165/winter-car-essentials/</link></item>
-<item><title>Gooloo vs. Noco Portable Jump Starter - Popular Mechanics</title><link>https://www.popularmechanics.com/cars/car-technology/a74274594/gooloo-vs-noco-portable-jump-starter/</link></item>
-<item><title>12 Years Ago, This Jumbo Jet Vanished Without a Trace. New High-Tech Ocean Robots May Finally Reveal What Happened. - Popular Mechanics</title><link>https://www.popularmechanics.com/flight/airlines/a74313890/mh370-search-ocean-robots/</link></item>
-<item><title>Your Brain May Be Creating ‘Psychic’ Moments. - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a74311598/brain-may-be-creating-psychic-moments/</link></item>
-<item><title>Can a $150 Device Treat Alzheimer’s Disease? - Popular Mechanics</title><link>https://www.popularmechanics.com/science/health/a74312354/ultrasonic-brain-massage-dementia/</link></item>
-<item><title>America’s Next Industrial Disaster Is Brewing - Popular Mechanics</title><link>https://www.popularmechanics.com/about/a73355291/natech-disasters-industrial-disaster/</link></item>
-<item><title>Your Sense of Smell Is Silently Shaping Your World - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a74298410/sense-smell-emotions/</link></item>
-<item><title>Mini EDC Tools Make Perfect Stocking Stuffers - Popular Mechanics</title><link>https://www.popularmechanics.com/technology/gear/g69250516/best-mini-edc-tools/</link></item>
-<item><title>Scientists Found Hidden Order in Quantum Chaos - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a74310961/secret-order-in-quantum-chaos/</link></item>
-<item><title>The Brain’s Hidden Copy of Reality - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a74307330/brain-hidden-memories/</link></item>
-<item><title>Westinghouse WPX3400 Gas Pressure Washer Tested - Popular Mechanics</title><link>https://www.popularmechanics.com/home/lawn-garden/a74314003/westinghouse-wpx3400-pressure-washer-review/</link></item>
-<item><title>Craftsman Just Made Its First Advent Calendar - Popular Mechanics</title><link>https://www.popularmechanics.com/home/tools/a73607750/craftsman-advent-calendar/</link></item>
-<item><title>Milwaukee 2026 Advent Calendar 24-Piece Tool Set - Popular Mechanics</title><link>https://www.popularmechanics.com/home/tools/a74036839/milwaukee-advent-calendar-2026/</link></item>
-<item><title>The 9 Best Pop-Up Canopy Tents - Popular Mechanics</title><link>https://www.popularmechanics.com/home/g35765278/best-pop-up-canopy-tents/</link></item>
-<item><title>Love May Be Less Random Than You Think - Popular Mechanics</title><link>https://www.popularmechanics.com/science/a74290934/genetic-traits-in-romance/</link></item>
-<item><title>Using a Power Station to Save Money on Bills - Popular Mechanics</title><link>https://www.popularmechanics.com/home/tools/a74284133/power-station-time-of-use-mode/</link></item>
-<item><title>Elon Musk Deletes Smug Election Posts After They Backfire and His Businesses Tank by $120 Billion - Futurism</title><link>https://futurism.com/future-society/elon-musk-election-backfire-loses-billions</link></item>
-<item><title>Tech Industry in Denial That the Midterms Show Everyone Hates Them - Futurism</title><link>https://futurism.com/artificial-intelligence/tech-industry-in-denial-midterms</link></item>
-<item><title>Google Staffers Say They’re Being Silenced From Telling the Public the Truth About AI - Futurism</title><link>https://futurism.com/artificial-intelligence/google-deepmind-workers-silenced-censorship-ai</link></item>
-<item><title>Hakeem Jeffries Is Bankrolled by the Most Controversial Tech Companies in Existence - Futurism</title><link>https://futurism.com/future-society/hakeem-jeffries-donors-corporate-controversial-tech-companies</link></item>
-<item><title>Panicked Sam Altman Reverses Position as Walls Close In, Says People Should Be Able to Own RAM - Futurism</title><link>https://futurism.com/artificial-intelligence/sam-altman-reverses-position-ram</link></item>
-<item><title>Blue Wave Midterm Elections - Slashdot</title><link>https://politics.slashdot.org/story/26/11/04/0629214/democrats-take-control-of-us-congress-as-voters-reject-trumps-republicans</link></item>
-<item><title>future compute campus - Slashdot</title><link>https://slashdot.org/story/26/11/02/1940254/openai-might-rebrand-its-data-centers-as-ai-compute-campuses</link></item>
-<item><title>Google&amp;#39;s 2023 antitrust trial - Slashdot</title><link>https://tech.slashdot.org/story/23/10/09/0320200/what-microsofts-ceo-said-in-court-about-google---and-its-own-1998-antitrust-case</link></item>
-<item><title>3 percent of the search engine market share - Slashdot</title><link>https://tech.slashdot.org/story/24/02/26/1548252/google-says-microsoft-offered-to-sell-bing-to-apple-in-2018-but-search-quality-issues-got-in-the-way</link></item>
-<item><title>Democrats Take Control of US Congress As Voters Reject Trump&amp;#39;s Republicans - Slashdot</title><link>https://politics.slashdot.org/story/26/11/04/0629214/democrats-take-control-of-us-congress-as-voters-reject-trumps-republicans?sbsrc=md</link></item>
-<item><title>Japanese Bank to Stop Allowing ATM Cards, PCs For Account Access - Slashdot</title><link>https://news.slashdot.org/story/26/11/04/0656220/japanese-bank-to-stop-allowing-atm-cards-pcs-for-account-access?sbsrc=md</link></item>
-<item><title>French Blood Banks Hit Alongside Cyberattack On European Supermarkets - Slashdot</title><link>https://it.slashdot.org/story/26/11/04/1834253/french-blood-banks-hit-alongside-cyberattack-on-european-supermarkets?sbsrc=md</link></item>
-<item><title>Applebee&amp;#39;s exposed customers&amp;#39; personal data after leaving database password in a - Slashdot</title><link>https://slashdot.org/submission/17352103/applebees-exposed-customers-personal-data-after-leaving-database-password-in-a</link></item>
-<item><title>For Rent: a White House email address?!? - Slashdot</title><link>https://slashdot.org/submission/17352101/for-rent-a-white-house-email-address</link></item>
-<item><title>OpenAI Responds to US Midterm Elections; Now Committed To Community - Slashdot</title><link>https://slashdot.org/submission/17352097/openai-responds-to-us-midterm-elections-now-committed-to-community</link></item>
-<item><title>Youtube Drummer Who had Life&amp;#39;s Work Stolen by AI--Is now eacted to by AI Avatar - Slashdot</title><link>https://slashdot.org/submission/17352096/youtube-drummer-who-had-lifes-work-stolen-by-ai--is-now-eacted-to-by-ai-avatar</link></item>
-<item><title>Microsoft Imagine Cup &amp;#39;Evolves&amp;#39; From Student-Only to AI Startup Competition - Slashdot</title><link>https://slashdot.org/submission/17352094/microsoft-imagine-cup-evolves-from-student-only-to-ai-startup-competition</link></item>
-<item><title>Methodical/mercurial - Aeon</title><link>https://aeon.co/essays/welcome-to-the-mixed-up-joyful-world-of-audhd</link></item>
-<item><title>Experience AI begins reaching classrooms across Latin America - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/experience-ai-begins-reaching-classrooms-across-latin-america/</link></item>
-<item><title>Celebrating the UK’s National Engineering Day 2026 - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/celebrating-the-uks-national-engineering-day-2026/</link></item>
-<item><title>That’s a wrap! Coolest Projects 2026 - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/thats-a-wrap-coolest-projects-2026/</link></item>
-<item><title>Reintroducing Code Classroom – now with the Blocks editor - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/reintroducing-code-classroom-now-with-the-blocks-editor/</link></item>
-<item><title>Preparing young people for frontier technologies: Our new partnership with the UK government - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/preparing-young-people-for-frontier-technologies-our-new-partnership-with-the-uk-government/</link></item>
-<item><title>The next Chair of the Board of Trustees, Blythe Masters - Raspberry Pi</title><link>https://www.raspberrypi.org/blog/the-next-chair-of-the-board-of-trustees-blythe-masters/</link></item>
+<lastBuildDate>Sat, 07 Nov 2026 20:57:16 +0800</lastBuildDate>
+<item><title>Harmonizing Band Performs Crosby, Stills, Nash and Young’s ‘Ohio’ From Their Van - Laughing Squid</title><link>https://laughingsquid.com/daring-greatly-crosby-stills-nash-young-ohio/</link></item>
+<item><title>Rescued Black Bear Cubs Playfully Splash Around With Rubber Duckies in a Giant Bubble Bath - Laughing Squid</title><link>https://laughingsquid.com/black-bear-cubs-bubble-bath/</link></item>
+<item><title>Heritage Steam Trains Drag Race Side by Side During the Transport Heritage Expo in Sydney, Australia - Laughing Squid</title><link>https://laughingsquid.com/steam-train-drag-race-sydney/</link></item>
+<item><title>A Patriotic Cover of Sousa’s ‘Stars and Stripes Forever’ on a Restored Dutch Street Organ - Laughing Squid</title><link>https://laughingsquid.com/stars-and-stripes-forever-dutch-organ/</link></item>
+<item><title>Rescued Kitten Thrives on Three Legs After Flatbush Cats Vets Amputate Her Injured Limb - Laughing Squid</title><link>https://laughingsquid.com/three-legged-kitten-flatbush-cats/</link></item>
+<item><title>How Art and Engineering Combined to Build the Statue of Liberty as a Symbol of Freedom - Laughing Squid</title><link>https://laughingsquid.com/statue-of-liberty-art-engineering/</link></item>
+<item><title>A Clever Map That Highlights Every Country Mentioned in There I Ruined It’s Toto ‘Africa’ Cover - Laughing Squid</title><link>https://laughingsquid.com/geographical-toto-africa-map/</link></item>
+<item><title>Transformers Band the Cybertronic Spree Performs Psychedelic Cover of Black Sabbath’s ‘War Pigs’ - Laughing Squid</title><link>https://laughingsquid.com/cybertronic-spree-black-sabbath-war-pigs/</link></item>
+<item><title>Playful Backyard Raccoons Tug on a Thirsty Skunk’s Tail - Laughing Squid</title><link>https://laughingsquid.com/raccoons-tug-skunks-tail/</link></item>
+<item><title>The Complex Engineering Behind the Familiar Sound of a Classic Dial-Up Modem Handshake - Laughing Squid</title><link>https://laughingsquid.com/dial-up-modem-handshake-sound/</link></item>
+<item><title>摩托罗拉宣布第一款支持 GrapheneOS 的旗舰手机 - Solidot</title><link>https://www.solidot.org/story?sid=85814</link></item>
+<item><title>Salon 宣布终止出版 - Solidot</title><link>https://www.solidot.org/story?sid=85815</link></item>
+<item><title>Silver Lake 和 PIF 磋商收购 Unity Software - Solidot</title><link>https://www.solidot.org/story?sid=85816</link></item>
+<item><title>中国三季度 CO2 排放下降 3% - Solidot</title><link>https://www.solidot.org/story?sid=85817</link></item>
+<item><title>NASA 通过 AI 生成图像宣布 X-70 试验机 - Solidot</title><link>https://www.solidot.org/story?sid=85818</link></item>
+<item><title>特斯拉将停产 Cyber​​truck - Solidot</title><link>https://www.solidot.org/story?sid=85819</link></item>
+<item><title>从 Linux 到维基百科：志愿者如何构建互联网 - Solidot</title><link>https://www.solidot.org/story?sid=85820</link></item>
+<item><title>广电总局整治 AI 低俗微短剧 - Solidot</title><link>https://www.solidot.org/story?sid=85821</link></item>
+<item><title>天宫即将迎来首位巴基斯坦宇航员 - Solidot</title><link>https://www.solidot.org/story?sid=85822</link></item>
+<item><title>抗议者闯入微软在欧洲的一处数据中心工地 - Solidot</title><link>https://www.solidot.org/story?sid=85823</link></item>
+<item><title>微软画图应用曝出远程代码执行漏洞 - Solidot</title><link>https://www.solidot.org/story?sid=85813</link></item>
+<item><title>《尼尔：自动人形》释出更新游戏容量从 50GB 暴涨至 366GB - Solidot</title><link>https://www.solidot.org/story?sid=85811</link></item>
+<item><title>Kitty 0.50 Picks Up Where You Left Off After a System Restart - It's FOSS</title><link>https://itsfoss.com/news/kitty-0-50-release/</link></item>
+<item><title>Passbolt is an Open Source Password Manager Built Specially For Teams - It's FOSS</title><link>https://itsfoss.com/passbolt-review/</link></item>
+<item><title>FOSS Weekly #26.45: Fedora 45, Immutable Ubuntu, Mint New Feature, Dual Boot Without USB and More Linux Stuff - It's FOSS</title><link>https://itsfoss.com/newsletter/foss-weekly-26-45/</link></item>
+<item><title>This Overlooked Linux mv Option Replaces Three Commands With One - It's FOSS</title><link>https://itsfoss.com/mv-exchange/</link></item>
+<item><title>Local AI Weekly - It's FOSS</title><link>https://itsfoss.com/tag/local-ai-weekly/</link></item>
+<item><title>Local AI Weekly #8: All Your RAM Are Belong to Us - It's FOSS</title><link>https://itsfoss.com/newsletter/local-ai-weekly-8/</link></item>
+<item><title>Love Podcasts? Here are the Best Linux-focused Podcasts for You - It's FOSS</title><link>https://itsfoss.com/linux-podcasts/</link></item>
+<item><title>Why a Mathematician Is Chasing Eclipses With Algorithms and Cameras - IEEE Spectrum</title><link>https://spectrum.ieee.org/2026-solar-eclipse</link></item>
+<item><title>How Do You Land on a Moon With Almost No Gravity? - IEEE Spectrum</title><link>https://spectrum.ieee.org/mmx-mission-to-phobos</link></item>
+<item><title>Video Friday: Room-Scale Cable-Driven Home Robot Tidies Up - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-home-cable-robot</link></item>
+<item><title>Brain Stimulation Device Aims to Treat Women’s Health Conditions - IEEE Spectrum</title><link>https://spectrum.ieee.org/samphire-neuroscience-tdcs-pmdd-treatment</link></item>
+<item><title>AI Text Watermarking May Not Be Able to Meet the E.U.’s New Rules - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-watermark-openai-textgrain-europe</link></item>
+<item><title>Are Drone Ports the Next Annoying Tech Neighbor? - IEEE Spectrum</title><link>https://spectrum.ieee.org/drone-delivery-noise</link></item>
+<item><title>How a Kenyan Startup Is Rethinking AI for Small Businesses - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-small-business-mobile-money-startup</link></item>
+<item><title>What Would a U.S. Telecommunications Act 2.0 Look Like? - IEEE Spectrum</title><link>https://spectrum.ieee.org/telecommunications-act-reform</link></item>
+<item><title>The PHP2Shell Vulnerability Heralds Cybersecurity Hell - IEEE Spectrum</title><link>https://spectrum.ieee.org/ai-in-cybersecurity-php2shell-vulnerability</link></item>
+<item><title>Video Friday: Spot Plays to Show Its Whole-Body Manipulation - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-whole-body-manipulation</link></item>
+<item><title>Autonomous Airships Keep Tabs on Energy Infrastructure - IEEE Spectrum</title><link>https://spectrum.ieee.org/infrastructure-inspection-airship-hylight</link></item>
+<item><title>Mesh Woven Into Heart Tissue Harvests Energy From Motion - IEEE Spectrum</title><link>https://spectrum.ieee.org/medical-implant-energy-harvesting-mesh</link></item>
+<item><title>COMMAND LINE UTILITIES - OSTechNix</title><link>https://ostechnix.com/category/command-line-utilities/</link></item>
+<item><title>PROGRAMMING - OSTechNix</title><link>https://ostechnix.com/category/programming/</link></item>
+<item><title>VIRTUALIZATION - OSTechNix</title><link>https://ostechnix.com/category/virtualization/</link></item>
+<item><title>Fedora 45 Is Released: Here’s What’s New and How to Upgrade - OSTechNix</title><link>https://ostechnix.com/fedora-45-released/</link></item>
+<item><title>Linux Kernel 7.4 RC1 Released with AMD GPU Header Dumps, Massive Driver Updates, and 19k Commits - OSTechNix</title><link>https://ostechnix.com/linux-kernel-7-4-rc1-released/</link></item>
+<item><title>3 Ways to Protect your Privacy on iPhone and iPad - OSTechNix</title><link>https://ostechnix.com/protect-privacy-iphone-ipad/</link></item>
+<item><title>Best Video Analytics Tools in 2026: AI, Open Source, and Cloud Options - OSTechNix</title><link>https://ostechnix.com/best-video-analytics-tools/</link></item>
+<item><title>Video Analytics Tools - OSTechNix</title><link>https://ostechnix.com/category/video-analytics-tools/</link></item>
+<item><title>Computer Vision - OSTechNix</title><link>https://ostechnix.com/category/computer-vision/</link></item>
+<item><title>NVIDIA DeepStream - OSTechNix</title><link>https://ostechnix.com/category/video-analytics-tools/nvidia-deepstream/</link></item>
+<item><title>Residential vs Datacenter vs ISP Proxies: Key Differences and Use Cases - OSTechNix</title><link>https://ostechnix.com/residential-vs-datacenter-vs-isp-proxies/</link></item>
+<item><title>Datacenter Proxy - OSTechNix</title><link>https://ostechnix.com/category/proxy/datacenter-proxy/</link></item>
+<item><title>Residential Proxy - OSTechNix</title><link>https://ostechnix.com/category/proxy/residential-proxy/</link></item>
+<item><title>How to List Enabled APT Repositories in Debian 13 Trixie - OSTechNix</title><link>https://ostechnix.com/list-enabled-apt-repositories-debian/</link></item>
+<item><title>She Added Vintage Charm to a &amp;quot;Sterile&amp;quot; Dining Room (It&amp;#39;s Unrecognizable) - Apartment Therapy</title><link>https://www.apartmenttherapy.com/luxe-green-dining-room-makeover-5000-dollars-ba-37698357?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>These Gorgeous Holiday Cards Look Like Tiny Works of Art — and We Have an Exclusive Discount - Apartment Therapy</title><link>https://www.apartmenttherapy.com/minted-holiday-sale-2026-37698797?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>32 Self-Care Gifts for Someone Who’s Had a Rough Year - Apartment Therapy</title><link>https://www.apartmenttherapy.com/self-care-gift-ideas-37446080?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>We Tested (and Rated!) All the Rugs at West Elm — Here Are the Best to Suit Your Style and Space - Apartment Therapy</title><link>https://www.apartmenttherapy.com/best-west-elm-rugs-37379746?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>We Tested (and Rated!) All the Sofas at Pottery Barn — Here Are the Best Ones for Every Space - Apartment Therapy</title><link>https://www.apartmenttherapy.com/the-most-comfortable-sofas-at-pottery-barn-37137488?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>19 Fire Pits Perfect For Every Outdoor Space at Every Budget - Apartment Therapy</title><link>https://www.apartmenttherapy.com/best-fire-pits-37253838?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>This 5-Foot Weighted Moon Pillow Is My Secret to Sleeping Through the Night - Apartment Therapy</title><link>https://www.apartmenttherapy.com/moonsleep-moonspoon-review-37696712?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>The New Trader Joe’s Find That Shoppers Are Rating a 9/10 - Apartment Therapy</title><link>https://www.apartmenttherapy.com/trader-joes-new-lemon-foaming-dish-soap-37698308?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>Are the Viral Koala Sofas Worth It? We Tested a Few to Find Out - Apartment Therapy</title><link>https://www.apartmenttherapy.com/is-koala-worth-it-37698530?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>English Country Style Is Bringing This Unexpected Color to Christmas - Apartment Therapy</title><link>https://www.apartmenttherapy.com/blue-christmas-decor-trend-37692095?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>Editors Won’t Stop Recommending This Organic Mattress Brand, and It’s 25% Off Right Now for Black Friday - Apartment Therapy</title><link>https://www.apartmenttherapy.com/naturepedic-black-friday-sale-2026-37698775?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>This Is the Rudest Thing You Can Do While Hosting a Dinner - Apartment Therapy</title><link>https://www.apartmenttherapy.com/common-hosting-habit-etiquette-rule-37698188?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>A $19 Linen Box from the Container Store Became the Ultimate TV Tech Storage - Apartment Therapy</title><link>https://www.apartmenttherapy.com/the-container-store-shoe-box-storage-37697997?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>I Tested Every Article Coffee Table IRL — Here Are the Best Ones for Every Space and Need - Apartment Therapy</title><link>https://www.apartmenttherapy.com/article-coffee-tables-37552543?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>I Decluttered 6 Years’ Worth of Paper Clutter in 45 Minutes — Here’s How - Apartment Therapy</title><link>https://www.apartmenttherapy.com/declutter-paper-clutter-37698497?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>A Bedroom Was &amp;quot;50 Shades of Beige&amp;quot; Until a Dream Redo with Painted Trim - Apartment Therapy</title><link>https://www.apartmenttherapy.com/primary-bedroom-makeover-with-subtle-color-drenching-ba-37698353?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>Americans Are Trading Dark Wood Floors for This “Honey” Trend, per a New Survey - Apartment Therapy</title><link>https://www.apartmenttherapy.com/anderson-tuftex-flooring-forecast-2027-37697405?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>Yes, You Can Have a Dining Area in a Small Space — Here’s How - Apartment Therapy</title><link>https://www.apartmenttherapy.com/how-to-create-dining-area-small-space-37696622?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>The 3 Sofa Non-Negotiables Our Executive Home Director Swears By - Apartment Therapy</title><link>https://www.apartmenttherapy.com/3-sofa-shopping-non-negotiables-37696620?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>An All-Blue Bathroom Feels Like a &amp;quot;Boutique Spa&amp;quot; After an Old-World Redo - Apartment Therapy</title><link>https://www.apartmenttherapy.com/dramatic-full-bathroom-renovation-ba-37694952?utm_source=RSS&amp;utm_medium=feed&amp;utm_campaign=Category%2FChannel%3A+main</link></item>
+<item><title>Happys Place S03E03/幸福之地/Happys.Place.S03E03.1080p.WEB.H264-CAKES - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803267.xml</link></item>
+<item><title>Happys Place S03E03/幸福之地/Happys.Place.S03E03.720p.WEB.H264-iNSiDiOUS - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803266.xml</link></item>
+<item><title>Spongebob and Patricks Timeline Twist-up 2025/海绵宝宝和派大星：时间线错乱（暂译）/SpongeBob and Patricks Timeline Twist-Up 2025 1080p AMZN WEB-DL DDP5 1 H 264 DUAL-BiOMA - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803265.xml</link></item>
+<item><title>Wolves Up Close With Bertie Gregory 2026/零距离狼群：贝蒂·格雷戈里（暂译）/Wolves.Up.Close.with.Bertie.Gregory.2026.720p.WEB.H264-SHIIIT - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803264.xml</link></item>
+<item><title>/The.Buddy.Holly.Story.1978.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803263.xml</link></item>
+<item><title>/The.Driver.1978.REMASTERED.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803262.xml</link></item>
+<item><title>/Great.Balls.of.Fire.1989.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803261.xml</link></item>
+<item><title>Grandview, U.S.A./Grandview.U.S.A.1984.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803260.xml</link></item>
+<item><title>/Firewalker.1986.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803259.xml</link></item>
+<item><title>The Graham Norton Show S34E07/格拉汉姆·诺顿秀/The.Graham.Norton.Show.S34E07.1080p.WEB.H264-DEADPOOL[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803258.xml</link></item>
+<item><title>RoccosTeensUnleashed07-Scene2.s02.FrancisX.MollyCute - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669704.xml</link></item>
+<item><title>[asw] Keroro Gunsou 2026/Keroro军曹☆/[ASW] Keroro Gunsou (2026) - 06 [1080p HEVC][38920D5D] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803257.xml</link></item>
+<item><title>[subsplease] Keroro Gunsou 2026/Keroro军曹☆/[SubsPlease] Keroro Gunsou (2026) - 06 (1080p) [739949DA] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803256.xml</link></item>
+<item><title>[erai-raws] Keroro Gunsou 2026/青蛙军曹☆/[Erai-raws] Keroro Gunsou (2026) - 06 [1080p CR WEB-DL AVC AAC][MultiSub][9BE74709] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803255.xml</link></item>
+<item><title>Crave 2026/吸血鬼嘉年华/Crave (2026) 1080p WEBRip 5.1-LAMA - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803254.xml</link></item>
+<item><title>新闻问答/Have I Got News for You S72E06 1080p iP WEB-DL AAC2 0 H 264-RAWR - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803253.xml</link></item>
+<item><title>Uwierz w Mikolaja 2 2025/相信圣诞老人 2/Believe.in.Santa.2.2025.720p.WEB.H264-AFO - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803252.xml</link></item>
+<item><title>Mike Judges Beavis and Butt-Head S04E09/瘪四与大头蛋/Mike.Judges.Beavis.and.Butt-Head.S04E09.Power.Grip.1080p.HEVC.x265-MeGusta - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803251.xml</link></item>
+<item><title>Mike Judges Beavis and Butt-Head S04E10/瘪四与大头蛋/Mike.Judges.Beavis.and.Butt-Head.S04E10.Double.Vision.1080p.HEVC.x265-MeGusta - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803250.xml</link></item>
+<item><title>LoveLive! Superstar!! 三期 简体 - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803249.xml</link></item>
+<item><title>Sisu Road To Revenge 2025/永生战士2/Sisu Road to Revenge 2025 m1080p BluRay x264-GeneMige - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803248.xml</link></item>
+<item><title>the Alabama Solution 2025/阿拉巴马解决方案/The Alabama Solution 2025 1080p WEBRip DDP 5 1 10bit H 265-iVy - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803247.xml</link></item>
+<item><title>悲情三角.Triangle.of.Sadness.2022.1080p.WEBRip.x265-RARBG.CMCT.optimized - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669703.xml</link></item>
+<item><title>恨网（暂译）/Haternet 2026 1080p FoundTV WEB-DL AAC2 0 H 264-BobDobbs - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803246.xml</link></item>
+<item><title>新集体/New Group 2026 720p AMZN WEB-DL DDP5 1 H 264-CHORTLE - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803245.xml</link></item>
+<item><title>拯救地球/Bugonia 2025 REPACK 1080p BluRay DDP 5 1 10bit H 265-iVy - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803244.xml</link></item>
+<item><title>Christmas Owes Me Nothing 2026 1080p WEB-DL HEVC x265 BONE - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803243.xml</link></item>
+<item><title>A Prayer For the Dying 2026/临终祷文/A Prayer for the Dying 2026 1080p WEB-DL HEVC x265 5.1 BONE - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803242.xml</link></item>
+<item><title>打造《绝代艳后》/Making Marie Antoinette 2026 1080p AMZN WEB-DL DDP2 0 H 264-BiOMA - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803241.xml</link></item>
+<item><title>Dexter: Resurrection S02E02/嗜血法医：杀魔复生/Dexter.Resurrection.S02E02.1080p.WEB.H264-CAKES - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803240.xml</link></item>
+<item><title>叛徒(美版)/The Traitors US S05E09 Playing Chess 1080p PCOK WEB-DL DDP5 1 H 264-RAWR - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803239.xml</link></item>
+<item><title>Greys Anatomy S23E04/实习医生格蕾/Greys.Anatomy.S23E04.1080p.WEB.h264-ETHEL - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803238.xml</link></item>
+<item><title>Unprotected: Murder in Galicia 2026/无人守护：枕边杀局/Unprotected Murder in Galicia 2026 1080p NF WEB-DL DDP5 1 H 264-SPWEB - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803237.xml</link></item>
+<item><title>Hells Kitchen US S25E07/地狱厨房/Hells.Kitchen.US.S25E07.1080p.WEB.H264-HOTDOGWATER - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803236.xml</link></item>
+<item><title>The Devil at 4 O&amp;#x27;Clock/The Devil At 4 OClock (1961) [1080p] [BluRay] [YTS] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803235.xml</link></item>
+<item><title>9-1-1: Nashville S02E04/紧急呼救：纳什维尔/9-1-1.Nashville.S02E04.1080p.WEB.h264-ETHEL - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803234.xml</link></item>
+<item><title>Last Train To Fortune 2025/最后的财富列车/Last Train to Fortune 2025 1080p WEBRip 10Bit DDP5 1 x265-NeoNoir - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803233.xml</link></item>
+<item><title>9-1-1 S10E04/紧急呼救/9-1-1.S10E04.1080p.WEB.h264-ETHEL - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803232.xml</link></item>
+<item><title>实习医生格蕾/Greys Anatomy S23E04 720p WEB H264-JFF - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803231.xml</link></item>
+<item><title>Elsbeth S04E04/奇思妙探/elsbeth.s04e04.1080p.web.h264-cakes[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803230.xml</link></item>
+<item><title>Possible Love 2026/假如爱有如果/Possible.Love.2026.1080p.WEB.H264-9Minus5in - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803229.xml</link></item>
+<item><title>Tulsa King S04E04/塔尔萨之王/Tulsa.King.S04E04.1080p.WEB.H264-CAKES - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803228.xml</link></item>
+<item><title>The Assassin S02E05/气绝勇者与暗杀公主/The.Assassin.S02E05.1080p.WEB.H264-GLHF - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803227.xml</link></item>
+<item><title>库比蒂诺/Cupertino S01E05 Celeste 1080p AMZN WEB-DL DDP5 1 H 264-RAWR - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803226.xml</link></item>
+<item><title>The Assassin S02E01/气绝勇者与暗杀公主/The.Assassin.S02E01.1080p.WEB.H264-GLHF - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803225.xml</link></item>
+<item><title>Outlander: Blood of My Blood S02E08/古战场传奇：吾血之亲/Outlander.Blood.of.My.Blood.S02E08.1080p.WEB.h264-ETHEL - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803224.xml</link></item>
+<item><title>CMCT.冒牌家庭.We.re.the.Millers.2013.EXTENDED.1080p.BluRay.H264.AAC-RARBGCMCT.optimized - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669702.xml</link></item>
+<item><title>Dancing With the Stars S35E09/与星共舞/Dancing With The Stars S35E09 720p WEB H 264-JFF - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803223.xml</link></item>
+<item><title>The Assassin S02E02/气绝勇者与暗杀公主/The.Assassin.S02E02.1080p.WEB.H264-GLHF - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803222.xml</link></item>
+<item><title>The Assassin S02E04/气绝勇者与暗杀公主/The.Assassin.S02E04.1080p.WEB.H264-GLHF - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803221.xml</link></item>
 </channel></rss>

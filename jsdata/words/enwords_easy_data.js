@@ -2258,6 +2258,15 @@ claustrophobe
 climatologist
 well-known
 Eurokepticism
+extrasolar planet
+beekeeping
+botanist
+doomscrolling
+hid
+HTML
+modernisation
+multi-talented
+taxable income
 
 
 `.trim().split('\n');
