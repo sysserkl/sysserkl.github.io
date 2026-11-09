@@ -1,0 +1,18 @@
+var sourcelist=[
+["https://smashingmagazine.com/2026/11/ux-insiders-community-in-house-ux-people/","A New Community For In-House UX People","2026-11-09","Smashing Magazine","0",],
+["https://smashingmagazine.com/2026/11/making-immersive-llm-chat-experiences-more-accessible/","Making Immersive LLM Chat Experiences More Accessible","2026-11-09","Smashing Magazine","0",],
+["https://smashingmagazine.com/2026/11/modern-css-might-make-your-front-end-more-complex/","Modern CSS Might Make Your Front-End More Complex","2026-11-09","Smashing Magazine","0",],
+["https://smashingmagazine.com/2026/10/desktop-wallpaper-calendars-november-2026/","A Spark Of Color In November’s Gray (2026 Wallpapers Edition)","2026-11-09","Smashing Magazine","0",],
+["https://smashingmagazine.com/2026/10/accordion-icons-which-work-best/","Accordion Icons: Which Work Best?","2026-11-09","Smashing Magazine","0",],
+["https://smashingmagazine.com/2026/10/embracing-playful-imperfection-css-random-function/","Embracing Playful Imperfection With The CSS `random()` Function","2026-11-09","Smashing Magazine","0",],
+["https://smashingmagazine.com/2026/10/is-your-organization-messing-up-ai-adoption/","Is Your Organization Messing Up AI Adoption?","2026-11-09","Smashing Magazine","0",],
+["https://smashingmagazine.com/2026/10/how-name-things/","A Practical Guide To Naming Things","2026-11-09","Smashing Magazine","0",],
+["https://smashingmagazine.com/2026/09/desktop-wallpaper-calendars-october-2026/","Under Autumn’s Spell (October 2026 Wallpapers Edition)","2026-11-09","Smashing Magazine","0",],
+["https://wronghands1.com/2026/11/06/sense-and-sensibility-and-star-wars/","Sense and Sensibility and Star Wars","2026-11-09","Wrong Hands","0",],
+["https://wronghands1.com/2026/10/30/darker-editions/","Darker Editions","2026-11-09","Wrong Hands","0",],
+["https://wronghands1.com/2026/10/27/what-the-dickinson/","What the Dickinson","2026-11-09","Wrong Hands","0",],
+["https://www.solidot.org/story?sid=85826","台积电考虑进入内存行业","2026-11-09","Solidot","1",],
+["https://www.solidot.org/story?sid=85827","微软移除了 PC 到 PC 的迁移功能","2026-11-09","Solidot","1",],
+["https://www.solidot.org/story?sid=85828","太平洋垃圾带海水变得更蓝更绿","2026-11-09","Solidot","1",],
+["https://www.solidot.org/story?sid=85829","LG 因其智能电视监视用户面临法律诉讼","2026-11-09","Solidot","1",],
+];

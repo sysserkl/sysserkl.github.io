@@ -2257,7 +2257,7 @@ Arnaud
 claustrophobe
 climatologist
 well-known
-Eurokepticism
+Euroskepticism
 extrasolar planet
 beekeeping
 botanist
@@ -2267,6 +2267,9 @@ HTML
 modernisation
 multi-talented
 taxable income
+signalise
+pseudointellectual
+phytochemically
 
 
 `.trim().split('\n');
