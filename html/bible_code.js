@@ -1937,6 +1937,9 @@ function web_sites_href_one_chapter_bible(website_name,book_no=0,chapter_no=0){
         case 'biblestudytools.com':
             bljg='https://www.biblestudytools.com/kjv/'+list_t[book_no]+'/'+(chapter_no+1)+'.html';
             break;
+        case 'biblehub.com':
+            bljg='https://www.biblehub.com/'+list_t[book_no]+'/'+(chapter_no+1)+'.htm';
+            break;
         case 'hkbs':
             bljg=href_head+list_t[book_no]+'/'+(chapter_no+1)+'/';        
             break;
@@ -1954,6 +1957,7 @@ function web_sites_keys_bible(){
     list_t.sort();
     return list_t;
 }
+
 function web_sites_href_list_bible(website_name){
     var href_head='';
     var list_t=[];
@@ -2020,6 +2024,14 @@ function web_sites_href_list_bible(website_name){
                 result_t.push('<h3>'+(blxl+1)+'. '+chapter_global[blxl][1]+'</h3>');                    
                 for (let blno=0;blno<chapter_global[blxl][3];blno++){
                     result_t.push('<a class="a_oblong_box" '+blstyle+' href="https://www.biblestudytools.com/kjv/'+list_t[blxl]+'/'+(blno+1)+'.html" target=_blank>'+(blno+1)+'</a> ');
+                }
+            }
+            break;    
+        case 'biblehub.com':
+            for (let blxl=0,lent=list_t.length;blxl<lent;blxl++){
+                result_t.push('<h3>'+(blxl+1)+'. '+chapter_global[blxl][1]+'</h3>');                    
+                for (let blno=0;blno<chapter_global[blxl][3];blno++){
+                    result_t.push('<a class="a_oblong_box" '+blstyle+' href="https://www.biblehub.com/'+list_t[blxl]+'/'+(blno+1)+'.htm" target=_blank>'+(blno+1)+'</a> ');
                 }
             }
             break;    
