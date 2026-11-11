@@ -65,6 +65,7 @@ function olds_words_batch_today_words(rnd_words_num=0,cn_def_words_num=0){
     title_change_enwords_b('旧单词+rnd'+rnd_words_num+'+cn'+cn_def_words_num);
     console.log('忽略',ignore_words);
 
+    en_words_show_check_b();
     console.log('olds_words_batch_today_words() 费时：'+(performance.now() - t0) + ' milliseconds');    
 }
 
@@ -152,20 +153,22 @@ function option_days_today_words(csid,csm,csday=''){
 
 function menu_today_words(){
     var str_t=klmenu_hide_b('');
-    var klmenu1=[
-    '<span class="span_menu" id="span_source_en_b" onclick="klmenu_check_b(this.id,true);">⚪ 显示例句详细出处</span>',
-    '<span class="span_menu" onclick="'+str_t+'show_sentence_enwc_b();">显示例句</span>',
-    '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_enwords_sentence\');">显示例句中的生词</span>',
-    '<span class="span_menu" onclick="'+str_t+'show_new_words_enwc_b(\'span.span_explanation\');">显示释义中的生词</span>',
-    ];
+    var klmenu1=[];
+
+    var group_list=[
+    ['例句中','show_new_words_enwc_b(\'span.span_enwords_sentence\');',true],
+    ['释义中','show_new_words_enwc_b(\'span.span_explanation\');',true],
+    ];    
+    klmenu1.push(menu_container_b(str_t,group_list,'显示生词：'));
     
-    //klmenu1.push(menu_easy_enwc_b(str_t,-1,false));
+    klmenu1.push(menu_container_b(str_t,en_sentence_menu_generate_b(),''));
     klmenu1.push(pure_words_menu_b(str_t));
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗓','18rem','1rem','1rem','60rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'🗓','24rem','1rem','1rem','60rem'),'','0rem')+' ');
     if (!ismobile_b()){
         klmenu_check_b('span_source_en_b',true);
     }    
+    klmenu_check_b('span_show_en_sentence_b',true);
 }
 
 function init_today_words(){
@@ -176,12 +179,12 @@ function init_today_words(){
         menu_today_words();
         set_today_words();
         enwords_mini_search_frame_form_b();
-        olds_words_batch_today_words(rnd_cn__today_words_global[0],rnd_cn__today_words_global[1]);    
+        olds_words_batch_today_words(rnd_cn_today_words_global[0],rnd_cn_today_words_global[1]);    
     }
     //-----------------------
     enwords_mini_search_frame_style_b();
     top_bottom_arrow_b('div_top_bottom','',false,(ismobile_b()?'1.8rem':'1.4rem'),true,false,2);
-    document.getElementById('span_batch_button_today_words').innerText='指定日期单词+随机单词'+rnd_cn__today_words_global[0]+'个+随机中文释义单词≤'+rnd_cn__today_words_global[1]+'个';
+    document.getElementById('span_batch_button_today_words').innerText='指定日期单词+随机单词'+rnd_cn_today_words_global[0]+'个+随机中文释义单词≤'+rnd_cn_today_words_global[1]+'个';
     words_searched_arr_global=[];  //全局变量 - 保留注释
 
     enwords_init_b(false,true,sub_init_today_words_fn);

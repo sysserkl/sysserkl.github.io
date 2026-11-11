@@ -2275,5 +2275,11 @@ dehumanisation
 dehumanised
 Bridgeport
 pickleball
+April Fool's Day
+April Fools' Day
+Brandywine
+invisible hand
+Jamaica
+
 
 `.trim().split('\n');
