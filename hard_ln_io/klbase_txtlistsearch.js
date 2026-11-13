@@ -5242,18 +5242,22 @@ function flist_2_ensentence_b(is_ok=true,max_line_len=1000,max_rows=20000){
     render_html_kltxt_b([],true,true,false,false,function (){current_page_2_ensentence_b('rare');},false);
 }
 
-function recent_rare_words_buttons_kltxt_b(textarea_id=''){
+function recent_rare_words_buttons_kltxt_b(textarea_id='',info_id=''){
     var bljg='<input type="number" id="input_recent_rare_old_words_kltxt_b" value="25" style="width:3rem;" /> 个';
     bljg=bljg+'<span class="aclick" onclick="recent_rare_words_kltxt_b(\''+textarea_id+'\');">最新录入的稀有旧单词</span> ';
     bljg=bljg+'<span class="aclick" onclick="recent_rare_words_kltxt_b(\''+textarea_id+'\',true);">随机稀有旧单词</span> ';
-    bljg=bljg+'<span class="aclick" onclick="not_in_sentence_kltxt_b(\''+textarea_id+'\');">不在例句中的单词或词组</span> ';
+    bljg=bljg+'<span class="aclick" onclick="not_in_sentence_kltxt_b(\''+textarea_id+'\',\''+info_id+'\');">不在例句中的单词或词组</span> ';
     bljg=bljg+'<select id="select_sort_recent_rare_old_words_kltxt_b">'+sort_select_klr_b().join('')+'</select> <span class="aclick" onclick="do_sort_recent_rare_words_kltxt_b(\''+textarea_id+'\');">排序</span> ';
     return bljg;
 }
 
-function not_in_sentence_kltxt_b(textarea_id){
+function not_in_sentence_kltxt_b(textarea_id,info_id=''){
     function sub_not_in_sentence_kltxt_b_done(in_set,not_set){
         otextarea.value=Array.from(not_set).join('\n');
+        var oinfo=document.getElementById(info_id);
+        if (oinfo){
+            oinfo.innerText=wordlist.length+'→'+not_set.size;
+        }
     }
     
     let otextarea=document.getElementById(textarea_id);

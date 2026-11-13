@@ -8,188 +8,157 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Thu, 12 Nov 2026 08:38:52 +0800</lastBuildDate>
-<item><title>Decoding Ediacaran fossils - Aeon</title><link>https://aeon.co/videos/how-a-palaeontologist-decodes-fossils-from-the-dawn-of-complex-life</link></item>
-<item><title>The wholehearted life - Aeon</title><link>https://aeon.co/essays/how-does-roshi-joan-halifax-make-sense-of-her-buddhist-life</link></item>
-<item><title>Inside Warhound’s plan to engineer a better military working dog - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/11/11/inside-warhounds-plan-to-engineer-a-better-military-working-dog/</link></item>
-<item><title>Romanian servers targeted by Russian hackers to scoop up emails about NATO, EU - Defense News</title><link>https://www.defensenews.com/global/europe/2026/11/11/romanian-servers-targeted-by-russian-hackers-to-scoop-up-emails-about-nato-eu/</link></item>
-<item><title>House Republicans sidestep effort to impeach Hegseth - Defense News</title><link>https://www.defensenews.com/congress/2026/11/10/house-republicans-sidestep-effort-to-impeach-hegseth/</link></item>
-<item><title>US soldier arrested in UK for suspected ‘espionage’ for Russia - Defense News</title><link>https://www.defensenews.com/global/europe/2026/11/10/us-soldier-arrested-in-uk-for-suspected-espionage-for-russia/</link></item>
-<item><title>Most Americans want new Democratic Congress to end Trump’s Iran war, poll finds - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2026/11/10/most-americans-want-new-democratic-congress-to-end-trumps-iran-war-poll-finds/</link></item>
-<item><title>Ukraine urges US to speed up interceptor deliveries as Russia targets power grid - Defense News</title><link>https://www.defensenews.com/global/europe/2026/11/10/ukraine-urges-us-to-speed-up-interceptor-deliveries-as-russia-targets-power-grid/</link></item>
-<item><title>First-ever Collaborative Combat Aircraft fly in formation, demonstrate air combat maneuvers - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/11/10/first-ever-collaborative-combat-aircraft-fly-in-formation-demonstrate-air-combat-maneuvers/</link></item>
-<item><title>Hegseth says impeachment filing against him is ‘sabotage’ and political ‘farce’ - Defense News</title><link>https://www.defensenews.com/video/2026/11/10/hegseth-says-impeachment-filing-against-him-is-sabotage-and-political-farce/</link></item>
-<item><title>Pentagon can’t track millions of F-35 spare parts, watchdog finds - Defense News</title><link>https://www.defensenews.com/pentagon/2026/11/10/pentagon-cant-track-millions-of-f-35-spare-parts-watchdog-finds/</link></item>
-<item><title>Report: Russian ships are pumping tanks, MRAPs and rocket launchers into Africa - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2026/11/10/report-russian-ships-are-pumping-tanks-mraps-and-rocket-launchers-into-africa/</link></item>
-<item><title>United Airlines Bans AI Agents From Booking Flights On Behalf of Travelers - Slashdot</title><link>https://slashdot.org/story/26/11/11/2229248/united-airlines-bans-ai-agents-from-booking-flights-on-behalf-of-travelers</link></item>
-<item><title>Jensen Huang Said to Have Had Relationship With Nvidia Executive Who Reports to Him - Slashdot</title><link>https://slashdot.org/story/26/11/11/2220224/jensen-huang-said-to-have-had-relationship-with-nvidia-executive-who-reports-to-him</link></item>
-<item><title>Nvidia and Jensen Huang Face Shareholder Lawsuit Alleging Investors Were Misled About Spy Affair - Slashdot</title><link>https://yro.slashdot.org/story/26/11/11/2154252/nvidia-and-jensen-huang-face-shareholder-lawsuit-alleging-investors-were-misled-about-spy-affair</link></item>
-<item><title>New York Forces T-Mobile to End Data Caps On Low-Income Plans - Slashdot</title><link>https://tech.slashdot.org/story/26/11/11/2048256/new-york-forces-t-mobile-to-end-data-caps-on-low-income-plans</link></item>
-<item><title>Ukraine Strikes Cause Permanent Data Loss at Russia&amp;#39;s Yandex Cloud - Slashdot</title><link>https://hardware.slashdot.org/story/26/11/11/1950231/ukraine-strikes-cause-permanent-data-loss-at-russias-yandex-cloud</link></item>
-<item><title>Court Says Trump Can&amp;#39;t Use Leaks To Justify Spying On Journalists&amp;#39; LinkedIn DMs - Slashdot</title><link>https://yro.slashdot.org/story/26/11/11/1822204/court-says-trump-cant-use-leaks-to-justify-spying-on-journalists-linkedin-dms</link></item>
-<item><title>Logitech Giving All 7,000 Employees the Day Off to Play GTA 6 - Slashdot</title><link>https://games.slashdot.org/story/26/11/11/180258/logitech-giving-all-7000-employees-the-day-off-to-play-gta-6</link></item>
-<item><title>Apple Is Killing Its Support Community Forum Next Week - Slashdot</title><link>https://apple.slashdot.org/story/26/11/11/1655250/apple-is-killing-its-support-community-forum-next-week</link></item>
-<item><title>Amazon&amp;#39;s Ring Unveils Flying Drone and Robot To Patrol Homes and Businesses - Slashdot</title><link>https://hardware.slashdot.org/story/26/11/11/0144217/amazons-ring-unveils-flying-drone-and-robot-to-patrol-homes-and-businesses</link></item>
-<item><title>GTA VI Is Now Available For Preloading - Slashdot</title><link>https://games.slashdot.org/story/26/11/11/0137202/gta-vi-is-now-available-for-preloading</link></item>
-<item><title>US and Rest of World Must Follow China&amp;#39;s Lead On Green Energy, Says John Kerry - Slashdot</title><link>https://news.slashdot.org/story/26/11/11/0126232/us-and-rest-of-world-must-follow-chinas-lead-on-green-energy-says-john-kerry</link></item>
-<item><title>M John Harrison Becomes First Sci-Fi Author To Win Booker Prize - Slashdot</title><link>https://news.slashdot.org/story/26/11/10/2227217/m-john-harrison-becomes-first-sci-fi-author-to-win-booker-prize</link></item>
-<item><title>Google Fi Brings Back Network Switching With &amp;#39;Secondary&amp;#39; Partner - Slashdot</title><link>https://mobile.slashdot.org/story/26/11/10/2221238/google-fi-brings-back-network-switching-with-secondary-partner</link></item>
-<item><title>Fireworks AI Confirms Wider Breach Affecting Notion AI Chats - Slashdot</title><link>https://it.slashdot.org/story/26/11/10/2156247/fireworks-ai-confirms-wider-breach-affecting-notion-ai-chats</link></item>
-<item><title>New York Launches Nation&amp;#39;s First State AI Testing Program - Slashdot</title><link>https://yro.slashdot.org/story/26/11/10/2058226/new-york-launches-nations-first-state-ai-testing-program</link></item>
-<item><title>4 Research-Backed Ways To Find Happiness in Life - Verywell Mind</title><link>https://www.verywellmind.com/strategies-for-finding-happiness-in-life-12246945</link></item>
-<item><title>How Picking Up a Fun Hobby Can Help Lower Chronic Stress, According to Psychologists - Verywell Mind</title><link>https://www.verywellmind.com/hobbies-for-stress-relief-12245051</link></item>
-<item><title>Why Emotional Hangovers Happen—and Effective Ways To Help Yourself Recover - Verywell Mind</title><link>https://www.verywellmind.com/coping-with-emotional-hangover-12238911</link></item>
-<item><title>How Friendships Change as You Move Through Your 20s, 30s, 40s, and Later Life Stages - Verywell Mind</title><link>https://www.verywellmind.com/how-friendships-change-at-different-ages-12236532</link></item>
-<item><title>Can Natural Antidepressants Improve Depression Symptoms? What the Research Says - Verywell Mind</title><link>https://www.verywellmind.com/natural-antidepressants-12235901</link></item>
-<item><title>50 Conversation Starters To Break Awkward Silences and Keep the Conversation Flowing - Verywell Mind</title><link>https://www.verywellmind.com/conversation-starters-to-break-awkward-silences-12207921</link></item>
-<item><title>I Replaced My Afternoon Coffee With Electrolyte Drinks—Here’s How It Affected My Energy - Verywell Mind</title><link>https://www.verywellmind.com/electrolyte-drinks-for-energy-12207660</link></item>
-<item><title>How Bedtime Meditation Can Quiet Your Mind and Improve Sleep Quality at Night - Verywell Mind</title><link>https://www.verywellmind.com/bedtime-meditation-for-better-sleep-12201199</link></item>
-<item><title>10 Expert Tips To Show Tough Love to a Friend and Maintain a Supportive Relationship - Verywell Mind</title><link>https://www.verywellmind.com/how-to-show-a-friend-tough-love-12198445</link></item>
-<item><title>I Drank 13 Cups of Water Daily for a Week—Here’s How It Affected My Mental Health - Verywell Mind</title><link>https://www.verywellmind.com/i-drank-13-cups-of-water-daily-for-a-week-12190376</link></item>
-<item><title>How Routines Can Strengthen Relationships and Help You Connect With Your Partner - Verywell Mind</title><link>https://www.verywellmind.com/how-routines-can-strengthen-relationships-12189841</link></item>
-<item><title>The 7 Types of Rest You Need—and How To Make Sure You Get Each One - Verywell Mind</title><link>https://www.verywellmind.com/types-of-rest-you-need-12188740</link></item>
-<item><title>Is Your Fear of Haunted Houses Normal or a Phobia? Here’s How to Tell - Verywell Mind</title><link>https://www.verywellmind.com/haunted-houses-fear-or-phobia-12188358</link></item>
-<item><title>10 Anti-Aging Foods That Can Support Brain Health and Help You Stay Sharp Longer - Verywell Mind</title><link>https://www.verywellmind.com/foods-for-brain-health-12187873</link></item>
-<item><title>Are You an Ambivert? 10 Key Signs That Show You Might Be Both Introverted and Extroverted - Verywell Mind</title><link>https://www.verywellmind.com/are-you-an-ambivert-12186601</link></item>
-<item><title>I Replaced My Daily Coffee With Mushroom Coffee—Here’s How It Changed My Energy Levels - Verywell Mind</title><link>https://www.verywellmind.com/mushroom-coffee-for-energy-and-blood-sugar-12184484</link></item>
-<item><title>How Your Body’s ‘Rest and Digest’ System Helps You Recover From Stress - Verywell Mind</title><link>https://www.verywellmind.com/parasympathetic-nervous-system-12182491</link></item>
-<item><title>4 Habits a Relationship Coach Says Can Quietly Sabotage Your Path To Lasting Love - Verywell Mind</title><link>https://www.verywellmind.com/habits-that-sabotage-love-12182072</link></item>
-<item><title>ADHD’s ‘Wall of Awful’ Can Make It Hard To Start Tasks—Here’s How To Overcome It - Verywell Mind</title><link>https://www.verywellmind.com/adhd-wall-of-awful-12173262</link></item>
-<item><title>9 Bedtime Habits Experts Say Can Help You Feel Better in the Morning - Verywell Mind</title><link>https://www.verywellmind.com/bedtime-habits-for-better-mornings-12173744</link></item>
-<item><title>颠覆认知，血拼双11，栖作床垫实体店双11线上价再优惠500 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11901781</link></item>
-<item><title>不必远行，身边就有好风景｜晒秋征集 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11899109</link></item>
-<item><title>川西秘境：石格，九古，加米峰 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11899388</link></item>
-<item><title>哪各大神把禹香的门再去打开下 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11901687</link></item>
-<item><title>星期一至五越城区徒步找搭子 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11900705</link></item>
-<item><title>单枪匹马在嵊州山里当一天苦行僧 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11899575</link></item>
-<item><title>绍兴周边一日游：国清寺+天台县城老街+原生态老街 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11899641</link></item>
-<item><title>山路十八弯:上虞秀峰寺礼佛 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11899827</link></item>
-<item><title>山野里最刺眼的”伤疤” - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11899625</link></item>
-<item><title>柯桥-诸暨来回 不定期 车找人 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11266201</link></item>
-<item><title>杭钢公园做的很好，推荐去走走 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11898111</link></item>
-<item><title>有没有早起爬山看日出群？ - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11898465</link></item>
-<item><title>象山石浦菜市场买海鲜有感 - 驴行天下_绍兴E网论坛</title><link>https://www.e0575.cn/read.php?tid=11898445</link></item>
-<item><title>Britain says its bases are safe after US refueling planes evacuated - Defense News</title><link>https://defensenews.com/global/europe/2026/11/10/britain-says-its-bases-are-safe-after-us-refueling-planes-evacuated/</link></item>
-<item><title>Hegseth denounces ‘farce’ impeachment in first briefing since May - Defense News</title><link>https://www.defensenews.com/pentagon/2026/11/10/hegseth-denounces-farce-impeachment-in-first-briefing-since-may/</link></item>
-<item><title>France orders military Earth-observation satellites for more than €1.5 billion - Defense News</title><link>https://www.defensenews.com/global/europe/2026/11/10/france-orders-military-earth-observation-satellites-for-more-than-e1-5-billion/</link></item>
-<item><title>Word Tree to visualize structure in a body of text - FlowingData</title><link>https://flowingdata.com/2026/11/11/word-tree-to-visualize-structure-in-a-body-of-text/</link></item>
-<item><title>Text time-lapse - FlowingData</title><link>https://flowingdata.com/2026/11/11/text-time-lapse/</link></item>
-<item><title>Geolocation determined with background airplane noise - FlowingData</title><link>https://flowingdata.com/2026/11/10/geolocation-determined-with-background-airplane-noise/</link></item>
-<item><title>No Republican New England senators for the first time in a long time - FlowingData</title><link>https://flowingdata.com/2026/11/09/new-england-senators-2026/</link></item>
-<item><title>The Great False Binary - Law &amp; Liberty</title><link>https://lawliberty.org/the-great-false-binary/</link></item>
-<item><title>To Preserve Collegiate Competition, Constrain It - Law &amp; Liberty</title><link>https://lawliberty.org/forum/to-preserve-collegiate-competition-constrain-it/</link></item>
-<item><title>The Dangerous Twilight of Social Democracy - Law &amp; Liberty</title><link>https://lawliberty.org/the-dangerous-twilight-of-social-democracy/</link></item>
-<item><title>Labor Law’s Illiberal Trajectory - Law &amp; Liberty</title><link>https://lawliberty.org/labor-laws-illiberal-trajectory/</link></item>
-<item><title>零刻SER9 350迷你主机评测8核Zen5塞进135mm机身，54W烤机不到80度 - 超能网</title><link>https://www.expreview.com/108878.html</link></item>
-<item><title>影驰 金属大师GX1000电源评测第三代氮化镓加持，充足功率余量适配旗舰平台 - 超能网</title><link>https://www.expreview.com/109256.html</link></item>
-<item><title>微星PRO MAX 850P电源评测性能不缩水，依旧高性价比 - 超能网</title><link>https://www.expreview.com/108696.html</link></item>
-<item><title>九州风神SLIENTNOX PRO 360一体式水冷评测设计有想法，好货不怕晚 - 超能网</title><link>https://www.expreview.com/108883.html</link></item>
-<item><title>酷冷至尊GX Platinum Max系列电源上市：配高品质尼龙编织线材，首发709元起 - 超能网</title><link>https://www.expreview.com/109441.html</link></item>
-<item><title>罗技推出MX Master 4创作者限量版鼠标：致敬创造力无限的创作者 - 超能网</title><link>https://www.expreview.com/109440.html</link></item>
-<item><title>Arm发布全新Cortex-M42处理器：助力小型设备实现本地AI - 超能网</title><link>https://www.expreview.com/109439.html</link></item>
-<item><title>英特尔宣布与Altera合作：简化边缘和物理AI的传感器集成 - 超能网</title><link>https://www.expreview.com/109438.html</link></item>
-<item><title>AMD带来“MEXT预测内存软件”：基于闪存的解决方案，降低数据中心内存需求 - 超能网</title><link>https://www.expreview.com/109436.html</link></item>
-<item><title>三星加快推进先进封装技术：计划明年初完成3D Cube-H开发 - 超能网</title><link>https://www.expreview.com/109435.html</link></item>
-<item><title>华邦电子计划引入EUV光刻技术：2030年用于14nm DRAM芯片 - 超能网</title><link>https://www.expreview.com/109434.html</link></item>
-<item><title>《塞尔达传说 : 时之笛 重制版》创NS2首发纪录：任天堂称四天销量破520万份 - 超能网</title><link>https://www.expreview.com/109432.html</link></item>
-<item><title>《GTA6》打破PlayStation和Xbox商店预购纪录，XBOX One可通过xCloud游玩 - 超能网</title><link>https://www.expreview.com/109431.html</link></item>
-<item><title>《失落星船 : 马拉松》“共生”更新将于12月9日推出：带来全新PvE/PvP模式等 - 超能网</title><link>https://www.expreview.com/109430.html</link></item>
-<item><title>《漫威宇宙入侵》DLC“杜姆城围城战”发售：Steam首发25.2元，迎接全新挑战 - 超能网</title><link>https://www.expreview.com/109429.html</link></item>
-<item><title>《千锤百炼》抢先体验版上线：开放世界生存建造游戏，Steam首发51元起 - 超能网</title><link>https://www.expreview.com/109428.html</link></item>
-<item><title>《足球经理27》今天发售：Steam国区268元，开启执教生涯，将你的愿景变为现实 - 超能网</title><link>https://www.expreview.com/109427.html</link></item>
-<item><title>AMD发布EPYC Embedded 9006系列SP7处理器：最多256核心，带先进安全功能 - 超能网</title><link>https://www.expreview.com/109426.html</link></item>
-<item><title>AMD第六代EPYC 9006详细介绍：Zen 6架构IPC提升约27%，最高256核 - 超能网</title><link>https://www.expreview.com/109425.html</link></item>
-<item><title>飞利浦发布Evnia 27M2D5901A显示器：2K/5K双模高刷，可联动智能照明设备 - 超能网</title><link>https://www.expreview.com/109424.html</link></item>
-<item><title>美商海盗船为3500X和FRAME 4000D增添粉红配色：独特外观与增强散热结合 - 超能网</title><link>https://www.expreview.com/109423.html</link></item>
-<item><title>达尔优Ultra 68双形态键盘上市：68/75配列随心切换，全铝机身，799元起 - 超能网</title><link>https://www.expreview.com/109421.html</link></item>
-<item><title>微星带来MAG 321UPX18显示器：31.5英寸4K@180Hz QD-OLED，售价3999元 - 超能网</title><link>https://www.expreview.com/109419.html</link></item>
-<item><title>超频三推出C3 T310机箱：左右分仓海景房，兼容360/240水冷，到手179元起 - 超能网</title><link>https://www.expreview.com/109420.html</link></item>
-<item><title>华硕推出VY249HG3显示器：FHD@180Hz，售价599元 - 超能网</title><link>https://www.expreview.com/109422.html</link></item>
-<item><title>三星和京东方等正在与智能手机厂商讨论：考虑开发720P OLED面板 - 超能网</title><link>https://www.expreview.com/109418.html</link></item>
-<item><title>索尼宣布PlayStation PULSE Elevate延期上市：测试期间发现“生产问题” - 超能网</title><link>https://www.expreview.com/109417.html</link></item>
-<item><title>假如地球没有诞生生命？ - Solidot</title><link>https://www.solidot.org/story?sid=85862</link></item>
-<item><title>Firefox 内置 VPN 服务在三个月内不限制流量 - Solidot</title><link>https://www.solidot.org/story?sid=85861</link></item>
-<item><title>黑猩猩后天习得部分叫声 - Solidot</title><link>https://www.solidot.org/story?sid=85859</link></item>
-<item><title>刚果埃博拉病例突破 1.1 万例 - Solidot</title><link>https://www.solidot.org/story?sid=85858</link></item>
-<item><title>AI 生成的代码并不可靠 - Solidot</title><link>https://www.solidot.org/story?sid=85857</link></item>
-<item><title>CERN 如何为 LHC 研发下一代磁体 - Solidot</title><link>https://www.solidot.org/story?sid=85856</link></item>
-<item><title>猫围着你叫是叫你去解决问题 - Solidot</title><link>https://www.solidot.org/story?sid=85855</link></item>
-<item><title>Michael John Harrison 成为首位获得布克奖的科幻作家 - Solidot</title><link>https://www.solidot.org/story?sid=85853</link></item>
-<item><title>AMD 公布 Zen 6 CPU 细节 - Solidot</title><link>https://www.solidot.org/story?sid=85852</link></item>
-<item><title>Limited-Edition Screenprints for the Budding Collector - Colossal</title><link>https://www.thisiscolossal.com/2026/11/prints-colossal-gift-guide-2026/</link></item>
-<item><title>Bats, Spiders, and Slime Molds Make the Close-Up Photographer of the Year Shortlist - Colossal</title><link>https://www.thisiscolossal.com/2026/11/close-up-photographer-of-the-year-2026-shortlist/</link></item>
-<item><title>Amy Genser’s Elaborate Mulberry Paper Assemblages Undulate Like the Sea - Colossal</title><link>https://www.thisiscolossal.com/2026/11/amy-genser-paper-wall-sculptures/</link></item>
-<item><title>Son Lux’s Music Video for ‘Out Into Us’ Is an Atmospheric Foray Between Past and Present - Colossal</title><link>https://www.thisiscolossal.com/2026/11/son-lux-alex-cook-out-into-us-music-video/</link></item>
-<item><title>Caribbean Surrealism and Ancestral Memory Merge in Kelly Sinnapah Mary’s Lush Portraits - Colossal</title><link>https://www.thisiscolossal.com/2026/11/kelly-sinnapah-mary-foliage-portraits/</link></item>
-<item><title>Amy Liu Explores Light and Dark through Glitz, Mystique, and Opera - Colossal</title><link>https://www.thisiscolossal.com/2026/11/amy-liu-pearled-chiaroscuro-paintings/</link></item>
-<item><title>Abstract Wool Compositions Cascade from Weathered Metal in Amine El Gotaibi’s Sculptures - Colossal</title><link>https://www.thisiscolossal.com/2026/11/amine-el-gotaibi-wind-from-the-north/</link></item>
-<item><title>Arkivism Is an Accessible Antidote to AI with 4 Million+ Public Domain Images - Colossal</title><link>https://www.thisiscolossal.com/2026/11/arkivism-public-domain-search/</link></item>
-<item><title>What Else Could It Mean? A Book Surveys the Playful, Iconoclastic Works of James Wines - Colossal</title><link>https://www.thisiscolossal.com/2026/11/james-wines-site-book-what-else-could-it-mean/</link></item>
-<item><title>An Animated Film Made in Excel Sums Up the Pointless Impulse to Create - Colossal</title><link>https://www.thisiscolossal.com/2026/11/maria-tomazou-i-made-a-film-in-excel/</link></item>
-<item><title>孙中山诞辰160周年·H5｜孙中山在上海 - 澎湃</title><link>https://h5.thepaper.cn/html/interactive/2026/11/sunzhongshan-shanghai/</link></item>
-<item><title>孙中山诞辰160周年｜中山路的一百年 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34453173</link></item>
-<item><title>黄克武评《中山陵》｜从历史地景到政治符号：孙中山的身后记忆 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34385719</link></item>
-<item><title>百年回望：历史为何选择了孙中山 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34388627</link></item>
-<item><title>视频｜ART021艺博会的切片与瞬间 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34453475</link></item>
-<item><title>现场｜ART021艺博会：百余画廊呈现当代艺术演进图景 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34452601</link></item>
-<item><title>【社论】学龄人口在变，教育资源配置也要变 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34453578</link></item>
-<item><title>古旧地图数字化与草原丝绸之路贸易网络的构建——《西北队商路要图》解译 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34452093</link></item>
-<item><title>半卷书｜许飞和厉娜其实在问，我们现在怎样做朋友？ - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34452999</link></item>
-<item><title>《可能的爱》：政治退入生活之后，李沧东如何重新讲述劳工经验 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34438176</link></item>
-<item><title>马上评丨流量剧本背后怎么总有MCN机构的身影 - 澎湃</title><link>https://www.thepaper.cn/newsDetail_forward_34451739</link></item>
-<item><title>Nintendo Targets Picofly Switch Modchip Firmware in GitHub DMCA Takedown - TorrentFreak</title><link>https://torrentfreak.com/nintendo-targets-picofly-switch-modchip-firmware-in-github-dmca-takedown/</link></item>
-<item><title>Pirate Library WeLib Hit With $19.5m Default Judgment and Domain Takedown Order - TorrentFreak</title><link>https://torrentfreak.com/pirate-library-welib-hit-with-19-5m-judgment-and-domain-takedown-order/</link></item>
-<item><title>first launched - Slashdot</title><link>https://tech.slashdot.org/story/15/04/22/199208/google-launches-project-fi-mobile-phone-service</link></item>
-<item><title>FDA Warns GLP-1s May Increase Risk of Sudden Blindness - Slashdot</title><link>https://science.slashdot.org/story/26/11/09/231215/fda-warns-glp-1s-may-increase-risk-of-sudden-blindness?sbsrc=md</link></item>
-<item><title>Boston Dynamics Adds Wheels to Atlas Humanoid - Slashdot</title><link>https://hardware.slashdot.org/story/26/11/09/2317206/boston-dynamics-adds-wheels-to-atlas-humanoid?sbsrc=md</link></item>
-<item><title>Uber Is Launching Its Own Parking Reservation Service - Slashdot</title><link>https://tech.slashdot.org/story/26/11/09/2239245/uber-is-launching-its-own-parking-reservation-service?sbsrc=md</link></item>
-<item><title>GTA 6 Goes Full Pimp My Ride With A $1.3 Million Supercar You Can Buy - HotHardware</title><link>https://hothardware.com/news/gta-6-13-million-supercar</link></item>
-<item><title>Microsoft Unleashes Up To 120 FPS Auto SR On Undocked ROG Ally X - HotHardware</title><link>https://hothardware.com/news/microsoft-autosr-updates-rog-xbox-handhelds</link></item>
-<item><title>Sony Strips Cloud Gaming From PC In Sudden PlayStation Plus Shift - HotHardware</title><link>https://hothardware.com/news/sony-strips-cloud-gaming-pc</link></item>
-<item><title>NVIDIA H200 AI Chips Slipped Past US Bans Into Chinese Military University - HotHardware</title><link>https://hothardware.com/news/nvidia-h200-ai-chips-slipped-past-us-bans-into-chinese-military-university</link></item>
-<item><title>Holiday Deal Drops This Ryzen 7 9800X3D And RX 9070 PC To Under $2K - HotHardware</title><link>https://hothardware.com/news/holiday-deal-ryzen-7-9800x3d-rx-9070-pc-under-2k</link></item>
-<item><title>Starlink&amp;#39;s U.S. Upload Speeds Jump 42% In Massive Performance Leap - HotHardware</title><link>https://hothardware.com/news/starlinks-us-upload-speeds-jump-42-in-massive-performance-leap</link></item>
-<item><title>GTA 6 Streams To 2013 Xbox One At Launch, Leaving PC Gamers Behind - HotHardware</title><link>https://hothardware.com/news/gta-6-streams-2013-xbox-one-launch-leaving-pc-gamers-behind</link></item>
-<item><title>HP ZGX Fury Packs 748GB RAM And NVIDIA GB300 Starting At $132,000 - HotHardware</title><link>https://hothardware.com/news/hp-zgx-fury-packs-748gb-ram-and-nvidia-gb300-starting-at-132000</link></item>
-<item><title>Goodbye, 24GB RTX 5080? NVIDIA Reportedly Scraps High-VRAM Refresh - HotHardware</title><link>https://hothardware.com/news/goodbye-24gb-rtx-5080-nvidia-scraps-high-vram-refresh</link></item>
-<item><title>Sony&amp;#39;s Upgraded PlayStation Portal Adds Internal Storage With A Catch - HotHardware</title><link>https://hothardware.com/news/sonys-playstation-portal-adds-storage</link></item>
-<item><title>Seagate&amp;#39;s 20TB FireCuda Forge Blends SSD Speed With HDD Capacity For Gamers - HotHardware</title><link>https://hothardware.com/news/seagate-20tb-firecuda-forge-external-hdd</link></item>
-<item><title>Google Pixel Drop Gives Gemini New Superpowers To Run Your Errands - HotHardware</title><link>https://hothardware.com/news/google-pixel-drop-gives-gemini-new-superpowers-to-run-your-errands</link></item>
-<item><title>Valve Tests Game FPS Graphs On Steam Deck Ahead Of PC Rollout - HotHardware</title><link>https://hothardware.com/news/valve-game-fps-graphs-steam-deck</link></item>
-<item><title>MSI&amp;#39;s MEG X 360Hz QD-OLED Uses On-Device AI To Read In-Game Health Bars - HotHardware</title><link>https://hothardware.com/news/msi-meg-x-360hz-qd-oled-on-device-ai-read-in-game-health-bars</link></item>
-<item><title>Look Up! Taurid Meteor Fireballs Set To Light Up Night Skies This Week - HotHardware</title><link>https://hothardware.com/news/taurid-meteor-fireballs-set-to-light-up-night-skies-this-week</link></item>
-<item><title>Here&amp;#39;s What Trump Said About The FBI Probing NVIDIA CEO Jensen Huang - HotHardware</title><link>https://hothardware.com/news/what-trump-said-about-fbi-probing-nvidia-ceo-jensen-huang</link></item>
-<item><title>Vanderbilt Orders Urgent PC Shutdown In Crippling Hack Claiming 1M SSNs - HotHardware</title><link>https://hothardware.com/news/vanderbilt-orders-urgent-pc-shutdown-in-crippling-hack-claiming-1m-ssns</link></item>
-<item><title>GTA 6 Download File Is So Big ISPs Are Offering Free Speed Boosts - HotHardware</title><link>https://hothardware.com/news/gta-6-download-file-so-big-isps-offering-free-speed-boosts</link></item>
-<item><title>Pause The PS6? Why PlayStation&amp;#39;s Ex-CEO Wants Sony To Target Another PS5 - HotHardware</title><link>https://hothardware.com/news/forget-the-ps6-why-playstations-ex-ceo-wants-sony-to-target-another-ps5</link></item>
-<item><title>AMD&amp;#39;s Radeon Software Bug Can Hammer SSDs Even When Your PC Is Idle - HotHardware</title><link>https://hothardware.com/news/amd-radeon-software-bug-hammer-ssds</link></item>
-<item><title>Forget Burn-In, Edge Rot Is Eating Pixels On Some WOLED TVs - HotHardware</title><link>https://hothardware.com/news/edge-rot-eating-pixels-woled-tvs</link></item>
-<item><title>GTA 6 Multiplayer Surprise Leaked In PlayStation Files Ahead Of Launch - HotHardware</title><link>https://hothardware.com/news/playstation-files-gta-6-multiplayer</link></item>
-<item><title>Microsoft Execs Push Back On Windows 11&amp;#39;s Modern Registry Editor Hysteria - HotHardware</title><link>https://hothardware.com/news/microsoft-execs-push-back-win11-registtry-editor</link></item>
-<item><title>Samsung May Soon Put Its Best Galaxy AI Tricks Behind A $5 Paywall - HotHardware</title><link>https://hothardware.com/news/samsung-may-soon-put-its-best-galaxy-ai-tricks-behind-5-paywall</link></item>
-<item><title>AMD Ryzen 9800X3D Deal Hits $399, RTX 5070 PC Drops To $1,799 - HotHardware</title><link>https://hothardware.com/news/amd-ryzen-9800x3d-deal-hits-399-rtx-5070-pc-1799</link></item>
-<item><title>Few people know Pixel phones can now have Gemini make phone calls for you - Make Tech Easier</title><link>https://maketecheasier.com/few-people-know-pixel-phones-can-now-have-gemini-make-phone-calls-for-you/</link></item>
-<item><title>Goodbye to the $15 Walmart streaming stick: Onn prices just went up a fourth time - Make Tech Easier</title><link>https://maketecheasier.com/goodbye-to-the-15-walmart-streaming-stick-onn-prices-just-went-up-a-fourth-time/</link></item>
-<item><title>America’s cybersecurity agency advises against a login step many people rely on every day - Make Tech Easier</title><link>https://maketecheasier.com/americas-cybersecurity-agency-advises-against-a-login-step-many-people-rely-on-every-day/</link></item>
-<item><title>World of Warcraft: Forever is included with any WoW subscription or game time, Blizzard says, but its new Skyborne race comes in an upgrade pack sold separately, and its three raids open to level 60 players on December 9 - Make Tech Easier</title><link>https://maketecheasier.com/world-of-warcraft-forever-is-included-with-any-wow-subscription-or-game-time-blizzard-says-but-its-new-skyborne-race-comes-in-an-upgrade-pack-sold-separately-and-its-three-raids-open-to-level-60-p/</link></item>
-<item><title>Strike drones flew from a British carrier for the first time in October, the Royal Navy says, and BAE Systems says all four Nyan aircraft launched from HMS Queen Elizabeth reached their strike points - Make Tech Easier</title><link>https://maketecheasier.com/nyan-drones-queen-elizabeth-carrier/</link></item>
-<item><title>Goodbye to Google Assistant: what answers now when you say “Hey Google” - Make Tech Easier</title><link>https://maketecheasier.com/goodbye-to-google-assistant-what-answers-now-when-you-say-hey-google/</link></item>
-<item><title>Few people know Gemini now shows a list of what it remembers about you, and you can delete it - Make Tech Easier</title><link>https://maketecheasier.com/few-people-know-gemini-now-shows-a-list-of-what-it-remembers-about-you-and-you-can-delete-it/</link></item>
-<item><title>In 1979, Sony launched the Walkman with these headphones. 47 years later, they’re back with USB-C - Make Tech Easier</title><link>https://maketecheasier.com/in-1979-sony-launched-the-walkman-with-these-headphones-47-years-later-theyre-back-with-usb-c/</link></item>
-<item><title>The pinhole on a router is a reset button, and NETGEAR says seven seconds wipes your WiFi name and password - Make Tech Easier</title><link>https://maketecheasier.com/router-pinhole-reset-button/</link></item>
-<item><title>Almost 4 million people watched on Flightradar24 as an Airbus A350-1000ULR flew 23,155 km from Melbourne to Toulouse in 24 hours and 24 minutes, now the Guinness distance record for an airliner - Make Tech Easier</title><link>https://maketecheasier.com/a350-1000ulr-distance-record/</link></item>
-<item><title>iOS 27.2.1 patches an iMessage flaw that could let a remote attacker join a group chat and receive its messages - Make Tech Easier</title><link>https://maketecheasier.com/ios-27-2-1-imessage-flaw/</link></item>
-<item><title>Warby Parker opens Intelligent Eyewear preorders on 12 November - Make Tech Easier</title><link>https://maketecheasier.com/warby-parker-intelligent-eyewear-preorders/</link></item>
-<item><title>Every Xbox Series X25 Limited Edition console is individually numbered, and the $899.99 collection launches 13 November - Make Tech Easier</title><link>https://maketecheasier.com/xbox-series-x25-numbered-console/</link></item>
-<item><title>Xiaomi says its full-size humanoid robot took on an eight-hour sorting task at its car factory and can detect and correct anomalies on its own while coordinating with the production line system. - Make Tech Easier</title><link>https://maketecheasier.com/xiaomi-humanoid-robots-eight-hour-factory-task/</link></item>
-<item><title>Few people know what the tiny hole next to your phone’s charging port is for - Make Tech Easier</title><link>https://maketecheasier.com/phone-charging-port-tiny-hole-microphone/</link></item>
-<item><title>Neither rice nor a hair dryer: what Apple says to do with a wet iPhone - Make Tech Easier</title><link>https://maketecheasier.com/neither-rice-nor-a-hair-dryer-what-apple-says-to-do-with-a-wet-iphone/</link></item>
-<item><title>That lump near the end of a cable is a ferrite core that turns noise into heat - Make Tech Easier</title><link>https://maketecheasier.com/ferrite-core-cable-lump/</link></item>
-<item><title>How often should you restart your phone? The NSA has put a number on it - Make Tech Easier</title><link>https://maketecheasier.com/how-often-should-you-restart-your-phone-the-nsa-has-put-a-number-on-it/</link></item>
-<item><title>At what temperature does your phone battery start to suffer? Apple has put a number on it - Make Tech Easier</title><link>https://maketecheasier.com/phone-battery-temperature-apple-35c/</link></item>
-<item><title>RTINGS found edge rot, dead pixels along the screen edges, on 14 of the 16 LG Display WOLED TVs it tested for 18,000 hours - Make Tech Easier</title><link>https://maketecheasier.com/rtings-lg-woled-edge-rot-testing/</link></item>
-<item><title>The Word Watcher: Work - Cambridge Dictionaries Online blog</title><link>https://dictionaryblog.cambridge.org/2026/11/11/the-word-watcher-work/</link></item>
-<item><title>Jason Davies - FlowingData</title><link>https://flowingdata.com/tag/jason-davies/</link></item>
-<item><title>Lev Manovich - FlowingData</title><link>https://flowingdata.com/tag/lev-manovich/</link></item>
-<item><title>Ben Fry’s piece from 2009 - FlowingData</title><link>https://flowingdata.com/2009/09/07/ben-fry-visualizes-the-evolution-of-darwins-ideas/</link></item>
+<lastBuildDate>Fri, 13 Nov 2026 08:02:52 +0800</lastBuildDate>
+<item><title>Christmas Tree Lamp #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/12/christmas-tree-lamp-3dthursday-3dprinting-2/</link></item>
+<item><title>Cozy Pinecone Cottage for Tealight Candles –… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/12/cozy-pinecone-cottage-for-tealight-candles-woodland-gnome-style-3dthursday-3dprinting/</link></item>
+<item><title>CircuitPython 11.0.0-alpha.3 Released! - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/12/circuitpython-11-0-0-alpha-3-released/</link></item>
+<item><title>Shipping Alert – Veterans Day 2026 - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/06/shipping-alert-veterans-day-2026/</link></item>
+<item><title>Shipping Alert: Diwali Observed – Monday,… - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/05/shipping-alert-diwali-observed-monday-november-9/</link></item>
+<item><title>Helmet Stand – Modular Stand for Cosplay Helmets #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/12/helmet-stand-modular-stand-for-cosplay-helmets-3dthursday-3dprinting/</link></item>
+<item><title>Modular Lantern – Tiny Christmas Edition, Stackable Cross-Compatible System #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/12/modular-lantern-tiny-christmas-edition-stackable-cross-compatible-system-3dthursday-3dprinting/</link></item>
+<item><title>JP’s Product Pick of the Week 11/10/26 @adafruit @johnedgarpark #adafruit #newproductpick - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/12/jps-product-pick-of-the-week-11-10-26-adafruit-johnedgarpark-adafruit-newproductpick/</link></item>
+<item><title>Cutlery Drainer with Drip Tray #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/12/cutlery-drainer-with-drip-tray-3dthursday-3dprinting/</link></item>
+<item><title>USBnet: Internet via USB (and HID!) - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/12/usbnet-internet-via-usb-and-hid/</link></item>
+<item><title>Christmas Gingerbread Gnome Figures – Set of 4 Holiday Decor Figures #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/12/christmas-gingerbread-gnome-figures-set-of-4-holiday-decor-figures-3dthursday-3dprinting/</link></item>
+<item><title>Desk RGB Lamp ws2812b #3DThursday #3DPrinting - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/12/desk-rgb-lamp-ws2812b-3dthursday-3dprinting/</link></item>
+<item><title>Verano, AMD’s first step toward a Zen-based superchip to rival Nvidia - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/12/verano-amds-first-step-toward-a-zen-based-superchip-to-rival-nvidia/</link></item>
+<item><title>eMudhra revokes 8 more CAs it previously declared unaffected by key compromise - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/12/emudhra-revokes-8-more-cas-it-previously-declared-unaffected-by-key-compromise/</link></item>
+<item><title>certificate authority - Adafruit Industries</title><link>https://blog.adafruit.com/tag/certificate-authority/</link></item>
+<item><title>3D Hangouts – Metro HomeView, Prototypes and Christmas Creeper - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/12/3d-hangouts-metro-homeview-prototypes-and-christmas-creeper/</link></item>
+<item><title>New Fable 5.2 AI built a complete operating system in 8 days - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/12/new-fable-5-2-ai-built-a-complete-operating-system-in-8-days/</link></item>
+<item><title>Oil prices are so high that CO2 emissions from fossil fuels are dropping - Adafruit Industries</title><link>https://blog.adafruit.com/2026/11/12/oil-prices-are-so-high-that-co2-emissions-from-fossil-fuels-are-dropping/</link></item>
+<item><title>CO2 emissions - Adafruit Industries</title><link>https://blog.adafruit.com/tag/co2-emissions/</link></item>
+<item><title>Urgent: Protect Head Start - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Urgent:_Protect_Head_Start)</link></item>
+<item><title>Assessing benefits of &amp;quot;free trade&amp;quot; - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Assessing_benefits_of_free_trade)</link></item>
+<item><title>Difficult to curb NYPD helping LICE - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Difficult_to_curb_NYPD_helping_LICE)</link></item>
+<item><title>Deaths from excess heat - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Deaths_from_excess_heat)</link></item>
+<item><title>Government thugs arrested for torturing protesters - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Government_thugs_arrested_for_torturing_protesters)</link></item>
+<item><title>Call on Australia to ban import of products from Israel&amp;#39;s West Bank - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Call_on_Australia_to_ban_import_of_products_from_Israel&amp;#39;s_West_Bank)</link></item>
+<item><title>Billionaire blue collar coalition - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Billionaire_blue_collar_coalition)</link></item>
+<item><title>Refrigerators in French blood banks - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Refrigerators_in_French_blood_banks)</link></item>
+<item><title>Impeaching saboteur officials - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Impeaching_saboteur_officials)</link></item>
+<item><title>Genetically engineered dog cyborgs - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Genetically_engineered_dog_cyborgs)</link></item>
+<item><title>Mink farms as incubators for virus strains - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Mink_farms_as_incubators_for_virus_strains)</link></item>
+<item><title>British thugs arrested hundreds of protesters - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(British_thugs_arrested_hundreds_of_protesters)</link></item>
+<item><title>Defeat of magats in Congress - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Defeat_of_magats_in_Congress)</link></item>
+<item><title>Military aid to Israel - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Military_aid_to_Israel)</link></item>
+<item><title>Reparations in UK should not fall on general public - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Reparations_in_UK_should_not_fall_on_general_public)</link></item>
+<item><title>EPA online archive - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(EPA_online_archive)</link></item>
+<item><title>Harmeet Dhillon resigned from Justice Department - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Harmeet_Dhillon_resigned_from_Justice_Department)</link></item>
+<item><title>LICE agents attacking people that &amp;quot;look&amp;quot; Hispanic - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(LICE_agents_attacking_people_that_look_Hispanic)</link></item>
+<item><title>Two candidates preaching progressive and kind version of Christianity - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Two_candidates_preaching_progressive_and_kind_version_of_Christianity)</link></item>
+<item><title>Public exposure to carcinogens - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Public_exposure_to_carcinogens)</link></item>
+<item><title>Weak measures to &amp;quot;get money out of politics&amp;quot; - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Weak_measures_to_get_money_out_of_politics)</link></item>
+<item><title>Saboteur did nothing drastic on election day - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Saboteur_did_nothing_drastic_on_election_day)</link></item>
+<item><title>Exceeding 1.5°C of global heating - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Exceeding_1.5°C_of_global_heating)</link></item>
+<item><title>Office of Labor-Management Standards paid by anti-union organization - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Office_of_Labor-Management_Standards_paid_by_anti-union_organization)</link></item>
+<item><title>Americans crippled by medical debt - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Americans_crippled_by_medical_debt)</link></item>
+<item><title>British people don&amp;#39;t need to apologize for slavery - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(British_people_don&amp;#39;t_need_to_apologize_for_slavery)</link></item>
+<item><title>Upcoming talk Quito at Central University of Ecuador - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Upcoming_talk_Quito_at_Central_University_of_Ecuador)</link></item>
+<item><title>Upcoming talk in Quito for the INCISCOS event at Central University of Ecuador - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Upcoming_talk_in_Quito_for_the_INCISCOS_event_at_Central_University_of_Ecuador)</link></item>
+<item><title>Upcoming talk in Guayaquil at Central University in Ecuador - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Upcoming_talk_in_Guayaquil_at_Central_University_in_Ecuador)</link></item>
+<item><title>Upcoming talk in Quito at Salesian Polytechnic University - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Upcoming_talk_in_Quito_at_Salesian_Polytechnic_University)</link></item>
+<item><title>Upcoming talk in Cuenca at Salesian Polytechnic University - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#12_November_2026_(Upcoming_talk_in_Cuenca_at_Salesian_Polytechnic_University)</link></item>
+<item><title>Sizewell C nuclear power plant - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(Sizewell_C_nuclear_power_plant)</link></item>
+<item><title>No human at the helm - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(No_human_at_the_helm)</link></item>
+<item><title>What made French student protests powerful? - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(What_made_French_student_protests_powerful_)</link></item>
+<item><title>Noise from muskrat&amp;#39;s new datacenter - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(Noise_from_muskrat&amp;#39;s_new_datacenter)</link></item>
+<item><title>Ebola outbreak could spread outside Africa - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(Ebola_outbreak_could_spread_outside_Africa)</link></item>
+<item><title>Discounting future profits and future disasters - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(Discounting_future_profits_and_future_disasters)</link></item>
+<item><title>Destruction of effort to slow HIV transmission - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(Destruction_of_effort_to_slow_HIV_transmission)</link></item>
+<item><title>Artificial charisma - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(Artificial_charisma)</link></item>
+<item><title>Unlimited power to pardon - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(Unlimited_power_to_pardon)</link></item>
+<item><title>&amp;quot;suspicious&amp;quot; routes of travel - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(suspicious_routes_of_travel)</link></item>
+<item><title>Activist Andreas Malm blocked from UK - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(Activist_Andreas_Malm_blocked_from_UK)</link></item>
+<item><title>Penalizing protesters for damage to property - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(Penalizing_protesters_for_damage_to_property)</link></item>
+<item><title>Experts questioning concept of &amp;quot;autistic spectrum&amp;quot; - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(Experts_questioning_concept_of_autistic_spectrum)</link></item>
+<item><title>Local truce between Ukraine and Putin forces - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(Local_truce_between_Ukraine_and_Putin_forces)</link></item>
+<item><title>US coal plants boosted with tax payer dollars - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(US_coal_plants_boosted_with_tax_payer_dollars)</link></item>
+<item><title>Difference between progressive and plutocratist Democrats - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(Difference_between_progressive_and_plutocratist_Democrats)</link></item>
+<item><title>(satire) Palantir acquires Pentagon - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_((satire)_Palantir_acquires_Pentagon)</link></item>
+<item><title>(satire) Supreme Court upholds temporal gerrymander - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_((satire)_Supreme_Court_upholds_temporal_gerrymander)</link></item>
+<item><title>Deportation thugs using cars as weapons - Richard Stallman</title><link>https://stallman.org/archives/2026-sep-dec.html#11_November_2026_(Deportation_thugs_using_cars_as_weapons)</link></item>
+<item><title>罗技给所有员工放假一天玩 GTA 6 - Solidot</title><link>https://www.solidot.org/story?sid=85864</link></item>
+<item><title>腾讯计划将半数员工部署到 AI 原生业务 - Solidot</title><link>https://www.solidot.org/story?sid=85865</link></item>
+<item><title>《Python 之禅》作者 Tim Peters 去世 - Solidot</title><link>https://www.solidot.org/story?sid=85867</link></item>
+<item><title>M87 星系黑洞存在甜甜圈结构 - Solidot</title><link>https://www.solidot.org/story?sid=85868</link></item>
+<item><title>《Big Walk》开发商利用 AI 修 Bug 引起争议 - Solidot</title><link>https://www.solidot.org/story?sid=85869</link></item>
+<item><title>天文学家发现一个恒星系统每八分钟发射一次射电信号 - Solidot</title><link>https://www.solidot.org/story?sid=85870</link></item>
+<item><title>BMI 误判数百万人肥胖 - Solidot</title><link>https://www.solidot.org/story?sid=85871</link></item>
+<item><title>印度苹果代工厂发生三名合同工死亡事故 - Solidot</title><link>https://www.solidot.org/story?sid=85873</link></item>
+<item><title>用户抱怨难以在流媒体服务上找到想看的内容 - Solidot</title><link>https://www.solidot.org/story?sid=85874</link></item>
+<item><title>电视厂商回应有关监视的提问 - Solidot</title><link>https://www.solidot.org/story?sid=85866</link></item>
+<item><title>Daily Pictures. Part 1 (92 pics) - AcidCow.com</title><link>https://acidcow.com/picdump/176492-daily-pictures-part-1-92-pics.html</link></item>
+<item><title>Daily Pictures. Part 2 (91 pics) - AcidCow.com</title><link>https://acidcow.com/picdump/176494-daily-pictures-part-2-91-pics.html</link></item>
+<item><title>Tech Memes (23 pics) - AcidCow.com</title><link>https://acidcow.com/pics/176477-tech-memes-23-pics.html</link></item>
+<item><title>Texas Memes (19 pics) - AcidCow.com</title><link>https://acidcow.com/pics/176478-texas-memes-19-pics.html</link></item>
+<item><title>Top 50 Best Games Of All Time (50 pics) - AcidCow.com</title><link>https://acidcow.com/pics/176474-top-50-best-games-of-all-time-50-pics.html</link></item>
+<item><title>Fast Food From The Past (27 pics) - AcidCow.com</title><link>https://acidcow.com/pics/176476-fast-food-from-the-past-27-pics.html</link></item>
+<item><title>Crazy Food Serving (19 pics) - AcidCow.com</title><link>https://acidcow.com/pics/176484-crazy-food-serving-19-pics.html</link></item>
+<item><title>Sporty Girls (21 pics) - AcidCow.com</title><link>https://acidcow.com/girls/176490-sporty-girls-21-pics.html</link></item>
+<item><title>Facts About Food (14 pics + 4 gifs) - AcidCow.com</title><link>https://acidcow.com/pics/176475-facts-about-food-14-pics-4-gifs.html</link></item>
+<item><title>They Don&amp;#39;t Care About The Rules (17 pics) - AcidCow.com</title><link>https://acidcow.com/pics/176483-they-dont-care-about-the-rules-17-pics.html</link></item>
+<item><title>Yapay Zekâ Aramalarında Görünür Olmak: Markanız ChatGPT ve Perplexity’de Nasıl Öne Çıkar? - AcidCow.com</title><link>https://acidcow.com/pics/176498-yapay-zek-aramalarnda-grnr-olmak-markanz-chatgpt-ve-perplexityde-nasl-ne-kar.html</link></item>
+<item><title>Biggest TV Salaries - Variety</title><link>https://variety.com/2026/tv/news/tv-biggest-salaries-zendaya-nicolas-cage-selena-gomez-more-1236945567/</link></item>
+<item><title>Nvidia CEO Resigns - Variety</title><link>https://variety.com/2026/biz/news/nvidia-ceo-jensen-huang-resigns-affairs-alleged-chinese-spy-1236945653/</link></item>
+<item><title>&amp;#39;Unlike Anything Else&amp;#39;: As &amp;#39;GTA 6&amp;#39; Approaches, the Gaming Industry Braces the World for Its Pop Culture Takeover - Variety</title><link>https://variety.com/2026/gaming/news/gta-6-release-gaming-industry-takeover-1236945197/</link></item>
+<item><title>‘Avengers: Doomsday’ Lists Ryan Reynolds and Hugh Jackman Among 10 Writers - Variety</title><link>https://variety.com/2026/film/news/avengers-doomsday-ryan-reynolds-hugh-jackman-writers-1236946441/</link></item>
+<item><title>Hollywood’s Next Big Deal: Will Netflix Make an M&amp;A Play for NBCU? - Variety</title><link>https://variety.com/2026/tv/news/will-netflix-make-acquisition-move-nbcuniversal-spinoff-1236946048/</link></item>
+<item><title>‘Ebenezer’ Review - Variety</title><link>https://variety.com/2026/film/reviews/ebenezer-review-johnny-depp-1236945154/</link></item>
+<item><title>Outlook Outage: Microsoft’s Email Service Goes Down Nationwide - Variety</title><link>https://variety.com/2026/digital/news/outlook-outage-microsoft-email-down-1236946411/</link></item>
+<item><title>Tarantino Fired Mélanie Laurent From ‘Inglourious Basterds’ After ‘Terrible’ Table Read and Axed Isabelle Huppert for Not Showing Up: ‘I Don’t Owe… - Variety</title><link>https://variety.com/2026/film/news/tarantino-fired-melanie-laurent-inglourious-basterds-isabelle-huppert-1236945454/</link></item>
+<item><title>Jamie Dornan Admits He &amp;#39;Cried&amp;#39; When He Was Cast as Aragorn in &amp;#39;Lord of the Rings: Hunt for Gollum&amp;#39; and Says Filming Was &amp;#39;Incredible&amp;#39;: &amp;#39;Hopefully… - Variety</title><link>https://variety.com/2026/film/news/hunt-for-gollum-jamie-dornan-aragorn-in-lord-of-the-rings-1236944943/</link></item>
+<item><title>Kaylee Hottle’s Sister Will Step in to Complete ‘Godzilla’ Actor’s Last Movie After Her Death at 18 Years Old - Variety</title><link>https://variety.com/2026/film/global/kaylee-hottle-sister-last-movie-1236946065/</link></item>
+<item><title>Anthony Clark, &amp;#39;Yes, Dear&amp;#39; Star and Comedian, Dies at 62 - Variety</title><link>https://variety.com/2026/tv/people-news/anthony-clark-dead-yes-dear-1236945796/</link></item>
+<item><title>Amanda Seyfried Joined ‘You Can See Everything’ Without Reps Knowing, Had ‘No Approval’ Over Filming and Got ‘Disrespected’ by Billy Evans: ‘No… - Variety</title><link>https://variety.com/2026/film/news/amanda-seyfried-slams-billy-evans-you-can-see-everything-filming-1236945046/</link></item>
+<item><title>Tom Holland Says Starring in ‘The Odyssey’ Has Given Him an ‘Ambition to See What Else Is Out There For Me’ - Variety</title><link>https://variety.com/2026/film/global/tom-holland-the-odyssey-ambition-projects-1236945976/</link></item>
+<item><title>Scarlett Johansson Has Gotten Such Bad Studio Movie Offers That She’s Told Execs: ‘I Don&amp;#39;t Think You Should Make This… It Seems Irresponsible… - Variety</title><link>https://variety.com/2026/film/news/scarlett-johansson-bad-studio-movie-offers-1236945270/</link></item>
+<item><title>Skydance Succession: As David Ellison Sets His Team, Heads Are Rolling as Hollywood Finds Out Who’s Really in Charge - Variety</title><link>https://variety.com/2026/film/features/skydance-david-ellison-plan-layoffs-content-spend-1236944352/</link></item>
+<item><title>David Walliams Adaptation ‘Fing!’ Pulled by Doha Film Festival Following Sexual Harassment Allegations - Variety</title><link>https://variety.com/2026/film/global/david-walliams-fling-doha-film-festival-sexual-allegations-1236946389/</link></item>
+<item><title>‘We Are the Shaggs,’ Documentary on the Legendary Cult Band, Coming to Theaters in 2027 - Variety</title><link>https://variety.com/2026/film/news/shaggs-documentary-coming-to-theaters-1236945768/</link></item>
+<item><title>‘All Quiet on the Western Front’ Producer Daniel Dreifuss Boards ‘Bloodstained Swan’ From Pipa Pictures (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/global/daniel-dreifuss-alex-levy-heller-pipa-pictures-1236945536/</link></item>
+<item><title>Brooklyn’s Iconic Domino Sugar Refinery to Host New Music Venue - Variety</title><link>https://variety.com/2026/music/news/brooklyn-domino-sugar-refinery-new-music-venue-1236945867/</link></item>
+<item><title>Duran Duran Drummer Roger Taylor Exits Group and Retires Following Tinnitus Diagnosis - Variety</title><link>https://variety.com/2026/music/news/duran-duran-drummer-roger-taylor-exits-group-tinnitus-1236946365/</link></item>
+<item><title>Alanis Morissette Slams Ben Affleck for ‘Asking Why I Didn’t Lead With My Sexuality,’ Then Plays Video at Concert of His Head Exploding - Variety</title><link>https://variety.com/2026/music/news/alanis-morissette-slams-ben-affleck-sexuality-1236946485/</link></item>
+<item><title>Michael John Roberts, Animator and Director on ‘Bojack Horseman,’ ‘Triptank,’ Dies at 48 - Variety</title><link>https://variety.com/2026/tv/news/michael-john-roberts-dead-bojack-horseman-1236946676/</link></item>
+<item><title>How to Watch ‘Southern Charm’ Season 12 Online: The Bravo Reality Series Returns Tonight - Variety</title><link>https://variety.com/2026/shopping/news/how-to-watch-southern-charm-season-12-online-free-1236946634/</link></item>
+<item><title>Shop of Horrors: How Talent Representation Firm Verve Became Hollywood’s Home for Successful Scares - Variety</title><link>https://variety.com/2026/film/news/verve-hollywood-horror-1236946379/</link></item>
+<item><title>Arnold Schwarzenegger Explains to Jimmy Kimmel Why He’s ‘Absolutely’ Still a Republican After the Blue ‘Tsunami’ Midterms - Variety</title><link>https://variety.com/2026/film/news/arnold-schwarzenegger-still-republican-jimmy-kimmel-1236946636/</link></item>
+<item><title>Aspyn Ovard on Her Divorce, Being in a Throuple and Joining ‘The Secret Lives of Mormon Wives’ Universe: ‘I Hope People Can Understand Me a Little Bit Better’ - Variety</title><link>https://variety.com/2026/tv/news/aspyn-ovard-secret-lives-mormon-wives-divorce-cancer-throuple-1236945276/</link></item>
+<item><title>‘La Bola Negra’ Creatives Faced a Ticking Clock to Finish the Film for Cannes, But Waiting for Snow Almost Kept the Ending From Being Shot - Variety</title><link>https://variety.com/2026/film/news/la-bola-negra-editor-raced-to-finish-snow-1236946562/</link></item>
+<item><title>‘Avatar: Seven Havens’ Sets Season 2 Release Date at Paramount+ - Variety</title><link>https://variety.com/2026/tv/news/avatar-seven-havens-season-2-release-date-paramount-plus-1236946366/</link></item>
+<item><title>How to Watch the 2026 Latin Grammys Live Online - Variety</title><link>https://variety.com/2026/shopping/news/how-to-watch-2026-latin-grammys-live-online-1236946628/</link></item>
+<item><title>Jo Koy on ‘Blue in the Face,’ Steven Spielberg, Biggie’s Mom and Learning What His Name Really Means at Long John Silver’s - Variety</title><link>https://variety.com/2026/tv/awards/jo-koy-blue-in-the-face-netflix-spielberg-biggie-1236946546/</link></item>
+<item><title>Chris Colfer Says ‘Glee’ Reboot ‘Conversations’ About Kurt’s Return Are Ongoing: ‘From What I Heard, It Sounded Very Funny and Like a Good Idea’ - Variety</title><link>https://variety.com/2026/tv/news/chris-colfer-glee-reboot-kurt-storylines-1236946387/</link></item>
+<item><title>‘Godzilla Minus Zero’ - Variety</title><link>https://variety.com/2026/film/reviews/godzilla-minus-zero-review-takashi-yamazaki-nyff-1236876075/</link></item>
+<item><title>‘The Cat in the Hat’ - Variety</title><link>https://variety.com/2026/film/reviews/the-cat-in-the-hat-review-bill-hader-1236937564/</link></item>
+<item><title>‘Wild Horse Nine’ - Variety</title><link>https://variety.com/2026/film/reviews/wild-horse-nine-review-1236849978/</link></item>
+<item><title>‘Drummer Boy’ - Variety</title><link>https://variety.com/2026/film/reviews/drummer-boy-review-1236940687/</link></item>
+<item><title>‘The Odyssey’ Campaign Heats Up - Variety</title><link>https://variety.com/2026/film/awards/the-odyssey-oscars-campaign-downey-del-toro-spielberg-1236935212/</link></item>
+<item><title>Zendaya Sets &amp;#39;Dune 3&amp;#39; Oscar Campaign for Best Actress in Category Shake-Up (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/awards/zendaya-oscars-dune-3-best-actress-1236918133/</link></item>
+<item><title>&amp;#39;You Can See Everything&amp;#39; Ruled Ineligible for DGA Feature Prize, Will Compete Only in Documentary Category - Variety</title><link>https://variety.com/2026/film/awards/you-can-see-everything-dga-ineligible-feature-documentary-1236932185/</link></item>
+<item><title>Sandra Hüller Makes Surprise Move to Supporting for ‘Fatherland,’ Setting Up Possible Double Oscar Nom With ‘Rose’ (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/awards/sandra-huller-fatherland-supporting-actress-oscars-1236937000/</link></item>
+<item><title>&amp;#39;White Tiger Column&amp;#39; Directors on How Myanmar&amp;#39;s Resistance Speaks to Political Youth Movements in Brazil, Serbia and the U.S.: &amp;#39;Revolution Is on the… - Variety</title><link>https://variety.com/2026/film/global/white-tiger-column-directors-myanmar-brazil-serbia-us-1236946083/</link></item>
+<item><title>Phoebe Bridgers Extends ‘Lost Tour’ With 25 Additional North American Dates in 2027 - Variety</title><link>https://variety.com/2026/music/news/phoebe-bridgers-extends-lost-tour-north-america-2027-1236946343/</link></item>
+<item><title>Jessica Chastain Returning to Broadway in New Play ‘Lost Lear’ - Variety</title><link>https://variety.com/2026/legit/news/jessica-chastain-broadway-play-lost-lear-1236945570/</link></item>
+<item><title>Stacy Keach, Star of ‘Mike Hammer,’ ‘Fat City,’ Dies at 85 - Variety</title><link>https://variety.com/2026/film/news/stacy-keach-dead-mike-hammer-fat-city-1236944687/</link></item>
+<item><title>Jordan Fisher to Star as the Kid in Broadway’s ‘Purple Rain’ - Variety</title><link>https://variety.com/2026/legit/news/jordan-fisher-purple-rain-broadway-the-kid-1236944078/</link></item>
+<item><title>‘Wanted’ Broadway Review: Dazzling Cast Can’t Elevate the Musical&amp;#39;s Muted Narrative - Variety</title><link>https://variety.com/2026/legit/reviews/wanted-broadway-review-1236941816/</link></item>
+<item><title>‘Passing Strange’ Comes to Pasadena Playhouse: Creators Stew and Heidi Rodewald on the Rock Musical Reaching L.A. Almost Two Decades After… - Variety</title><link>https://variety.com/2026/legit/news/passing-strange-pasadena-playhouse-stew-heidi-interview-1236942647/</link></item>
+<item><title>International Cinematographers Guild Celebrates 100 Years of Solidarity and Storytelling - Variety</title><link>https://variety.com/2026/artisans/news/international-cinematographers-guild-100-years-1236945738/</link></item>
+<item><title>‘La Bola Negra’ Exhibit Coming to Hollywood in December (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/artisans/news/la-bola-negra-exhibit-nya-east-hollywood-december-1236945138/</link></item>
+<item><title>Jinkx Monsoon and BenDeLaCreme on Taking Their Holiday Show on the Road and Paying Tribute to ‘Queer Icons’ Tim Curry and Dolly Parton - Variety</title><link>https://variety.com/2026/artisans/news/jinkx-monsoon-bendela-creme-holiday-tim-curry-dolly-parton-1236944277/</link></item>
+<item><title>Disney&amp;#39;s ‘Lilo &amp; Scratch’: Haim Mazar and Grace Fisher Set to Score New Animated Short (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/artisans/news/disney-lilo-scratch-composer-haim-mazar-grace-fisher-1236943388/</link></item>
+<item><title>‘The Odyssey’ Artisans on Casting Samantha Morton as Circe, Creating Her Costume and Building Her Witchy Hut - Variety</title><link>https://variety.com/2026/artisans/news/the-odyssey-samantha-morton-circe-hut-costume-1236943256/</link></item>
+<item><title>More Than Half of Video Game Workers Laid Off Over the Past Two Years Are Still Unemployed, GDC Industry Report Finds - Variety</title><link>https://variety.com/2026/gaming/news/video-game-workers-laid-off-still-unemployed-1236946277/</link></item>
+<item><title>‘Unzipped’ 4K Restoration to Make Streaming Debut on Criterion Channel (EXCLUSIVE) - Variety</title><link>https://variety.com/2026/film/columns/unzipped-4k-restoration-streaming-criterion-channel-isaac-mizrahi-1236946151/</link></item>
+<item><title>The Game Awards Adds Disney+ to Livestream Lineup - Variety</title><link>https://variety.com/2026/awards/news/game-awards-disney-plus-livestream-1236946139/</link></item>
+<item><title>Alanis Morissette Blends Theatrical Sketches, Memoir Talk and Massive Hits in Captivating ‘Butterfly With a Machete’ Residency: Concert… - Variety</title><link>https://variety.com/2026/music/concert-reviews/alanis-morissette-residency-concert-review-youtube-theater-1236943577/</link></item>
+<item><title>Tina Knowles’ WACO Theater Center Sets Grand Reopening Celebration for South L.A.’s Historic Vision Theatre - Variety</title><link>https://variety.com/2026/scene/news/tina-knowles-waco-theater-center-vision-theatre-south-la-reopening-1236943581/</link></item>
+<item><title>Olivia Rodrigo’s ‘Take Me Home (4 Christmas)’ Effusively Endorsed by Writer of the Waitresses’ ‘Christmas Wrapping,’ Who Praises Her for Picking Up… - Variety</title><link>https://variety.com/2026/music/news/olivia-rodrigo-christmas-praised-writer-waitresses-wrapping-1236941752/</link></item>
+<item><title>Judge Refuses to Dismiss Trump’s $10 Billion Defamation Suit Against BBC - Variety</title><link>https://variety.com/2026/politics/news/trump-bbc-defamation-suit-dismiss-1236944785/</link></item>
+<item><title>Donald Trump Says He Was ‘Kidding’ About Making Dana White His Press Secretary - Variety</title><link>https://variety.com/2026/politics/news/donald-trump-kidding-dana-white-press-secretary-1236942961/</link></item>
+<item><title>Trump on &amp;#39;60 Minutes&amp;#39; Reflects on Midterm Loss, Death and Forgiveness: ‘I Do Hate Some of My Enemies’ - Variety</title><link>https://variety.com/2026/politics/news/trump-60-minutes-midterms-death-forgiveness-enemies-1236942778/</link></item>
+<item><title>‘I’ve Had It’ Podcast Hosts Jennifer Welch and Angie Sullivan Apologize for Laughing at Charlie Kirk Joke: &amp;#39;We Regret It&amp;#39; - Variety</title><link>https://variety.com/2026/politics/news/jennifer-welch-angie-sullivan-apologize-charlie-kirk-joke-1236942607/</link></item>
+<item><title>Tyler Perry Joins Keisha Lance Bottoms’ Georgia Transition Team Despite Director’s Sexual Assault Lawsuits - Variety</title><link>https://variety.com/2026/politics/news/tyler-perry-keisha-lance-bottoms-transition-governor-georgia-1236941577/</link></item>
 </channel></rss>
