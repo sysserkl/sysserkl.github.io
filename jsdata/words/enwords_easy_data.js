@@ -2285,5 +2285,35 @@ grassland
 treatability
 toilet paper
 toilet tissue
+predefined
+immutability
+air-to-air
+centigrade
+criminologist
+ever-changing
+hexahedral
+inaudible
+noticeable
+recyclable
+unrecyclable
+rediscover
+waitperson
+waitpeople
+hand-wrought
+handworked
+echolocate
+facesaving
+face-saving
+generation gap
+in all probability
+otcahedral
+upgradable
+vulcanologist
+triathlon
+superstructure
+Francophilia
+
+
+
 
 `.trim().split('\n');

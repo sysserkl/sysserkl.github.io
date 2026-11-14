@@ -1,0 +1,32 @@
+bash: 
+
+basename_xml="Otherlands - A Journey Through Earth's Extinct Worlds - Thomas Halliday - Random House Publishing Group - 20260920.epub"
+basename_js="${basename_xml//\'/&#039;}"
+echo "basename_js: ${basename_js}" 1>&2
+为什么 basename_js 显示为: Otherlands - A Journey Through Earth'#039;s Extinct Worlds - Thomas Halliday - Random House Publishing Group - 20260920.epub
+
+-----
+
+bash: 求 www 的值
+
+function test(){
+    if [[ "$1" == 'a' ]] ; then
+        return 5
+    else
+        return 10
+    fi
+}
+
+www=$( test 'a' )
+
+-----
+
+python: 
+
+在正整数 A 和 B （A<B）之间提取全部质数，将提取的全部质数打乱顺序，然后按照某一顺序全部填入 N 行、M 列 的方格中，使得 每一行的和，以及 每一列的和，以及 对角线的和 均相等。求 A 和 B 的可能取值，以及 N 行 M 列 的排列方式。
+
+-----
+
+gauchesque 的音标和释义
+
+-----
