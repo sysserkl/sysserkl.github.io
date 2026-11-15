@@ -2306,13 +2306,17 @@ facesaving
 face-saving
 generation gap
 in all probability
-otcahedral
+octahedral
 upgradable
 vulcanologist
 triathlon
 superstructure
 Francophilia
-
+memorise
+computerise
+synthesise
+emphasise
+urbanisation
 
 
 
