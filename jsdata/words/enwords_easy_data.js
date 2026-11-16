@@ -795,6 +795,7 @@ Greig
 greyish
 greylag
 gross margin
+gross profit
 grown
 guardsmen
 guilt
@@ -2317,7 +2318,11 @@ computerise
 synthesise
 emphasise
 urbanisation
-
+Rudolph
+holy moley
+synthetise
+apologise
+maximise
 
 
 `.trim().split('\n');

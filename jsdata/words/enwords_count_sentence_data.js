@@ -2141,6 +2141,8 @@ var en_sentence_count_global=[
 "symptomology",
 "synth",
 "synthesise",
+"synthetise",
+"synthetize",
 "sysop",
 "taekwondo",
 "taikonaut",

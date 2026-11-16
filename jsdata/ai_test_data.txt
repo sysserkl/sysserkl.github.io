@@ -30,3 +30,6 @@ python:
 gauchesque 的音标和释义
 
 -----
+bash: 为什么电脑重启后，原先通过 dd if=bigfile of=/dev/null 输入到 /dev/null 的大文件预热内容还有效
+
+
