@@ -2323,6 +2323,12 @@ holy moley
 synthetise
 apologise
 maximise
-
+industrialise
+minimise
+Bahamas
+desalinate
+toilet table
+Dutchwoman
+economically
 
 `.trim().split('\n');
