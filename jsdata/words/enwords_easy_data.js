@@ -46,6 +46,7 @@ air-dried
 airplane
 airsickness
 air supremacy
+air-to-air
 airworthiness
 airworthy
 Aladdin
@@ -110,6 +111,7 @@ anti-union
 antiunion
 antivirus
 Antony
+apologise
 apple cart
 April Fool's Day
 April Fools' Day
@@ -158,6 +160,7 @@ bacterium
 bad-tempered
 Baghdad
 bagless
+Bahamas
 balloon-like
 balloonlike
 barroom
@@ -276,6 +279,7 @@ breast-pocket
 Bremen
 Bretton Woods
 Brice
+brickmaker
 bridezilla
 Bridgeport
 Brighton
@@ -336,6 +340,7 @@ ceaseless
 ceaselessly
 cell biology
 cellblock
+centigrade
 centimetre
 centre of gravity
 Chadwick
@@ -403,6 +408,7 @@ common share
 competitively
 competitiveness
 Compton
+computerise
 computerization
 computerize
 configurable
@@ -450,6 +456,7 @@ crewmen
 Crimea
 Crimean
 crime rate
+criminologist
 criminology
 Crockett
 crossbeam
@@ -472,6 +479,7 @@ dare I suggest
 dare say
 dark-eyed
 Darlington
+datacenter
 data type
 Davis
 DBMS
@@ -516,6 +524,7 @@ departure gate
 deplorableness
 deplorably
 Derek
+desalinate
 desalt
 destabilize
 detectability
@@ -568,6 +577,7 @@ dune
 dustless
 dustmen
 dustproof
+Dutchwoman
 dwelt
 Dyson
 earthlight
@@ -580,10 +590,12 @@ Eastertide
 Ebbinghaus
 e-bike
 ebook
+echolocate
 E. coli
 ecologist
 econometrical
 econometrics
+economically
 economy of scale
 Edmond
 Edmund
@@ -607,6 +619,7 @@ elementary school
 Eliot
 e-mail
 embarrassingly
+emphasise
 encamp
 enduringly
 enforceable
@@ -631,6 +644,7 @@ Eurocentrism
 Euroskepticism
 even-handed
 evening school
+ever-changing
 everlastingness
 evildoer
 evilly
@@ -655,6 +669,8 @@ extragalactic
 extrasolar planet
 eye chart
 eyewall
+face-saving
+facesaving
 fairy light
 falsifiability
 fatalist
@@ -671,6 +687,7 @@ feelingless
 ferry-house
 ferrymen
 f-hole
+field hospital
 fifty-eight
 fifty-five
 fifty-four
@@ -694,6 +711,7 @@ fishlike
 fish oil
 fishpond
 fittingly
+fivepence
 flameproof
 flash drive
 flavourless
@@ -724,6 +742,7 @@ fourthly
 four-wheel
 four-wheeled
 foxhound
+Francophilia
 Francophobia
 Frankfort
 Frankfurt
@@ -759,6 +778,7 @@ gecko
 geese
 Geiger counter
 genderlessness
+generation gap
 gentlemanlike
 gentlemen
 gentlemen-in-waiting
@@ -785,8 +805,10 @@ gracefully
 gracefulness
 grammatical
 grammatically
+Granada
 grandbaby
 grandniece
+grassland
 grasslike
 graveside
 grayish
@@ -820,7 +842,9 @@ Hancock
 handcart
 Handel
 handloom
+handworked
 handwritten
+hand-wrought
 hard-liner
 harmoniously
 Harrington
@@ -828,6 +852,7 @@ Harris
 harvestable
 hasn't
 hatbox
+haven't
 hawklike
 Hayley
 Hazlitt
@@ -859,6 +884,7 @@ herdsmen
 hertz
 hesitatingly
 hexahedra
+hexahedral
 Heywood
 hid
 highchair
@@ -876,8 +902,11 @@ Hoffman
 Hoffmann
 Hogwarts
 holding company
+holloware
+hollowware
 Holy Father
 Holyhead
+holy moley
 home-cooked
 homophobia
 Honduras
@@ -922,13 +951,16 @@ I'm
 imaginary number
 immovable property
 immunosuppression
+immutability
 immutableness
 imperfectly
 impostor
 imprisonable
 impulsiveness
 inaccurately
+in all probability
 in all weathers
+inaudible
 inauthentically
 incessantly
 inconsistently
@@ -939,6 +971,7 @@ indefinably
 indoor
 indoors
 Indo-Pacific
+industrialise
 industrialization
 industrywide
 inescapability
@@ -1124,12 +1157,14 @@ market share
 Marvin
 massless
 matrilinear
+maximise
 mayorship
 McDonald's
 mealtime
 meant
 measurableness
 megapixel
+memorise
 memory card
 men-at-arms
 Menshevik
@@ -1166,6 +1201,7 @@ milliampere
 Milton
 mindshare
 minimisation
+minimise
 miniskirt
 Minsk
 Mirren
@@ -1180,6 +1216,8 @@ mobsmen
 modernisation
 mojito
 monkeypox
+monometallism
+monometallist
 monopolise
 mooncake
 moonless
@@ -1317,6 +1355,7 @@ northwestward
 notepaper
 note-taking
 notetaking
+noticeable
 Nottingham
 not to mention
 nuclear explosion
@@ -1333,6 +1372,7 @@ oarsmen
 Obama
 Obi-Wan
 observability
+octahedral
 Odesa
 odorless
 ohm
@@ -1467,6 +1507,7 @@ poverty line
 powerlessness
 power station
 prebuild
+predefined
 preference share
 preferred share
 pre-Islamic
@@ -1546,11 +1587,13 @@ reconfiguration
 reconnection
 record-breaking
 record holder
+recyclable
 redden
 red-haired
 red-headed
 redheaded
 redid
+rediscover
 redness
 redone
 red panda
@@ -1594,6 +1637,7 @@ rowhouse
 rubber bullet
 Rubens
 Rubio
+Rudolph
 Rufus
 rule-based
 rulebook
@@ -1860,6 +1904,7 @@ supersmart
 superspy
 superstardom
 superstorm
+superstructure
 superuser
 superweapon
 supportively
@@ -1874,6 +1919,8 @@ swimwear
 Swiss roll
 swordsmen
 symptomless
+synthesise
+synthetise
 Syria
 tableland
 taco
@@ -1962,7 +2009,10 @@ Tito
 toadlike
 toffee
 tofu
+toilet paper
 toilet-paper
+toilet table
+toilet tissue
 tollbridge
 to-night
 toolchain
@@ -1983,9 +2033,11 @@ transphobe
 transphobia
 transship
 travel sickness
+treatability
 treeless
 treelike
 treetop
+triathlon
 tribesmen
 trioxide
 Trotwood
@@ -2133,6 +2185,7 @@ unreachable
 unreasonableness
 unrecognisable
 unrecognizable
+unrecyclable
 unreliability
 unremarkable
 unreproveable
@@ -2163,8 +2216,10 @@ unusable
 unvaccinated
 unwisely
 upgradability
+upgradable
 upgradeable
 upset the applecart
+urbanisation
 Ursa Minor
 Uruguay
 usefully
@@ -2188,8 +2243,11 @@ volcanology
 Volga
 voltmeter
 V-shaped
+vulcanologist
 Wagner
 waiting room
+waitpeople
+waitperson
 walkability
 Walter
 warbonnet
@@ -2282,53 +2340,7 @@ zooarchaeological
 zooarchaeology
 zoologist
 Zuma
-grassland
-treatability
-toilet paper
-toilet tissue
-predefined
-immutability
-air-to-air
-centigrade
-criminologist
-ever-changing
-hexahedral
-inaudible
-noticeable
-recyclable
-unrecyclable
-rediscover
-waitperson
-waitpeople
-hand-wrought
-handworked
-echolocate
-facesaving
-face-saving
-generation gap
-in all probability
-octahedral
-upgradable
-vulcanologist
-triathlon
-superstructure
-Francophilia
-memorise
-computerise
-synthesise
-emphasise
-urbanisation
-Rudolph
-holy moley
-synthetise
-apologise
-maximise
-industrialise
-minimise
-Bahamas
-desalinate
-toilet table
-Dutchwoman
-economically
+Zambia
+
 
 `.trim().split('\n');
