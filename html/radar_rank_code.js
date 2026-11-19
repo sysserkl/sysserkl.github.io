@@ -3,7 +3,6 @@
 //0.0.1-20261022 ima (copilot)
 //-----------------------
 class Scale_engine_rdrank {
-
     constructor() {
         if (typeof CFG_rdrank === 'undefined' || typeof SCALES_rdrank === 'undefined'){return;}
         this.constructor_rdrank();
@@ -253,6 +252,7 @@ class Scale_engine_rdrank {
         const any = this.state_rdrank.people_rdrank.some(p => this.answered_count_rdrank(p) > 0);
         this.q_rdrank('#btnView').hidden = !any;
         this.q_rdrank('#btnReset').hidden = !any;
+        this.q_rdrank('#btnMd').hidden = !any;
         const next = this.state_rdrank.people_rdrank.findIndex(p => this.answered_count_rdrank(p) < total);
         const btn = this.q_rdrank('#btnStart');
         btn.textContent = next >= 0
@@ -670,6 +670,11 @@ class Scale_engine_rdrank {
             self.refresh_setup_rdrank();
             self.show_screen_rdrank('setup');
         };
+        
+        self.q_rdrank('#btnMd').onclick = () => {
+            document.querySelector('div.modal-body').innerHTML=scale_md_rdrank().replace(/\n/g,'\n<br />');
+            document.getElementById('guideModal').hidden=false;
+        }
 
         self.q_rdrank('#btnAddPerson').onclick = () => self.add_person_rdrank();
         self.q_rdrank('#inNewName').onkeydown = e => { if (e.key === 'Enter') self.add_person_rdrank(); };
@@ -823,8 +828,10 @@ function modal_body_content_rdrank(){
 
 function scale_md_rdrank(scaleKey, show_weight = false) {
     if (!scaleKey || typeof scaleKey !== 'string') {
-        return '**错误**：scaleKey 必须是非空字符串，例如 \'intimacy\'。';
+        scaleKey=APP_rdrank.state_rdrank['scale_key_rdrank'];
+        //return '**错误**：scaleKey 必须是非空字符串，例如 \'intimacy\'。';
     }
+    
     if (typeof SCALES_rdrank === 'undefined') {
         return '**错误**：未找到全局常量 `SCALES_rdrank`，请先加载量表数据文件。';
     }
@@ -866,7 +873,7 @@ function scale_md_rdrank(scaleKey, show_weight = false) {
         }
         if (dim.desc) {
             lines.push(dim.desc);
-            lines.push('<br><br>');
+            lines.push('&lt;br&gt;&lt;br&gt;');
             
         }
         if (show_weight && dim.weight || dim.desc) {

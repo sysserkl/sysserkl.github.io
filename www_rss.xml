@@ -8,386 +8,151 @@
 <atom:link href="https://sysserkl.github.io/www_rss.xml" rel="self"/>
 <docs>http://www.rssboard.org/rss-specification</docs>
 <generator>python-feedgen</generator>
-<lastBuildDate>Wed, 18 Nov 2026 09:00:07 +0800</lastBuildDate>
-<item><title>Signs of Life - Law &amp; Liberty</title><link>https://lawliberty.org/podcast/signs-of-life/</link></item>
-<item><title>The Court’s Traditionalist Turn? - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/the-courts-traditionalist-turn/</link></item>
-<item><title>The Duty of Originalism - Law &amp; Liberty</title><link>https://lawliberty.org/the-duty-of-originalism/</link></item>
-<item><title>Alito, Citizen and Judge - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/alito-citizen-and-judge/</link></item>
-<item><title>Dialogue with a Working Judicial Originalist - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/dialogue-with-a-working-judicial-originalist/</link></item>
-<item><title>The Practical Originalist - Law &amp; Liberty</title><link>https://lawliberty.org/book-review/the-practical-originalist/</link></item>
-<item><title>Google To Keep Temporary Gemini Chats For Two Months - Slashdot</title><link>https://yro.slashdot.org/story/26/11/17/2246233/google-to-keep-temporary-gemini-chats-for-two-months</link></item>
-<item><title>Optimizely Hack Turns World&amp;#39;s Biggest Websites Into Malware Dispensers - Slashdot</title><link>https://it.slashdot.org/story/26/11/17/2035243/optimizely-hack-turns-worlds-biggest-websites-into-malware-dispensers</link></item>
-<item><title>Nvidia Stopped Disclosing Singapore Sales As Revenues Hit $104 Billion - Slashdot</title><link>https://news.slashdot.org/story/26/11/17/1942228/nvidia-stopped-disclosing-singapore-sales-as-revenues-hit-104-billion</link></item>
-<item><title>Highly Classified NSA Network Goes Down - Slashdot</title><link>https://news.slashdot.org/story/26/11/17/1954223/highly-classified-nsa-network-goes-down</link></item>
-<item><title>School Phone Bans Are Gradually Improving Test Scores - Slashdot</title><link>https://mobile.slashdot.org/story/26/11/17/1739215/school-phone-bans-are-gradually-improving-test-scores</link></item>
-<item><title>Jensen Huang Says He&amp;#39;d Be &amp;#39;Honored&amp;#39; to Return As Nvidia CEO - Slashdot</title><link>https://tech.slashdot.org/story/26/11/17/1748231/jensen-huang-says-hed-be-honored-to-return-as-nvidia-ceo</link></item>
-<item><title>BugMeNot Calls It Quits - Slashdot</title><link>https://tech.slashdot.org/story/26/11/17/1729243/bugmenot-calls-it-quits</link></item>
-<item><title>Uber Says Hackers Stole Info On Nearly 150K Driver&amp;#39;s Licenses During Data Breach - Slashdot</title><link>https://it.slashdot.org/story/26/11/17/0016257/uber-says-hackers-stole-info-on-nearly-150k-drivers-licenses-during-data-breach</link></item>
-<item><title>&amp;#39;123456&amp;#39; Has Been the World&amp;#39;s Most Popular Password for 7 of the Last 8 Years - Slashdot</title><link>https://it.slashdot.org/story/26/11/17/006235/123456-has-been-the-worlds-most-popular-password-for-7-of-the-last-8-years</link></item>
-<item><title>California Sues OpenAI Over Hugging Face, Other AI Model Loss of Control - Slashdot</title><link>https://yro.slashdot.org/story/26/11/16/2353225/california-sues-openai-over-hugging-face-other-ai-model-loss-of-control</link></item>
-<item><title>Just 400 US Data Centers Use More Electricity Than Michigan - Slashdot</title><link>https://news.slashdot.org/story/26/11/16/2137223/just-400-us-data-centers-use-more-electricity-than-michigan</link></item>
-<item><title>JPMorgan Chase Glitch Disrupts Online Banking Across Major US Banks - Slashdot</title><link>https://news.slashdot.org/story/26/11/16/2332229/jpmorgan-chase-glitch-disrupts-online-banking-across-major-us-banks</link></item>
-<item><title>Comcast&amp;#39;s &amp;#39;Fiber-Powered Wi-Fi&amp;#39; Is Just Cable, AT&amp;amp;T Says In False Advertising Case - Slashdot</title><link>https://yro.slashdot.org/story/26/11/16/2129234/comcasts-fiber-powered-wi-fi-is-just-cable-att-says-in-false-advertising-case</link></item>
-<item><title>FBI Says Artex AI Open-Source Hacking Tool Used to Breach Networks In &amp;#39;Under Three Hours&amp;#39; - Slashdot</title><link>https://it.slashdot.org/story/26/11/16/2025219/fbi-says-artex-ai-open-source-hacking-tool-used-to-breach-networks-in-under-three-hours</link></item>
-<item><title>Microsoft Outage Leads To Chlorine Gas Poisoning At German Theme Park - Slashdot</title><link>https://tech.slashdot.org/story/26/11/16/201240/microsoft-outage-leads-to-chlorine-gas-poisoning-at-german-theme-park</link></item>
-<item><title>Meta Tests Direct, a Standalone Chat App Just for Your Instagram DMs - CNET</title><link>https://www.cnet.com/tech/mobile/meta-direct-standalone-chat-app-instagram-dms/</link></item>
-<item><title>Xbox Game Pass Subscribers Can Play High on Life 2, Hela: of Mice and Magic and More Soon - CNET</title><link>https://www.cnet.com/tech/gaming/xbox-game-pass-november-pt-2/</link></item>
-<item><title>Nvidia’s Earnings Call Is the AI Economy’s Next Stress Test - CNET</title><link>https://www.cnet.com/tech/services-and-software/nvidia-earnings-call-ai-economy-stress-test/</link></item>
-<item><title>Voyager 1 Hits One Light-Day From Earth on Wednesday — Celebrate Tuesday Night - CNET</title><link>https://www.cnet.com/science/space/voyager-1-passes-one-light-day/</link></item>
-<item><title>SpaceX Misses Its Double Catch but Still Makes History by Catching the Starship - CNET</title><link>https://www.cnet.com/science/space/spacex-starship-flight-15-double-catch/</link></item>
-<item><title>Cyberattack Targets iPhones, Crypto of Visitors to Major Websites - CNET</title><link>https://www.cnet.com/tech/services-and-software/optimizely-cyberattack-visitors-to-websites/</link></item>
-<item><title>The World Didn’t End on Nov. 17, but Some Tech Chaos Did Go Down - CNET</title><link>https://www.cnet.com/news/social-media/blackout-rumors-nov-17-emergency-alert-system-prepare-supplies/</link></item>
-<item><title>Live Now! The iPhone Duo’s Crossed 517,000 Folds and Counting in Our Custom Machine - CNET</title><link>https://www.cnet.com/tech/mobile/watch-us-fold-the-iphone-duo-thousands-of-times-on-our-weeks-long-livestream/</link></item>
-<item><title>The Simple Trick That Keeps Poached Eggs Perfectly Intact - CNET</title><link>https://www.cnet.com/home/kitchen-and-household/the-simple-trick-that-keeps-poached-eggs-perfectly-intact/</link></item>
-<item><title>Amazon Prime Has a New Meal Delivery Perk Just in Time for Black Friday - CNET</title><link>https://www.cnet.com/tech/services-and-software/amazon-prime-uber-eats-perk/</link></item>
-<item><title>I’ve Used VSCO’s Lightroom Rival Desktop Editor and It’s Great for Creatives - CNET</title><link>https://www.cnet.com/tech/computing/ive-used-vscos-lightroom-rival-desktop-editor-and-its-great-for-creatives/</link></item>
-<item><title>Disney Plus and Hulu Apps to Merge Next Month, Free Tier Still in the Works - CNET</title><link>https://www.cnet.com/tech/services-and-software/disney-ceo-gives-update-on-disney-plus-hulu-combined-app-free-tier/</link></item>
-<item><title>I Didn’t Expect to Like Xiaomi’s Bizarre Dual-Screen Phone So Much - CNET</title><link>https://www.cnet.com/tech/xiaomi-18-pro-max-review/</link></item>
-<item><title>PlayStation Plus Subscribers Can Play Death Stranding 2, Atomfall and More Now - CNET</title><link>https://www.cnet.com/tech/gaming/death-stranding-2-atomfall-playstation-plus-november/</link></item>
-<item><title>Google’s Xreal Aura, Reviewed: The Weird Evolution of VR Into Glasses Is Already Underway - CNET</title><link>https://www.cnet.com/tech/computing/google-xreal-aura-glasses-hands-on/</link></item>
-<item><title>Oura Ring Adds a Jet Lag Feature for Time Zone Travelers - CNET</title><link>https://www.cnet.com/tech/mobile/oura-ring-jet-lag-feature-time-zone-travelers/</link></item>
-<item><title>CNET Survey: $75 Billion in Holiday Packages Could Be Vulnerable to Lurking Porch Pirates - CNET</title><link>https://www.cnet.com/home/security/porch-theft-2026/</link></item>
-<item><title>School Campuses Emerge as the Latest Battleground for Flock Safety Cameras - CNET</title><link>https://www.cnet.com/news/privacy/school-campuses-flock-safety-cameras/</link></item>
-<item><title>Did a Single Router Ground the Nation’s Flights? Experts Express Doubt - CNET</title><link>https://www.cnet.com/home/internet/did-single-router-ground-nations-flights/</link></item>
-<item><title>Uber Adds Zoox’s Robotaxis to Its App. Everything to Know - CNET</title><link>https://www.cnet.com/roadshow/automobiles/uber-adds-zoox-robotaxis/</link></item>
-<item><title>A New Study Finds Hyperscale Data Centers Emit as Much Carbon as Denmark - CNET</title><link>https://www.cnet.com/tech/services-and-software/a-new-study-finds-hyperscale-data-centers-emit-as-much-carbon-as-denmark/</link></item>
-<item><title>Samsung Galaxy S27 Lineup Could Have a Personal AI Assistant Built-In - CNET</title><link>https://www.cnet.com/tech/services-and-software/samsung-galaxy-claw-ai-assistant/</link></item>
-<item><title>Five iOS 27 Toggles That Make Your iPhone Easier to Read and More Private - CNET</title><link>https://www.cnet.com/tech/services-and-software/how-to-change-the-most-annoying-ios-27-settings-on-your-iphone/</link></item>
-<item><title>Google Pixel Tag Hands-On: Android Fans Get Their Own AirTag-Style Tracker - CNET</title><link>https://www.cnet.com/tech/mobile/google-pixel-tag-hands-on/</link></item>
-<item><title>John Mulaney’s SNL Sister Eldercare Ad Is an Instant, Painful Classic - CNET</title><link>https://www.cnet.com/culture/internet/john-mulaney-snl-sister-eldercare-ad-painful-classic/</link></item>
-<item><title>007: First Light Keeps James Bond In The Spotlight As The Game Awards 2026 Reveals Full Nominations - Empire</title><link>https://www.empireonline.com/movies/news/007-first-light-keeps-james-bond-in-the-spotlight-as-the-game-awards-2026-reveals-full-nominations/</link></item>
-<item><title>Robert Eggers Set Out To Write ‘The Scariest Horror Movie I Can’ With Werwulf: ‘I Felt Physically Ill’ - Empire</title><link>https://www.empireonline.com/movies/news/werwulf-robert-eggers-scariest-horror-movie-i-can-exclusive/</link></item>
-<item><title>Three Mind-Melting Documentaries To Watch After You Can See Everything - Empire</title><link>https://www.empireonline.com/movies/features/three-mind-melting-documentaries-to-watch-after-you-can-see-everything/</link></item>
-<item><title>Grand Theft Auto 6: Six Films To Watch That Influenced The Game - Empire</title><link>https://www.empireonline.com/movies/features/grand-theft-auto-6-films-that-inspired-game/</link></item>
-<item><title>You Can See Everything - Empire</title><link>https://www.empireonline.com/movies/reviews/you-can-see-everything/</link></item>
-<item><title>The Hunger Games: Sunrise On The Reaping - Empire</title><link>https://www.empireonline.com/movies/reviews/the-hunger-games-sunrise-on-the-reaping/</link></item>
-<item><title>Avengers: Doomsday Scene Between Doom And Sue Storm Is ‘Very Close To The Comics’ Says Vanessa Kirby - Empire</title><link>https://www.empireonline.com/movies/news/avengers-doomsday-doom-sue-storm-scene-very-close-to-the-comics-exclusive/</link></item>
-<item><title>Suave, Bold, Weird: What Robert Pattinson’s Casting Means For James Bond - Empire</title><link>https://www.empireonline.com/movies/news/what-robert-pattinson-casting-means-for-james-bond/</link></item>
-<item><title>Robert Pattinson Is Officially The Next James Bond As Amazon Confirms 007 Casting - Empire</title><link>https://www.empireonline.com/movies/news/robert-pattinson-is-officially-the-next-james-bond-as-amazon-confirms-007-casting/</link></item>
-<item><title>Slow Horses Officially Renewed For Season 9 And 10 At Apple TV - Empire</title><link>https://www.empireonline.com/tv/news/slow-horses-officially-renewed-for-season-9-and-10-at-apple-tv/</link></item>
-<item><title>Avengers: Secret Wars Is ‘A Whole Other Genre Of Story’ To Doomsday, Teases Kevin Feige - Empire</title><link>https://www.empireonline.com/movies/news/avengers-secret-wars-whole-other-genre-doomsday-kevin-feige-exclusive/</link></item>
-<item><title>Slow Horses Star Olivia Cooke Says Apple TV Spy Series Will End With Season 8 - Empire</title><link>https://www.empireonline.com/tv/news/slow-horses-star-olivia-cooke-says-apple-tv-spy-series-will-end-with-season-8/</link></item>
-<item><title>Margot Robbie To Star In A24 Movie The Week Of Pain From The Drama Director Kristoffer Borgli - Empire</title><link>https://www.empireonline.com/movies/news/margot-robbie-to-star-in-a24-movie-the-week-of-pain-from-the-drama-director-kristoffer-borgli/</link></item>
-<item><title>Avengers: Doomsday Will ‘Culminate A Quarter-Century Of Storytelling’ With The Original X-Men - Empire</title><link>https://www.empireonline.com/movies/news/avengers-doomsday-culminate-original-x-men-exclusive/</link></item>
-<item><title>Merry Christmas Aubrey Flint - Empire</title><link>https://www.empireonline.com/movies/reviews/merry-christmas-aubrey-flint/</link></item>
-<item><title>Doomsday Explores The Consequence Of Years With ‘No Organised Avengers Team’, Says Kevin Feige - Empire</title><link>https://www.empireonline.com/movies/news/avengers-doomsday-consequence-of-no-organised-team-exclusive/</link></item>
-<item><title>The Empire Film Podcast Ft. Fjord Stars Sebastian Stan And Renate Reinsve - Empire</title><link>https://www.empireonline.com/movies/news/the-empire-film-podcast-ft-fjord-stars-sebastian-stan-and-renate-reinsve/</link></item>
-<item><title>Cunk On Cinema - Empire</title><link>https://www.empireonline.com/tv/reviews/cunk-on-cinema/</link></item>
-<item><title>Jason Voorhees To Return In New Friday The 13th Movie From Franchise Veteran Director Steve Miner - Empire</title><link>https://www.empireonline.com/movies/news/jason-voorhees-to-return-in-new-friday-the-13th-movie-from-franchise-veteran-director-steve-miner/</link></item>
-<item><title>Wolfenstein 3 Officially In The Works From MachineGames - Empire</title><link>https://www.empireonline.com/movies/news/wolfenstein-3-officially-in-the-works-from-machinegames/</link></item>
-<item><title>Renny Harlin Teams Up With Johanna Harlin And Max Michael To Launch ‘Harlin House’ Fellowship - Empire</title><link>https://www.empireonline.com/movies/news/renny-harlin-teams-up-with-johanna-harlin-and-max-martin-to-launch-harlin-house-fellowship/</link></item>
-<item><title>Empire’s World-Exclusive Avengers: Doomsday Covers Revealed – With Four To Collect - Empire</title><link>https://www.empireonline.com/movies/news/avengers-doomsday-covers-revealed/</link></item>
-<item><title>Line Of Duty Series 7 First Look Teases Martin Compston, Vicky McClure And Adrian Dunbar’s Returns - Empire</title><link>https://www.empireonline.com/tv/news/line-of-duty-series-7-first-look-teases-martin-compston-vicky-mcclure-and-adrian-dunbars-returns/</link></item>
-<item><title>The Thomas Crown Affair Trailer Teases Michael B. Jordan’s Slick Take On A Crime Classic - Empire</title><link>https://www.empireonline.com/movies/news/the-thomas-crown-affair-trailer-teases-michael-b-jordans-slick-take-on-a-crime-classic/</link></item>
-<item><title>Being Heumann - Empire</title><link>https://www.empireonline.com/movies/reviews/being-heumann/</link></item>
-<item><title>Empire Pays Tribute To Patrick Stewart With Special Subscriber Cover - Empire</title><link>https://www.empireonline.com/movies/news/patrick-stewart-tribute-subscriber-cover/</link></item>
-<item><title>Shang-Chi Vs Gambit Battle In Avengers: Doomsday ‘Reminded Me Of The Bus Fight’, Says Simu Liu - Empire</title><link>https://www.empireonline.com/movies/news/avengers-doomsday-shang-chi-gambit-battle-exclusive/</link></item>
-<item><title>Avengers: Doomsday Will Finally Deliver A Doctor Doom ‘Worth Being Scared Of’ - Empire</title><link>https://www.empireonline.com/movies/news/avengers-doomsday-doctor-doom-worth-being-scared-of-exclusive/</link></item>
-<item><title>How To Rob A Bank - Empire</title><link>https://www.empireonline.com/movies/reviews/how-to-rob-a-bank/</link></item>
-<item><title>The Lord Of The Rings: The Rings Of Power – Season 3 - Empire</title><link>https://www.empireonline.com/tv/reviews/lord-of-the-rings-the-rings-of-power-season-3/</link></item>
-<item><title>James Gunn And Peter Safran Exit DC Studios CEO Roles In Shock Upheaval - Empire</title><link>https://www.empireonline.com/movies/news/james-gunn-peter-safran-dc-studios-ceo-out/</link></item>
-<item><title>The Mosquito Bowl - Empire</title><link>https://www.empireonline.com/movies/reviews/the-mosquito-bowl/</link></item>
-<item><title>Sebastián Lelio, Oscar-Winning Chilean Director Of A Fantastic Woman And The Wonder, Dies Aged 52 - Empire</title><link>https://www.empireonline.com/movies/news/sebastian-lelio-oscar-winning-chilean-director-of-a-fantastic-woman-and-the-wonder-dies-aged-52/</link></item>
-<item><title>Godzilla Minus Zero’s Ending Is Proving Divisive – As A Parent, It Destroyed Me - Empire</title><link>https://www.empireonline.com/movies/features/godzilla-minus-zero-divisive-ending-destroyed-me/</link></item>
-<item><title>Ramayana: Rise Of A Legend - Empire</title><link>https://www.empireonline.com/movies/reviews/ramayana-rise-of-a-legend/</link></item>
-<item><title>Black Doves: Season 2 - Empire</title><link>https://www.empireonline.com/tv/reviews/black-doves-season-2/</link></item>
-<item><title>La Bola Negra - Empire</title><link>https://www.empireonline.com/movies/reviews/la-bola-negra/</link></item>
-<item><title>Stranger Things Prequel Series ‘Other Worlds’ Confirms Title And Plot Details In First Teaser - Empire</title><link>https://www.empireonline.com/tv/news/stranger-things-prequel-series-other-worlds-sets-2028-release-confirms-title-and-plot-details/</link></item>
-<item><title>The Further Mis-Adventures Of Cliff Booth Trailer Sees Brad Pitt Pulled Into Shady Criminal Business - Empire</title><link>https://www.empireonline.com/movies/news/further-mis-adventures-of-cliff-booth-trailer-brad-pitt-criminal-business/</link></item>
-<item><title>Godzilla Minus Zero Director On Reinventing King Ghidorah: ‘As A Kaiju Fan There’s No Higher Honour’ - Empire</title><link>https://www.empireonline.com/movies/features/godzilla-minus-zero-director-reinventing-king-ghidorah-interview/</link></item>
-<item><title>Five Best Japanese Godzilla Movies To Stream After Watching Godzilla Minus Zero - Empire</title><link>https://www.empireonline.com/movies/features/best-japanese-godzilla-movies-to-stream-after-godzilla-minus-zero/</link></item>
-<item><title>Monarch: Legacy Of Monsters Prequel Series Adds Giancarlo Esposito And Tim Robbins - Empire</title><link>https://www.empireonline.com/tv/news/monarch-legacy-of-monsters-prequel-series-adds-giancarlo-esposito-and-tim-robbins/</link></item>
-<item><title>John Wick Animated Prequel Movie Is Happening — Keanu Reeves To Return - Empire</title><link>https://www.empireonline.com/movies/news/john-wick-animated-prequel-movie-is-happening-keanu-reeves-to-return/</link></item>
-<item><title>Karōshi Trailer Teases Teo Yoo, Isabel May &amp; Cynthia Erivo In Corporate Thriller With Samurai Twist - Empire</title><link>https://www.empireonline.com/movies/news/karoshi-trailer-teases-teo-yoo-isabel-may-cynthia-erivo-in-corporate-thriller-with-samurai-twist/</link></item>
-<item><title>Natalie Portman Creates Some Dead Good Art — Literally — In Dark Comedy The Gallerist Trailer - Empire</title><link>https://www.empireonline.com/movies/news/natalie-portman-creates-some-dead-good-art-literally-in-dark-comedy-the-gallerist-trailer/</link></item>
-<item><title>Off Campus Season 2 Sets April 2027 Prime Video Release And Confirms Returning Cast - Empire</title><link>https://www.empireonline.com/tv/news/off-campus-season-2-sets-april-2027-prime-video-release-and-confirms-returning-cast/</link></item>
-<item><title>John Constantine Movie In The Works At DC Studios From Evil Dead Wrath’s Francis Galluppi - Empire</title><link>https://www.empireonline.com/movies/news/john-constantine-movie-in-the-works-at-dc-studios-from-evil-dead-wraths-francis-galluppi/</link></item>
-<item><title>Maya Hawke Joins Magic: The Gathering Movie Directed By Matt Johnson - Empire</title><link>https://www.empireonline.com/movies/news/maya-hawke-joins-magic-the-gathering-movie-directed-by-matt-johnson/</link></item>
-<item><title>Lords Of War Trailer: Nicolas Cage And Bill Skarsgård Face Off In Long-Awaited Thriller Sequel - Empire</title><link>https://www.empireonline.com/movies/news/lords-of-war-trailer-nicolas-cage-and-bill-skarsgard-face-off-in-long-awaited-thriller-sequel/</link></item>
-<item><title>PROMOTION: Gone With The Wind On 4K Ultra-HD Is The Ultimate Way To Watch A Cinematic Classic - Empire</title><link>https://www.empireonline.com/movies/features/promotion-gone-with-the-wind-cinematic-classic-on-4k-ultra-hd/</link></item>
-<item><title>The Legend Of Zelda: Ocarina Of Time (2026) - Empire</title><link>https://www.empireonline.com/gaming/reviews/legend-of-zelda-ocarina-of-time-2026/</link></item>
-<item><title>Exclusive Outlander: Blood of my Blood S2 screening and cast Q&amp;A - Empire</title><link>https://www.empireonline.com/tv/features/exclusive-outlander-blood-of-my-blood-screening-and-cast-qa/</link></item>
-<item><title>The Elder Scrolls VI: Sentinel Title Confirmed As Bethesda Celebrates 40th Anniversary - Empire</title><link>https://www.empireonline.com/movies/news/the-elder-scrolls-vi-sentinel-title-confirmed-as-bethesda-celebrates-40th-anniversary/</link></item>
-<item><title>Quentin Tarantino x David Fincher In Conversation: Making The Further Mis-Adventures Of Cliff Booth - Empire</title><link>https://www.empireonline.com/movies/features/quentin-tarantino-david-fincher-further-mis-adventures-of-cliff-booth-interview-exclusive/</link></item>
-<item><title>Neve Campbell Confirms Sidney Prescott Return In Scream 8 - Empire</title><link>https://www.empireonline.com/movies/news/neve-campbell-confirms-sidney-prescott-return-in-scream-8/</link></item>
-<item><title>Ben Wang Circling Iceman Role In MCU X-Men Movie - Empire</title><link>https://www.empireonline.com/movies/news/ben-wang-circling-iceman-role-in-mcu-x-men-movie/</link></item>
-<item><title>Gentle Monster - Empire</title><link>https://www.empireonline.com/movies/reviews/gentle-monster/</link></item>
-<item><title>Cyberpunk: Edgerunners 2 - Empire</title><link>https://www.empireonline.com/tv/reviews/cyberpunk-edgerunners-2/</link></item>
-<item><title>The Empire Film Podcast Ft. Primetime Star Robert Pattinson And Director Lance Oppenheim - Empire</title><link>https://www.empireonline.com/movies/news/the-empire-film-podcast-ft-primetime-star-robert-pattinson-and-director-lance-oppenheim/</link></item>
-<item><title>The 2026 Horror Films You Missed (And Should Watch This Halloween Weekend) - Empire</title><link>https://www.empireonline.com/movies/features/the-2026-horror-films-you-missed-and-should-watch-this-halloween-weekend/</link></item>
-<item><title>I Love Boosters - Empire</title><link>https://www.empireonline.com/movies/reviews/i-love-boosters/</link></item>
-<item><title>Sir Patrick Stewart, Beloved For Star Trek, X-Men And More, Dies Aged 86 - Empire</title><link>https://www.empireonline.com/movies/news/patrick-stewart-dies-aged-86/</link></item>
-<item><title>How The Devils Became The Must-See Movie Of Halloween In 2026 - Empire</title><link>https://www.empireonline.com/movies/features/the-devils-must-see-movie-of-halloween/</link></item>
-<item><title>Obsession Director Curry Barker Releases New Five-Minute Horror Short Film ‘Mama Bear’ On YouTube - Empire</title><link>https://www.empireonline.com/movies/news/obsession-director-curry-barker-releases-new-five-minute-horror-short-film-mama-bear-on-youtube/</link></item>
-<item><title>Cunk On Cinema Trailer Pits Philomena Cunk Against The Greatest Minds In Movies - Empire</title><link>https://www.empireonline.com/tv/news/cunk-on-cinema-trailer-philomena-cunk-takes-hollywood/</link></item>
-<item><title>Dune: Part Three Popcorn Bucket Has Double The Holes Of Last Time - Empire</title><link>https://www.empireonline.com/movies/news/dune-part-three-popcorn-bucket-has-double-the-holes/</link></item>
-<item><title>Smile 3 Officially In The Works — David Bruckner To Direct From Nick Antosca Script - Empire</title><link>https://www.empireonline.com/movies/news/smile-3-officially-in-the-works-david-bruckner-to-direct-from-nick-antosca-script/</link></item>
-<item><title>Phantom Blade Zero - Empire</title><link>https://www.empireonline.com/gaming/reviews/phantom-blade-zero/</link></item>
-<item><title>Hunter’s Moon - Empire</title><link>https://www.empireonline.com/gaming/reviews/hunters-moon/</link></item>
-<item><title>Marvel’s Ghost Rider Eyes Connor Storrie To Play Lead Villain Opposite Ryan Gosling - Empire</title><link>https://www.empireonline.com/movies/news/marvels-ghost-rider-eyes-connor-storrie-to-play-lead-villain-opposite-ryan-gosling/</link></item>
-<item><title>Denis Villeneuve Movies — Including Dune: Part One And Two In IMAX — Set For UK Cinema Re-Release - Empire</title><link>https://www.empireonline.com/movies/news/denis-villeneuve-movies-including-dune-part-one-and-two-in-imax-set-for-uk-cinema-re-release/</link></item>
-<item><title>Dune: Part Three’s Final Trailer Teases An Almighty Showdown For Paul Atreides And Chani - Empire</title><link>https://www.empireonline.com/movies/news/dune-part-three-final-trailer-showdown-paul-chani/</link></item>
-<item><title>Godzilla Minus Zero Director Takashi Yamazaki’s Grandgear Casts Paul Giamatti, Nico Parker, Sam Nivola - Empire</title><link>https://www.empireonline.com/movies/news/godzilla-minus-zero-director-takashi-yamazakis-grandgear-casts-paul-giamatti-nico-parker-sam-nivola/</link></item>
-<item><title>Keanu Reeves To Star In Jaume Collet-Serra Action Movie Maelstrom As Alan Ritchson Exits - Empire</title><link>https://www.empireonline.com/movies/news/keanu-reeves-to-star-in-jaume-collet-serra-action-movie-maelstrom-as-alan-ritchson-exits/</link></item>
-<item><title>Possible Love - Empire</title><link>https://www.empireonline.com/movies/reviews/possible-love/</link></item>
-<item><title>Call Of Duty: Modern Warfare 4 - Empire</title><link>https://www.empireonline.com/gaming/reviews/call-of-duty-modern-warfare-4/</link></item>
-<item><title>16 Spooky Season Movies To Watch With All The Family This Halloween - Empire</title><link>https://www.empireonline.com/movies/features/best-spooky-not-scary-movies-halloween/</link></item>
-<item><title>Eric Bauza, Iconic Bugs Bunny And Daffy Duck Looney Tunes Voice Actor, Dies Aged 46 - Empire</title><link>https://www.empireonline.com/movies/news/eric-bauza-iconic-bugs-bunny-and-daffy-duck-looney-tunes-voice-actor-dies-aged-46/</link></item>
-<item><title>Sandra Hüller Joins Avengers: Doomsday In Mystery Cameo Role - Empire</title><link>https://www.empireonline.com/movies/news/sandra-huller-joins-avengers-doomsday-in-mystery-cameo-role/</link></item>
-<item><title>New Alien Movie In The Works From Raised By Wolves Writer Aaron Guzikowski - Empire</title><link>https://www.empireonline.com/movies/news/new-alien-movie-in-the-works-from-raised-by-wolves-writer-aaron-guzikowski/</link></item>
-<item><title>The Empire Film Podcast Ft. Ghosts Stars Simon Farnaby, Mathew Baynton And Kiell Smith-Bynoe - Empire</title><link>https://www.empireonline.com/movies/news/the-empire-film-podcast-ft-ghosts-stars-simon-farnaby-mathew-baynton-and-kiell-smith-bynoe/</link></item>
-<item><title>Marvel’s Zodiac Series Sets Amit Cohen And Ron Leshem To Write As New Plot Details Emerge - Empire</title><link>https://www.empireonline.com/tv/news/marvels-zodiac-series-sets-amit-cohen-and-ron-leshem-to-write-as-new-plot-details-emerge/</link></item>
-<item><title>Carrie Season 2 Confirmed At Prime Video – Set To Go ‘Beyond The Prom’ - Empire</title><link>https://www.empireonline.com/tv/news/carrie-season-2-confirmed-prime-video/</link></item>
-<item><title>James Bond Casting Nears As Screen Tests Set To Take Place Next Week — Jack Lowden Among Hopefuls - Empire</title><link>https://www.empireonline.com/movies/news/james-bond-casting-nears-as-screen-tests-set-to-take-place-next-week-jack-lowden-among-hopefuls/</link></item>
-<item><title>Godzilla Minus Zero Is Influenced By Aliens And Terminator 2: ‘I Have To Credit James Cameron’ - Empire</title><link>https://www.empireonline.com/movies/news/godzilla-minus-zero-influenced-by-aliens-and-terminator-2-exclusive/</link></item>
-<item><title>Ali G: Who Iz I? - Empire</title><link>https://www.empireonline.com/movies/reviews/ali-g-who-iz-i/</link></item>
-<item><title>Rare Hilma af Klint Work Heads to Auction - Hyperallergic</title><link>https://hyperallergic.com/rare-hilma-af-klint-work-heads-to-auction/</link></item>
-<item><title>How Should We Memorialize the Trump Era? - Hyperallergic</title><link>https://hyperallergic.com/how-should-we-memorialize-the-trump-era/</link></item>
-<item><title>Shahzia Sikander Confronts British Colonial Legacy in High Line Video Work - Hyperallergic</title><link>https://hyperallergic.com/shahzia-sikander-confronts-british-colonial-legacy-in-high-line-video-work/</link></item>
-<item><title>Olivia Reavey&amp;#39;s Impromptu Sensuality - Hyperallergic</title><link>https://hyperallergic.com/olivia-reaveys-impromptu-sensuality/</link></item>
-<item><title>Meet Natalie White, Photography’s Giant Polaroid Whisperer - Hyperallergic</title><link>https://hyperallergic.com/meet-natalie-white-photographys-giant-polaroid-whisperer/</link></item>
-<item><title>MFA, MA, and PhD Programs to Apply for by Early 2027 - Hyperallergic</title><link>https://hyperallergic.com/mfa-ma-and-phd-programs-to-apply-for-by-early-2027/</link></item>
-<item><title>The Met and the Shanghai Museum Sign Collaborative Agreement - Hyperallergic</title><link>https://hyperallergic.com/the-met-and-the-shanghai-museum-sign-collaborative-agreement/</link></item>
-<item><title>Beer With a Painter: Ouattara Watts - Hyperallergic</title><link>https://hyperallergic.com/beer-with-a-painter-ouattara-watts/</link></item>
-<item><title>RIP to the National Historic Preservation Act - Hyperallergic</title><link>https://hyperallergic.com/rip-to-the-national-historic-preservation-act/</link></item>
-<item><title>Who Gets Remembered in Art History? New Free Online Course Explores Women Who Shaped Indonesian Art - Hyperallergic</title><link>https://hyperallergic.com/who-gets-remembered-in-art-history-new-free-online-course-explores-women-who-shaped-indonesian-art/</link></item>
-<item><title>Latinx Art’s New Visionaries - Hyperallergic</title><link>https://hyperallergic.com/latinx-arts-new-visionaries/</link></item>
-<item><title>Why Is the Whitney Museum Selling a De Kooning Painting? - Hyperallergic</title><link>https://hyperallergic.com/why-is-the-whitney-museum-selling-a-de-kooning-painting/</link></item>
-<item><title>Talking Art and Data With Mona Chalabi - Hyperallergic</title><link>https://hyperallergic.com/talking-art-and-data-with-mona-chalabi/</link></item>
-<item><title>What Mary Lovelace O&amp;#39;Neal Left Behind - Hyperallergic</title><link>https://hyperallergic.com/what-mary-lovelace-oneal-left-behind/</link></item>
-<item><title>Latinx Artists Are the New Visionaries - Hyperallergic</title><link>https://hyperallergic.com/latinx-artists-are-the-new-visionaries/</link></item>
-<item><title>Python Bindings: Calling C or C++ From Python - Real Python</title><link>https://realpython.com/python-bindings-overview/</link></item>
-<item><title>Getting Started With Git - Real Python</title><link>https://realpython.com/courses/getting-started-with-git/</link></item>
-<item><title>Quiz: Understanding Python Namespace Packages - Real Python</title><link>https://realpython.com/quizzes/understanding-python-namespace-packages/</link></item>
-<item><title>How to Set Up a Python Project for Agentic Coding - Real Python</title><link>https://realpython.com/python-project-for-agentic-coding/</link></item>
-<item><title>Quiz: How to Set Up a Python Project for Agentic Coding - Real Python</title><link>https://realpython.com/quizzes/python-project-for-agentic-coding/</link></item>
-<item><title>Scientific Python: Using SciPy for Optimization - Real Python</title><link>https://realpython.com/python-scipy-cluster-optimize/</link></item>
-<item><title>How to Do a Binary Search in Python - Real Python</title><link>https://realpython.com/binary-search-python/</link></item>
-<item><title>Get Started With Meta Muse in Python: Spark and Glimmer - Real Python</title><link>https://realpython.com/meta-muse-python/</link></item>
-<item><title>Anthropic and Google Make Their Best AI Models Cheaper - Real Python</title><link>https://realpython.com/ai-news-weekly-2026-11-13/</link></item>
-<item><title>The Real Python Podcast – Episode #319: Mentoring Developers Beyond the Code With Tim Schilling - Real Python</title><link>https://realpython.com/podcasts/rpp/319/</link></item>
-<item><title>Quiz: Working With JSON in Python - Real Python</title><link>https://realpython.com/quizzes/working-json-data-python/</link></item>
-<item><title>Learn With Mentor AI: Working Through a Coding Exercise - Real Python</title><link>https://realpython.com/mentor-ai-coding-exercise/</link></item>
-<item><title>Quiz: Learn With Mentor AI: Working Through a Coding Exercise - Real Python</title><link>https://realpython.com/quizzes/mentor-ai-coding-exercise/</link></item>
-<item><title>Python HTTPX: Making HTTP Requests With HTTPX2 - Real Python</title><link>https://realpython.com/python-httpx/</link></item>
-<item><title>Quiz: Python HTTPX: Making HTTP Requests With HTTPX2 - Real Python</title><link>https://realpython.com/quizzes/python-httpx/</link></item>
-<item><title>Gemini 4 Carbon Draws a Python Reading a Book - Real Python</title><link>https://realpython.com/ai-benchmark-gemini-4-carbon/</link></item>
-<item><title>Claude Fable 5.2 Draws a Python Reading a Book - Real Python</title><link>https://realpython.com/ai-benchmark-claude-fable-5-2/</link></item>
-<item><title>Python Coding Interview Practice: Hashing, Pointers, and Windows - Real Python</title><link>https://realpython.com/courses/coding-interview-practice-hashing-two-pointers-sliding-windows/</link></item>
-<item><title>Python Coding Interview Practice: Prefix Sums and Binary Search - Real Python</title><link>https://realpython.com/courses/coding-interview-practice-prefix-sums-binary-search/</link></item>
-<item><title>Quiz: Python Coding Interview Practice: Hashing, Pointers, and Windows - Real Python</title><link>https://realpython.com/quizzes/coding-interview-practice-hashing-two-pointers-sliding-windows/</link></item>
-<item><title>Quiz: Getting Started With Git - Real Python</title><link>https://realpython.com/quizzes/getting-started-with-git/</link></item>
-<item><title>Quiz: Python Coding Interview Practice: Prefix Sums and Binary Search - Real Python</title><link>https://realpython.com/quizzes/coding-interview-practice-prefix-sums-binary-search/</link></item>
-<item><title>Quiz: TDD With AI Agents: Design the Tests First, Let the Agent Implement - Real Python</title><link>https://realpython.com/quizzes/tdd-ai-agents/</link></item>
-<item><title>The Real Python Podcast – Episode #318: Free-Threaded Python: Why Python Devs Should Know About the ABI - Real Python</title><link>https://realpython.com/podcasts/rpp/318/</link></item>
-<item><title>Converting Documents to Markdown With MarkItDown - Real Python</title><link>https://realpython.com/courses/converting-documents-markdown-markitdown/</link></item>
-<item><title>Flight traffic during the ground stop - FlowingData</title><link>https://flowingdata.com/2026/11/17/flight-traffic-during-the-ground-stop/</link></item>
-<item><title>Poll margins versus reality - FlowingData</title><link>https://flowingdata.com/2026/11/17/poll-margins-versus-reality/</link></item>
-<item><title>Film made in Excel - FlowingData</title><link>https://flowingdata.com/2026/11/16/film-made-in-excel/</link></item>
-<item><title>Catwalks and crackdowns - Aeon</title><link>https://aeon.co/essays/its-not-political-the-young-fashionistas-of-tehran</link></item>
-<item><title>The last klavern - Aeon</title><link>https://aeon.co/videos/how-a-texas-community-chose-to-transform-a-former-klan-headquarters</link></item>
-<item><title>The horse made the state - Aeon</title><link>https://aeon.co/essays/the-origins-of-the-state-are-not-agrarian-but-pastoralist</link></item>
-<item><title>Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/ian-buck-sc26/</link></item>
-<item><title>NVIDIA DGX Spark Developer Kit Turns a Desk Into a Supercomputing Lab - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26/</link></item>
-<item><title>How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/ai-infrastructure-supply-chain/</link></item>
-<item><title>Lambda Boosts AI Factory Resiliency and Efficiency With NVIDIA Photonics - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/lambda-photonics/</link></item>
-<item><title>NVIDIA Expands Slurm to Bring Quantum Computing Into Supercomputing - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/slurm-quantum-computing-supercomputing/</link></item>
-<item><title>NVIDIA Sweeps MLPerf Training and Endpoints as Vera Rubin Debuts With Leading Performance - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/mlperf-training-endpoints-vera-rubin/</link></item>
-<item><title>NVIDIA CUDA-X Libraries Give Agents the Tools to Accelerate Scientific Discovery - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/cuda-x-libraries-agents-accelerate-scientific-discovery/</link></item>
-<item><title>CUDA at 20: How the Platform Transformed Scientific Computing - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/20-years-cuda/</link></item>
-<item><title>NVIDIA Announces Rubin HPC — A New GPU to Accelerate Agents for Science, Engineering and Analytics - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/rubin-hpc/</link></item>
-<item><title>AI Day Seoul Brings Together Korea’s Industry Leaders, Startups and Developer Communities - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/ai-day-seoul-wrapup/</link></item>
-<item><title>AI Is Helping Care Teams Get Patients the Right Care, Sooner - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/how-ai-is-helping-care-teams/</link></item>
-<item><title>A New Dawn in the Cloud: ‘Warhammer 40,000: Dawn of War IV’ Is Coming to GeForce NOW - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/geforce-now-thursday-warhammer-dawn-of-war-iv-coming/</link></item>
-<item><title>AI Helps Recyclers Turn Mixed Waste Into Reusable Material - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/ai-recycling-startups/</link></item>
-<item><title>NVIDIA Expands Open Source Commitment With OpenShell Contribution and New AI Infrastructure - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/open-source-openshell-infrastructure/</link></item>
-<item><title>Practice Makes Precise: At CoRL, NVIDIA and Partners Reveal How Robots Rehearse Delicate Work in Simulation - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/robotics-simulation-advancements-corl/</link></item>
-<item><title>NVIDIA Announces New Planned Investments in Korean Startups at the MSIT-NVIDIA AI Startup Partnership Forum - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/korean-startup-investments-msit/</link></item>
-<item><title>Korea Advances Physical AI Across Industries With NVIDIA - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/korea-physical-ai-ecosystem/</link></item>
-<item><title>Korea’s AI Ecosystem Advances and Secures Agentic AI With NVIDIA - NVIDIA Blog</title><link>https://blogs.nvidia.com/blog/korea-secure-agentic-ai/</link></item>
-<item><title>A Strange Quantum Theorem Has Killed Einstein’s Reality - Quanta Magazine</title><link>https://www.quantamagazine.org/a-strange-quantum-theorem-has-killed-einsteins-reality-20261106/</link></item>
-<item><title>The Christmas Countdown Begins - Country Living Magazine</title><link>https://www.countryliving.com/christmas-recipes/</link></item>
-<item><title>Elephants found to be increasingly isolated, leading to fractured social networksUNIVERSITY OF CALIFORNIA - SAN DIEGO - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1150948</link></item>
-<item><title>Personalized mobile health coaching significantly reduces diabetes risk in pregnant women and new mothersUCD RESEARCH &amp; INNOVATION - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1151304</link></item>
-<item><title>When the Saudi desert was green: a 125,000-year-old lakeside reveals how early humans livedKING ABDULLAH UNIVERSITY OF SCIENCE &amp; TECHNOLOGY (KAUST) - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1151234</link></item>
-<item><title>Waves that clear waste from the brain during sleep are impaired in older adultsMASSACHUSETTS INSTITUTE OF TECHNOLOGY - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1151756</link></item>
-<item><title>Turtles thrive in unique UAE wetlandUNIVERSITY OF EXETER - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1151273</link></item>
-<item><title>US facing extreme power transmission crisis, experts warn in ScienceCOLLEGE OF ENGINEERING, CARNEGIE MELLON UNIVERSITY - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1151552</link></item>
-<item><title>Cell changes around early breast cancers provide clues into why some cases become invasiveUNIVERSITY OF TEXAS M. D. ANDERSON CANCER CENTER - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1151351</link></item>
-<item><title>Pilot study tests cell therapy for difficult-to-heal diabetic foot ulcersWAKE FOREST UNIVERSITY SCHOOL OF MEDICINE - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1151558</link></item>
-<item><title>Cryosphere decline beyond safe planetary limits, putting conditions for human society at riskSTOCKHOLM RESILIENCE CENTRE - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1150844</link></item>
-<item><title>Riders with disabilities face roadblocks when finding public transportationUNIVERSITY OF MICHIGAN - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1151720</link></item>
-<item><title>New study shows ocean taking up growing share of carbon emissions while land absorption has stalledUNIVERSITY OF CALIFORNIA - SAN DIEGO - EurekAlert</title><link>https://www.eurekalert.org/news-releases/1151751</link></item>
-<item><title>Noteriv: A Free, Open Source Markdown Notes App with Obsidian Vault Support - OSTechNix</title><link>https://ostechnix.com/noteriv-markdown-notes-app/</link></item>
-<item><title>Linux Kernel 7.4 RC3 Released: Small Patches and iomap Cleanup - OSTechNix</title><link>https://ostechnix.com/linux-kernel-7-4-rc3-released/</link></item>
-<item><title>Rust 1.100.0 Released: New Features and Cargo Improvements - OSTechNix</title><link>https://ostechnix.com/rust-1-100-0-new-features/</link></item>
-<item><title>FlameWM: A Lightweight, Modern Linux Desktop Built with Rust - OSTechNix</title><link>https://ostechnix.com/flamewm-rust-linux-desktop-environment/</link></item>
-<item><title>Technical SEO Audit with Curl and Bash: Linux Guide (2026) - OSTechNix</title><link>https://ostechnix.com/technical-seo-audit-linux/</link></item>
-<item><title>Things to Do After Installing Fedora 45: Complete Guide (2026) - OSTechNix</title><link>https://ostechnix.com/things-to-do-after-installing-fedora/</link></item>
-<item><title>Linux Kernel 7.4 RC2 Released: AI Bug Fixes Outpace Reports in BPF - OSTechNix</title><link>https://ostechnix.com/linux-kernel-7-4-rc2-released/</link></item>
-<item><title>美国超大规模数据中心的用电量与部分州的总用电量相当 - Solidot</title><link>https://www.solidot.org/story?sid=85907</link></item>
-<item><title>Windows 收集用户计算机安装的编程智能体和开发工具 - Solidot</title><link>https://www.solidot.org/story?sid=85908</link></item>
-<item><title>Canonical 向订阅用户提供可选的 AI 生成安全补丁 - Solidot</title><link>https://www.solidot.org/story?sid=85909</link></item>
-<item><title>FBI 警告黑客利用 Artex 能在三小时内入侵网络 - Solidot</title><link>https://www.solidot.org/story?sid=85910</link></item>
-<item><title>富岳运行系统遭非法访问 - Solidot</title><link>https://www.solidot.org/story?sid=85911</link></item>
-<item><title>卡内基梅隆免费公开计算机科学课程 - Solidot</title><link>https://www.solidot.org/story?sid=85912</link></item>
-<item><title>灵晟继续登顶 Top500 榜单 - Solidot</title><link>https://www.solidot.org/story?sid=85913</link></item>
-<item><title>加州理工数学教授不再根据作业打分，因为作业很容易用 AI 完成 - Solidot</title><link>https://www.solidot.org/story?sid=85914</link></item>
-<item><title>学校禁止手机有助于提高学生成绩 - Solidot</title><link>https://www.solidot.org/story?sid=85915</link></item>
-<item><title>PattonPending - Slashdot</title><link>https://slashdot.org/~PattonPending</link></item>
-<item><title>has been mixed - Slashdot</title><link>https://mobile.slashdot.org/story/25/02/05/205231/mobile-ban-in-schools-not-improving-grades-or-behavior-study-suggests</link></item>
-<item><title>a disruption - Slashdot</title><link>https://m.slashdot.org/story/458902</link></item>
-<item><title>Robert Pattinson Named As New 007 - Slashdot</title><link>https://entertainment.slashdot.org/story/26/11/16/173246/robert-pattinson-named-as-new-007?sbsrc=md</link></item>
-<item><title>FAA Router In Middle-of-nowhere Arkansas Identified as Cause of Nationwide Flight Chaos - Slashdot</title><link>https://tech.slashdot.org/story/26/11/16/0059214/faa-router-in-middle-of-nowhere-arkansas-identified-as-cause-of-nationwide-flight-chaos?sbsrc=md</link></item>
-<item><title>AI-Generated Books Confront Publishing Industry With Big Questions - Slashdot</title><link>https://news.slashdot.org/story/26/11/16/0342245/ai-generated-books-confront-publishing-industry-with-big-questions?sbsrc=md</link></item>
-<item><title>Corporations Are Using Trump&amp;#39;s Tariff Refunds On Bonuses Rather Than Reimbursing - Slashdot</title><link>https://news.slashdot.org/story/26/11/16/1745238/corporations-are-using-trumps-tariff-refunds-on-bonuses-rather-than-reimbursing?sbsrc=md</link></item>
-<item><title>&amp;quot;OPTIMJACK&amp;quot; compromise causes major websites to briefly serve malware - Slashdot</title><link>https://slashdot.org/submission/17352372/optimjack-compromise-causes-major-websites-to-briefly-serve-malware</link></item>
-<item><title>NSA&amp;#39;s highly classified US national security communications network goes down - Slashdot</title><link>https://slashdot.org/submission/17352368/nsas-highly-classified-us-national-security-communications-network-goes-down</link></item>
-<item><title>NSA Classified Network Goes Down - Slashdot</title><link>https://slashdot.org/submission/17352366/nsa-classified-network-goes-down</link></item>
-<item><title>Google Gemini Privacy Invasion - Slashdot</title><link>https://slashdot.org/submission/17352346/google-gemini-privacy-invasion</link></item>
-<item><title>grown more accurate - FlowingData</title><link>https://flowingdata.com/2024/07/08/accuracy-of-temperature-forecasts-where-you-live/</link></item>
-<item><title>Maria Tomazou - FlowingData</title><link>https://flowingdata.com/tag/maria-tomazou/</link></item>
-<item><title>Even the ocean floor is covered with LEGO - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/11/17/even-the-ocean-floor-is-covered-with-lego/</link></item>
-<item><title>LEGO Star Wars 75470 Mustafar Duel: high ground, low (ish) price [Review] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/11/16/lego-star-wars-75470-mustafar-duel-lego-high-ground-with-a-price-to-match-review/</link></item>
-<item><title>2027 range of sets - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/11/12/lego-unveils-new-star-wars-2027-sets-celebrating-50-years-of-a-galaxy-far-far-away-news/</link></item>
-<item><title>50th Anniversary - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/50th-anniversary/</link></item>
-<item><title>It takes a village to build a Star Wars one out of LEGO - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/11/15/it-takes-a-village-to-build-a-star-wars-one-out-of-lego/</link></item>
-<item><title>Atzen Collab - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/atzen-collab/</link></item>
-<item><title>Bricking Bavaria - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/bricking-bavaria/</link></item>
-<item><title>One last hurrah for Día de los Muertos - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/11/14/one-last-hurrah-for-dia-de-los-muertos/</link></item>
-<item><title>Day of the Dead - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/day-of-the-dead/</link></item>
-<item><title>Dia de los Muertas - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/dia-de-los-muertas/</link></item>
-<item><title>Jean-Philippe Leroux - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/jean-philippe-leroux/</link></item>
-<item><title>No right angles is the right way to go for LEGO spaceships - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/11/13/no-right-angles-is-the-right-way-to-go-for-lego-spaceships/</link></item>
-<item><title>A Nordic home you can a-fjord - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/11/10/a-nordic-home-you-can-a-fjord/</link></item>
-<item><title>Pepijn Kuyvenhoven - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/pepijn-kuyvenhoven/</link></item>
-<item><title>Rounding up a year of The Legend of Zelda builds in preparation for Ocarina of Time - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/11/04/rounding-up-a-year-of-the-legend-of-zelda-builds-in-preparation-for-ocarina-of-time/</link></item>
-<item><title>It’s a secret to everybody – more inside! - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/11/04/rounding-up-a-year-of-the-legend-of-zelda-builds-in-preparation-for-ocarina-of-time/#more-518819</link></item>
-<item><title>gipsy_danger25 - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/gipsy_danger25/</link></item>
-<item><title>Matticus Bricks - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/matticus-bricks/</link></item>
-<item><title>Mounir Khoury - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/mounir-khoury/</link></item>
-<item><title>Wilderland Builds - The Brothers Brick</title><link>https://www.brothers-brick.com/tag/wilderland-builds/</link></item>
-<item><title>LEGO Ideas 21375 Godzilla: Size does matter [Review] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/11/04/lego-ideas-21375-godzilla-size-does-matter-review/</link></item>
-<item><title>The return of the King (of the Lizards): LEGO reveals 5,000-piece Godzilla set [News] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/11/03/the-return-of-the-king-of-the-lizards-lego-reveals-5000-piece-godzilla-set-news/</link></item>
-<item><title>More Godzilla goodness this way! - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/11/03/the-return-of-the-king-of-the-lizards-lego-reveals-5000-piece-godzilla-set-news/#more-518784</link></item>
-<item><title>This lean, mean, green LEGO machine will have you looking twice - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/11/02/this-lean-mean-green-lego-machine-will-have-you-looking-twice/</link></item>
-<item><title>LEGO Icons 11388 Venetian Neighbourhood &amp; 40898 Venetian Water Taxi GWP [Review] - The Brothers Brick</title><link>https://www.brothers-brick.com/2026/11/01/lego-icons-11388-venetian-neighbourhood-40898-venetian-water-taxi-gwp-review/</link></item>
-<item><title>Python Multiple Inheritance: Use MRO and super() - AskPython</title><link>https://www.askpython.com/python/oops/python-multiple-inheritance</link></item>
-<item><title>Python Logical Operators: How to Use and, or, not - AskPython</title><link>https://www.askpython.com/python/python-logical-operators</link></item>
-<item><title>Class Constructor Python: How __init__() Works - AskPython</title><link>https://www.askpython.com/python/oops/python-class-constructor-init-function</link></item>
-<item><title>What Is a Python Static Method? How to Use It - AskPython</title><link>https://www.askpython.com/python/python-static-method</link></item>
-<item><title>Python Read Command Line Arguments With argparse - AskPython</title><link>https://www.askpython.com/python/python-command-line-arguments</link></item>
-<item><title>isalpha in Python: String Letter Check - AskPython</title><link>https://www.askpython.com/python/string/python-string-isalpha-function</link></item>
-<item><title>Python Stack: How to Use Lists and Deques - AskPython</title><link>https://www.askpython.com/python/python-stack</link></item>
-<item><title>Python Logging Module: How to Log to Console and File - AskPython</title><link>https://www.askpython.com/python-modules/python-logging-module</link></item>
-<item><title>Python String isalnum() Function - AskPython</title><link>https://www.askpython.com/python/string/python-string-isalnum-function</link></item>
-<item><title>Python Breakpoint: How to Use It in pdb - AskPython</title><link>https://www.askpython.com/python/built-in-methods/python-breakpoint-function</link></item>
-<item><title>Hanwha transforms ship into floating multi-rocket launcher - Defense News</title><link>https://www.defensenews.com/industry/techwatch/2026/11/17/hanwha-transforms-ship-into-floating-multi-rocket-launcher/</link></item>
-<item><title>Watch a large aerial drone evacuate a wounded Ukrainian soldier from the front line - Defense News</title><link>https://www.defensenews.com/video/2026/11/17/watch-a-large-aerial-drone-evacuate-a-wounded-ukrainian-soldier-from-the-front-line/</link></item>
-<item><title>LaNeve formally nominated for Army chief of staff role - Defense News</title><link>https://www.defensenews.com/news/pentagon-congress/2026/11/17/laneve-formally-nominated-for-army-chief-of-staff-role/</link></item>
-<item><title>Finland’s Iceye bids €2 billion for Italian rocket maker Avio - Defense News</title><link>https://www.defensenews.com/global/europe/2026/11/17/finlands-iceye-bids-e2-billion-for-italian-rocket-maker-avio/</link></item>
-<item><title>Lithuanian president says US troop rotations will continue beyond latest deployment - Defense News</title><link>https://www.defensenews.com/global/europe/2026/11/17/lithuanian-president-says-us-troop-rotations-will-continue-beyond-latest-deployment/</link></item>
-<item><title>Trump seeks nuclear cuts at summit with Putin and Xi, but prospects are low - Defense News</title><link>https://www.defensenews.com/global/the-americas/2026/11/17/trump-seeks-nuclear-cuts-at-summit-with-putin-and-xi-but-prospects-are-low/</link></item>
-<item><title>Pentagon fails ninth straight audit despite progress in organizing finances - Defense News</title><link>https://www.defensenews.com/pentagon/2026/11/17/pentagon-fails-ninth-straight-audit-despite-progress-in-organizing-finances/</link></item>
-<item><title>New pact positions the Philippines as a defense hub for Australian troops - Defense News</title><link>https://www.defensenews.com/global/asia-pacific/2026/11/17/new-pact-positions-the-philippines-as-a-defense-hub-for-australian-troops/</link></item>
-<item><title>French troops operating in non-combat roles in Ukraine, broadcaster RFI reports - Defense News</title><link>https://www.defensenews.com/global/europe/2026/11/17/french-troops-operating-in-non-combat-roles-in-ukraine-broadcaster-rfi-reports/</link></item>
-<item><title>First permanently assigned F-15EXs touch down at Kadena Air Base - Defense News</title><link>https://www.defensenews.com/air/2026/11/16/first-permanently-assigned-f-15exs-touch-down-at-kadena-air-base/</link></item>
-<item><title>DISH Wants $21m From Pirate IPTV Operators Who Ignored Its Lawsuit - TorrentFreak</title><link>https://torrentfreak.com/dish-wants-21m-from-pirate-iptv-operators-who-ignored-its-lawsuit/</link></item>
-<item><title>Alleged Operator of Pirate Site Movie2K Could Walk Free as Bitcoin Billionaire - TorrentFreak</title><link>https://torrentfreak.com/alleged-operator-of-pirate-site-movie2k-could-walk-free-as-bitcoin-billionaire/</link></item>
-<item><title>Ghost Collection Blends Pixelated Wood With Mirror-Polished Aluminum - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/interior-design/ghost-collection-blends-pixelated-wood-with-mirror-polished-aluminum/</link></item>
-<item><title>Lamborghini Fulgor Is a Wild Yellow Concept Covered in Glowing LEDs - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/lamborghini-fulgor-is-a-wild-yellow-concept-covered-in-glowing-leds/</link></item>
-<item><title>MB&amp;F LM101 Gabriel Colliard Turns Watchmaking Into Miniature Enamel Art - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/mbf-lm101-gabriel-colliard-turns-watchmaking-into-miniature-enamel-art/</link></item>
-<item><title>Bandit9 (RED)800 Turns a Ducati-Powered Motorcycle Into Rolling Sculpture - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/bandit9-red800-turns-a-ducati-powered-motorcycle-into-rolling-sculpture/</link></item>
-<item><title>Turner Reinvents Chess With a Rotating Magnetic Cylinder - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/industrial-design/turner-reinvents-chess-with-a-rotating-magnetic-cylinder/</link></item>
-<item><title>Alfa Romeo Cuorerosso Reimagines Italian Design - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/alfa-romeo-cuorerosso-reimagines-italian-design/</link></item>
-<item><title>This Porcelain Pioneer DJ Setup Turns Club Equipment Into Korean Folk Art - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/industrial-design/this-porcelain-pioneer-dj-setup-turns-club-equipment-into-korean-folk-art/</link></item>
-<item><title>Aston Martin AMB 001 Is a Turbocharged Superbike With Hypercar DNA - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/automotive-design/aston-martin-amb-001-is-a-turbocharged-superbike-with-hypercar-dna/</link></item>
-<item><title>Lamborghini Miura Fountain Pen Turns an Iconic Pop-Up Headlight Into a Working Mechanism - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/industrial-design/lamborghini-miura-fountain-pen/</link></item>
-<item><title>Seiko Turns the Classic Panda Chronograph Into an Actual Panda - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/fashion-design/seiko-turns-the-classic-panda-chronograph-into-an-actual-panda/</link></item>
-<item><title>Lavvu Modular Homes Put Panoramic Views at the Center of Compact Living - Beautiful Life Design Blog</title><link>https://www.beautifullife.info/urban-design/lavvu-modular-homes-put-panoramic-views-at-the-center-of-compact-living/</link></item>
-<item><title>An 800-hp hypercar that handles like a motorcycle ... sorry, what? - New Atlas</title><link>https://newatlas.com/automotive/sanrivatti-one-hypercar-motorcycle-apex-seating-position-concept/</link></item>
-<item><title>Battery-only 19-seater puts China in the electric airliner race - New Atlas</title><link>https://newatlas.com/aircraft/comac-ce-25a-electric-airliner-first-crewed-flight/</link></item>
-<item><title>20-ft-long tiny house takes back-to-basics approach to downsizing - New Atlas</title><link>https://newatlas.com/tiny-houses/aria-20-update-dragon-tiny-homes/</link></item>
-<item><title>The world&amp;#39;s most striking black and white photos of 2026 - New Atlas</title><link>https://newatlas.com/photography/black-white-photos-2026/</link></item>
-<item><title>Bunkhouse camping cube claims place among tiniest of tiny homes - New Atlas</title><link>https://newatlas.com/tiny-houses/venturexplorer-bunkr-camping-cube/</link></item>
-<item><title>$1-million bike? Rare 160-hp racebike can&amp;#39;t find a single buyer - New Atlas</title><link>https://newatlas.com/motorcycles/rare-yamaha-ow31-auction/</link></item>
-<item><title>Saloon Desk straddles your sofa and swings open like a Wild West bar - New Atlas</title><link>https://newatlas.com/lifestyle/saloon-desk-sofa-workstation/</link></item>
-<item><title>3-oz multitool delivers vise-like grip and loads of twist - New Atlas</title><link>https://newatlas.com/knives-multitools/compact-titanium-pliers-wrench-edc-aura-gripx/</link></item>
-<item><title>US data centers are burning through as much electricity as entire states - New Atlas</title><link>https://newatlas.com/technology/data-centers-using-electricity-entire-states/</link></item>
-<item><title>RESO Pilot Pro Intercom review: Riding with the new kid on the block - New Atlas</title><link>https://newatlas.com/motorcycles/reso-pilot-pro-intercom-review/</link></item>
-<item><title>Low-effort diet boosts lifespan, weight loss and disease protection - New Atlas</title><link>https://newatlas.com/diet-nutrition/fasting-benefits-without-effort-fmd/</link></item>
-<item><title>Korean magnetic textile cools train tracks to thwart disaster - New Atlas</title><link>https://newatlas.com/transport/rail-textile-heat-shield/</link></item>
-<item><title>Eco-friendly ‘plastic’ survives dishwashers but breaks down in nature - New Atlas</title><link>https://newatlas.com/materials/eco-friendly-plastic-vivomer-shellworks/</link></item>
-<item><title>Apollo CAST-1 review: Giving old speakers a new lease on life - New Atlas</title><link>https://newatlas.com/home-entertainment/apollo-cast-1-review-giving-old-speakers-a-new-lease-on-life/</link></item>
-<item><title>&amp;#39;Zero-emission&amp;#39; aluminum production switches up the chemical equation - New Atlas</title><link>https://newatlas.com/materials/zero-emission-aluminum-production/</link></item>
-<item><title>Two new Fender guitars honor George Harrison and... The other Sir Paul - New Atlas</title><link>https://newatlas.com/music/fender-sir-paul-tele-george-harrison-dark-horse-strat/</link></item>
-<item><title>XL tiny house puts a modern twist on farmhouse living - New Atlas</title><link>https://newatlas.com/tiny-houses/modern-farmhouse-sweet-haus/</link></item>
-<item><title>Historic launch sees 4 strike drones catapulted off British supercarrier - New Atlas</title><link>https://newatlas.com/military/strike-drones-historic-launch-british-aircraft-carrier/</link></item>
-<item><title>Kestrel-inspired flying robot rides updrafts using wing flaps - New Atlas</title><link>https://newatlas.com/drones/floaty-flying-robot-updrafts/</link></item>
-<item><title>Yamaha urges you to ditch the ADV bike and take an ADV scooter instead - New Atlas</title><link>https://newatlas.com/motorcycles/yamaha-rw700-rw350/</link></item>
-<item><title>5 charming scooters that give Vespa vibes without Vespa prices - New Atlas</title><link>https://newatlas.com/motorcycles/vespa-lookalikes/</link></item>
-<item><title>Electric work van gains 174 miles of range while you finish your lunch - New Atlas</title><link>https://newatlas.com/automotive/renault-trafic-etech-2027-800v-work-van/</link></item>
-<item><title>US air traffic control finally bids farewell to the floppy disk era - New Atlas</title><link>https://newatlas.com/aircraft/us-air-traffic-control-system-farewell-floppy-disk/</link></item>
-<item><title>Hybrid cargo plane uses electric power to leap off water - New Atlas</title><link>https://newatlas.com/aircraft/maxwell-m1-hybrid-amphibious-cargo-seaplane-electric-boost/</link></item>
-<item><title>Extra-wide tiny house provides a modern take on mountain lodge living - New Atlas</title><link>https://newatlas.com/tiny-houses/kodiak-zook-cabins/</link></item>
-<item><title>Review: Fender&amp;#39;s new Silent Strats are an absolute no-brainer - New Atlas</title><link>https://newatlas.com/music/fender-silent-system-strat-review/</link></item>
-<item><title>Common glaucoma test can save eyesight before point of no return - New Atlas</title><link>https://newatlas.com/aging/common-glaucoma-test-prevent-blindness/</link></item>
-<item><title>Active winglets... On a 900cc naked bike? What is China smoking? - New Atlas</title><link>https://newatlas.com/motorcycles/benelli-tornado-tre-903-concept/</link></item>
-<item><title>10-person exo-beam air tent fends off 100-mph+ hurricane winds - New Atlas</title><link>https://newatlas.com/tents/heimplanet-112-mph-mavericks-tent/</link></item>
-<item><title>Vibrating TV screen puts people&amp;#39;s voices where their mouths are - New Atlas</title><link>https://newatlas.com/electronics/voice-coil-motor-tv/</link></item>
-<item><title>10,000-watt electric unicycle will test your resolve on and off road - New Atlas</title><link>https://newatlas.com/urban-transport/kingsong-10000w-f16-electric-uni/</link></item>
-<item><title>3D-printed frog swims using artificial muscles powered by light - New Atlas</title><link>https://newatlas.com/technology/3d-printed-frog-swims-powered-by-light/</link></item>
-<item><title>Hard-carving electric snow bike doubles up on motor and battery power - New Atlas</title><link>https://newatlas.com/outdoors/moonbike-electric-snow-bike-utility-version/</link></item>
-<item><title>Review: The world&amp;#39;s first Full HD tri-fold portable projector - New Atlas</title><link>https://newatlas.com/home-entertainment/review-aurzen-zip-pro-full-hd-tri-fold-projector/</link></item>
-<item><title>Affordable tiny house squeezes the basics into just 16 ft - New Atlas</title><link>https://newatlas.com/tiny-houses/16ft-unnamed-dual-loft-affordable-tiny-house-listings/</link></item>
-<item><title>BYD&amp;#39;s ultra-fast power stations robo-charge EVs in as few as 5 minutes - New Atlas</title><link>https://newatlas.com/automotive/byd-solar-robot-flash-charging-station-abu-dhabi/</link></item>
-<item><title>Stroke prevention advances with first-in-class drug approved by FDA - New Atlas</title><link>https://newatlas.com/stroke/stroke-prevention-approved-fda/</link></item>
-<item><title>Move over Santa, Australia&amp;#39;s Christmas icon has six legs - New Atlas</title><link>https://newatlas.com/biology/australia-2026-christmas-icon/</link></item>
-<item><title>Volkswagen mini-camper van is the most stylish tiny RV of its kind - New Atlas</title><link>https://newatlas.com/campervans/vw-cubert-caddy-mini-camper/</link></item>
-<item><title>Bubble-powered car is ready to take you on an underwater ride - New Atlas</title><link>https://newatlas.com/boats-watersports/aquaticar-bubble-powered-underwater-car/</link></item>
-<item><title>Jetson ONE personal eVTOL pod is about to go full sky patrol - New Atlas</title><link>https://newatlas.com/aircraft/florida-poly-police-jetson-one-evtol-faa/</link></item>
-<item><title>Compact smart telescope offers two views of the night sky - New Atlas</title><link>https://newatlas.com/consumer-tech/zwo-seestar-s30-plus-smart-telescope/</link></item>
-<item><title>Electric motorcycles are getting gearboxes - didn’t we get rid of those? - New Atlas</title><link>https://newatlas.com/motorcycles/emotiv-two-speed-transmission/</link></item>
-<item><title>World&amp;#39;s fastest passenger liner becomes world&amp;#39;s largest artificial reef - New Atlas</title><link>https://newatlas.com/marine/ss-united-states-passenger-liner-largest-artificial-reef/</link></item>
-<item><title>Bluetti&amp;#39;s expandable home battery tackles a problem I know all too well - New Atlas</title><link>https://newatlas.com/energy/bluettis-expandable-home-battery-tackles-a-problem-i-know-all-too-well/</link></item>
-<item><title>Man sees his cat’s eyes in the faces of his friends after brain surgery - New Atlas</title><link>https://newatlas.com/learning-memory/man-sees-cats-eyes-in-human-faces-after-brain-surgery/</link></item>
-<item><title>World&amp;#39;s fastest car: BYD&amp;#39;s 3,000-hp hypercar shatters 500-km/h barrier - New Atlas</title><link>https://newatlas.com/automotive/byd-yangwang-u9-xtreme-500-kmh-guinness-record/</link></item>
-<item><title>Space-saving tiny house sleeps six and packs a terrace up top - New Atlas</title><link>https://newatlas.com/tiny-houses/tow-coja-madeiguincho/</link></item>
-<item><title>330-hp rally raider set to invade America’s backwoods - New Atlas</title><link>https://newatlas.com/automotive/ktm-xbow-arrow/</link></item>
-<item><title>1,300-mile cargo drone aims to obsolete the helicopter - New Atlas</title><link>https://newatlas.com/aircraft/skyways-skyreach-autonomous-hybrid-vtol-cargo-drone/</link></item>
-<item><title>Cuboid camper doubles into proper tiny home &amp; front porch of the wild - New Atlas</title><link>https://newatlas.com/camping-trailers/beauer-x6-telescopic-camping-trailer/</link></item>
-<item><title>Electric comb could give thinning hair a chance to bounce back - New Atlas</title><link>https://newatlas.com/medical-devices/electric-comb-hair-bounce-back/</link></item>
-<item><title>Slicey 5-in-1 flashlight smashes together 1,800 lumens &amp; razor blade - New Atlas</title><link>https://newatlas.com/knives-multitools/nitecore-utl-19-flashlight-multitool/</link></item>
-<item><title>Solar-powered &amp;#39;flying horse&amp;#39; radically slashes cost of irrigation - New Atlas</title><link>https://newatlas.com/good-thinking/ponkhiraj-solar-powered-field-irrigation/</link></item>
-<item><title>Himalayan 750: Has Royal Enfield gotten it right? - New Atlas</title><link>https://newatlas.com/motorcycles/royal-enfield-himalayan-750/</link></item>
-<item><title>Tiny house fits two bedrooms and sleeps four in 297 sq ft - New Atlas</title><link>https://newatlas.com/tiny-houses/summers-night-dream-teacup/</link></item>
-<item><title>Review: $100 blackout sound mask has changed my sleep game overnight - New Atlas</title><link>https://newatlas.com/consumer-tech/review-sleenovas-soundmask/</link></item>
-<item><title>New Atlas: Now available in Dark Mode :) - New Atlas</title><link>https://newatlas.com/new-atlas-20/new-atlas-dark-mode/</link></item>
-<item><title>Airbus smashes world&amp;#39;s longest commercial flight record by 965 miles - New Atlas</title><link>https://newatlas.com/aircraft/qantas-airbus-a350-1000ulr-world-record-longest-commercial-flight/</link></item>
-<item><title>A robot just built a structure in space for the first time - New Atlas</title><link>https://newatlas.com/technology/robot-built-structure-space-first-time/</link></item>
-<item><title>An Erratic Sleep Schedule Could Be Stressing You Out - Everyday Health</title><link>https://www.everydayhealth.com/mental-health/erratic-sleep-schedule-may-be-bad-for-your-mental-health/</link></item>
-<item><title>All Men Should Get Screened for Prostate Cancer in Midlife, New Guidelines Say - Everyday Health</title><link>https://www.everydayhealth.com/cancer/men-should-get-screened-for-prostate-cancer-in-midlife/</link></item>
-<item><title>Ever Jolt Awake While Falling Asleep? It’s More Common Than You Think - Everyday Health</title><link>https://www.everydayhealth.com/sleep/ever-jolt-awake-while-falling-asleep/</link></item>
-<item><title>What’s the ‘Best’ Antidepressant? A New Study Suggests an Answer - Everyday Health</title><link>https://www.everydayhealth.com/mental-health-conditions/whats-the-best-antidepressant-new-study-suggests-an-answer/</link></item>
-<item><title>Losing Just an Hour of Sleep Could Make You More Vulnerable to Scams - Everyday Health</title><link>https://www.everydayhealth.com/sleep/losing-an-hour-of-sleep-could-make-you-more-vulnerable-to-scams/</link></item>
-<item><title>FDA Approves New Pill to Prevent Repeat Strokes - Everyday Health</title><link>https://www.everydayhealth.com/neurological-disorders/fda-approves-new-pill-to-prevent-repeat-strokes/</link></item>
-<item><title>FDA Requires GLP-1s to Carry Warning About Rare Risk of Vision Loss - Everyday Health</title><link>https://www.everydayhealth.com/obesity/fda-requires-glp-1s-to-carry-warning-about-rare-risk-of-vision-loss/</link></item>
-<item><title>Retatrutide ‘Significantly’ Eases Knee Pain in People With Obesity, Studies Show - Everyday Health</title><link>https://www.everydayhealth.com/orthopedic-conditions/retatrutide-eased-knee-pain-in-people-with-obesity/</link></item>
-<item><title>I’m a Food Editor, and These Are the 7 Kitchen Tools I Swear By for Thanksgiving - Everyday Health</title><link>https://www.everydayhealth.com/diet-nutrition/thanksgiving-kitchen-essentials/</link></item>
-<item><title>10 Collagen Face Masks That Left Our Skin Plumper and Softer - Everyday Health</title><link>https://www.everydayhealth.com/skin-hair-products/best-collagen-masks/</link></item>
-<item><title>Eye Creams Are For Everyone — and These Are the 11 We Recommed for Men - Everyday Health</title><link>https://www.everydayhealth.com/skin-care/eye-cream-for-men/</link></item>
-<item><title>Exfoliators 101 - Everyday Health</title><link>https://www.everydayhealth.com/skin-hair-products/how-to-exfoliate-skin/</link></item>
-<item><title>Marine Corps doubles, extends contract for M27 rifles - Defense News</title><link>https://defensenews.com/industry/2026/11/16/marine-corps-doubles-extends-contract-for-m27-rifles/</link></item>
-<item><title>Italy backs rapid German membership path into GCAP fighter program - Defense News</title><link>https://defensenews.com/global/europe/2026/11/16/italy-backs-rapid-german-membership-path-into-gcap-fighter-program/</link></item>
-<item><title>China has ‘normalized’ naval presence near Japan since political spat of 2025 - Defense News</title><link>https://defensenews.com/global/asia-pacific/2026/11/16/china-has-normalized-naval-presence-near-japan-since-political-spat-of-2025/</link></item>
-<item><title>Drone, meet bullet — companies develop new counter UAS capability | Business of Defense – Part 3 - Defense News</title><link>https://www.defensenews.com/video/2026/11/16/drone-meet-bullet-companies-develop-new-counter-uas-capability-business-of-defense-part-3/</link></item>
-<item><title>New tools for troops to gun down drones | Defense News Weekly Full Episode 11.17.26 - Defense News</title><link>https://www.defensenews.com/video/2026/11/16/new-tools-for-troops-to-gun-down-drones-defense-news-weekly-full-episode-11-17-26/</link></item>
-<item><title>‘Stop talking about it and start doing something about it’: Medal of Honor recipient on advocating for mental health - Defense News</title><link>https://www.defensenews.com/video/2026/11/16/stop-talking-about-it-and-start-doing-something-about-it-medal-of-honor-recipient-on-advocating-for-mental-health/</link></item>
-<item><title>How to Take Control After a Financial Crisis | Money Minute - Defense News</title><link>https://www.defensenews.com/video/2026/11/16/how-to-take-control-after-a-financial-crisis-money-minute/</link></item>
-<item><title>Defense companies on the moon | Defense Dollars - Defense News</title><link>https://www.defensenews.com/video/2026/11/16/defense-companies-on-the-moon-defense-dollars/</link></item>
-<item><title>Leilani Chavez - Defense News</title><link>https://www.defensenews.com/author/leilani-chavez/</link></item>
-<item><title>US Army takes ‘urgent’ action to build concrete bunkers across the Middle East - Defense News</title><link>https://www.defensenews.com/global/mideast-africa/2026/11/16/us-army-takes-urgent-action-to-build-concrete-bunkers-across-the-middle-east/</link></item>
-<item><title>LHB Linux Digest #26.18: F for follow, Self-hosted Analytics, SSH Vulnerability and More - Linux Handbook</title><link>https://linuxhandbook.com/newsletter/26-18/</link></item>
-<item><title>LHB Linux Digest #26.17: SSH Config, Docker Compose Override, Bash History Tricks and More - Linux Handbook</title><link>https://linuxhandbook.com/newsletter/26-17/</link></item>
-<item><title>LHB Linux Digest #26.16: Bash Arrays, mapfile, Self-hosted Linear Alternative and More - Linux Handbook</title><link>https://linuxhandbook.com/newsletter/26-16/</link></item>
+<lastBuildDate>Thu, 19 Nov 2026 09:19:05 +0800</lastBuildDate>
+<item><title>System Maintenance - OSTechNix</title><link>https://ostechnix.com/category/system-maintenance/</link></item>
+<item><title>Kudu: A Free, Open Source System Maintenance App for Linux, Mac, and Windows - OSTechNix</title><link>https://ostechnix.com/kudu-system-maintenance-app/</link></item>
+<item><title>How To Check If Your Linux System Supports AVX and AVX2 - OSTechNix</title><link>https://ostechnix.com/check-if-linux-system-supports-avx-and-avx2/</link></item>
+<item><title>Will AI Coding Eat Video Game Engines? - IEEE Spectrum</title><link>https://spectrum.ieee.org/epic-games-unreal-engine-ai</link></item>
+<item><title>AI Is Giving Optical Computing Another Shot - IEEE Spectrum</title><link>https://spectrum.ieee.org/optical-computing-ai</link></item>
+<item><title>Startup Makes Headway Towards Formalizing All of Math With AI - IEEE Spectrum</title><link>https://spectrum.ieee.org/enormous-theorem-ai</link></item>
+<item><title>Can Flashing Lights Slow Alzheimer’s? Only if You Start Early - IEEE Spectrum</title><link>https://spectrum.ieee.org/40-hz-therapy-alzheimers</link></item>
+<item><title>These Engineers Are Cleaning Up Connected Cars’ Security Flaws - IEEE Spectrum</title><link>https://spectrum.ieee.org/connected-cars-security</link></item>
+<item><title>AI Companies Develop Decision Models to Avoid Hallucinations - IEEE Spectrum</title><link>https://spectrum.ieee.org/typesafe-ai-hallucination-decision-models</link></item>
+<item><title>Why Skydio Built a Lopsided Drone - IEEE Spectrum</title><link>https://spectrum.ieee.org/skydio-f10-lightrunner-asymmetrical-drone</link></item>
+<item><title>Europe’s Digital Wallets May Be More Traceable Than Intended - IEEE Spectrum</title><link>https://spectrum.ieee.org/europe-digital-id-security-cryptography</link></item>
+<item><title>Video Friday: NASA PROMISEs a New Moon Rover - IEEE Spectrum</title><link>https://spectrum.ieee.org/video-friday-moon-rover-promise</link></item>
+<item><title>What Will It Take to Lay Fiber-Optic Cables Across the Arctic? - IEEE Spectrum</title><link>https://spectrum.ieee.org/undersea-cables-arctic-european-commission</link></item>
+<item><title>Xing Mobility Pitches Shipbuilders a Battery Proved Mostly on Land - IEEE Spectrum</title><link>https://spectrum.ieee.org/electric-ship-batteries</link></item>
+<item><title>When Does It Actually Make Sense to Put AI Into Products? - IEEE Spectrum</title><link>https://spectrum.ieee.org/human-centered-ai-product-design</link></item>
+<item><title>NSF’s X-Labs Program Draws Support From Charities and Investors - IEEE Spectrum</title><link>https://spectrum.ieee.org/national-science-foundation-x-labs</link></item>
+<item><title>How CERN Built the Large Hadron Collider’s Next-Gen Magnets - IEEE Spectrum</title><link>https://spectrum.ieee.org/large-hadron-collider-superconducting-magnets</link></item>
+<item><title>Ryan Adams Engaged to 22-Year-Old Kate Farr 6 Months After Meeting: ‘She’s My Best Friend’ - Billboard</title><link>https://www.billboard.com/music/music-news/ryan-adams-engaged-kate-farr-months-after-meeting-1236384966/</link></item>
+<item><title>‘They Can Take My Stage’: Macklemore Teases New Song Benefiting Palestinian Mothers &amp; Children - Billboard</title><link>https://www.billboard.com/music/music-news/macklemore-new-song-wheres-our-love-palestinian-moms-kids-1236384950/</link></item>
+<item><title>Grimes &amp; Elon Musk Feud Over AI ‘Sex Slave,’ Singer Urges Ex to ‘Step Up’ and Be ‘the King He Used to Be’ - Billboard</title><link>https://www.billboard.com/music/music-news/elon-musk-grimes-feud-ai-sex-slave-he-should-be-king-1236384843/</link></item>
+<item><title>Rihanna and Dua Lipa Scoop Up Armload of New Diamond &amp; Platinum Certifications for ‘Where Have You Been,’ ‘Levitating’ &amp; More - Billboard</title><link>https://www.billboard.com/music/music-news/rihanna-dua-lipa-new-diamond-platinum-certifications-levitating-1236384754/</link></item>
+<item><title>RAYE Adds Second Date at BST Hyde Park 2027 With Special Guest Sienna Spiro - Billboard</title><link>https://www.billboard.com/music/music-news/raye-bst-hyde-park-london-show-sienna-spiro-2027-1236371864/</link></item>
+<item><title>Harry Styles, Sam Fender &amp; Billie Eilish to Headline Glastonbury Festival 2027: See The Lineup - Billboard</title><link>https://www.billboard.com/music/music-news/glastonbury-2027-headliners-lineup-1236384106/</link></item>
+<item><title>Cynthia Erivo to Host Rockefeller Center Tree Lighting Starring Kelly Clarkson, Alanis Morissette &amp; More - Billboard</title><link>https://www.billboard.com/music/music-news/cynthia-erivo-host-rockefeller-tree-lighting-lineup-1236384415/</link></item>
+<item><title>Justice, Pretty Lights, Honey Dijon &amp; RL Grime Lead Lightning In a Bottle 2027 Lineup - Billboard</title><link>https://www.billboard.com/music/music-news/lightning-in-a-bottle-2027-lineup-justice-pretty-lights-1236384006/</link></item>
+<item><title>RM of BTS Made This Change to His Hair — Now He’s Trending on Social Media - Billboard</title><link>https://www.billboard.com/music/music-news/bts-rm-changes-hair-trending-x-1236384178/</link></item>
+<item><title>Ayumu Imazu Talks ‘musubi’ &amp; The Belief that Music ‘Brings People Together’: Billboard Japan Monthly Interview - Billboard</title><link>https://www.billboard.com/music/music-news/ayumu-imazu-musubi-billboard-japan-monthly-interview-1236384192/</link></item>
+<item><title>Scientists Uncover a Natural Molecule That Makes Muscles Stronger and More Resistant to Fatigue - SciTechDaily</title><link>https://scitechdaily.com/scientists-uncover-a-natural-molecule-that-makes-muscles-stronger-and-more-resistant-to-fatigue/</link></item>
+<item><title>This Dietary Supplement Could Have Potential Brain Benefits, Study Finds - SciTechDaily</title><link>https://scitechdaily.com/this-dietary-supplement-could-have-potential-brain-benefits-study-finds/</link></item>
+<item><title>Scientists Find That Mice, Not Deer, Hold a Major Clue to Lyme Disease Risk - SciTechDaily</title><link>https://scitechdaily.com/scientists-find-that-mice-not-deer-hold-a-major-clue-to-lyme-disease-risk/</link></item>
+<item><title>Stanford Scientists Discover 3 Hidden Brain Types in Children With ADHD and Anxiety - SciTechDaily</title><link>https://scitechdaily.com/stanford-scientists-discover-3-hidden-brain-types-in-children-with-adhd-and-anxiety/</link></item>
+<item><title>What Is a Thought Made Of? Scientists Reveal Why Human Consciousness May Be Beyond the Reach of AI - SciTechDaily</title><link>https://scitechdaily.com/what-is-a-thought-made-of-scientists-reveal-why-human-consciousness-may-be-beyond-the-reach-of-ai/</link></item>
+<item><title>Tiny Grains of Sand Could Reveal What the Weather Was Like on Mars Billions of Years Ago - SciTechDaily</title><link>https://scitechdaily.com/tiny-grains-of-sand-could-reveal-what-the-weather-was-like-on-mars-billions-of-years-ago/</link></item>
+<item><title>Scientists Discover 15,000-Year-Old Clay Figures That Rewrite the History of Human Art - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-15000-year-old-clay-figures-that-rewrite-the-history-of-human-art/</link></item>
+<item><title>Scientists Discover Mysterious Toxic Chemicals Floating in the Air Above America - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-mysterious-toxic-chemicals-floating-in-the-air-above-america/</link></item>
+<item><title>Scientists Discover a Hidden Magnetic Effect That Produces Signals 100 Times Stronger - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-a-hidden-magnetic-effect-that-produces-signals-100-times-stronger/</link></item>
+<item><title>“Wow!” Hera’s First Close-Up Reveals a Surprisingly Strange Asteroid Landscape - SciTechDaily</title><link>https://scitechdaily.com/wow-heras-first-close-up-reveals-a-surprisingly-strange-asteroid-landscape/</link></item>
+<item><title>Astronomers Discover a Chilling Preview of Our Solar System’s Future - SciTechDaily</title><link>https://scitechdaily.com/astronomers-discover-a-chilling-preview-of-our-solar-systems-future/</link></item>
+<item><title>For the First Time, Scientists Capture Molecular-Scale Images of the Poles of Bacteria - SciTechDaily</title><link>https://scitechdaily.com/for-the-first-time-scientists-capture-molecular-scale-images-of-the-poles-of-bacteria/</link></item>
+<item><title>A Simple Cable Reveals Hidden Cracks That Could Weaken Glaciers From Within - SciTechDaily</title><link>https://scitechdaily.com/a-simple-cable-reveals-hidden-cracks-that-could-weaken-glaciers-from-within/</link></item>
+<item><title>Scientists Discover Alarming Signs of Extinction Risk Deep Beneath the Ocean - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-alarming-signs-of-extinction-risk-deep-beneath-the-ocean/</link></item>
+<item><title>A Common Gut Antibody May Be the Key to Preventing Colon Cancer Before It Starts - SciTechDaily</title><link>https://scitechdaily.com/a-common-gut-antibody-may-be-the-key-to-preventing-colon-cancer-before-it-starts/</link></item>
+<item><title>A Five-Day Experiment Reveals a Surprising Secret of Deadly Brain Cancer - SciTechDaily</title><link>https://scitechdaily.com/a-five-day-experiment-reveals-a-surprising-secret-of-deadly-brain-cancer/</link></item>
+<item><title>Scientists Discover a Disturbing Link Between Cannabis Use and Earlier Psychosis - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-a-disturbing-link-between-cannabis-use-and-earlier-psychosis/</link></item>
+<item><title>Quantum Breakthrough: Scientists Develop a Detector That Can Count Over 9,000 Photons - SciTechDaily</title><link>https://scitechdaily.com/quantum-breakthrough-scientists-develop-a-detector-that-can-count-over-9000-photons/</link></item>
+<item><title>Scientists Discover a Bizarre Quantum State That Exists at Room Temperature - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-a-bizarre-quantum-state-that-exists-at-room-temperature/</link></item>
+<item><title>Scientists Discover Two Monster Black Holes at the Dawn of Time That Shouldn’t Exist - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-two-monster-black-holes-at-the-dawn-of-time-that-shouldnt-exist/</link></item>
+<item><title>Scientists Discover a Powerful New Way To Kill Prostate Cancer Cells - SciTechDaily</title><link>https://scitechdaily.com/scientists-discover-a-powerful-new-way-to-kill-prostate-cancer-cells/</link></item>
+<item><title>FDA Approves Breakthrough Treatment That Helps Children With Type 1 Diabetes Keep Producing Insulin - SciTechDaily</title><link>https://scitechdaily.com/fda-approves-breakthrough-treatment-that-helps-children-with-type-1-diabetes-keep-producing-insulin/</link></item>
+<item><title>Not All Physical Activity Protects Your Brain, Scientists Warn - SciTechDaily</title><link>https://scitechdaily.com/not-all-physical-activity-protects-your-brain-scientists-warn/</link></item>
+<item><title>Arctic Bacteria May Be Using Sunlight and CO2 in a Way Scientists Never Expected - SciTechDaily</title><link>https://scitechdaily.com/arctic-bacteria-may-be-using-sunlight-and-co2-in-a-way-scientists-never-expected/</link></item>
+<item><title>美国最近接连发生的技术故障源自为修复 AI 发现的漏洞 - Solidot</title><link>https://www.solidot.org/story?sid=85918</link></item>
+<item><title>文明系列游戏开发商裁员三分之一 - Solidot</title><link>https://www.solidot.org/story?sid=85919</link></item>
+<item><title>Optimizely 遭入侵 BBC CNN 等知名网站传播恶意程序 - Solidot</title><link>https://www.solidot.org/story?sid=85920</link></item>
+<item><title>Netflix 制作的《三体》第二季于 1 月 14 日上线 - Solidot</title><link>https://www.solidot.org/story?sid=85921</link></item>
+<item><title>Manus 成为 Godot 项目的白金赞助商 - Solidot</title><link>https://www.solidot.org/story?sid=85922</link></item>
+<item><title>新高危漏洞 Java4Shell 会导致远程代码执行 - Solidot</title><link>https://www.solidot.org/story?sid=85923</link></item>
+<item><title>陆游：最早探索猫内心世界的诗人 - Solidot</title><link>https://www.solidot.org/story?sid=85925</link></item>
+<item><title>特斯拉以 3 万美元向客户出售 Cybercab 然后每月收 299 美元 - Solidot</title><link>https://www.solidot.org/story?sid=85926</link></item>
+<item><title>剑桥词典的 2026 年度单词是“人” - Solidot</title><link>https://www.solidot.org/story?sid=85927</link></item>
+<item><title>英伟达董事会拒绝黄仁勋复职 - Solidot</title><link>https://www.solidot.org/story?sid=85917</link></item>
+<item><title>Google AI Overviews 导致搜索流量下降四成 - Solidot</title><link>https://www.solidot.org/story?sid=85916</link></item>
+<item><title>Botanical Oddities: How Plants Influence Human Emotions, Senses, and Experiences - Strange Sounds</title><link>https://strangesounds.org/2026/11/botanical-oddities-plants-human-emotions.html</link></item>
+<item><title>How to Sync Game Saves Across Linux, Windows, and Steam Deck - FOSS Linux</title><link>https://www.fosslinux.com/164252/sync-game-saves-linux-windows-steam-deck.htm</link></item>
+<item><title>Moving to Linux for Gaming: What Breaks, What Survives - FOSS Linux</title><link>https://www.fosslinux.com/164288/moving-from-windows-to-linux-gaming.htm</link></item>
+<item><title>AV Linux 25.3 Brings Xfce Back as the Default Desktop - FOSS Linux</title><link>https://www.fosslinux.com/164317/av-linux-25-3-xfce-default-desktop.htm</link></item>
+<item><title>Steam on Linux: Complete Setup and Settings - FOSS Linux</title><link>https://www.fosslinux.com/164265/steam-on-linux-setup-and-settings.htm</link></item>
+<item><title>MangoHud Setup Guide: FPS, Frame Time, and Logging on Linux - FOSS Linux</title><link>https://www.fosslinux.com/164264/mangohud-fps-frametime-gpu-monitoring.htm</link></item>
+<item><title>Needrestart Local Root Flaw Has No Fix Yet - FOSS Linux</title><link>https://www.fosslinux.com/164282/needrestart-cve-2026-124757-local-root.htm</link></item>
+<item><title>Linux 7.3.5 Leads a Three-Tree Stable Update Batch - FOSS Linux</title><link>https://www.fosslinux.com/164263/linux-7-3-5-three-tree-stable-update.htm</link></item>
+<item><title>LightDM Privilege Escalation: Debian Patches CVE-2026-129246 - FOSS Linux</title><link>https://www.fosslinux.com/164253/lightdm-privilege-escalation-cve-2026-129246.htm</link></item>
+<item><title>Old GPUs on Linux: What Actually Raises FPS - FOSS Linux</title><link>https://www.fosslinux.com/164182/old-gpu-linux-fps.htm</link></item>
+<item><title>Rust’s Parallel Frontend Is Now Default On Nightly - FOSS Linux</title><link>https://www.fosslinux.com/164234/rust-parallel-frontend-default-nightly.htm</link></item>
+<item><title>Pinoy Sexy Classics: Mga pelikulang nagpalaki sa&amp;#x27;yo 2026/性感回忆/Pinoy Sexy Classics 2026 1080p Tagalog HDRip AAC2.0 H264 - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803632.xml</link></item>
+<item><title>菲律宾性感经典 2/Pinoy Sexy Classics 2 2026 1080p Tagalog WEB-DL HEVC x265 BONE - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803631.xml</link></item>
+<item><title>Return To Paradise S03E03/重返天堂岛/Return.to.Paradise.S03E03.The.Final.Shot.1080p.iP.WEB-DL.AAC.H.264-SNAKE[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803630.xml</link></item>
+<item><title>Son Yemek 2026/最后一餐（暂译）/Son Yemek (2026) [720p] [WEBRip] [YTS.GG - YTS.BZ] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803629.xml</link></item>
+<item><title>Gentle Monster 2026/温柔的怪物/Gentle Monster (2026) [720p] [WEBRip] [YTS.GG - YTS.BZ] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803628.xml</link></item>
+<item><title>Premada Oorali 2026/爱之村/Premada Oorali (2026) 1080p Telugu HQ HDRip - HEVC - (DD+5.1 - 192Kbps &amp;amp; AAC 2.0) - 1.8GB - ESub - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803627.xml</link></item>
+<item><title>the Twin Who Lived 2026/幸存的双胞胎（暂译）/The Twin Who Lived (2026) [720p] [WEBRip] [YTS.GG - YTS.BZ] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803626.xml</link></item>
+<item><title>诉讼女王/Alls Fair S02E05 1080p DUAL DSNP WEB-DL x264 EAC3 5 1-MiRA - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803625.xml</link></item>
+<item><title>Strictly Come Dancing S24E15/舞动奇迹：双人共舞/Strictly.Come.Dancing.S24E15.1080p.WEB.H264-DARKFLiX - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803624.xml</link></item>
+<item><title>对手/Rivals S02E10 1080p DUAL DSNP WEB-DL x264 EAC3 5 1 Atmos-MiRA - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803623.xml</link></item>
+<item><title>나의 유죄인간/Love in Disguise/偽裝戀愛/我的有罪之人KR.E10.2026.AMZN(中韩双语特效) - 射手网(伪)</title><link>http://assrt.net/xml/sub/669/669756.xml</link></item>
+<item><title>Madden 2026/马登/Madden (2026) [720p] [WEBRip] [YTS.GG - YTS.BZ] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803622.xml</link></item>
+<item><title>Guarding Stars 2026/守护你，遇见爱/Guarding Stars (2026) [720p] [WEBRip] [YTS.GG - YTS.BZ] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803621.xml</link></item>
+<item><title>奥德赛/The Odyssey (2026) [1080p] [BluRay] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803620.xml</link></item>
+<item><title>The Remarried Empress S01E07/再婚皇后/The.Remarried.Empress.S01E07.1080p.WEB.h264-GRACE - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803619.xml</link></item>
+<item><title>The Remarried Empress S01E08/再婚皇后/The.Remarried.Empress.S01E08.1080p.WEB.h264-GRACE - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803618.xml</link></item>
+<item><title>The Lord of the Rings: The Rings of Power S03E06/指环王：力量之戒/The.Lord.of.the.Rings.The.Rings.of.Power.S03E06.1080p.WEB.H264-CAKES - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803617.xml</link></item>
+<item><title>The Lord of the Rings: The Rings of Power S03E05/指环王：力量之戒/The.Lord.of.the.Rings.The.Rings.of.Power.S03E05.1080p.WEB.H264-CAKES - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803616.xml</link></item>
+<item><title>NCIS: Origins S03E06/海军罪案调查处：起源/NCIS Origins S03E06 Shot Through the Heart 1080p AMZN WEB-DL DDP5 1 H 264-NTb - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803615.xml</link></item>
+<item><title>When A Witness Recants 2026/证人翻供时/When A Witness Recants (2026) [720p] [WEBRip] [YTS.GG - YTS.BZ] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803614.xml</link></item>
+<item><title>NCIS: New York S01E06/海军罪案调查处：纽约/NCIS.New.York.S01E06.1080p.WEB.H264-CAKES - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803613.xml</link></item>
+<item><title>良药苦口/Best Medicine S02E08 Back to the Suture 1080p AMZN WEB-DL DDP5 1 H 264-RAWR[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803612.xml</link></item>
+<item><title>NCIS S24E06/海军罪案调查处/NCIS.S24E06.1080p.WEB.H264-CAKES - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803611.xml</link></item>
+<item><title>Lendo O Mundo 2025/阅读世界（暂译）/Lendo O Mundo (2025) [720p] [WEBRip] [YTS.GG - YTS.BZ] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803610.xml</link></item>
+<item><title>/The.Lives.of.a.Bengal.Lancer.1935.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803609.xml</link></item>
+<item><title>/The.Garden.Of.Allah.1936.1080p.BluRay.H264.AAC-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803608.xml</link></item>
+<item><title>/Sin.Takes.a.Holiday.1930.1080p.BluRay.H264.AAC-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803607.xml</link></item>
+<item><title>/Seven.Sinners.1940.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803606.xml</link></item>
+<item><title>/No.Highway.in.the.Sky.1951.1080p.BluRay.x265-RARBG - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803605.xml</link></item>
+<item><title>烈酒私酿者/Moonshiners S16E07 Shiner Patriot 1080p DISC WEB-DL AAC2 0 H 264-RAWR - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803604.xml</link></item>
+<item><title>Wheres Wanda S02E05/旺达在哪里？/Wheres.Wanda.S02E05.1080p.WEB.H264-9Minus5in - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803603.xml</link></item>
+<item><title>Stick S02E04/枫糖大劫案/Stick.S02E04.1080p.WEB.H264-CAKES - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803602.xml</link></item>
+<item><title>橡树岛诅咒之谜/The Curse of Oak Island S14E02 Bubbling Up 1080p HULU WEB-DL AAC2 0 H 264-RAWR - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803601.xml</link></item>
+<item><title>Minnies Midnight Massacre 2026/明妮的午夜屠杀（暂译）/Minnies Midnight Massacre (2026) [720p] [WEBRip] [YTS.GG - YTS.BZ] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803600.xml</link></item>
+<item><title>Richard Hammonds Workshop S06E04/理查德·哈蒙德的工坊/Richard.Hammonds.Workshop.S06E04.1080p.HDTV.H264-DARKFLiX[EZTVx.to] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803599.xml</link></item>
+<item><title>英国家庭烘焙大赛/The Great British Bake Off S17E09 Patisserie Week 1080p ALL4 WEB-DL AAC2 0 H 264-RAWR - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803598.xml</link></item>
+<item><title>10 Good Men 2026/十个好人/10 Good Men (2026) [720p] [WEBRip] [YTS.GG - YTS.BZ] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803597.xml</link></item>
+<item><title>Ok Madam 2 Bon Voyage 2026/OK老板娘2/OK Madam 2 Bon Voyage 2026 1080p Korean WEB-DL HEVC x265 BONE - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803596.xml</link></item>
+<item><title>Ceux Qui Comptent 2026/那些重要的人/Ceux Qui Comptent (2026) [720p] [WEBRip] [YTS.GG - YTS.BZ] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803595.xml</link></item>
+<item><title>Maltratada 2026/被虐待的女人（暂译）/Maltratada (2026) [720p] [WEBRip] [YTS.GG - YTS.BZ] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803594.xml</link></item>
+<item><title>Appofeniacs 2025/App妄想（暂译）/Appofeniacs (2025) [720p] [WEBRip] [YTS.GG - YTS.BZ] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803593.xml</link></item>
+<item><title>Doc S03E06/失忆医生/DOC S03E06 1080p DUAL TOD WEB-DL x264 AAC-MiRA - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803592.xml</link></item>
+<item><title>Long Haired Businessmen 2026/长发商人（暂译）/Long Haired Businessmen (2026) [720p] [WEBRip] [YTS.GG - YTS.BZ] - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803591.xml</link></item>
+<item><title>Virgin Punk: Clockwork Girl 2025/维珍朋克：发条女孩/Virgin.Punk.S01E01.Clockwork.Girl.1080p.BILI.WEB-DL.JPN.AAC2.0.H.265.MSubs-ToonsHub - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803590.xml</link></item>
+<item><title>Son of a Critch S05E11/疯子之子/Son Of A Critch S05E11 720p WEB H264-JFF - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803589.xml</link></item>
+<item><title>FBI S09E07/联邦调查局/FBI.S09E07.1080p.WEB.H264-CAKES - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803588.xml</link></item>
+<item><title>Storyville Allies In Exile 2026/Storyville.Allies.in.Exile.2026.1080p.WEBRip.x264-CBFM - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803587.xml</link></item>
+<item><title>Fight Against Evil 3 2026/东北警察故事3/Fight.Against.Evil.3.2026.1080p.AMZN.WEB-DL.Multi.DDP2.0.H.265-XDM - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803586.xml</link></item>
+<item><title>/Gladiator.2000.Open.Matte.1080p.Hybrid.x265.HEVC.EAC3-SARTRE - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803585.xml</link></item>
+<item><title>我的厨房我做主/My Kitchen Rules S16E18 1080p HDTV x264-NGP - 射手网(伪)</title><link>http://assrt.net/xml/sub/803/803584.xml</link></item>
+<item><title>Childhood Memories: Anime - 90s and early 00s - Listal</title><link>https://www.listal.com/list/anime-90s-childhood-memories</link></item>
+<item><title>Backdrop Venice, Italy - Listal</title><link>https://www.listal.com/list/veneza-italy</link></item>
+<item><title>Backdrop Berlin, Germany - Listal</title><link>https://www.listal.com/list/motif-berlin</link></item>
+<item><title>Pictures Posted by Kandi XXXII - Listal</title><link>https://www.listal.com/list/pictures-posted-kandi-xxxii</link></item>
+<item><title>Pearl Necklace  - Movies - Listal</title><link>https://www.listal.com/list/pearl-necklace-movies</link></item>
+<item><title>Backdrop Rome, Italy - Listal</title><link>https://www.listal.com/list/backdrop-rome-italy</link></item>
+<item><title>Primeras apariciones (First appearances) - Listal</title><link>https://www.listal.com/list/clasicos</link></item>
+<item><title>Romy Schneider&amp;#39;s &amp;quot;Sissi&amp;quot; Movies - Listal</title><link>https://www.listal.com/list/romy-schneiders-sissi-movies</link></item>
+<item><title>Images préférées n° 4 - Listal</title><link>https://www.listal.com/list/mes-images-preferees-2</link></item>
+<item><title>Jeans and Heels VI - Listal</title><link>https://www.listal.com/list/jeans-and-heels-vi</link></item>
+<item><title>Swimming Pool #4 - Listal</title><link>https://www.listal.com/list/swimming-pool-4</link></item>
+<item><title>Angel or Butterfly? - Listal</title><link>https://www.listal.com/list/angel-or-butterfly</link></item>
+<item><title>Some  favorite   images   of  lion  cubs - Listal</title><link>https://www.listal.com/list/my-favorite-images-lp845</link></item>
+<item><title>Anime Watched In 2016 (October - December) - Listal</title><link>https://www.listal.com/list/anime-watched-in-2016-umechan</link></item>
+<item><title>The Big Movie Watch List of 2021 - Listal</title><link>https://www.listal.com/list/movies-watched-in-2021-umechan</link></item>
+<item><title>Popcorn Scenes - Movies - Listal</title><link>https://www.listal.com/list/pop-corn-scenes-movies</link></item>
+<item><title>Martin Landau - Movies - Listal</title><link>https://www.listal.com/list/martin-landau-best-movies</link></item>
+<item><title>images Posted 70s III - Movies - Listal</title><link>https://www.listal.com/list/images-posted-70s-iii</link></item>
+<item><title>mijn voltooide anime lijst 4 - Listal</title><link>https://www.listal.com/list/mijn-voltooide-anime-lijst-4</link></item>
+<item><title>Yes, In Fact, She&amp;#39;s ALSO Cute! (The Sequel) - Listal</title><link>https://www.listal.com/list/yes-fact-shes-also-cute</link></item>
+<item><title>Leading In Their Field - Listal</title><link>https://www.listal.com/list/leading-in-their-field</link></item>
+<item><title>Psst! Over Here! - Listal</title><link>https://www.listal.com/list/psst-over-here-williams94</link></item>
+<item><title>Tenniswomen - Listal</title><link>https://www.listal.com/list/tenniswomen</link></item>
 </channel></rss>
