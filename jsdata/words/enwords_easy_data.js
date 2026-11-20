@@ -2344,15 +2344,14 @@ Zambia
 Lyell
 UTF-8
 revengeful
-colonise
 privatise
 insatiable
 low-cal
 lo-cal
-normalise
 periodical
 public holiday
-
+urbanise
+immunise
 
 
 `.trim().split('\n');
