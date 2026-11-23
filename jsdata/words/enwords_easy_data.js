@@ -2365,6 +2365,22 @@ co-existence
 summarise
 predominancy
 Jensen
+re-enlistment
+remarriage
+self-preservation
+unsportsmanlike
+sufferable
+Williamson
+Camilla
+coin-operated
+cybersecurity
+disyllabic
+dissyllabic
+gasholder
+globalize
+intermountain
+Olivia
+waterbird
 
 
 `.trim().split('\n');
