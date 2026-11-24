@@ -2381,6 +2381,8 @@ globalize
 intermountain
 Olivia
 waterbird
-
+air-conditioner
+air-conditioning
+swing state
 
 `.trim().split('\n');

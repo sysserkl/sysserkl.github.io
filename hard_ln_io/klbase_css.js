@@ -2591,6 +2591,7 @@ function edit_buttons_b(js_fn='',cstype=[],dom_type='button'){
     
     if (cstype.includes('mediawiki')){
         result_t=result_t.concat([
+        'Ⓑ',
         '{{c|t=b|n=+}}', 
         '{{c|t=r|n=+}}', 
         '<esentence>+</esentence>', 
@@ -2619,6 +2620,7 @@ function edit_buttons_b(js_fn='',cstype=[],dom_type='button'){
         '<website s>+</website>', 
         '<website w>+</website>', 
         '{{w|n=+}}',
+        'Ⓧ',
         ]);
     }
 
