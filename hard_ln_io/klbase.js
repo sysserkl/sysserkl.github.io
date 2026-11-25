@@ -5248,3 +5248,4 @@ function rows_cols_all_equal_b(matrix, startRow, endRow, cols, target, strict = 
         });
     });
 }
+

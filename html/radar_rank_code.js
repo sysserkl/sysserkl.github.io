@@ -768,7 +768,7 @@ function modal_body_content_rdrank(){
       <h4>1 · 最小结构</h4>
       <pre>const SCALES_rdrank = {
   量表key: {
-    key: 'my_scale',                    // 唯一标识
+    //key: 'my_scale',                    // 唯一标识
     name: '短名',                        // 选择器上显示
     title: '完整标题',                   // 页面大标题
     lead: '一句话说明测什么、怎么答',
