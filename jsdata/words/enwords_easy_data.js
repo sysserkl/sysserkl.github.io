@@ -2386,7 +2386,16 @@ air-conditioning
 swing state
 deoxyribonucleic acid
 I'll
-
+men-at-arms
+millepede
+more'n
+overvaluation
+sandcastle
+Elon
+authorise
+unceremoniously
+homescreen
+middle-aged spread
 
 
 `.trim().split('\n');
