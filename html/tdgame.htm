@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="../hard_ln_io/klbase.js"></script>
+<script>
+klbase_addons_import_js_b(['css'],[],[],['tdgame_code.js']);
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>🏰 Tower Defense</title>
+<style>
+    * { box-sizing: border-box; }
+    body {
+        margin: 0;
+        font-family: system-ui, "Segoe UI", Arial, sans-serif;
+        background: #f5f6f8;
+        color: #1f2937;
+        display: flex;
+        gap: 16px;
+        padding: 16px;
+        max-width: 1100px;
+        margin-inline: auto;
+    }
+    #stage { display: flex; flex-direction: column; gap: 8px; flex: 1 1 auto; min-width: 0; }
+    canvas {
+        background: #ffffff;
+        border: 1px solid #9ca3af;
+        border-radius: 6px;
+        cursor: crosshair;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+        touch-action: manipulation;
+        display: block;
+    }
+    #hud { display: flex; flex-wrap: wrap; gap: 10px 18px; font-size: 15px; }
+    #hud b { color: #b45309; }
+    #side { width: 230px; flex: 0 0 230px; display: flex; flex-direction: column; gap: 12px; }
+    .panel {
+        background: #ffffff;
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        padding: 12px;
+    }
+    .panel h3 { margin: 0 0 8px; font-size: 14px; color: #374151; }
+    button {
+        background: #e5e7eb;
+        color: #1f2937;
+        border: 1px solid #9ca3af;
+        border-radius: 4px;
+        padding: 10px 10px;
+        font-size: 13px;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 6px;
+    }
+    button:last-child { margin-bottom: 0; }
+    button:hover { background: #d1d5db; }
+    button.primary { background: #2563eb; border-color: #1d4ed8; color: #ffffff; }
+    button.danger { background: #dc2626; border-color: #b91c1c; color: #ffffff; }
+    .tower-btn.active { outline: 2px solid #f59e0b; }
+    .row { display: flex; justify-content: space-between; font-size: 13px; margin: 4px 0; }
+    #msg { min-height: 18px; font-size: 12px; color: #dc2626; }
+    .tip { font-size: 12px; color: #4b5563; line-height: 1.6; }
+
+    /* Phone / narrow screens: stack vertically, full width */
+    @media (max-width: 768px) {
+        body { flex-direction: column; gap: 12px; padding: 12px; }
+        #side { width: 100%; flex: 1 1 auto; }
+        #hud { font-size: 14px; }
+        .tower-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+        .tower-grid .tower-btn { margin-bottom: 0; }
+    }
+    @media (min-width: 769px) {
+        .tower-grid { display: flex; flex-direction: column; }
+    }
+</style>
+</head>
+<body>
+<div id="stage">
+    <div id="hud">
+        <span>Gold <b id="gold">0</b></span>
+        <span>Lives <b id="lives">0</b></span>
+        <span>Wave <b id="wave">0</b></span>
+        <span id="status"></span>
+    </div>
+    <canvas id="game"></canvas>
+</div>
+
+<div id="side">
+    <div class="panel">
+        <h3>Select Tower</h3>
+        <div class="tower-grid">
+            <button class="tower-btn" data-type="dart">Dart Tower · 30g</button>
+            <button class="tower-btn" data-type="cannon">Cannon · 60g</button>
+            <button class="tower-btn" data-type="mortar">Mortar · 85g</button>
+            <button class="tower-btn" data-type="frost">Frost Tower · 45g</button>
+        </div>
+        <div id="msg"></div>
+    </div>
+    <div class="panel">
+        <button class="primary" id="waveBtn">Start Next Wave</button>
+        <button id="resetBtn">Restart</button>
+    </div>
+    <div class="panel" id="infoPanel">
+        <h3>Tower Info</h3>
+        <div class="tip">Click a tower to inspect it; click empty ground to build the selected tower.</div>
+        <div id="towerInfo"></div>
+        <button id="upgradeBtn" style="display:none">Upgrade</button>
+        <button id="sellBtn" class="danger" style="display:none">Demolish</button>
+    </div>
+    <div class="panel tip">
+        Ground creeps are blocked by towers and take the shortest BFS path. Flying creeps pass through towers. Mortars deal splash damage; Frost towers slow creeps. Waves continue automatically after each one is cleared.
+    </div>
+</div>
+
+<script>
+/* ================= Basic constants ================= */
+const COLS = 15, ROWS = 10, CELL = 36;
+const canvas = document.getElementById('game');
+const ctx = canvas.getContext('2d');
+let viewScale = 1;
+
+const start = { x: 0, y: 5 };
+const end   = { x: COLS - 1, y: 5 };
+
+/* Tower config: damage / range(cells) / fire rate(sec per shot) / cost; splash; slow factor & duration */
+const TYPES = {
+    dart:   { name: 'Dart Tower',   cost: 30, damage: 6,  range: 2.2, fireRate: 0.5,  color: '#4fc3f7' },
+    cannon: { name: 'Cannon',       cost: 60, damage: 22, range: 2.6, fireRate: 1.4,  color: '#ff8a65' },
+    mortar: { name: 'Mortar',       cost: 85, damage: 14, range: 2.8, fireRate: 1.8,  color: '#ef5350', splash: 1.3 },
+    frost:  { name: 'Frost Tower', cost: 45, damage: 3,  range: 2.4, fireRate: 0.9,  color: '#80deea', slowFactor: 0.5, slowDur: 2.5 },
+};
+/* Creep config: hp / speed / reward / color / radius; flying creeps pass through towers */
+const CREEPS = {
+    normal: { name: 'Normal', hp: 30,  speed: 1.7, reward: 6,  color: '#7cb342', r: 9  },
+    fast:   { name: 'Fast',   hp: 18,  speed: 3.1, reward: 5,  color: '#fdd835', r: 7  },
+    flying: { name: 'Flying', hp: 24,  speed: 2.4, reward: 8,  color: '#40c4ff', r: 8, flying: true },
+    boss:   { name: 'Boss',   hp: 130, speed: 1.0, reward: 25, color: '#ab47bc', r: 13 },
+};
+
+/* Refund: demolish returns this fraction of the tower's original build cost */
+const SELL_REFUND_RATE = 0.7;
+
+/* ================= Game state ================= */
+let grid = Array.from({ length: ROWS }, () => Array(COLS).fill(0)); // 0 empty / 1 tower
+let gold = 200, lives = 20, wave = 0;
+let towers = [], creeps = [], bullets = [];
+let selectedType = 'dart', selectedTower = null;
+let spawnQueue = [], spawnTimer = 0;
+let waveActive = false, nextWaveTimer = 0, gameOver = false;
+let mouse = { gx: -1, gy: -1 };
+
+/* ================= Embedded audio (Web Audio, no external sound files) ================= */
+let msgTimer = null;
+
+canvas.addEventListener('click', e => handle_canvas_pick_tdgame(e.clientX, e.clientY));
+
+canvas.addEventListener('mousemove', e => {
+    const { gx, gy } = get_cell_from_point_tdgame(e.clientX, e.clientY);
+    mouse.gx = gx; mouse.gy = gy;
+});
+
+canvas.addEventListener('touchstart', e => {
+    e.preventDefault();
+    const touch = e.touches[0];
+    if (touch) handle_canvas_pick_tdgame(touch.clientX, touch.clientY);
+}, { passive: false });
+
+document.querySelectorAll('.tower-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        selectedType = btn.dataset.type;
+        document.querySelectorAll('.tower-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedTower = null; refresh_panel_tdgame();
+    });
+});
+
+document.getElementById('waveBtn').addEventListener('click', () => { if (!waveActive && !gameOver) start_wave_tdgame(); });
+document.getElementById('resetBtn').addEventListener('click', reset_game_tdgame);
+document.getElementById('upgradeBtn').addEventListener('click', () => selectedTower && upgrade_tower_tdgame(selectedTower));
+document.getElementById('sellBtn').addEventListener('click', () => selectedTower && sell_tower_tdgame(selectedTower));
+
+/* ================= Main loop ================= */
+let last = performance.now();
+
+window.addEventListener('resize', resize_canvas_tdgame);
+window.addEventListener('orientationchange', resize_canvas_tdgame);
+if (window.ResizeObserver) {
+    const observer = new ResizeObserver(resize_canvas_tdgame);
+    observer.observe(canvas);
+}
+
+resize_canvas_tdgame();
+refresh_hud_tdgame(); 
+refresh_status_tdgame();
+requestAnimationFrame(game_loop_tdgame);
+</script>
+</body>
+</html>

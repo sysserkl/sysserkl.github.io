@@ -3093,3 +3093,178 @@ function title_change_b(csid='span_title'){
     document.title=new_title;
     document.getElementById(csid).innerText=new_title;
 }
+
+function audio_ctx_get_b(){
+    if (typeof audio_ctx_global =='undefined' || !audio_ctx_global){
+        audio_ctx_global = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audio_ctx_global.state === 'suspended'){
+        audio_ctx_global.resume();
+    }
+}
+
+function play_sfx_sound_b(type){
+    try {
+        audio_ctx_get_b();
+        const t = audio_ctx_global.currentTime;
+        const o = audio_ctx_global.createOscillator();
+        const g = audio_ctx_global.createGain();
+        o.connect(g); g.connect(audio_ctx_global.destination);
+        let f0 = 440, f1 = 440, dur = 0.1, waveType = 'square', vol = 0.05;
+        //-----------------------
+        const AC = audio_ctx_global;
+
+        const noise = (dur, vol, type='lowpass', f0=1200, f1=300, q=1) => {
+            const n = AC.createBufferSource();
+            const b = AC.createBuffer(1, AC.sampleRate * dur, AC.sampleRate);
+            const d = b.getChannelData(0);
+            for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1;
+            n.buffer = b;
+            const flt = AC.createBiquadFilter();
+            flt.type = type; flt.Q.value = q;
+            flt.frequency.setValueAtTime(f0, t);
+            flt.frequency.exponentialRampToValueAtTime(Math.max(f1, 1), t + dur);
+            const gn = AC.createGain();
+            // 关键：从极小值起音，用线性爬到峰值，再指数衰减
+            gn.gain.setValueAtTime(0.0001, t);
+            gn.gain.linearRampToValueAtTime(vol, t + 0.008);   // 8ms 起音
+            gn.gain.exponentialRampToValueAtTime(0.001, t + dur);
+            n.connect(flt); flt.connect(gn); gn.connect(AC.destination);
+            n.start(t); n.stop(t + dur + 0.02);
+        };
+
+        const tone = (f, dur, vol, wave='square', delay=0, f2=null) => {
+            const os = AC.createOscillator(), ga = AC.createGain();
+            os.type = wave;
+            os.frequency.setValueAtTime(f, t + delay);
+            if (f2) os.frequency.exponentialRampToValueAtTime(Math.max(f2, 1), t + delay + dur);
+            ga.gain.setValueAtTime(0.0001, t + delay);
+            ga.gain.exponentialRampToValueAtTime(vol, t + delay + Math.min(0.008, dur * 0.3));
+            ga.gain.exponentialRampToValueAtTime(0.001, t + delay + dur);
+            os.connect(ga); ga.connect(AC.destination);
+            os.start(t + delay); os.stop(t + delay + dur + 0.02);
+        };
+        //-----------------------
+        switch (type) {
+            case 'shoot':   f0 = 880; f1 = 620; dur = 0.07; waveType = 'square';   vol = 0.03; break;
+            case 'hit':     f0 = 220; f1 = 180; dur = 0.05; waveType = 'sawtooth'; vol = 0.03; break;
+            case 'kill':    f0 = 520; f1 = 780; dur = 0.15; waveType = 'triangle'; vol = 0.06; break;
+            case 'build':   f0 = 330; f1 = 390; dur = 0.12; waveType = 'triangle'; vol = 0.07; break;
+            case 'upgrade': f0 = 440; f1 = 880; dur = 0.2;  waveType = 'triangle'; vol = 0.07; break;
+            case 'sell':    f0 = 300; f1 = 180; dur = 0.15; waveType = 'sawtooth'; vol = 0.05; break;
+            case 'leak':    f0 = 160; f1 = 70;  dur = 0.3;  waveType = 'sawtooth'; vol = 0.08; break;
+            case 'wave':    f0 = 220; f1 = 440; dur = 0.25; waveType = 'triangle'; vol = 0.07; break;
+            
+            // ===== 战斗类 =====
+            case 'explosion': // 爆炸：低频轰 + 噪声冲击
+                f0 = 120; f1 = 40; dur = 0.45; waveType = 'sawtooth'; vol = 0.10;
+                noise(0.4, 0.10, 'lowpass', 1800, 120);
+                break;
+            case 'laser': // 激光：高频急速下滑 + 锯齿噪声
+                f0 = 2400; f1 = 200; dur = 0.18; waveType = 'sawtooth'; vol = 0.04;
+                noise(0.12, 0.03, 'highpass', 6000, 2000);
+                break;
+            case 'critical': // 暴击：金属"铛"，两个不谐和频率叠加
+                o.type = 'square'; o.frequency.setValueAtTime(1400, t);
+                o.frequency.exponentialRampToValueAtTime(1100, t + 0.12);
+                tone(2100, 0.12, 0.03, 'triangle');
+                g.gain.setValueAtTime(0.05, t); g.gain.exponentialRampToValueAtTime(0.001, t + 0.12);
+                o.stop(t + 0.12);
+                break;
+            case 'swing':
+                noise(0.18, 0.22, 'bandpass', 500, 4500, 1.2);
+                o.stop(t);
+                break;
+            case 'empty': // 空弹夹：两声短促"咔咔"
+                f0 = 180; f1 = 150; dur = 0.04; waveType = 'square'; vol = 0.04;
+                tone(150, 0.035, 0.04, 'square', 0.07);
+                break;
+            case 'reload': // 换弹：咔嚓 + 上行短音
+                f0 = 900; f1 = 1400; dur = 0.06; waveType = 'square'; vol = 0.03;
+                noise(0.05, 0.05, 'bandpass', 2500, 1200, 3);
+                tone(1600, 0.08, 0.04, 'square', 0.1);
+                break;
+
+            // ===== 提示/UI 类 =====
+            case 'coin': // 金币：经典两音叮咚（B5 → E6）
+                tone(988, 0.07, 0.05, 'square');
+                tone(1319, 0.14, 0.05, 'square', 0.07);
+                o.stop(t);
+                break;
+            case 'click': // UI 点击：极短高频"嗒"
+                f0 = 1600; f1 = 1200; dur = 0.03; waveType = 'square'; vol = 0.03;
+                break;
+            case 'confirm': // 确认：上行小三音（8-bit 风格）
+                [523, 659, 784].forEach((f, i) => tone(f, 0.1, 0.05, 'square', i * 0.06));
+                o.stop(t);
+                break;
+            case 'error': // 错误：低沉双声"嘟嘟"
+                tone(200, 0.12, 0.06, 'sawtooth');
+                tone(180, 0.18, 0.06, 'sawtooth', 0.14);
+                o.stop(t);
+                break;
+            case 'achievement': // 成就：大调琶音 C-E-G-C
+                [523, 659, 784, 1046].forEach((f, i) => tone(f, 0.22, 0.05, 'triangle', i * 0.09));
+                o.stop(t);
+                break;
+            case 'alarm': // 警报：电报式断续方波
+                [0, 0.18, 0.36].forEach(d => {
+                    tone(740, 0.1, 0.05, 'square', d);
+                    tone(560, 0.1, 0.05, 'square', d + 0.11);
+                });
+                o.stop(t);
+                break;
+
+            // ===== 特殊效果类 =====
+            case 'charge': // 充能：两个失谐锯齿慢慢爬升 + 窄带噪声
+                o.type = 'sawtooth';
+                o.frequency.setValueAtTime(110, t);
+                o.frequency.exponentialRampToValueAtTime(880, t + 0.6);
+                tone(116, 0.6, 0.03, 'sawtooth', 0, 930);
+                noise(0.6, 0.025, 'bandpass', 800, 4000, 8);
+                g.gain.setValueAtTime(0.0001, t);
+                g.gain.exponentialRampToValueAtTime(0.05, t + 0.5);
+                g.gain.exponentialRampToValueAtTime(0.001, t + 0.65);
+                dur = 0.65;
+                break;
+            case 'teleport': // 传送：正弦急速上扫 + 反向感噪声
+                o.type = 'sine';
+                o.frequency.setValueAtTime(300, t);
+                o.frequency.exponentialRampToValueAtTime(3000, t + 0.25);
+                noise(0.25, 0.04, 'bandpass', 600, 6000, 4);
+                g.gain.setValueAtTime(0.05, t); g.gain.exponentialRampToValueAtTime(0.001, t + 0.25);
+                dur = 0.25;
+                break;
+            case 'freeze': // 冰冻：高频三角波下滑 + 高频噪声"沙"
+                f0 = 1800; f1 = 700; dur = 0.35; waveType = 'triangle'; vol = 0.05;
+                noise(0.35, 0.035, 'highpass', 9000, 4000);
+                break;
+            case 'heal': // 治疗：柔和正弦上行 + 泛音
+                o.type = 'sine';
+                o.frequency.setValueAtTime(523, t);
+                o.frequency.exponentialRampToValueAtTime(784, t + 0.3);
+                tone(1046, 0.3, 0.025, 'sine');
+                g.gain.setValueAtTime(0.0001, t);
+                g.gain.exponentialRampToValueAtTime(0.06, t + 0.08);
+                g.gain.exponentialRampToValueAtTime(0.001, t + 0.35);
+                dur = 0.35;
+                break;
+            case 'levelup': // 升级：长版上行音阶
+                [392, 523, 659, 784, 1046, 1319].forEach((f, i) => tone(f, 0.2, 0.05, 'square', i * 0.08));
+                o.stop(t);
+                break;
+            case 'gameover': // 失败：下行小调
+                [523, 440, 349, 262].forEach((f, i) => tone(f, 0.35, 0.06, 'triangle', i * 0.18));
+                o.stop(t);
+                break;
+        }
+        
+        o.type = waveType;
+        o.frequency.setValueAtTime(f0, t);
+        o.frequency.exponentialRampToValueAtTime(Math.max(f1, 1), t + dur);
+        g.gain.setValueAtTime(vol, t);
+        g.gain.exponentialRampToValueAtTime(0.001, t + dur);
+        o.start(t);
+        o.stop(t + dur);
+    } catch (e) { /* stay silent if audio is unavailable */ }
+}

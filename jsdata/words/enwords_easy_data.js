@@ -41,6 +41,8 @@ ailurophobe
 ailurophobic
 Airbus
 air conditioner
+air-conditioner
+air-conditioning
 air-cooled
 air-dried
 airplane
@@ -68,7 +70,9 @@ Anglophile
 Anglophobe
 Angola
 anion
+Annabel
 annoyingly
+anonymization
 Anson
 Anthony
 anti-abortion
@@ -142,8 +146,10 @@ atomic mass
 atomic physics
 atomic weight
 audiobook
+Austen
 Austria
 authoress
+authorise
 autocomplete
 autocorrect
 autofill
@@ -245,6 +251,7 @@ bladelike
 blamable
 blameable
 blamelessly
+bloatware
 blocklist
 Bloomfield
 boarding card
@@ -252,6 +259,7 @@ boarding gate
 boatmen
 boat neckline
 Boeing
+boiling point
 bola tie
 Bolivia
 Bollywood
@@ -260,6 +268,7 @@ bondman
 bondmen
 bondsmen
 bondwomen
+bookmobile
 bookshop
 bootable
 bootmaker
@@ -314,6 +323,7 @@ Cambodian
 cameraman
 cameramen
 Cameroon
+Camilla
 Campbell
 Canberra
 cancerphobia
@@ -340,6 +350,8 @@ ceaseless
 ceaselessly
 cell biology
 cellblock
+cell phone
+cellphone
 centigrade
 centimetre
 centre of gravity
@@ -350,6 +362,7 @@ charwomen
 chatbot
 cheeseburger
 cheesemonger
+Chennai
 chickenfeed
 Chihuahua
 child-centred
@@ -387,10 +400,13 @@ cloud-based
 Coachella
 coal black
 coal-black
+code switching
 coenzyme
+co-existence
 coffee grinder
 coffee house
 coheir
+coin-operated
 cold-hearted
 coldhearted
 collarless
@@ -472,6 +488,7 @@ currently
 curry favour
 customisable
 customizable
+cybersecurity
 cyclic
 Damascus
 Danny
@@ -520,6 +537,7 @@ demilitarization
 dendrologic
 Denny
 denuclearization
+deoxyribonucleic acid
 departure gate
 deplorableness
 deplorably
@@ -547,6 +565,8 @@ disk-shaped
 disremember
 disrespect
 disrespectful
+dissyllabic
+disyllabic
 divide and rule
 Dnieper
 dogskin
@@ -617,6 +637,7 @@ electric bike
 electrophysiological
 elementary school
 Eliot
+Elon
 e-mail
 embarrassingly
 emphasise
@@ -769,6 +790,7 @@ Gambia
 gamification
 gamify
 Garfield
+gasholder
 gaslit
 gatepost
 Gateshead
@@ -792,6 +814,7 @@ ghostwriter
 giftee
 giftware
 girlhood
+globalize
 globetrotter
 goal-directed
 goatskin
@@ -808,6 +831,7 @@ grammatically
 Granada
 grandbaby
 grandniece
+granduncle
 grassland
 grasslike
 graveside
@@ -908,6 +932,8 @@ Holy Father
 Holyhead
 holy moley
 home-cooked
+homecooked
+homescreen
 homophobia
 Honduras
 hooklike
@@ -946,10 +972,12 @@ hyperglycemia
 hypertext
 icebound
 ice machine
+I'll
 ill-tempered
 I'm
 imaginary number
 immovable property
+immunise
 immunosuppression
 immutability
 immutableness
@@ -987,6 +1015,7 @@ inner city
 innovator
 inopportune
 inpatient
+insatiable
 insufferable
 insufferably
 interchangeability
@@ -998,6 +1027,7 @@ interdependency
 interdependent
 interestingly
 intergovernmental
+intermountain
 international law
 interoffice
 interoperability
@@ -1029,6 +1059,7 @@ jaywalker
 Jeanette
 Jeannette
 Jefferson
+Jensen
 Jerome
 Joab
 Joanna
@@ -1036,6 +1067,7 @@ jobseeker
 Jodi
 jointer-plane
 JOMO
+Joplin
 Jordan
 Josephine
 joyful
@@ -1063,6 +1095,7 @@ keylogger
 Kidman
 kidnapper
 kilojoule
+kilopascal
 kindergartener
 kind-hearted
 kindhearted
@@ -1116,8 +1149,10 @@ lithographically
 Lithuania
 little-known
 livestreamer
+liveware
 living fossil
 lobsterman
+lo-cal
 lockable
 locksmith
 logically
@@ -1133,12 +1168,14 @@ Lovecraft
 loveless
 loverless
 love-struck
+low-cal
 Lucas
 Lucius
 luckless
 Lunar New Year
 luncheon
 lunchtime
+Lyell
 Lyndsay
 MacArthur
 machine-readable
@@ -1194,9 +1231,11 @@ microservice
 microtransaction
 microwavable
 microwaveable
+middle-aged spread
 middlemen
 middleware
 Midgard
+millepede
 milliampere
 Milton
 mindshare
@@ -1212,6 +1251,7 @@ misquote
 misspell
 misspelt
 mistranslate
+misunderstood
 mobsmen
 modernisation
 mojito
@@ -1222,6 +1262,7 @@ monopolise
 mooncake
 moonless
 moonlit
+more'n
 Morrison
 Morse code
 mortar attack
@@ -1288,6 +1329,7 @@ neuroscientist
 neutron star
 Nevada
 New Hampshire
+New Orleans
 newshound
 New South Wales
 Niger
@@ -1377,6 +1419,7 @@ Odesa
 odorless
 ohm
 okey-doke
+Olivia
 Oman
 oncologist
 one-parent family
@@ -1422,6 +1465,7 @@ overslept
 oversupply
 overtired
 overtook
+overvaluation
 oxcart
 packability
 packable
@@ -1461,6 +1505,7 @@ pedantically
 peer-review
 Pekingese
 Penrose
+periodical
 periodically
 periodic law
 periodic table
@@ -1485,6 +1530,7 @@ pickleball
 piecework
 Pierre
 pink-collar
+Pittsburgh
 placename
 plainclothesmen
 planetologist
@@ -1508,6 +1554,7 @@ powerlessness
 power station
 prebuild
 predefined
+predominancy
 preference share
 preferred share
 pre-Islamic
@@ -1524,6 +1571,7 @@ preventable
 prewarn
 pricy
 prime rate
+privatise
 prize-winning
 prizewinning
 productively
@@ -1536,6 +1584,7 @@ profitless
 proletarianisation
 proletarianise
 property right
+protectionism
 protectively
 protégée
 Proust
@@ -1548,10 +1597,12 @@ psychobiologic
 psychobiological
 psychobiologically
 psychobiologist
+psychobiology
 psychohistorian
 psychologically
 psychology
 psychopharmacologic
+public holiday
 Pulitzer
 punishable
 purchasing power
@@ -1597,6 +1648,7 @@ rediscover
 redness
 redone
 red panda
+re-enlistment
 re-export
 reexport
 reformer
@@ -1605,6 +1657,7 @@ refuel
 rehire
 reinsert
 relearn
+remarriage
 removeable
 rename
 rent-free
@@ -1615,6 +1668,7 @@ reportable
 resting place
 retro-rocket
 reusability
+revengeful
 rewatch
 rezidentura
 Rhine Province
@@ -1627,6 +1681,7 @@ riverward
 Robb
 rollable
 romanticism
+ropedancer
 ropelike
 ropemaker
 Rosenberg
@@ -1654,6 +1709,7 @@ salespeople
 samba
 Samoa
 Samson
+sandcastle
 Sasha
 satisfyingly
 sceptical
@@ -1663,6 +1719,7 @@ Schumpeter
 Scofield
 Scotsmen
 Scott
+scrollable
 sea-fowl
 seafowl
 seagrass
@@ -1685,6 +1742,7 @@ selectmen
 self-build
 self-cleaning
 self-improvement
+self-preservation
 self-sealing
 self-test
 semidarkness
@@ -1877,9 +1935,11 @@ subwoofer
 subzero
 Sudan
 Sudanese
+sufferable
 suitably
 Sullivan
 Sumatra
+summarise
 summer-long
 summerlong
 Summer Palace
@@ -1916,6 +1976,7 @@ sweatproof
 sweat-stained
 swimsuit
 swimwear
+swing state
 Swiss roll
 swordsmen
 symptomless
@@ -2089,6 +2150,7 @@ unbootable
 unbox
 unburnable
 unceasing
+unceremoniously
 unchangeable
 unchanged
 unclad
@@ -2123,6 +2185,7 @@ uneducated
 unemployable
 unenforceability
 unequally
+unfeasible
 unfertilised
 unforgettably
 unforgivable
@@ -2203,6 +2266,7 @@ unskillful
 unsmiling
 unsold
 unsolved
+unsportsmanlike
 unsteadily
 unsuitably
 unsurprising
@@ -2220,13 +2284,16 @@ upgradable
 upgradeable
 upset the applecart
 urbanisation
+urbanise
 Ursa Minor
 Uruguay
 usefully
 usefulness
+UTF-8
 utilisation
 utility pole
 utopianism
+vacuum cleaner
 value added
 valueless
 Vancouver
@@ -2256,6 +2323,7 @@ Warsaw
 Warsaw Pact
 watchcase
 watchmaker
+waterbird
 watercooler
 waterless
 water-logged
@@ -2296,6 +2364,7 @@ wildland
 Wilkins
 Willard
 Williamsburg
+Williamson
 windowless
 windward
 winemaker
@@ -2333,6 +2402,7 @@ y'know
 you're
 you've
 yuletide
+Zambia
 Zelenskyy
 zero gravity
 Zipporah
@@ -2340,62 +2410,13 @@ zooarchaeological
 zooarchaeology
 zoologist
 Zuma
-Zambia
-Lyell
-UTF-8
-revengeful
-privatise
-insatiable
-low-cal
-lo-cal
-periodical
-public holiday
-urbanise
-immunise
-liveware
-psychobiology
-homecooked
-Annabel
-Austen
-code switching
-New Orleans
-unfeasible
-vacuum cleaner
-co-existence
-summarise
-predominancy
-Jensen
-re-enlistment
-remarriage
-self-preservation
-unsportsmanlike
-sufferable
-Williamson
-Camilla
-coin-operated
-cybersecurity
-disyllabic
-dissyllabic
-gasholder
-globalize
-intermountain
-Olivia
-waterbird
-air-conditioner
-air-conditioning
-swing state
-deoxyribonucleic acid
-I'll
-men-at-arms
-millepede
-more'n
-overvaluation
-sandcastle
-Elon
-authorise
-unceremoniously
-homescreen
-middle-aged spread
-
+paedophile
+paedophilia
+Turkophobe
+Wellington
+paedophiliac
+paedophilic
+mobile phone
+cellular phone
 
 `.trim().split('\n');

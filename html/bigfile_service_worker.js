@@ -13,6 +13,7 @@ self.addEventListener('install', function(e){
             '../hard_ln_io/klbase_websites.js',
             '../hard_ln_io/klbase_rows.js',
             '../hard_ln_io/klbase_eng.js',
+            '../hard_ln_io/klbase_sound.js',            
             ]);
         })
     );

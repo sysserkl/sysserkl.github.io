@@ -5249,3 +5249,15 @@ function rows_cols_all_equal_b(matrix, startRow, endRow, cols, target, strict = 
     });
 }
 
+function switch_case_get_b(csname,csstring){
+    let result_t=[];
+    let reg_exp=/^\s*case\s+'.*':.*$/mg;
+    var cslist=csstring.match(reg_exp) || [];
+
+    for (let arow of cslist){
+        arow=arow.replace(/^\s*case\s+'(.*)':.*$/,'$1');
+        result_t.push([csname,arow]);
+    }
+        
+    return result_t;
+}

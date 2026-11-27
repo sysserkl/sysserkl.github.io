@@ -118,6 +118,16 @@ function menu_bigfile(){
     } else {
         klmenu_batch.push('<span class="span_menu" onclick="'+str_t+'batch_open_bigfile(\'dnsrb\');">diff+notepad+selenium_enwords+readlater+BT</span>');
     }
+    
+    var klmenu_sound=sound_type_get_b();
+    klmenu_sound.sort();
+    for (let blxl=0,lent=klmenu_sound.length;blxl<lent;blxl++){
+        klmenu_sound[blxl]='<span class="span_menu" onclick="'+str_t+'sound_play_bigfile(\''+klmenu_sound[blxl][0]+'\',\''+klmenu_sound[blxl][1]+'\');">'+klmenu_sound[blxl][1]+'</span>';
+    }
+    klmenu_sound=klmenu_sound.concat([
+    '<span class="span_menu">持续时间：<input type="number" id="input_sound_duration_bigfile" value=10 min=-1 step=1 style="width:3rem;" /> 秒</span>',
+    '<span class="span_menu">音量：<input type="number" id="input_sound_volume_bigfile" value=0.5 min=0.1 max=1 step=0.1 style="width:3rem;" /></span>',
+    ]);
 
     var klmenu_config=root_font_size_menu_b(str_t);
     klmenu_config=klmenu_config.concat([
@@ -135,11 +145,21 @@ function menu_bigfile(){
     ];    
     klmenu_config.push(menu_container_b(str_t,group_list,''));
 
-    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','20rem','1rem','1rem','30rem')+'<span id="span_menu_htm_bigfile"></span>'+klmenu_b(klmenu_batch,'📦','19rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','30rem'),'','0rem')+' ');
+    document.getElementById('span_title').insertAdjacentHTML('beforebegin',klmenu_multi_button_div_b(klmenu_b(klmenu1,'𖧶','20rem','1rem','1rem','30rem')+'<span id="span_menu_htm_bigfile"></span>'+klmenu_b(klmenu_batch,'📦','19rem','1rem','1rem','30rem')+klmenu_b(klmenu_sound,'🔊','15rem','1rem','1rem','30rem')+klmenu_b(klmenu_config,'⚙','19rem','1rem','1rem','30rem'),'','0rem')+' ');
     
     klmenu_check_b('span_reg_bigfile',true);
     klmenu_check_b('span_decode_bigfile',true);
     first_source_set_bigfile(false);
+}
+
+function sound_play_bigfile(csname,cstype){
+    let duration=parseInt(document.getElementById('input_sound_duration_bigfile').value.trim());
+    if (duration==-1){
+        duratin=Infinity;
+    }
+    let volume=parseFloat(document.getElementById('input_sound_volume_bigfile').value.trim());
+   
+    eval(csname+'(\''+cstype+'\','+volume+','+duration+')');
 }
 
 function similar_file_name_bigfile(cspercent=false){
